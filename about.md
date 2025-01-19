@@ -4,5 +4,5 @@ title: About
 permalink: /about/
 ---
   
-![Me](/images/JWLarge.png)  
+![us](/images/Logos/LogoLarge.jpg)  
 
