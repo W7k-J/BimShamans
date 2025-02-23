@@ -3,6 +3,11 @@ layout: page
 title: Projekt: BIM Shamans – technologia, automatyzacja, mitomania
 permalink: /about/
 ---
+
+gg 
+
+gg
+
 "Termin szamanizm pochodzi od mandżursko-tunguskiego słowa šaman. Rzeczownik ten wywodzi się od czasownika ša-, oznaczającego wiedzieć. Szaman to dosłownie 'ten, który wie'."
 ~ Britannica.com
 TL;DR
