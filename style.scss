@@ -148,7 +148,6 @@ img {
   max-width: 100%;
 }
 
-
 // Fixes images in popup boxes from Google Translate
 .gmnoprint img {
   max-width: none;
@@ -262,7 +261,6 @@ img {
   }
 }
 
-
 .backToTools{
   text-align:center;
   font-size: 22px;
@@ -275,6 +273,12 @@ img {
   }
 }
 
+blockquote {
+  margin: 1.8em .8em;
+  border-left: 2px solid $gray;
+  padding: 0.1em 1em;
+  color: $gray;
+}
 
 nav {
   float: left;
@@ -323,7 +327,6 @@ nav {
     border-left: 2px solid $gray;
     padding: 0.1em 1em;
     color: $gray;
-    font-size: 22px;
     font-style: italic;
   }
 
