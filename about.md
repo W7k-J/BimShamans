@@ -1,8 +1,25 @@
 ---
 layout: page
-title: About
+title: Projekt: BIM Shamans – technologia, automatyzacja, mitomania
 permalink: /about/
 ---
-  
+"Termin szamanizm pochodzi od mandżursko-tunguskiego słowa šaman. Rzeczownik ten wywodzi się od czasownika ša-, oznaczającego wiedzieć. Szaman to dosłownie 'ten, który wie'."
+~ Britannica.com
+TL;DR
+Rozwiązujemy problemy orbitujące wokół technologii BIM, inżynierii lądowej, automatyzacji, analizy i przetwarzania danych. Celem jest rozwiązanie, z pominięciem otoczki marketingu, inżyniersko do celu, w myśl „make engineering approach great again”. BIM Shamans to nasza przestrzeń do dzielenia się przemyśleniami zawodowymi. 
+O projekcie
+Building Information Modelling, Building Information Management, Building Information Model... Building Information Marketing? Building Information nie jedno ma imię. 
+Rok  2025. SpaceX dopracował dokowanie rakiet, sztuczna inteligencja przewyższa już nie tylko statystycznego ośmiolatka, ale zbliża się do poziomu przeciętnego studenta, a w oksfordzkim Joint European Torus udało się uzyskać trwającą 5 sekund reakcję termojądrową z rekordową ilością wygenerowanej energii.
+A co z cyfrowymi bliźniakami? Standaryzujemy, klasyfikujemy, ujednolicamy i automatyzujemy. Z jednej strony nieprzeciętne budowlano – informatyczne umysły raz po raz dźwigają branże budowlaną w ślad za pozostałymi gałęziami przemysłu, z drugiej tworzymy mity i obietnice, podgrzewane webinarami, pokazując "workflow przyszłości". Nie zgadniesz, w którą stronę przeważana jest szala dźwigająca te rzeczywistości. 
+Nasze trzy ulubione zaklęcia? Interoperability, BetterCoordination, StandarizationAndOneSourceOfTruth. Poważne sprawy, poważna magia. 
+Między rzeczywistością a marketingiem
+Każdy z nas działa w obszarze szeroko rozumianego BIM-u. Minął czas zachłyśnięcia się potencjałem technologii – przeżyliśmy zderzenie z rzeczywistością, procesami budowlanymi i oczekiwaniami tych, którym technologia ma służyć, życie ułatwiać i zyski generować. A z tym ułatwianiem i generowaniem zysków bywa różnie, nikt przecież nie inwestuje czasu, wysiłku i pieniędzy nie licząc na zysk.
+W ramach naszego "szamańskiego" projektu będziemy dzielić się przemyśleniami, ciekawostkami oraz własnymi rozwiązaniami i automatyzacjami. Ale uwaga – nie będziemy nikogo przekonywać, że nasze podejście jest jedyne słuszne, rewolucyjne czy najlepsze na świecie. Pozwolimy sobie trochę ponarzekać, ale i pokazać, że lubimy to, co robimy – rozwiązywać wyzwania stawiane na naszej budowlanej ścieżce. 
+Stojąc jedną nogą w budownictwie i koordynacji projektowej, drugą w programowaniu, trzecią w analizie danych (bo BIM to przecież dane!), a czwartą na grząskim gruncie standaryzacji i strategii wdrażania mniejszych i większych innowacji, postanowiliśmy przenieść nasze wewnętrzne rozmowy, networkingi i Q&A z codziennego życia do sieci. 
+O Autorach
+Julian Wandzilak
+Natalia Gawlik
+Piotr Spyra
+
 ![us](/images/Logos/LogoLarge.jpg)  
 
