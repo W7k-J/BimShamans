@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projekt: BIM Shamans
+title: About
 permalink: /about/
 ---
 ### Project: BIM Shamans

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Projekt: BIM Shamans – technologia, automatyzacja, mitomania
+title: Contact
 permalink: /contact/
 ---
 
