@@ -21,8 +21,6 @@ Rok  2025. SpaceX dopracował dokowanie rakiet, sztuczna inteligencja przewyższ
 
 A co z cyfrowymi bliźniakami? Standaryzujemy, klasyfikujemy, ujednolicamy i automatyzujemy. Z jednej strony nieprzeciętne budowlano – informatyczne umysły raz po raz dźwigają branże budowlaną w ślad za pozostałymi gałęziami przemysłu, z drugiej tworzymy mity i obietnice, podgrzewane webinarami, pokazując "workflow przyszłości". Nie zgadniesz, w którą stronę przeważana jest szala dźwigająca te rzeczywistości. 
 
-Nasze trzy ulubione zaklęcia? **Interoperability, BetterCoordination, StandarizationAndOneSourceOfTruth**. Poważne sprawy, poważna magia. 
-
 ## Między rzeczywistością a marketingiem
 Każdy z nas działa w obszarze szeroko rozumianego BIM-u. Minął czas zachłyśnięcia się potencjałem technologii – przeżyliśmy zderzenie z rzeczywistością, procesami budowlanymi i oczekiwaniami tych, którym technologia ma służyć, życie ułatwiać i zyski generować. A z tym ułatwianiem i generowaniem zysków bywa różnie, nikt przecież nie inwestuje czasu, wysiłku i pieniędzy nie licząc na zysk.
 
