@@ -23,7 +23,7 @@ A co z cyfrowymi bliźniakami? Standaryzujemy, klasyfikujemy, ujednolicamy i aut
 
 Każdy z nas działa w obszarze szeroko rozumianego BIM-u. Minął czas zachłyśnięcia się potencjałem technologii – przeżyliśmy zderzenie z rzeczywistością, procesami budowlanymi i oczekiwaniami tych, którym technologia ma służyć, życie ułatwiać i zyski generować. A z tym ułatwianiem i generowaniem zysków bywa różnie, nikt przecież nie inwestuje czasu, wysiłku i pieniędzy nie licząc na zysk.
 
-W ramach naszego "szamańskiego" projektu będziemy dzielić się przemyśleniami, ciekawostkami oraz własnymi rozwiązaniami i automatyzacjami. Ale uwaga – **nie będziemy nikogo przekonywać, że nasze podejście jest jedyne słuszne, rewolucyjne czy najlepsze na świecie. Pozwolimy sobie trochę ponarzekać, ale i pokazać, że lubimy to, co robimy – rozwiązywać wyzwania stawiane na naszej budowlanej ścieżce.**
+W ramach naszego "szamańskiego" projektu będziemy dzielić się przemyśleniami, ciekawostkami oraz własnymi rozwiązaniami i automatyzacjami. Ale uwaga – **nie będziemy nikogo przekonywać, że nasze podejście jest jedyne słuszne, rewolucyjne czy najlepsze na świecie.** Pozwolimy sobie trochę ponarzekać, ale i pokazać, że lubimy to, co robimy – rozwiązywać wyzwania stawiane na naszej budowlanej ścieżce.
 
 Stojąc jedną nogą w budownictwie i koordynacji projektowej, drugą w programowaniu, trzecią w analizie danych (bo BIM to przecież dane!), a czwartą na grząskim gruncie standaryzacji i strategii wdrażania mniejszych i większych innowacji, postanowiliśmy przenieść nasze wewnętrzne rozmowy, networkingi i Q&A z codziennego życia do sieci. 
 
