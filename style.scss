@@ -16,6 +16,30 @@
 /* BASE RULES */
 /**************/
 
+// Light theme
+.light-theme {
+  --background-color: $ghostWhite
+  --firstGray-color: $raisinBlack
+  --secondGray-color: $darkGray
+  --thirdGray-color: $gray
+  --forthGray-color: $lightGray
+  --link-color: $blue
+  --firstBlue-color: $biceBlue
+  --secondBlue-color: $ryanCyan
+}
+
+// Dark theme
+.dark-theme {
+  --background-color: $raisinBlack
+  --firstGray-text: $ghostWhite
+  --secondGray-text: $lightGray
+  --thirdGray-text: $gray
+  --forthGray-text: $darkGray
+  --link-color: $blue
+  --firstBlue-color: $ryanCyan
+  --secondBlue-color: $biceBlue
+}
+
 html {
   font-size: 100%;
 }
