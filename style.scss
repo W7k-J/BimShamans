@@ -45,11 +45,17 @@ html {
 }
 
 body {
+	background: --background-color;
+  font: 18px/1.4 'Montserrat', $helvetica;
+  color: $raisinBlack;
+}
+/*
+body {
 	background: $ghostWhite;
   font: 18px/1.4 'Montserrat', $helvetica;
   color: $raisinBlack;
 }
-
+*/
 .just {
   text-align: justify;
   text-justify: inter-word;
