@@ -16,7 +16,7 @@
 /* BASE RULES */
 /**************/
 
-// Light theme
+// Light theme setup
 .light-theme {
   --background-color: $ghostWhite
   --firstGray-color: $raisinBlack
@@ -28,7 +28,7 @@
   --secondBlue-color: $ryanCyan
 }
 
-// Dark theme
+// Dark theme setup
 .dark-theme {
   --background-color: $raisinBlack
   --firstGray-text: $ghostWhite
@@ -45,9 +45,9 @@ html {
 }
 
 body {
-	background: --background-color;
+	background: var(--background-color);
   font: 18px/1.4 'Montserrat', $helvetica;
-  color: $raisinBlack;
+  color: var(--firstGray-color);
 }
 /*
 body {
