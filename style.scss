@@ -1,9 +1,7 @@
 ---
 ---
 
-//
 // IMPORTS
-//
 
 @import "reset";
 @import "variables";
@@ -19,26 +17,26 @@
 
 // Light theme setup
 .light-theme {
-  --background-color: $ghostWhite;
-  --firstGray-color: $raisinBlack;
-  --secondGray-color: $darkGray;
-  --thirdGray-color: $gray;
-  --forthGray-color: $lightGray;
-  --link-color: $blue;
-  --firstBlue-color: $biceBlue;
-  --secondBlue-color: $ryanCyan;
+  --background-color: #{$ghostWhite};
+  --firstGray-color: #{$raisinBlack};
+  --secondGray-color: #{$darkGray};
+  --thirdGray-color: #{$gray};
+  --forthGray-color: #{$lightGray};
+  --link-color: #{$blue};
+  --firstBlue-color: #{$biceBlue};
+  --secondBlue-color: #{$ryanCyan};
 }
 
 // Dark theme setup
 .dark-theme {
-  --background-color: $raisinBlack;
-  --firstGray-text: $ghostWhite;
-  --secondGray-text: $lightGray;
-  --thirdGray-text: $gray;
-  --forthGray-text: $darkGray;
-  --link-color: $blue;
-  --firstBlue-color: $ryanCyan;
-  --secondBlue-color: $biceBlue;
+  --background-color: #{$raisinBlack};
+  --firstGray-color: #{$ghostWhite};
+  --secondGray-color: #{$lightGray};
+  --thirdGray-color: #{$gray};
+  --forthGray-color: #{$darkGray};
+  --link-color: #{$blue};
+  --firstBlue-color: #{$ryanCyan};
+  --secondBlue-color: #{$biceBlue};
 }
 
 html {
