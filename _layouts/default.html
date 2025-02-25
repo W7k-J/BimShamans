@@ -6,6 +6,7 @@
       {{ site.name }}
       {% if site.description %} – {{ site.description }}{% endif %}
     </title>
+
     {% include meta.html %}
 
     <!--[if lt IE 9]>
@@ -20,7 +21,7 @@
     <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
-  <body>
+  <body class="light-theme">
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
@@ -55,5 +56,6 @@
     </div>
 
     {% include analytics.html %}
+    <script src="{{ site.baseurl }}/assets/js/theme-switcher.js"></script>
   </body>
 </html>
