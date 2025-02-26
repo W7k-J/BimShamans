@@ -39,9 +39,10 @@
           -->
           <br>
           <nav>
-            <a href="{{ site.baseurl }}/">blog</a>
-            <a href="{{ site.baseurl }}/about">about</a>
-            <a href="{{ site.baseurl }}/contact">contact</a>
+            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+            {% for page in pages %}
+              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+            {% endfor %}
           </nav>
           <label class="switch">
             <input type="checkbox" id="theme-switcher">

@@ -11,6 +11,22 @@ description:
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar:   
 
+# Language settings
+languages: ["en", "pl"]
+default_lang: "en"
+exclude_from_localization: ["images", "css", "js"]
+
+# Translations
+t:
+  en:
+    home: "Home"
+    about: "About"
+    contact: "Contact"
+  pl:
+    home: "Strona główna"
+    about: "O nas"
+    contact: "Kontakt"
+
 #
 # Flags below are optional
 #
