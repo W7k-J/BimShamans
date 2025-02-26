@@ -80,7 +80,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', $helveticaNeue;
-  color: $var(--firstBlue-color);
+  color: var(--firstBlue-color);
   font-weight: normal;
 
   line-height: 1.7;
@@ -275,9 +275,9 @@ img {
 .terms{
   text-align:center;
   font-size: 15px;
-  color: $gray;
+  color: var(--thirdGray-color);
   a:link, a:visited {
-    color: $gray;
+    color: var(--thirdGray-color);
   }
   a:hover, a:active {
     color: red;
@@ -287,9 +287,9 @@ img {
 .backToTools{
   text-align:center;
   font-size: 22px;
-  color: $gray;
+  color: var(--thirdGray-color);
   a:link, a:visited {
-    color: $gray;
+    color: var(--thirdGray-color);
   }
   a:hover, a:active {
     color: red;
@@ -298,10 +298,10 @@ img {
 
 blockquote {
   margin: 1.8em 0;
-  border-left: 2px solid $biceBlue;
+  border-left: 2px solid var(--firstBlue-color);
   padding: 0.1em 1em;
-  color: $raisinBlack;
-  background: $lightGray;
+  color: var(--firstGray-color);
+  background: var(--secondGray-color);
 }
 
 nav {
