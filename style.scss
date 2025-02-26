@@ -130,11 +130,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: var(--firstBlue-color);
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: var(--firstBlue-color);
   }
 }
 
