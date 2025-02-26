@@ -1,37 +1,45 @@
-(function() {
-    // Function to set theme
-    function setTheme(theme) {
-        document.body.classList.remove('light-theme', 'dark-theme');
-        document.body.classList.add(theme + '-theme');
-        localStorage.setItem('theme', theme);
-        
-        // Update checkbox state
-        const themeSwitcher = document.getElementById('theme-switcher');
-        if (themeSwitcher) {
-            themeSwitcher.checked = theme === 'dark';
+document.addEventListener('DOMContentLoaded', function() {
+    // Check if localStorage is available
+    function isLocalStorageAvailable() {
+        try {
+            localStorage.setItem('test', 'test');
+            localStorage.removeItem('test');
+            return true;
+        } catch(e) {
+            return false;
         }
     }
 
-    // Function to initialize theme
-    function initializeTheme() {
-        const savedTheme = localStorage.getItem('theme') || 'light';
-        setTheme(savedTheme);
+    const themeSwitcher = document.getElementById('theme-switcher');
+    let currentTheme = 'light';
+
+    // Only try to get from localStorage if it's available
+    if (isLocalStorageAvailable()) {
+        currentTheme = localStorage.getItem('theme') || 'light';
     }
 
-    // Initialize on DOMContentLoaded
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', initializeTheme);
+    if (currentTheme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+        themeSwitcher.checked = true;
     } else {
-        initializeTheme();
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
     }
 
-    // Add event listener to switcher
-    document.addEventListener('DOMContentLoaded', function() {
-        const themeSwitcher = document.getElementById('theme-switcher');
-        if (themeSwitcher) {
-            themeSwitcher.addEventListener('change', function() {
-                setTheme(this.checked ? 'dark' : 'light');
-            });
+    themeSwitcher.addEventListener('change', function() {
+        if (themeSwitcher.checked) {
+            document.body.classList.add('dark-theme');
+            document.body.classList.remove('light-theme');
+            if (isLocalStorageAvailable()) {
+                localStorage.setItem('theme', 'dark');
+            }
+        } else {
+            document.body.classList.add('light-theme');
+            document.body.classList.remove('dark-theme');
+            if (isLocalStorageAvailable()) {
+                localStorage.setItem('theme', 'light');
+            }
         }
     });
-})();
+});
