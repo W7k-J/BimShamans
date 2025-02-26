@@ -17,6 +17,7 @@
 
 // Light theme setup
 .light-theme {
+  // Colors
   --background-color: #{$ghostWhite};
   --firstGray-color: #{$raisinBlack};
   --secondGray-color: #{$darkGray};
@@ -25,10 +26,19 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};
+
+  // Logo visibility
+  .logo-light {
+    display: block;
+  }
+  .logo-dark {
+    display: none;
+  }
 }
 
 // Dark theme setup
 .dark-theme {
+  // Colors
   --background-color: #{$raisinBlack};
   --firstGray-color: #{$ghostWhite};
   --secondGray-color: #{$lightGray};
@@ -37,6 +47,23 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
+
+  // Logo visibility
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
+
+// Base logo styles
+.site-avatar {
+  img.logo-light, img.logo-dark {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.4s ease;
+  }
 }
 
 html {
@@ -330,6 +357,7 @@ nav {
     }
   }
 }
+
 
 //
 // .main

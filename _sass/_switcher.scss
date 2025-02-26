@@ -39,7 +39,7 @@
   left: 4px;
   bottom: 4px;
   // Light theme circle color
-  background-color: var(--firstGray-color);  // Controls circle color in light mode
+  background-color: var(--forthGray-color);  // Controls circle color in light mode
   transition: .4s;
   border-radius: 50%;
 }
@@ -55,5 +55,5 @@ input:checked + .slider {
 input:checked + .slider:before {
   transform: translateX(26px);
   // Dark theme circle color
-  background-color: var(--firstGray-color);  // Controls circle color in dark mode
+  background-color: var(--forthGray-color);  // Controls circle color in dark mode
 }
