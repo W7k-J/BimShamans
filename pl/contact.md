@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Kontakt
+title: kontakt
 lang: pl
 ref: contact
 permalink: /pl/contact/

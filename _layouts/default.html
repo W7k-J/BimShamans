@@ -38,10 +38,10 @@
           </div>
           -->
           <br>
-          <nav>
+          <nav class="language-switch">
             {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
             {% for page in pages %}
-              <a href="{{ page.url }}" class="{{ page.lang }}">{{ page.lang }}</a>
+              <a href="{{ page.url }}" class="lang-btn {% if page.lang == site.lang %}active{% endif %}">{{ page.lang }}</a>
             {% endfor %}
           </nav>
           <label class="switch">

@@ -19,13 +19,13 @@ exclude_from_localization: ["images", "css", "js"]
 # Translations
 t:
   en:
-    home: "Home"
-    about: "About"
-    contact: "Contact"
+    home: "home"
+    about: "about"
+    contact: "contact"
   pl:
-    home: "Strona główna"
-    about: "O nas"
-    contact: "Kontakt"
+    home: "strona główna"
+    about: "o nas"
+    contact: "kontakt"
 
 #
 # Flags below are optional

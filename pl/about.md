@@ -1,6 +1,6 @@
 ---
 layout: page
-title: O nas
+title: o nas
 lang: pl
 ref: about
 permalink: /pl/about/
