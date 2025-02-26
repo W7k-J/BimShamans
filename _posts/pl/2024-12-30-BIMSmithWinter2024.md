@@ -1,7 +1,7 @@
 ---
 layout: post  
 title: BIMsmith Winter Wonderland Holiday Revit Family Competition 2024
-lang: en
+lang: pl
 ref: 2024-12-30-BIMSmithWinter2024
 date: 2024-12-30 12:00:00
 author: Julian
@@ -17,7 +17,7 @@ author: Julian
   </div>
 </div>
 
-ENG ENG ENG
+PLK PLK PLK
 
 It was an intensive year full of several architectural projects, including two castles in Poland and two large offices in London, along with some smaller things. On my programming front, I’ve started coding another five plugins, two of which are already on the Autodesk App Store - Extra and Viewer. Additionally, I had to upgrade all my previous plugins from .NET Framework 4.8 to .NET Core 8, and I had plenty of fun learning more about the Revit API. On top of that, I took part in one architectural competition, I did some cool aerial photos for new developments in Cracow and got involved in various other projects. It was a busy year!
 
