@@ -10,11 +10,12 @@
 
 // Hide default HTML checkbox
 .switch input {
-  opacity: 100;
+  opacity: 0;
   width: 0;
   height: 0;
 }
 
+/* LIGHT THEME (unchecked state) */
 // Slider background
 .slider {
   position: absolute;
@@ -23,8 +24,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  // Background color for light theme (unchecked state)
-  background-color: var(--firstBlue-color);
+  // Light theme background color
+  background-color: var(--firstBlue-color);  // Controls background in light mode
   transition: .4s;
   border-radius: 34px;
 }
@@ -37,19 +38,22 @@
   width: 26px;
   left: 4px;
   bottom: 4px;
-  // Circle color for light theme (unchecked state)
-  background-color: var(--fourthGray-color);
+  // Light theme circle color
+  background-color: var(--firstGray-color);  // Controls circle color in light mode
   transition: .4s;
   border-radius: 50%;
 }
 
-// Changes slider background color when checked (dark theme)
+/* DARK THEME (checked state) */
+// Changes slider background color when checked
 input:checked + .slider {
-  background-color: var(--firstBlue-color);
+  // Dark theme background color
+  background-color: var(--firstBlue-color);  // Controls background in dark mode
 }
 
-// Moves the circle/button when checked
+// Moves and colors the circle/button when checked
 input:checked + .slider:before {
   transform: translateX(26px);
-  background-color: var(--fourthGray-color);
+  // Dark theme circle color
+  background-color: var(--firstGray-color);  // Controls circle color in dark mode
 }
