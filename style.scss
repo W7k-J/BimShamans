@@ -264,7 +264,7 @@ img {
 
 .site-description {
   margin: -5px 0 0 0;
-  color: $gray;
+  color: var(--firstGray-color);
   font-size: 16px;
 
   @include mobile {
