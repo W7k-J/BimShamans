@@ -19,52 +19,57 @@
     <!-- Favicon settings -->
     <link rel="icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
     <link rel="shortcut icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
-
-    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
   </head>
 
   <body class="light-theme">
+    <!-- Header Section -->
     <div class="wrapper-masthead">
       <div class="container">
         <header class="masthead clearfix">
+          <!-- Logo/Site Avatar -->
           <a href="{{ site.baseurl }}/" class="site-avatar">
             <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Light_1024x222.png" class="logo-light" />
             <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Dark_1024x222.png" class="logo-dark" />
           </a>
-          <!--
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>-->
-            <!--<p class="site-description">{{ site.description }}</p>
-          </div>
-          -->
-          
-          <nav class="site-nav">
-            {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
-            <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">{{ t.home }}</a>
-            <a href="{{ site.baseurl }}/{{ page.lang }}/blog" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
-            <a href="{{ site.baseurl }}/{{ page.lang }}/about" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
-            <a href="{{ site.baseurl }}/{{ page.lang }}/contact" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
-          </nav>
 
-          <br>
-          <nav class="language-switch">
-            {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-            {% for page in pages %}
-              <a href="{{ page.url }}" class="lang-btn {% if page.lang == site.lang %}active{% endif %}">{{ page.lang }}</a>
-            {% endfor %}
-          </nav>
-          <label class="switch">
-            <input type="checkbox" id="theme-switcher">
-            <span class="slider"></span>
-          </label>
+          <!-- Navigation Section -->
+          <div class="navigation-container">
+            <!-- Main Navigation -->
+            <nav class="site-nav">
+              {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
+              <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">{{ t.home }}</a>
+              <a href="{{ site.baseurl }}/{{ page.lang }}/blog" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
+              <a href="{{ site.baseurl }}/{{ page.lang }}/about" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
+              <a href="{{ site.baseurl }}/{{ page.lang }}/contact" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
+            </nav>
+
+            <!-- Controls Section -->
+            <div class="nav-controls">
+              <!-- Language Switcher -->
+              <nav class="language-switch">
+                {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
+                {% for page in pages %}
+                  <a href="{{ page.url }}" class="lang-btn {% if page.lang == site.lang %}active{% endif %}">{{ page.lang }}</a>
+                {% endfor %}
+              </nav>
+
+              <!-- Theme Switcher -->
+              <label class="switch">
+                <input type="checkbox" id="theme-switcher">
+                <span class="slider"></span>
+              </label>
+            </div>
+          </div>
         </header>
       </div>
     </div>
 
+    <!-- Main Content -->
     <div id="main" role="main" class="container">
       {{ content }}
     </div>
 
+    <!-- Footer Section -->
     <div class="wrapper-footer">
       <div class="container">
         <footer class="footer">
@@ -73,6 +78,7 @@
       </div>
     </div>
 
+    <!-- Scripts -->
     {% include analytics.html %}
     <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
   </body>
