@@ -67,6 +67,42 @@
   }
 }
 
+// Navigation and language controls
+.masthead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
+  nav.site-nav {
+    margin-left: auto;
+    margin-right: 20px;
+  }
+
+  .language-switch {
+    margin-right: 15px;
+  }
+
+  .switch {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .masthead {
+    flex-direction: column;
+    text-align: center;
+
+    nav.site-nav {
+      margin: 20px 0;
+    }
+
+    .language-switch,
+    .switch {
+      margin: 10px 0;
+    }
+  }
+}
+
 html {
   font-size: 100%;
 }
@@ -93,8 +129,8 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: 1000px;
-  padding: 0 1px;
+  max-width: 1200px;
+  padding: 0 15px;
   width: 100%;
 }
 
