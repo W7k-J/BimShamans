@@ -1,0 +1,51 @@
+/* Language switcher styles */
+
+// Main language switch container
+.language-switch {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 20px;
+  padding: 5px;
+  border-radius: 20px;
+  background: var(--background-color);
+}
+
+// Language button styles
+.lang-btn {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: var(--firstGray-color);
+
+  &:hover {
+    background: var(--secondGray-color);
+    color: var(--background-color);
+  }
+}
+
+// Active language state
+.lang-btn.active {
+  background: var(--firstBlue-color);
+  color: var(--background-color);
+  font-weight: 500;
+}
+
+// Light theme specific styles
+.light-theme {
+  .language-switch {
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+}
+
+// Dark theme specific styles
+.dark-theme {
+  .language-switch {
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.1);
+  }
+}
