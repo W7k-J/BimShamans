@@ -38,7 +38,7 @@
   left: 4px;
   bottom: 4px;
   // Circle color for light theme (unchecked state)
-  background-color: var(--firstGray-color);
+  background-color: var(--fourthGray-color);
   transition: .4s;
   border-radius: 50%;
 }
@@ -51,5 +51,5 @@ input:checked + .slider {
 // Moves the circle/button when checked
 input:checked + .slider:before {
   transform: translateX(26px);
-  background-color: var(--firstGray-color);
+  background-color: var(--fourthGray-color);
 }
