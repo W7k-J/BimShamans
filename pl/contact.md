@@ -1,9 +1,10 @@
 ---
 layout: page
-title: Contact
+title: Kontakt
 lang: pl
-permalink: /contact/
+ref: contact
+permalink: /pl/contact/
 ---
 
-CONTACT
+INFORMACJE KONTAKTOWE
 

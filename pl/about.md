@@ -1,7 +1,9 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: O nas
+lang: pl
+ref: about
+permalink: /pl/about/
 ---
 ## Project: BIM Shamans
 
