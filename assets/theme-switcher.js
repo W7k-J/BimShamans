@@ -1,25 +1,37 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const themeSwitcher = document.getElementById('theme-switcher');
-    const currentTheme = localStorage.getItem('theme') || 'light';
-
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        document.body.classList.remove('light-theme');
-        themeSwitcher.checked = true;
-    } else {
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('dark-theme');
+(function() {
+    // Function to set theme
+    function setTheme(theme) {
+        document.body.classList.remove('light-theme', 'dark-theme');
+        document.body.classList.add(theme + '-theme');
+        localStorage.setItem('theme', theme);
+        
+        // Update checkbox state
+        const themeSwitcher = document.getElementById('theme-switcher');
+        if (themeSwitcher) {
+            themeSwitcher.checked = theme === 'dark';
+        }
     }
 
-    themeSwitcher.addEventListener('change', function() {
-        if (themeSwitcher.checked) {
-            document.body.classList.add('dark-theme');
-            document.body.classList.remove('light-theme');
-            localStorage.setItem('theme', 'dark');
-        } else {
-            document.body.classList.add('light-theme');
-            document.body.classList.remove('dark-theme');
-            localStorage.setItem('theme', 'light');
+    // Function to initialize theme
+    function initializeTheme() {
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+    }
+
+    // Initialize on DOMContentLoaded
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initializeTheme);
+    } else {
+        initializeTheme();
+    }
+
+    // Add event listener to switcher
+    document.addEventListener('DOMContentLoaded', function() {
+        const themeSwitcher = document.getElementById('theme-switcher');
+        if (themeSwitcher) {
+            themeSwitcher.addEventListener('change', function() {
+                setTheme(this.checked ? 'dark' : 'light');
+            });
         }
     });
-});
+})();
