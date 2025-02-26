@@ -22,10 +22,12 @@ t:
     home: "home"
     about: "about"
     contact: "contact"
+    read_more: "Read More"
   pl:
     home: "strona główna"
     about: "o nas"
     contact: "kontakt"
+    read_more: "Czytaj więcej"
 
 #
 # Flags below are optional
