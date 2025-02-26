@@ -37,6 +37,15 @@
             <!--<p class="site-description">{{ site.description }}</p>
           </div>
           -->
+          
+          <nav class="site-nav">
+            {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
+            <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">{{ t.home }}</a>
+            <a href="{{ site.baseurl }}/{{ page.lang }}/blog" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
+            <a href="{{ site.baseurl }}/{{ page.lang }}/about" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
+            <a href="{{ site.baseurl }}/{{ page.lang }}/contact" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
+          </nav>
+
           <br>
           <nav class="language-switch">
             {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}

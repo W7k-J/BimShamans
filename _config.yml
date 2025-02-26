@@ -20,14 +20,16 @@ exclude_from_localization: ["images", "css", "js"]
 t:
   en:
     home: "home"
+    blog: "blog"
     about: "about"
     contact: "contact"
-    read_more: "Read More"
+    read_more: "read More"
   pl:
     home: "strona główna"
+    blog: "blog"
     about: "o nas"
     contact: "kontakt"
-    read_more: "Czytaj więcej"
+    read_more: "czytaj więcej"
 
 #
 # Flags below are optional
