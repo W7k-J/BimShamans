@@ -184,11 +184,11 @@ img {
 // Specify the color of the selection
 ::-moz-selection {
   color: var(--firstGray-color);
-  background: var(--secondGray-color);
+  background: var(--forthGray-color);
 }
 ::selection {
   color: var(--firstGray-color);
-  background: var(--secondGray-color);
+  background: var(--forthGray-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -301,7 +301,7 @@ blockquote {
   border-left: 2px solid var(--firstBlue-color);
   padding: 0.1em 1em;
   color: var(--firstGray-color);
-  background: var(--secondGray-color);
+  background: var(--forthGray-color);
 }
 
 nav {
@@ -319,7 +319,7 @@ nav {
 
   a {
     margin-left: 20px;
-    color: $raisinBlack;
+    color: var(--firstGray-color);
     text-align: right;
     font-weight: 300;
     letter-spacing: 1px;
@@ -367,9 +367,9 @@ nav {
 
 .wrapper-footer {
   margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
+  border-top: 1px solid var(--firstBlue-color);
+  border-bottom: 1px solid var(--firstBlue-color);
+  background-color: var(--forthGray-color);
 }
 
 footer {
