@@ -48,13 +48,7 @@ body {
   font: 18px/1.4 'Montserrat', $helvetica;
   color: var(--firstGray-color);
 }
-/*
-body {
-	background: $ghostWhite;
-  font: 18px/1.4 'Montserrat', $helvetica;
-  color: $raisinBlack;
-}
-*/
+
 .just {
   text-align: justify;
   text-justify: inter-word;
@@ -86,7 +80,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', $helveticaNeue;
-  color: $biceBlue;
+  color: $var(--firstBlue-color);
   font-weight: normal;
 
   line-height: 1.7;
@@ -122,13 +116,13 @@ h4 {
 
 h5 {
   font-size: 18px;
-  color: $raisinBlack;
+  color: var(--firstGray-color);
   font-weight: bold;
 }
 
 h6 {
   font-size: 18px;
-  color: $raisinBlack;
+  color: var(--firstGray-color);
 }
 
 p {
@@ -184,17 +178,17 @@ img {
 
 .date {
   font-style: italic;
-  color: $gray;
+  color: var(--thirdGray-color);
 }
 
 // Specify the color of the selection
 ::-moz-selection {
-  color: $raisinBlack;
-  background: $lightGray;
+  color: var(--firstGray-color);
+  background: var(--secondGray-color);
 }
 ::selection {
-  color: $raisinBlack;
-  background: $lightGray;
+  color: var(--firstGray-color);
+  background: var(--secondGray-color);
 }
 
 // Nicolas Gallagher's micro clearfix hack
@@ -223,7 +217,7 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
+  border-bottom: 1px solid var(--secondGray-color);
 
   @include mobile {
     text-align: center;
@@ -260,7 +254,7 @@ img {
 
 .site-name {
   margin: 0;
-  color: $raisinBlack;
+  color: var(--firstGray-color);
   cursor: pointer;
   font-family: "Montserrat", $helveticaNeue;
   font-weight: 300;
