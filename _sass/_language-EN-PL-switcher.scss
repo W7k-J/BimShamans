@@ -9,7 +9,7 @@
   a {
     color: var(--firstGray-color);
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 1.0rem;
     padding: 0.3rem 0.5rem;
     border-radius: 3px;
     transition: all 0.3s ease;
@@ -18,7 +18,7 @@
 
     &.active {
       color: var(--firstBlue-color);
-      font-weight: 500;
+      font-weight: 600;
       pointer-events: none;
     }
 
