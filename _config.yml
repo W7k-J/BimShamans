@@ -11,42 +11,52 @@ description:
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar:   
 
-# Language settings
+# Language settings and permalinks
 languages: ["en", "pl"]
 default_lang: "en"
 exclude_from_localization: ["images", "css", "js"]
 
-# Default settings for pages
+# Permalink structure for posts and pages
+permalink: "/:lang/:title/"
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: "/:lang/:title/"
+
+# Default settings for pages and posts
 defaults:
   -
     scope:
-      path: ""      # wszystkie pliki w projekcie
-      type: "pages" # tylko dla stron
+      path: ""
+      type: "pages"
     values:
       layout: "default"
   -
     scope:
-      path: "pl"    # pliki w katalogu pl
+      path: "pl"
     values:
       lang: "pl"
   -
     scope:
-      path: "en"    # pliki w katalogu en
+      path: "en"
     values:
       lang: "en"
   -
     scope:
       path: "_posts/pl"
+      type: "posts"
     values:
       lang: "pl"
+      layout: "post"
   -
     scope:
       path: "_posts/en"
+      type: "posts"
     values:
       lang: "en"
-
-# URL structure - simplified
-permalink: /:lang/:title/
+      layout: "post"
 
 # Site URL
 url: "https://bimshamans.com"  # twój docelowy URL
