@@ -5,11 +5,11 @@ ref: home
 lang: pl
 permalink: /pl/home/
 ---
-
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
 <!-- Language switcher -->
+<!-- 
 <div class="language-switcher">
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
   {% for page in pages %}
@@ -21,6 +21,7 @@ permalink: /pl/home/
     {% endif %}
   {% endfor %}
 </div>
+-->
 
 <div class="posts">
   {% assign posts=site.posts | where:"lang", "pl" %}

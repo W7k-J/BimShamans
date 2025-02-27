@@ -9,6 +9,7 @@ permalink: /en/home/
 {% assign t = site.t[lang] %}
 
 <!-- Language switcher -->
+<!-- 
 <div class="language-switcher">
   {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
   {% for page in pages %}
@@ -20,7 +21,7 @@ permalink: /en/home/
     {% endif %}
   {% endfor %}
 </div>
-
+-->
 <div class="posts">
   {% assign posts=site.posts | where:"lang", "en" %}
   {% for post in posts %}
