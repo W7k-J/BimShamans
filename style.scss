@@ -68,37 +68,91 @@
 }
 
 // Navigation and language controls
+.wrapper-masthead {
+  margin-bottom: 0; // Remove bottom margin
+}
+
 .masthead {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  
-  nav.site-nav {
-    margin-left: auto;
-    margin-right: 20px;
-  }
+  padding: 20px 0;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--secondGray-color);
 
-  .language-switch {
-    margin-right: 15px;
-  }
-
-  .switch {
-    margin-left: 15px;
+  .site-info {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .masthead {
-    flex-direction: column;
-    text-align: center;
+// Fixed navigation bar
+.nav-container {
+  width: 100%;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--secondGray-color);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  
+  nav.site-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 0;
+    margin: 0 auto;
+    max-width: 1200px;
 
-    nav.site-nav {
-      margin: 20px 0;
+    a {
+      margin: 0 20px;
+      color: var(--firstGray-color);
+      text-align: center;
+      font-weight: 300;
+      letter-spacing: 1px;
+      transition: color 0.3s ease;
+
+      &:hover {
+        color: var(--firstBlue-color);
+      }
+    }
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+
+    .language-switch {
+      margin-right: 15px;
     }
 
-    .language-switch,
     .switch {
-      margin: 10px 0;
+      margin-left: 15px;
+    }
+  }
+}
+
+// Mobile responsive design
+@media screen and (max-width: 768px) {
+  .nav-container {
+    position: static;
+    
+    nav.site-nav {
+      flex-direction: column;
+      padding: 10px 0;
+      
+      a {
+        margin: 5px 0;
+      }
+    }
+
+    .controls {
+      position: static;
+      transform: none;
+      justify-content: center;
+      margin-top: 10px;
     }
   }
 }
