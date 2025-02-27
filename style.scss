@@ -67,79 +67,115 @@
   }
 }
 
-.wrapper-masthead {
-  margin-bottom: 0;
-  background-color: var(--background-color);
-}
-
-.masthead {
-  padding: 20px 0;
-  border-bottom: 1px solid var(--secondGray-color);
-  background-color: var(--background-color);
-  
-  .site-info {
-    text-align: center;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-}
-
-// Fixed navigation bar - updated styles
+// Navigation container
 .nav-container {
   width: 100%;
+  height: 80px; // stała wysokość zamiast 10vh dla lepszej spójności
   background-color: var(--background-color);
+  border-top: 1px solid var(--secondGray-color);
   border-bottom: 1px solid var(--secondGray-color);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   z-index: 1000;
-  transition: all 0.3s ease;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   
+  .container {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  // Logo section
+  .site-avatar {
+    height: 60px; // wysokość logo
+    padding: 5px 20px;
+    border-right: 1px solid var(--secondGray-color);
+    transition: opacity 0.4s ease;
+    
+    img.logo-light, img.logo-dark {
+      height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+  }
+
+  // Navigation menu
   nav.site-nav {
     display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 15px 0;
-    margin: 0 auto;
-    max-width: 1200px;
-    float: none; // Override float from existing nav styles
+    gap: 2rem;
+    margin-left: 1rem;
+    height: 100%;
 
     a {
-      margin: 0 20px;
       color: var(--firstGray-color);
       text-align: center;
       font-weight: 300;
       letter-spacing: 1px;
       transition: color 0.3s ease;
+      height: 100%;
+      display: flex;
+      align-items: center;
 
       &:hover {
         color: var(--firstBlue-color);
       }
     }
   }
+
+  // Controls container
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; // przesuwa kontrolki na prawą stronę
+    padding-left: 1rem;
+    height: 100%;
+    border-left: 1px solid var(--secondGray-color);
+  }
 }
 
-// Remove or comment out the conflicting nav styles
-/*
-nav {
-  float: left;
-  margin-top: 23px;
-  ...existing nav styles...
+// Add margin to main content
+.container:not(.nav-container .container) {
+  margin-top: 100px; // wysokość paska + margines
 }
-*/
 
-// Update mobile styles
+// Mobile styles
 @media screen and (max-width: 768px) {
   .nav-container {
-    position: sticky; // Keep it sticky on mobile
+    height: auto;
     
+    .container {
+      flex-direction: column;
+      padding: 1rem;
+    }
+
+    .site-avatar {
+      height: 40px;
+      border-right: none;
+      border-bottom: 1px solid var(--secondGray-color);
+      padding: 10px 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+
     nav.site-nav {
       flex-direction: column;
-      padding: 10px 0;
-      
-      a {
-        margin: 5px 0;
-      }
+      gap: 1rem;
+      margin: 1rem 0;
+      height: auto;
+    }
+
+    .controls {
+      border-left: none;
+      border-top: 1px solid var(--secondGray-color);
+      padding: 1rem 0 0 0;
+      margin-top: 1rem;
+      width: 100%;
+      justify-content: center;
+      height: auto;
     }
   }
 }
