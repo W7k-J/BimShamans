@@ -20,21 +20,37 @@ exclude_from_localization: ["images", "css", "js"]
 defaults:
   -
     scope:
-      path: ""      # puste oznacza wszystkie pliki w projekcie
+      path: ""      # wszystkie pliki w projekcie
       type: "pages" # tylko dla stron
     values:
       layout: "default"
-      lang: "en"    # domyślny język
   -
     scope:
       path: "pl"    # pliki w katalogu pl
     values:
-      lang: "pl"    # polski dla plików w katalogu pl
+      lang: "pl"
   -
     scope:
       path: "en"    # pliki w katalogu en
     values:
-      lang: "en"    # angielski dla plików w katalogu en
+      lang: "en"
+  -
+    scope:
+      path: "_posts/pl"
+    values:
+      lang: "pl"
+  -
+    scope:
+      path: "_posts/en"
+    values:
+      lang: "en"
+
+# URL structure
+permalink: /:lang/:categories/:title/
+
+# Site URL
+url: "https://bimshamans.com"  # twój docelowy URL
+baseurl: ""                     # zostaw puste jeśli nie używasz podkatalogu
 
 # Translations
 t:
@@ -92,8 +108,6 @@ baseurl:
 #
 # !! You don't need to change any of the configuration flags below !!
 #
-
-permalink: /:lang/:title/
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
