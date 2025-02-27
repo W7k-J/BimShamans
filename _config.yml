@@ -16,6 +16,26 @@ languages: ["en", "pl"]
 default_lang: "en"
 exclude_from_localization: ["images", "css", "js"]
 
+# Default settings for pages
+defaults:
+  -
+    scope:
+      path: ""      # puste oznacza wszystkie pliki w projekcie
+      type: "pages" # tylko dla stron
+    values:
+      layout: "default"
+      lang: "en"    # domyślny język
+  -
+    scope:
+      path: "pl"    # pliki w katalogu pl
+    values:
+      lang: "pl"    # polski dla plików w katalogu pl
+  -
+    scope:
+      path: "en"    # pliki w katalogu en
+    values:
+      lang: "en"    # angielski dla plików w katalogu en
+
 # Translations
 t:
   en:
@@ -73,7 +93,7 @@ baseurl:
 # !! You don't need to change any of the configuration flags below !!
 #
 
-permalink: /:title/
+permalink: /:lang/:title/
 
 # The release of Jekyll Now that you're using
 version: v1.2.0
