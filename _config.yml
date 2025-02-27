@@ -45,8 +45,8 @@ defaults:
     values:
       lang: "en"
 
-# URL structure
-permalink: /:lang/:categories/:title/
+# URL structure - simplified
+permalink: /:lang/:title/
 
 # Site URL
 url: "https://bimshamans.com"  # twój docelowy URL
