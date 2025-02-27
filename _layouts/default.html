@@ -2,9 +2,9 @@
 <html lang="{{ page.lang | default: site.default_lang }}">
 <head>
     <title>
-        {% if page.title %}{{ page.title }}{% if site.name %} – {% endif %}{% endif %}
+        {% if page.title %}{{ page.title }}{% if site.name %} | {% endif %}{% endif %}
         {{ site.name }}
-        {% if site.description %} – {{ site.description }}{% endif %}
+        {% if site.description %} | {{ site.description }}{% endif %}
     </title>
 
     {% include meta.html %}

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: home
+title: Strona główna
 ref: home
 lang: pl
 permalink: /pl/home/
