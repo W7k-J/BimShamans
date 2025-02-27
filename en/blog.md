@@ -1,6 +1,6 @@
 ---
 layout: page
-title: blog
+title: Blog
 lang: en
 ref: blog
 permalink: /en/blog/
