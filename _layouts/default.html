@@ -1,80 +1,81 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="{{ page.lang | default: site.default_lang }}">
 <head>
-  <title>
-    {% if page.title %}{{ page.title }}{% if site.name %} – {% endif %}{% endif %}
-    {{ site.name }}
-    {% if site.description %} – {{ site.description }}{% endif %}
-  </title>
+    <title>
+        {% if page.title %}{{ page.title }}{% if site.name %} – {% endif %}{% endif %}
+        {{ site.name }}
+        {% if site.description %} – {{ site.description }}{% endif %}
+    </title>
 
-  {% include meta.html %}
+    {% include meta.html %}
 
-  <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <!--[if lt IE 9]>
+        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}"
-    href="{{ site.baseurl }}/feed.xml" />
-
-  <!-- Favicon settings -->
-  <link rel="icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
+    <link rel="icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
+    <link rel="shortcut icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
+    
+    <!-- JavaScript -->
+    <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
+    <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js"></script>
 </head>
 
 <body class="light-theme">
-  <div class="wrapper-masthead">
-    <div class="container">
-      <header class="masthead clearfix">
-        <!-- Logo/Site Avatar -->
-        <a href="{{ site.baseurl }}/" class="site-avatar">
-          <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Light_1024x222.png" class="logo-light" />
-          <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Dark_1024x222.png" class="logo-dark" />
-        </a>
+    <!-- Navigation Bar -->
+    <div class="nav-container">
+        <div class="container">
+            <!-- Logo -->
+            <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="site-avatar">
+                <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Light_1024x222.png" class="logo-light" alt="BIM Shamans Light Logo" />
+                <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_Dark_1024x222.png" class="logo-dark" alt="BIM Shamans Dark Logo" />
+            </a>
 
-        <!-- Main Navigation -->
-        <nav class="site-nav">
-          {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
-          {% assign lang = page.lang | default: site.default_lang %}
-          
-          <a href="{{ site.baseurl }}/" class="{% if page.url == '/' %}active{% endif %}">{{ t.home }}</a>
-          <a href="{{ site.baseurl }}/{{ lang }}/blog/" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
-          <a href="{{ site.baseurl }}/{{ lang }}/about/" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
-          <a href="{{ site.baseurl }}/{{ lang }}/contact/" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
-        </nav>
+            <!-- Navigation Menu -->
+            <nav class="site-nav">
+                {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
+                <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="{% if page.url contains '/home' %}active{% endif %}">{{ t.home }}</a>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/contact/" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
+            </nav>
 
-        <!-- Language Switcher -->
-        <nav class="language-switch">
-          {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-          {% for page in pages %}
-          <a href="{{ page.url }}" class="lang-btn {% if page.lang == site.lang %}active{% endif %}">{{ page.lang }}</a>
-          {% endfor %}
-        </nav>
+            <!-- Controls (Language and Theme Switchers) -->
+            <div class="controls">
+                <!-- Language Switcher -->
+                <div class="language-switcher">
+                    <a data-lang="en" class="{% if page.lang == 'en' %}active{% endif %}" 
+                       onclick="switchLanguage('en')">EN</a>
+                    <span>|</span>
+                    <a data-lang="pl" class="{% if page.lang == 'pl' %}active{% endif %}"
+                       onclick="switchLanguage('pl')">PL</a>
+                </div>
 
-        <!-- Theme Switcher -->
-        <label class="switch">
-          <input type="checkbox" id="theme-switcher">
-          <span class="slider"></span>
-        </label>
-      </header>
+                <!-- Theme Switcher -->
+                <label class="switch">
+                    <input type="checkbox" id="theme-switcher">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
     </div>
-  </div>
 
-  <div id="main" role="main" class="container">
-    {{ content }}
-  </div>
-
-  <div class="wrapper-footer">
-    <div class="container">
-      <footer class="footer">
-        {% include svg-icons.html %}
-      </footer>
+    <!-- Main Content -->
+    <div id="main" role="main" class="container">
+        {{ content }}
     </div>
-  </div>
 
-  {% include analytics.html %}
-  <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
+    <!-- Footer -->
+    <div class="wrapper-footer">
+        <div class="container">
+            <footer class="footer">
+                {% include svg-icons.html %}
+            </footer>
+        </div>
+    </div>
+
+    {% include analytics.html %}
 </body>
-
 </html>

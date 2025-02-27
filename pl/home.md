@@ -8,21 +8,6 @@ permalink: /pl/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-<!-- Language switcher -->
-<!-- 
-<div class="language-switcher">
-  {% assign pages=site.pages | where:"ref", page.ref | sort: 'lang' %}
-  {% for page in pages %}
-    <a href="{{ site.baseurl }}{{ page.url }}" class="{{ page.lang }} {% if page.lang == lang %}active{% endif %}">
-      {{ page.lang | upcase }}
-    </a>
-    {% if forloop.last == false %}
-    |
-    {% endif %}
-  {% endfor %}
-</div>
--->
-
 <div class="posts">
   {% assign posts=site.posts | where:"lang", "pl" %}
   {% for post in posts %}
