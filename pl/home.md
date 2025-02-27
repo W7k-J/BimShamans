@@ -3,7 +3,7 @@ layout: default
 title: home
 ref: home
 lang: pl
-permalink: /pl/index.html
+permalink: /pl/home/
 ---
 
 {% assign lang = page.lang | default: site.default_lang %}
