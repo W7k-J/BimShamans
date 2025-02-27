@@ -4,43 +4,39 @@
 
 # Name of your site (displayed in the header)
 name: BIM Shamans
-
-# Short bio or description (displayed in the header)
 description:  
-
-# URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar:   
 
-# Language settings and permalinks
+# Language settings
 languages: ["en", "pl"]
 default_lang: "en"
 exclude_from_localization: ["images", "css", "js"]
 
-# Permalink structure for posts and pages
-permalink: "/:lang/:title/"
-
-# Collections
+# Collections and permalinks
+permalink: /:categories/:year/:month/:day/:title/
 collections:
   posts:
     output: true
-    permalink: "/:lang/:title/"
+    permalink: /:lang/:categories/:title/
 
 # Default settings for pages and posts
 defaults:
   -
     scope:
-      path: ""
-      type: "pages"
+      path: ""      # wszystkie pliki
+      type: "pages" # tylko strony
     values:
       layout: "default"
   -
     scope:
-      path: "pl"
+      path: "pl"    # pliki w katalogu pl
+      type: "pages"
     values:
       lang: "pl"
   -
     scope:
-      path: "en"
+      path: "en"    # pliki w katalogu en
+      type: "pages"
     values:
       lang: "en"
   -
@@ -50,6 +46,7 @@ defaults:
     values:
       lang: "pl"
       layout: "post"
+      permalink: /pl/:title/
   -
     scope:
       path: "_posts/en"
@@ -57,10 +54,11 @@ defaults:
     values:
       lang: "en"
       layout: "post"
+      permalink: /en/:title/
 
 # Site URL
-url: "https://bimshamans.com"  # twój docelowy URL
-baseurl: ""                     # zostaw puste jeśli nie używasz podkatalogu
+url: "https://bimshamans.com"
+baseurl: ""
 
 # Translations
 t:
