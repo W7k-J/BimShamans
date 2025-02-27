@@ -67,16 +67,16 @@
   }
 }
 
-// Navigation and language controls
 .wrapper-masthead {
-  margin-bottom: 0; // Remove bottom margin
+  margin-bottom: 0;
+  background-color: var(--background-color);
 }
 
 .masthead {
   padding: 20px 0;
-  background-color: var(--background-color);
   border-bottom: 1px solid var(--secondGray-color);
-
+  background-color: var(--background-color);
+  
   .site-info {
     text-align: center;
     width: 100%;
@@ -84,7 +84,7 @@
   }
 }
 
-// Fixed navigation bar
+// Fixed navigation bar - updated styles
 .nav-container {
   width: 100%;
   background-color: var(--background-color);
@@ -93,6 +93,7 @@
   top: 0;
   z-index: 1000;
   transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
   
   nav.site-nav {
     display: flex;
@@ -101,6 +102,7 @@
     padding: 15px 0;
     margin: 0 auto;
     max-width: 1200px;
+    float: none; // Override float from existing nav styles
 
     a {
       margin: 0 20px;
@@ -115,29 +117,21 @@
       }
     }
   }
-
-  .controls {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
-
-    .language-switch {
-      margin-right: 15px;
-    }
-
-    .switch {
-      margin-left: 15px;
-    }
-  }
 }
 
-// Mobile responsive design
+// Remove or comment out the conflicting nav styles
+/*
+nav {
+  float: left;
+  margin-top: 23px;
+  ...existing nav styles...
+}
+*/
+
+// Update mobile styles
 @media screen and (max-width: 768px) {
   .nav-container {
-    position: static;
+    position: sticky; // Keep it sticky on mobile
     
     nav.site-nav {
       flex-direction: column;
@@ -146,13 +140,6 @@
       a {
         margin: 5px 0;
       }
-    }
-
-    .controls {
-      position: static;
-      transform: none;
-      justify-content: center;
-      margin-top: 10px;
     }
   }
 }
