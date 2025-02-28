@@ -4,11 +4,10 @@ title: About
 lang: en
 ref: about
 permalink: /en/about/
-
 ---
 ## Project: BIM Shamans
 
-> Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. **_Szaman_** to dosłownie **_'ten, który wie'_**.
+> The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to know_**. **_A Shaman_** is literally **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
 #### TL;DR
