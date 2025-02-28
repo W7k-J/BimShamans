@@ -70,7 +70,7 @@
 // Navigation container
 .nav-container {
   width: 100%;
-  height: 80px; // stała wysokość
+  height: 80px;
   background-color: var(--background-color);
   border-top: 1px solid var(--secondGray-color);
   border-bottom: 1px solid var(--secondGray-color);
@@ -82,20 +82,18 @@
   .container {
     height: 100%;
     display: flex;
-    align-items: center; // wyśrodkowanie w pionie
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-between; // zmiana z flex-end na space-between
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
   }
 
-  // Logo section
+  // Logo section - using existing .site-avatar class
   .site-avatar {
     height: 60px;
     padding: 5px 20px;
-    margin-right: auto;
-    display: flex;
-    align-items: center; // wyśrodkowanie logo
+    margin-right: auto; // pushes logo to the left
     
     img.logo-light, img.logo-dark {
       height: 100%;
@@ -107,22 +105,24 @@
   // Navigation menu
   nav.site-nav {
     display: flex;
-    align-items: center; // wyśrodkowanie w pionie
+    align-items: center;
     gap: 2rem;
     height: 100%;
-    flex: 1;
-    justify-content: center;
+    flex: 1; // dodane: zajmuje dostępną przestrzeń
+    justify-content: center; // dodane: wyśrodkowanie elementów menu
 
     a {
-      height: 80px; // pełna wysokość kontenera
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0 15px;
       color: var(--firstGray-color);
+      text-align: center; // upewnienie się, że tekst jest wyśrodkowany
       font-weight: 300;
       letter-spacing: 1px;
       transition: color 0.3s ease;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center; // wyśrodkowanie tekstu w pionie
+      width: auto; // dodane: szerokość dopasowana do zawartości
+      padding: 0 15px; // dodane: dodatkowy odstęp po bokach
 
       &:hover {
         color: var(--firstBlue-color);
@@ -133,23 +133,10 @@
   // Controls container
   .controls {
     display: flex;
-    align-items: center; // wyśrodkowanie w pionie
+    align-items: center;
     gap: 1rem;
     padding-left: 1rem;
     height: 100%;
-    border-left: 1px solid var(--secondGray-color);
-
-    .language-switcher {
-      height: 80px; // pełna wysokość kontenera
-      display: flex;
-      align-items: center;
-    }
-
-    .switch {
-      height: 80px; // pełna wysokość kontenera
-      display: flex;
-      align-items: center;
-    }
   }
 }
 
