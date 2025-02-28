@@ -26,7 +26,7 @@
 
 // Light theme setup
 .light-theme {
-  // Colors
+  // Main Colors
   --background-color: #{$ghostWhite};
   --firstGray-color: #{$raisinBlack};
   --secondGray-color: #{$darkGray};
@@ -35,6 +35,10 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};
+  // Scrollbar
+  --scrollbar-track: #{$lightGray};
+  --scrollbar-thumb: #{$gray};
+  --scrollbar-thumb-hover: #{$darkGray};
 
   // Logo visibility
   .logo-light {
@@ -56,6 +60,10 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
+  // Scrollbar
+  --scrollbar-track: #{$raisinBlack};
+  --scrollbar-thumb: #{$darkGray};
+  --scrollbar-thumb-hover: #{$gray};
 
   // Logo visibility
   .logo-light {
@@ -64,6 +72,31 @@
   .logo-dark {
     display: block;
   }
+}
+
+// Scrollbar width
+&::-webkit-scrollbar {
+  width: 14px;
+}
+
+// Track
+&::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+// Handle
+&::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border: 3px solid var(--scrollbar-track);
+  border-radius: 8px;
+  
+  &:hover {
+    background: var(--scrollbar-thumb-hover);
+  }
+
+// Firefox scrollbar
+scrollbar-width: thin;
+scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 // Base logo styles
@@ -77,8 +110,9 @@
 
 // Navigation container
 .nav-container {
-  width: 100%;
-  height: 80px;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: var(--background-color);
   border-top: 1px solid var(--firstBlue-color);
   border-bottom: 1px solid var(--firstBlue-color);
@@ -200,6 +234,7 @@ body {
 	background: var(--background-color);
   font: 18px/1.4 'Montserrat', $helvetica;
   color: var(--firstGray-color);
+  overflow-x: hidden;
 }
 
 .just {
