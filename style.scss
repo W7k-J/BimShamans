@@ -33,11 +33,10 @@
 html {
   font-size: 100%;
   overflow-y: scroll;
-  margin-right: calc(100vw - 100%);
   
   // Webkit scrollbar styles
   &::-webkit-scrollbar {
-    width: 14px;
+    width: 10px;
   }
 
   &::-webkit-scrollbar-track {
@@ -46,8 +45,8 @@ html {
 
   &::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border: 3px solid var(--scrollbar-track);
-    border-radius: 8px;
+    border: 2x solid var(--scrollbar-track);
+    border-radius: 6px;
     
     &:hover {
       background: var(--scrollbar-thumb-hover);
@@ -120,16 +119,14 @@ html {
 
 // Navigation container
 .nav-container {
-  width: 100vw;
-  left: 50%;
-  transform: translateX(-50%);
+  width: 100%; // Zmiana z 100vw na 100%
+  position: fixed;
+  top: 0;
+  left: 0; // Usunięcie transform i left: 50%
+  z-index: 1000;
   background-color: var(--background-color);
   border-top: 1px solid var(--firstBlue-color);
   border-bottom: 1px solid var(--firstBlue-color);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
   
   .container {
     height: 100%;
@@ -193,8 +190,9 @@ html {
 }
 
 #main.container {
-  margin-top: 100px; // Spacing below fixed navigation
+  margin-top: 80px; // Dostosuj do wysokości nawigacji
   margin-bottom: 0;
+  overflow-x: hidden; // Zapobiegaj poziomemu przewijaniu
 }
 
 // Mobile styles
@@ -237,10 +235,11 @@ html {
 }
 
 body {
-	background: var(--background-color);
+  background: var(--background-color);
   font: 18px/1.4 'Montserrat', $helvetica;
   color: var(--firstGray-color);
   overflow-x: hidden;
+  margin: 0; // Dodaj to, aby zapobiec niepożądanym marginesom
 }
 
 .just {
