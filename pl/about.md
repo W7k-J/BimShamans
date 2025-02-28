@@ -19,7 +19,6 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 
 **Building Information Modelling, Building Information Management, Building Information Model... Building Information Marketing? Building Information nie jedno ma imię.**
 
-Rok  2025. SpaceX dopracował dokowanie rakiet, sztuczna inteligencja przewyższa już nie tylko statystycznego ośmiolatka, ale zbliża się do poziomu przeciętnego studenta, a w oksfordzkim Joint European Torus udało się uzyskać trwającą 5 sekund reakcję termojądrową z rekordową ilością wygenerowanej energii.
 
 A co z cyfrowymi bliźniakami? Standaryzujemy, klasyfikujemy, ujednolicamy i automatyzujemy. Z jednej strony nieprzeciętne budowlano – informatyczne umysły raz po raz dźwigają branże budowlaną w ślad za pozostałymi gałęziami przemysłu, z drugiej tworzymy mity i obietnice, podgrzewane webinarami, pokazując "workflow przyszłości". Te dwa przenikające się obszary stanowią nie tylko rzeczywistość, ale też ogrmone wyzwanie inżynierii 4.0, która nas - inżynierów, architektów, otacza. 
 
@@ -29,19 +28,17 @@ W ramach naszego "szamańskiego" projektu będziemy dzielić się przemyśleniam
 
 Stojąc jedną nogą w budownictwie i koordynacji projektowej, drugą w programowaniu, trzecią w analizie danych (bo BIM to przecież dane!), a czwartą na grząskim gruncie standaryzacji i strategii wdrażania mniejszych i większych innowacji, postanowiliśmy przenieść nasze wewnętrzne rozmowy, networkingi i Q&A z codziennego życia do sieci. 
 
+W trakcie naszego życia mieliśmy okazję na własne oczy obserwować rozwój BIM-u i towarzyszących mu technologii. Widzieliśmy, jak pracownie oraz firmy, w których pracowaliśmy, zakupywały pierwsze licencje na „oprogramowanie do BIM-u”, mianowały pierwszego BIM managera, a także podejmowały trud pierwszych standaryzacji. Obserwowaliśmy to z bliska, sami będąc uczestnikami procesów projektowych, koordynacyjnych, standaryzacyjnych czy modelarskich. Tworzyliśmy pierwsze automatyzacje, skrypty w Dynamo, zasady pracy oraz wymyślaliśmy triki łamiące ograniczenia nałożone przez twórców oprogramowania. 
+Z czasem staliśmy się „tymi, którzy wiedzą” – osobami, do których inni przychodzą w poszukiwaniu odpowiedzi.
+
+Połączyło nas podejście stawiające efekt na pierwszym miejscu, z pominięciem otoczki marketingu, inżyniersko do celu. Kiedy kapłani tego czy innego oprogramowania, formatu wymiany danych, CDE lub normy głosili ich wyższość oraz nieomylność, my z szamańską zawziętością zajmowaliśmy się kończeniem kolejnego projektu.
+
+Zawsze byliśmy na pierwszej linii - tam, gdzie BIM się robił, często pomijając miejsca, w których o BIM-ie się tylko mówiło.
+W ramach naszego „szamańskiego” projektu będziemy dzielić się przemyśleniami, ciekawostkami oraz własnymi rozwiązaniami i automatyzacjami. Nie będzie o tym, jaki BIM powinien być, tylko jaki jest i co z tym możemy zrobić.
+
+Widzieliśmy wielokrotnie, jak „jedynie słuszne” plany przegrywały w zderzeniu z realnymi projektami. Z tego powodu nie zamierzamy nikogo przekonywać, że nasze podejście jest właściwe, rewolucyjne czy też najlepsze na świecie. Natomiast możemy zagwarantować, że ono gdzieś zadziałało!
+Pozwolimy sobie również trochę ponarzekać oraz pożartować, ponieważ chcemy pokazać, że lubimy to, co robimy – rozwiązywać wyzwania stawiane na naszej ścieżce.
+
 Julian Wandzilak
 Natalia Gawlik
 Piotr Spyra
-
-Throughout our lives, we have had the opportunity to witness the development of BIM and its accompanying technologies firsthand. We saw how the studios and companies we worked for purchased their first licenses for "BIM software," appointed their first BIM manager, and undertook the challenge of initial standardizations. We observed this closely, being active participants in design, coordination, standardization, and modeling processes. We created the first automations, Dynamo scripts, work principles, and invented tricks to overcome the limitations imposed by software developers.
-
-Over time, we became "those who know" – the go-to people for answers.
-
-We were united by an approach that prioritizes results, bypassing marketing fluff, and focusing on engineering solutions. While the proponents of various software, data exchange formats, CDEs, or standards preached their superiority and infallibility, we, with shamanic tenacity, focused on completing the next project.
-
-We were always on the front line – where BIM was being implemented, often skipping places where BIM was only talked about.
-
-As part of our "shamanic" project, we will share our thoughts, curiosities, and our own solutions and automations. It won't be about what BIM should be, but what it is and what we can do with it.
-
-We have often seen how "only correct" plans failed when faced with real projects. For this reason, we do not intend to convince anyone that our approach is the right, revolutionary, or best in the world. However, we can guarantee that it has worked somewhere!
-
