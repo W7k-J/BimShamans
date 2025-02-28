@@ -83,7 +83,7 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-between; // zmiana z flex-end na space-between
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
@@ -108,16 +108,21 @@
     align-items: center;
     gap: 2rem;
     height: 100%;
+    flex: 1; // dodane: zajmuje dostępną przestrzeń
+    justify-content: center; // dodane: wyśrodkowanie elementów menu
 
     a {
       color: var(--firstGray-color);
-      text-align: center;
+      text-align: center; // upewnienie się, że tekst jest wyśrodkowany
       font-weight: 300;
       letter-spacing: 1px;
       transition: color 0.3s ease;
       height: 100%;
       display: flex;
       align-items: center;
+      justify-content: center; // wyśrodkowanie tekstu w pionie
+      width: auto; // dodane: szerokość dopasowana do zawartości
+      padding: 0 15px; // dodane: dodatkowy odstęp po bokach
 
       &:hover {
         color: var(--firstBlue-color);
@@ -466,7 +471,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: var(--firstBlue-color);
+      color: var (--firstBlue-color);
     }
   }
 }
