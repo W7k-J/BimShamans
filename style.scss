@@ -24,6 +24,41 @@
 /* BASE RULES */
 /**************/
 
+// Scrollbar variables explanation:
+// --scrollbar-track      : tło paska przewijania (powierzchnia po której porusza się uchwyt)
+// --scrollbar-thumb      : uchwyt paska przewijania (element który przesuwamy)
+// --scrollbar-thumb-hover: kolor uchwytu przy najechaniu myszą
+
+// Move to the top, after html declaration
+html {
+  font-size: 100%;
+  overflow-y: scroll;
+  margin-right: calc(100vw - 100%);
+  
+  // Webkit scrollbar styles
+  &::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+    border: 3px solid var(--scrollbar-track);
+    border-radius: 8px;
+    
+    &:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+  }
+
+  // Firefox scrollbar styles
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
 // Light theme setup
 .light-theme {
   // Main Colors
@@ -72,31 +107,6 @@
   .logo-dark {
     display: block;
   }
-}
-
-// Scrollbar width
-&::-webkit-scrollbar {
-  width: 14px;
-}
-
-// Track
-&::-webkit-scrollbar-track {
-  background: var(--scrollbar-track);
-}
-
-// Handle
-&::-webkit-scrollbar-thumb {
-  background: var(--scrollbar-thumb);
-  border: 3px solid var(--scrollbar-track);
-  border-radius: 8px;
-  
-  &:hover {
-    background: var(--scrollbar-thumb-hover);
-  }
-
-// Firefox scrollbar
-scrollbar-width: thin;
-scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 // Base logo styles
@@ -224,10 +234,6 @@ scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
       height: auto;
     }
   }
-}
-
-html {
-  font-size: 100%;
 }
 
 body {
