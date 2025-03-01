@@ -40,21 +40,23 @@ html {
 
   &::-webkit-scrollbar-track {
     background: var(--scrollbar-track);
+    border-radius: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border: 3px solid var(--scrollbar-track); // Zwiększony border
+    border: 2px solid var(--scrollbar-track); // Zmniejszony border dla lepszego kontrastu
     border-radius: 8px;
-    min-height: 40px; // Minimalna wysokość uchwytu
+    min-height: 40px;
     
     &:hover {
       background: var(--scrollbar-thumb-hover);
+      border-width: 1px; // Cieńszy border przy hover
     }
   }
 
   // Firefox scrollbar styles
-  scrollbar-width: auto; // Zmiana z 'thin' na 'auto'
+  scrollbar-width: auto;
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
@@ -70,9 +72,10 @@ html {
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};
   // Scrollbar
-  --scrollbar-track: #{$lightGray};
-  --scrollbar-thumb: #{$gray};
-  --scrollbar-thumb-hover: #{$darkGray};
+  // Scrollbar - jaśniejsze kolory, większy kontrast
+  --scrollbar-track: #{$ghostWhite};    // Bardzo jasne tło
+  --scrollbar-thumb: #{$darkGray};      // Ciemny uchwyt
+  --scrollbar-thumb-hover: #{$gray};     // Jaśniejszy przy hover
 
   // Logo visibility
   .logo-light {
@@ -95,9 +98,9 @@ html {
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
   // Scrollbar
-  --scrollbar-track: #{$raisinBlack};
-  --scrollbar-thumb: #{$darkGray};
-  --scrollbar-thumb-hover: #{$gray};
+  --scrollbar-track: #{$raisinBlack};   // Bardzo ciemne tło
+  --scrollbar-thumb: #{$gray};          // Szary uchwyt
+  --scrollbar-thumb-hover: #{$lightGray}; // Jaśniejszy przy hover
 
   // Logo visibility
   .logo-light {
@@ -391,14 +394,6 @@ img {
 /* LAYOUT / SECTIONS */
 /*********************/
 
-//
-// .masthead
-//
-
-.wrapper-masthead {
-  margin-bottom: 50px;
-}
-
 .masthead {
   padding: 20px 0;
   border-bottom: 1px solid var(--secondGray-color);
@@ -515,8 +510,3 @@ footer {
   padding: 20px 0;
   text-align: center;
 }
-
-// Settled on moving the import of syntax highlighting to the bottom of the CSS
-// ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-@import "highlights";
-@import "svg-icons";
