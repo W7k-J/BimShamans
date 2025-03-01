@@ -29,14 +29,13 @@
 // --scrollbar-thumb      : uchwyt paska przewijania (element który przesuwamy)
 // --scrollbar-thumb-hover: kolor uchwytu przy najechaniu myszą
 
-// Move to the top, after html declaration
 html {
   font-size: 100%;
   overflow-y: scroll;
   
   // Webkit scrollbar styles
   &::-webkit-scrollbar {
-    width: 10px;
+    width: 14px; // Zwiększona szerokość do standardowej
   }
 
   &::-webkit-scrollbar-track {
@@ -45,8 +44,9 @@ html {
 
   &::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border: 2x solid var(--scrollbar-track);
-    border-radius: 6px;
+    border: 3px solid var(--scrollbar-track); // Zwiększony border
+    border-radius: 8px;
+    min-height: 40px; // Minimalna wysokość uchwytu
     
     &:hover {
       background: var(--scrollbar-thumb-hover);
@@ -54,7 +54,7 @@ html {
   }
 
   // Firefox scrollbar styles
-  scrollbar-width: thin;
+  scrollbar-width: auto; // Zmiana z 'thin' na 'auto'
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
