@@ -46,4 +46,12 @@ html {
       background-color: var(--scrollbar-thumb-hover);
     }
   }
+
+  &::-webkit-scrollbar-button {
+    background-color: var(--scrollbar-button);
+    
+    &:hover {
+      background-color: var(--scrollbar-button-hover);
+    }
+  }
 }
