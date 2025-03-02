@@ -11,7 +11,7 @@
 .light-theme {
   --page-background: #{$ghostWhite};
   --scrollbar-track: transparent;
-  --scrollbar-thumb: #{$darkGray};
+  --scrollbar-thumb: #{$Gray};
   --scrollbar-thumb-hover: #{$biceBlue};
 }
 
@@ -19,7 +19,7 @@
 .dark-theme {
   --page-background: #{$raisinBlack};
   --scrollbar-track: transparent;
-  --scrollbar-thumb: #{$lightGray};
+  --scrollbar-thumb: #{$Gray};
   --scrollbar-thumb-hover: #{$ryanCyan};
 }
 
