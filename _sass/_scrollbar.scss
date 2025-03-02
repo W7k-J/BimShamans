@@ -24,7 +24,7 @@
   --scrollbar-thumb-hover: #{$lightGray};
   --scrollbar-thumb-active: #{$ryanCyan};
 }
-
+/*
 // Firefox scrollbar styles
 @-moz-document url-prefix() {
   * {
@@ -32,7 +32,7 @@
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
 }
-
+*/
 // Force scrollbar display
 html {
   overflow-y: scroll !important;
