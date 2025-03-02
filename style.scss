@@ -34,6 +34,17 @@
  * ::-webkit-resizer              - the draggable resizing handle that appears at the bottom corner of some elements
  */
 
+// Move this section before html declaration
+:root {
+  // Default scrollbar variables
+  --scrollbar-track: #{$ghostWhite};
+  --scrollbar-track-piece: #{$ghostWhite};
+  --scrollbar-thumb: #{$lightGray};
+  --scrollbar-thumb-hover: #{$gray};
+  --scrollbar-button: #{$lightGray};
+  --scrollbar-button-hover: #{$gray};
+}
+
  html {
   // Firefox scrollbar (limited styling options)
   scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
