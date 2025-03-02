@@ -59,17 +59,3 @@ html {
     }
   }
 }
-
-// Force styles for all scrollable elements
-* {
-  &::-webkit-scrollbar {
-    width: 14px;
-    background: var(--scrollbar-track);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: 7px;
-    border: 3px solid var(--scrollbar-track);
-  }
-}
