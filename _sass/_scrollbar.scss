@@ -43,9 +43,3 @@
     border-width: calc(var(--scrollbar-border) - 1px);
   }
 }
-
-// Firefox scrollbar styles
-* {
-  scrollbar-width: auto;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
