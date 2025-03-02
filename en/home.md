@@ -31,12 +31,12 @@ permalink: /en/home/
 <div class="hero-section">
   <div class="site-avatar">
     <img 
-      src="{{ site.baseurl }}/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
+      src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
       alt="BIM Shamans Logo Light Theme" 
       class="logo-light"
     >
     <img 
-      src="{{ site.baseurl }}/images/Logo_BIMShamans_Baner_AlphaLightLetters_1024x222.png" 
+      src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaLightLetters_1024x222.png" 
       alt="BIM Shamans Logo Dark Theme" 
       class="logo-dark"
     >
