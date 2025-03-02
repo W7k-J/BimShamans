@@ -13,18 +13,37 @@ permalink: /en/home/
   position: relative;
   width: 100%;
   margin: 2rem 0;
+  height: 222px;
+  overflow: hidden;
 }
 
 .hero-section .site-avatar {
-  position: relative;
+  position: absolute;
   z-index: 2;
   max-width: 1024px;
-  margin: 0 auto;
+  width: 100%;
   height: 222px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .hero-section .plexus-container {
-  height: 222px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-section .site-avatar img {
+  max-width: 100%;
+  height: auto;
+  position: relative;
+  z-index: 2;
 }
 </style>
 
