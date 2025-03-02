@@ -1,0 +1,17 @@
+// Animacja plexus - home page - settings
+
+.plexus-container {
+  position: relative;
+  width: 100%;
+  height: 400px; /* Wysokość obszaru animacji */
+  background: black; /* Tło dla lepszego efektu */
+  overflow: hidden;
+}
+
+#plexusCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}

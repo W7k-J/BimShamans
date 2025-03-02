@@ -1,16 +1,21 @@
+const container = document.querySelector(".plexus-container");
 const canvas = document.getElementById("plexusCanvas");
 const ctx = canvas.getContext("2d");
 
-// Ustawienia Canvas
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+// Ustawienie rozmiaru na podstawie kontenera
+function resizeCanvas() {
+  canvas.width = container.clientWidth;
+  canvas.height = container.clientHeight;
+}
+resizeCanvas();
+window.addEventListener("resize", resizeCanvas);
 
+// Parametry animacji
 const particles = [];
-const maxParticles = 100; // Ilość punktów
-const maxDistance = 150; // Maksymalna odległość linii
-const mouse = { x: null, y: null, radius: 200 };
+const maxParticles = 80;
+const maxDistance = 100;
 
-// Generowanie punktów
+// Obiekt cząsteczki
 class Particle {
   constructor() {
     this.x = Math.random() * canvas.width;
@@ -36,13 +41,14 @@ class Particle {
   }
 }
 
-// Tworzenie tablicy cząsteczek
+// Tworzenie cząsteczek
 function init() {
   for (let i = 0; i < maxParticles; i++) {
     particles.push(new Particle());
   }
 }
 
+// Rysowanie połączeń między cząsteczkami
 function connect() {
   for (let i = 0; i < particles.length; i++) {
     for (let j = i; j < particles.length; j++) {
@@ -62,30 +68,16 @@ function connect() {
   }
 }
 
-// Rysowanie i animacja
+// Animacja
 function animate() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-
   particles.forEach((particle) => {
     particle.move();
     particle.draw();
   });
-
   connect();
   requestAnimationFrame(animate);
 }
-
-// Obsługa zmiany rozmiaru okna
-window.addEventListener("resize", () => {
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-});
-
-// Obsługa ruchu myszki
-window.addEventListener("mousemove", (event) => {
-  mouse.x = event.x;
-  mouse.y = event.y;
-});
 
 // Inicjalizacja
 init();

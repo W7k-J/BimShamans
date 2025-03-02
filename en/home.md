@@ -8,11 +8,8 @@ permalink: /en/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-<div>
-  <div style="position:relative;padding-top:56.25%;">
-    <iframe src="" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
+<div class="plexus-container">
+  <canvas id="plexusCanvas"></canvas>
 </div>
 
 <div class="posts">
