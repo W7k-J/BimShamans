@@ -42,7 +42,7 @@ html {
 
   &::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border-radius: 7px;
+    // border-radius: 7px; - for rounded scrollbar
     border: 3px solid var(--scrollbar-track);
     
     &:hover {
