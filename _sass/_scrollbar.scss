@@ -13,6 +13,7 @@
   --scrollbar-track: transparent;
   --scrollbar-thumb: #{$Gray};
   --scrollbar-thumb-hover: #{$biceBlue};
+  --scrollbar-thumb-active: #{$biceBlue}; // Można użyć tego samego koloru co hover lub ciemniejszy
 }
 
 // Dark theme scrollbar
@@ -21,6 +22,7 @@
   --scrollbar-track: transparent;
   --scrollbar-thumb: #{$Gray};
   --scrollbar-thumb-hover: #{$ryanCyan};
+  --scrollbar-thumb-active: #{$ryanCyan}; // Można użyć tego samego koloru co hover lub jaśniejszy
 }
 
 // Firefox scrollbar styles
@@ -47,10 +49,15 @@ html {
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: var(--scrollbar-border-radius);
-  border: var(--scrollbar-border) solid var(--page-background); // Changed from --background to --page-background
+  border: var(--scrollbar-border) solid var(--page-background);
   
   &:hover {
     background: var(--scrollbar-thumb-hover);
     border-width: calc(var(--scrollbar-border) - 1px);
+  }
+
+  &:active {
+    background: var(--scrollbar-thumb-hover);
+    border-width: calc(var(--scrollbar-border) - 2px); // Bardziej widoczne wciśnięcie
   }
 }
