@@ -33,3 +33,5 @@ permalink: /pl/home/
     </article>
   {% endfor %}
 </div>
+
+<script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>

@@ -1,3 +1,4 @@
+const container = document.querySelector(".networkCanvas");
 const canvas = document.getElementById("networkCanvas");
 const ctx = canvas.getContext("2d");
 
