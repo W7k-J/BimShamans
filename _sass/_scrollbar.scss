@@ -2,46 +2,38 @@
 
 // Base scrollbar variables
 :root {
-  --scrollbar-width: 12px;
-  --scrollbar-border-radius: 4px;
-  --scrollbar-border: 0px;
+  --scrollbar-width: 14px;
+  --scrollbar-border-radius: 7px;
+  --scrollbar-border: 3px;
 }
 
 // Light theme scrollbar
 .light-theme {
-  --page-background: #{$ghostWhite};
-  --scrollbar-track: #{$lightGray};
-  --scrollbar-thumb: #{$Gray};
-  --scrollbar-thumb-hover: #{$darkGray};
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #{$darkGray};
+  --scrollbar-thumb-hover: #{$biceBlue};
   --scrollbar-thumb-active: #{$biceBlue};
 }
 
 // Dark theme scrollbar
 .dark-theme {
-  --page-background: #{$raisinBlack};
-  --scrollbar-track: #{$darkGray};
-  --scrollbar-thumb: #{$Gray};
-  --scrollbar-thumb-hover: #{$lightGray};
+  --scrollbar-track: transparent;
+  --scrollbar-thumb: #{$lightGray};
+  --scrollbar-thumb-hover: #{$ryanCyan};
   --scrollbar-thumb-active: #{$ryanCyan};
 }
-/*
-// Firefox scrollbar styles
+
+// Firefox-specific styles
 @-moz-document url-prefix() {
   * {
     scrollbar-width: thin;
     scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
   }
 }
-*/
-// Force scrollbar display
-html {
-  overflow-y: scroll !important;
-}
 
 // Webkit scrollbar styles (Chrome, Edge, Safari)
 *::-webkit-scrollbar {
   width: var(--scrollbar-width);
-  height: var(--scrollbar-width);
 }
 
 *::-webkit-scrollbar-track {
@@ -51,15 +43,18 @@ html {
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: var(--scrollbar-border-radius);
-  border: var(--scrollbar-border) solid var(--page-background);
+  border: var(--scrollbar-border) solid var(--background-color);
   
   &:hover {
     background: var(--scrollbar-thumb-hover);
-    border-width: calc(var(--scrollbar-border) - 1px);
   }
-
+  
   &:active {
     background: var(--scrollbar-thumb-active);
-    border-width: calc(var(--scrollbar-border) - 2px);
   }
+}
+
+// Force scrollbar display
+html {
+  overflow-y: scroll !important;
 }
