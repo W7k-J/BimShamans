@@ -6,16 +6,8 @@ ref: 2024-12-30-BIMSmithWinter2024
 date: 2024-12-30 12:00:00
 author: Julian
 ---
-![PostPage](/images/2024_BlogPost/BimSmithWWL_Cover.jpg)
 
 <!--excerpt-->
-
-<div>
-  <div style="position:relative;padding-top:56.25%;">
-    <iframe src="https://www.youtube.com/embed/HtpMSAjAEd8?si=EaMDue0p5_Vxd4cy" frameborder="0" allowfullscreen
-      style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
-  </div>
-</div>
 
 PLK PLK PLK
 
