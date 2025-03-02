@@ -8,19 +8,20 @@ permalink: /en/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-
 <div class="hero-section">
   <div class="logo-container">
-    <img 
-      src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
-      alt="BIM Shamans Logo" 
-      class="theme-logo light-logo"
-    >
-    <img 
-      src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
-      alt="BIM Shamans Logo" 
-      class="theme-logo dark-logo"
-    >
+    <div class="site-logo">
+      <img 
+        src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
+        alt="BIM Shamans Logo" 
+        class="logo-img light-theme-logo"
+      >
+      <img 
+        src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaLightLetters_1024x222.png" 
+        alt="BIM Shamans Logo" 
+        class="logo-img dark-theme-logo"
+      >
+    </div>
   </div>
   
   <div class="plexus-container">
