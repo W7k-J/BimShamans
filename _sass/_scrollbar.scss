@@ -20,15 +20,17 @@
   --scrollbar-button-hover: #{$ryanCyan};
 }
 
-// Base scrollbar styles
-html {
-  // Firefox scrollbar
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  scrollbar-width: auto;
+html, body {
+  overflow-y: scroll !important;
+}
 
-  // Webkit scrollbar
+* {
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track) !important;
+  scrollbar-width: auto !important;
+
   &::-webkit-scrollbar {
-    width: 14px;
+    width: 14px !important;
+    display: block !important;
   }
 
   &::-webkit-scrollbar-track {
