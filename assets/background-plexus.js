@@ -12,7 +12,7 @@ const particleSpeed = 0.8; // Speed control variable
 const themeColors = {
     light: {
         particle: "rgba(30, 105, 145, 0.8)",
-        connection: "rgba(0, 150, 255, "
+        connection: "rgba(30, 105, 145, "
     },
     dark: {
         particle: "rgba(0, 255, 255, 0.8)",

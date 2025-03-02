@@ -8,8 +8,24 @@ permalink: /en/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-<div class="network-container">
-  <canvas id="networkCanvas"></canvas>
+
+<div class="hero-section">
+  <div class="logo-container">
+    <img 
+      src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
+      alt="BIM Shamans Logo" 
+      class="theme-logo light-logo"
+    >
+    <img 
+      src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
+      alt="BIM Shamans Logo" 
+      class="theme-logo dark-logo"
+    >
+  </div>
+  
+  <div class="plexus-container">
+    <canvas id="plexusCanvas"></canvas>
+  </div>
 </div>
 
 <div class="posts">
