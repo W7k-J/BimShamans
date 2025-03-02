@@ -10,25 +10,27 @@
 // Light theme scrollbar
 .light-theme {
   --page-background: #{$ghostWhite};
-  --scrollbar-track: transparent;
+  --scrollbar-track: #{$lightGray};
   --scrollbar-thumb: #{$Gray};
-  --scrollbar-thumb-hover: #{$biceBlue};
-  --scrollbar-thumb-active: #{$biceBlue}; // Można użyć tego samego koloru co hover lub ciemniejszy
+  --scrollbar-thumb-hover: #{$darkGray};
+  --scrollbar-thumb-active: #{$biceBlue};
 }
 
 // Dark theme scrollbar
 .dark-theme {
   --page-background: #{$raisinBlack};
-  --scrollbar-track: transparent;
+  --scrollbar-track: #{$darkGray};
   --scrollbar-thumb: #{$Gray};
-  --scrollbar-thumb-hover: #{$ryanCyan};
-  --scrollbar-thumb-active: #{$ryanCyan}; // Można użyć tego samego koloru co hover lub jaśniejszy
+  --scrollbar-thumb-hover: #{$lightGray};
+  --scrollbar-thumb-active: #{$ryanCyan};
 }
 
 // Firefox scrollbar styles
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+@-moz-document url-prefix() {
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
 }
 
 // Force scrollbar display
@@ -57,7 +59,7 @@ html {
   }
 
   &:active {
-    background: var(--scrollbar-thumb-hover);
-    border-width: calc(var(--scrollbar-border) - 2px); // Bardziej widoczne wciśnięcie
+    background: var(--scrollbar-thumb-active);
+    border-width: calc(var(--scrollbar-border) - 2px);
   }
 }
