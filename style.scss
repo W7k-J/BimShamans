@@ -24,9 +24,37 @@
 /* BASE RULES */
 /**************/
 
+/* Scrollbar styling guide:
+ * ::-webkit-scrollbar             - the entire scrollbar
+ * ::-webkit-scrollbar-button      - the buttons on the scrollbar (arrows pointing upwards and downwards)
+ * ::-webkit-scrollbar-thumb       - the draggable scrolling handle
+ * ::-webkit-scrollbar-track       - the track (progress bar) of the scrollbar
+ * ::-webkit-scrollbar-track-piece - the part of the track (progress bar) not covered by the handle
+ * ::-webkit-scrollbar-corner      - the bottom corner of the scrollbar, where both horizontal and vertical scrollbars meet
+ * ::-webkit-resizer              - the draggable resizing handle that appears at the bottom corner of some elements
+ */
+
 html {
-  font-size: 100%;
-  overflow-y: scroll;
+  // Firefox scrollbar (limited styling options)
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: auto;
+
+  // Webkit scrollbar colors
+  &::-webkit-scrollbar {
+    // No color properties - controls only width/height
+  }
+
+  &::-webkit-scrollbar-track {
+    background: var(--scrollbar-track);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb);
+
+    &:hover {
+      background: var(--scrollbar-thumb-hover);
+    }
+  }
 }
 
 // Light theme setup
@@ -42,8 +70,8 @@ html {
   --secondBlue-color: #{$ryanCyan};
   // Scrollbar
   // Scrollbar - jaśniejsze kolory, większy kontrast
-  --scrollbar-track: #{$ghostWhite};    // Bardzo jasne tło
-  --scrollbar-thumb: #{$darkGray};      // Ciemny uchwyt
+  --scrollbar-track: #{$lightGray};    // Bardzo jasne tło
+  --scrollbar-thumb: #{$biceBlue};     // Ciemny uchwyt
   --scrollbar-thumb-hover: #{$gray};     // Jaśniejszy przy hover
 
   // Logo visibility
