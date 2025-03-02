@@ -8,6 +8,10 @@ permalink: /en/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
+<div class="plexus-container">
+  <canvas id="plexusCanvas"></canvas>
+</div>
+
 <div class="posts">
   {% assign posts=site.posts | where:"lang", "en" %}
   {% for post in posts %}
@@ -33,3 +37,5 @@ permalink: /en/home/
     </article>
   {% endfor %}
 </div>
+
+<script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>
