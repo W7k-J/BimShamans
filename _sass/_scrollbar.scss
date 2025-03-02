@@ -23,12 +23,6 @@
   --scrollbar-thumb-hover: #{$ryanCyan};
 }
 
-// Firefox scrollbar styles
-* {
-  scrollbar-width: auto;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
-
 // Webkit scrollbar styles (Chrome, Edge, Safari)
 *::-webkit-scrollbar {
   width: var(--scrollbar-width);
@@ -50,7 +44,8 @@
   }
 }
 
-// Force scrollbar display
-html {
-  overflow-y: scroll !important;
+// Firefox scrollbar styles
+* {
+  scrollbar-width: auto;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
