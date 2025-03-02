@@ -35,7 +35,7 @@
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: var(--scrollbar-border-radius);
-  border: var(--scrollbar-border) solid var(--background-color);
+  border: var(--scrollbar-border) solid var(-scrollbar-track);
   
   &:hover {
     background: var(--scrollbar-thumb-hover);
