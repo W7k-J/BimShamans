@@ -2,7 +2,7 @@
 
 // Light theme scrollbar
 .light-theme {
-  --scrollbar-track: #{$ghostWhite};
+  --scrollbar-track: #{$lightGray};
   --scrollbar-track-piece: #{$lightGray};
   --scrollbar-thumb: #{$darkGray};        // Changed from $gray for better contrast
   --scrollbar-thumb-hover: #{$biceBlue};
@@ -12,7 +12,7 @@
 
 // Dark theme scrollbar
 .dark-theme {
-  --scrollbar-track: #{$raisinBlack};
+  --scrollbar-track: #{$darkGray};
   --scrollbar-track-piece: #{$darkGray};
   --scrollbar-thumb: #{$lightGray};       // Changed from $gray for better contrast
   --scrollbar-thumb-hover: #{$ryanCyan};
@@ -20,39 +20,29 @@
   --scrollbar-button-hover: #{$ryanCyan};
 }
 
+/* Works on Firefox */
 * {
-  ::-webkit-scrollbar {
-    width: 14px !important;
-    display: block !important;
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+/* Works on Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 12px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--scrollbar-thumb)
+  border-radius: 20px;
+  border: 3px var(scrollbar-track);
+
+  &:hover {
+    background: var(--scrollbar-thumb-hover);
+    border: 1px solid var(--scrollbar-track); // Thinner border on hover
   }
 
-  &::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-    border-left: 1px solid var(--scrollbar-track-piece); // Added border for visibility
-  }
-
-  &::-webkit-scrollbar-track-piece {
-    background: var(--scrollbar-track-piece);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border: 2px solid var(--scrollbar-track);  // Reduced border width
-    min-height: 40px;                          // Added minimum height
-    
-    &:hover {
-      background: var(--scrollbar-thumb-hover);
-      border: 1px solid var(--scrollbar-track); // Thinner border on hover
-    }
-  }
-
-  &::-webkit-scrollbar-button {
-    background: var(--scrollbar-button);
-    height: 14px;
-    border: 1px solid var(--scrollbar-track);  // Added border for visibility
-    
-    &:hover {
-      background: var(--scrollbar-button-hover);
-    }
-  }
 }
