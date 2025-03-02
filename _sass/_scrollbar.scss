@@ -23,6 +23,10 @@
   --scrollbar-thumb-hover: #{$ryanCyan};
 }
 
+html {
+  overflow-y: scroll !important;
+}
+
 // Webkit scrollbar styles (Chrome, Edge, Safari)
 *::-webkit-scrollbar {
   width: var(--scrollbar-width);
