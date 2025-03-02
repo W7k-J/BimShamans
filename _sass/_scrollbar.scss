@@ -9,17 +9,17 @@
 
 // Light theme scrollbar
 .light-theme {
-  --scrollbar-track: transparent;
-  --scrollbar-thumb: #{$darkGray};
-  --scrollbar-thumb-hover: #{$biceBlue};
+  --scrollbar-track: #{$lightGray};
+  --scrollbar-thumb: #{$Gray};
+  --scrollbar-thumb-hover: #{$darkGray};
   --scrollbar-thumb-active: #{$biceBlue};
 }
 
 // Dark theme scrollbar
 .dark-theme {
-  --scrollbar-track: transparent;
-  --scrollbar-thumb: #{$lightGray};
-  --scrollbar-thumb-hover: #{$ryanCyan};
+  --scrollbar-track: #{$darkGray};
+  --scrollbar-thumb: #{$Gray};
+  --scrollbar-thumb-hover: #{$lightGray};
   --scrollbar-thumb-active: #{$ryanCyan};
 }
 
