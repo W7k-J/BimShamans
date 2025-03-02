@@ -23,6 +23,13 @@
   --scrollbar-thumb-hover: #{$ryanCyan};
 }
 
+// Firefox scrollbar styles
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+// Force scrollbar display
 html {
   overflow-y: scroll !important;
 }
@@ -40,7 +47,7 @@ html {
 *::-webkit-scrollbar-thumb {
   background: var(--scrollbar-thumb);
   border-radius: var(--scrollbar-border-radius);
-  border: var(--scrollbar-border) solid var(--page-background);
+  border: var(--scrollbar-border) solid var(--page-background); // Changed from --background to --page-background
   
   &:hover {
     background: var(--scrollbar-thumb-hover);
