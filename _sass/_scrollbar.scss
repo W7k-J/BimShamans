@@ -10,7 +10,7 @@
 // Light theme scrollbar
 .light-theme {
   --scrollbar-track: #{$lightGray};
-  --scrollbar-thumb: #{$Gray};
+  --scrollbar-thumb: #{$gray};
   --scrollbar-thumb-hover: #{$darkGray};
   --scrollbar-thumb-active: #{$biceBlue};
 }
@@ -18,7 +18,7 @@
 // Dark theme scrollbar
 .dark-theme {
   --scrollbar-track: #{$darkGray};
-  --scrollbar-thumb: #{$Gray};
+  --scrollbar-thumb: #{$gray};
   --scrollbar-thumb-hover: #{$lightGray};
   --scrollbar-thumb-active: #{$ryanCyan};
 }
