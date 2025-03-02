@@ -1,4 +1,4 @@
-const canvas = document.getElementById("circuitCanvas");
+const canvas = document.getElementById("networkCanvas");
 const ctx = canvas.getContext("2d");
 
 canvas.width = window.innerWidth;
