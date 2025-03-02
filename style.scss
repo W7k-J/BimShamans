@@ -33,31 +33,21 @@ html {
   font-size: 100%;
   overflow-y: scroll;
   
-  // Webkit scrollbar styles
-  &::-webkit-scrollbar {
-    width: 14px; // Zwiększona szerokość do standardowej
-  }
-
+  // Firefox scrollbar colors
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  
+  // Webkit scrollbar colors
   &::-webkit-scrollbar-track {
     background: var(--scrollbar-track);
-    border-radius: 8px;
   }
 
   &::-webkit-scrollbar-thumb {
     background: var(--scrollbar-thumb);
-    border: 2px solid var(--scrollbar-track); // Zmniejszony border dla lepszego kontrastu
-    border-radius: 8px;
-    min-height: 40px;
     
     &:hover {
       background: var(--scrollbar-thumb-hover);
-      border-width: 1px; // Cieńszy border przy hover
     }
   }
-
-  // Firefox scrollbar styles
-  scrollbar-width: auto;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 // Light theme setup
