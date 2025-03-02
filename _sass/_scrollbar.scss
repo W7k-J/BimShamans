@@ -2,9 +2,9 @@
 
 // Base scrollbar variables
 :root {
-  --scrollbar-width: 14px;
-  --scrollbar-border-radius: 7px;
-  --scrollbar-border: 3px;
+  --scrollbar-width: 12px;
+  --scrollbar-border-radius: 4px;
+  --scrollbar-border: 0px;
 }
 
 // Light theme scrollbar
@@ -21,14 +21,6 @@
   --scrollbar-thumb: #{$lightGray};
   --scrollbar-thumb-hover: #{$ryanCyan};
   --scrollbar-thumb-active: #{$ryanCyan};
-}
-
-// Firefox-specific styles
-@-moz-document url-prefix() {
-  * {
-    scrollbar-width: thin;
-    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  }
 }
 
 // Webkit scrollbar styles (Chrome, Edge, Safari)
@@ -57,4 +49,12 @@
 // Force scrollbar display
 html {
   overflow-y: scroll !important;
+}
+
+// Firefox-specific styles - moved to end to prevent override
+@-moz-document url-prefix() {
+  html {
+    scrollbar-width: thin;
+    scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  }
 }
