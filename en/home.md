@@ -38,4 +38,4 @@ permalink: /en/home/
   {% endfor %}
 </div>
 
-<script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>
+<script src="{{ site.baseurl }}/assets/background-network.js" defer></script>
