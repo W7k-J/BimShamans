@@ -1,0 +1,49 @@
+/* Scrollbar styling for both themes */
+
+// Light theme scrollbar
+.light-theme {
+  --scrollbar-track: #{$ghostWhite};
+  --scrollbar-track-piece: #{$ghostWhite};
+  --scrollbar-thumb: #{$lightGray};
+  --scrollbar-thumb-hover: #{$gray};
+  --scrollbar-button: #{$lightGray};
+  --scrollbar-button-hover: #{$gray};
+}
+
+// Dark theme scrollbar
+.dark-theme {
+  --scrollbar-track: #{$raisinBlack};
+  --scrollbar-track-piece: #{$raisinBlack};
+  --scrollbar-thumb: #{$darkGray};
+  --scrollbar-thumb-hover: #{$gray};
+  --scrollbar-button: #{$darkGray};
+  --scrollbar-button-hover: #{$gray};
+}
+
+// Base scrollbar styles
+html {
+  // Firefox scrollbar
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+  scrollbar-width: auto;
+
+  // Webkit scrollbar
+  &::-webkit-scrollbar {
+    width: 14px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background-color: var(--scrollbar-track);
+  }
+
+  &::-webkit-scrollbar-track-piece {
+    background-color: var(--scrollbar-track-piece);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--scrollbar-thumb);
+    
+    &:hover {
+      background-color: var(--scrollbar-thumb-hover);
+    }
+  }
+}

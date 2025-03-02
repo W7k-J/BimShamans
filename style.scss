@@ -35,38 +35,8 @@
  */
 
  html {
-  // Firefox scrollbar (limited styling options)
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-  scrollbar-width: auto;
-
-  // Webkit scrollbar colors
-  &::-webkit-scrollbar {
-    // No color properties - controls only width/height
-  }
-
-  &::-webkit-scrollbar-button {
-    background: var(--scrollbar-button);
-    
-    &:hover {
-      background: var(--scrollbar-button-hover);
-    }
-  }
-
-  &::-webkit-scrollbar-track {
-    background: var(--scrollbar-track);
-  }
-
-  &::-webkit-scrollbar-track-piece {
-    background: var(--scrollbar-track-piece);
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    
-    &:hover {
-      background: var(--scrollbar-thumb-hover);
-    }
-  }
+  font-size: 100%;
+  overflow-y: scroll;
 }
 
 
@@ -80,14 +50,7 @@
   --forthGray-color: #{$lightGray};
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
-  --secondBlue-color: #{$ryanCyan};
-  // Scrollbar
-  --scrollbar-track: #{$ghostWhite};
-  --scrollbar-track-piece: #{$ghostWhite};
-  --scrollbar-thumb: #{$lightGray};
-  --scrollbar-thumb-hover: #{$gray};
-  --scrollbar-button: #{$lightGray};
-  --scrollbar-button-hover: #{$gray};       
+  --secondBlue-color: #{$ryanCyan};  
 
   // Logo visibility
   .logo-light {
@@ -109,13 +72,6 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
-  // Scrollbar
-  --scrollbar-track: #{$raisinBlack};
-  --scrollbar-track-piece: #{$raisinBlack};
-  --scrollbar-thumb: #{$darkGray};
-  --scrollbar-thumb-hover: #{$gray};
-  --scrollbar-button: #{$darkGray};
-  --scrollbar-button-hover: #{$gray};
 
   // Logo visibility
   .logo-light {
