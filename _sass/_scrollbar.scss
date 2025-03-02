@@ -20,12 +20,6 @@
   --scrollbar-button-hover: #{$ryanCyan};
 }
 
-/* Works on Firefox */
-* {
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
-}
-
 /* Works on Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 12px;
@@ -45,4 +39,10 @@
     border: 1px solid var(--scrollbar-track); 
   }
 
+}
+
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
