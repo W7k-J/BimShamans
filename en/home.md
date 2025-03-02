@@ -32,12 +32,12 @@ permalink: /en/home/
   <div class="site-avatar">
     <img 
       src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
-      alt="BIM Shamans Logo" 
+      alt="BIM Shamans Logo Light Theme" 
       class="logo-light"
     >
     <img 
       src="{{ site.baseurl }}/assets/images/Logo_BIMShamans_Baner_AlphaLightLetters_1024x222.png" 
-      alt="BIM Shamans Logo" 
+      alt="BIM Shamans Logo Dark Theme" 
       class="logo-dark"
     >
   </div>
@@ -73,4 +73,4 @@ permalink: /en/home/
   {% endfor %}
 </div>
 
-<script src="{{ site.baseurl }}/assets/background-network.js" defer></script>
+<script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>
