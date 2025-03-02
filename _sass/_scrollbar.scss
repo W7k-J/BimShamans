@@ -3,21 +3,21 @@
 // Light theme scrollbar
 .light-theme {
   --scrollbar-track: #{$ghostWhite};
-  --scrollbar-track-piece: #{$ghostWhite};
-  --scrollbar-thumb: #{$lightGray};
-  --scrollbar-thumb-hover: #{$gray};
-  --scrollbar-button: #{$lightGray};
-  --scrollbar-button-hover: #{$gray};
+  --scrollbar-track-piece: #{$lightGray};
+  --scrollbar-thumb: #{$gray};
+  --scrollbar-thumb-hover: #{$biceBlue};
+  --scrollbar-button: #{$biceBlue};
+  --scrollbar-button-hover: #{$biceBlue};
 }
 
 // Dark theme scrollbar
 .dark-theme {
   --scrollbar-track: #{$raisinBlack};
-  --scrollbar-track-piece: #{$raisinBlack};
-  --scrollbar-thumb: #{$darkGray};
-  --scrollbar-thumb-hover: #{$gray};
-  --scrollbar-button: #{$darkGray};
-  --scrollbar-button-hover: #{$gray};
+  --scrollbar-track-piece: #{$darkGray};
+  --scrollbar-thumb: #{$gray};
+  --scrollbar-thumb-hover: #{$ryanCyan};
+  --scrollbar-button: #{$ryanCyan};
+  --scrollbar-button-hover: #{$ryanCyan};
 }
 
 // Base scrollbar styles
