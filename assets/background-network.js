@@ -8,8 +8,8 @@ canvas.height = window.innerHeight;
 const paths = [];
 const numPaths = 50; // Ilość ścieżek
 const speed = 2; // Prędkość poruszania się impulsów
-const centerX = canvas.width / 2; // Środek x
-const centerY = canvas.height / 2; // Środek y
+let centerX = canvas.width * 0.5; // Środek x
+let centerY = canvas.height * 0.5; // Środek y
 
 // Tworzenie losowych ścieżek "procesora"
 for (let i = 0; i < numPaths; i++) {
@@ -47,5 +47,14 @@ function draw() {
 
   requestAnimationFrame(draw);
 }
+
+// Aktualizacja pozycji środka
+function updateCenterPosition(xPercent, yPercent) {
+  centerX = canvas.width * xPercent;
+  centerY = canvas.height * yPercent;
+}
+
+// Przykładowe wywołanie funkcji aktualizującej pozycję środka
+updateCenterPosition(0.5, 0.5);
 
 draw();
