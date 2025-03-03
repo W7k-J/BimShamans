@@ -6,14 +6,15 @@ canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
 const paths = [];
-const numPaths = 20; // Ilość ścieżek
+const numPaths = 50; // Ilość ścieżek
 const speed = 2; // Prędkość poruszania się impulsów
+const centerX = canvas.width / 2; // Środek x
+const centerY = canvas.height / 2; // Środek y
 
 // Tworzenie losowych ścieżek "procesora"
 for (let i = 0; i < numPaths; i++) {
-  let x = Math.random() * canvas.width;
-  let y = Math.random() * canvas.height;
-  paths.push({ x, y, progress: 0 });
+  let angle = Math.random() * Math.PI * 2;
+  paths.push({ angle, progress: 0 });
 }
 
 // Funkcja rysowania animacji
@@ -24,10 +25,10 @@ function draw() {
 
   paths.forEach((path) => {
     ctx.beginPath();
-    ctx.moveTo(path.x, path.y);
+    ctx.moveTo(centerX, centerY);
 
-    let newX = path.x + Math.cos(path.progress) * 100;
-    let newY = path.y + Math.sin(path.progress) * 100;
+    let newX = centerX + Math.cos(path.angle) * path.progress;
+    let newY = centerY + Math.sin(path.angle) * path.progress;
 
     ctx.lineTo(newX, newY);
     ctx.stroke();
@@ -38,8 +39,10 @@ function draw() {
     ctx.arc(newX, newY, 4, 0, Math.PI * 2);
     ctx.fill();
 
-    path.progress += speed * 0.02;
-    if (path.progress > Math.PI * 2) path.progress = 0;
+    path.progress += speed;
+    if (path.progress > Math.max(canvas.width, canvas.height)) {
+      path.progress = 0;
+    }
   });
 
   requestAnimationFrame(draw);
