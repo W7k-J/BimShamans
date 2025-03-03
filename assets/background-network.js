@@ -20,7 +20,8 @@ for (let i = 0; i < numPaths; i++) {
 // Funkcja rysowania animacji
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.strokeStyle = "rgba(0, 150, 255, 0.5)";
+  ctx.strokeStyle = "rgba(255, 0, 179, 0.5)";
+  // ctx.strokeStyle = "rgba(0, 150, 255, 0.5)";
   ctx.lineWidth = 2;
 
   paths.forEach((path) => {
