@@ -15,11 +15,14 @@ let centerY = canvas.height * 0.5; // Środek y
 for (let i = 0; i < numPaths; i++) {
   let angle = Math.random() * Math.PI * 2;
   let maxLength = Math.random() * Math.max(canvas.width, canvas.height);
-  let controlPoint = {
-    x: centerX + Math.cos(angle) * (maxLength / 2),
-    y: centerY + Math.sin(angle) * (maxLength / 2)
-  };
-  paths.push({ angle, progress: 0, maxLength, controlPoint });
+  let controlPoints = [];
+  for (let j = 0; j < 3; j++) {
+    controlPoints.push({
+      x: centerX + Math.cos(angle + Math.random() * 0.5 - 0.25) * (maxLength / 2) * Math.random(),
+      y: centerY + Math.sin(angle + Math.random() * 0.5 - 0.25) * (maxLength / 2) * Math.random()
+    });
+  }
+  paths.push({ angle, progress: 0, maxLength, controlPoints });
 }
 
 // Funkcja rysowania animacji
@@ -35,7 +38,12 @@ function draw() {
     let newX = centerX + Math.cos(path.angle) * path.progress;
     let newY = centerY + Math.sin(path.angle) * path.progress;
 
-    ctx.quadraticCurveTo(path.controlPoint.x, path.controlPoint.y, newX, newY);
+    ctx.moveTo(centerX, centerY);
+    ctx.bezierCurveTo(
+      path.controlPoints[0].x, path.controlPoints[0].y,
+      path.controlPoints[1].x, path.controlPoints[1].y,
+      newX, newY
+    );
     ctx.stroke();
 
     // Tworzenie "przepływu energii"
@@ -47,10 +55,13 @@ function draw() {
     path.progress += speed;
     if (path.progress > path.maxLength) {
       path.progress = 0;
-      path.controlPoint = {
-        x: centerX + Math.cos(path.angle) * (path.maxLength / 2),
-        y: centerY + Math.sin(path.angle) * (path.maxLength / 2)
-      };
+      path.controlPoints = [];
+      for (let j = 0; j < 3; j++) {
+        path.controlPoints.push({
+          x: centerX + Math.cos(path.angle + Math.random() * 0.5 - 0.25) * (path.maxLength / 2) * Math.random(),
+          y: centerY + Math.sin(path.angle + Math.random() * 0.5 - 0.25) * (path.maxLength / 2) * Math.random()
+        });
+      }
     }
   });
 
