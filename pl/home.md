@@ -8,8 +8,8 @@ permalink: /pl/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-<div class="plexus-container">
-  <canvas id="plexusCanvas"></canvas>
+<div class="network-container">
+  <canvas id="networkCanvas"></canvas>
 </div>
 
 <div class="posts">
