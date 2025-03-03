@@ -15,7 +15,11 @@ let centerY = canvas.height * 0.5; // Środek y
 for (let i = 0; i < numPaths; i++) {
   let angle = Math.random() * Math.PI * 2;
   let maxLength = Math.random() * Math.max(canvas.width, canvas.height);
-  paths.push({ angle, progress: 0, maxLength });
+  let controlPoint = {
+    x: centerX + Math.cos(angle) * (maxLength / 2),
+    y: centerY + Math.sin(angle) * (maxLength / 2)
+  };
+  paths.push({ angle, progress: 0, maxLength, controlPoint });
 }
 
 // Funkcja rysowania animacji
@@ -31,7 +35,7 @@ function draw() {
     let newX = centerX + Math.cos(path.angle) * path.progress;
     let newY = centerY + Math.sin(path.angle) * path.progress;
 
-    ctx.lineTo(newX, newY);
+    ctx.quadraticCurveTo(path.controlPoint.x, path.controlPoint.y, newX, newY);
     ctx.stroke();
 
     // Tworzenie "przepływu energii"
@@ -43,6 +47,10 @@ function draw() {
     path.progress += speed;
     if (path.progress > path.maxLength) {
       path.progress = 0;
+      path.controlPoint = {
+        x: centerX + Math.cos(path.angle) * (path.maxLength / 2),
+        y: centerY + Math.sin(path.angle) * (path.maxLength / 2)
+      };
     }
   });
 
