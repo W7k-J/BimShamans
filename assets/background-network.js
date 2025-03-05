@@ -16,7 +16,7 @@ for (let i = 0; i < numPaths; i++) {
   let angle = Math.random() * Math.PI * 2;
   let maxLength = Math.random() * Math.max(canvas.width, canvas.height);
   let controlPoints = [];
-  for (let j = 0; j < 3; j++) {
+  for (let j = 0; j < 4; j++) { // Zwiększono liczbę punktów kontrolnych do 4
     controlPoints.push({
       x: centerX + Math.cos(angle + Math.random() * 0.5 - 0.25) * (maxLength / 2) * Math.random(),
       y: centerY + Math.sin(angle + Math.random() * 0.5 - 0.25) * (maxLength / 2) * Math.random()
@@ -42,6 +42,7 @@ function draw() {
     ctx.bezierCurveTo(
       path.controlPoints[0].x, path.controlPoints[0].y,
       path.controlPoints[1].x, path.controlPoints[1].y,
+      path.controlPoints[2].x, path.controlPoints[2].y,
       newX, newY
     );
     ctx.stroke();
@@ -56,7 +57,7 @@ function draw() {
     if (path.progress > path.maxLength) {
       path.progress = 0;
       path.controlPoints = [];
-      for (let j = 0; j < 3; j++) {
+      for (let j = 0; j < 4; j++) { // Zwiększono liczbę punktów kontrolnych do 4
         path.controlPoints.push({
           x: centerX + Math.cos(path.angle + Math.random() * 0.5 - 0.25) * (path.maxLength / 2) * Math.random(),
           y: centerY + Math.sin(path.angle + Math.random() * 0.5 - 0.25) * (path.maxLength / 2) * Math.random()
