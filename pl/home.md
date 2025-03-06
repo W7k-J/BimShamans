@@ -66,7 +66,6 @@ permalink: /pl/home/
   </div>
 </div>
 
-
 ## Najnowsze posty:
 
 <div class="posts">
