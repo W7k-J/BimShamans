@@ -17,7 +17,7 @@ permalink: /en/home/
   overflow: hidden;
 }
 
-.hero-section .site-avatar {
+.hero-section .home-avatar {
   position: absolute;
   z-index: 2;
   max-width: 1024px;
@@ -39,7 +39,7 @@ permalink: /en/home/
   z-index: 1;
 }
 
-.hero-section .site-avatar img {
+.hero-section .home-avatar img {
   max-width: 100%;
   height: auto;
   position: relative;
@@ -48,7 +48,7 @@ permalink: /en/home/
 </style>
 
 <div class="hero-section">
-  <div class="site-avatar">
+  <div class="home-avatar">
     <img 
       src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" 
       alt="BIM Shamans Logo Light Theme" 
