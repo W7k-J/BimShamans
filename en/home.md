@@ -35,7 +35,7 @@ permalink: /en/home/
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 110%;
   z-index: 1;
 }
 
@@ -65,6 +65,8 @@ permalink: /en/home/
     <canvas id="plexusCanvas"></canvas>
   </div>
 </div>
+
+## Latest posts:
 
 <div class="posts">
   {% assign posts=site.posts | where:"lang", "en" %}
