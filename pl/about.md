@@ -33,7 +33,7 @@ Piotr Spyra
 
 <button class="button expand collapsible">Rozwiń</button>
 <div class="content">
-  <img src="URL_DO_OBRAZKA" alt="Opis obrazka" style="width:100%;max-width:600px;">
+  <img src="{{ site.baseurl }}/images/images-main/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nuteshell" style="width:100%;max-width:600px;">
 </div>
 
 <script>
