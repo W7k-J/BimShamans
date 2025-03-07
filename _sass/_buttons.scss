@@ -1,0 +1,42 @@
+.button {
+    background-color: var(--firstBlue-color);
+    color: #fff;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px; // Zaokrąglone rogi
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+    transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    text-decoration: none;
+  
+    &:hover {
+      background-color: var(--secondBlue-color);
+    }
+  
+    &:active {
+      background-color: var(--secondBlue-color);
+      box-shadow: 0 0 10px var(--secondBlue-color); // Efekt "błysku" po kliknięciu
+    }
+  
+    &:disabled {
+      background-color: var(--thirdGray-color);
+      cursor: not-allowed;
+    }
+  
+    &:focus {
+      outline: 2px solid var(--secondBlue-color);
+      outline-offset: 2px;
+    }
+  }
+  
+  .button.expand {
+    width: 100%;
+  }
+  
+  .button.next-page, .button.previous-page {
+    width: auto;
+    padding: 10px 15px;
+  }
