@@ -30,3 +30,25 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 Julian Wandzilak
 Natalia Gawlik
 Piotr Spyra
+
+<button class="collapsible">Pokaż obrazek</button>
+<div class="content">
+  <img src="URL_DO_OBRAZKA" alt="Opis obrazka" style="width:100%;max-width:600px;">
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  var coll = document.getElementsByClassName("collapsible");
+  for (var i = 0; i < coll.length; i++) {
+    coll[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var content = this.nextElementSibling;
+      if (content.style.display === "block") {
+        content.style.display = "none";
+      } else {
+        content.style.display = "block";
+      }
+    });
+  }
+});
+</script>

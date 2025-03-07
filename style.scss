@@ -425,6 +425,29 @@ blockquote {
   background: var(--forthGray-color);
 }
 
+.collapsible {
+  background-color: var(--forthGray-color);
+  color: var(--secondGray-color);
+  cursor: pointer;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: var(--firstBlue-color);
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: var(--background-color);
+}
+
 //
 // .main
 //
