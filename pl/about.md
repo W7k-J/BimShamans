@@ -31,7 +31,7 @@ Julian Wandzilak
 Natalia Gawlik
 Piotr Spyra
 
-<button class="collapsible">Pokaż obrazek</button>
+<button class="button expand collapsible">Rozwiń</button>
 <div class="content">
   <img src="URL_DO_OBRAZKA" alt="Opis obrazka" style="width:100%;max-width:600px;">
 </div>
