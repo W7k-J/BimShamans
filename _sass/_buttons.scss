@@ -1,3 +1,4 @@
+// Base button styles
 .button {
     background-color: var(--forthGray-color);
     color: var(--firstGray-color);
@@ -15,36 +16,66 @@
     text-decoration: none;
     width: fit-content;
     min-width: max-content;
-  
+
     &:hover {
-      background-color: var(--thirdGray-color);
-      color: var(--firstGray-color);
+        background-color: var(--thirdGray-color);
+        color: var(--firstGray-color);
     }
-  
+
     &:active {
-      background-color: var(--firstBlue-color);
-      color: var(--forthGray-color);
-      border: 1px solid var(--firstBlue-color);
+        background-color: var(--firstBlue-color);
+        color: var(--forthGray-color);
+        border: 1px solid var(--firstBlue-color);
     }
-  
+
     &:focus {
-      background-color: var(--firstBlue-color);
-      color: var(--forthGray-color);
-      border: none;
-      outline: none;
+        background-color: var(--firstBlue-color);
+        color: var(--forthGray-color);
+        border: none;
+        outline: none;
     }
-  
+
     &:disabled {
-      background-color: var(--thirdGray-color);
-      cursor: not-allowed;
+        background-color: var(--thirdGray-color);
+        cursor: not-allowed;
     }
 }
-  
-  .button.expand {
+
+// Button variations
+.button.expand {
     width: 100%;
-  }
-  
-  .button.next-page, .button.previous-page {
+}
+
+.button.next-page,
+.button.previous-page {
     width: auto;
     padding: 10px 15px;
-  }
+}
+
+// Collapsible button styles
+.collapsible {
+    @extend .button;
+    width: 100%;
+    text-align: left;
+    background-color: var(--forthGray-color);
+    color: var(--secondGray-color);
+    font-size: 15px;
+    
+    &:hover {
+        background-color: var(--thirdGray-color);
+    }
+    
+    &.active {
+        background-color: var(--firstBlue-color);
+        color: var(--forthGray-color);
+        border: 1px solid var(--firstBlue-color);
+    }
+}
+
+// Collapsible content
+.content {
+    padding: 0 18px;
+    display: none;
+    overflow: hidden;
+    background-color: var(--background-color);
+}
