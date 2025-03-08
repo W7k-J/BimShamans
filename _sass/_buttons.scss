@@ -18,21 +18,19 @@
     min-width: max-content;
 
     &:hover {
-        background-color: var(--thirdGray-color);
+        background-color: var(--secondGray-color);
         color: var(--firstGray-color);
-    }
-
-    &:active {
-        background-color: var(--firstBlue-color);
-        color: var(--forthGray-color);
-        border: 1px solid var(--firstBlue-color);
     }
 
     &:focus {
         background-color: var(--firstBlue-color);
         color: var(--forthGray-color);
-        border: none;
-        outline: none;
+        border: 2ch solid var(--firstBlue-color);
+    }
+
+    &:active {
+        background-color: var(--firstBlue-color);
+        color: var(--forthGray-color);
     }
 
     &:disabled {
