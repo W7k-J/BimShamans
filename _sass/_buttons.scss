@@ -1,10 +1,10 @@
 .button {
     background-color: var(--firstBlue-color);
-    color: #fff;
+    color: var(--firstGray-color);
     cursor: pointer;
     padding: 10px 20px;
     border: none;
-    border-radius: 2px; // Zaokrąglone rogi
+    border-radius: 4px; // Zaokrąglone rogi
     text-align: center;
     outline: none;
     font-size: 15px;
@@ -13,12 +13,12 @@
     text-decoration: none;
   
     &:hover {
-      background-color: var(--secondBlue-color);
+      background-color: var(--secondGray-color);
     }
   
     &:active {
-      background-color: var(--secondBlue-color);
-      box-shadow: 0 0 10px var(--secondBlue-color); // Efekt "błysku" po kliknięciu
+      background-color: var(--firstBlue-color);
+      // box-shadow: 0 0 10px var(--secondBlue-color); // Efekt "błysku" po kliknięciu
     }
   
     &:disabled {
@@ -27,7 +27,7 @@
     }
   
     &:focus {
-      outline: 2px solid var(--secondBlue-color);
+      outline: 2px solid var(--firstBlue-color);
       outline-offset: 2px;
     }
   }
