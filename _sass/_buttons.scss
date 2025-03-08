@@ -50,30 +50,32 @@
     padding: 10px 15px;
 }
 
-// Collapsible button styles
 .collapsible {
     @extend .button;
     width: 100%;
     text-align: left;
-    background-color: var(--forthGray-color);
-    color: var(--secondGray-color);
-    font-size: 15px;
     
     &:hover {
-        background-color: var(--thirdGray-color);
+        @extend .button:hover;
     }
     
-    &.active {
-        background-color: var(--firstBlue-color);
-        color: var(--forthGray-color);
-        border: 1px solid var(--firstBlue-color);
+    &:active {
+        @extend .button:active;
+    }
+
+    &:focus {
+        @extend .button:focus;
     }
 }
 
-// Collapsible content
-.content {
-    padding: 0 18px;
+// Collapsible content area
+.collapsible-content {
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
     display: none;
     overflow: hidden;
     background-color: var(--background-color);
+    border: 1px solid var(--firstBlue-color);
+    border-radius: 4px;
 }
