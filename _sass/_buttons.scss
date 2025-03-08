@@ -1,36 +1,40 @@
 .button {
-    background-color: var(--firstBlue-color);
+    background-color: var(--forthGray-color);
     color: var(--firstGray-color);
     cursor: pointer;
     padding: 10px 20px;
     border: none;
-    border-radius: 4px; // Zaokrąglone rogi
+    border-radius: 4px;
     text-align: center;
     outline: none;
     font-size: 15px;
-    transition: background-color 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
     display: inline-block;
     text-decoration: none;
   
     &:hover {
-      background-color: var(--secondGray-color);
+      background-color: var(--thirdGray-color);
+      color: var(--firstGray-color);
     }
   
     &:active {
       background-color: var(--firstBlue-color);
-      // box-shadow: 0 0 10px var(--secondBlue-color); // Efekt "błysku" po kliknięciu
+      color: var(--forthGray-color);
+      border: 1px solid var(--firstBlue-color);
+    }
+  
+    &:focus {
+      background-color: var(--firstBlue-color);
+      color: var(--forthGray-color);
+      border: none;
+      outline: none;
     }
   
     &:disabled {
       background-color: var(--thirdGray-color);
       cursor: not-allowed;
     }
-  
-    &:focus {
-      outline: 2px solid var(--firstBlue-color);
-      outline-offset: 2px;
-    }
-  }
+}
   
   .button.expand {
     width: 100%;
