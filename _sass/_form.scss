@@ -33,8 +33,10 @@ input[type="email"]:focus,
 input[type="tel"]:focus,
 input[type="file"]:focus,
 textarea:focus {
-    border-color: var(--secondBlue-color);
-    background-color: var(--secondGray-color);
+    border-color: var(--firstBlue-color);
+    background-color: var(--thirdGray-color);
+    border: 2px solid var(--firstBlue-color);
+    color: var(--firstGray-color);
 }
 
 .radio-group {
