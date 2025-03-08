@@ -57,6 +57,6 @@ permalink: /pl/contact/
   </div>
 
   <div class="form-group">
-    <input type="submit" value="Wyślij" class="button">
+    <button type="submit" class="button">Wyślij</button>
   </div>
 </form>
