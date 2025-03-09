@@ -8,6 +8,7 @@ permalink: /pl/about/
 
 <style>
 .authors-container {
+    --image-radius: 4px;  // Zdefiniowanie zmiennej
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -30,10 +31,10 @@ permalink: /pl/about/
             width: 100%;
             aspect-ratio: 2/3;
             overflow: hidden;
-            border-radius: 4px;
+            border-radius: var(--image-radius);
 
             &:hover {
-            box-shadow: 0 3px 15px -3px var(--firstBlue-color);
+                box-shadow: 0 3px 20px -3px var(--firstBlue-color);
             }
 
             .author-image {
@@ -42,6 +43,7 @@ permalink: /pl/about/
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                border-radius: var(--image-radius);
                 transition: opacity 0.4s ease;
 
                 &.back { opacity: 0; }
