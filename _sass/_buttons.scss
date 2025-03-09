@@ -25,7 +25,6 @@
     &:focus {
         background-color: var(--firstBlue-color);
         color: var(--forthGray-color);
-        
     }
 
     &:active {
@@ -53,8 +52,10 @@
 
 .collapsible {
     @extend .button;
-    width: 100%;
     text-align: left;
+    width: fit-content;
+    min-width: max-content;
+    padding: 10px 15px;
     
     &:hover {
         @extend .button:hover;
