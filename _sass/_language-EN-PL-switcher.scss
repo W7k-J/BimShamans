@@ -3,7 +3,7 @@
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem;
-  font-family: $helvetica;
+  font-family: 'Montserrat', $helveticaNeue;
   font-weight: 400;
 
   a {
@@ -25,14 +25,14 @@
     &:not(.active) {
       &:hover {
         color: var(--firstBlue-color);
-        background-color: rgba(var(--firstBlue-color-rgb), 0.1);
+        // background-color: rgba(var(--firstBlue-color-rgb), 0.1);
       }
     }
   }
 
   // Separator style
   span {
-    color: var(--secondGray-color);
+    color: var(--firstGray-color);
     user-select: none;
   }
 
@@ -47,13 +47,4 @@
       padding: 0.5rem 0.7rem;
     }
   }
-}
-
-// Add CSS variable for RGB values of firstBlue-color
-:root {
-  --firstBlue-color-rgb: 65, 131, 196; // RGB values for $biceBlue
-}
-
-.dark-theme {
-  --firstBlue-color-rgb: 89, 208, 255; // RGB values for $ryanCyan
 }
