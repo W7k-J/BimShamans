@@ -105,19 +105,8 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 </div>
 
 <div class="collapsible-section">
-    <button class="button expand collapsible" aria-expanded="false">Co robi BIM Specialist?</button>
+    <button class="button expand collapsible" aria-expanded="false">BIM Specialist?</button>
     <div class="collapsible-content" aria-hidden="true">
-        <h4>BIM Specialist - zakres obowiązków</h4>
-        <p>BIM Specialist to specjalista odpowiedzialny za wdrażanie i utrzymanie procesów BIM w organizacji. 
-        Jego główne zadania obejmują:</p>
-        <ul>
-            <li>Koordynację modeli BIM</li>
-            <li>Tworzenie i utrzymanie standardów BIM</li>
-            <li>Szkolenie zespołu</li>
-            <li>Automatyzację procesów</li>
-            <li>Zarządzanie danymi projektowymi</li>
-        </ul>
-        
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
     </div>
 </div>
