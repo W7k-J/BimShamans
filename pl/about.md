@@ -26,36 +26,28 @@ permalink: /pl/about/
             color: var(--firstGray-color);
         }
 
- .author-image-container {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 2/3;
-        overflow: hidden;
-        
-        .author-image {
-            position: absolute;
-            inset: 0;
+        .author-image-container {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.4s ease;
-            clip-path: polygon(
-                0 5%,
-                5% 0,
-                95% 0,
-                100% 5%,
-                100% 95%,
-                95% 100%,
-                5% 100%,
-                0 95%,
-                2% 80%,
-                0 60%,
-                2% 40%,
-                0 20%
-            );
+            aspect-ratio: 2/3;
+            overflow: hidden;
+            border-radius: var(--image-radius);
 
-            &.back { opacity: 0; }
-            }   
+            &:hover {
+                box-shadow: 0 3px 20px -3px var(--firstBlue-color);
+            }
+
+            .author-image {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--image-radius);
+                transition: opacity 0.4s ease;
+
+                &.back { opacity: 0; }
+            }
 
             &:hover {
                 .author-image.front { opacity: 0; }
