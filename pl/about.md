@@ -28,7 +28,7 @@ permalink: /pl/about/
         .author-image-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 1;
+            aspect-ratio: 0.75;
             overflow: hidden;
             border-radius: 4px;
 
@@ -38,7 +38,7 @@ permalink: /pl/about/
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                transition: opacity 0.3s ease;
+                transition: opacity 0.4s ease;
 
                 &.back { opacity: 0; }
             }
