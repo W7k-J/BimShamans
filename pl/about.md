@@ -32,7 +32,7 @@ Natalia Gawlik
 Piotr Spyra
 
 <button class="button expand collapsible">Rozwiń</button>
-<div class="content">
+<div class="collapsible-content">
   <img src="{{ site.baseurl }}/images/images-main/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
 </div>
 
@@ -43,10 +43,12 @@ document.addEventListener("DOMContentLoaded", function() {
     coll[i].addEventListener("click", function() {
       this.classList.toggle("active");
       var content = this.nextElementSibling;
-      if (content.style.display === "block") {
-        content.style.display = "none";
-      } else {
-        content.style.display = "block";
+      if (content.classList.contains("collapsible-content")) {
+        if (content.style.display === "block") {
+          content.style.display = "none";
+        } else {
+          content.style.display = "block";
+        }
       }
     });
   }
