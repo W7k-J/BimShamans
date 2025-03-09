@@ -31,25 +31,32 @@ Julian Wandzilak
 Natalia Gawlik
 Piotr Spyra
 
-<button class="button expand collapsible">Rozwiń</button>
-<div class="collapsible-content">
-  <img src="{{ site.baseurl }}\images\images-main\Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
+<button class="button expand collapsible" aria-expanded="false">Rozwiń</button>
+<div class="collapsible-content" aria-hidden="true">
+  <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-  var coll = document.getElementsByClassName("collapsible");
-  for (var i = 0; i < coll.length; i++) {
-    coll[i].addEventListener("click", function() {
-      this.classList.toggle("active");
-      var content = this.nextElementSibling;
-      if (content.classList.contains("collapsible-content")) {
-        if (content.style.display === "block") {
-          content.style.display = "none";
-        } else {
-          content.style.display = "block";
+  const collapsibleButtons = document.querySelectorAll('.collapsible');
+  
+  if (collapsibleButtons) {
+    collapsibleButtons.forEach(button => {
+      button.addEventListener('click', function() {
+        // Toggle button state
+        const isExpanded = this.getAttribute('aria-expanded') === 'true';
+        this.setAttribute('aria-expanded', !isExpanded);
+        
+        // Toggle content
+        const content = this.nextElementSibling;
+        if (content && content.classList.contains('collapsible-content')) {
+          content.style.display = isExpanded ? 'none' : 'block';
+          content.setAttribute('aria-hidden', isExpanded);
         }
-      }
+        
+        // Toggle active class for styling
+        this.classList.toggle('active');
+      });
     });
   }
 });
