@@ -77,32 +77,28 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 <div class="authors-container">
     <div class="author-card">
         <div class="author-image-container">
-            <img class="author-image front" src="/images/authors/julian-1.jpg" alt="Julian Wandzilak">
-            <img class="author-image back" src="/images/authors/julian-2.jpg" alt="Julian Wandzilak - alternatywne">
+            <img class="author-image front" src="/images/images-main/julian-1.jpg" alt="Julian Wandzilak">
+            <img class="author-image back" src="/images/images-main/julian-2.jpg" alt="Julian Wandzilak - alternatywne">
         </div>
         <h3>Julian Wandzilak</h3>
     </div>
     
     <div class="author-card">
         <div class="author-image-container">
-            <img class="author-image front" src="/images/authors/natalia-1.jpg" alt="Natalia Gawlik">
-            <img class="author-image back" src="/images/authors/natalia-2.jpg" alt="Natalia Gawlik - alternatywne">
+            <img class="author-image front" src="/images/images-main/natalia-1.jpg" alt="Natalia Gawlik">
+            <img class="author-image back" src="/images/images-main/natalia-2.jpg" alt="Natalia Gawlik - alternatywne">
         </div>
         <h3>Natalia Gawlik</h3>
     </div>
     
     <div class="author-card">
         <div class="author-image-container">
-            <img class="author-image front" src="/images/authors/piotr-1.jpg" alt="Piotr Spyra">
-            <img class="author-image back" src="/images/authors/piotr-2.jpg" alt="Piotr Spyra - alternatywne">
+            <img class="author-image front" src="/images/images-main/About_Authors_PiotrSpyra_Main.png" alt="Piotr Spyra">
+            <img class="author-image back" src="/images/images-main/About_Authors_PiotrSpyra_Alter.jpg" alt="Piotr Spyra - alternatywne">
         </div>
         <h3>Piotr Spyra</h3>
     </div>
 </div>
-
-Julian Wandzilak
-Natalia Gawlik
-Piotr Spyra
 
 <button class="button expand collapsible" aria-expanded="false">Rozwiń</button>
 <div class="collapsible-content" aria-hidden="true">
