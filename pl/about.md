@@ -26,28 +26,36 @@ permalink: /pl/about/
             color: var(--firstGray-color);
         }
 
-        .author-image-container {
-            position: relative;
+ .author-image-container {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 2/3;
+        overflow: hidden;
+        
+        .author-image {
+            position: absolute;
+            inset: 0;
             width: 100%;
-            aspect-ratio: 2/3;
-            overflow: hidden;
-            border-radius: var(--image-radius);
+            height: 100%;
+            object-fit: cover;
+            transition: opacity 0.4s ease;
+            clip-path: polygon(
+                0 5%,
+                5% 0,
+                95% 0,
+                100% 5%,
+                100% 95%,
+                95% 100%,
+                5% 100%,
+                0 95%,
+                2% 80%,
+                0 60%,
+                2% 40%,
+                0 20%
+            );
 
-            &:hover {
-                box-shadow: 0 3px 20px -3px var(--firstBlue-color);
-            }
-
-            .author-image {
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: var(--image-radius);
-                transition: opacity 0.4s ease;
-
-                &.back { opacity: 0; }
-            }
+            &.back { opacity: 0; }
+            }   
 
             &:hover {
                 .author-image.front { opacity: 0; }
@@ -80,6 +88,8 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 
 **Połączyło nas podejście stawiające efekt na pierwszym miejscu, z pominięciem otoczki marketingu, inżyniersko do celu.** Gdy kapłani tego czy innego narzędzia, formatu wymiany danych lub normy głosili ich wyższość nad innymi rozwiązaniami, my z szamańską zawziętością zajmowaliśmy się kończeniem kolejnego projektu. 
 
+## O autorach
+
 <div class="authors-container">
     <div class="author-card">
         <div class="author-image-container">
@@ -107,8 +117,9 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 </div>
 
 <div class="collapsible-section">
-    <button class="button expand collapsible" aria-expanded="false">BIM Specialist?</button>
+    <button class="button expand collapsible" aria-expanded="false">Nie klikać</button>
     <div class="collapsible-content" aria-hidden="true">
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
     </div>
+    <p>
 </div>
