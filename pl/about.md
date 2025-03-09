@@ -33,5 +33,7 @@ Piotr Spyra
 
 <button class="button expand collapsible" aria-expanded="false">Rozwiń</button>
 <div class="collapsible-content" aria-hidden="true">
-  <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
+    Tekst przykladowy
+    
+    <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
 </div>
