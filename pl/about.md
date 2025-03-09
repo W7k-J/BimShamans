@@ -5,6 +5,53 @@ lang: pl
 ref: about
 permalink: /pl/about/
 ---
+
+<style>
+.authors-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+    margin: 2rem 0;
+
+    .author-card {
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+        text-align: center;
+
+        h3 {
+            margin-top: 1rem;
+            color: var(--firstGray-color);
+        }
+
+        .author-image-container {
+            position: relative;
+            width: 100%;
+            aspect-ratio: 1;
+            overflow: hidden;
+            border-radius: 4px;
+
+            .author-image {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: opacity 0.3s ease;
+
+                &.back { opacity: 0; }
+            }
+
+            &:hover {
+                .author-image.front { opacity: 0; }
+                .author-image.back { opacity: 1; }
+            }
+        }
+    }
+}
+</style>
+
 ## Projekt: BIM Shamans
 
 > Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. **_Szaman_** to dosłownie **_'ten, który wie'_**.
@@ -27,6 +74,32 @@ Pozwolimy sobie również trochę ponarzekać oraz pożartować, poniewaz�
 
 **Połączyło nas podejście stawiające efekt na pierwszym miejscu, z pominięciem otoczki marketingu, inżyniersko do celu.** Gdy kapłani tego czy innego narzędzia, formatu wymiany danych lub normy głosili ich wyższość nad innymi rozwiązaniami, my z szamańską zawziętością zajmowaliśmy się kończeniem kolejnego projektu. 
 
+<div class="authors-container">
+    <div class="author-card">
+        <div class="author-image-container">
+            <img class="author-image front" src="/images/authors/julian-1.jpg" alt="Julian Wandzilak">
+            <img class="author-image back" src="/images/authors/julian-2.jpg" alt="Julian Wandzilak - alternatywne">
+        </div>
+        <h3>Julian Wandzilak</h3>
+    </div>
+    
+    <div class="author-card">
+        <div class="author-image-container">
+            <img class="author-image front" src="/images/authors/natalia-1.jpg" alt="Natalia Gawlik">
+            <img class="author-image back" src="/images/authors/natalia-2.jpg" alt="Natalia Gawlik - alternatywne">
+        </div>
+        <h3>Natalia Gawlik</h3>
+    </div>
+    
+    <div class="author-card">
+        <div class="author-image-container">
+            <img class="author-image front" src="/images/authors/piotr-1.jpg" alt="Piotr Spyra">
+            <img class="author-image back" src="/images/authors/piotr-2.jpg" alt="Piotr Spyra - alternatywne">
+        </div>
+        <h3>Piotr Spyra</h3>
+    </div>
+</div>
+
 Julian Wandzilak
 Natalia Gawlik
 Piotr Spyra
@@ -34,6 +107,6 @@ Piotr Spyra
 <button class="button expand collapsible" aria-expanded="false">Rozwiń</button>
 <div class="collapsible-content" aria-hidden="true">
     Tekst przykladowy
-    
+
     <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;">
 </div>
