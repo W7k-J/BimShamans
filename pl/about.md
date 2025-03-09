@@ -25,38 +25,34 @@ permalink: /pl/about/
             margin-top: 1rem;
             color: var(--firstGray-color);
         }
-        
-    .author-image-container {
-        position: relative;
-        width: 100%;
-        aspect-ratio: 2/3;
-        overflow: visible;
 
-        &::before {
-            content: '';
-            position: absolute;
-            inset: -2px;
-            background: var(--background-color);
-            z-index: 1;
-            mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 100 100' width='100' height='100' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeBlend mode='screen'/%3E%3C/filter%3E%3Crect width='100' height='100' filter='url(%23noise)' opacity='0.5'/%3E%3C/svg%3E");
-            mask-size: 50px 50px;
-            pointer-events: none;
-        }
-
-        .author-image {
-            position: absolute;
-            inset: 0;
+        .author-image-container {
+            position: relative;
             width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: opacity 0.4s ease;
+            aspect-ratio: 2/3;
+            overflow: hidden;
+            border-radius: var(--image-radius);
 
-            &.back { opacity: 0; }
-        }
+            &:hover {
+                box-shadow: 0 3px 20px -3px var(--firstBlue-color);
+            }
 
-        &:hover {
-            .author-image.front { opacity: 0; }
-            .author-image.back { opacity: 1; }
+            .author-image {
+                position: absolute;
+                inset: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: var(--image-radius);
+                transition: opacity 0.4s ease;
+
+                &.back { opacity: 0; }
+            }
+
+            &:hover {
+                .author-image.front { opacity: 0; }
+                .author-image.back { opacity: 1; }
+            }
         }
     }
 }
