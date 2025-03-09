@@ -28,9 +28,13 @@ permalink: /pl/about/
         .author-image-container {
             position: relative;
             width: 100%;
-            aspect-ratio: 0.75;
+            aspect-ratio: 2/3;
             overflow: hidden;
             border-radius: 4px;
+
+            &:hover {
+            box-shadow: 0 3px 15px -3px var(--firstBlue-color);
+            }
 
             .author-image {
                 position: absolute;
