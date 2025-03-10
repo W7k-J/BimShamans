@@ -56,11 +56,16 @@
     width: fit-content;
     min-width: max-content;
     padding: 10px 15px;
+    transition: all 0.4s ease;
 
     &[aria-expanded="true"] {
         background-color: var(--firstBlue-color);
         color: var(--forthGray-color);
     }
+
+    &[aria-expanded="false"] {
+        background-color: var(--forthGray-color);
+        color: var(--firstGray-color);
     
     &:hover {
         @extend .button:hover;
