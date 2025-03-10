@@ -165,8 +165,9 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
 </div>
 
 <div class="collapsible-section">
-    <button class="button expand collapsible" aria-expanded="false">Do not open it</button>
+    <button class="button expand collapsible" aria-expanded="false">Do not open it.</button>
     <div class="collapsible-content" aria-hidden="true">
+        <p>You've found the truth:</p>
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
     </div>
 </div>

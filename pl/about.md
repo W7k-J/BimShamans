@@ -20,6 +20,7 @@ permalink: /pl/about/
         
         .author-image-section {
             flex: 0 0 300px;
+            margin-top: 1rem;
             
             .author-image-container {
                 position: relative;
@@ -57,8 +58,8 @@ permalink: /pl/about/
             flex: 1;
             
             h3 {
-                @extend .post h2;  // Dziedziczenie stylów z głównego arkusza
-                margin: 0 0 1rem 0;
+                @extend .post h2;
+                margin: 1rem 0;  // Explicit margin definition
                 color: var(--firstBlue-color);
             }
 
@@ -168,6 +169,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 <div class="collapsible-section">
     <button class="button expand collapsible" aria-expanded="false">Nie klikać</button>
     <div class="collapsible-content" aria-hidden="true">
+        <p>Odnalazłeś prawdę:</p>
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
     </div>
 </div>
