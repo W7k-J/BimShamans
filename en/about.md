@@ -43,8 +43,7 @@ permalink: /en/about/
                 }
 
                 &:hover {
-                    .author-image.front { opacity: 0; }
-                    .author-image.back { opacity: 1; }
+                    box-shadow: 0 3px 15px -3px var(--firstBlue-color);
                 }
             }
         }
