@@ -97,8 +97,8 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
     <div class="author-card">
         <div class="author-image-section">
             <div class="author-image-container">
-                <img class="author-image front" src="/images/images-main/julian-1.jpg" alt="Julian Wandzilak">
-                <img class="author-image back" src="/images/images-main/julian-2.jpg" alt="Julian Wandzilak - alternatywne">
+                <img class="author-image front" src="/images/images-main/About_Authors_JulianWandzilak_Main.png" alt="Julian Wandzilak">
+                <img class="author-image back" src="/images/images-main/About_Authors_JulianWandzilak_Alter.webp" alt="Julian Wandzilak - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
@@ -123,7 +123,7 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
         <div class="author-image-section">
             <div class="author-image-container">
                 <img class="author-image front" src="/images/images-main/natalia-1.jpg" alt="Natalia Gawlik">
-                <img class="author-image back" src="/images/images-main/natalia-2.jpg" alt="Natalia Gawlik - alternatywne">
+                <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.jpg" alt="Natalia Gawlik - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
