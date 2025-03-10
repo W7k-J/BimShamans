@@ -132,7 +132,9 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
 
             <p>At work, I focus on the "I" in BIM – the information. Because BIM without information is just a fancy 3D model. Honestly, I'm pretty lazy and can't stand repetitive, tedious tasks… That's why I always look for the fastest and most efficient way to automate my work.</p>
             
-            <p>Automation is not just a passion for me; it's a necessity – it gives me more time for hiking, training, and relaxing on the terrace with my adorable cat 🐾 If there's a shortcut, I've probably already coded it.</p>
+            <p>Automation is not just a passion for me; it's a necessity – it gives me more time for hiking, training, and relaxing on the terrace with my adorable cat 🐾 </p>
+            
+            <p> If there's a shortcut, I've probably already coded it.</p>
         </div>
     </div>
     

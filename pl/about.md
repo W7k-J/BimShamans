@@ -132,7 +132,9 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 
             <p>W pracy skupiam się na „I” w BIM – czyli informacji. Bo BIM bez informacji to tylko ładny model 3D. Szczerze mówiąc, jestem dość leniwa i nie znoszę powtarzalnych, nudnych zadań… Dlatego zawsze szukam najszybszego i najbardziej efektywnego sposobu na automatyzację pracy.</p>
 
-            <p>Automatyzacja to dla mnie nie tylko pasja, ale i konieczność – dzięki niej mam więcej czasu na wędrówki, treningi i relaks na tarasie z moim uroczym kotem 🐾 Jeśli istnieje jakaś droga na skróty, to prawdopodobnie już ją zakodowałam.</p>
+            <p>Automatyzacja to dla mnie nie tylko pasja, ale i konieczność – dzięki niej mam więcej czasu na wędrówki, treningi i relaks na tarasie z moim uroczym kotem 🐾 </p> 
+            
+            <p>Jeśli istnieje jakaś droga na skróty, to prawdopodobnie już ją zakodowałam.</p>
         </div>
     </div>
     
@@ -163,7 +165,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 <div class="collapsible-section">
     <button class="button expand collapsible" aria-expanded="false">Nie rozwijaj tego pola.</button>
     <div class="collapsible-content" aria-hidden="true">
-        <p>Odnalazłeś prawdę:</p>
+        Odnalazłeś prawdę:
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
     </div>
 </div>
