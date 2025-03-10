@@ -8,42 +8,60 @@ permalink: /pl/about/
 
 <style>
 .authors-container {
-    --image-radius: 4px;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 3rem;
     margin: 2rem 0;
-    font-size: 18px; // Match base font size from html rule
 
     .author-card {
         display: flex;
-        align-items: start;
         gap: 2rem;
-        padding: 1rem;
+        align-items: flex-start;
         
         .author-image-section {
-            flex: 0 0 250px;
+            flex: 0 0 300px;
+            
+            .author-image-container {
+                position: relative;
+                width: 100%;
+                aspect-ratio: 2/3;
+                border-radius: 4px;
+                overflow: hidden;
+
+                .author-image {
+                    position: absolute;
+                    inset: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 4px;
+                    transition: opacity 0.4s ease;
+
+                    &.back {
+                        opacity: 0;
+                    }
+                }
+
+                &:hover {
+                    .author-image.front { opacity: 0; }
+                    .author-image.back { opacity: 1; }
+                }
+            }
         }
         
         .author-content-section {
             flex: 1;
-            text-align: justify;
             
             h3 {
-                font-family: 'Montserrat', $helveticaNeue; // Match h3 from style.scss
-                font-size: 20px; // Match h3 from style.scss
-                font-weight: bold;
-                margin-top: 0;
-                margin-bottom: 1rem;
+                @extend .post h2;  // Dziedziczenie stylów z głównego arkusza
+                margin: 0 0 1rem 0;
                 color: var(--firstBlue-color);
-                text-align: left;
             }
 
             p {
-                margin: 15px 0; // Match p from style.scss
-                line-height: 1.6;
-                font-family: 'Montserrat', $helveticaNeue; // Match base font
-                color: var(--firstGray-color); // Match base text color
+                @extend .post p;   // Dziedziczenie stylów z głównego arkusza
+                text-align: justify;
+                margin-bottom: 1rem;
             }
         }
     }
