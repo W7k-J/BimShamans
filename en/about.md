@@ -28,6 +28,10 @@ permalink: /en/about/
                 border-radius: 4px;
                 overflow: hidden;
 
+                &:hover {
+                box-shadow: 0 3px 15px -3px var(--firstBlue-color);
+                }
+
                 .author-image {
                     position: absolute;
                     inset: 0;
@@ -43,7 +47,8 @@ permalink: /en/about/
                 }
 
                 &:hover {
-                    box-shadow: 0 3px 15px -3px var(--firstBlue-color);
+                    .author-image.front { opacity: 0; }
+                    .author-image.back { opacity: 1; }
                 }
             }
         }
