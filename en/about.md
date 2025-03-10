@@ -27,10 +27,10 @@ permalink: /en/about/
                 width: 100%;
                 aspect-ratio: 2/3;
                 border-radius: 4px;
-                overflow: hidden;
+                overflow: visible;
 
                 &:hover {
-                box-shadow: 0 4px 20px -2px var(--firstBlue-color);
+                box-shadow: 0 0 20px -2px var(--firstBlue-color);
                 }
 
                 .author-image {
@@ -85,9 +85,9 @@ We solve problems which satellitees civil enginneering, BIM technology, automati
 
 For years, **we have been closely following the evolution of BIM and the technological solutions** that come with it. We witnessed how the studios and companies we worked for purchased their first licenses for “BIM software,” appointed their first BIM managers, and took on the challenge of their first standardization efforts. We observed it all up close - actively participating in design, coordination, standardization, modeling, and data management processes ourselves. We created the first automations, Dynamo scripts, workflows, and even devised tricks to bypass the limitations imposed by software developers. Over time, **we became 'those who know'** - the ones people turn to for answers.
 
-**We've always been on the front line, where BIM HAPPENS** — not just in theories and discussions but in the daily grind of project challenges. In our “shamanic” project, we share insights, tricks, and automations. We won’t be preaching what BIM should be - we’ll show you what it is and how much you can squeeze out of it, right here and now.
+**We've always been on the front line, where BIM HAPPENS** - not just in theories and discussions but in the daily grind of project challenges. In our “shamanic” project, we share insights, tricks, and automations. We won’t be preaching what BIM should be - we’ll show you what it is and how much you can squeeze out of it, right here and now.
 
-Time and again, **we’ve seen how the so-called “only right” solutions collapse when faced with real-world challenges—the daily struggles of designers, engineers, and clients**. That’s why we’re not here to convince anyone that our approach is the ultimate, the most revolutionary, or the best in the world. But we do know that it works - we’ve tested it on the front lines, where “correct” plans often lose to reality. Experimentation is a daily practice in BIM, and we’re not afraid to try new things. We’ll also allow ourselves a bit of complaining and a few jokes, because we want to show that we enjoy what we do - solving the challenges that cross our path.
+Time and again, **we’ve seen how the so-called “only right” solutions collapse when faced with real-world challenges - the daily struggles of designers, engineers, and clients**. That’s why we’re not here to convince anyone that our approach is the ultimate, the most revolutionary, or the best in the world. But we do know that it works - we’ve tested it on the front lines, where “correct” plans often lose to reality. Experimentation is a daily practice in BIM, and we’re not afraid to try new things. We’ll also allow ourselves a bit of complaining and a few jokes, because we want to show that we enjoy what we do - solving the challenges that cross our path.
 
 **What brought us together was a results-driven mindset—one that skips the marketing fluff and takes a straight engineering route to the goal.** While the high priests of this or that tool, data exchange format, or standard preached their superiority, we - like stubborn shaman, were busy finishing yet another project.
 
@@ -111,7 +111,7 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
 
             <p>All of it showed me that everywhere in the world we have a similar problem - "WE NEED MORE AUTOMATIONS". Sadly no one is interested in doing it for us!</p>
 
-            <p>Because of that I decided to do it myself. I learnt programming and so far published two plugins for Autodesk Revit – Drafter and Leveler. They automate the work of architects and engineers, allowing them to do their tasks faster. Drafter is one of the largest plugins for Revit out there containing around 180 automations helping you to work faster!</p>
+            <p>So I decided to take matters into my own hands. I learned to program and started publishing. You can find my plugins for Revit on the Autodesk App Store – Drafter and Leveler. They automate the work of architects and engineers, allowing them to complete tasks faster and with predictable repeatability across multiple areas at once. Drafter is one of the largest plugins for Revit, containing around 180 automations that help streamline daily work! More apps are on the way!</p>
 
             <p>You can get them from Autodesk App Store, and both were featured as the most popular paid plugins there at some point during last 6 months! And more apps are under construction!</p>
 

@@ -105,19 +105,17 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
         </div>
         <div class="author-content-section">
             <h3>Julian Wandzilak</h3>
-            <p>I am an independent architect, designer, C# developer, and a BIM coordinator.</p>
+            <p>Jestem niezależnym architektem, projektantem, programistą C# i koordynatorem BIM.</p>
 
-            <p>I've gained my professional experience working in the UK (Manchester, London), USA (Chicago) and Poland (Kraków). I was also involved in architectural projects in Australia and Norway.</p>
+            <p>Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii.</p>
 
-            <p>During my professional life I've been involved in preparing masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings (residential & student), interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses. I also took part in some competitions. Lately I did some concepts for playgrounds and historic gardens…</p>
+            <p>Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską oraz projektowaniem małych domów. Uczestniczyłem również w konkursach architektonicznych. Ostatnio miałem okazję pracować nad koncepcjami placów zabaw i historycznych ogrodów…</p>
 
-            <p>All of it showed me that everywhere in the world we have a similar problem - "WE NEED MORE AUTOMATIONS". Sadly no one is interested in doing it for us!</p>
+            <p>Utwierdziło mnie to w przekonaniu, że wszędzie na świecie mamy ten sam problem - „POTRZEBUJEMY WIĘCEJ AUTOMATYZACJI”. Niestety, nikt nie zamierza zrobić tego za nas!</p>
 
-            <p>Because of that I decided to do it myself. I learnt programming and so far published two plugins for Autodesk Revit – Drafter and Leveler. They automate the work of architects and engineers, allowing them to do their tasks faster. Drafter is one of the largest plugins for Revit out there containing around 180 automations helping you to work faster!</p>
+            <p>Postanowiłem więc wziąć sprawy w swoje ręce. Nauczyłem się programować i publikować. Na Autodesk Appstore znajdziesz moje wtyczki, m. in. do Autodesk Revit – Drafter i Leveler. Automatyzują one pracę architektów i inżynierów, pozwalając im wykonywać zadania szybciej i z przewidywalną powtarzalnością efektu dla wielu obszarów jednocześnie. Drafter to jeden z największych pluginów dla Revit, zawierający około 180 automatyzacji, które pomagają usprawnić codzienną pracę! Kolejne apki w drodze!</p>
 
-            <p>You can get them from Autodesk App Store, and both were featured as the most popular paid plugins there at some point during last 6 months! And more apps are under construction!</p>
-
-            <p>Also, I am a UAV pilot (VLOS and BVLOS, up to 25kg) and photographer (You can find me in some books). And I do 3d models, 2d & 3d graphic design, brand identities and laser scanning for construction (point clouds are so cool) 😉 And I am probably interested in too many things but "specialisation is for insects…".</p>
+            <p>Jestem też pilotem drona (VLOS i BVLOS, do 25 kg) oraz fotografem (można mnie znaleźć w kilku książkach). Tworzę modele 3D, zajmuję się grafiką 2D i 3D, identyfikacją wizualną oraz skanowaniem laserowym w budownictwie (chmury punktów są niesamowite) 😉 Pewnie interesuję się zbyt wieloma rzeczami, ale… „specjalizacja jest dla owadów”..</p>
         </div>
     </div>
     
