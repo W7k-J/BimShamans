@@ -128,17 +128,11 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
         </div>
         <div class="author-content-section">
             <h3>Natalia Gawlik</h3>
-            <p>I'm a BIM Coordinator who is working on large-scale infrastructure projects, especially railways. With nine years of experience, I've worked on diverse projects, from photogrammetry, 3D laser scanning, drone and land surveying, 3D modelling to BIM.</p>
+            <p>Jestem Koordynatorem BIM, a duże kontrakty infrastrukturalne, głównie kolejowe, to mój chleb powszedni. Z wykształcenia - geodeta, a z wielu szczęśliwych zbiegów okoliczności - specjalista BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skanowania laserowego 3D, pomiarów dronowych i naziemnych, przez modelowanie 3D, aż po BIM w norweskich inwestycjach publicznych.</p>
 
-            <p>At work, my focus is on the 'I' in BIM – the information. After all, BIM without information is just a fancy 3D model.</p>
+            <p>W pracy skupiam się na „I” w BIM – czyli informacji. Bo BIM bez informacji to tylko ładny model 3D. Szczerze mówiąc, jestem dość leniwa i nie znoszę powtarzalnych, nudnych zadań… Dlatego zawsze szukam najszybszego i najbardziej efektywnego sposobu na automatyzację pracy.</p>
 
-            <p>I'm always on the lookout for automation opportunities because, let's face it, no one wants to spend their day manually entering data into a model.</p>
-
-            <p>Honestly, I'm pretty lazy and can't stand doing boring tasks over and over… That's why I try to find the fastest, most efficient ways to automate my work.</p>
-
-            <p>Automation isn't just a passion; it's a necessity — so I can spend more time hiking, training or chilling on the terrace with my adorable cat 🐾</p>
-
-            <p>If there's a shortcut, I've probably already coded it 😊</p>
+            <p>Automatyzacja to dla mnie nie tylko pasja, ale i konieczność – dzięki niej mam więcej czasu na wędrówki, treningi i relaks na tarasie z moim uroczym kotem 🐾 Jeśli istnieje jakaś droga na skróty, to prawdopodobnie już ją zakodowałam.</p>
         </div>
     </div>
     

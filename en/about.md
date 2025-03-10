@@ -128,17 +128,11 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
         </div>
         <div class="author-content-section">
             <h3>Natalia Gawlik</h3>
-            <p>I'm a BIM Coordinator who is working on large-scale infrastructure projects, especially railways. With nine years of experience, I've worked on diverse projects, from photogrammetry, 3D laser scanning, drone and land surveying, 3D modelling to BIM.</p>
+            <p>I'm a BIM Coordinator, and large infrastructure contracts, mainly railway projects, are my daily bread. By education, I'm a surveyor; by a series of fortunate coincidences, a BIM specialist. A decade of my professional life spans experience in photogrammetry, 3D laser scanning, drone and land surveying, 3D modeling, and, ultimately, BIM in Norwegian public investments.</p>
 
-            <p>At work, my focus is on the 'I' in BIM – the information. After all, BIM without information is just a fancy 3D model.</p>
-
-            <p>I'm always on the lookout for automation opportunities because, let's face it, no one wants to spend their day manually entering data into a model.</p>
-
-            <p>Honestly, I'm pretty lazy and can't stand doing boring tasks over and over… That's why I try to find the fastest, most efficient ways to automate my work.</p>
-
-            <p>Automation isn't just a passion; it's a necessity — so I can spend more time hiking, training or chilling on the terrace with my adorable cat 🐾</p>
-
-            <p>If there's a shortcut, I've probably already coded it 😊</p>
+            <p>At work, I focus on the "I" in BIM – the information. Because BIM without information is just a fancy 3D model. Honestly, I'm pretty lazy and can't stand repetitive, tedious tasks… That's why I always look for the fastest and most efficient way to automate my work.</p>
+            
+            <p>Automation is not just a passion for me; it's a necessity – it gives me more time for hiking, training, and relaxing on the terrace with my adorable cat 🐾 If there's a shortcut, I've probably already coded it.</p>
         </div>
     </div>
     
@@ -159,7 +153,9 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
 
             <p>Throughout my professional journey, I've spent hours creating and controlling models for material take-offs, managing clashes, looking for potential technical issues (spinning a model from left to right 😎), and verifying input and output data.</p>
 
-            <p>I'm a huge fan of the BIM concept as a significant advancement and transparency improvement for the civil engineering industry. Professionally, I focus on eliminating inefficiencies and overproduction, developing useful data flows, and creating effective checklists to control them. In my free time, I enjoy both indoor and outdoor climbing and long hiking trips.</p>
+            <p>I'm a fan of the BIM concept as a major leap forward in transparency, efficiency, and reducing wasted effort in the construction industry. I focus on eliminating inefficiencies and overproduction, optimizing data workflows, and creating effective checklists for their verification.</p>
+            
+            <p>In my free time, I enjoy both indoor and outdoor climbing and long hiking trips.</p>
         </div>
     </div>
 </div>
