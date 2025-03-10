@@ -30,7 +30,7 @@ permalink: /pl/about/
                 overflow: hidden;
 
                 &:hover {
-                box-shadow: 0 3px 15px -3px var(--firstBlue-color);
+                box-shadow: 0 4px 20px -4px var(--firstBlue-color);
                 }
 
                 .author-image {
@@ -99,8 +99,8 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
     <div class="author-card">
         <div class="author-image-section">
             <div class="author-image-container">
-                <img class="author-image front" src="/images/images-main/julian-1.jpg" alt="Julian Wandzilak">
-                <img class="author-image back" src="/images/images-main/julian-2.jpg" alt="Julian Wandzilak - alternatywne">
+                <img class="author-image front" src="/images/images-main/About_Authors_JulianWandzilak_Main.png" alt="Julian Wandzilak">
+                <img class="author-image back" src="/images/images-main/About_Authors_JulianWandzilak_Alter.webp" alt="Julian Wandzilak - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
