@@ -167,7 +167,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 </div>
 
 <div class="collapsible-section">
-    <button class="button expand collapsible" aria-expanded="false">Nie klikać</button>
+    <button class="button expand collapsible" aria-expanded="false">Nie rozwijaj tego pola.</button>
     <div class="collapsible-content" aria-hidden="true">
         <p>Odnalazłeś prawdę:</p>
         <img src="/images/images-main/Image_About_BIMSpecialist.jpg" alt="BIM Specialist in a nutshell" style="width:100%;max-width:600px;display:block;margin:20px auto;">
