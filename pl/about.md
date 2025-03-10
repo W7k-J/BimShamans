@@ -13,6 +13,7 @@ permalink: /pl/about/
     flex-direction: column;
     gap: 2rem;
     margin: 2rem 0;
+    font-size: 18px; // Match base font size from html rule
 
     .author-card {
         display: flex;
@@ -29,45 +30,20 @@ permalink: /pl/about/
             text-align: justify;
             
             h3 {
+                font-family: 'Montserrat', $helveticaNeue; // Match h3 from style.scss
+                font-size: 20px; // Match h3 from style.scss
+                font-weight: bold;
                 margin-top: 0;
                 margin-bottom: 1rem;
-                color: var(--firstGray-color);
+                color: var(--firstBlue-color);
                 text-align: left;
             }
 
             p {
-                margin-bottom: 1rem;
+                margin: 15px 0; // Match p from style.scss
                 line-height: 1.6;
-            }
-        }
-
-        .author-image-container {
-            position: relative;
-            width: 100%;
-            aspect-ratio: 2/3;
-            overflow: hidden;
-            border-radius: var(--image-radius);
-            transition: box-shadow 0.3s ease-in-out;
-
-            &:hover {
-                box-shadow: 0 3px 20px -3px var(--firstBlue-color);
-            }
-
-            .author-image {
-                position: absolute;
-                inset: 0;
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: var(--image-radius);
-                transition: opacity 0.4s ease;
-
-                &.back { opacity: 0; }
-            }
-
-            &:hover {
-                .author-image.front { opacity: 0; }
-                .author-image.back { opacity: 1; }
+                font-family: 'Montserrat', $helveticaNeue; // Match base font
+                color: var(--firstGray-color); // Match base text color
             }
         }
     }
@@ -112,7 +88,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 
             <p>During my professional life I've been involved in preparing masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings (residential & student), interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses. I also took part in some competitions. Lately I did some concepts for playgrounds and historic gardens…</p>
 
-            <p>All of it showed me that everywhere in the world we have a similar problem → "WE NEED MORE AUTOMATIONS". Sadly no one is interested in doing it for us!</p>
+            <p>All of it showed me that everywhere in the world we have a similar problem - "WE NEED MORE AUTOMATIONS". Sadly no one is interested in doing it for us!</p>
 
             <p>Because of that I decided to do it myself. I learnt programming and so far published two plugins for Autodesk Revit – Drafter and Leveler. They automate the work of architects and engineers, allowing them to do their tasks faster. Drafter is one of the largest plugins for Revit out there containing around 180 automations helping you to work faster!</p>
 
@@ -154,9 +130,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
         </div>
         <div class="author-content-section">
             <h3>Piotr Spyra</h3>
-            <p>I'm the kind of person who sees a repetitive task and thinks:</p>
-
-            <p>"I won't waste my colleagues' or my own potential on endless clicking…" 🤔 You are here, so we've got that in common 🫡</p>
+            <p>I'm the kind of person who sees a repetitive task and thinks: "I won't waste my colleagues' or my own potential on endless clicking…" 🤔 You are here, so we've got that in common 🫡</p>
 
             <p>I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery.</p>
 
