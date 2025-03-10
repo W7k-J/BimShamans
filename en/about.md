@@ -30,7 +30,7 @@ permalink: /en/about/
                 overflow: hidden;
 
                 &:hover {
-                box-shadow: 0 4px 20px -4px var(--firstBlue-color);
+                box-shadow: 0 4px 20px -2px var(--firstBlue-color);
                 }
 
                 .author-image {
