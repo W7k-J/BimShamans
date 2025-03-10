@@ -20,6 +20,7 @@ permalink: /en/about/
         
         .author-image-section {
             flex: 0 0 300px;
+            margin-top: 1rem;
             
             .author-image-container {
                 position: relative;
@@ -57,8 +58,8 @@ permalink: /en/about/
             flex: 1;
             
             h3 {
-                @extend .post h2;  // Dziedziczenie stylów z głównego arkusza
-                margin: 0 0 1rem 0;
+                @extend .post h2;
+                margin: 1rem 0;  // Explicit margin definition
                 color: var(--firstBlue-color);
             }
 
