@@ -145,15 +145,17 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
         </div>
         <div class="author-content-section">
             <h3>Piotr Spyra</h3>
-            <p>I'm the kind of person who sees a repetitive task and thinks: "I won't waste my colleagues' or my own potential on endless clicking…" 🤔 You are here, so we've got that in common 🫡</p>
+            <p>Jestem osobą, która widząc powtarzalne zadanie, myśli: „Nie będę marnować potencjału mojego ani moich współpracowników na bezsensowne klikanie…” 🤔 Skoro tu jesteś, to chyba mamy coś wspólnego 🫡</p>
 
-            <p>I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery.</p>
+            <p>Wierzę, że automatyzacja to klucz do minimalizowania błędów ludzkich, eliminowania żmudnej, czasochłonnej pracy i zapewnienia dokładnej kontroli przed oddaniem projektu. Standaryzacja natomiast jest podwaliną do sukcesu automatyzacji.</p>
 
-            <p>BIM Coordinator, BIM Manager, and Civil Engineer with structural design expertise, on-site experience, and an unlimited building license for managing and design. I'm currently working as a BIM Coordinator in the Advanced Technology and Life Science industry and as a BIM Manager in Real Estate.</p>
+            <p>Koordynator BIM, Menedżer BIM i uprawniony inżynier budownictwa z doświadczeniem w projektowaniu konstrukcji obiektów kubaturowych. Obecnie pracuję jako Koordynator BIM w branży Advance Technology, a przez lata współpracowałem również z branżą budownictwa mieszkaniowego.</p>
 
-            <p>Throughout my professional journey, I've spent hours creating and controlling models for material take-offs, managing clashes, looking for potential technical issues (spinning a model from left to right 😎), and verifying input and output data.</p>
+            <p>W trakcie mojej kariery zawodowej spędziłem niezliczone godziny na tworzeniu i kontrolowaniu modeli do przedmiarów materiałowych, zarządzaniu kolizjami, wyszukiwaniu potencjalnych problemów technicznych (obracając model w lewo i w prawo 😎) oraz weryfikowaniu danych wejściowych i wyjściowych.</p>
 
-            <p>I'm a huge fan of the BIM concept as a significant advancement and transparency improvement for the civil engineering industry. Professionally, I focus on eliminating inefficiencies and overproduction, developing useful data flows, and creating effective checklists to control them. In my free time, I enjoy both indoor and outdoor climbing and long hiking trips.</p>
+            <p>Jestem fanem koncepcji BIM jako ogromnego kroku naprzód w zakresie przejrzystości, efektywności i ograniczania marnotrawstwa pracy w branży budowlanej. Koncentruję się na eliminowaniu nieefektywności i nadprodukcji, rozwijaniu przepływów danych oraz tworzeniu skutecznych checklist do ich weryfikacji.</p>
+
+            <p>W wolnym czasie lubię wspinaczkę (zarówno na ściance, jak i w plenerze) oraz długie górskie wędrówki.</p>
         </div>
     </div>
 </div>
