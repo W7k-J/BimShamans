@@ -123,7 +123,7 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
         <div class="author-image-section">
             <div class="author-image-container">
                 <img class="author-image front" src="/images/images-main/natalia-1.jpg" alt="Natalia Gawlik">
-                <img class="author-image back" src="/images/images-main/natalia-2.jpg" alt="Natalia Gawlik - alternatywne">
+                <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.webp" alt="Natalia Gawlik - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
@@ -146,7 +146,7 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
         <div class="author-image-section">
             <div class="author-image-container">
                 <img class="author-image front" src="/images/images-main/About_Authors_PiotrSpyra_Main.png" alt="Piotr Spyra">
-                <img class="author-image back" src="/images/images-main/About_Authors_PiotrSpyra_Alter.jpg" alt="Piotr Spyra - alternatywne">
+                <img class="author-image back" src="/images/images-main/About_Authors_PiotrSpyra_Alter.webp" alt="Piotr Spyra - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
