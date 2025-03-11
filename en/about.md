@@ -79,7 +79,7 @@ permalink: /en/about/
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
 #### TL;DR
-We solve problems which satellitees civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal, in the spirit of **make engineering approach great again**.
+We solve problems which satellites civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal. **Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
 
 ## About the project
 
@@ -133,7 +133,7 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
             <p>At work, I focus on the "I" in BIM – the information. Because BIM without information is just a fancy 3D model. Honestly, I'm pretty lazy and can't stand repetitive, tedious tasks… That's why I always look for the fastest and most efficient way to automate my work.</p>
             
             <p>Automation is not just a passion for me; it's a necessity – it gives me more time for hiking, training, and relaxing on the terrace with my adorable cat 🐾 </p>
-            
+
             <p> If there's a shortcut, I've probably already coded it.</p>
         </div>
     </div>
