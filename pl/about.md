@@ -151,9 +151,9 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
 
             <p>Koordynator BIM, Menedżer BIM i uprawniony inżynier budownictwa z doświadczeniem w projektowaniu konstrukcji obiektów kubaturowych. Obecnie pracuję jako Koordynator BIM w branży Advance Technology, a przez lata współpracowałem również z branżą budownictwa mieszkaniowego.</p>
 
-            <p>W trakcie mojej kariery zawodowej spędziłem niezliczone godziny na tworzeniu i kontrolowaniu modeli do przedmiarów materiałowych, zarządzaniu kolizjami, wyszukiwaniu potencjalnych problemów technicznych (obracając model w lewo i w prawo 😎) oraz weryfikowaniu danych wejściowych i wyjściowych.</p>
+            <p>Jestem fanem koncepcji BIM jako ogromnego kroku naprzód w zakresie przejrzystości, standaryzacji i uporządkowania procesu oraz ograniczania marnotrawstwa pracy w branży budowlanej. Koncentruję się na eliminowaniu nieefektywności i nadprodukcji, rozwijaniu przepływów danych oraz wielokrotnego ich wykorzystywania w jak najszerszym spektrum przypadków. Wspieram firmy w implementacji tych "przypadków użycia" BIM, które dają największą stopę zwrotu i mają szansę realnie poprawić frustrujące obszary pracy </p>
 
-            <p>Jestem fanem koncepcji BIM jako ogromnego kroku naprzód w zakresie przejrzystości, efektywności i ograniczania marnotrawstwa pracy w branży budowlanej. Koncentruję się na eliminowaniu nieefektywności i nadprodukcji, rozwijaniu przepływów danych oraz tworzeniu skutecznych checklist do ich weryfikacji.</p>
+            <p>W trakcie mojej kariery zawodowej spędziłem niezliczone godziny na tworzeniu i kontrolowaniu modeli do przedmiarów materiałowych (wraz z przyjaciółmi - Excelem i PowerBI), zarządzaniu kolizjami i przede wszyskim wnioskami płynącymi z ich wykrywania, wyszukiwaniu potencjalnych problemów technicznych (obracając model w lewo i w prawo 😎) i rozwijaniu standardów, biblitek i skryptów w środowisku Autodesk Revit i Dynamo.</p>
 
             <p>W wolnym czasie lubię wspinaczkę (zarówno na ściance, jak i w plenerze) oraz długie górskie wędrówki.</p>
         </div>

@@ -149,14 +149,14 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
             <h3>Piotr Spyra</h3>
             <p>I'm the kind of person who sees a repetitive task and thinks: "I won't waste my colleagues' or my own potential on endless clicking…" 🤔 You are here, so we've got that in common 🫡</p>
 
-            <p>I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery.</p>
+            <p>I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery. Standardization, on the other hand, is the foundation of successful automation.</p>
 
             <p>BIM Coordinator, BIM Manager, and Civil Engineer with structural design expertise, on-site experience, and an unlimited building license for managing and design. I'm currently working as a BIM Coordinator in the Advanced Technology and Life Science industry and as a BIM Manager in Real Estate.</p>
 
-            <p>Throughout my professional journey, I've spent hours creating and controlling models for material take-offs, managing clashes, looking for potential technical issues (spinning a model from left to right 😎), and verifying input and output data.</p>
+            <p>I'm a fan of the BIM concept as a major leap forward in transparency, standardization, process organization, and reducing wasted effort in the construction industry. I focus on eliminating inefficiencies and overproduction, developing data workflows, and maximizing their reuse across the widest possible range of use cases. I support companies in implementing those BIM 'use cases' that offer the highest return on investment and have the potential to significantly improve frustrating aspects of daily work.</p>
 
-            <p>I'm a fan of the BIM concept as a major leap forward in transparency, efficiency, and reducing wasted effort in the construction industry. I focus on eliminating inefficiencies and overproduction, optimizing data workflows, and creating effective checklists for their verification.</p>
-            
+            <p>Throughout my professional career, I have spent countless hours creating and verifying models for material take-offs (with my trusted friends – Excel and Power BI), managing clashes and providing data-driven insights, identifying potential technical issues (spinning the model left and right 😎), and developing standards, libraries, and scripts within the Autodesk Revit and Dynamo environment.</p>
+
             <p>In my free time, I enjoy both indoor and outdoor climbing and long hiking trips.</p>
         </div>
     </div>
