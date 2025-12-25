@@ -1,0 +1,32 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.t[lang] %}
+
+<section class="section section-posts" aria-label="Posts">
+  <h2>{% if page.lang == 'pl' %}Najnowsze wpisy:{% else %}Latest posts:{% endif %}</h2>
+
+  <div class="posts">
+    {% assign posts = site.posts | where: "lang", page.lang %}
+    {% for post in posts %}
+      <article class="post">
+        <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
+
+        <div class="entry">
+          {% if post.excerpt %}
+            {{ post.excerpt }}
+          {% else %}
+            {{ post.content | strip_html | truncatewords: 50 }}
+          {% endif %}
+        </div>
+
+        <div class="post-meta">
+          <span class="date">{{ post.date | date: "%d-%m-%Y" }}</span>
+          {% if post.author %}
+            <span class="author">{{ post.author }}</span>
+          {% endif %}
+        </div>
+
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ t.read_more }}</a>
+      </article>
+    {% endfor %}
+  </div>
+</section>

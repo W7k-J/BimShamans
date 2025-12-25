@@ -1,0 +1,42 @@
+{% assign lang = page.lang | default: site.default_lang %}
+{% assign t = site.t[lang] %}
+
+<section class="section section-hero" aria-label="Hero">
+  <style>
+  /* Scoped minimal styles for hero section — will later move to _sass/_sections.scss */
+  .section-hero{margin:2rem 0;}
+  .section-hero .cols{display:flex;flex-wrap:wrap;align-items:center;gap:1.5rem}
+  .section-hero .col{flex:1 1 320px}
+  .section-hero .narrative h1{margin:0 0 .5rem;font-size:2rem}
+  .section-hero .kicker{opacity:.85;margin:0;color:var(--muted)}
+  .section-hero .visual{position:relative}
+  .section-hero .home-avatar{display:flex;align-items:center;justify-content:center}
+  .section-hero .home-avatar img{max-width:100%;height:auto;display:block}
+  .section-hero .plexus-container{position:absolute;inset:0;z-index:0;pointer-events:none}
+
+  @media (prefers-reduced-motion: reduce){
+    .section-hero .plexus-container{display:none}
+  }
+  </style>
+
+  <div class="cols">
+    <div class="col narrative">
+      <h1>{{ page.title | default: site.name }}</h1>
+      <p class="kicker">{% if page.lang == 'pl' %}Każdy model jest artefaktem decyzji.{% else %}Every model is a decision artifact.{% endif %}</p>
+    </div>
+
+    <div class="col visual" aria-hidden="true">
+      <div class="home-avatar">
+        <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" class="logo-light" alt="BIM Shamans Logo Light Theme">
+        <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaLightLetters_1024x222.png" class="logo-dark" alt="BIM Shamans Logo Dark Theme">
+      </div>
+
+      <div class="plexus-container">
+        <canvas id="plexusCanvas"></canvas>
+      </div>
+    </div>
+  </div>
+
+  <!-- Include the plexus script here so hero is self-contained -->
+  <script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>
+</section>
