@@ -122,19 +122,19 @@ Time and again, **we’ve seen how the so-called “only right” solutions coll
     <div class="author-card">
         <div class="author-image-section">
             <div class="author-image-container">
-                <img class="author-image front" src="/images/images-main/natalia-1.jpg" alt="Natalia Gawlik">
+                <img class="author-image front" src="/images/images-main/About_Authors_NataliaGawlik_Main.jpg" alt="Natalia Gawlik">
                 <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.webp" alt="Natalia Gawlik - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
             <h3>Natalia Gawlik</h3>
-            <p>I'm a BIM Coordinator, and large infrastructure contracts, mainly railway projects, are my daily bread. By education, I'm a surveyor; by a series of fortunate coincidences, a BIM specialist. A decade of my professional life spans experience in photogrammetry, 3D laser scanning, drone and land surveying, 3D modeling, and, ultimately, BIM in Norwegian public investments.</p>
+            <p>I'm a BIM Coordinator with a strong background in large-scale infrastructure projects. My background is in land surveying, but over time, my focus shifted toward BIM and it became the field where I could focus on everything I enjoy - technology, programming and problem-solving. Over the past decade, my career has taken me from photogrammetry and laser scanning, through drone mapping and 3D modeling (Scan to BIM), all the way to BIM coordination, automation and project management using VDC methodology on public projects in Norway.</p>
 
-            <p>At work, I focus on the "I" in BIM – the information. Because BIM without information is just a fancy 3D model. Honestly, I'm pretty lazy and can't stand repetitive, tedious tasks… That's why I always look for the fastest and most efficient way to automate my work.</p>
+            <p>To me, BIM isn’t just about 3D models—it’s about the data that gives them meaning. Without solid, structured information, even the most impressive model is just a geometric representation - nice to look at, but not very useful. That’s why I focus on the “I” in BIM—Information. With tools like Dynamo, Grasshopper, the Automation Tool in Quadri, and Python (using IfcOpenShell), I automate the process of creating and managing property sets in models. My goal is to make sure models are complete, consistent, and up to standard—without wasting hours on mindless, repetitive tasks.</p>
             
-            <p>Automation is not just a passion for me; it's a necessity – it gives me more time for hiking, training, and relaxing on the terrace with my adorable cat 🐾 </p>
+            <p>To be honest, I’m too lazy for boring tasks. I can't stand doing the same thing many times if I can automate it. Yes, I may have spent hours coding just to skip a 10-minute task. No regrets 😄 </p>
 
-            <p> If there's a shortcut, I've probably already coded it.</p>
+            <p> For me, automation isn’t just a technical solution—it’s what gives me the freedom to do more of what I love: hiking, training, and relaxing on the terrace with my charming cat 🐾.</p>
         </div>
     </div>
     

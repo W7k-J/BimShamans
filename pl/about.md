@@ -120,19 +120,18 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
     <div class="author-card">
         <div class="author-image-section">
             <div class="author-image-container">
-                <img class="author-image front" src="/images/images-main/natalia-1.jpg" alt="Natalia Gawlik">
+                <img class="author-image front" src="/images/images-main/About_Authors_NataliaGawlik_Main.jpg" alt="Natalia Gawlik">
                 <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.webp" alt="Natalia Gawlik - alternatywne">
             </div>
         </div>
         <div class="author-content-section">
             <h3>Natalia Gawlik</h3>
-            <p>Jestem Koordynatorem BIM, a duże kontrakty infrastrukturalne, głównie kolejowe, to mój chleb powszedni. Z wykształcenia - geodeta, a z wielu szczęśliwych zbiegów okoliczności - specjalista BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skanowania laserowego 3D, pomiarów dronowych i naziemnych, przez modelowanie 3D, aż po BIM w norweskich inwestycjach publicznych.</p>
+            <p>Jestem Koordynatorem BIM, a duże kontrakty infrastrukturalne, głównie kolejowe, to mój chleb powszedni. Z wykształcenia geodeta, z zamiłowania specjalistka BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego, nalotów dronowych, przez modelowanie 3D (Scan to BIM), aż po BIM i zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych.</p>
 
-            <p>W pracy skupiam się na „I” w BIM – czyli informacji. Bo BIM bez informacji to tylko ładny model 3D. Szczerze mówiąc, jestem dość leniwa i nie znoszę powtarzalnych, nudnych zadań… Dlatego zawsze szukam najszybszego i najbardziej efektywnego sposobu na automatyzację pracy.</p>
+            <p>BIM to nie tylko obiekty 3D, ale przede wszystkim użyteczne dane, które je opisują. Bez informacji nawet najbardziej dopracowany model 3D pozostaje jedynie cyfrową makietą – ładną, ale mało użyteczną. Dlatego w pracy skupiam się na literze „I” – Information. </p>
+            <p>Dzięki narzędziom takim jak Dynamo, Grasshopper, Automation Tool w Quadri oraz Python (IfcOpenShell) upraszczam procesy tworzenia i wypełniania Property Setów w modelach. Moim celem jest, aby dane w modelach były kompletne, spójne i zgodne ze standardami, ale jednocześnie praca z nimi nie byla żmudna i manualne. Szczerze mówiąc, jestem dość leniwa i nie znoszę powtarzalnych, nudnych zadań… Dlatego zawsze szukam najszybszego i najbardziej efektywnego sposobu na automatyzację pracy. </p>
 
             <p>Automatyzacja to dla mnie nie tylko pasja, ale i konieczność – dzięki niej mam więcej czasu na wędrówki, treningi i relaks na tarasie z moim uroczym kotem 🐾 </p> 
-            
-            <p>Jeśli istnieje jakaś droga na skróty, to prawdopodobnie już ją zakodowałam.</p>
         </div>
     </div>
     
