@@ -69,15 +69,19 @@
     }
     
     &:hover {
-        @extend .button:hover;
+            background-color: var(--secondGray-color);
+            color: var(--forthGray-color);
     }
     
     &:active {
-        @extend .button:active;
+            background-color: var(--firstBlue-color);
+            color: var(--forthGray-color);
+            border: 2px solid var(--firstBlue-color);
     }
 
     &:focus {
-        @extend .button:focus;
+            background-color: var(--firstBlue-color);
+            color: var(--forthGray-color);
     }
 }
 
