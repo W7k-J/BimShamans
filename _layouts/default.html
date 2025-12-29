@@ -66,12 +66,22 @@
             <!-- Controls (Language and Theme Switchers) -->
             <div class="controls">
                 <!-- Language Switcher -->
-                <div class="language-switcher">
-                    <a data-lang="en" class="{% if page.lang == 'en' %}active{% endif %}" 
-                       onclick="switchLanguage('en')">EN</a>
-                    <span>|</span>
-                    <a data-lang="pl" class="{% if page.lang == 'pl' %}active{% endif %}"
-                       onclick="switchLanguage('pl')">PL</a>
+                <div class="language-switcher" role="group" aria-label="Language switcher">
+                    <button type="button"
+                            data-lang="en"
+                            class="language-option {% if page.lang == 'en' %}active{% endif %}"
+                            aria-pressed="{% if page.lang == 'en' %}true{% else %}false{% endif %}"
+                            onclick="switchLanguage('en')">
+                        EN
+                    </button>
+                    <span aria-hidden="true">|</span>
+                    <button type="button"
+                            data-lang="pl"
+                            class="language-option {% if page.lang == 'pl' %}active{% endif %}"
+                            aria-pressed="{% if page.lang == 'pl' %}true{% else %}false{% endif %}"
+                            onclick="switchLanguage('pl')">
+                        PL
+                    </button>
                 </div>
 
                 <!-- Theme Switcher -->

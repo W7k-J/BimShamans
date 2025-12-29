@@ -129,16 +129,23 @@
       text-align: center; // upewnienie się, że tekst jest wyśrodkowany
       font-weight: 300;
       letter-spacing: 1px;
-      transition: color 0.3s ease;
+      transition: color 0.3s ease, background-color 0.3s ease;
       height: 100%;
       display: flex;
       align-items: center;
       justify-content: center; // wyśrodkowanie tekstu w pionie
       width: auto; // dodane: szerokość dopasowana do zawartości
       padding: 0 15px; // dodane: dodatkowy odstęp po bokach
+      border-radius: 6px;
 
       &:hover {
         color: var(--firstBlue-color);
+      }
+
+      &:focus-visible {
+        outline: 2px solid var(--firstBlue-color);
+        outline-offset: 3px;
+        background-color: var(--forthGray-color);
       }
     }
   }
@@ -150,6 +157,47 @@
     gap: 1rem;
     padding-left: 1rem;
     height: 100%;
+
+    .language-switcher {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.95rem;
+
+      span {
+        color: var(--secondGray-color);
+        user-select: none;
+      }
+
+      .language-option {
+        background: transparent;
+        border: 1px solid transparent;
+        border-radius: 999px;
+        color: var(--firstGray-color);
+        cursor: pointer;
+        font: inherit;
+        letter-spacing: 0.5px;
+        padding: 0.35rem 0.9rem;
+        transition: color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+
+        &:hover {
+          color: var(--firstBlue-color);
+          background-color: var(--forthGray-color);
+        }
+
+        &:focus-visible {
+          border-color: var(--firstBlue-color);
+          outline: none;
+          background-color: var(--forthGray-color);
+        }
+
+        &.active {
+          border-color: var(--firstBlue-color);
+          color: var(--firstBlue-color);
+          background-color: rgba(17, 130, 255, 0.12);
+        }
+      }
+    }
   }
 }
 
