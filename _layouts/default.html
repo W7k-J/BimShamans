@@ -13,6 +13,18 @@
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
+    <script>
+        (function() {
+            try {
+                var storedTheme = localStorage.getItem('theme');
+                var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+                var theme = storedTheme || (prefersDark ? 'dark' : 'light');
+                document.documentElement.classList.add(theme + '-theme');
+            } catch (e) {
+                document.documentElement.classList.add('light-theme');
+            }
+        })();
+    </script>
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
@@ -32,7 +44,7 @@
     <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js"></script>
 </head>
 
-<body class="light-theme">
+<body>
     <!-- Navigation Bar -->
     <div class="nav-container">
         <div class="container">

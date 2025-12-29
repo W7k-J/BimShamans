@@ -11,32 +11,37 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const themeSwitcher = document.getElementById('theme-switcher');
-    let currentTheme = 'light';
+    if (!themeSwitcher) {
+        return;
+    }
+
+    const root = document.documentElement;
+
+    function applyTheme(theme) {
+        const themes = ['light', 'dark'];
+        themes.forEach(function(name) {
+            root.classList.toggle(name + '-theme', name === theme);
+        });
+    }
+
+    let currentTheme = root.classList.contains('dark-theme') ? 'dark' : 'light';
 
     // Only try to get from localStorage if it's available
     if (isLocalStorageAvailable()) {
-        currentTheme = localStorage.getItem('theme') || 'light';
+        currentTheme = localStorage.getItem('theme') || currentTheme;
     }
 
-    if (currentTheme === 'dark') {
-        document.body.classList.add('dark-theme');
-        document.body.classList.remove('light-theme');
-        themeSwitcher.checked = true;
-    } else {
-        document.body.classList.add('light-theme');
-        document.body.classList.remove('dark-theme');
-    }
+    applyTheme(currentTheme);
+    themeSwitcher.checked = currentTheme === 'dark';
 
     themeSwitcher.addEventListener('change', function() {
         if (themeSwitcher.checked) {
-            document.body.classList.add('dark-theme');
-            document.body.classList.remove('light-theme');
+            applyTheme('dark');
             if (isLocalStorageAvailable()) {
                 localStorage.setItem('theme', 'dark');
             }
         } else {
-            document.body.classList.add('light-theme');
-            document.body.classList.remove('dark-theme');
+            applyTheme('light');
             if (isLocalStorageAvailable()) {
                 localStorage.setItem('theme', 'light');
             }
