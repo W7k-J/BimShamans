@@ -89,6 +89,16 @@
                     <input type="checkbox" id="theme-switcher">
                     <span class="slider"></span>
                 </label>
+                <script>
+                    (function() {
+                        var toggle = document.getElementById('theme-switcher');
+                        if (!toggle) {
+                            return;
+                        }
+                        var isDark = document.documentElement.classList.contains('dark-theme');
+                        toggle.checked = isDark;
+                    })();
+                </script>
             </div>
         </div>
     </div>

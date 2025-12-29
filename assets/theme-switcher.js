@@ -16,6 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     const root = document.documentElement;
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
+    const switchWrapper = themeSwitcher.closest('.switch');
+    const timerSettings = { timeoutId: null };
+
+    if (switchWrapper) {
+        switchWrapper.classList.add('switch--syncing');
+    }
 
     function applyTheme(theme) {
         const themes = ['light', 'dark'];
@@ -34,6 +41,12 @@ document.addEventListener('DOMContentLoaded', function() {
     applyTheme(currentTheme);
     themeSwitcher.checked = currentTheme === 'dark';
 
+    if (switchWrapper) {
+        timerSettings.timeoutId = setTimeout(function() {
+            switchWrapper.classList.remove('switch--syncing');
+        }, 250);
+    }
+
     themeSwitcher.addEventListener('change', function() {
         if (themeSwitcher.checked) {
             applyTheme('dark');
@@ -47,4 +60,15 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     });
+
+    if (prefersDark && typeof prefersDark.addEventListener === 'function') {
+        prefersDark.addEventListener('change', function(event) {
+            const nextTheme = event.matches ? 'dark' : 'light';
+            applyTheme(nextTheme);
+            themeSwitcher.checked = nextTheme === 'dark';
+            if (isLocalStorageAvailable()) {
+                localStorage.setItem('theme', nextTheme);
+            }
+        });
+    }
 });
