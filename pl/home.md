@@ -66,6 +66,8 @@ permalink: /pl/home/
   </div>
 </div>
 
+# Usługi BIM – BIM Shamans
+
 ## Najnowsze posty:
 
 <div class="posts">
