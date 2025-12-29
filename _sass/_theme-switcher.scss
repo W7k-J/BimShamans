@@ -3,7 +3,8 @@
 // Main switch container
 .switch {
   position: relative;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
   width: 60px;
   height: 34px;
 }
@@ -26,7 +27,7 @@
   bottom: 0;
   // Light theme background color
   background-color: var(--firstBlue-color);  // Controls background in light mode
-  transition: .4s;
+  transition: .25s ease;
   border-radius: 34px;
 }
 
@@ -40,7 +41,7 @@
   bottom: 4px;
   // Light theme circle color
   background-color: var(--forthGray-color);  // Controls circle color in light mode
-  transition: .4s;
+  transition: .25s ease;
   border-radius: 50%;
 }
 
