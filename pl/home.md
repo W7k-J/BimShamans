@@ -66,7 +66,74 @@ permalink: /pl/home/
   </div>
 </div>
 
-# Usługi BIM – BIM Shamans
+  # Usługi BIM – BIM Shamans
+
+<section class="feature-sections">
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Współpraca projektowa</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis pierwszej sekcji. Tutaj w przyszłości opiszcie wartość
+        współpracy projektowej i usług wspierających zespół BIM.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja współpracy projektowej">
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <h2>Automatyzacja i efektywność</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis drugiej sekcji. Podkreśl, w jaki sposób automatyzacja
+        skraca czas dostaw i poprawia jakość dokumentacji.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja automatyzacji">
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Szkolenia i warsztaty</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis trzeciej sekcji. Opowiedz o szkoleniach, wdrożeniach lub
+        innych działaniach edukacyjnych wspierających zespół.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja szkoleniowa">
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <h2>Integracje na zamówienie</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis czwartej sekcji. Przedstaw indywidualne integracje i sposób
+        łączenia źródeł danych w jeden spójny proces.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja integracji">
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Wsparcie i partnerstwo</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis piątej sekcji. Wspomnij o długofalowym wsparciu, które
+        utrzymuje projekty w ruchu i buduje trwałe relacje.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja partnerstwa">
+    </div>
+  </div>
+</section>
 
 ## Najnowsze posty:
 

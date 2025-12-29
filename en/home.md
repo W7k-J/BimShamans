@@ -66,6 +66,73 @@ permalink: /en/home/
   </div>
 </div>
 
+<section class="feature-sections">
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Design Collaboration</h2>
+      <p>
+        Text text text placeholder copy for the first section. Add your real description here to explain
+        the value proposition around collaborative BIM design services.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder design illustration">
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <h2>Automation &amp; Efficiency</h2>
+      <p>
+        Text text text placeholder copy for the second section. Highlight how automation improves
+        efficiency and streamlines project delivery for your clients.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder automation illustration">
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Training &amp; Workshops</h2>
+      <p>
+        Text text text placeholder copy for the third section. Describe workshops, onboarding, or other
+        educational services that help teams adopt new workflows.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder training illustration">
+    </div>
+  </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <h2>Custom Integrations</h2>
+      <p>
+        Text text text placeholder copy for the fourth section. Talk about bespoke integrations and how
+        they connect data sources to keep information in sync.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder integrations illustration">
+    </div>
+  </div>
+
+  <div class="feature-section">
+    <div class="feature-section__content">
+      <h2>Support &amp; Partnership</h2>
+      <p>
+        Text text text placeholder copy for the fifth section. Share how long-term partnerships provide
+        ongoing support and ensure projects keep moving forward.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder partnership illustration">
+    </div>
+  </div>
+</section>
+
 ## Latest posts:
 
 <div class="posts">
