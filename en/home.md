@@ -66,6 +66,8 @@ permalink: /en/home/
   </div>
 </div>
 
+  # Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
+
 <section class="feature-sections">
   <div class="feature-section">
     <div class="feature-section__content">
@@ -76,7 +78,7 @@ permalink: /en/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder design illustration">
+      <img src="xyz.jpg" alt="Placeholder design illustration">
     </div>
   </div>
 
@@ -89,7 +91,7 @@ permalink: /en/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder automation illustration">
+      <img src="xyz.jpg" alt="Placeholder automation illustration">
     </div>
   </div>
 
@@ -102,7 +104,7 @@ permalink: /en/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder training illustration">
+      <img src="xyz.jpg" alt="Placeholder training illustration">
     </div>
   </div>
 
@@ -115,7 +117,7 @@ permalink: /en/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder integrations illustration">
+      <img src="xyz.jpg" alt="Placeholder integrations illustration">
     </div>
   </div>
 
@@ -128,7 +130,7 @@ permalink: /en/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Placeholder partnership illustration">
+      <img src="xyz.jpg" alt="Placeholder partnership illustration">
     </div>
   </div>
 </section>

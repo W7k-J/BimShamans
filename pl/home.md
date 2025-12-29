@@ -66,7 +66,7 @@ permalink: /pl/home/
   </div>
 </div>
 
-  # Usługi BIM – BIM Shamans
+  # Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
 
 <section class="feature-sections">
   <div class="feature-section">
@@ -78,7 +78,7 @@ permalink: /pl/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja współpracy projektowej">
+      <img src="xyz.jpg" alt="Ilustracja współpracy projektowej">
     </div>
   </div>
 
@@ -91,7 +91,7 @@ permalink: /pl/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja automatyzacji">
+      <img src="xyz.jpg" alt="Ilustracja automatyzacji">
     </div>
   </div>
 
@@ -104,7 +104,7 @@ permalink: /pl/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja szkoleniowa">
+      <img src="xyz.jpg" alt="Ilustracja szkoleniowa">
     </div>
   </div>
 
@@ -117,7 +117,7 @@ permalink: /pl/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja integracji">
+      <img src="xyz.jpg" alt="Ilustracja integracji">
     </div>
   </div>
 
@@ -130,7 +130,7 @@ permalink: /pl/home/
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="{{ site.baseurl }}/images/images-main/Image_About_BIMSpecialst.jpg" alt="Ilustracja partnerstwa">
+      <img src="xyz.jpg" alt="Ilustracja partnerstwa">
     </div>
   </div>
 </section>
