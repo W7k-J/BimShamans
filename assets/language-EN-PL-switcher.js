@@ -3,15 +3,18 @@ function hasLanguageSegment(pathname) {
 }
 
 function handleLanguage() {
-    let storedLang = 'en';
+    const currentLang = document.documentElement.lang || 'en';
+    let storedLang = currentLang;
 
     try {
-        storedLang = localStorage.getItem('preferredLanguage') || 'en';
+        const saved = localStorage.getItem('preferredLanguage');
+        if (saved) {
+            storedLang = saved;
+        }
     } catch (e) {
-        storedLang = 'en';
+        storedLang = currentLang;
     }
 
-    const currentLang = document.documentElement.lang;
     const currentPath = window.location.pathname;
 
     syncLanguageControls(currentLang);
