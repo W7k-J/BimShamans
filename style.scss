@@ -43,6 +43,10 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};  
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.18);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.16);
+  --page-gradient-base-start: rgba(255, 255, 255, 0.94);
+  --page-gradient-base-end: rgba(227, 227, 234, 0.96);
 
   // Logo visibility
   .logo-light {
@@ -64,6 +68,10 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.22);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.2);
+  --page-gradient-base-start: rgba(20, 25, 40, 0.94);
+  --page-gradient-base-end: rgba(10, 12, 25, 0.92);
 
   // Logo visibility
   .logo-light {
@@ -230,10 +238,6 @@
   padding: clamp(3rem, 8vw, 6rem);
   border-radius: 24px;
   overflow: hidden;
-  background:
-    radial-gradient(circle at 40% 60%, rgba(0, 255, 255, 0.2), transparent 60%),
-    radial-gradient(circle at 80% 30%, rgba(255, 0, 255, 0.15), transparent 55%),
-    rgba(0, 0, 0, 0.85);
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
 }
 
@@ -532,6 +536,24 @@ body {
   font: 18px/1.4 'Montserrat', $helvetica;
   color: var(--firstGray-color);
   margin: 0; // Dodaj to, aby zapobiec niepożądanym marginesom
+  position: relative;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 40% 60%, var(--page-gradient-layer-one), transparent 60%),
+    radial-gradient(circle at 80% 30%, var(--page-gradient-layer-two), transparent 55%),
+    linear-gradient(160deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
+  background-repeat: no-repeat;
+  background-size: cover;
+  pointer-events: none;
+  z-index: -1;
+  will-change: transform;
 }
 
 .just {
