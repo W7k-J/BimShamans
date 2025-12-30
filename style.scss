@@ -260,6 +260,8 @@
   font-size: clamp(2.6rem, 8vw, 6rem);
   font-weight: 700;
   text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
   color: #e3e3ea;
   text-shadow: 0.05em 0 0 var(--firstBlue-color),
                -0.025em -0.05em 0 var(--secondBlue-color),
@@ -286,7 +288,7 @@
 }
 
 .hero-banner .glitch-text.intense-glitch {
-  animation-duration: 1.2s;
+  animation-duration: 1.6s;
 }
 
 .hero-banner .corrupt-text {

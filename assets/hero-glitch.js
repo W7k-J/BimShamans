@@ -38,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
         updateTextShadow(x, y);
 
         if (Math.random() > 0.95) {
-            var translateX = (Math.random() - 0.5) * 10;
-            var translateY = (Math.random() - 0.5) * 10;
+            var translateX = (Math.random() - 0.5) * 4;
+            var translateY = (Math.random() - 0.5) * 4;
             text.style.transform = 'translate(' + translateX + 'px, ' + translateY + 'px)';
             setTimeout(function() {
                 text.style.transform = 'translate(0, 0)';
@@ -56,13 +56,13 @@ document.addEventListener('DOMContentLoaded', function() {
         if (document.hidden) {
             return;
         }
-        if (Math.random() > 0.8) {
-            text.style.opacity = (Math.random() * 0.5 + 0.5).toFixed(2);
+        if (Math.random() > 0.85) {
+            text.style.opacity = (Math.random() * 0.15 + 0.85).toFixed(2);
             setTimeout(function() {
                 text.style.opacity = '1';
             }, 80);
         }
-    }, 600);
+    }, 900);
 
     function shuffleCharacters() {
         text.classList.add('intense-glitch');
@@ -83,6 +83,9 @@ document.addEventListener('DOMContentLoaded', function() {
             if (iteration >= chars.length) {
                 clearInterval(scramble);
                 text.textContent = original;
+                text.style.whiteSpace = 'nowrap';
+                text.style.opacity = '1';
+                text.style.transform = 'translate(0, 0)';
                 setTimeout(function() {
                     text.classList.remove('intense-glitch');
                 }, 800);
