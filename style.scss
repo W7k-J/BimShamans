@@ -266,6 +266,10 @@
   cursor: pointer;
 }
 
+.light-theme .hero-banner .glitch-text {
+  color: var(--firstBlue-color);
+}
+
 .hero-banner .glitch-text::before,
 .hero-banner .glitch-text::after {
   content: attr(data-text);
