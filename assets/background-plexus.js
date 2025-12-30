@@ -6,6 +6,8 @@ const ctx = canvas.getContext("2d");
 const particles = [];
 const maxParticles = 80;
 const maxDistance = 120;
+const maxDistanceSquared = maxDistance * maxDistance;
+const cellSize = maxDistance;
 const particleSpeed = 0.8; // Speed control variable
 
 // Theme colors
@@ -77,19 +79,55 @@ function init() {
 // Connect particles with lines
 function connect() {
     const currentTheme = getCurrentTheme();
-    for (let i = 0; i < particles.length; i++) {
-        for (let j = i; j < particles.length; j++) {
-            let dx = particles[i].x - particles[j].x;
-            let dy = particles[i].y - particles[j].y;
-            let distance = Math.sqrt(dx * dx + dy * dy);
+    const grid = new Map();
 
-            if (distance < maxDistance) {
-                ctx.strokeStyle = `${themeColors[currentTheme].connection}${1 - distance/maxDistance})`;
-                ctx.lineWidth = 1;
-                ctx.beginPath();
-                ctx.moveTo(particles[i].x, particles[i].y);
-                ctx.lineTo(particles[j].x, particles[j].y);
-                ctx.stroke();
+    // Spatial hash reduces neighbor checks to nearby cells only
+    particles.forEach(function(particle, index) {
+        const cellX = Math.floor(particle.x / cellSize);
+        const cellY = Math.floor(particle.y / cellSize);
+        const key = `${cellX}:${cellY}`;
+        let bucket = grid.get(key);
+        if (!bucket) {
+            bucket = [];
+            grid.set(key, bucket);
+        }
+        bucket.push(index);
+    });
+
+    for (let i = 0; i < particles.length; i++) {
+        const baseParticle = particles[i];
+        const cellX = Math.floor(baseParticle.x / cellSize);
+        const cellY = Math.floor(baseParticle.y / cellSize);
+
+        for (let offsetX = -1; offsetX <= 1; offsetX++) {
+            for (let offsetY = -1; offsetY <= 1; offsetY++) {
+                const neighborKey = `${cellX + offsetX}:${cellY + offsetY}`;
+                const bucket = grid.get(neighborKey);
+                if (!bucket) {
+                    continue;
+                }
+
+                for (let j = 0; j < bucket.length; j++) {
+                    const neighborIndex = bucket[j];
+                    if (neighborIndex <= i) {
+                        continue;
+                    }
+
+                    const neighbor = particles[neighborIndex];
+                    const dx = baseParticle.x - neighbor.x;
+                    const dy = baseParticle.y - neighbor.y;
+                    const distanceSq = dx * dx + dy * dy;
+
+                    if (distanceSq < maxDistanceSquared) {
+                        const distance = Math.sqrt(distanceSq);
+                        ctx.strokeStyle = `${themeColors[currentTheme].connection}${1 - distance / maxDistance})`;
+                        ctx.lineWidth = 1;
+                        ctx.beginPath();
+                        ctx.moveTo(baseParticle.x, baseParticle.y);
+                        ctx.lineTo(neighbor.x, neighbor.y);
+                        ctx.stroke();
+                    }
+                }
             }
         }
     }
