@@ -7,19 +7,28 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var root = document.documentElement;
 
-    function getToken(name, fallback) {
-        var value = getComputedStyle(root).getPropertyValue(name);
-        if (!value || !value.trim()) {
-            return fallback;
+    function readPalette() {
+        var computed = getComputedStyle(root);
+        function pick(name, fallback) {
+            var value = computed.getPropertyValue(name);
+            return value && value.trim() ? value.trim() : fallback;
         }
-        return value.trim();
+        return {
+            depth: pick('--firstGray-color', '#1e1e28'),
+            primary: pick('--firstBlue-color', '#1E6991'),
+            secondary: pick('--secondBlue-color', '#32D7E6'),
+            accent: '#4183C4'
+        };
     }
 
+    var palette = readPalette();
+    var lastRatios = { x: 0, y: 0, active: false };
+
     function updateTextShadow(xRatio, yRatio) {
-        var primary = getToken('--firstBlue-color', '#1E6991');
-        var secondary = getToken('--secondBlue-color', '#32D7E6');
-        var accent = '#4183C4';
-        var depth = getToken('--firstGray-color', '#1e1e28');
+        var depth = palette.depth;
+        var primary = palette.primary;
+        var secondary = palette.secondary;
+        var accent = palette.accent;
 
         var primaryOffsetX = (0.05 * xRatio).toFixed(3);
         var secondaryOffsetX = (-0.025 - 0.05 * yRatio).toFixed(3);
@@ -36,6 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var x = event.clientX / window.innerWidth;
         var y = event.clientY / window.innerHeight;
         updateTextShadow(x, y);
+        lastRatios = { x: x, y: y, active: true };
 
         if (Math.random() > 0.95) {
             var translateX = (Math.random() - 0.5) * 4;
@@ -50,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     container.addEventListener('mouseleave', function() {
         text.style.transform = 'translate(0, 0)';
         text.style.textShadow = '';
+        lastRatios.active = false;
     });
 
     var flickerTimer = setInterval(function() {
@@ -86,6 +97,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 text.style.whiteSpace = 'nowrap';
                 text.style.opacity = '1';
                 text.style.transform = 'translate(0, 0)';
+                if (lastRatios.active) {
+                    updateTextShadow(lastRatios.x, lastRatios.y);
+                }
                 setTimeout(function() {
                     text.classList.remove('intense-glitch');
                 }, 800);
@@ -94,6 +108,20 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     text.addEventListener('click', shuffleCharacters);
+
+    var observer = new MutationObserver(function(mutations) {
+        for (var i = 0; i < mutations.length; i++) {
+            if (mutations[i].type === 'attributes' && mutations[i].attributeName === 'class') {
+                palette = readPalette();
+                if (lastRatios.active) {
+                    updateTextShadow(lastRatios.x, lastRatios.y);
+                }
+                break;
+            }
+        }
+    });
+
+    observer.observe(root, { attributes: true, attributeFilter: ['class'] });
 
     document.addEventListener('visibilitychange', function() {
         if (!document.hidden) {
@@ -105,5 +133,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('beforeunload', function() {
         clearInterval(flickerTimer);
+        observer.disconnect();
     });
 });
