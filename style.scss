@@ -285,6 +285,29 @@
   height: 100%;
 }
 
+.hero-banner .glitch-text.intense-glitch {
+  animation-duration: 1.2s;
+}
+
+.hero-banner .corrupt-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: 'Cascadia Code', 'Source Code Pro', monospace;
+  font-size: clamp(0.55rem, 1.2vw, 0.85rem);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  pointer-events: none;
+  mix-blend-mode: screen;
+}
+
+.light-theme .hero-banner .corrupt-text {
+  color: rgba(30, 30, 40, 0.35);
+  mix-blend-mode: multiply;
+}
+
 .hero-banner .glitch-text::before {
   left: 2px;
   text-shadow: -2px 0 var(--firstBlue-color);
