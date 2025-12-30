@@ -43,6 +43,7 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};  
+  --page-gradient-layer-zero: rgba(255, 0, 153, 0.12);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.18);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.16);
   --page-gradient-base-start: rgba(255, 255, 255, 0.94);
@@ -68,6 +69,7 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
+  --page-gradient-layer-zero: rgba(255, 0, 153, 0.16);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.22);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.2);
   --page-gradient-base-start: rgba(20, 25, 40, 0.94);
@@ -546,6 +548,7 @@ body::before {
   position: fixed;
   inset: 0;
   background:
+    radial-gradient(circle at 20% 30%, var(--page-gradient-layer-zero), transparent 55%),
     radial-gradient(circle at 40% 60%, var(--page-gradient-layer-one), transparent 60%),
     radial-gradient(circle at 80% 30%, var(--page-gradient-layer-two), transparent 55%),
     linear-gradient(160deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
