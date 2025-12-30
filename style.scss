@@ -48,6 +48,7 @@
   --page-gradient-layer-two: rgba(30, 105, 145, 0.16);
   --page-gradient-base-start: rgba(255, 255, 255, 0.94);
   --page-gradient-base-end: rgba(227, 227, 234, 0.96);
+  --footer-border-color: rgba(30, 105, 145, 0.28);
 
   // Logo visibility
   .logo-light {
@@ -74,6 +75,7 @@
   --page-gradient-layer-two: rgba(30, 105, 145, 0.2);
   --page-gradient-base-start: rgba(20, 25, 40, 0.94);
   --page-gradient-base-end: rgba(10, 12, 25, 0.92);
+  --footer-border-color: rgba(227, 227, 234, 0.22);
 
   // Logo visibility
   .logo-light {
@@ -833,9 +835,9 @@ blockquote {
 
 .wrapper-footer {
   margin-top: 0px;
-  border-top: 1px solid var(--firstBlue-color);
-  border-bottom: 1px solid var(--firstBlue-color);
-  background-color: var(--forthGray-color);
+  border-top: 1px solid var(--footer-border-color);
+  border-bottom: none;
+  background-color: transparent;
 }
 
 footer {
