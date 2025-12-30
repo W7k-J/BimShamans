@@ -15,6 +15,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
 @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma:wght@400;700;900&display=swap');
 
 // IMPORTS - Syntax highlighting
 @import "highlights";
@@ -213,6 +214,76 @@
   }
 }
 
+.hero-section {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+.hero-banner {
+  position: relative;
+  width: 100%;
+  min-height: clamp(320px, 60vh, 560px);
+  border-radius: 24px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 40% 60%, rgba(0, 255, 255, 0.2), transparent 60%),
+    radial-gradient(circle at 80% 30%, rgba(255, 0, 255, 0.15), transparent 55%),
+    rgba(0, 0, 0, 0.85);
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+}
+
+.hero-banner::after {
+  content: "BIM Shamans";
+  position: absolute;
+  bottom: 12%;
+  left: 10%;
+  font-family: 'Michroma', 'Cascadia Code', monospace;
+  font-weight: 900;
+  font-size: clamp(2.4rem, 8vw, 6rem);
+  color: #ffffff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+  animation: glitchText 12s infinite;
+}
+
+@media screen and (max-width: 640px) {
+  .hero-banner {
+    min-height: 320px;
+    border-radius: 18px;
+  }
+
+  .hero-banner::after {
+    left: 8%;
+    bottom: 18%;
+    font-size: clamp(2rem, 12vw, 3.6rem);
+    letter-spacing: 0.08em;
+  }
+}
+
+@keyframes glitchText {
+  0%, 100% {
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    transform: translate(0);
+  }
+  20% {
+    text-shadow: 2px 0 0 #ff00ff, -2px 0 0 #00ffff;
+    transform: translate(-2px, 0);
+  }
+  40% {
+    text-shadow: -2px 0 0 #ff00ff, 2px 0 0 #00ffff;
+    transform: translate(2px, 0);
+  }
+  60% {
+    text-shadow: 1px 0 0 #ff00ff, -1px 0 0 #00ffff;
+    transform: translate(-1px, 0);
+  }
+  80% {
+    text-shadow: -1px 0 0 #ff00ff, 1px 0 0 #00ffff;
+    transform: translate(1px, 0);
+  }
+}
+
 .feature-sections {
   display: flex;
   flex-direction: column;
@@ -359,6 +430,18 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   width: 100%;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
 }
 
 .video {
