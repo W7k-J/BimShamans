@@ -267,7 +267,10 @@
 }
 
 .light-theme .hero-banner .glitch-text {
-  color: var(--firstBlue-color);
+  color: #1e1e28;
+  text-shadow: 0.05em 0 0 #0f2740,
+               -0.025em -0.05em 0 var(--secondBlue-color),
+               0.025em 0.05em 0 #4183C4;
 }
 
 .hero-banner .glitch-text::before,
