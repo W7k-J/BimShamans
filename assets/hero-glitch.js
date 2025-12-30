@@ -92,48 +92,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     text.addEventListener('click', shuffleCharacters);
 
-    function createGlitchElement() {
-        var fragment = document.createElement('div');
-        fragment.className = 'corrupt-text';
-
-        var xPos = Math.random() * 100 - 50;
-        var yPos = Math.random() * 100 - 50;
-        fragment.style.transform = 'translate(' + xPos + 'px, ' + yPos + 'px)';
-
-        var type = Math.floor(Math.random() * 3);
-        var content = '';
-        if (type === 0) {
-            for (var i = 0; i < 8; i++) {
-                content += Math.random() > 0.5 ? '1' : '0';
-            }
-        } else if (type === 1) {
-            var hex = '0123456789ABCDEF';
-            for (var h = 0; h < 4; h++) {
-                content += hex[Math.floor(Math.random() * hex.length)];
-            }
-        } else {
-            for (var j = 0; j < 4; j++) {
-                content += String.fromCharCode(65 + Math.floor(Math.random() * 26));
-            }
-        }
-
-        fragment.textContent = content;
-        container.appendChild(fragment);
-
-        setTimeout(function() {
-            fragment.remove();
-        }, Math.random() * 800 + 200);
-    }
-
-    var artifactTimer = setInterval(function() {
-        if (document.hidden) {
-            return;
-        }
-        if (Math.random() > 0.7) {
-            createGlitchElement();
-        }
-    }, 500);
-
     document.addEventListener('visibilitychange', function() {
         if (!document.hidden) {
             return;
@@ -144,6 +102,5 @@ document.addEventListener('DOMContentLoaded', function() {
 
     window.addEventListener('beforeunload', function() {
         clearInterval(flickerTimer);
-        clearInterval(artifactTimer);
     });
 });
