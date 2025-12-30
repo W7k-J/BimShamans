@@ -22,7 +22,11 @@ const themeColors = {
 
 // Get current theme
 function getCurrentTheme() {
-    return document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    const root = document.documentElement || document.body;
+    if (!root) {
+        return 'light';
+    }
+    return root.classList.contains('dark-theme') ? 'dark' : 'light';
 }
 
 // Resize canvas
