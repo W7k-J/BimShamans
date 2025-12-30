@@ -61,9 +61,6 @@ permalink: /en/home/
     >
   </div>
   
-  <div class="plexus-container">
-    <canvas id="plexusCanvas"></canvas>
-  </div>
 </div>
 
   # Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
@@ -163,4 +160,3 @@ permalink: /en/home/
   {% endfor %}
 </div>
 
-<script src="{{ site.baseurl }}/assets/background-plexus.js" defer></script>
