@@ -221,8 +221,12 @@
 
 .hero-banner {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   min-height: clamp(320px, 60vh, 560px);
+  padding: clamp(3rem, 8vw, 6rem);
   border-radius: 24px;
   overflow: hidden;
   background:
@@ -232,55 +236,110 @@
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
 }
 
-.hero-banner::after {
-  content: "BIM Shamans";
-  position: absolute;
-  bottom: 12%;
-  left: 10%;
+.hero-banner__text {
+  position: relative;
   font-family: 'Michroma', 'Cascadia Code', monospace;
   font-weight: 900;
-  font-size: clamp(2.4rem, 8vw, 6rem);
-  color: #ffffff;
-  letter-spacing: 0.12em;
+  font-size: clamp(2.8rem, 8vw, 6.2rem);
+  letter-spacing: 0.14em;
   text-transform: uppercase;
+  color: #ffffff;
   text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-  animation: glitchText 12s infinite;
+  animation: heroGlitch 4s infinite;
+}
+
+.hero-banner__text::before,
+.hero-banner__text::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  color: #ffffff;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.hero-banner__text::before {
+  transform: translate(-2px, 0);
+  text-shadow: -2px 0 #ff00c1;
+  clip-path: inset(0 0 65% 0);
+  animation: heroGlitchBefore 3s linear infinite alternate-reverse;
+}
+
+.hero-banner__text::after {
+  transform: translate(2px, 0);
+  text-shadow: 2px 2px #00fff9;
+  clip-path: inset(35% 0 0 0);
+  animation: heroGlitchAfter 2.4s linear infinite alternate-reverse;
+}
+
+.hero-banner__scanlines {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.08) 0%,
+    rgba(255, 255, 255, 0.08) 0.8%,
+    transparent 0.8%,
+    transparent 1.6%
+  );
+  opacity: 0.25;
+  animation: heroScanlines 1.2s ease-in-out infinite alternate;
+  pointer-events: none;
 }
 
 @media screen and (max-width: 640px) {
   .hero-banner {
     min-height: 320px;
     border-radius: 18px;
+    padding: clamp(2.5rem, 10vw, 4rem);
   }
 
-  .hero-banner::after {
-    left: 8%;
-    bottom: 18%;
-    font-size: clamp(2rem, 12vw, 3.6rem);
-    letter-spacing: 0.08em;
+  .hero-banner__text {
+    font-size: clamp(2.2rem, 12vw, 3.6rem);
+    letter-spacing: 0.1em;
   }
 }
 
-@keyframes glitchText {
-  0%, 100% {
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
-    transform: translate(0);
+@keyframes heroGlitch {
+  0%, 14%, 100% {
+    transform: translate3d(0, 0, 0);
   }
-  20% {
-    text-shadow: 2px 0 0 #ff00ff, -2px 0 0 #00ffff;
-    transform: translate(-2px, 0);
+  15%, 49% {
+    transform: translate3d(-2px, 1px, 0);
   }
-  40% {
-    text-shadow: -2px 0 0 #ff00ff, 2px 0 0 #00ffff;
-    transform: translate(2px, 0);
+  50%, 99% {
+    transform: translate3d(3px, -1px, 0);
   }
-  60% {
-    text-shadow: 1px 0 0 #ff00ff, -1px 0 0 #00ffff;
-    transform: translate(-1px, 0);
-  }
-  80% {
-    text-shadow: -1px 0 0 #ff00ff, 1px 0 0 #00ffff;
-    transform: translate(1px, 0);
+}
+
+@keyframes heroGlitchBefore {
+  0% { clip-path: inset(5% 0 55% 0); }
+  25% { clip-path: inset(15% 0 40% 0); }
+  50% { clip-path: inset(45% 0 5% 0); }
+  75% { clip-path: inset(10% 0 60% 0); }
+  100% { clip-path: inset(20% 0 35% 0); }
+}
+
+@keyframes heroGlitchAfter {
+  0% { clip-path: inset(40% 0 10% 0); }
+  20% { clip-path: inset(25% 0 30% 0); }
+  40% { clip-path: inset(60% 0 5% 0); }
+  60% { clip-path: inset(30% 0 45% 0); }
+  80% { clip-path: inset(70% 0 2% 0); }
+  100% { clip-path: inset(35% 0 25% 0); }
+}
+
+@keyframes heroScanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(2px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-banner__text,
+  .hero-banner__text::before,
+  .hero-banner__text::after,
+  .hero-banner__scanlines {
+    animation: none;
   }
 }
 

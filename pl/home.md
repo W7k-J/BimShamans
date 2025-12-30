@@ -11,6 +11,8 @@ permalink: /pl/home/
 <div class="hero-section hero-section--banner">
   <div class="hero-banner" role="img" aria-label="BIM Shamans">
     <span class="visually-hidden">BIM Shamans</span>
+    <span class="hero-banner__text" data-text="BIM SHAMANS" aria-hidden="true">BIM SHAMANS</span>
+    <span class="hero-banner__scanlines" aria-hidden="true"></span>
   </div>
 </div>
 
