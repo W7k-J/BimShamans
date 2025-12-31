@@ -168,7 +168,6 @@
         color: var(--firstBlue-color);
         background-color: var(--forthGray-color);
         padding: 24px 15px;
-        font-weight: 600;
       }
 
       &.active {
@@ -196,7 +195,6 @@
           color: var(--firstBlue-color);
           background-color: var(--forthGray-color);
           padding: 24px 15px;
-          font-weight: 600;
         }
 
         &.active {
@@ -233,7 +231,6 @@
           &:hover {
             background-color: var(--firstBlue-color);
             color: var(--ghostWhite);
-            font-weight: 600;
             padding: 12px 20px;
           }
 
@@ -299,7 +296,6 @@
         &:hover {
           color: var(--firstBlue-color);
           background-color: var(--forthGray-color);
-          font-weight: 600;
         }
 
         &:focus-visible {
@@ -324,17 +320,24 @@
   color: var(--firstBlue-color);
 }
 
+// Light theme - dropdown menu hover (text color)
+.light-theme .nav-container nav.site-nav .dropdown-menu {
+  a {
+    &:hover {
+      color: #{$ghostWhite};
+    }
+  }
+}
+
 // Dark theme override for dropdown menu
 .dark-theme .nav-container nav.site-nav .dropdown-menu {
   background-color: var(--forthGray-color);
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 
   a {
-    color: var(--firstGray-color);
-
     &:hover {
       background-color: var(--firstBlue-color);
-      color: var(--ghostWhite);
+      color: #{$raisinBlack};
     }
   }
 }
