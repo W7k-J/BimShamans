@@ -31,16 +31,23 @@
   </div>
 
   <div class="hero-inner hero-content">
-    <div class="logo-placeholder" role="img" aria-label="{{ site.name }} logo placeholder">
-      <!-- Placeholder centered logo -->
-      <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" alt="{{ site.name }}">
+    <div class="hero-banner" role="group" aria-label="{{ site.name }} hero">
+      <div class="hero-banner__circuit" aria-hidden="true">
+        <div class="hero-banner__circuit-glow"></div>
+        <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
+      </div>
+
+      <div class="logo-placeholder" role="img" aria-label="{{ site.name }} logo placeholder">
+        <!-- Placeholder centered logo -->
+        <img src="{{ site.baseurl }}/images/logos/Logo_BIMShamans_Baner_AlphaDarkLetters_1024x222.png" alt="{{ site.name }}">
+      </div>
+
+      <h1 class="hero-title">{{ page.title | default: site.name }}</h1>
+
+      <p class="hero-kicker">{% if page.lang == 'pl' %}Krotkie wprowadzenie — placeholder dla misji i pozycji eksperckiej.{% else %}Short introductory placeholder — mission and expert positioning.{% endif %}</p>
+
+      <p class="hero-cta"><a class="button" href="#main">{% if page.lang == 'pl' %}Przejdź dalej{% else %}Explore{% endif %}</a></p>
     </div>
-
-    <h1 class="hero-title">{{ page.title | default: site.name }}</h1>
-
-    <p class="hero-kicker">{% if page.lang == 'pl' %}Krotkie wprowadzenie — placeholder dla misji i pozycji eksperckiej.{% else %}Short introductory placeholder — mission and expert positioning.{% endif %}</p>
-
-    <p class="hero-cta"><a class="button" href="#main">{% if page.lang == 'pl' %}Przejdź dalej{% else %}Explore{% endif %}</a></p>
   </div>
 
   <script>
