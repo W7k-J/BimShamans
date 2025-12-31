@@ -143,7 +143,7 @@
       text-align: center; // upewnienie się, że tekst jest wyśrodkowany
       font-weight: 300;
       letter-spacing: 1px;
-      transition: color 0.3s ease, background-color 0.3s ease;
+      transition: all 0.4s ease;
       height: 100%;
       display: flex;
       align-items: center;
@@ -154,6 +154,8 @@
 
       &:hover {
         color: var(--firstBlue-color);
+        background-color: var(--forthGray-color);
+        padding: 24px 15px;
       }
 
       &:focus-visible {
@@ -225,6 +227,12 @@
       }
     }
   }
+}
+
+// Dark theme override for nav menu hover effect
+.dark-theme .nav-container nav.site-nav a:hover {
+  background-color: var(--secondBlue-color);
+  color: var(--raisinBlack);
 }
 
 .hero-section {
