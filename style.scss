@@ -156,12 +156,88 @@
         color: var(--firstBlue-color);
         background-color: var(--forthGray-color);
         padding: 24px 15px;
+        font-weight: 600;
+      }
+
+      &.active {
+        color: var(--firstBlue-color);
+        background-color: var(--forthGray-color);
+        padding: 24px 15px;
+        font-weight: 600;
       }
 
       &:focus-visible {
         outline: 2px solid var(--firstBlue-color);
         outline-offset: 3px;
         background-color: var(--forthGray-color);
+      }
+    }
+
+    // Dropdown wrapper - kontener dla menu z submenu
+    .dropdown-wrapper {
+      position: relative;
+      display: inline-block;
+
+      > a {
+        &.active,
+        &:hover {
+          color: var(--firstBlue-color);
+          background-color: var(--forthGray-color);
+          padding: 24px 15px;
+          font-weight: 600;
+        }
+
+        &.active {
+          color: var(--firstBlue-color);
+          background-color: var(--forthGray-color);
+          padding: 24px 15px;
+          font-weight: 600;
+        }
+      }
+
+      // Dropdown menu - submenu items
+      .dropdown-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--forthGray-color);
+        display: none;
+        min-width: 180px;
+        border-radius: 6px;
+        margin-top: 0;
+        animation: fadeIn 0.4s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        z-index: 999;
+
+        a {
+          display: block;
+          padding: 12px 20px;
+          color: var(--firstGray-color);
+          transition: all 0.4s ease;
+          border-radius: 0;
+          height: auto;
+          font-weight: 300;
+
+          &:hover {
+            background-color: var(--firstBlue-color);
+            color: var(--ghostWhite);
+            font-weight: 600;
+            padding: 12px 20px;
+          }
+
+          &:first-child {
+            border-radius: 6px 6px 0 0;
+          }
+
+          &:last-child {
+            border-radius: 0 0 6px 6px;
+          }
+        }
+      }
+
+      // Pokazuj menu na hover
+      &:hover .dropdown-menu {
+        display: block;
       }
     }
   }
@@ -211,6 +287,7 @@
         &:hover {
           color: var(--firstBlue-color);
           background-color: var(--forthGray-color);
+          font-weight: 600;
         }
 
         &:focus-visible {
@@ -231,8 +308,23 @@
 
 // Dark theme override for nav menu hover effect
 .dark-theme .nav-container nav.site-nav a:hover {
-  background-color: var(--secondBlue-color);
-  color: var(--raisinBlack);
+  background-color: var(--forthGray-color);
+  color: var(--firstBlue-color);
+}
+
+// Dark theme override for dropdown menu
+.dark-theme .nav-container nav.site-nav .dropdown-menu {
+  background-color: var(--forthGray-color);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+
+  a {
+    color: var(--firstGray-color);
+
+    &:hover {
+      background-color: var(--firstBlue-color);
+      color: var(--ghostWhite);
+    }
+  }
 }
 
 .hero-section {

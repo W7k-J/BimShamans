@@ -60,7 +60,21 @@
                 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
                 <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="{% if page.url contains '/home' %}active{% endif %}">{{ t.home }}</a>
                 <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
-                <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
+                
+                <!-- About with dropdown menu -->
+                <div class="dropdown-wrapper">
+                    <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' %}active{% endif %}">{{ t.about }}</a>
+                    <div class="dropdown-menu">
+                        {% if page.lang == 'pl' %}
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/projects/">Projekty</a>
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/authors/">Autorzy</a>
+                        {% else %}
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/projects/">Projects</a>
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/authors/">Authors</a>
+                        {% endif %}
+                    </div>
+                </div>
+                
                 <a href="{{ site.baseurl }}/{{ page.lang }}/contact/" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
             </nav>
 
