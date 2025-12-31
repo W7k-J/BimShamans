@@ -11,6 +11,10 @@ permalink: /pl/home/
 <div class="hero-section hero-section--banner">
   <div class="hero-banner" role="img" aria-label="BIM Shamans">
     <span class="visually-hidden">BIM Shamans</span>
+    <div class="hero-banner__circuit" aria-hidden="true">
+      <div class="hero-banner__circuit-glow"></div>
+        <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
+    </div>
     <div class="glitch-container">
       <h1 class="glitch-text" data-text="BIM Shamans">BIM Shamans</h1>
     </div>

@@ -49,6 +49,12 @@
   --page-gradient-base-start: rgba(255, 255, 255, 0.94);
   --page-gradient-base-end: rgba(227, 227, 234, 0.96);
   --footer-border-color: rgba(30, 105, 145, 0.28);
+  --circuit-glow-strong: rgba(50, 215, 230, 0.55);
+  --circuit-glow-soft: rgba(30, 105, 145, 0.18);
+  --circuit-glow-base: rgba(30, 105, 145, 0.4);
+  --circuit-line-strong: rgba(19, 74, 115, 0.92);
+  --circuit-line-soft: rgba(19, 74, 115, 0.55);
+  --circuit-node-fill: rgba(97, 229, 255, 0.18);
 
   // Logo visibility
   .logo-light {
@@ -76,6 +82,12 @@
   --page-gradient-base-start: rgba(20, 25, 40, 0.94);
   --page-gradient-base-end: rgba(10, 12, 25, 0.92);
   --footer-border-color: rgba(227, 227, 234, 0.22);
+  --circuit-glow-strong: rgba(109, 245, 255, 0.75);
+  --circuit-glow-soft: rgba(26, 199, 216, 0.18);
+  --circuit-glow-base: rgba(26, 199, 216, 0.38);
+  --circuit-line-strong: rgba(109, 245, 255, 0.95);
+  --circuit-line-soft: rgba(26, 199, 216, 0.55);
+  --circuit-node-fill: rgba(97, 229, 255, 0.22);
 
   // Logo visibility
   .logo-light {
@@ -250,6 +262,8 @@
   padding: clamp(3rem, 8vw, 6rem);
   border-radius: 0;
   overflow: hidden;
+  --glow-x: 50%;
+  --glow-y: 50%;
 }
 
 .hero-banner .glitch-container {
@@ -260,6 +274,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  z-index: 2;
 }
 
 .hero-banner .glitch-text {
@@ -293,6 +308,66 @@
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.hero-banner__circuit {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-banner__circuit-glow {
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at var(--glow-x) var(--glow-y), var(--circuit-glow-strong) 0%, var(--circuit-glow-base) 18%, var(--circuit-glow-soft) 32%, transparent 46%);
+  opacity: 0.7;
+  transition: background 160ms ease, opacity 160ms ease;
+  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.24));
+  -webkit-mask-image: url('{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg');
+  mask-image: url('{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg');
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  -webkit-mask-size: cover;
+  mask-size: cover;
+  mix-blend-mode: screen;
+}
+
+.light-theme {
+  --circuit-glow-strong: rgba(97, 229, 255, 0.68);
+  --circuit-glow-base: rgba(97, 229, 255, 0.32);
+  --circuit-glow-soft: rgba(30, 105, 145, 0.18);
+}
+
+.light-theme .hero-banner__circuit-glow {
+  mix-blend-mode: screen;
+  filter: drop-shadow(0 12px 24px rgba(16, 58, 84, 0.2));
+}
+
+.hero-banner__circuit-art {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.light-theme .hero-banner__circuit-art {
+  mix-blend-mode: screen;
+  opacity: 0.6;
+}
+
+.hero-banner:focus-within .hero-banner__circuit-glow,
+.hero-banner:hover .hero-banner__circuit-glow {
+  opacity: 0.85;
 }
 
 .hero-banner .glitch-text.intense-glitch {
