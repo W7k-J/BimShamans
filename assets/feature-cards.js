@@ -13,8 +13,5 @@ document.addEventListener('DOMContentLoaded', function() {
       this.classList.add('active');
     });
   });
-  
-  // Debug log
-  console.log('Feature cards initialized. Found ' + featureCards.length + ' cards.');
 });
 
