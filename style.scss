@@ -57,6 +57,8 @@
   --circuit-line-strong: rgba(19, 74, 115, 0.92);
   --circuit-line-soft: rgba(19, 74, 115, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.18);
+  --icon-color: #{$raisinBlack};
+  --icon-background: var(--firstBlue-color);
 
   // Logo visibility
   .logo-light {
@@ -91,6 +93,8 @@
   --circuit-line-strong: rgba(109, 245, 255, 0.95);
   --circuit-line-soft: rgba(26, 199, 216, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.22);
+  --icon-color: #{$ghostWhite};
+  --icon-background: var(--firstBlue-color);
 
   // Logo visibility
   .logo-light {
