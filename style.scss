@@ -110,12 +110,12 @@
 
 // Navigation container
 .nav-container {
-  width: 100%; // Zmiana z 100vw na 100%
-  height: 60px; // Jawna wysokość menu bar
-  --nav-bar-height: 60px; // CSS variable dla elastyczności
+  width: 100%;
+  height: $nav-height;
+  --nav-bar-height: #{$nav-height};
   position: fixed;
   top: 0;
-  left: 0; // Usunięcie transform i left: 50%
+  left: 0;
   z-index: 1000;
   background-color: var(--background-color);
   border-top: 1px solid var(--firstBlue-color);
@@ -125,17 +125,17 @@
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between; // zmiana z flex-end na space-between
+    justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 $nav-padding-x;
   }
 
   // Logo section - using existing .site-avatar class
   .site-avatar {
-    height: 60px;
+    height: $nav-height;
     padding: 5px 20px;
-    margin-right: auto; // pushes logo to the left
+    margin-right: auto;
     
     img.logo-light, img.logo-dark {
       height: 100%;
@@ -148,35 +148,33 @@
   nav.site-nav {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: $nav-gap;
     height: 100%;
-    flex: 1; // dodane: zajmuje dostępną przestrzeń
-    justify-content: center; // dodane: wyśrodkowanie elementów menu
+    flex: 1;
+    justify-content: center;
 
     a {
       color: var(--firstGray-color);
-      text-align: center; // upewnienie się, że tekst jest wyśrodkowany
+      text-align: center;
       font-weight: 300;
       letter-spacing: 1px;
-      transition: color 0.4s ease, background-color 0.4s ease, font-weight 0.4s ease;
+      transition: color $transition-base ease, background-color $transition-base ease, font-weight $transition-base ease;
       height: 100%;
       display: flex;
       align-items: center;
-      justify-content: center; // wyśrodkowanie tekstu w pionie
-      width: auto; // dodane: szerokość dopasowana do zawartości
-      padding: 0 15px; // tylko poziomy padding
-      border-radius: 6px;
+      justify-content: center;
+      width: auto;
+      padding: 0 $nav-padding-x;
+      border-radius: $radius-small;
 
       &:hover {
         color: var(--firstBlue-color);
         background-color: var(--forthGray-color);
-        padding: 0 15px; // bez paddingu pionowego
       }
 
       &.active {
         color: var(--firstBlue-color);
         background-color: var(--forthGray-color);
-        padding: 0 15px; // bez paddingu pionowego
         font-weight: 600;
       }
 
@@ -187,7 +185,7 @@
       }
     }
 
-    // Dropdown wrapper - kontener dla menu z submenu
+    // Dropdown wrapper
     .dropdown-wrapper {
       position: relative;
       display: flex;
@@ -199,36 +197,32 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 0 15px;
-        border-radius: 6px;
-        transition: color 0.4s ease, background-color 0.4s ease;
+        padding: 0 $nav-padding-x;
+        border-radius: $radius-small;
+        transition: color $transition-base ease, background-color $transition-base ease;
 
         &.active,
         &:hover {
           color: var(--firstBlue-color);
           background-color: var(--forthGray-color);
-          padding: 0 15px; // bez paddingu pionowego
         }
 
         &.active {
-          color: var(--firstBlue-color);
-          background-color: var(--forthGray-color);
-          padding: 0 15px; // bez paddingu pionowego
           font-weight: 600;
         }
       }
 
-      // Dropdown menu - submenu items
+      // Dropdown menu
       .dropdown-menu {
         position: absolute;
-        top: calc(100% - (var(--nav-bar-height) * 0.2)); // Podniesienie o 20% wysokości menu bar
+        top: calc(100% - (var(--nav-bar-height) * 0.2));
         left: 0;
         background-color: var(--forthGray-color);
         display: none;
         min-width: 180px;
-        border-radius: 6px;
+        border-radius: $radius-small;
         margin-top: 0;
-        animation: fadeIn 0.4s ease;
+        animation: fadeIn $transition-base ease;
         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
         z-index: 999;
 
@@ -236,7 +230,7 @@
           display: block;
           padding: 12px 20px;
           color: var(--firstGray-color);
-          transition: color 0.4s ease, background-color 0.4s ease;
+          transition: color $transition-base ease, background-color $transition-base ease;
           border-radius: 0;
           height: auto;
           font-weight: 300;
@@ -244,15 +238,14 @@
           &:hover {
             background-color: var(--firstBlue-color);
             color: var(--ghostWhite);
-            padding: 12px 20px;
           }
 
           &:first-child {
-            border-radius: 6px 6px 0 0;
+            border-radius: $radius-small $radius-small 0 0;
           }
 
           &:last-child {
-            border-radius: 0 0 6px 6px;
+            border-radius: 0 0 $radius-small $radius-small;
           }
         }
       }
@@ -632,14 +625,22 @@
   .hero-banner .glitch-text::before,
   .hero-banner .glitch-text::after {
     animation: none;
+    text-shadow: 0.05em 0 0 var(--firstBlue-color),
+                 -0.025em -0.05em 0 var(--secondBlue-color),
+                 0.025em 0.05em 0 #4183C4;
+  }
+  
+  .hero-banner__circuit-glow,
+  .hero-banner__circuit-art {
+    transition: none;
   }
 }
 
 .feature-sections {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-  margin: 4rem 0;
+  gap: $section-gap;
+  margin: $section-gap 0;
 }
 
 .feature-section {
@@ -673,7 +674,7 @@
 .feature-section__media img {
   width: 100%;
   max-width: 480px;
-  border-radius: 18px;
+  border-radius: $radius-large;
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
 }
 
@@ -716,12 +717,12 @@
 
   .feature-section__media img {
     max-width: 100%;
-    border-radius: 14px;
+    border-radius: $radius-medium;
   }
 }
 
 #main.container {
-  margin-top: 80px; // Dostosuj do wysokości nawigacji
+  margin-top: calc(#{$nav-height} + 20px);
   margin-bottom: 0;
 }
 

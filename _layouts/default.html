@@ -16,10 +16,11 @@
     <script>
         (function() {
             try {
+                var root = document.documentElement;
                 var storedTheme = localStorage.getItem('theme');
                 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 var theme = storedTheme || (prefersDark ? 'dark' : 'light');
-                document.documentElement.classList.add(theme + '-theme');
+                root.classList.add(theme + '-theme');
             } catch (e) {
                 document.documentElement.classList.add('light-theme');
             }
@@ -109,12 +110,15 @@
                 </label>
                 <script>
                     (function() {
-                        var toggle = document.getElementById('theme-switcher');
-                        if (!toggle) {
-                            return;
+                        try {
+                            var toggle = document.getElementById('theme-switcher');
+                            if (!toggle) {
+                                return;
+                            }
+                            toggle.checked = document.documentElement.classList.contains('dark-theme');
+                        } catch (e) {
+                            // Toggle initialization fails gracefully
                         }
-                        var isDark = document.documentElement.classList.contains('dark-theme');
-                        toggle.checked = isDark;
                     })();
                 </script>
             </div>

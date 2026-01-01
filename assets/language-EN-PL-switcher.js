@@ -3,7 +3,8 @@ function hasLanguageSegment(pathname) {
 }
 
 function handleLanguage() {
-    const currentLang = document.documentElement.lang || 'en';
+    try {
+        const currentLang = document.documentElement.lang || 'en';
     let storedLang = currentLang;
 
     try {
@@ -21,6 +22,9 @@ function handleLanguage() {
 
     if (storedLang !== currentLang && hasLanguageSegment(currentPath)) {
         window.location.href = currentPath.replace(`/${currentLang}/`, `/${storedLang}/`);
+    }
+    } catch (e) {
+        // Language handling fails gracefully - page loads with current language
     }
 }
 
