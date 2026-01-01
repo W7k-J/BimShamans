@@ -24,3 +24,7 @@ Static Jekyll site for BIM Shamans with English and Polish content.
 - Styles are composed in `style.scss` and `_sass/*` partials.
 - Scripts sit in `assets/`, e.g. language/theme switchers.
 
+## Content Structure
+- Regular pages: `en/` and `pl/` directories
+- Blog posts: `_posts/en/` and `_posts/pl/` subdirectories
+- All content files need matching `ref` value for language switching
