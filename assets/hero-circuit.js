@@ -39,7 +39,16 @@
       return;
     }
 
+    var lastUpdate = 0;
+
     function handleEvent(event) {
+      // Throttle to 30fps for better performance (33ms = ~30 updates/sec)
+      var now = Date.now();
+      if (now - lastUpdate < 33) {
+        return;
+      }
+      lastUpdate = now;
+
       var clientX = event.clientX;
       var clientY = event.clientY;
 

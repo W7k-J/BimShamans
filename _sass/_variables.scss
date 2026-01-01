@@ -20,6 +20,22 @@ $helvetica: 'Montserrat', Helvetica, Arial, sans-serif;
 $helveticaNeue: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
 
+// Timing variables
+$transition-base: 0.4s;
+$transition-fast: 0.2s;
+$animation-slow: 4s;
+
+// Spacing variables
+$nav-height: 60px;
+$nav-padding-x: 15px;
+$nav-gap: 2rem;
+$section-gap: 4rem;
+
+// Border radius
+$radius-small: 6px;
+$radius-medium: 14px;
+$radius-large: 18px;
+
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {

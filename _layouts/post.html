@@ -2,6 +2,15 @@
 layout: default
 ---
 
+{% if page.ref %}
+  {% assign page_translations = site.pages | where: "ref", page.ref %}
+  {% assign post_translations = site.posts | where: "ref", page.ref %}
+  {% assign translations = page_translations | concat: post_translations %}
+  {% for translation in translations %}
+    <link rel="alternate" hreflang="{{ translation.lang | default: site.default_lang }}" href="{{ translation.url | absolute_url }}">
+  {% endfor %}
+{% endif %}
+
 <article class="post">
   <h2>{{ page.title }}</h2>
 

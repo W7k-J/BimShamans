@@ -10,16 +10,17 @@
     {% include meta.html %}
 
     <!--[if lt IE 9]>
-        <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
 
     <script>
         (function() {
             try {
+                var root = document.documentElement;
                 var storedTheme = localStorage.getItem('theme');
                 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 var theme = storedTheme || (prefersDark ? 'dark' : 'light');
-                document.documentElement.classList.add(theme + '-theme');
+                root.classList.add(theme + '-theme');
             } catch (e) {
                 document.documentElement.classList.add('light-theme');
             }
@@ -40,11 +41,12 @@
     
     <!-- JavaScript -->
     <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
-    <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js"></script>
-    <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js"></script>
-    <script src="{{ site.baseurl }}/assets/hero-glitch.js"></script>
-    <script src="{{ site.baseurl }}/assets/hero-circuit.js"></script>
-    <script src="{{ site.baseurl }}/assets/feature-cards.js"></script>
+    <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/hero-glitch.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/hero-circuit.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/feature-cards.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/will-change-optimizer.js" defer></script>
 </head>
 
 <body>
@@ -108,12 +110,15 @@
                 </label>
                 <script>
                     (function() {
-                        var toggle = document.getElementById('theme-switcher');
-                        if (!toggle) {
-                            return;
+                        try {
+                            var toggle = document.getElementById('theme-switcher');
+                            if (!toggle) {
+                                return;
+                            }
+                            toggle.checked = document.documentElement.classList.contains('dark-theme');
+                        } catch (e) {
+                            // Toggle initialization fails gracefully
                         }
-                        var isDark = document.documentElement.classList.contains('dark-theme');
-                        toggle.checked = isDark;
                     })();
                 </script>
             </div>
