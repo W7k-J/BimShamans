@@ -45,7 +45,8 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   
   cursor: pointer;
   transition: flex-grow $card-transition-duration $card-transition-timing,
-              flex-basis $card-transition-duration $card-transition-timing;
+              flex-basis $card-transition-duration $card-transition-timing,
+              background-color 0.4s ease;
   
   flex-grow: 1;
   flex-basis: $card-inactive-width;

@@ -1,9 +1,9 @@
 ---
 layout: page
-title: Projects
+title: Project
 lang: en
-ref: projects
-permalink: /en/projects/
+ref: project
+permalink: /en/project/
 cards_height: 400px
 feature_cards:
   - title: "Observation"
