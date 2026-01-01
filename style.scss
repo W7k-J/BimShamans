@@ -44,16 +44,16 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};  
-  --page-gradient-layer-zero: rgba(0, 51, 102, 0.35);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.22);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.20);
-  --page-gradient-base-start: rgba(255, 255, 255, 0.88);
-  --page-gradient-base-end: rgba(227, 227, 234, 0.92);
+  --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
+  --page-gradient-base-start: rgba(255, 255, 255, 0.98);
+  --page-gradient-base-end: rgba(247, 247, 252, 0.98);
   --footer-border-color: rgba(30, 105, 145, 0.28);
   --blockquote-background: rgba(227, 227, 234, 0.8);
-  --circuit-glow-strong: rgba(50, 215, 230, 0.55);
-  --circuit-glow-soft: rgba(30, 105, 145, 0.18);
-  --circuit-glow-base: rgba(30, 105, 145, 0.4);
+  --circuit-glow-strong: rgba(97, 229, 255, 0.68);
+  --circuit-glow-soft: rgba(159, 255, 255, 0.22);
+  --circuit-glow-base: rgba(50, 215, 230, 0.45);
   --circuit-line-strong: rgba(19, 74, 115, 0.92);
   --circuit-line-soft: rgba(19, 74, 115, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.18);
@@ -454,13 +454,13 @@
 
 .light-theme {
   --circuit-glow-strong: rgba(97, 229, 255, 0.68);
-  --circuit-glow-base: rgba(97, 229, 255, 0.32);
-  --circuit-glow-soft: rgba(30, 105, 145, 0.18);
+  --circuit-glow-base: rgba(50, 215, 230, 0.45);
+  --circuit-glow-soft: rgba(159, 255, 255, 0.22);
 }
 
 .light-theme .hero-banner__circuit-glow {
   mix-blend-mode: screen;
-  filter: drop-shadow(0 12px 24px rgba(16, 58, 84, 0.2));
+  filter: drop-shadow(0 8px 24px rgba(97, 229, 255, 0.3));
 }
 
 .hero-banner__circuit-art {
@@ -477,7 +477,8 @@
 
 .light-theme .hero-banner__circuit-art {
   mix-blend-mode: screen;
-  opacity: 0.6;
+  opacity: 0.45;
+  filter: grayscale(0%) brightness(1.1) saturate(0.8) drop-shadow(0 2px 8px rgba(97, 229, 255, 0.25));
 }
 
 .hero-banner:focus-within .hero-banner__circuit-glow,
