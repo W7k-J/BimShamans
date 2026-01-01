@@ -1,0 +1,85 @@
+//
+// Theme Variables and Logo Visibility
+// Defines CSS custom properties for light and dark themes
+//
+
+// Light theme setup
+.light-theme {
+  // Main Colors
+  --background-color: #{$ghostWhite};
+  --firstGray-color: #{$raisinBlack};
+  --secondGray-color: #{$darkGray};
+  --thirdGray-color: #{$gray};
+  --forthGray-color: #{$lightGray};
+  --link-color: #{$blue};
+  --firstBlue-color: #{$biceBlue};
+  --secondBlue-color: #{$ryanCyan};  
+  --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
+  --page-gradient-base-start: rgba(255, 255, 255, 0.98);
+  --page-gradient-base-end: rgba(247, 247, 252, 0.98);
+  --footer-border-color: rgba(30, 105, 145, 0.28);
+  --blockquote-background: rgba(227, 227, 234, 0.8);
+  --circuit-glow-strong: rgba(97, 229, 255, 0.68);
+  --circuit-glow-soft: rgba(159, 255, 255, 0.22);
+  --circuit-glow-base: rgba(50, 215, 230, 0.45);
+  --circuit-line-strong: rgba(19, 74, 115, 0.92);
+  --circuit-line-soft: rgba(19, 74, 115, 0.55);
+  --circuit-node-fill: rgba(97, 229, 255, 0.18);
+  --icon-color: #{$raisinBlack};
+  --icon-background: var(--firstBlue-color);
+
+  // Logo visibility
+  .logo-light {
+    display: block;
+  }
+  .logo-dark {
+    display: none;
+  }
+}
+
+// Dark theme setup
+.dark-theme {
+  // Colors
+  --background-color: #{$raisinBlack};
+  --firstGray-color: #{$ghostWhite};
+  --secondGray-color: #{$lightGray};
+  --thirdGray-color: #{$gray};
+  --forthGray-color: #{$darkGray};
+  --link-color: #{$blue};
+  --firstBlue-color: #{$ryanCyan};
+  --secondBlue-color: #{$biceBlue};
+  --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
+  --page-gradient-base-start: rgba(12, 15, 25, 0.95);
+  --page-gradient-base-end: rgba(6, 8, 15, 0.96);
+  --footer-border-color: rgba(227, 227, 234, 0.22);
+  --blockquote-background: rgba(64, 64, 80, 0.8);
+  --circuit-glow-strong: rgba(159, 255, 255, 0.98);
+  --circuit-glow-soft: rgba(30, 105, 145, 0.15);
+  --circuit-glow-base: rgba(50, 215, 230, 0.55);
+  --circuit-line-strong: rgba(109, 245, 255, 0.95);
+  --circuit-line-soft: rgba(26, 199, 216, 0.55);
+  --circuit-node-fill: rgba(97, 229, 255, 0.22);
+  --icon-color: #{$ghostWhite};
+  --icon-background: var(--firstBlue-color);
+
+  // Logo visibility
+  .logo-light {
+    display: none;
+  }
+  .logo-dark {
+    display: block;
+  }
+}
+
+// Base logo styles
+.site-avatar {
+  img.logo-light, img.logo-dark {
+    width: 100%;
+    height: auto;
+    transition: opacity $transition-base ease;
+  }
+}

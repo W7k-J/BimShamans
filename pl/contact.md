@@ -65,20 +65,3 @@ permalink: /pl/contact/
   </div>
 </form>
 
-<!-- Prosta obsługa komunikatu po wysłaniu (opcjonalne) -->
-<script>
-document.addEventListener('submit', async (e) => {
-  if(e.target.matches('.contact-form')) {
-    e.preventDefault();
-    const form = e.target;
-    const data = new FormData(form);
-    const res = await fetch(form.action, { method: 'POST', body: data, headers: { 'Accept': 'application/json' } });
-    if (res.ok) {
-      form.reset();
-      alert('Dziękujemy! Wiadomość wysłana.');
-    } else {
-      alert('Wystąpił błąd. Spróbuj ponownie.');
-    }
-  }
-});
-</script>

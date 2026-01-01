@@ -36,7 +36,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Only try to get from localStorage if it's available
         if (isLocalStorageAvailable()) {
-            currentTheme = localStorage.getItem('theme') || currentTheme;
+            if (window.SafeStorage) {
+                currentTheme = window.SafeStorage.getItem('theme') || currentTheme;
+            } else {
+                currentTheme = localStorage.getItem('theme') || currentTheme;
+            }
         }
 
         applyTheme(currentTheme);
@@ -51,12 +55,16 @@ document.addEventListener('DOMContentLoaded', function() {
         themeSwitcher.addEventListener('change', function() {
             if (themeSwitcher.checked) {
                 applyTheme('dark');
-                if (isLocalStorageAvailable()) {
+                if (isLocalStorageAvailable() && window.SafeStorage) {
+                    window.SafeStorage.setItem('theme', 'dark');
+                } else if (isLocalStorageAvailable()) {
                     localStorage.setItem('theme', 'dark');
                 }
             } else {
                 applyTheme('light');
-                if (isLocalStorageAvailable()) {
+                if (isLocalStorageAvailable() && window.SafeStorage) {
+                    window.SafeStorage.setItem('theme', 'light');
+                } else if (isLocalStorageAvailable()) {
                     localStorage.setItem('theme', 'light');
                 }
             }
@@ -67,7 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const nextTheme = event.matches ? 'dark' : 'light';
                 applyTheme(nextTheme);
                 themeSwitcher.checked = nextTheme === 'dark';
-                if (isLocalStorageAvailable()) {
+                if (isLocalStorageAvailable() && window.SafeStorage) {
+                    window.SafeStorage.setItem('theme', nextTheme);
+                } else if (isLocalStorageAvailable()) {
                     localStorage.setItem('theme', nextTheme);
                 }
             });

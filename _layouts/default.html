@@ -10,14 +10,28 @@
     {% include meta.html %}
 
     <!--[if lt IE 9]>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" 
+                integrity="sha256-3Jy/GbSLrg0o9y5Z5n1uw0qxZECH7C6OQpVBgNFYlE0=" 
+                crossorigin="anonymous"></script>
     <![endif]-->
 
     <script>
         (function() {
             try {
                 var root = document.documentElement;
-                var storedTheme = localStorage.getItem('theme');
+                var storedTheme = null;
+                
+                // Try SafeStorage first if available, fallback to direct localStorage
+                try {
+                    if (window.SafeStorage) {
+                        storedTheme = window.SafeStorage.getItem('theme');
+                    } else {
+                        storedTheme = localStorage.getItem('theme');
+                    }
+                } catch (e) {
+                    // localStorage unavailable
+                }
+                
                 var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
                 var theme = storedTheme || (prefersDark ? 'dark' : 'light');
                 root.classList.add(theme + '-theme');
@@ -40,6 +54,7 @@
     {% endif %}
     
     <!-- JavaScript -->
+    <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js"></script>
     <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
     <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js" defer></script>
     <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js" defer></script>
@@ -47,6 +62,7 @@
     <script src="{{ site.baseurl }}/assets/hero-circuit.js" defer></script>
     <script src="{{ site.baseurl }}/assets/feature-cards.js" defer></script>
     <script src="{{ site.baseurl }}/assets/will-change-optimizer.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/form-validator.js" defer></script>
 </head>
 
 <body>

@@ -8,9 +8,16 @@ function handleLanguage() {
     let storedLang = currentLang;
 
     try {
-        const saved = localStorage.getItem('preferredLanguage');
-        if (saved) {
-            storedLang = saved;
+        if (window.SafeStorage) {
+            const saved = window.SafeStorage.getItem('preferredLanguage');
+            if (saved) {
+                storedLang = saved;
+            }
+        } else {
+            const saved = localStorage.getItem('preferredLanguage');
+            if (saved) {
+                storedLang = saved;
+            }
         }
     } catch (e) {
         storedLang = currentLang;
@@ -30,7 +37,11 @@ function handleLanguage() {
 
 function switchLanguage(lang) {
     try {
-        localStorage.setItem('preferredLanguage', lang);
+        if (window.SafeStorage) {
+            window.SafeStorage.setItem('preferredLanguage', lang);
+        } else {
+            localStorage.setItem('preferredLanguage', lang);
+        }
     } catch (e) {
         // ignore storage errors
     }
