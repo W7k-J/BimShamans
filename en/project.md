@@ -119,7 +119,8 @@ feature_cards:
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
 #### TL;DR
-We solve problems which satellites civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal. **Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
+We solve problems which satellites civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal.  
+**Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
 
 {% include sections/feature-cards.html %}
 
