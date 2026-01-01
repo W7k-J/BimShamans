@@ -65,13 +65,13 @@
                 
                 <!-- About with dropdown menu -->
                 <div class="dropdown-wrapper">
-                    <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' or page.url contains '/projects' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>
+                    <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' or page.url contains '/project' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>
                     <div class="dropdown-menu">
                         {% if page.lang == 'pl' %}
-                            <a href="{{ site.baseurl }}/{{ page.lang }}/projects/">Projekty</a>
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/project/">Projekty</a>
                             <a href="{{ site.baseurl }}/{{ page.lang }}/authors/">Autorzy</a>
                         {% else %}
-                            <a href="{{ site.baseurl }}/{{ page.lang }}/projects/">Projects</a>
+                            <a href="{{ site.baseurl }}/{{ page.lang }}/project/">Projects</a>
                             <a href="{{ site.baseurl }}/{{ page.lang }}/authors/">Authors</a>
                         {% endif %}
                     </div>
