@@ -79,10 +79,48 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   }
   
   &__text {
+    @extend p;
     color: var(--firstGray-color);
-    font-size: 0.95rem;
-    line-height: 1.5;
     margin: 0;
+    
+    p {
+      margin: 0 0 1rem 0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    
+    img {
+      max-height: 100%;
+      width: auto;
+      object-fit: contain;
+    }
+    
+    strong, b {
+      font-weight: bold;
+    }
+    
+    em, i {
+      font-style: italic;
+    }
+    
+    code {
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 0.2rem 0.4rem;
+      border-radius: 3px;
+      font-family: 'Source Code Pro', monospace;
+      font-size: 0.85em;
+    }
+    
+    a {
+      color: var(--firstBlue-color);
+      text-decoration: underline;
+      
+      &:hover {
+        text-decoration: none;
+      }
+    }
   }
   
   &__label {

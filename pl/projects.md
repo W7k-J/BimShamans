@@ -4,6 +4,7 @@ title: Projekty
 lang: pl
 ref: projects
 permalink: /pl/projects/
+cards_height: 300px
 feature_cards:
   - title: "Tytuł karty 1"
     content: "Zawartość karty 1"

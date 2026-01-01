@@ -1,12 +1,12 @@
 {% assign lang = page.lang | default: site.default_lang %}
 
 <section class="feature-cards-section">
-  <div class="feature-cards">
+  <div class="feature-cards" {% if page.cards_height %}style="height: {{ page.cards_height }}"{% endif %}>
     {% for card in page.feature_cards %}
     <div class="feature-card {% if forloop.first %}active{% endif %}" data-feature="card-{{ forloop.index }}">
       <div class="feature-card__background"></div>
       <div class="feature-card__content">
-        <p class="feature-card__text">{{ card.content }}</p>
+        <div class="feature-card__text">{{ card.content | markdownify }}</div>
       </div>
       <div class="feature-card__label">
         <div class="feature-card__icon">{% if card.icon %}<img src="{{ site.baseurl }}{{ card.icon }}" alt="{{ card.title }}">{% endif %}</div>
