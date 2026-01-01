@@ -40,15 +40,21 @@
     }
 
     var lastUpdate = 0;
+    var rafId = null;
 
     function handleEvent(event) {
       // Throttle to 30fps for better performance (33ms = ~30 updates/sec)
-      var now = Date.now();
+      var now = performance.now();
       if (now - lastUpdate < 33) {
         return;
       }
       lastUpdate = now;
 
+      // Use RAF for smoother updates
+      if (rafId) {
+        return;
+      }
+      
       var clientX = event.clientX;
       var clientY = event.clientY;
 
@@ -60,8 +66,11 @@
       if (typeof clientX !== 'number' || typeof clientY !== 'number') {
         return;
       }
-
-      updatePosition(hero, clientX, clientY);
+      
+      rafId = requestAnimationFrame(function() {
+        updatePosition(hero, clientX, clientY);
+        rafId = null;
+      });
     }
 
     hero.addEventListener(enterEvent, function() {
@@ -72,8 +81,20 @@
     hero.addEventListener('touchmove', handleEvent, { passive: true });
 
     hero.addEventListener(leaveEvent, function () {
+      if (rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
       glow.classList.remove('active');
     }, { passive: true });
+    
+    // Cleanup on visibility change
+    document.addEventListener('visibilitychange', function() {
+      if (document.hidden && rafId) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    });
   }
 
   function init() {

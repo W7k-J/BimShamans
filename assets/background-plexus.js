@@ -133,8 +133,42 @@ function connect() {
     }
 }
 
-// Animation loop
-function animate() {
+// Animation loop with FPS limiting
+let lastFrameTime = 0;
+const targetFPS = 60;
+const frameInterval = 1000 / targetFPS;
+let animationFrameId = null;
+
+// Performance monitoring
+let frameCount = 0;
+let lastFpsCheck = performance.now();
+let currentFPS = targetFPS;
+
+function animate(currentTime) {
+    // Throttle to target FPS
+    const elapsed = currentTime - lastFrameTime;
+    
+    if (elapsed < frameInterval) {
+        animationFrameId = requestAnimationFrame(animate);
+        return;
+    }
+    
+    // Adjust for actual frame interval
+    lastFrameTime = currentTime - (elapsed % frameInterval);
+    
+    // Performance monitoring - reduce quality if FPS drops
+    frameCount++;
+    if (currentTime - lastFpsCheck >= 1000) {
+        currentFPS = frameCount;
+        frameCount = 0;
+        lastFpsCheck = currentTime;
+        
+        // Adaptive quality: reduce particle count if FPS drops below 30
+        if (currentFPS < 30 && particles.length > maxParticles * 0.5) {
+            particles.length = Math.floor(particles.length * 0.9);
+        }
+    }
+    
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     
     for (let particle of particles) {
@@ -143,9 +177,28 @@ function animate() {
     }
     
     connect();
-    requestAnimationFrame(animate);
+    animationFrameId = requestAnimationFrame(animate);
 }
+
+// Cleanup function
+function cleanup() {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+}
+
+// Pause animation when page is hidden
+document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+        cleanup();
+    } else {
+        animate(performance.now());
+    }
+});
+
+window.addEventListener('beforeunload', cleanup);
 
 // Start animation
 init();
-animate();
+animate(performance.now());
