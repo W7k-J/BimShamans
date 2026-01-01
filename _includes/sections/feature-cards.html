@@ -9,7 +9,15 @@
         <div class="feature-card__text">{{ card.content | markdownify }}</div>
       </div>
       <div class="feature-card__label">
-        <div class="feature-card__icon">{% if card.icon %}<img src="{{ site.baseurl }}{{ card.icon }}" alt="{{ card.title }}">{% endif %}</div>
+        <div class="feature-card__icon">
+          {% if card.icon %}
+            {% if card.icon contains '<svg' %}
+              {{ card.icon }}
+            {% else %}
+              <img src="{{ site.baseurl }}{{ card.icon }}" alt="{{ card.title }}">
+            {% endif %}
+          {% endif %}
+        </div>
         <div class="feature-card__info">
           <div class="feature-card__main">{{ card.title }}</div>
         </div>
