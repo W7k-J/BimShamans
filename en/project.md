@@ -7,20 +7,20 @@ permalink: /en/project/
 cards_height: 400px
 feature_cards:
   - title: "Observation"
-    content: For years, **we have been closely following the evolution of BIM and the technological solutions** that come with it. We witnessed how the studios and companies we worked for purchased their first licenses for "BIM software," appointed their first BIM managers, and took on the challenge of their first standardization efforts. We observed it all up close - actively participating in design, coordination, standardization, modeling, and data management processes ourselves. We created the first automations, Dynamo scripts, workflows, and even devised tricks to bypass the limitations imposed by software developers. Over time, **we became 'those who know'** - the ones people turn to for answers.
-    icon: "/images/icons/icon-1.svg"
+    content: "For years, **we have been closely following the evolution of BIM and the technological solutions** that come with it. We witnessed how the studios and companies we worked for purchased their first licenses for \"BIM software,\" appointed their first BIM managers, and took on the challenge of their first standardization efforts. We observed it all up close - actively participating in design, coordination, standardization, modeling, and data management processes ourselves. We created the first automations, Dynamo scripts, workflows, and even devised tricks to bypass the limitations imposed by software developers. Over time, **we became 'those who know'** - the ones people turn to for answers."
+    icon: "/images/icons/icons_observation-telescope.svg"
   - title: "Expertise"
     content: "**We’ve always been on the front line, where BIM HAPPENS** - not just in theories and discussions but in the daily grind of project challenges. In our “shamanic” project, we share insights, tricks, and automations. We won’t be preaching what BIM should be - we’ll show you what it is and how much you can squeeze out of it, right here and now."
-    icon: "/images/icons/icon-2.svg"
+    icon: "/images/icons/icons_academic-cap.svg"
   - title: "Tryouts"
-    content: "Time and again, **we’ve seen how the so-called “only right” solutions collapse when faced with real-world challenges - the daily struggles of designers, engineers, and clients.** That’s why we’re not here to convince anyone that our approach is the ultimate, the most revolutionary, or the best in the world. But we do know that it works - we’ve tested it on the front lines, where “correct” plans often lose to reality. Experimentation is a daily practice in BIM, and we’re not afraid to try new things. We’ll also allow ourselves a bit of complaining and a few jokes, because we want to show that we enjoy what we do - solving the challenges that cross our path."
-    icon: "/images/icons/icon-3.svg"
+    content: "Time and again, **we've seen how the so-called \"only right\" solutions collapse when faced with real-world challenges - the daily struggles of designers, engineers, and clients.** That's why we're not here to convince anyone that our approach is the ultimate, the most revolutionary, or the best in the world. But we do know that it works - we've tested it on the front lines, where \"correct\" plans often lose to reality. Experimentation is a daily practice in BIM, and we're not afraid to try new things. We'll also allow ourselves a bit of complaining and a few jokes, because we want to show that we enjoy what we do - solving the challenges that cross our path."
+    icon: "/images/icons/icons_signpost.svg"
   - title: "Solutions"
     content: "**What brought us together was a results-driven mindset—one that skips the marketing fluff and takes a straight engineering route to the goal.** While the high priests of this or that tool, data exchange format, or standard preached their superiority, we - like stubborn shaman, were busy finishing yet another project."
-    icon: "/images/icons/icon-4.svg"
+    icon: "/images/icons/icons_lightbulb-minimalistic.svg"
   - title: "Reality"
     content: "Yeah, that's it.\n<div style=\"display: flex; gap: 10px; justify-content: center; align-items: center;\"><img src=\"/images/images-main/Image_About_BIMSpecialist-A.jpg\" alt=\"BIM Specialist\" height=\"220\"><img src=\"/images/images-main/Image_About_BIMSpecialist-B.jpg\" alt=\"in a nutshell\" height=\"220\"></div>"
-    icon: "/images/icons/icon-5.svg"
+    icon: "/images/icons/icons_sledgehammer.svg"
 ---
 
 <style>
