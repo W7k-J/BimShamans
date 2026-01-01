@@ -158,14 +158,14 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
     
     img {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
       object-fit: cover;
     }
     
     svg {
-      width: 80%;
-      height: 80%;
+      width: 75%;
+      height: 75%;
       
       path, circle, rect, polygon {
         fill: currentColor;
@@ -232,6 +232,6 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   }
   
   &:hover {
-    background-color: rgba(150, 150, 170, 0.25);
+    background-color: rgba(150, 150, 170, 0.35);
   }
 }
