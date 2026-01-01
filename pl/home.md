@@ -21,7 +21,7 @@ permalink: /pl/home/
   </div>
 </div>
 
-  # Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
+  # !!!Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
 
 <section class="feature-sections">
   <div class="feature-section">
