@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const content = this.nextElementSibling;
                 if (content && content.classList.contains('collapsible-content')) {
                     content.style.display = isExpanded ? 'none' : 'block';
-                    content.setAttribute('aria-hidden', isExpanded);
+                    content.setAttribute('aria-hidden', isExpanded ? 'true' : 'false');
                 }
                 
                 // Toggle active class for styling
