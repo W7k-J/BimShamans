@@ -55,13 +55,15 @@
       updatePosition(hero, clientX, clientY);
     }
 
-    hero.addEventListener(enterEvent, handleEvent, { passive: true });
+    hero.addEventListener(enterEvent, function() {
+      glow.classList.add('active');
+    }, { passive: true });
+
     hero.addEventListener(moveEvent, handleEvent, { passive: true });
     hero.addEventListener('touchmove', handleEvent, { passive: true });
 
     hero.addEventListener(leaveEvent, function () {
-      hero.style.removeProperty('--glow-x');
-      hero.style.removeProperty('--glow-y');
+      glow.classList.remove('active');
     }, { passive: true });
   }
 
