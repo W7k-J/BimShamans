@@ -43,11 +43,11 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --secondBlue-color: #{$ryanCyan};  
-  --page-gradient-layer-zero: rgba(255, 0, 153, 0.12);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.18);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.16);
-  --page-gradient-base-start: rgba(255, 255, 255, 0.94);
-  --page-gradient-base-end: rgba(227, 227, 234, 0.96);
+  --page-gradient-layer-zero: rgba(0, 51, 102, 0.35);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.22);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.20);
+  --page-gradient-base-start: rgba(255, 255, 255, 0.88);
+  --page-gradient-base-end: rgba(227, 227, 234, 0.92);
   --footer-border-color: rgba(30, 105, 145, 0.28);
   --circuit-glow-strong: rgba(50, 215, 230, 0.55);
   --circuit-glow-soft: rgba(30, 105, 145, 0.18);
@@ -76,11 +76,11 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
-  --page-gradient-layer-zero: rgba(255, 0, 153, 0.16);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.22);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.2);
-  --page-gradient-base-start: rgba(20, 25, 40, 0.94);
-  --page-gradient-base-end: rgba(10, 12, 25, 0.92);
+  --page-gradient-layer-zero: rgba(50, 215, 230, 0.32);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.28);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.25);
+  --page-gradient-base-start: rgba(20, 25, 40, 0.88);
+  --page-gradient-base-end: rgba(10, 12, 25, 0.85);
   --footer-border-color: rgba(227, 227, 234, 0.22);
   --circuit-glow-strong: rgba(109, 245, 255, 0.75);
   --circuit-glow-soft: rgba(26, 199, 216, 0.18);
@@ -771,10 +771,10 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 30%, var(--page-gradient-layer-zero), transparent 55%),
-    radial-gradient(circle at 40% 60%, var(--page-gradient-layer-one), transparent 60%),
-    radial-gradient(circle at 80% 30%, var(--page-gradient-layer-two), transparent 55%),
-    linear-gradient(160deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
+    radial-gradient(circle at 50% 20%, var(--page-gradient-layer-zero), transparent 60%),
+    radial-gradient(circle at 30% 50%, var(--page-gradient-layer-one), transparent 65%),
+    radial-gradient(circle at 85% 50%, var(--page-gradient-layer-two), transparent 60%),
+    linear-gradient(180deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
   background-repeat: no-repeat;
   background-size: cover;
   pointer-events: none;
