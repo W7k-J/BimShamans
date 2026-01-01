@@ -132,7 +132,8 @@ kramdown:
 
 # Set the Sass partials directory, as we're using @imports
 sass:
-  style: :expanded # You might prefer to minify using :compressed
+  style: compressed # Minify CSS for production (smaller file size, faster loading)
+  sourcemap: development # Generate sourcemaps only in development
 
 # Use the following plug-ins
 gems:
