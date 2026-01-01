@@ -108,7 +108,11 @@ html {
   img.logo-light, img.logo-dark {
     width: 100%;
     height: auto;
-    transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease, filter 0.6s ease;
+  }
+  
+  img.logo-animated:hover {
+    animation: logo-glow 2s ease-in-out infinite;
   }
 }
 
@@ -350,6 +354,16 @@ html {
       background-color: var(--firstBlue-color);
       color: #{$raisinBlack};
     }
+  }
+}
+
+// Logo animations
+@keyframes logo-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px var(--firstBlue-color)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--secondBlue-color)) brightness(1.2);
   }
 }
 
