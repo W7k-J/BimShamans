@@ -99,4 +99,6 @@ Time and again, **we've seen how the so-called "only right" solutions collapse w
     </div>
 </div>
 
+{% include sections/feature-cards.html %}
+
 &nbsp;

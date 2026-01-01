@@ -99,4 +99,6 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
     </div>
 </div>
 
+{% include sections/feature-cards.html %}
+
 &nbsp;

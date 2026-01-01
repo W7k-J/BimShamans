@@ -1,0 +1,176 @@
+// Feature cards with expand animation - based on CodePen example
+// Configuration variables
+$card-icon-size: 40px;
+$card-gap: 10px;
+$card-border-radius: 12px;
+$card-transition-duration: 0.4s;
+$card-transition-timing: cubic-bezier(0.05, 0.61, 0.41, 0.95);
+$card-inactive-width: calc(#{$card-icon-size} + 20px);
+
+.feature-cards-section {
+  margin: 4rem 0;
+  padding: 2rem 0;
+}
+
+.feature-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+  
+  height: 300px;
+  width: 100%;
+  gap: $card-gap;
+  
+  @media screen and (max-width: 1200px) {
+    height: 280px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    height: 250px;
+  }
+}
+
+.feature-card {
+  position: relative;
+  overflow: hidden;
+  
+  min-width: $card-inactive-width;
+  margin: 0;
+  border-radius: $card-border-radius;
+  
+  background-color: rgba(150, 150, 170, 0.2);
+  background-size: auto 120%;
+  background-position: center;
+  
+  cursor: pointer;
+  transition: flex-grow $card-transition-duration $card-transition-timing,
+              flex-basis $card-transition-duration $card-transition-timing;
+  
+  flex-grow: 1;
+  flex-basis: $card-inactive-width;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  
+  &__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+  }
+  
+  &__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    
+    padding: 1.5rem;
+    
+    opacity: 0;
+    transition: opacity $card-transition-duration $card-transition-timing;
+    
+    overflow-y: auto;
+  }
+  
+  &__text {
+    color: var(--firstGray-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin: 0;
+  }
+  
+  &__label {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    
+    height: auto;
+    transition: bottom $card-transition-duration $card-transition-timing,
+                left $card-transition-duration $card-transition-timing;
+    
+    z-index: 10;
+  }
+  
+  &__icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+    min-width: $card-icon-size;
+    max-width: $card-icon-size;
+    height: $card-icon-size;
+    border-radius: 100%;
+    
+    background-color: white;
+    color: var(--firstBlue-color);
+    flex-shrink: 0;
+  }
+  
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    margin-left: 10px;
+    width: 0;
+    
+    color: white;
+    opacity: 0;
+    transition: opacity $card-transition-duration $card-transition-timing;
+  }
+  
+  &__main {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: var(--firstGray-color);
+  }
+  
+  // Active state - expanded card
+  &.active {
+    flex-grow: 10000;
+    flex-basis: auto;
+    transform: scale(1);
+    
+    border-radius: $card-border-radius;
+    
+    background-size: auto 100%;
+    
+    .feature-card__label {
+      bottom: 10px;
+      left: 10px;
+    }
+    
+    .feature-card__content {
+      opacity: 1;
+    }
+    
+    .feature-card__info {
+      opacity: 1;
+      width: auto;
+    }
+  }
+  
+  // Inactive state - collapsed cards
+  &:not(.active) {
+    flex-grow: 0;
+    flex-basis: $card-inactive-width;
+    border-radius: $card-border-radius;
+    
+    .feature-card__content {
+      opacity: 0;
+    }
+  }
+  
+  &:hover {
+    background-color: rgba(150, 150, 170, 0.25);
+  }
+}
