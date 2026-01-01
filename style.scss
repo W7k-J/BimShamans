@@ -76,11 +76,11 @@
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
   --secondBlue-color: #{$biceBlue};
-  --page-gradient-layer-zero: rgba(50, 215, 230, 0.32);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.28);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.25);
-  --page-gradient-base-start: rgba(20, 25, 40, 0.88);
-  --page-gradient-base-end: rgba(10, 12, 25, 0.85);
+  --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
+  --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
+  --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
+  --page-gradient-base-start: rgba(12, 15, 25, 0.95);
+  --page-gradient-base-end: rgba(6, 8, 15, 0.96);
   --footer-border-color: rgba(227, 227, 234, 0.22);
   --circuit-glow-strong: rgba(109, 245, 255, 0.75);
   --circuit-glow-soft: rgba(26, 199, 216, 0.18);
@@ -771,9 +771,9 @@ body::before {
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 50% 20%, var(--page-gradient-layer-zero), transparent 60%),
-    radial-gradient(circle at 30% 50%, var(--page-gradient-layer-one), transparent 65%),
-    radial-gradient(circle at 85% 50%, var(--page-gradient-layer-two), transparent 60%),
+    radial-gradient(circle at 20% 50%, var(--page-gradient-layer-zero), transparent 60%),
+    radial-gradient(circle at 85% 50%, var(--page-gradient-layer-one), transparent 65%),
+    radial-gradient(ellipse at 50% 30%, var(--page-gradient-layer-two), transparent 60%),
     linear-gradient(180deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
   background-repeat: no-repeat;
   background-size: cover;
