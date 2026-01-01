@@ -49,6 +49,7 @@
   --page-gradient-base-start: rgba(255, 255, 255, 0.88);
   --page-gradient-base-end: rgba(227, 227, 234, 0.92);
   --footer-border-color: rgba(30, 105, 145, 0.28);
+  --blockquote-background: rgba(227, 227, 234, 0.8);
   --circuit-glow-strong: rgba(50, 215, 230, 0.55);
   --circuit-glow-soft: rgba(30, 105, 145, 0.18);
   --circuit-glow-base: rgba(30, 105, 145, 0.4);
@@ -82,9 +83,26 @@
   --page-gradient-base-start: rgba(12, 15, 25, 0.95);
   --page-gradient-base-end: rgba(6, 8, 15, 0.96);
   --footer-border-color: rgba(227, 227, 234, 0.22);
+<<<<<<< HEAD
   --circuit-glow-strong: rgba(159, 255, 255, 0.98);
   --circuit-glow-soft: rgba(30, 105, 145, 0.15);
   --circuit-glow-base: rgba(50, 215, 230, 0.55);
+||||||| 11ccd1f
+  --circuit-glow-strong: rgba(109, 245, 255, 0.95);
+  --circuit-glow-soft: rgba(26, 199, 216, 0.12);
+  --circuit-glow-base: rgba(26, 199, 216, 0.45);
+=======
+<<<<<<< HEAD
+  --blockquote-background: rgba(64, 64, 80, 0.8);
+  --circuit-glow-strong: rgba(109, 245, 255, 0.75);
+  --circuit-glow-soft: rgba(26, 199, 216, 0.18);
+  --circuit-glow-base: rgba(26, 199, 216, 0.38);
+=======
+  --circuit-glow-strong: rgba(109, 245, 255, 0.95);
+  --circuit-glow-soft: rgba(26, 199, 216, 0.12);
+  --circuit-glow-base: rgba(26, 199, 216, 0.45);
+>>>>>>> 11ccd1ff72035ca392876b6d90a2cc667f397246
+>>>>>>> 60d1a91851afd0cd5df6eb6c3f80fa8a22a3a065
   --circuit-line-strong: rgba(109, 245, 255, 0.95);
   --circuit-line-soft: rgba(26, 199, 216, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.22);
@@ -1015,7 +1033,7 @@ blockquote {
   border-left: 2px solid var(--firstBlue-color);
   padding: 0.1em 1em;
   color: var(--firstGray-color);
-  background: var(--forthGray-color);
+  background-color: rgba(150, 150, 170, 0.2);
 }
 
 //
@@ -1034,11 +1052,11 @@ blockquote {
 
 .post {
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid var(--thirdGray-color);
+    margin: 1.8em 0;
+    border-left: 2px solid var(--firstBlue-color);
     padding: 0.1em 1em;
-    color: var(--thirdGray-color);
-    font-style: italic;
+    color: var(--firstGray-color);
+    background-color: rgba(150, 150, 170, 0.2);
   }
 
   .comments {
