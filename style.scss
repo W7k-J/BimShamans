@@ -11,13 +11,11 @@
 @import "scrollbar";
 @import "buttons";
 @import "feature-cards";
+@import "authors";
 //@import "background-animations";
-// IMPORTS - Fonts
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+// IMPORTS - Fonts (combined Google Fonts request for better performance)
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Michroma:wght@400;700;900&family=Syncopate:wght@400;700&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Michroma:wght@400;700;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&display=swap');
 
 // IMPORTS - Syntax highlighting
 @import "highlights";
@@ -160,7 +158,7 @@
       text-align: center; // upewnienie się, że tekst jest wyśrodkowany
       font-weight: 300;
       letter-spacing: 1px;
-      transition: all 0.4s ease;
+      transition: color 0.4s ease, background-color 0.4s ease;
       height: 100%;
       display: flex;
       align-items: center;
@@ -203,7 +201,7 @@
         justify-content: center;
         padding: 0 15px;
         border-radius: 6px;
-        transition: all 0.4s ease;
+        transition: color 0.4s ease, background-color 0.4s ease;
 
         &.active,
         &:hover {
@@ -238,7 +236,7 @@
           display: block;
           padding: 12px 20px;
           color: var(--firstGray-color);
-          transition: all 0.4s ease;
+          transition: color 0.4s ease, background-color 0.4s ease;
           border-radius: 0;
           height: auto;
           font-weight: 300;
@@ -306,7 +304,7 @@
         min-width: 3rem;
         padding: 0.35rem 0.9rem;
         text-transform: uppercase;
-        transition: all 0.4s ease;
+        transition: color 0.4s ease, background-color 0.4s ease;
 
         &:hover {
           color: var(--firstBlue-color);
@@ -399,6 +397,7 @@
   text-shadow: 0.05em 0 0 var(--firstBlue-color),
                -0.025em -0.05em 0 var(--secondBlue-color),
                0.025em 0.05em 0 #4183C4;
+  will-change: text-shadow;
   animation: hero-glitch 4s infinite;
   cursor: pointer;
 }
@@ -435,6 +434,7 @@
   height: 100%;
   background: radial-gradient(circle at var(--glow-x) var(--glow-y), var(--circuit-glow-strong) 0%, var(--circuit-glow-base) 8%, var(--circuit-glow-soft) 18%, transparent 30%);
   opacity: 0;
+  will-change: opacity;
   transition: background 160ms ease, opacity 350ms ease;
 
   &.active {
@@ -472,6 +472,7 @@
   opacity: 0.35;
   mix-blend-mode: screen;
   pointer-events: none;
+  will-change: opacity, filter;
   filter: grayscale(100%) brightness(0.4) sepia(100%) hue-rotate(200deg) saturate(0.3);
 }
 

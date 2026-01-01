@@ -123,16 +123,24 @@ document.addEventListener('DOMContentLoaded', function() {
 
     observer.observe(root, { attributes: true, attributeFilter: ['class'] });
 
-    document.addEventListener('visibilitychange', function() {
+    function handleVisibilityChange() {
         if (!document.hidden) {
             return;
         }
         text.style.opacity = '1';
         text.style.transform = 'translate(0, 0)';
-    });
+    }
 
-    window.addEventListener('beforeunload', function() {
+    function cleanup() {
         clearInterval(flickerTimer);
         observer.disconnect();
-    });
+        document.removeEventListener('visibilitychange', handleVisibilityChange);
+        container.removeEventListener('mousemove', container._mouseMoveHandler);
+        container.removeEventListener('mouseleave', container._mouseLeaveHandler);
+        text.removeEventListener('click', shuffleCharacters);
+    }
+
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+    window.addEventListener('beforeunload', cleanup);
+    window.addEventListener('pagehide', cleanup);
 });
