@@ -4,6 +4,22 @@ title: Projekty
 lang: pl
 ref: projects
 permalink: /pl/projects/
+feature_cards:
+  - title: "Tytuł karty 1"
+    content: "Zawartość karty 1"
+    icon: "/images/icons/icon-1.svg"
+  - title: "Tytuł karty 2"
+    content: "Zawartość karty 2"
+    icon: "/images/icons/icon-2.svg"
+  - title: "Tytuł karty 3"
+    content: "Zawartość karty 3"
+    icon: "/images/icons/icon-3.svg"
+  - title: "Tytuł karty 4"
+    content: "Zawartość karty 4"
+    icon: "/images/icons/icon-4.svg"
+  - title: "Tytuł karty 5"
+    content: "Zawartość karty 5"
+    icon: "/images/icons/icon-5.svg"
 ---
 
 <style>

@@ -2,71 +2,19 @@
 
 <section class="feature-cards-section">
   <div class="feature-cards">
-    
-    <div class="feature-card active" data-feature="card-1">
+    {% for card in page.feature_cards %}
+    <div class="feature-card {% if forloop.first %}active{% endif %}" data-feature="card-{{ forloop.index }}">
       <div class="feature-card__background"></div>
       <div class="feature-card__content">
-        <p class="feature-card__text">tekst1</p>
+        <p class="feature-card__text">{{ card.content }}</p>
       </div>
       <div class="feature-card__label">
-        <div class="feature-card__icon"></div>
+        <div class="feature-card__icon">{% if card.icon %}<img src="{{ site.baseurl }}{{ card.icon }}" alt="{{ card.title }}">{% endif %}</div>
         <div class="feature-card__info">
-          <div class="feature-card__main">Tytuł1</div>
+          <div class="feature-card__main">{{ card.title }}</div>
         </div>
       </div>
     </div>
-    
-    <div class="feature-card" data-feature="card-2">
-      <div class="feature-card__background"></div>
-      <div class="feature-card__content">
-        <p class="feature-card__text">tekst2</p>
-      </div>
-      <div class="feature-card__label">
-        <div class="feature-card__icon"></div>
-        <div class="feature-card__info">
-          <div class="feature-card__main">Tytuł2</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="feature-card" data-feature="card-3">
-      <div class="feature-card__background"></div>
-      <div class="feature-card__content">
-        <p class="feature-card__text">tekst3</p>
-      </div>
-      <div class="feature-card__label">
-        <div class="feature-card__icon"></div>
-        <div class="feature-card__info">
-          <div class="feature-card__main">Tytuł3</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="feature-card" data-feature="card-4">
-      <div class="feature-card__background"></div>
-      <div class="feature-card__content">
-        <p class="feature-card__text">tekst4</p>
-      </div>
-      <div class="feature-card__label">
-        <div class="feature-card__icon"></div>
-        <div class="feature-card__info">
-          <div class="feature-card__main">Tytuł4</div>
-        </div>
-      </div>
-    </div>
-    
-    <div class="feature-card" data-feature="card-5">
-      <div class="feature-card__background"></div>
-      <div class="feature-card__content">
-        <p class="feature-card__text">tekst5</p>
-      </div>
-      <div class="feature-card__label">
-        <div class="feature-card__icon"></div>
-        <div class="feature-card__info">
-          <div class="feature-card__main">Tytuł5</div>
-        </div>
-      </div>
-    </div>
-    
+    {% endfor %}
   </div>
 </section>

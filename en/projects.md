@@ -4,6 +4,22 @@ title: Projects
 lang: en
 ref: projects
 permalink: /en/projects/
+feature_cards:
+  - title: "Observation"
+    content: For years, **we have been closely following the evolution of BIM and the technological solutions** that come with it. We witnessed how the studios and companies we worked for purchased their first licenses for "BIM software," appointed their first BIM managers, and took on the challenge of their first standardization efforts. We observed it all up close - actively participating in design, coordination, standardization, modeling, and data management processes ourselves. We created the first automations, Dynamo scripts, workflows, and even devised tricks to bypass the limitations imposed by software developers. Over time, **we became 'those who know'** - the ones people turn to for answers.
+    icon: "/images/icons/icon-1.svg"
+  - title: "Expertise"
+    content: "Card content 2"
+    icon: "/images/icons/icon-2.svg"
+  - title: "Tryouts"
+    content: "Card content 3"
+    icon: "/images/icons/icon-3.svg"
+  - title: "Solutions"
+    content: "Card content 4"
+    icon: "/images/icons/icon-4.svg"
+  - title: "Reality"
+    content: "Card content 5"
+    icon: "/images/icons/icon-5.svg"
 ---
 
 <style>
