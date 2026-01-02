@@ -60,7 +60,7 @@ authors:
 > Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. Szaman to dosłownie **_'ten, który wie'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
-#### Plemię
+#### Rada Plemienia
 
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
 
