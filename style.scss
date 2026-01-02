@@ -50,9 +50,9 @@ html {
   --page-gradient-base-end: rgba(247, 247, 252, 0.98);
   --footer-border-color: rgba(30, 105, 145, 0.28);
   --blockquote-background: rgba(227, 227, 234, 0.8);
-  --circuit-glow-strong: rgba(97, 229, 255, 0.68);
-  --circuit-glow-soft: rgba(159, 255, 255, 0.22);
-  --circuit-glow-base: rgba(50, 215, 230, 0.45);
+  --circuit-glow-strong: rgba(30, 105, 145, 0.97);
+  --circuit-glow-base: rgba(30, 105, 145, 0.60);
+  --circuit-glow-soft: rgba(30, 105, 145, 0.25);
   --circuit-line-strong: rgba(19, 74, 115, 0.92);
   --circuit-line-soft: rgba(19, 74, 115, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.18);
@@ -86,9 +86,9 @@ html {
   --page-gradient-base-end: rgba(6, 8, 15, 0.96);
   --footer-border-color: rgba(227, 227, 234, 0.22);
   --blockquote-background: rgba(64, 64, 80, 0.8);
-  --circuit-glow-strong: rgba(159, 255, 255, 0.98);
-  --circuit-glow-soft: rgba(30, 105, 145, 0.15);
-  --circuit-glow-base: rgba(50, 215, 230, 0.55);
+  --circuit-glow-strong: rgba(159, 255, 255, 0.97);
+  --circuit-glow-soft: rgba(30, 105, 145, 0.25);
+  --circuit-glow-base: rgba(50, 215, 230, 0.60);
   --circuit-line-strong: rgba(109, 245, 255, 0.95);
   --circuit-line-soft: rgba(26, 199, 216, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.22);
@@ -721,7 +721,7 @@ figure {
   &.active {
     opacity: 1;
   }
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.24));
+  filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.24));
   -webkit-mask-image: url('{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg');
   mask-image: url('{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg');
   -webkit-mask-repeat: no-repeat;
@@ -733,15 +733,8 @@ figure {
   mix-blend-mode: screen;
 }
 
-.light-theme {
-  --circuit-glow-strong: rgba(30, 105, 145, 0.95);
-  --circuit-glow-base: rgba(30, 105, 145, 0.65);
-  --circuit-glow-soft: rgba(30, 105, 145, 0.35);
-}
-
 .light-theme .hero-banner__circuit-glow {
-  mix-blend-mode: screen;
-  filter: drop-shadow(0 8px 24px rgba(97, 229, 255, 0.3));
+  filter: drop-shadow(0 10px 26px rgba(97, 229, 255, 0.3));
 }
 
 @media screen and (max-width: 640px) {
