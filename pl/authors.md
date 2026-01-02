@@ -66,7 +66,7 @@ Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do r
 
 {% for author in page.authors %}
 
-## {{ author.name }}
+#### {{ author.name }}
 
 {{ author.intro }}
 
