@@ -77,31 +77,94 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function shuffleCharacters() {
         text.classList.add('intense-glitch');
-        var original = text.getAttribute('data-text') || text.textContent;
-        var chars = original.split('');
-        var iteration = 0;
+        
+        // Find word elements and flame
+        var words = text.querySelectorAll('.hero-word');
+        var flame = text.querySelector('.hero-flame');
+        
+        if (words.length === 0) {
+            // Fallback to old behavior if no .hero-word elements found
+            var original = text.getAttribute('data-text') || text.textContent;
+            var chars = original.split('');
+            var iteration = 0;
 
-        var scramble = setInterval(function() {
-            text.textContent = chars.map(function(char, index) {
-                if (char === ' ' || index < iteration) {
-                    return chars[index];
+            var scramble = setInterval(function() {
+                text.textContent = chars.map(function(char, index) {
+                    if (char === ' ' || index < iteration) {
+                        return chars[index];
+                    }
+                    return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                }).join('');
+
+                iteration += 1 / 3;
+
+                if (iteration >= chars.length) {
+                    clearInterval(scramble);
+                    text.textContent = original;
+                    text.style.whiteSpace = 'nowrap';
+                    text.style.opacity = '1';
+                    text.style.transform = 'translate(0, 0)';
+                    if (lastRatios.active) {
+                        updateTextShadow(lastRatios.x, lastRatios.y);
+                    }
+                    setTimeout(function() {
+                        text.classList.remove('intense-glitch');
+                    }, 800);
                 }
-                return String.fromCharCode(65 + Math.floor(Math.random() * 26));
-            }).join('');
-
+            }, 60);
+            return;
+        }
+        
+        // Activate flame intense effect
+        if (flame) {
+            flame.classList.add('hero-flame--intense');
+        }
+        
+        // Store original text for each word
+        var originals = [];
+        for (var i = 0; i < words.length; i++) {
+            originals.push(words[i].textContent);
+        }
+        
+        var iteration = 0;
+        var maxLength = Math.max.apply(Math, originals.map(function(text) { return text.length; }));
+        
+        var scramble = setInterval(function() {
+            // Scramble each word independently
+            for (var i = 0; i < words.length; i++) {
+                var original = originals[i];
+                var chars = original.split('');
+                
+                words[i].textContent = chars.map(function(char, index) {
+                    if (char === ' ' || index < iteration) {
+                        return chars[index];
+                    }
+                    return String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                }).join('');
+            }
+            
             iteration += 1 / 3;
-
-            if (iteration >= chars.length) {
+            
+            if (iteration >= maxLength) {
                 clearInterval(scramble);
-                text.textContent = original;
-                text.style.whiteSpace = 'nowrap';
+                
+                // Restore original text
+                for (var i = 0; i < words.length; i++) {
+                    words[i].textContent = originals[i];
+                }
+                
                 text.style.opacity = '1';
                 text.style.transform = 'translate(0, 0)';
+                
                 if (lastRatios.active) {
                     updateTextShadow(lastRatios.x, lastRatios.y);
                 }
+                
                 setTimeout(function() {
                     text.classList.remove('intense-glitch');
+                    if (flame) {
+                        flame.classList.remove('hero-flame--intense');
+                    }
                 }, 800);
             }
         }, 60);

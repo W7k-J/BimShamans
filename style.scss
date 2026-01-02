@@ -105,15 +105,45 @@ html {
 
 // Base logo styles
 .site-avatar {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  
   img.logo-light, img.logo-dark {
     width: 100%;
     height: auto;
     transition: opacity 0.4s ease, filter 0.6s ease;
   }
   
-  img.logo-animated:hover {
+  &:hover img.logo-animated {
     animation: logo-glow 2s ease-in-out infinite;
   }
+  
+  .site-logo-text {
+    font-family: 'Syncopate', 'Michroma', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    transition: color 0.4s ease;
+    position: relative;
+    top: 2px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+}
+
+.light-theme .site-avatar .site-logo-text {
+  color: #{$raisinBlack};
+}
+
+.dark-theme .site-avatar .site-logo-text {
+  color: #{$ghostWhite};
+}
+
+.site-avatar:hover .site-logo-text {
+  color: var(--firstBlue-color);
 }
 
 // Navigation container
@@ -144,9 +174,12 @@ html {
     height: $nav-height;
     padding: 5px 20px;
     margin-right: auto;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
     
     img.logo-light, img.logo-dark {
-      height: 100%;
+      height: 80%;
       width: auto;
       object-fit: contain;
     }
@@ -403,7 +436,9 @@ html {
   font-size: clamp(2.6rem, 8vw, 6rem);
   font-weight: 700;
   text-transform: none;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  gap: clamp(0.5rem, 2vw, 1.2rem);
   white-space: nowrap;
   color: #e3e3ea;
   text-shadow: 0.05em 0 0 var(--firstBlue-color),
@@ -420,14 +455,49 @@ html {
                0.025em 0.05em 0 #4183C4;
 }
 
-.hero-banner .glitch-text::before,
-.hero-banner .glitch-text::after {
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  left: 0;
+.hero-banner .hero-word {
+  display: inline-block;
+}
+
+.hero-banner .hero-flame {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: clamp(2.6rem, 6.5vw, 5rem);
+  height: clamp(2.6rem, 6.5vw, 5rem);
+  flex-shrink: 0;
+}
+
+.hero-banner .hero-flame__icon {
   width: 100%;
   height: 100%;
+  object-fit: contain;
+  opacity: 1;
+  transform: translateY(-8%);
+}
+
+// Dark theme - bright glow effect
+.dark-theme .hero-banner .hero-flame__icon {
+  filter: 
+    drop-shadow(0 0 2px rgba(0, 0, 0, 0.8))
+    drop-shadow(0 0 12px var(--secondBlue-color))
+    drop-shadow(0 0 20px var(--firstBlue-color))
+    drop-shadow(0 2px 8px rgba(0, 0, 0, 0.4));
+}
+
+// Light theme - strong contrast with dark outline
+.light-theme .hero-banner .hero-flame__icon {
+  filter: 
+    drop-shadow(0 0 1px rgba(0, 0, 0, 0.9))
+    drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))
+    drop-shadow(0 0 8px rgba(30, 105, 145, 0.4))
+    drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+.hero-banner .glitch-text::before,
+.hero-banner .glitch-text::after {
+  display: none;
 }
 
 .hero-banner__circuit {
@@ -521,14 +591,12 @@ html {
   left: 2px;
   text-shadow: -2px 0 var(--firstBlue-color);
   clip: rect(44px, 450px, 56px, 0);
-  animation: hero-glitch-before 60s infinite linear alternate-reverse;
 }
 
 .hero-banner .glitch-text::after {
   left: -2px;
   text-shadow: -2px 0 var(--secondBlue-color), 2px 2px #4183C4;
   clip: rect(44px, 450px, 56px, 0);
-  animation: hero-glitch-after 2s infinite linear alternate-reverse;
 }
 
 @media screen and (max-width: 640px) {

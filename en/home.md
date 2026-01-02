@@ -16,7 +16,13 @@ permalink: /en/home/
         <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
     </div>
     <div class="glitch-container">
-      <h1 class="glitch-text" data-text="BIM Shamans">BIM Shamans</h1>
+      <h1 class="glitch-text" data-text="BIM Shamans">
+        <span class="hero-word">BIM</span>
+        <span class="hero-flame" aria-hidden="true">
+          <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
+        </span>
+        <span class="hero-word">Shamans</span>
+      </h1>
     </div>
   </div>
 </div>
