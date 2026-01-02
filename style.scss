@@ -1141,10 +1141,12 @@ strong, b {
 
 blockquote {
   margin: 1.8em 0;
-  border-left: 2px solid var(--firstBlue-color);
   padding: 0.1em 1em;
   color: var(--firstGray-color);
   background-color: rgba(150, 150, 170, 0.2);
+  border-radius: $radius-medium;
+  border: none;
+  box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 //
@@ -1164,10 +1166,12 @@ blockquote {
 .post {
   blockquote {
     margin: 1.8em 0;
-    border-left: 2px solid var(--firstBlue-color);
     padding: 0.1em 1em;
     color: var(--firstGray-color);
     background-color: rgba(150, 150, 170, 0.2);
+    border-radius: $radius-medium;
+    border: none;
+    box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
   }
 
   .comments {

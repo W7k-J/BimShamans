@@ -327,7 +327,7 @@
   &--filter {
     padding: 1.5rem;
     background-color: rgba(150, 150, 170, 0.2);
-    border-radius: 4px;
+    border-radius: $radius-medium;
     width: 100%;
     border: none;
     box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
