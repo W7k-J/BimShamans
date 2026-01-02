@@ -195,11 +195,12 @@ html {
     justify-content: center;
 
     a {
+      position: relative;
       color: var(--firstGray-color);
       text-align: center;
       font-weight: 300;
       letter-spacing: 1px;
-      transition: color $transition-base ease, background-color $transition-base ease, font-weight $transition-base ease;
+      transition: color $transition-base ease, font-weight $transition-base ease;
       height: 100%;
       display: flex;
       align-items: center;
@@ -208,21 +209,42 @@ html {
       padding: 0 $nav-padding-x;
       border-radius: $radius-small;
 
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var(--forthGray-color);
+        border-radius: $radius-small;
+        z-index: -1;
+        transform: scaleY(0);
+        transform-origin: center;
+        transition: transform 0.35s ease-out;
+      }
+
       &:hover {
         color: var(--firstBlue-color);
-        background-color: var(--forthGray-color);
+
+        &::before {
+          transform: scaleY(1);
+        }
       }
 
       &.active {
         color: var(--firstBlue-color);
-        background-color: var(--forthGray-color);
+        
+        &::before {
+          transform: scaleY(1);
+        }
         font-weight: 600;
       }
 
       &:focus-visible {
         outline: 2px solid var(--firstBlue-color);
         outline-offset: 3px;
-        background-color: var(--forthGray-color);
+        
+        &::before {
+          transform: scaleY(1);
+        }
       }
     }
 
@@ -234,22 +256,51 @@ html {
       align-items: center;
 
       > a {
+        position: relative;
         height: 100%;
         display: flex;
         align-items: center;
         justify-content: center;
         padding: 0 $nav-padding-x;
         border-radius: $radius-small;
-        transition: color $transition-base ease, background-color $transition-base ease;
+        transition: color $transition-base ease;
 
-        &.active,
-        &:hover {
-          color: var(--firstBlue-color);
+        &::before {
+          content: '';
+          position: absolute;
+          inset: 0;
           background-color: var(--forthGray-color);
+          border-radius: $radius-small;
+          z-index: -1;
+          transform: scaleY(0);
+          transform-origin: center;
+          transition: transform 0.35s ease-out;
         }
 
         &.active {
+          color: var(--firstBlue-color);
           font-weight: 600;
+
+          &::before {
+            transform: scaleY(1);
+          }
+        }
+
+        &:hover {
+          color: var(--firstBlue-color);
+
+          &::before {
+            transform: scaleY(1);
+          }
+        }
+      }
+
+      // Utrzymaj hover na button gdy cursor jest nad dropdown-menu
+      &:hover > a {
+        color: var(--firstBlue-color);
+
+        &::before {
+          transform: scaleY(1);
         }
       }
 
@@ -360,12 +411,6 @@ html {
       }
     }
   }
-}
-
-// Dark theme override for nav menu hover effect
-.dark-theme .nav-container nav.site-nav a:hover {
-  background-color: var(--forthGray-color);
-  color: var(--firstBlue-color);
 }
 
 // Light theme - dropdown menu hover (text color)

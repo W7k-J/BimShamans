@@ -16,7 +16,7 @@ authors:
         image_front: "/images/images-main/About_Authors_JulianWandzilak_Main.png"
         image_back: "/images/images-main/About_Authors_JulianWandzilak_Alter.webp"
       - title: "Independent Architect & Programmer"
-        content: "I've gained my professional experience working in the UK (Manchester, London), USA (Chicago) and Poland (Kraków). I was also involved in architectural projects in Australia and Norway. During my professional life I've participated in preparing **masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings, interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses.** \n\n All of it showed me that everywhere in the world we have a similar problem - 'WE NEED MORE AUTOMATIONS'. Sadly no one is interested in doing it for us! So I decided to take matters into my own hands. I learned to program and started publishing. You can find my plugins for Revit on the Autodesk App Store – Drafter and Leveler. They automate the work of architects and engineers, allowing them to complete tasks faster and with predictable repeatability."
+        content: "I've gained my professional experience working in the UK (Manchester, London), USA (Chicago) and Poland (Kraków). I was also involved in architectural projects in Australia and Norway. **During my professional life I've participated in preparing masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings, interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses.** \n\n All of it showed me that everywhere in the world we have a similar problem - 'WE NEED MORE AUTOMATIONS'. Sadly no one is interested in doing it for us! So I decided to take matters into my own hands. I learned to program and started publishing. You can find my plugins for Revit on the Autodesk App Store – Drafter and Leveler. They automate the work of architects and engineers, allowing them to complete tasks faster and with predictable repeatability."
       - title: "Expertise & Tools"
         content: "**Dynamo scripts** | **Revit automation** | **C# development** | **Plugin creation** | **Workflow optimization** | **Data management**\n\n- Published **Drafter** and **Leveler** plugins on Autodesk App Store\n- Drafter contains ~180 automations for streamlined daily work\n- **UAV pilot** (VLOS and BVLOS, up to 25kg)\n- **3D modeling**, 2D & 3D graphic design, brand identities\n- Laser scanning for construction (point cloud processing)"
       - title: "Specialization Philosophy"
@@ -39,7 +39,7 @@ authors:
         content: "To be honest, I'm **too lazy for boring tasks**. I can't stand doing the same thing many times if I can automate it. Yes, I may have spent hours coding just to skip a 10-minute task. No regrets 😄\n\nFor me, automation isn't just a technical solution — it's what gives me the freedom to do more of what I love: **hiking**, **training**, and **relaxing on the terrace with my charming cat** 🐾"
 
   - name: "Piotr Spyra"
-    intro: "BIM Coordinator and BIM Manager with strong civil engineering background. Specialist in coordination, data analysis, material take-offs and value delivery between construction site and design "
+    intro: "BIM Coordinator and BIM Manager with strong civil engineering background. Specialist in coordination, data analysis, material take-offs and value delivery between construction site and design team. "
     initial_active: 2
     feature_cards:
       - title: ""
@@ -48,17 +48,19 @@ authors:
         image_front: "/images/images-main/About_Authors_PiotrSpyra_Main.png"
         image_back: "/images/images-main/About_Authors_PiotrSpyra_Alter.webp"
       - title: "BIM Coordinator, Data Analyst & Structural Designer"
-        content: "I'm the kind of person who sees a repetitive task and thinks: **'I won't waste my colleagues' or my own potential on endless clicking...'** \n\nI believe **automation is the key** to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery. **Standardization**, on the other hand, is the foundation of successful automation. \n\n**BIM Coordinator** in Advanced Technology and Life Science, **BIM Manager** in Real Estate\n, **Civil Engineer** with structural design expertise\n, **On-site experience** & unlimited building license.\n\n"
+        content: "I'm Civil Engineer with structural design expertise, on-site experience & unlimited building license. **I work as BIM Coordinator and BIM Manager with industrial projects across Advanced Technology and Life Science area and also in Real Estate market**. This wide experience allows me to think about BIM as a standarized way of enhancing digital design and delivery, construction process support and awarenes of data use. My responsibility is to assure both, a final product and the way to achieve it, as reliable as possible, filling the needs of all participant. \n\n I'm the kind of person who sees a repetitive task and thinks: 'I won't waste my colleagues' or my own potential on endless clicking...' **I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery**. Standardization, on the other hand, is the foundation of successful automation."
       - title: "Expertise & Tools"
         content: "**Specializations:**\n- **Revit & Dynamo** scripting\n- **Material take-offs** (Excel & Power BI)\n- **Clash management** & resolution\n- **Data-driven insights** for decision-making\n- **Standards & libraries** development"
       - title: "Specialization Philosophy"
-        content: "I'm a **fan of the BIM concept** as a major leap forward in transparency, standardization, process organization, and reducing wasted effort in the construction industry.\n\nI focus on **eliminating inefficiencies** and overproduction, **developing data workflows**, and **maximizing their reuse** across the widest possible range of use cases. I support companies in implementing those **BIM 'use cases' with the highest ROI** and potential to significantly improve daily work.\n\n**In my free time:** Indoor and outdoor climbing, long hiking trips"
+        content: "I'm a **fan of the BIM concept itself** as a major leap forward in transparency, standardization, process organization, and reducing wasted effort in the construction industry.\n\nI focus on **eliminating inefficiencies and overproduction, developing data workflows and maximizing data reuse across the widest possible range of use cases**. I support teams with following the rules and reasons of 'BIM' on the project, proceed QA checks and (what I really like to be honest) participate in a design process as clash verifier and data analyst. As automation specialist, I'm looking for potential to significantly improve daily work with technology support.\n\nIn my free time: **Indoor and outdoor climbing, long hiking trips and discovering new things.**"
 ---
 
 ## About Authors
 
 > The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to&nbsp;know_**. A shaman is literally the **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
+
+#### The Tribe
 
 The team behind BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through **automation**, **standardization**, and **pragmatic engineering**.
 

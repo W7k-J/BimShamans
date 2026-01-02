@@ -84,7 +84,7 @@
                 
                 <!-- About with dropdown menu -->
                 <div class="dropdown-wrapper">
-                    <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' or page.url contains '/project' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>
+                    <a role="button" onclick="return false" class="{% if page.url contains '/about' or page.url contains '/project' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>
                     <div class="dropdown-menu">
                         {% if page.lang == 'pl' %}
                             <a href="{{ site.baseurl }}/{{ page.lang }}/project/">Projekt</a>

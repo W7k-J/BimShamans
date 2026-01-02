@@ -4,7 +4,7 @@ title: Autorzy
 lang: pl
 ref: authors
 permalink: /pl/authors/
-cards_height: 400px
+cards_height: 500px
 authors:
   - name: "Julian Wandzilak"
     intro: "Niezależny architekt, projektant, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM z opublikowanymi pluginami Revit'a używanymi przez tysiące profesjonalistów na całym świecie."
@@ -55,16 +55,18 @@ authors:
         content: "Jestem **fanem koncepcji BIM** jako ogromnego kroku naprzód w zakresie przejrzystości, standaryzacji i uporządkowania procesów oraz ograniczania marnotrawstwa w branży budowlanej.\n\nKoncentruję się na **eliminowaniu nieefektywności** i nadprodukcji, **rozwijaniu przepływów danych** i **maksymalnym ich wykorzystaniu** w najszerszym spektrum przypadków. Wspieramfirmy we wdrażaniu tych **\"przypadków użycia\" BIM z najwyższym ROI** i potencjałem do realnej poprawy pracy.\n\n**W wolnym czasie:** Wspinaczka i długie górskie wędrówki 🏔️"
 ---
 
-## O naszych Autorach
+## O Autorach
 
 > Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. Szaman to dosłownie **_'ten, który wie'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
+
+#### Plemię
 
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
 
 {% for author in page.authors %}
 
-## {{ author.name }}
+#### {{ author.name }}
 
 {{ author.intro }}
 
