@@ -5,6 +5,14 @@ lang: pl
 ref: 2024-12-30-BIMSmithWinter2024
 date: 2024-12-30 12:00:00
 author: Julian
+excerpt: "Intensywny rok pełen projektów architektonicznych, wyzwań programistycznych i zaangażowania w ekosystem BIM."
+filter_hash_list:
+  - "Revit"
+  - "Społeczność"
+  - "Konkurs"
+category: "Społeczność"
+image: /images/posts/bimsmith-winter-2024.jpg
+popularity: 8
 ---
 
 <!--excerpt-->

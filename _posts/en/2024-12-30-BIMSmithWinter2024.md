@@ -5,6 +5,14 @@ lang: en
 ref: 2024-12-30-BIMSmithWinter2024
 date: 2024-12-30 12:00:00
 author: Julian
+excerpt: "An intensive year full of architectural projects, coding challenges, and community involvement in the BIM ecosystem."
+filter_hash_list:
+  - "Revit"
+  - "Community"
+  - "Competition"
+category: "Community"
+image: /images/posts/bimsmith-winter-2024.jpg
+popularity: 8
 ---
 
 <!--excerpt-->
