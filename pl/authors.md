@@ -4,7 +4,7 @@ title: Autorzy
 lang: pl
 ref: authors
 permalink: /pl/authors/
-cards_height: 400px
+cards_height: 500px
 authors:
   - name: "Julian Wandzilak"
     intro: "Niezależny architekt, projektant, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM z opublikowanymi pluginami Revit'a używanymi przez tysiące profesjonalistów na całym świecie."
