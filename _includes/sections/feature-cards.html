@@ -1,10 +1,35 @@
 {% assign lang = page.lang | default: site.default_lang %}
+{% assign cards = include.cards | default: page.feature_cards %}
+{% comment %} Determine which card should be active on page load {% endcomment %}
+{% assign initial_active_index = include.initial_active | default: page.initial_active %}
+{% if initial_active_index == blank %}
+  {% comment %} If initial_active not set, use default logic for author sections vs normal sections {% endcomment %}
+  {% assign has_first_image = cards[0].image_front %}
+  {% if has_first_image %}
+    {% assign initial_active_index = 2 %}
+  {% else %}
+    {% assign initial_active_index = 1 %}
+  {% endif %}
+{% endif %}
 
 <section class="feature-cards-section">
   <div class="feature-cards" {% if page.cards_height %}style="height: {{ page.cards_height }}"{% endif %}>
-    {% for card in page.feature_cards %}
-    <div class="feature-card {% if forloop.first %}active{% endif %}" data-feature="card-{{ forloop.index }}">
+    {% for card in cards %}
+    <div class="feature-card {% if forloop.index == initial_active_index %}active{% endif %}{% if card.image_front %} feature-card--image{% endif %}" data-feature="card-{{ forloop.index }}" {% if card.image_width_start or card.image_width %}style="{% if card.image_width_start %}flex-basis: {{ card.image_width_start }};{% endif %} {% if card.image_width %}min-width: {{ card.image_width }};{% endif %}"{% endif %}>
       <div class="feature-card__background"></div>
+      
+      <!-- Image overlay (for author cards without content) -->
+      {% if card.image_front %}
+      {% unless card.content %}
+      <div class="feature-card__image-container">
+        <img src="{{ site.baseurl }}{{ card.image_front }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--front">
+        {% if card.image_back %}
+        <img src="{{ site.baseurl }}{{ card.image_back }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--back">
+        {% endif %}
+      </div>
+      {% endunless %}
+      {% endif %}
+      
       <div class="feature-card__content">
         <div class="feature-card__text">{{ card.content | markdownify }}</div>
       </div>

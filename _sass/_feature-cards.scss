@@ -49,6 +49,8 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
               background-color 0.4s ease;
   
   flex-grow: 1;
+  // flex-basis set to card-inactive-width (same as :not(.active) state below)
+  // This ensures consistent collapsed width in both default and explicit :not(.active) rules
   flex-basis: $card-inactive-width;
   
   display: flex;
@@ -64,6 +66,44 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     pointer-events: none;
   }
   
+  &__image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 5; // Above content when present
+  }
+  
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity $card-transition-duration $card-transition-timing;
+    
+    &--front {
+      opacity: 1;
+    }
+    
+    &--back {
+      opacity: 0;
+    }
+  }
+  
+  &:hover &__image--front {
+    opacity: 0;
+  }
+  
+  &:hover &__image--back {
+    opacity: 1;
+  }
+  
   &__content {
     position: absolute;
     top: 0;
@@ -77,6 +117,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     transition: opacity $card-transition-duration $card-transition-timing;
     
     overflow-y: auto;
+    z-index: 3; // Below image-container
   }
   
   &__text {
@@ -220,7 +261,14 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     }
   }
   
+  // Override for image-only cards (author cards) - keep fixed width even when active
+  &.active.feature-card--image {
+    flex-grow: 0;
+    flex-basis: inherit; // Respect inline style (image_width_start)
+  }
+  
   // Inactive state - collapsed cards
+  // flex-basis: $card-inactive-width same as parent default above to maintain consistent behavior
   &:not(.active) {
     flex-grow: 0;
     flex-basis: $card-inactive-width;
@@ -234,4 +282,26 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   &:hover {
     background-color: rgba(150, 150, 170, 0.35);
   }
+}
+
+// Special handling for feature-cards with fixed-width image cards (author cards)
+.feature-cards:has(.feature-card--image) {
+  .feature-card--image {
+    flex: 0 0 auto; // Respect inline style (image_width_start)
+  }
+}
+
+// Image glow animation - same effect as logo-glow in nav bar
+@keyframes image-glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 8px var(--firstBlue-color)) brightness(1);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px var(--secondBlue-color)) brightness(1.2);
+  }
+}
+
+// Apply glow effect to author images on hover
+.feature-card.feature-card--image:hover .feature-card__image-container {
+  animation: image-glow 2s ease-in-out infinite;
 }

@@ -5,6 +5,7 @@ lang: en
 ref: project
 permalink: /en/project/
 cards_height: 400px
+initial_active: 1
 feature_cards:
   - title: "Observation"
     content: "For years, **we have been closely following the evolution of Digital Delivery and the technological solutions** that come with it. We witnessed how the studios and companies we worked for purchased their first licenses for \"BIM software,\" appointed their first BIM managers, and took on the challenge of their first standardization efforts. We observed it all up close - actively participating in design, coordination, standardization, modeling, and data management processes ourselves. We created the first automations, Dynamo scripts, workflows, and even devised tricks to bypass the limitations imposed by software developers. Over time, **we became 'those who know'** - the ones people turn to for answers."
@@ -36,7 +37,7 @@ feature_cards:
         <path d="M7.41058 13.8283L8.51463 14.8807C8.82437 15.1759 9 15.5875 9 16.0182C9 16.6653 9.518 17.1899 10.157 17.1899H13.843C14.482 17.1899 15 16.6653 15 16.0182C15 15.5875 15.1756 15.1759 15.4854 14.8807L16.5894 13.8283C18.1306 12.3481 18.9912 10.4034 18.9999 8.3817L19 8.29678C19 4.84243 15.866 2 12 2C8.13401 2 5 4.84243 5 8.29678L5.00007 8.3817C5.00875 10.4034 5.86939 12.3481 7.41058 13.8283Z" fill="currentColor"/>
       </svg>
   - title: "Reality"
-    content: "Yeah, that's it.\n<div style=\"display: flex; gap: 10px; justify-content: center; align-items: center;\"><img src=\"/images/images-main/Image_About_BIMSpecialist-A.jpg\" alt=\"BIM Specialist\" height=\"220\"><img src=\"/images/images-main/Image_About_BIMSpecialist-B.jpg\" alt=\"in a nutshell\" height=\"220\"></div>"
+    content: "And here we are...\n<div style=\"display: flex; gap: 10px; justify-content: center; align-items: center;\"><img src=\"/images/images-main/Image_About_BIMSpecialist-A.jpg\" alt=\"BIM Specialist\" height=\"220\"><img src=\"/images/images-main/Image_About_BIMSpecialist-B.jpg\" alt=\"in a nutshell\" height=\"220\"></div>"
     icon: |
       <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
         <path d="M7.60379 4.60379C9.33965 2.86793 10.2076 2 11.2861 2C12.3646 2 13.2326 2.86793 14.9684 4.60379L19.3872 9.02256C21.123 10.7584 21.991 11.6263 21.991 12.7049C21.991 13.7834 21.123 14.6513 19.3872 16.3872C17.6513 18.123 16.7834 18.991 15.7049 18.991C14.6263 18.991 13.7584 18.123 12.0226 16.3872L7.60379 11.9684C5.86793 10.2326 5 9.36462 5 8.2861C5 7.20757 5.86793 6.33965 7.60379 4.60379Z" fill="currentColor"/>
@@ -118,10 +119,10 @@ feature_cards:
 > The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to&nbsp;know_**. A shaman is literally the **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
-#### TL;DR
-We solve problems which satellites civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal.  
-**Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
+#### Forming the campfire
+We solve problems which satellites civil enginneering, BIM technology, automation and data analysis. What unites us is a results-first approach - cutting through the marketing fluff and taking a straight engineering path to the goal. **Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
 
+#### Diving into the flame
 {% include sections/feature-cards.html %}
 
 &nbsp;
