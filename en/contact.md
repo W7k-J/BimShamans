@@ -63,7 +63,7 @@ permalink: /en/contact/
 
         <div class="form-group">
             <label for="message" class="form-label">
-                Message
+                    Message (min. 10 characters)
             </label>
             <textarea 
                 id="message" 
