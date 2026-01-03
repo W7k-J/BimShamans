@@ -1,3 +1,42 @@
+// Autofill fix for consistent background
+input.form-input:-webkit-autofill,
+textarea.form-textarea:-webkit-autofill {
+    background: var(--forthGray-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    -webkit-text-fill-color: var(--firstGray-color) !important;
+    transition: background 0s;
+}
+
+input.form-input:-webkit-autofill:focus,
+textarea.form-textarea:-webkit-autofill:focus {
+    background: var(--forthGray-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    -webkit-text-fill-color: var(--firstGray-color) !important;
+}
+
+input.form-input:-moz-autofill,
+textarea.form-textarea:-moz-autofill {
+    background: var(--forthGray-color) !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    color: var(--firstGray-color) !important;
+}
+
+input.form-input:-ms-input-autofill,
+textarea.form-textarea:-ms-input-autofill {
+    background: var(--forthGray-color) !important;
+    color: var(--firstGray-color) !important;
+}
+.form-input:not(:placeholder-shown) {
+    background: var(--forthGray-color);
+    transition: background 0.3s;
+}
+
+.form-group.message-filled .form-textarea {
+    background: var(--forthGray-color);
+    transition: background 0.3s;
+}
 // Contact Form Styles
 .contact-header {
     text-align: center;

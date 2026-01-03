@@ -18,6 +18,18 @@
                 label.style.color = 'var(--firstGray-color)';
             }
         });
+
+        // Specjalna obsługa dla textarea (wiadomość)
+        if (input.classList.contains('form-textarea')) {
+            input.addEventListener('input', function() {
+                const group = this.closest('.form-group');
+                if (this.value.length >= 10) {
+                    group.classList.add('message-filled');
+                } else {
+                    group.classList.remove('message-filled');
+                }
+            });
+        }
     });
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
