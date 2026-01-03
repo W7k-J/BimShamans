@@ -492,11 +492,23 @@
     z-index: 10;
   }
 
+  // Description text area (40% upper section)
+  &__description {
+    margin: 0 0 0.75rem 0;
+    color: var(--forthGray-color);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    flex: 0 0 auto;
+    order: -1;
+  }
+
+  // Tags section (lower 60%)
   &__tags {
     display: flex;
     gap: 0.6rem;
     flex-wrap: wrap;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
   }
 
   &__tag {
@@ -513,9 +525,10 @@
   &__author {
     color: var(--firstBlue-color);
     font-size: 0.9rem;
-    font-weight: 500;
-    margin-bottom: 1rem;
+    font-weight: 400;
     text-transform: capitalize;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
   }
 
   &__cta {
@@ -571,6 +584,11 @@
   color: var(--firstGray-color);
 }
 
+// Light theme - arrow icon (white)
+.light-theme .blog-card__icon img {
+  filter: brightness(0) invert(1);
+}
+
 // Dark theme - blog card hover background (inverse)
 .dark-theme .blog-card:hover {
   background-color: var(--raisinBlack);
@@ -581,6 +599,7 @@
   display: flex;
   align-items: center;
   gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 // Blog card icon (like feature-card__icon)
@@ -623,11 +642,22 @@
 
 // Blog card main text (like feature-card__main)
 .blog-card__main {
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1.2rem;
   color: var(--firstBlue-color);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   text-transform: capitalize;
+  transition: font-weight 0.1s ease-out;
+}
+
+// Blog card label hover state
+.blog-card__label:hover .blog-card__main {
+  font-weight: bold;
+}
+
+// Blog card label hover state
+.blog-card__label:hover .blog-card__main {
+  font-weight: bold;
 }

@@ -211,11 +211,11 @@ class BlogManager {
       : '';
 
     const category = post.category || (post.tags && post.tags[0]) || 'Blog';
-    const author = post.author ? `By <strong>${post.author}</strong>` : '';
+    const author = post.author ? `by ${post.author}` : '';
     const excerpt = post.excerpt || 'Read more to discover...';
     
-    // Right arrow icon SVG
-    const arrowIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
+    // Right arrow icon SVG file
+    const arrowIcon = `<img src="/images/icons/icons_alt-arrow-right.svg" alt="arrow" />`;
 
     return `
       <article class="blog-card" data-tags="${(post.tags || []).join(',')}">
@@ -230,12 +230,13 @@ class BlogManager {
         </div>
         
         <div class="blog-card__overlay">
+          <p class="blog-card__description">${post.description || 'Discover more insights and details about this article.'}</p>
           <div class="blog-card__tags">${tagsHtml}</div>
           ${author ? `<p class="blog-card__author">${author}</p>` : ''}
           <a href="${post.url}" class="blog-card__label">
             <div class="blog-card__icon">${arrowIcon}</div>
             <div class="blog-card__info">
-              <div class="blog-card__main">read more</div>
+              <div class="blog-card__main">Read more</div>
             </div>
           </a>
         </div>
