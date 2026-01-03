@@ -11,7 +11,7 @@ filter_hash_list:
   - "Community"
   - "Competition"
 category: "Community"
-image: /images/posts/bimsmith-winter-2024.jpg
+image: /images/posts/images-posts/2026-01-03-DigitalDelivery-CDE (2).jpg
 popularity: 8
 ---
 
