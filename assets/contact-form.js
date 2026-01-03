@@ -73,8 +73,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (submitBtn) {
                 const originalBg = submitBtn.style.background;
                 const originalText = submitBtn.textContent;
-                submitBtn.style.background = 'linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%)';
                 submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
+                submitBtn.style.background = 'var(--firstBlue-color)';
+                submitBtn.style.color = 'var(--ghostWhite)';
+                submitBtn.blur(); // Usuwa focus, wymusza repaint i natychmiast pokazuje tekst
                 
                 // Usunięto automatyczne resetowanie formularza i ukrywanie komunikatu — sukces zostaje widoczny.
             }
