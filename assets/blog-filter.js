@@ -119,6 +119,22 @@ class BlogManager {
     this.currentSortBy = sortBy;
     this.currentDirection = direction;
 
+    // Determine language for label
+    const isPolish = document.documentElement.lang === 'pl';
+    const sortLabels = {
+      date: isPolish ? 'data utworzenia' : 'date created',
+      title: isPolish ? 'tytuł' : 'title',
+      author: isPolish ? 'autor' : 'author'
+    };
+    
+    // Update button label
+    const sortLabel = document.getElementById('sort-label');
+    if (sortLabel) {
+      sortLabel.textContent = sortLabels[sortBy] || sortLabels.date;
+    }
+
+    this.updateSortUI(sortBy);
+
     const multiplier = direction === 'asc' ? 1 : -1;
 
     switch(sortBy) {
@@ -241,7 +257,6 @@ class BlogManager {
         const sortBy = sortOption.dataset.sort;
         if (sortBy) {
           this.sort(sortBy, this.currentDirection);
-          this.updateSortUI(sortBy);
         }
         return;
       }

@@ -42,7 +42,7 @@
   background-color: var(--background-color);
   color: var(--firstGray-color);
   font-family: inherit;
-  font-size: 0.875rem;
+  font-size: 1rem;
   height: 44px;
   display: flex;
   align-items: center;
@@ -141,6 +141,7 @@
   position: relative;
   display: flex;
   align-items: center;
+  margin-right: auto;
 
   .blog__sort-button {
     position: relative;
@@ -149,7 +150,7 @@
     color: var(--firstGray-color);
     cursor: pointer;
     font-family: inherit;
-    font-size: 0.875rem;
+    font-size: 1rem;
     font-weight: 300;
     letter-spacing: 1px;
     padding: 0 $nav-padding-x;
@@ -160,6 +161,12 @@
     align-items: center;
     justify-content: center;
     border-radius: $radius-small;
+    min-width: 220px;
+    white-space: nowrap;
+
+    #sort-label {
+      margin-left: 0.5em;
+    }
 
     &::before {
       content: '';
@@ -194,7 +201,7 @@
   // Dropdown menu (like .dropdown-menu)
   .blog__sort-menu {
     position: absolute;
-    top: calc(100% + 0.5rem);
+    top: calc(100% - 0.5rem);
     left: 0;
     background-color: var(--forthGray-color);
     display: none;
@@ -225,8 +232,8 @@
     }
 
     &.active {
-      background-color: var(--firstBlue-color);
-      color: var(--ghostWhite);
+      background-color: var(--background-color);
+      color: var(--background-color);
       font-weight: 600;
     }
 
@@ -261,6 +268,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
+  margin-left: auto;
 
   span {
     color: var(--secondGray-color);
@@ -271,7 +279,7 @@
 .blog__direction-btn {
   background: transparent;
   border: 1px solid transparent;
-  border-radius: 999px;
+  border-radius: $radius-small;
   color: var(--firstGray-color);
   cursor: pointer;
   display: inline-flex;

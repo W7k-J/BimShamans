@@ -32,11 +32,12 @@ excerpt: "Insights, methodologies, and best practices in BIM coordination"
       <div class="blog__sort-wrapper">
         <button 
           class="blog__sort-button" 
+          id="sort-button"
           role="button" 
           onclick="return false"
           aria-label="Sort by options"
         >
-          sort by
+          sort by: <span id="sort-label">date created</span>
         </button>
         <div class="blog__sort-menu">
           <button class="blog__sort-option" data-sort="date">date created</button>
