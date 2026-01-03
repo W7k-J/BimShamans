@@ -8,21 +8,29 @@ permalink: /pl/home/
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
+{% include svg-glitch-filter.html %}
+
 <div class="hero-section hero-section--banner">
   <div class="hero-banner" role="img" aria-label="BIM Shamans">
     <span class="visually-hidden">BIM Shamans</span>
     <div class="hero-banner__circuit" aria-hidden="true">
       <div class="hero-banner__circuit-glow"></div>
-        <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
+      <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
     </div>
-    <div class="glitch-container">
-      <h1 class="glitch-text" data-text="BIM Shamans">
-        <span class="hero-word">BIM</span>
-        <span class="hero-flame" aria-hidden="true">
-          <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
-        </span>
-        <span class="hero-word">Shamans</span>
-      </h1>
+    <div class="hero-banner__content">
+      <figure class="glitch-filter-example glitch-filter-example--bim">
+        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
+          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="middle" x="50%" dy="0.35em">BIM</text>
+        </svg>
+      </figure>
+      <div class="hero-flame" aria-hidden="true">
+        <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
+      </div>
+      <figure class="glitch-filter-example glitch-filter-example--shamans">
+        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
+          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="middle" x="50%" dy="0.35em">Shamans</text>
+        </svg>
+      </figure>
     </div>
   </div>
 </div>
