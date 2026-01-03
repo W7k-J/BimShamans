@@ -6,62 +6,85 @@ ref: contact
 permalink: /pl/contact/
 ---
 
-# Formularz Kontaktowy
+<div class="contact-header">
+    <h1>Gotowy na Transformację BIM?</h1>
+    <p>Omówmy, jak możemy zoptymalizować Twój proces budowlany</p>
+</div>
 
-<form action="https://formspree.io/f/xanlqpop" method="POST" class="contact-form" novalidate>
-  <!-- Opcjonalny temat wiadomości -->
-  <input type="hidden" name="_subject" value="Formularz kontaktowy - Strona">
-  <!-- Honeypot anty-spam -->
-  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-  <div class="form-group">
-    <label for="imie">Imię (obowiązkowe):</label>
-    <input type="text" id="imie" name="imie" required autocomplete="given-name">
-  </div>
-
-  <div class="form-group">
-    <label for="nazwisko">Nazwisko (nieobowiązkowe):</label>
-    <input type="text" id="nazwisko" name="nazwisko" autocomplete="family-name">
-  </div>
-
-  <div class="form-group">
-    <label for="email">Adres email (obowiązkowe):</label>
-    <input type="email" id="email" name="email" required autocomplete="email">
-  </div>
-
-  <fieldset class="form-group">
-    <legend>Preferuję kontakt telefoniczny:</legend>
-    <div class="radio-group">
-      <input type="radio" id="kontakt-tak" name="kontakt_preferencja" value="tak">
-      <label for="kontakt-tak">Tak</label>
-      <input type="radio" id="kontakt-nie" name="kontakt_preferencja" value="nie">
-      <label for="kontakt-nie">Nie</label>
+<div class="form-container">
+    <div class="success-message" id="successMessage">
+        <strong>Dziękujemy!</strong> Twoja wiadomość została wysłana pomyślnie. Odpowiemy wkrótce.
     </div>
-  </fieldset>
 
-  <div class="form-group">
-    <label for="telefon">Numer telefonu (nieobowiązkowe):</label>
-    <input type="tel" id="telefon" name="telefon" autocomplete="tel">
-  </div>
+    <form class="form-grid" id="contactForm" novalidate>
+        <div class="form-group">
+            <label for="name" class="form-label">
+                Imię i Nazwisko <span class="required">*</span>
+            </label>
+            <input 
+                type="text" 
+                id="name" 
+                name="name" 
+                class="form-input" 
+                placeholder="Jan Kowalski"
+                required
+                autocomplete="name"
+            >
+        </div>
 
-  <div class="form-group">
-    <label for="temat">Temat wiadomości (obowiązkowe):</label>
-    <input type="text" id="temat" name="temat" required>
-  </div>
+        <div class="form-group">
+            <label for="email" class="form-label">
+                Adres Email <span class="required">*</span>
+            </label>
+            <input 
+                type="email" 
+                id="email" 
+                name="email" 
+                class="form-input" 
+                placeholder="jan@firma.pl"
+                required
+                autocomplete="email"
+            >
+        </div>
 
-  <div class="form-group">
-    <label for="wiadomosc">Wiadomość (obowiązkowe):</label>
-    <textarea id="wiadomosc" name="message" required rows="6"></textarea>
-  </div>
+        <div class="form-group">
+            <label for="subject" class="form-label">
+                Temat <span class="required">*</span>
+            </label>
+            <input 
+                type="text" 
+                id="subject" 
+                name="subject" 
+                class="form-input" 
+                placeholder="Czego dotyczy zapytanie?"
+                required
+            >
+        </div>
 
-  <!-- Załącznik (usuń jeśli nie używasz / plan Free może blokować) -->
-  <div class="form-group">
-    <label for="zalacznik">Załącznik (nieobowiązkowe):</label>
-    <input type="file" id="zalacznik" name="zalacznik">
-  </div>
+        <div class="form-group">
+            <label for="message" class="form-label">
+                Wiadomość <span class="required">*</span>
+            </label>
+            <textarea 
+                id="message" 
+                name="message" 
+                class="form-textarea" 
+                placeholder="Powiedz nam więcej o swoim zapytaniu..."
+                required
+                minlength="10"
+            ></textarea>
+        </div>
 
-  <div class="form-group">
-    <button type="submit" class="button">Wyślij</button>
-  </div>
-</form>
+        <button type="submit" class="button expand" data-success-text="Wysłano!">
+            Wyślij Wiadomość
+        </button>
+
+        <div class="privacy-notice">
+            <strong>Informacja o prywatności:</strong> Szanujemy Twoją prywatność i nigdy nie udostępnimy Twoich danych osobowych. 
+            Twoje dane są wykorzystywane wyłącznie w celu odpowiedzi na zapytanie i doskonalenia naszych usług.
+        </div>
+    </form>
+</div>
+
+<script src="{{ site.baseurl }}/assets/contact-form.js"></script>
 
