@@ -102,6 +102,18 @@ permalink: /pl/home/
       <img src="xyz.jpg" alt="Ilustracja partnerstwa">
     </div>
   </div>
+
+  <div class="feature-section feature-section--reverse">
+    <div class="feature-section__content">
+      <h2>Szósta sekcja</h2>
+      <p>
+        Tekst tekst tekst jako tymczasowy opis szóstej sekcji. Tutaj dodaj treść dla szóstego akapitu.
+      </p>
+    </div>
+    <div class="feature-section__media">
+      <img src="xyz.jpg" alt="Ilustracja szóstej sekcji">
+    </div>
+  </div>
 </section>
 
 ## Najnowsze posty:
