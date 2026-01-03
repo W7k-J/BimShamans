@@ -26,7 +26,7 @@ permalink: /en/contact/
                 id="name" 
                 name="name" 
                 class="form-input" 
-                placeholder="John Doe"
+                placeholder="Jane Smith"
                 required
                 autocomplete="name"
             >
@@ -41,7 +41,7 @@ permalink: /en/contact/
                 id="email" 
                 name="email" 
                 class="form-input" 
-                placeholder="john@company.com"
+                placeholder="jane.smith@yourcompany.com"
                 required
                 autocomplete="email"
             >
@@ -69,7 +69,7 @@ permalink: /en/contact/
                 id="message" 
                 name="message" 
                 class="form-textarea" 
-                placeholder="Tell us more about your inquiry..."
+                placeholder="Briefly describe your project or question"
                 required
                 minlength="10"
             ></textarea>

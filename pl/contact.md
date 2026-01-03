@@ -26,7 +26,7 @@ permalink: /pl/contact/
                 id="name" 
                 name="name" 
                 class="form-input" 
-                placeholder="Jan Kowalski"
+                placeholder="Anna Nowak"
                 required
                 autocomplete="name"
             >
@@ -41,7 +41,7 @@ permalink: /pl/contact/
                 id="email" 
                 name="email" 
                 class="form-input" 
-                placeholder="jan@firma.pl"
+                placeholder="anna.nowak@twojafirma.pl"
                 required
                 autocomplete="email"
             >
@@ -69,7 +69,7 @@ permalink: /pl/contact/
                 id="message" 
                 name="message" 
                 class="form-textarea" 
-                placeholder="Powiedz nam więcej o swoim zapytaniu..."
+                placeholder="Opisz krótko swój projekt lub pytanie"
                 required
                 minlength="10"
             ></textarea>
