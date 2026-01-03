@@ -171,10 +171,10 @@
 }
 
 .success-message {
-    background: linear-gradient(135deg, var(--firstBlue-color), var(--secondBlue-color));
-    color: var(--ghostWhite);
-    padding: 1rem;
-    border-radius: 12px;
+    background: none;
+    color: var(--firstGray-color);
+    padding: 0;
+    border-radius: 0;
     margin-bottom: 1.5rem;
     display: none;
     animation: slideDown 0.5s ease-out;

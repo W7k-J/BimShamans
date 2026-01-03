@@ -76,15 +76,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.style.background = 'linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%)';
                 submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
                 
-                // Reset form after delay
-                setTimeout(() => {
-                    form.reset();
-                    if (successMessage) {
-                        successMessage.style.display = 'none';
-                    }
-                    submitBtn.style.background = originalBg || '';
-                    submitBtn.textContent = originalText;
-                }, 3000);
+                // Usunięto automatyczne resetowanie formularza i ukrywanie komunikatu — sukces zostaje widoczny.
             }
             
             // Scroll to top of form
