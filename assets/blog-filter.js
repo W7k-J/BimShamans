@@ -214,8 +214,8 @@ class BlogManager {
     const author = post.author ? `By <strong>${post.author}</strong>` : '';
     const excerpt = post.excerpt || 'Read more to discover...';
     
-    // Arrow icon SVG
-    const arrowIcon = `<svg class="blog-card__cta-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>`;
+    // Right arrow icon SVG
+    const arrowIcon = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>`;
 
     return `
       <article class="blog-card" data-tags="${(post.tags || []).join(',')}">
@@ -232,7 +232,12 @@ class BlogManager {
         <div class="blog-card__overlay">
           <div class="blog-card__tags">${tagsHtml}</div>
           ${author ? `<p class="blog-card__author">${author}</p>` : ''}
-          <a href="${post.url}" class="btn blog-card__cta">${arrowIcon}Read More</a>
+          <a href="${post.url}" class="blog-card__label">
+            <div class="blog-card__icon">${arrowIcon}</div>
+            <div class="blog-card__info">
+              <div class="blog-card__main">read more</div>
+            </div>
+          </a>
         </div>
       </article>
     `;

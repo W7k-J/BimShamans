@@ -511,7 +511,7 @@
   }
 
   &__author {
-    color: var(--secondBlue-color);
+    color: var(--firstBlue-color);
     font-size: 0.9rem;
     font-weight: 500;
     margin-bottom: 1rem;
@@ -553,4 +553,81 @@
     margin: 0;
     font-size: 1.1rem;
   }
+}
+
+// Light theme - blog card hover background
+.light-theme .blog-card:hover {
+  background-color: var(--ghostWhite);
+}
+
+// Light theme - blog card overlay (white background)
+.light-theme .blog-card__overlay {
+  background: rgba(255, 255, 255, 0.9);
+  color: var(--firstGray-color);
+}
+
+// Light theme - blog card overlay text should be dark
+.light-theme .blog-card__overlay .blog-card__title {
+  color: var(--firstGray-color);
+}
+
+// Dark theme - blog card hover background (inverse)
+.dark-theme .blog-card:hover {
+  background-color: var(--raisinBlack);
+}
+
+// Blog card label (like feature-card__label)
+.blog-card__label {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+// Blog card icon (like feature-card__icon)
+.blog-card__icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+  min-width: 40px;
+  max-width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  
+  background-color: var(--firstBlue-color);
+  color: white;
+  flex-shrink: 0;
+  overflow: hidden;
+  
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
+  
+  svg {
+    width: 75%;
+    height: 75%;
+    stroke: currentColor;
+    
+    path, circle, rect, polygon, polyline, line {
+      fill: currentColor;
+    }
+  }
+}
+
+// Blog card info (like feature-card__info)
+.blog-card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+// Blog card main text (like feature-card__main)
+.blog-card__main {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: var(--firstBlue-color);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-transform: capitalize;
 }
