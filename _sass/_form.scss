@@ -239,6 +239,7 @@ label[for] {
     }
 }
 
+
 input[required] + label::after,
 textarea[required] + label::after,
 label[for] input[required]::after {
@@ -247,11 +248,7 @@ label[for] input[required]::after {
     font-weight: normal;
 }
 
-// Success state
-input:valid:not(:placeholder-shown),
-textarea:valid:not(:placeholder-shown) {
-    border-color: #28a745;
-}
+// Usunięto zielone podświetlenie dla pól poprawnie wypełnionych
 
 // Focus states
 input:focus:invalid,

@@ -19,7 +19,7 @@ permalink: /pl/contact/
     <form class="form-grid" id="contactForm" novalidate>
         <div class="form-group">
             <label for="name" class="form-label">
-                Imię i Nazwisko <span class="required">*</span>
+                Imię i Nazwisko
             </label>
             <input 
                 type="text" 
@@ -34,7 +34,7 @@ permalink: /pl/contact/
 
         <div class="form-group">
             <label for="email" class="form-label">
-                Adres Email <span class="required">*</span>
+                Adres Email
             </label>
             <input 
                 type="email" 
@@ -49,7 +49,7 @@ permalink: /pl/contact/
 
         <div class="form-group">
             <label for="subject" class="form-label">
-                Temat <span class="required">*</span>
+                Temat
             </label>
             <input 
                 type="text" 
@@ -63,7 +63,7 @@ permalink: /pl/contact/
 
         <div class="form-group">
             <label for="message" class="form-label">
-                Wiadomość <span class="required">*</span>
+                Wiadomość
             </label>
             <textarea 
                 id="message" 
