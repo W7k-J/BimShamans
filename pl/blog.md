@@ -42,10 +42,10 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
           onclick="return false"
           aria-label="Opcje sortowania"
         >
-          sortuj wg: <span id="sort-label">data utworzenia</span>
+          sortuj wg: <span id="sort-label">data</span>
         </button>
         <div class="blog__sort-menu">
-          <button class="blog__sort-option" data-sort="date">data utworzenia</button>
+          <button class="blog__sort-option" data-sort="date">data</button>
           <button class="blog__sort-option" data-sort="title">tytuł</button>
           <button class="blog__sort-option" data-sort="author">autor</button>
         </div>

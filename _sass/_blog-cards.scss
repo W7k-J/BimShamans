@@ -43,6 +43,7 @@
   color: var(--firstGray-color);
   font-family: inherit;
   font-size: 1rem;
+  line-height: 1.4;
   height: 44px;
   display: flex;
   align-items: center;
@@ -151,6 +152,7 @@
     cursor: pointer;
     font-family: inherit;
     font-size: 1rem;
+    line-height: 1.4;
     font-weight: 300;
     letter-spacing: 1px;
     padding: 0 $nav-padding-x;
@@ -228,13 +230,18 @@
 
     &:hover {
       background-color: var(--firstBlue-color);
-      color: var(--ghostWhite);
+      color: var(--background-color);
     }
 
     &.active {
-      background-color: var(--background-color);
-      color: var(--background-color);
+      background-color: var(--forthGray-color);
+      color: var(--firstBlue-color);
       font-weight: 600;
+
+      &:hover {
+        background-color: var(--firstBlue-color);
+        color: var(--background-color);
+      }
     }
 
     &:first-child {

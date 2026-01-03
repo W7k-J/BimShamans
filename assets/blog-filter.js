@@ -122,7 +122,7 @@ class BlogManager {
     // Determine language for label
     const isPolish = document.documentElement.lang === 'pl';
     const sortLabels = {
-      date: isPolish ? 'data utworzenia' : 'date created',
+      date: isPolish ? 'data' : 'date',
       title: isPolish ? 'tytuł' : 'title',
       author: isPolish ? 'autor' : 'author'
     };
@@ -257,6 +257,15 @@ class BlogManager {
         const sortBy = sortOption.dataset.sort;
         if (sortBy) {
           this.sort(sortBy, this.currentDirection);
+        }
+        // Close the dropdown menu
+        const sortMenu = document.querySelector('.blog__sort-menu');
+        if (sortMenu) {
+          sortMenu.style.display = 'none';
+          // Reset after a small delay to allow CSS hover to work again
+          setTimeout(() => {
+            sortMenu.style.display = '';
+          }, 50);
         }
         return;
       }
