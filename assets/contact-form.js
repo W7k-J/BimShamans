@@ -1,3 +1,24 @@
+    // Add focus states for accessibility
+    document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
+        input.addEventListener('focus', function() {
+            const label = this.closest('.form-group').querySelector('.form-label');
+            if (label) {
+                const root = document.documentElement;
+                if (root.classList.contains('dark-theme')) {
+                    label.style.color = 'var(--secondBlue-color)'; // cyjan w dark
+                } else {
+                    label.style.color = 'var(--firstBlue-color)'; // niebieski w light
+                }
+            }
+        });
+
+        input.addEventListener('blur', function() {
+            const label = this.closest('.form-group').querySelector('.form-label');
+            if (label) {
+                label.style.color = 'var(--firstGray-color)';
+            }
+        });
+    });
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     if (!form) return;
@@ -105,20 +126,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Add focus states for accessibility
-    document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
-        input.addEventListener('focus', function() {
-            const label = this.closest('.form-group').querySelector('.form-label');
-            if (label) {
-                label.style.color = 'var(--secondBlue-color)';
-            }
-        });
-
-        input.addEventListener('blur', function() {
-            const label = this.closest('.form-group').querySelector('.form-label');
-            if (label) {
-                label.style.color = 'var(--firstGray-color)';
-            }
-        });
-    });
+    // Usunięto JS zmieniający kolor label na focus/blur — kolor kontroluje tylko CSS.
 });
