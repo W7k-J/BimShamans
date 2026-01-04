@@ -921,6 +921,92 @@
   }
 }
 
+//
+// READING PROGRESSION BAR (Post pages only)
+// Inspired by https://codepen.io/Juxtopposed/pen/yLWbKya
+// Shows reading progress with ruler-style vertical line and tick marks
+//
+
+.progression-bar {
+  width: 2rem;
+  height: calc(100% - #{$nav-height} - 100px); // Start under navbar, end before footer
+  position: fixed;
+  left: 2rem;
+  top: #{$nav-height}; // Start right under navbar
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 100;
+
+  // Vertical line with tick marks
+  &__line {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(var(--firstBlue-color-rgb), 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    // Horizontal tick marks (25 total, every 4%)
+    span {
+      width: 1rem;
+      background-color: rgba(var(--firstBlue-color-rgb), 0.5);
+      height: 1px;
+      position: absolute;
+
+      @for $i from 1 through 25 {
+        &:nth-child(#{$i}) {
+          top: #{($i - 1) * 4}%;
+        }
+      }
+    }
+  }
+
+  // Fixed indicators at top and bottom showing read progress %
+  &__indicator {
+    position: fixed;
+    height: auto;
+    width: auto;
+    padding: 0.25rem 0.5rem;
+    background-color: transparent; // No background
+    z-index: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.75rem;
+    color: var(--firstBlue-color);
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 700;
+    border: none;
+    text-shadow: 0 0 8px rgba(var(--firstBlue-color-rgb), 0.8);
+
+    &--top {
+      top: calc(#{$nav-height} + 0.5rem); // Just under navbar
+    }
+
+    &--bottom {
+      bottom: 5rem; // Above footer space
+    }
+  }
+}
+
+// Hide on mobile and tablet
+@media screen and (max-width: 1024px) {
+  .progression-bar {
+    display: none;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .progression-bar__indicator {
+    transition: none;
+  }
+}
+
 // Blog card label hover state
 .blog-card__label:hover .blog-card__main {
   font-weight: bold;

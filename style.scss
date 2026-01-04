@@ -42,7 +42,9 @@ html {
   --forthGray-color: #{$lightGray};
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
-  --secondBlue-color: #{$ryanCyan};  
+  --firstBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
+  --secondBlue-color: #{$ryanCyan};
+  --secondBlue-color-rgb: 50, 215, 230; // RGB dla rgba()  
   --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
@@ -78,7 +80,9 @@ html {
   --forthGray-color: #{$darkGray};
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
+  --firstBlue-color-rgb: 50, 215, 230; // RGB dla rgba()
   --secondBlue-color: #{$biceBlue};
+  --secondBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
   --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
