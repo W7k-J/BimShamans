@@ -51,9 +51,9 @@
     // Calculate top percentage (how far read from top)
     const topPercent = Math.round((scrollY / (documentHeight - viewportHeight)) * 100);
     
-    // Calculate bottom percentage (how far remaining to read)
+    // Calculate bottom percentage (how far remaining to read from bottom)
     const bottomPercent = Math.round(
-      ((scrollY + viewportHeight - documentHeight) / (documentHeight - viewportHeight)) * 100
+      ((documentHeight - scrollY - viewportHeight) / (documentHeight - viewportHeight)) * 100
     );
 
     // Update indicator text content

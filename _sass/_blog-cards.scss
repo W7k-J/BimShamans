@@ -925,14 +925,15 @@
 // READING PROGRESSION BAR (Post pages only)
 // Inspired by https://codepen.io/Juxtopposed/pen/yLWbKya
 // Shows reading progress with ruler-style vertical line and tick marks
+// Positioned fixed to viewport, tracks full page scroll
 //
 
 .progression-bar {
-  width: 2rem;
-  height: calc(100% - #{$nav-height} - 100px); // Start under navbar, end before footer
+  width: 50px;
   position: fixed;
-  left: 2rem;
-  top: #{$nav-height}; // Start right under navbar
+  left: calc(50vw - 715px); // center of container minus 100px gap (50vw - 600px - 15px - 100px)
+  top: calc(#{$nav-height} + #{$progression-bar-gap} + 15px); // navbar + (gap + indicator height) + extra spacing
+  bottom: calc(86px + #{$progression-bar-gap} + 15px); // footer + (gap + indicator height) + extra spacing
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -943,52 +944,55 @@
   &__line {
     width: 1px;
     height: 100%;
-    background-color: rgba(var(--firstBlue-color-rgb), 0.3);
+    background-color: rgba(var(--firstBlue-color-rgb), 0.35);
     display: flex;
     flex-direction: column;
     align-items: center;
     position: relative;
+  }
 
-    // Horizontal tick marks (25 total, every 4%)
+    // Horizontal tick marks (25 total, evenly distributed from 0% to 100%)
     span {
       width: 1rem;
-      background-color: rgba(var(--firstBlue-color-rgb), 0.5);
+      background-color: rgba(var(--firstBlue-color-rgb), 0.6);
       height: 1px;
       position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
 
       @for $i from 1 through 25 {
         &:nth-child(#{$i}) {
-          top: #{($i - 1) * 4}%;
+          top: calc(#{($i - 1)} * 100% / 24);
         }
       }
+
+      // Bold first and last tick marks
+      &:nth-child(1),
+      &:nth-child(25) {
+        height: 2px;
+        background-color: rgba(var(--firstBlue-color-rgb), 1);
+      }
     }
-  }
 
   // Fixed indicators at top and bottom showing read progress %
   &__indicator {
-    position: fixed;
-    height: auto;
-    width: auto;
-    padding: 0.25rem 0.5rem;
-    background-color: transparent; // No background
-    z-index: 500;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.75rem;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem; // Standard text size
+    font-weight: 400;
     color: var(--firstBlue-color);
-    font-family: 'Source Code Pro', monospace;
-    font-weight: 700;
-    border: none;
-    text-shadow: 0 0 8px rgba(var(--firstBlue-color-rgb), 0.8);
+    font-family: 'Jura', monospace;
+    white-space: nowrap;
+    z-index: 200;
+    pointer-events: auto;
 
     &--top {
-      top: calc(#{$nav-height} + 0.5rem); // Just under navbar
+      top: -2rem; // Above line start
     }
 
     &--bottom {
-      bottom: 5rem; // Above footer space
+      bottom: -2rem; // Below line end
     }
   }
 }
