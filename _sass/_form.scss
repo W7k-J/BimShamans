@@ -55,6 +55,13 @@ textarea.form-textarea:-ms-input-autofill {
     background-clip: text;
 }
 
+.light-theme .contact-header h1 {
+    background: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--firstGray-color) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .contact-header p {
     color: var(--secondGray-color);
     font-size: 1.1rem;
