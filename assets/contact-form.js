@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!form) return;
 
     // Form validation and submission
-    form.addEventListener('submit', function(e) {
+    form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
         // Reset previous errors
@@ -74,27 +74,58 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (isValid) {
+            const formData = new FormData(form);
+            const endpoint = form.getAttribute('action');
+            const submitBtn = document.querySelector('.button[type="submit"]');
+            if (submitBtn) {
+                submitBtn.disabled = true;
+            }
+
             // Show success message
             const successMessage = document.getElementById('successMessage');
             if (successMessage) {
                 successMessage.style.display = 'block';
             }
-            
-            // Animate button
-            const submitBtn = document.querySelector('.button[type="submit"]');
-            if (submitBtn) {
-                const originalBg = submitBtn.style.background;
-                const originalText = submitBtn.textContent;
-                submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
-                submitBtn.style.background = 'var(--firstBlue-color)';
-                submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
-                    ? 'var(--background-color)' // dark theme: use dark text
-                    : 'var(--ghostWhite)'; // light theme: use light text
-                submitBtn.blur(); // Usuwa focus, wymusza repaint i natychmiast pokazuje tekst
-                
-                // Usunięto automatyczne resetowanie formularza i ukrywanie komunikatu — sukces zostaje widoczny.
+
+            try {
+                const response = await fetch(endpoint, {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) {
+                    throw new Error('Formspree submission failed');
+                }
+
+                // Animate button
+                if (submitBtn) {
+                    submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
+                    submitBtn.style.background = 'var(--firstBlue-color)';
+                    submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
+                        ? 'var(--background-color)'
+                        : 'var(--ghostWhite)';
+                    submitBtn.blur();
+                }
+
+                form.reset();
+            } catch (err) {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Send Message';
+                    submitBtn.style.background = '';
+                    submitBtn.style.color = '';
+                }
+                if (successMessage) {
+                    successMessage.style.display = 'none';
+                }
+                alert('Sorry, we could not send your message right now. Please try again.');
+            } finally {
+                if (submitBtn) {
+                    setTimeout(() => { submitBtn.disabled = false; }, 500);
+                }
             }
-            
+
             // Scroll to top of form
             const container = document.querySelector('.form-container');
             if (container) {
