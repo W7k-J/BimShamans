@@ -19,14 +19,14 @@ permalink: /en/contact/
     <form class="form-grid" id="contactForm" novalidate>
         <div class="form-group">
             <label for="name" class="form-label">
-                Full Name <span class="required">*</span>
+                Full Name
             </label>
             <input 
                 type="text" 
                 id="name" 
                 name="name" 
                 class="form-input" 
-                placeholder="John Doe"
+                placeholder="Jane Smith"
                 required
                 autocomplete="name"
             >
@@ -34,14 +34,14 @@ permalink: /en/contact/
 
         <div class="form-group">
             <label for="email" class="form-label">
-                Email Address <span class="required">*</span>
+                Email Address
             </label>
             <input 
                 type="email" 
                 id="email" 
                 name="email" 
                 class="form-input" 
-                placeholder="john@company.com"
+                placeholder="jane.smith@yourcompany.com"
                 required
                 autocomplete="email"
             >
@@ -49,7 +49,7 @@ permalink: /en/contact/
 
         <div class="form-group">
             <label for="subject" class="form-label">
-                Subject <span class="required">*</span>
+                Subject
             </label>
             <input 
                 type="text" 
@@ -63,13 +63,13 @@ permalink: /en/contact/
 
         <div class="form-group">
             <label for="message" class="form-label">
-                Message <span class="required">*</span>
+                    Message (min. 10 characters)
             </label>
             <textarea 
                 id="message" 
                 name="message" 
                 class="form-textarea" 
-                placeholder="Tell us more about your inquiry..."
+                placeholder="Briefly describe your project or question"
                 required
                 minlength="10"
             ></textarea>

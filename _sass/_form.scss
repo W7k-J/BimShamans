@@ -1,3 +1,42 @@
+// Autofill fix for consistent background
+input.form-input:-webkit-autofill,
+textarea.form-textarea:-webkit-autofill {
+    background: var(--forthGray-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    -webkit-text-fill-color: var(--firstGray-color) !important;
+    transition: background 0s;
+}
+
+input.form-input:-webkit-autofill:focus,
+textarea.form-textarea:-webkit-autofill:focus {
+    background: var(--forthGray-color) !important;
+    -webkit-box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    -webkit-text-fill-color: var(--firstGray-color) !important;
+}
+
+input.form-input:-moz-autofill,
+textarea.form-textarea:-moz-autofill {
+    background: var(--forthGray-color) !important;
+    box-shadow: 0 0 0 1000px var(--forthGray-color) inset !important;
+    color: var(--firstGray-color) !important;
+}
+
+input.form-input:-ms-input-autofill,
+textarea.form-textarea:-ms-input-autofill {
+    background: var(--forthGray-color) !important;
+    color: var(--firstGray-color) !important;
+}
+.form-input:not(:placeholder-shown) {
+    background: var(--forthGray-color);
+    transition: background 0.3s;
+}
+
+.form-group.message-filled .form-textarea {
+    background: var(--forthGray-color);
+    transition: background 0.3s;
+}
 // Contact Form Styles
 .contact-header {
     text-align: center;
@@ -97,20 +136,25 @@
     transform: translateY(-1px);
 }
 
-.light-theme .form-input:focus, 
-.light-theme .form-select:focus, 
+
+
+.light-theme .form-input:focus,
+.light-theme .form-select:focus,
 .light-theme .form-textarea:focus {
-    box-shadow: 0 0 0 3px rgba(30, 105, 145, 0.15);
+    border-color: var(--firstBlue-color);
+    box-shadow: 0 0 0 2px rgba(30, 105, 145, 0.18);
 }
 
-.dark-theme .form-input:focus, 
-.dark-theme .form-select:focus, 
+
+.dark-theme .form-input:focus,
+.dark-theme .form-select:focus,
 .dark-theme .form-textarea:focus {
-    box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.25);
+    border-color: var(--secondBlue-color);
+    box-shadow: 0 0 0 2px rgba(50, 215, 230, 0.22);
 }
 
 .form-input:hover, .form-select:hover, .form-textarea:hover {
-    border-color: var(--secondBlue-color);
+    border-color: var(--firstBlue-color);
 }
 
 .form-textarea {
@@ -166,10 +210,10 @@
 }
 
 .success-message {
-    background: linear-gradient(135deg, var(--firstBlue-color), var(--secondBlue-color));
-    color: var(--ghostWhite);
-    padding: 1rem;
-    border-radius: 12px;
+    background: none;
+    color: var(--firstGray-color);
+    padding: 0;
+    border-radius: 0;
     margin-bottom: 1.5rem;
     display: none;
     animation: slideDown 0.5s ease-out;
@@ -239,6 +283,7 @@ label[for] {
     }
 }
 
+
 input[required] + label::after,
 textarea[required] + label::after,
 label[for] input[required]::after {
@@ -247,11 +292,7 @@ label[for] input[required]::after {
     font-weight: normal;
 }
 
-// Success state
-input:valid:not(:placeholder-shown),
-textarea:valid:not(:placeholder-shown) {
-    border-color: #28a745;
-}
+// Usunięto zielone podświetlenie dla pól poprawnie wypełnionych
 
 // Focus states
 input:focus:invalid,
