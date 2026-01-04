@@ -81,11 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.disabled = true;
             }
 
-            // Show success message
             const successMessage = document.getElementById('successMessage');
-            if (successMessage) {
-                successMessage.style.display = 'block';
-            }
 
             try {
                 const response = await fetch(endpoint, {
@@ -95,7 +91,19 @@ document.addEventListener('DOMContentLoaded', function() {
                 });
 
                 if (!response.ok) {
-                    throw new Error('Formspree submission failed');
+                    const errorText = await response.text();
+                    throw new Error('Formspree submission failed: ' + errorText);
+                }
+
+                // Parse JSON to detect Formspree validation errors
+                const data = await response.json().catch(() => ({}));
+                if (data && data.errors && data.errors.length) {
+                    throw new Error('Formspree validation errors: ' + JSON.stringify(data.errors));
+                }
+
+                // Show success message only after a successful response
+                if (successMessage) {
+                    successMessage.style.display = 'block';
                 }
 
                 // Animate button
@@ -110,6 +118,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 form.reset();
             } catch (err) {
+                console.error(err);
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
