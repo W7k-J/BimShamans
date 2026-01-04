@@ -38,6 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form validation only - let browser handle native POST
     form.addEventListener('submit', function(e) {
+        console.log('Submit clicked');
+        
         // Reset previous errors
         document.querySelectorAll('.form-group').forEach(group => {
             group.classList.remove('error');
@@ -52,6 +54,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const group = field.closest('.form-group');
             
             if (!field.value.trim()) {
+                console.log('Field ' + fieldName + ' is empty');
                 group.classList.add('error');
                 isValid = false;
             }
@@ -61,6 +64,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const email = document.getElementById('email');
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (email.value.trim() && !emailRegex.test(email.value)) {
+            console.log('Email invalid');
             email.closest('.form-group').classList.add('error');
             isValid = false;
         }
@@ -68,12 +72,16 @@ document.addEventListener('DOMContentLoaded', function() {
         // Message length validation
         const message = document.getElementById('message');
         if (message.value.trim().length < 10) {
+            console.log('Message too short');
             message.closest('.form-group').classList.add('error');
             isValid = false;
         }
 
+        console.log('Form validation result:', isValid);
+
         if (!isValid) {
             e.preventDefault(); // Only prevent if invalid
+            console.log('Form prevented - validation failed');
             // Shake animation for errors
             const errorGroups = document.querySelectorAll('.form-group.error');
             errorGroups.forEach(group => {
@@ -82,9 +90,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     group.style.animation = '';
                 }, 500);
             });
+        } else {
+            console.log('Form valid - allowing native POST to:', form.action);
+            // If valid, form submits naturally via POST to Formspree
         }
-        // If valid, form submits naturally via POST to Formspree
-        // Formspree will redirect to _next URL (thank-you page)
     });
 
     // Real-time validation
