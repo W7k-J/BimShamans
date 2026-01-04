@@ -6,7 +6,7 @@
   margin: 3rem 0;
 }
 
-// Controls section (search bar + sort controls) - horizontal layout with golden ratio
+// Controls section (search bar + sort controls) - horizontal layout
 .blog__controls {
   display: flex;
   flex-direction: column;
@@ -17,13 +17,13 @@
 
   @media screen and (min-width: 1024px) {
     flex-direction: row;
-    gap: 2rem;
-    align-items: flex-end;
+    gap: 1rem; // Same gap as between buttons for visual consistency
+    align-items: center; // Center all items vertically
     width: 100%;
   }
 }
 
-// Search bar container (Golden Ratio: ~61.8%)
+// Search bar container - grows to fill available space
 .blog__search-group {
   display: flex;
   flex-direction: column;
@@ -142,18 +142,19 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-right: auto;
+  margin-left: auto; // Push to the right side
+  flex-shrink: 0;
 
   .blog__sort-button {
     position: relative;
     background: transparent;
     border: none;
-    color: var(--firstGray-color);
+    color: var(--firstBlue-color);
     cursor: pointer;
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.4;
-    font-weight: 300;
+    font-weight: 600;
     letter-spacing: 1px;
     padding: 0 $nav-padding-x;
     text-transform: lowercase;
@@ -177,7 +178,7 @@
       background-color: var(--forthGray-color);
       border-radius: $radius-small;
       z-index: -1;
-      transform: scaleY(0);
+      transform: scaleY(1);
       transform-origin: center;
       transition: transform 0.35s ease-out;
     }
@@ -275,7 +276,7 @@
   align-items: center;
   gap: 0.5rem;
   font-size: 0.95rem;
-  margin-left: auto;
+  flex-shrink: 0;
 
   span {
     color: var(--secondGray-color);
@@ -655,6 +656,177 @@
 // Blog card label hover state
 .blog-card__label:hover .blog-card__main {
   font-weight: bold;
+}
+
+//
+// UNIVERSAL SEARCH BAR COMPONENT
+// Expandable search bar with icon toggle (inspired by codepen.io/nikhil/pen/kKLvXm)
+//
+
+.searchbar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  flex: 1; // Grow to fill available space
+  flex-shrink: 1;
+  min-width: 44px; // Icon-only width initially
+
+  &__form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    border: none;
+    overflow: hidden;
+    transition: width $transition-base ease;
+  }
+
+  // Input field - Hidden by default, shown when .searchbar--open is active
+  &__input {
+    position: absolute;
+    top: 0;
+    left: 0; // Expand to the left
+    border: 1px solid transparent;
+    outline: none;
+    background-color: var(--forthGray-color);
+    color: var(--firstGray-color);
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 12px 0 12px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    border-radius: $radius-small;
+    transition: all $transition-base ease;
+    opacity: 0; // Hidden by default - only icon visible
+    z-index: 5; // Above icon button
+    cursor: pointer; // Clickable even when hidden
+
+    // Placeholder styling
+    &::placeholder {
+      color: var(--secondGray-color);
+      font-size: 0.875rem;
+    }
+
+    // On hover: border appears
+    &:hover {
+      border: 1px solid var(--firstBlue-color);
+    }
+
+    // On focus: border and shadow
+    &:focus {
+      outline: none;
+      border: 1px solid var(--firstBlue-color);
+      box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.1);
+    }
+  }
+
+  // Icon button
+  &__icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: $radius-small;
+    color: var(--firstGray-color);
+    cursor: pointer;
+    flex-shrink: 0;
+    font: inherit;
+    padding: 0;
+    transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
+    z-index: 10;
+
+    svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    // Hover state (matches direction button)
+    &:hover {
+      color: var(--firstBlue-color);
+      background-color: var(--forthGray-color);
+    }
+
+    // Focus state
+    &:focus-visible {
+      outline: none;
+      border: 1px solid var(--firstBlue-color);
+      background-color: var(--forthGray-color);
+    }
+
+    // Active/Open state (matches direction button active)
+    &[aria-expanded="true"] {
+      color: var(--firstBlue-color);
+      background-color: var(--forthGray-color);
+      font-weight: 600;
+
+      svg {
+        stroke-width: 2.5;
+      }
+    }
+  }
+
+  // Expanded state: show input, adjust width
+  &--open {
+    .searchbar__input {
+      opacity: 1; // Show input
+      border: 1px solid var(--firstBlue-color);
+    }
+
+    .searchbar__icon {
+      color: var(--firstBlue-color);
+      background-color: var(--forthGray-color);
+      
+      svg {
+        stroke-width: 2.5;
+      }
+    }
+  }
+
+  // Blog-specific variant
+  &--blog {
+    // Inherits all universal styles
+  }
+}
+
+// Responsive: on smaller screens, searchbar takes full width when open
+@media screen and (max-width: 768px) {
+  .searchbar--open {
+    .searchbar__form {
+      width: 100%;
+      position: absolute;
+      right: 0;
+      top: 100%;
+      margin-top: 0.5rem;
+      z-index: 1001;
+      min-width: 250px;
+    }
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .searchbar {
+    &__form,
+    &__input,
+    &__icon {
+      transition: none;
+    }
+  }
 }
 
 // Blog card label hover state

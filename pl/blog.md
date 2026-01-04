@@ -11,73 +11,76 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
   
   <h1>Blog</h1>
   
-  <!-- Panel kontrolny: Wyszukiwanie + Filtry (LEWO) & Sortowanie (PRAWO) -->
+  <!-- Panel kontrolny: Wyszukiwanie, kierunek & Sortowanie -->
   <div class="blog__controls">
     
-    <!-- LEWA KOLUMNA: Wyszukiwanie + Filtry po tagach -->
-    <div class="blog__controls-left">
-      
-      <!-- Pasek wyszukiwania -->
-      <div class="blog__search-group">
+    <!-- Expandable Search Bar (Universal Component) -->
+    <div class="searchbar searchbar--blog" data-searchbar="blog">
+      <form class="searchbar__form" role="search" aria-label="Szukaj artykułów">
         <input 
           type="search" 
-          id="blog-search-input" 
-          class="blog__search-input" 
-        placeholder="szukaj artykułów..."
-      <div class="blog__tags blog__tags--filter" id="tag-filters">
-        <!-- Generowane przez JavaScript -->
-      </div>
-
-    </div>
-
-    <!-- PRAWA KOLUMNA: Kontrolki sortowania -->
-    <div class="blog__sort-container">
-      
-      <!-- Sort By Dropdown (like "about" menu) -->
-      <div class="blog__sort-wrapper">
-        <button 
-          class="blog__sort-button" 
-          id="sort-button"
-          role="button" 
-          onclick="return false"
-          aria-label="Opcje sortowania"
+          class="searchbar__input" 
+          placeholder="szukaj artykułów..."
+          aria-label="Szukaj artykułów"
         >
-          sortuj wg: <span id="sort-label">data</span>
-        </button>
-        <div class="blog__sort-menu">
-          <button class="blog__sort-option" data-sort="date">data</button>
-          <button class="blog__sort-option" data-sort="title">tytuł</button>
-          <button class="blog__sort-option" data-sort="author">autor</button>
-        </div>
-      </div>
-
-      <!-- Toggle kierunku (Rosnąco/Malejąco) -->
-      <div class="blog__direction-toggle" role="group" aria-label="Kierunek sortowania">
         <button 
-          class="blog__direction-btn blog__direction-btn--desc" 
-          data-direction="desc" 
-          title="Sortuj malejąco (najnowsze pierwsze)"
-          aria-pressed="true"
+          type="button" 
+          class="searchbar__icon" 
+          title="Przełącz wyszukiwanie"
+          aria-label="Przełącz wyszukiwanie"
+          aria-expanded="false"
         >
           <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="6 9 12 15 18 9"></polyline>
+            <circle cx="11" cy="11" r="8"></circle>
+            <polyline points="21 21 16.65 16.65"></polyline>
           </svg>
         </button>
-        <span aria-hidden="true">|</span>
-        <button 
-          class="blog__direction-btn blog__direction-btn--asc" 
-          data-direction="asc" 
-          title="Sortuj rosnąco (najstarsze pierwsze)"
-          aria-pressed="false"
-        >
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-            <polyline points="18 15 12 9 6 15"></polyline>
-          </svg>
-        </button>
-      </div>
-
+      </form>
     </div>
 
+    <!-- Toggle kierunku (Rosnąco/Malejąco) -->
+    <div class="blog__direction-toggle" role="group" aria-label="Kierunek sortowania">
+      <button 
+        class="blog__direction-btn blog__direction-btn--desc" 
+        data-direction="desc" 
+        title="Sortuj malejąco (najnowsze pierwsze)"
+        aria-pressed="true"
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="6 9 12 15 18 9"></polyline>
+        </svg>
+      </button>
+      <button 
+        class="blog__direction-btn blog__direction-btn--asc" 
+        data-direction="asc" 
+        title="Sortuj rosnąco (najstarsze pierwsze)"
+        aria-pressed="false"
+      >
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Sort By Dropdown -->
+    <div class="blog__sort-wrapper">
+      <button 
+        class="blog__sort-button" 
+        id="sort-button"
+        role="button" 
+        onclick="return false"
+        aria-label="Opcje sortowania"
+      >
+        sortuj wg: <span id="sort-label">data</span>
+      </button>
+      <div class="blog__sort-menu">
+        <button class="blog__sort-option" data-sort="date">data</button>
+        <button class="blog__sort-option" data-sort="title">tytuł</button>
+        <button class="blog__sort-option" data-sort="author">autor</button>
+      </div>
+    </div>
+
+  </div>
   </div>
 
   <!-- Siatka kart bloga -->

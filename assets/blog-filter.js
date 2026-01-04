@@ -288,11 +288,23 @@ class BlogManager {
       }
     });
 
-    // Search input with debounce
-    const searchInput = document.getElementById('blog-search-input');
-    if (searchInput) {
+    // Search input with debounce (supports both old and new search bar)
+    const legacySearchInput = document.getElementById('blog-search-input');
+    if (legacySearchInput) {
       let searchTimeout;
-      searchInput.addEventListener('input', (e) => {
+      legacySearchInput.addEventListener('input', (e) => {
+        clearTimeout(searchTimeout);
+        searchTimeout = setTimeout(() => {
+          this.search(e.target.value);
+        }, 300);
+      });
+    }
+
+    // New universal search bar integration
+    const newSearchInput = document.querySelector('.searchbar--blog .searchbar__input');
+    if (newSearchInput) {
+      let searchTimeout;
+      newSearchInput.addEventListener('input', (e) => {
         clearTimeout(searchTimeout);
         searchTimeout = setTimeout(() => {
           this.search(e.target.value);
