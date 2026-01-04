@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 70" width="750" height="70">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@700&amp;display=swap');
+    </style>
+  </defs>
+  
+  <!-- BIM SHAMANS text with glitch effect - Dark theme version (light text) -->
+  <!-- Syncopate Bold font, matching hero section styling -->
+  
+  <!-- Layer 1 (back) - cyan offset left-top -->
+  <text x="-2" y="57" 
+        font-family="'Syncopate', sans-serif" 
+        font-size="68" 
+        font-weight="700"
+        letter-spacing="0.05em"
+        fill="#32D7E6"
+        opacity="0.75">BIM SHAMANS</text>
+  
+  <!-- Layer 2 (middle) - blue offset right-bottom -->
+  <text x="2" y="63" 
+        font-family="'Syncopate', sans-serif" 
+        font-size="68" 
+        font-weight="700"
+        letter-spacing="0.05em"
+        fill="#4183C4"
+        opacity="0.75">BIM SHAMANS</text>
+  
+  <!-- Layer 3 (near) - dark shadow slight right -->
+  <text x="3.4" y="60" 
+        font-family="'Syncopate', sans-serif" 
+        font-size="68" 
+        font-weight="700"
+        letter-spacing="0.05em"
+        fill="#1e1e28"
+        opacity="0.9">BIM SHAMANS</text>
+  
+  <!-- Layer 4 (front) - main text (light for dark theme) -->
+  <text x="0" y="60" 
+        font-family="'Syncopate', sans-serif" 
+        font-size="68" 
+        font-weight="700"
+        letter-spacing="0.05em"
+        fill="#e3e3ea">BIM SHAMANS</text>
+</svg>
