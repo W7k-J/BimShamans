@@ -89,9 +89,34 @@ class BlogManager {
    */
   search(query) {
     this.searchQuery = query.toLowerCase().trim();
+    
+    // Reset to current filter if search is empty
+    if (!this.searchQuery) {
+      this.filter(this.currentFilter);
+      return;
+    }
+    
+    // Start with filtered posts (by tag)
+    if (this.currentFilter === 'All') {
+      this.filteredPosts = [...this.allPosts];
+    } else {
+      this.filteredPosts = this.allPosts.filter(post => 
+        post.tags && post.tags.includes(this.currentFilter)
+      );
+    }
+    
+    // Apply search
     this.applySearch();
     this.sort(this.currentSortBy, this.currentDirection);
     this.render();
+  }
+  
+  /**
+   * Reset search (called when clear button is clicked)
+   */
+  resetSearch() {
+    this.searchQuery = '';
+    this.filter(this.currentFilter); // Re-apply current filter
   }
 
   /**
@@ -332,7 +357,16 @@ class BlogManager {
  */
 document.addEventListener('DOMContentLoaded', () => {
   if (typeof blogPosts !== 'undefined') {
-    new BlogManager(blogPosts);
+    const blogManager = new BlogManager(blogPosts);
+    
+    // Integrate with universal search bar clear button
+    const searchbarContainer = document.querySelector('.searchbar--blog');
+    if (searchbarContainer && window.searchbar_blog) {
+      // Override onClear callback to reset blog filter
+      window.searchbar_blog.onClear = () => {
+        blogManager.resetSearch();
+      };
+    }
   } else {
     console.warn('BlogManager: blogPosts not found in global scope');
   }
