@@ -87,7 +87,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 const originalText = submitBtn.textContent;
                 submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
                 submitBtn.style.background = 'var(--firstBlue-color)';
-                submitBtn.style.color = 'var(--ghostWhite)';
+                submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
+                    ? 'var(--background-color)' // dark theme: use dark text
+                    : 'var(--ghostWhite)'; // light theme: use light text
                 submitBtn.blur(); // Usuwa focus, wymusza repaint i natychmiast pokazuje tekst
                 
                 // Usunięto automatyczne resetowanie formularza i ukrywanie komunikatu — sukces zostaje widoczny.
