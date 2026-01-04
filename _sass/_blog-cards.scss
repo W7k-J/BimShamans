@@ -401,7 +401,8 @@
   border-radius: $radius-large;
   overflow: hidden;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
-  transition: transform 0.35s ease-out, box-shadow 0.35s ease-out;
+  transition: transform 0.35s ease-out, 
+              box-shadow 0.35s ease-out;
   background-color: var(--background-color);
 
   &:hover {
@@ -414,6 +415,7 @@
 
     .blog-card__overlay {
       opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -465,7 +467,7 @@
   &__title {
     margin: 0;
     color: var(--firstBlue-color);
-    font-size: 1.2rem;
+    font-size: clamp(1.1rem, 1rem + 0.5vw, 1.2rem);
     font-weight: 600;
     line-height: 1.4;
   }
@@ -473,7 +475,7 @@
   &__excerpt {
     margin: 0;
     color: var(--secondGray-color);
-    font-size: 0.95rem;
+    font-size: clamp(0.875rem, 0.85rem + 0.25vw, 0.95rem);
     line-height: 1.6;
     flex: 1;
   }
@@ -481,14 +483,21 @@
   // Overlay (hover state)
   &__overlay {
     position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.88);
+    inset: -2px; // More overflow to fully prevent 1px bleeding
+    background: rgba(0, 0, 0, 0.9); // Balanced opacity for coverage
+    backdrop-filter: blur(2px);
+    border-radius: $radius-large; // Match parent border-radius
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     padding: 1.5rem;
     opacity: 0;
-    transition: opacity 0.35s ease-out;
+    visibility: hidden;
+    transition: opacity 0.35s ease-out, 
+                visibility 0.35s ease-out;
+    transform: translateZ(0); // Hardware acceleration for smooth rendering
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden; // Eliminate subpixel artifacts
     z-index: 10;
   }
 
@@ -496,10 +505,15 @@
   &__description {
     margin: 0 0 0.75rem 0;
     color: var(--forthGray-color);
-    font-size: 0.95rem;
+    font-size: clamp(0.875rem, 0.8rem + 0.25vw, 0.95rem);
     line-height: 1.6;
     flex: 0 0 auto;
     order: -1;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
 
   // Tags section (lower 60%)
@@ -517,9 +531,10 @@
     border-radius: 999px;
     background-color: var(--forthGray-color);
     color: var(--firstGray-color);
-    font-size: 0.8rem;
+    font-size: clamp(0.75rem, 0.7rem + 0.2vw, 0.8rem);
     font-weight: 500;
     cursor: default;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   &__author {
@@ -535,7 +550,7 @@
     align-self: flex-start;
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-flex;
     align-items: center;
     gap: 0.6rem;
@@ -668,12 +683,12 @@
   align-items: center;
   height: 44px;
   width: 44px; // Domyślnie tylko ikona
-  flex: 0; // Nie rozszerzaj się domyślnie - przylęgnij do buttonów
+  flex: 0; // Nie rozszerzaj się domyślnie
   flex-shrink: 0;
   min-width: 44px;
-  margin-left: auto; // Wypchnij całą grupę (searchbar + direction + sort) na prawo
-  transition: flex 0.4s ease-out;
-
+  margin-left: auto;
+  transition: flex 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+              width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 
   &__form {
     position: relative;
@@ -685,43 +700,56 @@
     margin: 0;
     padding: 0;
     border: none;
-    overflow: hidden;
+    overflow: visible; // Changed to visible for clear button
     gap: 0;
   }
 
   // Input field - flexbox child, hidden by default
   &__input {
-    opacity: 0; // Fade out instead of display: none for smooth collapse animation
+    opacity: 0;
     border: 1px solid transparent;
     outline: none;
     background-color: var(--forthGray-color);
     color: var(--firstGray-color);
-    flex: 0; // Nie rozszerzaj się gdy hidden
-    width: 0; // Nie zajmuj przestrzeni
+    flex: 0;
+    width: 0;
     height: 100%;
     margin: 0;
-    padding: 0 12px 0 12px;
+    padding: 0 12px;
+    padding-right: 68px; // Space for clear button (32px) + icon (44px) + gap (8px) - ensures border ENDS before icons
     font-family: inherit;
     font-size: 1rem;
     line-height: 1.4;
     border-radius: $radius-small;
     cursor: text;
-    min-width: 0; // Prevent flex from overflowing
-    pointer-events: none; // Disable interaction when hidden
-    transition: opacity 0.4s ease-out, flex 0.4s ease-out, width 0.4s ease-out; // Spowolniona animacja
+    min-width: 0;
+    pointer-events: none;
+    position: relative;
+    z-index: 5; // Lower than buttons
+    transition: opacity 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                flex 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
+                width 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                border-color 0.2s ease;
+    
+    // Remove default search clear button (X)
+    &::-webkit-search-cancel-button {
+      display: none;
+      -webkit-appearance: none;
+    }
+    
+    &::-ms-clear {
+      display: none;
+    }
 
-    // Placeholder styling
     &::placeholder {
       color: var(--secondGray-color);
       font-size: 0.875rem;
     }
 
-    // On hover: border appears
     &:hover {
       border: 1px solid var(--firstBlue-color);
     }
 
-    // On focus: border and shadow
     &:focus {
       outline: none;
       border: 1px solid var(--firstBlue-color);
@@ -729,10 +757,10 @@
     }
   }
 
-  // Icon button
+  // Icon button (magnifying glass)
   &__icon {
-    position: absolute; // Ustal pozycję absolutnie
-    right: 0; // Zawsze na prawie .searchbar
+    position: absolute;
+    right: 0;
     width: 44px;
     height: 44px;
     display: flex;
@@ -746,8 +774,8 @@
     flex-shrink: 0;
     font: inherit;
     padding: 0;
-    transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease;
-    z-index: 10;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    z-index: 20; // Always on top
 
     svg {
       width: 18px;
@@ -755,43 +783,98 @@
       stroke: currentColor;
       stroke-width: 2;
       fill: none;
+      transition: stroke-width 0.2s ease;
     }
 
-    // Hover state (matches direction button)
+    // Active/Open state - BOLD, no background (shows searchbar border) - must be BEFORE hover/focus
+    &[aria-expanded="true"] {
+      color: var(--firstBlue-color);
+      background-color: transparent !important; // Force transparent even on hover/focus
+
+      svg {
+        stroke-width: 3; // Bold
+      }
+
+      // No background even on hover when expanded
+      &:hover {
+        background-color: transparent;
+      }
+
+      &:focus-visible {
+        outline: none;
+        border: 1px solid var(--firstBlue-color);
+        background-color: transparent;
+      }
+    }
+
     &:hover {
       color: var(--firstBlue-color);
       background-color: var(--forthGray-color);
     }
 
-    // Focus state
     &:focus-visible {
       outline: none;
       border: 1px solid var(--firstBlue-color);
       background-color: var(--forthGray-color);
     }
-
-    // Active/Open state (matches direction button active)
-    &[aria-expanded="true"] {
+  }
+  
+  // Clear button (X)
+  &__clear {
+    position: absolute;
+    right: 44px; // Next to search icon
+    width: 32px;
+    height: 32px;
+    display: none; // Hidden by default
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: none;
+    border-radius: $radius-small;
+    color: var(--firstBlue-color);
+    cursor: pointer;
+    padding: 0;
+    transition: color 0.2s ease, font-weight 0.2s ease;
+    z-index: 15;
+    
+    svg {
+      width: 16px;
+      height: 16px;
+      stroke: currentColor;
+      stroke-width: 2.5;
+      fill: none;
+    }
+    
+    &:hover {
       color: var(--firstBlue-color);
-      background-color: var(--forthGray-color);
-      font-weight: 600;
-
+      
       svg {
-        stroke-width: 2.5;
+        stroke-width: 3.5; // Bold on hover
       }
+    }
+    
+    &:focus-visible {
+      outline: 2px solid var(--firstBlue-color);
+      outline-offset: 2px;
+    }
+    
+    // Show when searchbar has value
+    &.active {
+      display: flex;
     }
   }
 
   // Expanded state: searchbar rozszerza się (input rośnie w lewo)
   &--open {
-    flex: 1; // Rozszerz się w dostępną przestrzeń
+    flex: 1;
     width: auto;
-    margin-left: auto; // TRZYMAJ na prawie - input rozszerza się w lewo
+    margin-left: auto;
     
     .searchbar__input {
-      opacity: 1; // Fade in
-      pointer-events: auto; // Enable interaction when visible
-      flex: 1; // Rozszerz się w dostępną przestrzeń
+      opacity: 1;
+      pointer-events: auto; // Enable interaction
+      user-select: text; // Allow text selection
+      flex: 1;
       width: auto;
       border: 1px solid var(--firstBlue-color);
     }
@@ -799,10 +882,9 @@
     .searchbar__icon {
       color: var(--firstBlue-color);
       background-color: var(--forthGray-color);
-      font-weight: 600;
       
       svg {
-        stroke-width: 2.5;
+        stroke-width: 3; // Bold when open
       }
     }
   }
@@ -836,6 +918,96 @@
     &__icon {
       transition: none;
     }
+  }
+}
+
+//
+// READING PROGRESSION BAR (Post pages only)
+// Inspired by https://codepen.io/Juxtopposed/pen/yLWbKya
+// Shows reading progress with ruler-style vertical line and tick marks
+// Positioned fixed to viewport, tracks full page scroll
+//
+
+.progression-bar {
+  width: 50px;
+  position: fixed;
+  left: calc(50vw - 715px); // center of container minus 100px gap (50vw - 600px - 15px - 100px)
+  top: calc(#{$nav-height} + #{$progression-bar-gap} + 15px); // navbar + (gap + indicator height) + extra spacing
+  bottom: calc(86px + #{$progression-bar-gap} + 15px); // footer + (gap + indicator height) + extra spacing
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  pointer-events: none;
+  z-index: 100;
+
+  // Vertical line with tick marks
+  &__line {
+    width: 1px;
+    height: 100%;
+    background-color: rgba(var(--firstBlue-color-rgb), 0.35);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+
+    // Horizontal tick marks (25 total, evenly distributed from 0% to 100%)
+    span {
+      width: 1rem;
+      background-color: rgba(var(--firstBlue-color-rgb), 0.6);
+      height: 1px;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @for $i from 1 through 25 {
+        &:nth-child(#{$i}) {
+          top: calc(#{($i - 1)} * 100% / 24);
+        }
+      }
+
+      // Bold first and last tick marks
+      &:nth-child(1),
+      &:nth-child(25) {
+        height: 2px;
+        background-color: rgba(var(--firstBlue-color-rgb), 1);
+      }
+    }
+
+  // Fixed indicators at top and bottom showing read progress %
+  &__indicator {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1rem; // Standard text size
+    font-weight: 400;
+    color: var(--firstBlue-color);
+    font-family: 'Jura', monospace;
+    white-space: nowrap;
+    z-index: 200;
+    pointer-events: auto;
+
+    &--top {
+      top: -2rem; // Above line start
+    }
+
+    &--bottom {
+      bottom: -2rem; // Below line end
+    }
+  }
+}
+
+// Hide on mobile and tablet
+@media screen and (max-width: 1024px) {
+  .progression-bar {
+    display: none;
+  }
+}
+
+// Reduced motion support
+@media (prefers-reduced-motion: reduce) {
+  .progression-bar__indicator {
+    transition: none;
   }
 }
 

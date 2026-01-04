@@ -24,6 +24,7 @@ class UniversalSearchBar {
     this.form = this.container.querySelector('.searchbar__form');
     this.input = this.container.querySelector('.searchbar__input');
     this.icon = this.container.querySelector('.searchbar__icon');
+    this.clearBtn = this.container.querySelector('.searchbar__clear');
     
     // Validate required elements
     if (!this.form || !this.input || !this.icon) {
@@ -33,6 +34,7 @@ class UniversalSearchBar {
 
     // Callback for search input (optional - can be overridden)
     this.onSearch = options.onSearch || ((value) => {});
+    this.onClear = options.onClear || (() => {});
     this.onOpen = options.onOpen || (() => {});
     this.onClose = options.onClose || (() => {});
 
@@ -53,6 +55,16 @@ class UniversalSearchBar {
       e.stopPropagation();
       this.toggle();
     });
+    
+    // Clear button click - clear input and reset search
+    if (this.clearBtn) {
+      this.clearBtn.addEventListener('click', (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.clear();
+        this.onClear(); // Trigger clear callback
+      });
+    }
 
     // Input click - if already open, don't do anything (already focused)
     this.input.addEventListener('click', (e) => {
@@ -78,9 +90,12 @@ class UniversalSearchBar {
       }
     });
 
-    // Input change - fire search callback with debounce
+    // Input change - fire search callback with debounce + show/hide clear button
     let searchTimeout;
     this.input.addEventListener('input', (e) => {
+      // Show/hide clear button based on input value
+      this.updateClearButton();
+      
       clearTimeout(searchTimeout);
       searchTimeout = setTimeout(() => {
         this.onSearch(e.target.value);
@@ -153,6 +168,21 @@ class UniversalSearchBar {
   clear() {
     this.input.value = '';
     this.input.dispatchEvent(new Event('input', { bubbles: true }));
+    this.updateClearButton();
+    this.input.focus(); // Keep focus after clearing
+  }
+  
+  /**
+   * Update clear button visibility
+   */
+  updateClearButton() {
+    if (!this.clearBtn) return;
+    
+    if (this.input.value.trim().length > 0) {
+      this.clearBtn.classList.add('active');
+    } else {
+      this.clearBtn.classList.remove('active');
+    }
   }
 
   /**

@@ -18,6 +18,7 @@
 // IMPORTS - Fonts (combined Google Fonts request for better performance)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Michroma:wght@400;700;900&family=Syncopate:wght@400;700&family=Source+Code+Pro&display=swap');
 @import url('https://fonts.cdnfonts.com/css/cascadia-code');
+@import url('https://fonts.googleapis.com/css?family=Inter:400|Jura:400');
 
 // IMPORTS - Utilities
 @import "highlights";
@@ -36,13 +37,16 @@ html {
 .light-theme {
   // Main Colors
   --background-color: #{$ghostWhite};
+  --background-color-rgb: 245, 245, 250; // RGB dla rgba()
   --firstGray-color: #{$raisinBlack};
   --secondGray-color: #{$darkGray};
   --thirdGray-color: #{$gray};
   --forthGray-color: #{$lightGray};
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
-  --secondBlue-color: #{$ryanCyan};  
+  --firstBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
+  --secondBlue-color: #{$ryanCyan};
+  --secondBlue-color-rgb: 50, 215, 230; // RGB dla rgba()  
   --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
@@ -72,13 +76,16 @@ html {
 .dark-theme {
   // Colors
   --background-color: #{$raisinBlack};
+  --background-color-rgb: 30, 30, 40; // RGB dla rgba()
   --firstGray-color: #{$ghostWhite};
   --secondGray-color: #{$lightGray};
   --thirdGray-color: #{$gray};
   --forthGray-color: #{$darkGray};
   --link-color: #{$blue};
   --firstBlue-color: #{$ryanCyan};
+  --firstBlue-color-rgb: 50, 215, 230; // RGB dla rgba()
   --secondBlue-color: #{$biceBlue};
+  --secondBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
   --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
@@ -854,7 +861,7 @@ figure {
 }
 
 #main.container {
-  margin-top: calc(#{$nav-height} + 20px);
+  margin-top: calc(#{$nav-height} + #{$nav-spacing});
   margin-bottom: 0;
 }
 
@@ -1166,6 +1173,8 @@ blockquote {
 }
 
 .post {
+  position: relative;
+
   blockquote {
     margin: 1.8em 0;
     padding: 0.1em 1em;
@@ -1183,7 +1192,34 @@ blockquote {
   .read-more {
     text-transform: uppercase;
     font-size: 13px;
-    color: var(--firstGray-color);
+  }
+
+  color: var(--firstGray-color);
+}
+
+// Fade overlay effect (appears above footer for post/page layouts)
+.fade-overlay {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: clamp(2.5rem, 6vw, 50px);
+  background: linear-gradient(to bottom, 
+    rgba(var(--background-color-rgb), 0) 0%,
+    rgba(var(--background-color-rgb), 0.1) 20%,
+    rgba(var(--background-color-rgb), 0.25) 40%,
+    rgba(var(--background-color-rgb), 0.5) 60%,
+    rgba(var(--background-color-rgb), 0.75) 80%,
+    var(--background-color) 100%
+  );
+  pointer-events: none;
+  z-index: 10;
+  opacity: 1;
+  transition: opacity 0.3s ease;
+  
+  &.fade-overlay--hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 }
 

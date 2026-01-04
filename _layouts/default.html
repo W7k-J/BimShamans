@@ -64,6 +64,8 @@
     <script src="{{ site.baseurl }}/assets/feature-cards.js" defer></script>
     <script src="{{ site.baseurl }}/assets/will-change-optimizer.js" defer></script>
     <script src="{{ site.baseurl }}/assets/form-validator.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/progression-bar.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/fade-overlay.js" defer></script>
 </head>
 
 <body>
@@ -146,6 +148,13 @@
     <!-- Main Content -->
     <div id="main" role="main" class="container">
         {{ content }}
+
+        {% comment %}
+            <!-- Fade Overlay (for post and page layouts - needs to be turned on) -->
+            {% if page.layout == 'post' or page.layout == 'page' %}
+                <div class="fade-overlay"></div>
+            {% endif %}
+        {% endcomment %}
     </div>
 
     <!-- Footer -->
