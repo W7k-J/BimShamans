@@ -377,3 +377,88 @@
     margin-top: 0.5rem;
   }
 }
+
+// Bibliography (collapsible, like ToC)
+.post__bibliography {
+  margin: 3rem 0 2rem;
+  border: 1px solid var(--forthGray-color);
+  border-radius: $radius-medium;
+  background-color: rgba(var(--background-color-rgb), 0.5);
+
+  summary {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.25rem;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--firstBlue-color);
+    cursor: pointer;
+    list-style: none;
+    transition: color $transition-base ease, background-color $transition-base ease;
+
+    &::-webkit-details-marker {
+      display: none;
+    }
+
+    &::before {
+      content: "▸";
+      display: inline-block;
+      font-size: 0.85rem;
+      transition: transform $transition-base ease;
+    }
+
+    &:hover {
+      background-color: rgba(var(--firstBlue-color-rgb), 0.08);
+    }
+  }
+
+  &[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  // Content area
+  > *:not(summary) {
+    padding: 0 1.25rem 1.25rem;
+  }
+
+  h3 {
+    margin: 1.5rem 0 0.75rem;
+    padding-left: 1.25rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--firstBlue-color);
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+
+  ol {
+    margin: 0;
+    padding-left: 2.5rem;
+    list-style-type: decimal;
+
+    li {
+      margin-bottom: 0.6rem;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--firstGray-color);
+
+      strong {
+        color: var(--firstGray-color);
+      }
+
+      a {
+        color: var(--firstBlue-color);
+        text-decoration: none;
+        transition: color $transition-base ease;
+
+        &:hover {
+          color: var(--secondBlue-color);
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
