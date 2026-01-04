@@ -5,7 +5,12 @@
     <meta charset="utf-8">
     <meta http-equiv="refresh" content="0; url=/en/home/">
     <script type="text/javascript">
-        window.location.href = "/en/home/"
+        // Wymuszenie HTTPS (security)
+        if (location.protocol !== 'https:' && location.hostname !== 'localhost' && location.hostname !== '127.0.0.1') {
+            location.replace('https://' + location.host + location.pathname + location.search + location.hash);
+        } else {
+            window.location.href = "/en/home/"
+        }
     </script>
     <style>
         body {

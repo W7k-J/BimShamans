@@ -16,7 +16,7 @@ permalink: /en/contact/
         <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
     </div>
 
-    <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST">
+    <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST" data-lang="en">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
         <input type="hidden" name="_subject" value="Contact form submission">
         <input type="hidden" name="_next" value="https://bimshamans.com/en/thank-you/">
@@ -32,6 +32,7 @@ permalink: /en/contact/
                 placeholder="Jane Smith"
                 required
                 autocomplete="name"
+                maxlength="100"
             >
         </div>
 
@@ -47,6 +48,7 @@ permalink: /en/contact/
                 placeholder="jane.smith@yourcompany.com"
                 required
                 autocomplete="email"
+                maxlength="254"
             >
         </div>
 
@@ -61,6 +63,7 @@ permalink: /en/contact/
                 class="form-input" 
                 placeholder="What would you like to discuss?"
                 required
+                maxlength="200"
             >
         </div>
 
@@ -75,6 +78,7 @@ permalink: /en/contact/
                 placeholder="Briefly describe your project or question"
                 required
                 minlength="10"
+                maxlength="5000"
             ></textarea>
         </div>
 
