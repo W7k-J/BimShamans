@@ -177,6 +177,50 @@ textarea.form-textarea:-ms-input-autofill {
     color: var(--thirdGray-color);
 }
 
+// Wyraźne podświetlenie zaznaczonego tekstu w polach formularza
+.form-input::selection,
+.form-textarea::selection,
+.form-select::selection {
+    background: var(--firstBlue-color);
+    color: var(--ghostWhite);
+}
+
+.form-input::-moz-selection,
+.form-textarea::-moz-selection,
+.form-select::-moz-selection {
+    background: var(--firstBlue-color);
+    color: var(--ghostWhite);
+}
+
+// Theme-specific selection dla lepszego kontrastu
+.light-theme .form-input::selection,
+.light-theme .form-textarea::selection,
+.light-theme .form-select::selection {
+    background: var(--firstBlue-color);
+    color: #ffffff;
+}
+
+.light-theme .form-input::-moz-selection,
+.light-theme .form-textarea::-moz-selection,
+.light-theme .form-select::-moz-selection {
+    background: var(--firstBlue-color);
+    color: #ffffff;
+}
+
+.dark-theme .form-input::selection,
+.dark-theme .form-textarea::selection,
+.dark-theme .form-select::selection {
+    background: var(--secondBlue-color);
+    color: var(--raisinBlack);
+}
+
+.dark-theme .form-input::-moz-selection,
+.dark-theme .form-textarea::-moz-selection,
+.dark-theme .form-select::-moz-selection {
+    background: var(--secondBlue-color);
+    color: var(--raisinBlack);
+}
+
 .privacy-notice {
     margin-top: 1.5rem;
     padding: 1rem;
