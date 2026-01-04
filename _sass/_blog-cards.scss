@@ -142,7 +142,6 @@
   position: relative;
   display: flex;
   align-items: center;
-  margin-left: auto; // Push to the right side
   flex-shrink: 0;
 
   .blog__sort-button {
@@ -274,9 +273,9 @@
 .blog__direction-toggle {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   font-size: 0.95rem;
-  flex-shrink: 0;
+  flex-shrink: 0; // Nie kurczą się - zawsze stała szerokość
 
   span {
     color: var(--secondGray-color);
@@ -668,33 +667,37 @@
   display: flex;
   align-items: center;
   height: 44px;
-  flex: 1; // Grow to fill available space
-  flex-shrink: 1;
-  min-width: 44px; // Icon-only width initially
+  width: 44px; // Domyślnie tylko ikona
+  flex: 0; // Nie rozszerzaj się domyślnie - przylęgnij do buttonów
+  flex-shrink: 0;
+  min-width: 44px;
+  margin-left: auto; // Wypchnij całą grupę (searchbar + direction + sort) na prawo
+  transition: flex 0.6s ease-out; // Spowolniona animacja
+
 
   &__form {
     position: relative;
     width: 100%;
     height: 100%;
     display: flex;
+    flex-direction: row-reverse; // INPUT rozszerza się OD PRAWEJ STRONY (od ikony)
     align-items: center;
     margin: 0;
     padding: 0;
     border: none;
     overflow: hidden;
-    transition: width $transition-base ease;
+    gap: 0;
   }
 
-  // Input field - Hidden by default, shown when .searchbar--open is active
+  // Input field - flexbox child, hidden by default
   &__input {
-    position: absolute;
-    top: 0;
-    left: 0; // Expand to the left
+    opacity: 0; // Fade out instead of display: none for smooth collapse animation
     border: 1px solid transparent;
     outline: none;
     background-color: var(--forthGray-color);
     color: var(--firstGray-color);
-    width: 100%;
+    flex: 0; // Nie rozszerzaj się gdy hidden
+    width: 0; // Nie zajmuj przestrzeni
     height: 100%;
     margin: 0;
     padding: 0 12px 0 12px;
@@ -702,10 +705,10 @@
     font-size: 1rem;
     line-height: 1.4;
     border-radius: $radius-small;
-    transition: all $transition-base ease;
-    opacity: 0; // Hidden by default - only icon visible
-    z-index: 5; // Above icon button
-    cursor: pointer; // Clickable even when hidden
+    cursor: text;
+    min-width: 0; // Prevent flex from overflowing
+    pointer-events: none; // Disable interaction when hidden
+    transition: opacity 0.6s ease-out, flex 0.6s ease-out, width 0.6s ease-out; // Spowolniona animacja
 
     // Placeholder styling
     &::placeholder {
@@ -728,9 +731,8 @@
 
   // Icon button
   &__icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+    position: absolute; // Ustal pozycję absolutnie
+    right: 0; // Zawsze na prawie .searchbar
     width: 44px;
     height: 44px;
     display: flex;
@@ -780,16 +782,24 @@
     }
   }
 
-  // Expanded state: show input, adjust width
+  // Expanded state: searchbar rozszerza się (input rośnie w lewo)
   &--open {
+    flex: 1; // Rozszerz się w dostępną przestrzeń
+    width: auto;
+    margin-left: auto; // TRZYMAJ na prawie - input rozszerza się w lewo
+    
     .searchbar__input {
-      opacity: 1; // Show input
+      opacity: 1; // Fade in
+      pointer-events: auto; // Enable interaction when visible
+      flex: 1; // Rozszerz się w dostępną przestrzeń
+      width: auto;
       border: 1px solid var(--firstBlue-color);
     }
 
     .searchbar__icon {
       color: var(--firstBlue-color);
       background-color: var(--forthGray-color);
+      font-weight: 600;
       
       svg {
         stroke-width: 2.5;
