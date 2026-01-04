@@ -65,6 +65,7 @@
     <script src="{{ site.baseurl }}/assets/will-change-optimizer.js" defer></script>
     <script src="{{ site.baseurl }}/assets/form-validator.js" defer></script>
     <script src="{{ site.baseurl }}/assets/progression-bar.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/fade-overlay.js" defer></script>
 </head>
 
 <body>
@@ -147,6 +148,11 @@
     <!-- Main Content -->
     <div id="main" role="main" class="container">
         {{ content }}
+
+        <!-- Fade Overlay (for post and page layouts) -->
+        {% if page.layout == 'post' or page.layout == 'page' %}
+            <div class="fade-overlay"></div>
+        {% endif %}
     </div>
 
     <!-- Footer -->
