@@ -495,39 +495,53 @@ figure {
 }
 
 .hero-banner__content {
-  position: relative;
+  position: absolute;
+  left: calc(50% + 65px);
+  top: 50%;
+  transform: translate(-50%, -50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 0.8rem;
+  /* Equal gap between BIM, flame, and Shamans */
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+  /* Auto width so the group is centered as a unit */
   width: auto;
   height: auto;
   z-index: 2;
   white-space: nowrap;
-  transform: translateX(-3rem); /* Czystsze niż margin-right */
 }
 
 .glitch-filter-example {
-  display: inline-flex;
+  display: flex;
   align-items: center;
-  justify-content: center;
   position: relative;
   margin: 0;
   padding: 0;
-  width: clamp(250px, 30vw, 350px); /* Responsive zamiast fixed */
-  height: clamp(80px, 15vw, 200px);
+  /* Auto width - let SVG determine size */
+  width: auto;
+  height: clamp(35px, 4vw, 55px);
+  flex-shrink: 0;
   border: none;
   outline: none;
   background: transparent;
   z-index: 2;
-  flex-shrink: 0;
   overflow: visible;
+}
+
+/* BIM aligned to the right (closer to flame) */
+.glitch-filter-example--bim {
+  justify-content: flex-end;
+}
+
+/* Shamans aligned to the left (closer to flame) */
+.glitch-filter-example--shamans {
+  justify-content: flex-start;
 }
 
 .glitch-filter-example__demo {
   display: block;
   position: relative;
-  width: 100%;
+  width: auto;
   height: 100%;
   border: none;
   outline: none;
@@ -539,7 +553,7 @@ figure {
   filter: url(#filter);
   fill: var(--firstGray-color);
   font-family: 'Syncopate', sans-serif;
-  font-size: clamp(90px, 10vw, 110px); /* Responsive font size */
+  font-size: 32px;
   font-weight: 700;
   text-align: center;
   margin: 0;
@@ -558,7 +572,8 @@ figure {
   flex-shrink: 0;
   pointer-events: none;
   z-index: 3;
-  margin: 0 3rem 0 -6rem;
+  /* No margin - gap on parent handles equal spacing */
+  margin: 0;
 }
 
 .hero-flame__icon {
@@ -595,27 +610,6 @@ figure {
   outline: none;
   overflow: visible;
   background: transparent;
-}
-
-.glitch-filter-example__filtered-text {
-  filter: url(#filter);
-  fill: var(--firstGray-color);
-  font-family: 'Syncopate', sans-serif;
-  font-size: 100px;
-  font-weight: 700;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-  display: block;
-  letter-spacing: 0.05em;
-}
-
-.glitch-filter-example--bim .glitch-filter-example__filtered-text {
-  font-size: 102px;
-}
-
-.glitch-filter-example--shamans .glitch-filter-example__filtered-text {
-  font-size: 102px;
 }
 
 .top-r,

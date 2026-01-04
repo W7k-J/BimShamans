@@ -19,16 +19,16 @@ permalink: /pl/home/
     </div>
     <div class="hero-banner__content">
       <figure class="glitch-filter-example glitch-filter-example--bim">
-        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
-          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="middle" x="50%" dy="0.35em">BIM</text>
+        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 80" preserveAspectRatio="xMaxYMid meet">
+          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="135" dy="0.35em">BIM</text>
         </svg>
       </figure>
       <div class="hero-flame" aria-hidden="true">
         <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
       </div>
       <figure class="glitch-filter-example glitch-filter-example--shamans">
-        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 600 200" preserveAspectRatio="xMidYMid meet">
-          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="middle" x="50%" dy="0.35em">Shamans</text>
+        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 340 80" preserveAspectRatio="xMinYMid meet">
+          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em">Shamans</text>
         </svg>
       </figure>
     </div>
