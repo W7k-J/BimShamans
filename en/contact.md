@@ -19,6 +19,7 @@ permalink: /en/contact/
     <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
         <input type="hidden" name="_subject" value="Contact form submission">
+        <input type="hidden" name="_next" value="https://bimshamans.com/en/thank-you/">
         <div class="form-group">
             <label for="name" class="form-label">
                 Full Name

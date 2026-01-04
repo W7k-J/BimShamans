@@ -1,44 +1,43 @@
-    // Add focus states for accessibility
-    document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
-        input.addEventListener('focus', function() {
-            const label = this.closest('.form-group').querySelector('.form-label');
-            if (label) {
-                const root = document.documentElement;
-                if (root.classList.contains('dark-theme')) {
-                    label.style.color = 'var(--secondBlue-color)'; // cyjan w dark
-                } else {
-                    label.style.color = 'var(--firstBlue-color)'; // niebieski w light
-                }
+// Focus states for accessibility
+document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(input => {
+    input.addEventListener('focus', function() {
+        const label = this.closest('.form-group').querySelector('.form-label');
+        if (label) {
+            const root = document.documentElement;
+            if (root.classList.contains('dark-theme')) {
+                label.style.color = 'var(--secondBlue-color)';
+            } else {
+                label.style.color = 'var(--firstBlue-color)';
             }
-        });
-
-        input.addEventListener('blur', function() {
-            const label = this.closest('.form-group').querySelector('.form-label');
-            if (label) {
-                label.style.color = 'var(--firstGray-color)';
-            }
-        });
-
-        // Specjalna obsługa dla textarea (wiadomość)
-        if (input.classList.contains('form-textarea')) {
-            input.addEventListener('input', function() {
-                const group = this.closest('.form-group');
-                if (this.value.length >= 10) {
-                    group.classList.add('message-filled');
-                } else {
-                    group.classList.remove('message-filled');
-                }
-            });
         }
     });
+
+    input.addEventListener('blur', function() {
+        const label = this.closest('.form-group').querySelector('.form-label');
+        if (label) {
+            label.style.color = 'var(--firstGray-color)';
+        }
+    });
+
+    // Special handling for textarea
+    if (input.classList.contains('form-textarea')) {
+        input.addEventListener('input', function() {
+            const group = this.closest('.form-group');
+            if (this.value.length >= 10) {
+                group.classList.add('message-filled');
+            } else {
+                group.classList.remove('message-filled');
+            }
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
-    // Form validation and submission
+    // Form validation only - let browser handle native POST
     form.addEventListener('submit', function(e) {
-        e.preventDefault();
-
         // Reset previous errors
         document.querySelectorAll('.form-group').forEach(group => {
             group.classList.remove('error');
@@ -74,6 +73,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (!isValid) {
+            e.preventDefault(); // Only prevent if invalid
             // Shake animation for errors
             const errorGroups = document.querySelectorAll('.form-group.error');
             errorGroups.forEach(group => {
@@ -82,84 +82,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     group.style.animation = '';
                 }, 500);
             });
-            return;
         }
-
-        // Valid - send via fetch
-        const submitBtn = document.querySelector('.button[type="submit"]');
-        const successMessage = document.getElementById('successMessage');
-        const originalBtnText = submitBtn ? submitBtn.textContent : 'Send';
-
-        if (submitBtn) {
-            submitBtn.disabled = true;
-            submitBtn.textContent = 'Sending...';
-        }
-
-        const formData = new FormData(form);
-
-        // Debug: log what we're sending
-        console.log('Sending to:', form.action);
-        for (let [key, value] of formData.entries()) {
-            console.log('Field:', key, '=', value);
-        }
-
-        fetch(form.action, {
-            method: 'POST',
-            body: formData,
-            headers: {
-                'Accept': 'application/json'
-            }
-        })
-        .then(function(response) {
-            console.log('Formspree response status:', response.status);
-            console.log('Formspree response ok:', response.ok);
-            return response.json().then(function(data) {
-                console.log('Formspree response body:', data);
-                if (response.ok) {
-                // Success
-                if (successMessage) {
-                    successMessage.style.display = 'block';
-                }
-                if (submitBtn) {
-                    submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
-                    submitBtn.style.background = 'var(--firstBlue-color)';
-                    submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
-                        ? 'var(--background-color)'
-                        : 'var(--ghostWhite)';
-                }
-                form.reset();
-
-                // Reset UI after 4 seconds
-                setTimeout(function() {
-                    if (submitBtn) {
-                        submitBtn.disabled = false;
-                        submitBtn.textContent = originalBtnText;
-                        submitBtn.style.background = '';
-                        submitBtn.style.color = '';
-                    }
-                    if (successMessage) {
-                        successMessage.style.display = 'none';
-                    }
-                }, 4000);
-
-                // Scroll to top
-                const container = document.querySelector('.form-container');
-                if (container) {
-                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            } else {
-                throw new Error('Formspree error: ' + JSON.stringify(data));
-            }
-            });
-        })
-        .catch(function(error) {
-            console.error('Form error:', error);
-            alert('Could not send message. Please try again or email us directly.');
-            if (submitBtn) {
-                submitBtn.disabled = false;
-                submitBtn.textContent = originalBtnText;
-            }
-        });
+        // If valid, form submits naturally via POST to Formspree
+        // Formspree will redirect to _next URL (thank-you page)
     });
 
     // Real-time validation
@@ -180,6 +105,4 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     });
-
-    // Usunięto JS zmieniający kolor label na focus/blur — kolor kontroluje tylko CSS.
 });
