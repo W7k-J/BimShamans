@@ -36,9 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!form) return;
 
     // Form validation and submission
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
+    form.addEventListener('submit', function(e) {
         // Reset previous errors
         document.querySelectorAll('.form-group').forEach(group => {
             group.classList.remove('error');
@@ -73,71 +71,45 @@ document.addEventListener('DOMContentLoaded', function() {
             isValid = false;
         }
 
-        if (isValid) {
-            const formData = new FormData(form);
-            // Help Formspree map reply-to address
-            const emailField = document.getElementById('email');
-            if (emailField && emailField.value) {
-                formData.set('_replyto', emailField.value);
+        if (!isValid) {
+            e.preventDefault();
+            // Shake animation for errors
+            const errorGroups = document.querySelectorAll('.form-group.error');
+            errorGroups.forEach(group => {
+                group.style.animation = 'contactPulse 0.5s ease-in-out';
+                setTimeout(() => {
+                    group.style.animation = '';
+                }, 500);
+            });
+        } else {
+            // Valid - show success UI immediately (form will POST to iframe)
+            const successMessage = document.getElementById('successMessage');
+            if (successMessage) {
+                successMessage.style.display = 'block';
             }
-            const endpoint = form.getAttribute('action');
+
             const submitBtn = document.querySelector('.button[type="submit"]');
             if (submitBtn) {
-                submitBtn.disabled = true;
-            }
-
-            const successMessage = document.getElementById('successMessage');
-
-            try {
-                const response = await fetch(endpoint, {
-                    method: 'POST',
-                    body: formData,
-                    headers: { 'Accept': 'application/json' }
-                });
-
-                if (!response.ok) {
-                    const errorText = await response.text();
-                    throw new Error('Formspree submission failed: ' + response.status + ' ' + response.statusText + ' ' + errorText);
-                }
-
-                // Parse JSON to detect Formspree validation errors
-                const data = await response.json().catch(() => ({}));
-                if (data && data.errors && data.errors.length) {
-                    throw new Error('Formspree validation errors: ' + JSON.stringify(data.errors));
-                }
-
-                // Show success message only after a successful response
-                if (successMessage) {
-                    successMessage.style.display = 'block';
-                }
-
-                // Animate button
-                if (submitBtn) {
+                setTimeout(function() {
                     submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
                     submitBtn.style.background = 'var(--firstBlue-color)';
                     submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
                         ? 'var(--background-color)'
                         : 'var(--ghostWhite)';
                     submitBtn.blur();
-                }
+                    submitBtn.disabled = true;
+                }, 100);
 
-                form.reset();
-            } catch (err) {
-                console.error('Form submission error:', err);
-                if (submitBtn) {
+                setTimeout(function() {
+                    form.reset();
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
                     submitBtn.style.background = '';
                     submitBtn.style.color = '';
-                }
-                if (successMessage) {
-                    successMessage.style.display = 'none';
-                }
-                alert('Sorry, we could not send your message right now. Please try again.');
-            } finally {
-                if (submitBtn) {
-                    setTimeout(() => { submitBtn.disabled = false; }, 500);
-                }
+                    if (successMessage) {
+                        successMessage.style.display = 'none';
+                    }
+                }, 3000);
             }
 
             // Scroll to top of form
@@ -148,15 +120,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
             }
-        } else {
-            // Shake animation for errors
-            const errorGroups = document.querySelectorAll('.form-group.error');
-            errorGroups.forEach(group => {
-                group.style.animation = 'contactPulse 0.5s ease-in-out';
-                setTimeout(() => {
-                    group.style.animation = '';
-                }, 500);
-            });
         }
     });
 
