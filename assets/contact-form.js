@@ -75,6 +75,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (isValid) {
             const formData = new FormData(form);
+            // Help Formspree map reply-to address
+            const emailField = document.getElementById('email');
+            if (emailField && emailField.value) {
+                formData.set('_replyto', emailField.value);
+            }
             const endpoint = form.getAttribute('action');
             const submitBtn = document.querySelector('.button[type="submit"]');
             if (submitBtn) {
@@ -92,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 if (!response.ok) {
                     const errorText = await response.text();
-                    throw new Error('Formspree submission failed: ' + errorText);
+                    throw new Error('Formspree submission failed: ' + response.status + ' ' + response.statusText + ' ' + errorText);
                 }
 
                 // Parse JSON to detect Formspree validation errors
@@ -118,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
                 form.reset();
             } catch (err) {
-                console.error(err);
+                console.error('Form submission error:', err);
                 if (submitBtn) {
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Send Message';
