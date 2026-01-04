@@ -97,6 +97,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const formData = new FormData(form);
 
+        // Debug: log what we're sending
+        console.log('Sending to:', form.action);
+        for (let [key, value] of formData.entries()) {
+            console.log('Field:', key, '=', value);
+        }
+
         fetch(form.action, {
             method: 'POST',
             body: formData,
@@ -107,7 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(function(response) {
             console.log('Formspree response status:', response.status);
             console.log('Formspree response ok:', response.ok);
-            if (response.ok) {
+            return response.json().then(function(data) {
+                console.log('Formspree response body:', data);
+                if (response.ok) {
                 // Success
                 if (successMessage) {
                     successMessage.style.display = 'block';
@@ -140,8 +148,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     container.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             } else {
-                throw new Error('Server responded with ' + response.status);
+                throw new Error('Formspree error: ' + JSON.stringify(data));
             }
+            });
         })
         .catch(function(error) {
             console.error('Form error:', error);
