@@ -672,7 +672,7 @@
   flex-shrink: 0;
   min-width: 44px;
   margin-left: auto; // Wypchnij całą grupę (searchbar + direction + sort) na prawo
-  transition: flex 0.6s ease-out; // Spowolniona animacja
+  transition: flex 0.4s ease-out;
 
 
   &__form {
@@ -708,7 +708,7 @@
     cursor: text;
     min-width: 0; // Prevent flex from overflowing
     pointer-events: none; // Disable interaction when hidden
-    transition: opacity 0.6s ease-out, flex 0.6s ease-out, width 0.6s ease-out; // Spowolniona animacja
+    transition: opacity 0.4s ease-out, flex 0.4s ease-out, width 0.4s ease-out; // Spowolniona animacja
 
     // Placeholder styling
     &::placeholder {

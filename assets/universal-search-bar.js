@@ -87,13 +87,6 @@ class UniversalSearchBar {
       }, 300);
     });
 
-    // Document click - close if click outside
-    document.addEventListener('click', (e) => {
-      if (!this.container.contains(e.target) && this.isOpen) {
-        this.close();
-      }
-    });
-
     // Prevent mouseup event from propagating (allows form submission)
     this.form.addEventListener('mouseup', (e) => {
       e.stopPropagation();
