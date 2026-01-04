@@ -37,6 +37,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Form validation and submission
     form.addEventListener('submit', function(e) {
+        e.preventDefault();
+
         // Reset previous errors
         document.querySelectorAll('.form-group').forEach(group => {
             group.classList.remove('error');
@@ -72,7 +74,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         if (!isValid) {
-            e.preventDefault();
             // Shake animation for errors
             const errorGroups = document.querySelectorAll('.form-group.error');
             errorGroups.forEach(group => {
@@ -81,46 +82,75 @@ document.addEventListener('DOMContentLoaded', function() {
                     group.style.animation = '';
                 }, 500);
             });
-        } else {
-            // Valid - show success UI immediately (form will POST to iframe)
-            const successMessage = document.getElementById('successMessage');
-            if (successMessage) {
-                successMessage.style.display = 'block';
-            }
+            return;
+        }
 
-            const submitBtn = document.querySelector('.button[type="submit"]');
-            if (submitBtn) {
-                setTimeout(function() {
+        // Valid - send via fetch
+        const submitBtn = document.querySelector('.button[type="submit"]');
+        const successMessage = document.getElementById('successMessage');
+        const originalBtnText = submitBtn ? submitBtn.textContent : 'Send';
+
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+        }
+
+        const formData = new FormData(form);
+
+        fetch(form.action, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        })
+        .then(function(response) {
+            console.log('Formspree response status:', response.status);
+            console.log('Formspree response ok:', response.ok);
+            if (response.ok) {
+                // Success
+                if (successMessage) {
+                    successMessage.style.display = 'block';
+                }
+                if (submitBtn) {
                     submitBtn.textContent = submitBtn.getAttribute('data-success-text') || 'Message Sent!';
                     submitBtn.style.background = 'var(--firstBlue-color)';
                     submitBtn.style.color = document.documentElement.classList.contains('dark-theme')
                         ? 'var(--background-color)'
                         : 'var(--ghostWhite)';
-                    submitBtn.blur();
-                    submitBtn.disabled = true;
-                }, 100);
+                }
+                form.reset();
 
+                // Reset UI after 4 seconds
                 setTimeout(function() {
-                    form.reset();
-                    submitBtn.disabled = false;
-                    submitBtn.textContent = 'Send Message';
-                    submitBtn.style.background = '';
-                    submitBtn.style.color = '';
+                    if (submitBtn) {
+                        submitBtn.disabled = false;
+                        submitBtn.textContent = originalBtnText;
+                        submitBtn.style.background = '';
+                        submitBtn.style.color = '';
+                    }
                     if (successMessage) {
                         successMessage.style.display = 'none';
                     }
-                }, 3000);
-            }
+                }, 4000);
 
-            // Scroll to top of form
-            const container = document.querySelector('.form-container');
-            if (container) {
-                container.scrollIntoView({ 
-                    behavior: 'smooth',
-                    block: 'start'
-                });
+                // Scroll to top
+                const container = document.querySelector('.form-container');
+                if (container) {
+                    container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            } else {
+                throw new Error('Server responded with ' + response.status);
             }
-        }
+        })
+        .catch(function(error) {
+            console.error('Form error:', error);
+            alert('Could not send message. Please try again or email us directly.');
+            if (submitBtn) {
+                submitBtn.disabled = false;
+                submitBtn.textContent = originalBtnText;
+            }
+        });
     });
 
     // Real-time validation

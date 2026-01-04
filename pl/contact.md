@@ -16,7 +16,9 @@ permalink: /pl/contact/
         <strong>Dziękujemy!</strong> Twoja wiadomość została wysłana pomyślnie. Odpowiemy wkrótce.
     </div>
 
-    <form class="form-grid" id="contactForm" novalidate>
+    <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST">
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
+        <input type="hidden" name="_subject" value="Formularz kontaktowy">
         <div class="form-group">
             <label for="name" class="form-label">
                 Imię i Nazwisko

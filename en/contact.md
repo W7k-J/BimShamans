@@ -16,8 +16,7 @@ permalink: /en/contact/
         <strong>Thank you!</strong> Your message has been sent successfully. We'll get back to you soon.
     </div>
 
-    <iframe name="hidden_iframe" class="visually-hidden" aria-hidden="true"></iframe>
-    <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST" target="hidden_iframe">
+    <form class="form-grid" id="contactForm" novalidate action="https://formspree.io/f/xanlqpop" method="POST">
         <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="visually-hidden" aria-hidden="true">
         <input type="hidden" name="_subject" value="Contact form submission">
         <div class="form-group">
