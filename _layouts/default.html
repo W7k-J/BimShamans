@@ -149,10 +149,12 @@
     <div id="main" role="main" class="container">
         {{ content }}
 
-        <!-- Fade Overlay (for post and page layouts) -->
-        {% if page.layout == 'post' or page.layout == 'page' %}
-            <div class="fade-overlay"></div>
-        {% endif %}
+        {% comment %}
+            <!-- Fade Overlay (for post and page layouts - needs to be turned on) -->
+            {% if page.layout == 'post' or page.layout == 'page' %}
+                <div class="fade-overlay"></div>
+            {% endif %}
+        {% endcomment %}
     </div>
 
     <!-- Footer -->
