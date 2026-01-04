@@ -36,9 +36,28 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('contactForm');
     if (!form) return;
 
+    // Rate limiting / Throttling - ochrona przed spam flooding
+    let lastSubmitTime = 0;
+    const SUBMIT_COOLDOWN = 5000; // 5 sekund między submitami
+
     // Form validation only - let browser handle native POST
     form.addEventListener('submit', function(e) {
         console.log('Submit clicked');
+        
+        // Sprawdź rate limiting
+        const now = Date.now();
+        const timeSinceLastSubmit = now - lastSubmitTime;
+        
+        if (lastSubmitTime > 0 && timeSinceLastSubmit < SUBMIT_COOLDOWN) {
+            e.preventDefault();
+            const remainingTime = Math.ceil((SUBMIT_COOLDOWN - timeSinceLastSubmit) / 1000);
+            const message = form.getAttribute('data-lang') === 'pl' 
+                ? `Proszę odczekać ${remainingTime} sekund przed wysłaniem kolejnej wiadomości.`
+                : `Please wait ${remainingTime} seconds before sending another message.`;
+            alert(message);
+            console.log('Submit blocked - rate limit (remaining: ' + remainingTime + 's)');
+            return false;
+        }
         
         // Reset previous errors
         document.querySelectorAll('.form-group').forEach(group => {
@@ -92,6 +111,8 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         } else {
             console.log('Form valid - allowing native POST to:', form.action);
+            // Ustaw timestamp ostatniego submita
+            lastSubmitTime = Date.now();
             // If valid, form submits naturally via POST to Formspree
         }
     });
