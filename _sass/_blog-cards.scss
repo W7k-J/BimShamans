@@ -932,7 +932,7 @@
   width: 50px;
   position: fixed;
   left: calc(50vw - 715px); // center of container minus 100px gap (50vw - 600px - 15px - 100px)
-  top: calc(#{$nav-height} + #{$progression-bar-gap} + 15px); // navbar + (gap + indicator height) + extra spacing
+  top: calc(#{$nav-height} + #{$progression-bar-gap} + 50px); // navbar + (gap + indicator height) + extra spacing
   bottom: calc(86px + #{$progression-bar-gap} + 15px); // footer + (gap + indicator height) + extra spacing
   display: flex;
   flex-direction: column;

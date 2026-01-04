@@ -890,7 +890,7 @@ figure {
 
 #main.container {
   margin-top: calc(#{$nav-height} + #{$nav-spacing});
-  margin-bottom: 0;
+  margin-bottom: calc(#{$nav-height} + #{$nav-spacing});
 }
 
 // Mobile styles
@@ -1259,6 +1259,9 @@ blockquote {
 }
 
 footer {
-  padding: 20px 0;
+  height: $nav-height;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
