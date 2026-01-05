@@ -369,7 +369,7 @@
 
   &--active {
     background-color: var(--firstBlue-color);
-    color: white;
+    color: var(--background-color);
     font-weight: 600;
   }
 }
@@ -392,6 +392,18 @@
   }
 }
 
+// Fade-in animation for filtered cards
+@keyframes blogCardFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // Single blog card
 .blog-card {
   position: relative;
@@ -404,6 +416,21 @@
   transition: transform 0.35s ease-out, 
               box-shadow 0.35s ease-out;
   background-color: var(--background-color);
+  
+  // Fade-in animation on render
+  animation: blogCardFadeIn 0.4s ease-out both;
+  
+  // Stagger effect using nth-child
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * 0.05}s;
+    }
+  }
+  
+  // Respect reduced motion preference
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -445,7 +472,7 @@
     top: 1rem;
     left: 1rem;
     background-color: var(--firstBlue-color);
-    color: white;
+    color: var(--background-color);
     padding: 0.4rem 1rem;
     border-radius: $radius-small;
     font-size: 0.75rem;
@@ -453,6 +480,15 @@
     letter-spacing: 0.5px;
     text-transform: uppercase;
     z-index: 2;
+    
+    // Text smoothing
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
+    
+    // Subtle backdrop enhancement
+    backdrop-filter: blur(4px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
   }
 
   // Main content
@@ -501,10 +537,10 @@
     z-index: 10;
   }
 
-  // Description text area (40% upper section)
+  // Description text area (aligned to top)
   &__description {
-    margin: 0 0 0.75rem 0;
-    color: var(--forthGray-color);
+    margin: 0 0 auto 0;
+    color: var(--secondGray-color);
     font-size: clamp(0.875rem, #{"calc(0.8rem + 0.25vw)"}, 0.95rem);
     line-height: 1.6;
     flex: 0 0 auto;

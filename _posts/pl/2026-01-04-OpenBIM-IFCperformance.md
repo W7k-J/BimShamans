@@ -2,8 +2,8 @@
 layout: post  
 title: "Pliki IFC są ciężkie i nieczytelne? Obalamy ten mit"
 lang: pl
-ref: 2026-01-05-OpenBIM-IFCperformance
-date: 2026-01-05 12:00:00
+ref: 2026-01-04-OpenBIM-IFCperformance
+date: 2026-01-04 12:00:00
 author: Piotr
 excerpt: "Racjonalne spojrzenie na wydajność plików IFC, złożoność struktury i dlaczego argument o 'ciężkich plikach' całkowicie mija się z celem."
 filter_hash_list:
@@ -157,8 +157,23 @@ Następnym razem, gdy ktoś odrzuci IFC jako „za ciężki", zapytaj: *„W por
 
 ---
 
-<details class="post__bibliography">
-<summary>Bibliografia</summary>
+<div class="post__bibliography">
+<details class="post__bibliography-details">
+<summary class="post__bibliography-title">
+  <svg class="post__bibliography-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 2a10 10 0 0 1 0 20"></path>
+    <path d="M2 12h4"></path>
+    <path d="M18 12h4"></path>
+    <path d="M12 2v4"></path>
+    <path d="M12 18v4"></path>
+  </svg>
+  Bibliografia
+  <svg class="post__bibliography-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</summary>
+<div class="post__bibliography-content">
 
 ### Standardy i specyfikacje
 
@@ -194,4 +209,6 @@ Następnym razem, gdy ktoś odrzuci IFC jako „za ciężki", zapytaj: *„W por
 
 13. **buildingSMART Sample Test Files** — Referencyjne modele IFC do testowania. [github.com/buildingSMART/Sample-Test-Files](https://github.com/buildingSMART/Sample-Test-Files)
 
+</div>
 </details>
+</div>

@@ -2,8 +2,8 @@
 layout: post  
 title: "IFC Files Are Heavy and Unreadable? Let's Debunk This Myth"
 lang: en
-ref: 2026-01-05-OpenBIM-IFCperformance
-date: 2026-01-05 12:00:00
+ref: 2026-01-04-OpenBIM-IFCperformance
+date: 2026-01-04 12:00:00
 author: Piotr
 excerpt: "A rational look at IFC file performance, structure complexity, and why the 'heavy file' argument misses the point entirely."
 filter_hash_list:
@@ -157,8 +157,23 @@ The next time someone dismisses IFC as "too heavy," ask them: *"Compared to what
 
 ---
 
-<details class="post__bibliography">
-<summary>Bibliography</summary>
+<div class="post__bibliography">
+<details class="post__bibliography-details">
+<summary class="post__bibliography-title">
+  <svg class="post__bibliography-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <circle cx="12" cy="12" r="10"></circle>
+    <path d="M12 2a10 10 0 0 1 0 20"></path>
+    <path d="M2 12h4"></path>
+    <path d="M18 12h4"></path>
+    <path d="M12 2v4"></path>
+    <path d="M12 18v4"></path>
+  </svg>
+  Bibliography
+  <svg class="post__bibliography-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <polyline points="6 9 12 15 18 9"></polyline>
+  </svg>
+</summary>
+<div class="post__bibliography-content">
 
 ### Standards and Specifications
 
@@ -194,4 +209,6 @@ The next time someone dismisses IFC as "too heavy," ask them: *"Compared to what
 
 13. **buildingSMART Sample Test Files** — Reference IFC models for testing. [github.com/buildingSMART/Sample-Test-Files](https://github.com/buildingSMART/Sample-Test-Files)
 
+</div>
 </details>
+</div>
