@@ -160,15 +160,18 @@ Następnym razem, gdy ktoś odrzuci IFC jako „za ciężki", zapytaj: *„W por
 <div class="post__bibliography">
 <details class="post__bibliography-details">
 <summary class="post__bibliography-title">
-  <svg class="post__bibliography-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <circle cx="12" cy="12" r="10"></circle>
-    <path d="M12 2a10 10 0 0 1 0 20"></path>
-    <path d="M2 12h4"></path>
-    <path d="M18 12h4"></path>
-    <path d="M12 2v4"></path>
-    <path d="M12 18v4"></path>
+  <svg class="post__bibliography-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+    <!-- Globe -->
+    <circle cx="9" cy="9" r="7"></circle>
+    <ellipse cx="9" cy="9" rx="2.8" ry="7"></ellipse>
+    <path d="M2 9h14"></path>
+    <path d="M9 2c1.5 2 2.3 4.5 2.3 7s-.8 5-2.3 7"></path>
+    <path d="M9 2c-1.5 2-2.3 4.5-2.3 7s.8 5 2.3 7"></path>
+    <!-- Magnifying glass -->
+    <circle cx="17" cy="17" r="3.5"></circle>
+    <path d="M20 20l2.5 2.5" stroke-width="2"></path>
   </svg>
-  Bibliografia
+  Źródła i zaangażowanie AI
   <svg class="post__bibliography-chevron" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
     <polyline points="6 9 12 15 18 9"></polyline>
   </svg>
