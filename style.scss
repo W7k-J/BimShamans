@@ -472,7 +472,7 @@ html {
   justify-content: center;
   width: 100%;
   min-height: clamp(320px, 60vh, 560px);
-  padding: clamp(3rem, unquote("calc(8vw - 1rem)"), 6rem);
+  padding: clamp(3rem, calc(8vw - 1rem), 6rem);
   border-radius: 0;
   overflow: hidden;
   background: transparent;
