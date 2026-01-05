@@ -1023,6 +1023,8 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   display: inline-block;
+  text-align: center;
+  width: 100%;
 }
 
 .light-theme .blog__container h1,
@@ -1034,25 +1036,27 @@ h1 {
 .dark-theme .blog__container h1,
 .dark-theme .portfolio__header h1,
 .dark-theme .page h1 {
-  // Page-specific h2 gradients (for About Authors, Project sections)
-  .page h2 {
-    background-color: transparent;
-    background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
-    color: transparent;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    display: inline-block;
-  }
+  background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
+}
 
-  .light-theme .page h2 {
-    background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--thirdGray-color) 100%);
-  }
+// Page-specific h2 gradients (for About/Project sections)
+.page h2 {
+  background-color: transparent;
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
+  color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+}
 
-  .dark-theme .page h2 {
-    background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
-  }
+.light-theme .page h2 {
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--thirdGray-color) 100%);
+}
 
+.dark-theme .page h2 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
 }
 
