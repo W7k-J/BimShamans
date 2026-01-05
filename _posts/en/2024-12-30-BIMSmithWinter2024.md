@@ -11,27 +11,35 @@ filter_hash_list:
   - "Community"
   - "Competition"
 category: "Community"
-image: /images/posts/images-posts/2026-01-03-DigitalDelivery-CDE (2).jpg
+image: /images/images-posts/2026-01-03-DigitalDelivery-CDE (2).png
 popularity: 8
 ---
 
 <!--excerpt-->
 
-ENG ENG ENG
+## A Busy Year in Review
 
 It was an intensive year full of several architectural projects, including two castles in Poland and two large offices in London, along with some smaller things. On my programming front, I’ve started coding another five plugins, two of which are already on the Autodesk App Store - Extra and Viewer. Additionally, I had to upgrade all my previous plugins from .NET Framework 4.8 to .NET Core 8, and I had plenty of fun learning more about the Revit API. On top of that, I took part in one architectural competition, I did some cool aerial photos for new developments in Cracow and got involved in various other projects. It was a busy year!
 
+## BIMsmith Winter Wonderland Challenge
+
 But in December, I always reserve some time for the BIMsmith Winter Wonderland challenge. Each year, I try to push myself and expand my understanding of what is possible in Revit. While writing my plugins, I spent a lot of time testing my solutions on Revit sample project (BTW Paul Aubin, big thanks for making it!). So I decided to add some “snow” to Snowdon Towers. And it made me wonder if I’m able to create my own “particle system” allowing to simulate “the first snow” falling on it.
+
+## Creating the Snowflake Family
 
 To achieve that, I made a "snowflake" family. It is a relatively simple family, and it includes basic parametric formulas to control its shape. But on top of that, it has a mathematical formula that allows it to swing in the wind as it falls. I did it this way so later while animating I was able to control its fall with just a single parameter, element’s altitude (KISS rule). Also, to make the whole thing possible, I had to use a clever trick to enable parametric length with both positive and negative values – yeap, you can do it in Revit.
 
 As some of you may know, I had previously created a cool & fully parametric snowflake for the BIMsmith Winter Wonderland challenge, but replicating it and/or making it better was not the aim this time. Instead, I was trying to make something small and extremely well optimized so editing thousands of them wouldn't be an issue. Performance was rather important to me, as I had to export almost 2,500 frames to create this short animation.
 
+## Wrapping Up
+
 I hope you will like it, and Happy New Year!
 
-//The way the family is built allows swapping my snowflake for something else - feel free to test it and use frogs instead.
+*Pro tip: The way the family is built allows swapping my snowflake for something else - feel free to test it and use frogs instead!*
 
-Below some images showing how everything works:  
+## Snowflake Animation Demo
+
+Below you can see the final animation result:
 
 <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
   <iframe width="100%" height="100%"
@@ -39,11 +47,11 @@ Below some images showing how everything works:
     frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
   </iframe>
 </div>
-  
-![Internal Flake Family](/images/2024_BlogPost/BimSmithWWL_ParametricFlake_1.png)  
-  
-![Movement family](/images/2024_BlogPost/BimSmithWWL_ParametricFlake_2.png)  
-  
+
+## Behind the Scenes
+
+Here's another look at how the parametric families work together:
+
 <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
   <iframe width="100%" height="100%"
     src="https://drive.google.com/file/d/110Pr42SR6HTxoxysvCULbkoFwZ0VWGvl/preview"
@@ -51,7 +59,7 @@ Below some images showing how everything works:
   </iframe>
 </div>
 
-The code in C#:  
+## The Code  
 
 ```c#
 using Autodesk.Revit.DB;

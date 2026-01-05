@@ -11,27 +11,35 @@ filter_hash_list:
   - "Społeczność"
   - "Konkurs"
 category: "Społeczność"
-image: /images/posts/images-posts/2026-01-03-DigitalDelivery-CDE (2).jpg
+image: /images/images-posts/2026-01-03-DigitalDelivery-CDE (2).png
 popularity: 8
 ---
 
 <!--excerpt-->
 
-PLK PLK PLK
+## Pracowity Rok w Pigułce
 
-It was an intensive year full of several architectural projects, including two castles in Poland and two large offices in London, along with some smaller things. On my programming front, I’ve started coding another five plugins, two of which are already on the Autodesk App Store - Extra and Viewer. Additionally, I had to upgrade all my previous plugins from .NET Framework 4.8 to .NET Core 8, and I had plenty of fun learning more about the Revit API. On top of that, I took part in one architectural competition, I did some cool aerial photos for new developments in Cracow and got involved in various other projects. It was a busy year!
+To był intensywny rok pełen kilku projektów architektonicznych, w tym dwóch zamków w Polsce i dwóch dużych biur w Londynie. Po stronie programistycznej rozpocząłem prace nad kolejnymi pięcioma wtyczkami, z których dwie są już na Autodesk App Store - Extra i Viewer. Musiałem również zaktualizować wszystkie moje poprzednie wtyczki z .NET Framework 4.8 do .NET Core 8 i przy okazji nauczyłem się sporo nowego o Revit API. Do tego wziąłem udział w jednym konkursie architektonicznym, zrobiłem kilka ciekawych zdjęć lotniczych dla nowych inwestycji w Krakowie i zaangażowałem się w różne inne projekty. Pracowity rok!
 
-But in December, I always reserve some time for the BIMsmith Winter Wonderland challenge. Each year, I try to push myself and expand my understanding of what is possible in Revit. While writing my plugins, I spent a lot of time testing my solutions on Revit sample project (BTW Paul Aubin, big thanks for making it!). So I decided to add some “snow” to Snowdon Towers. And it made me wonder if I’m able to create my own “particle system” allowing to simulate “the first snow” falling on it.
+## Wyzwanie BIMsmith Winter Wonderland
 
-To achieve that, I made a "snowflake" family. It is a relatively simple family, and it includes basic parametric formulas to control its shape. But on top of that, it has a mathematical formula that allows it to swing in the wind as it falls. I did it this way so later while animating I was able to control its fall with just a single parameter, element’s altitude (KISS rule). Also, to make the whole thing possible, I had to use a clever trick to enable parametric length with both positive and negative values – yeap, you can do it in Revit.
+Ale w grudniu zawsze rezerwuję trochę czasu na wyzwanie BIMsmith Winter Wonderland. Co roku staram się pchać granice i poszerzać moją wiedzę o tym, co jest możliwe w Revit. Pisząc wtyczki, spędziłem dużo czasu testując rozwiązania na przykładowym projekcie Revit (BTW Paul Aubin, wielkie dzięki za jego udostępnienie!). Postanowiłem więc dodać trochę "śniegu" do Snowdon Towers. I zacząłem się zastanawiać, czy jestem w stanie stworzyć własny "system cząsteczkowy" pozwalający symulować "pierwszy śnieg" opadający na budynek.
 
-As some of you may know, I had previously created a cool & fully parametric snowflake for the BIMsmith Winter Wonderland challenge, but replicating it and/or making it better was not the aim this time. Instead, I was trying to make something small and extremely well optimized so editing thousands of them wouldn't be an issue. Performance was rather important to me, as I had to export almost 2,500 frames to create this short animation.
+## Tworzenie Rodziny Płatka Śniegu
 
-I hope you will like it, and Happy New Year!
+Aby to osiągnąć, stworzyłem rodzinę "płatka śniegu". To stosunkowo prosta rodzina zawierająca podstawowe parametryczne formuły kontrolujące jej kształt. Ale dodatkowo posiada matematyczną formułę, która pozwala jej kołysać się na wietrze podczas opadania. Zrobiłem to w taki sposób, żeby podczas animacji móc kontrolować upadek tylko jednym parametrem - wysokością elementu (zasada KISS). Aby to wszystko było możliwe, musiałem też użyć sprytnej sztuczki umożliwiającej parametryczną długość z wartościami dodatnimi i ujemnymi – tak, można to zrobić w Revit.
 
-//The way the family is built allows swapping my snowflake for something else - feel free to test it and use frogs instead.
+Jak niektórzy z was mogą wiedzieć, wcześniej stworzyłem fajny i w pełni parametryczny płatek śniegu dla wyzwania BIMsmith Winter Wonderland, ale replikowanie go lub ulepszanie nie było tym razem celem. Zamiast tego próbowałem stworzyć coś małego i ekstremalnie zoptymalizowanego, żeby edycja tysięcy elementów nie stanowiła problemu. Wydajność była dla mnie dość ważna, ponieważ musiałem wyeksportować prawie 2500 klatek, żeby stworzyć tę krótką animację.
 
-Below some images showing how everything works:  
+## Podsumowanie
+
+Mam nadzieję, że wam się spodoba i Szczęśliwego Nowego Roku!
+
+*Pro tip: Sposób budowy rodziny pozwala zamienić mój płatek śniegu na coś innego - możecie to przetestować i użyć np. żab!*
+
+## Animacja Demo Płatka Śniegu
+
+Poniżej możesz zobaczyć końcowy rezultat animacji:
 
 <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
   <iframe width="100%" height="100%"
@@ -39,11 +47,11 @@ Below some images showing how everything works:
     frameborder="0" allowfullscreen="" style="position:absolute; top:0; left: 0">
   </iframe>
 </div>
-  
-![Internal Flake Family](/images/2024_BlogPost/BimSmithWWL_ParametricFlake_1.png)  
-  
-![Movement family](/images/2024_BlogPost/BimSmithWWL_ParametricFlake_2.png)  
-  
+
+## Za Kulisami
+
+Oto jak parametryczne rodziny współpracują ze sobą:
+
 <div style="padding-bottom:56.25%; position:relative; display:block; width: 100%">
   <iframe width="100%" height="100%"
     src="https://drive.google.com/file/d/110Pr42SR6HTxoxysvCULbkoFwZ0VWGvl/preview"
@@ -51,7 +59,7 @@ Below some images showing how everything works:
   </iframe>
 </div>
 
-The code in C#:  
+## Kod C#
 
 ```c#
 using Autodesk.Revit.DB;
@@ -80,20 +88,6 @@ namespace W7k.Drafter
 
 
             double step = 0.05;
-            /* Code to update the animation after crash
-            using Transaction t2 = new Transaction(doc, $"Previous animation");
-            {
-                t2.Start();
-                foreach (Element el in elements)
-                {
-                    Parameter param = el.GetParameters("Altitude").First();
-                    param.Set(param.AsDouble() - step * 1013);
-                }
-                t2.Commit();
-            }
-            */
-
-            //for (int i = 1013; i < 3000; i++)
 
             for (int i = 0; i < 3000; i++)
             {
@@ -125,5 +119,4 @@ namespace W7k.Drafter
         }
     }
 }
-
-```  
+```
