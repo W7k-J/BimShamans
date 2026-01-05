@@ -215,7 +215,7 @@ html {
       color: var(--firstGray-color);
       text-align: center;
       font-weight: 300;
-      letter-spacing: 1px;
+      letter-spacing: 0.5px;
       transition: color $transition-base ease, font-weight $transition-base ease;
       height: 100%;
       display: flex;
@@ -224,6 +224,7 @@ html {
       width: auto;
       padding: 0 $nav-padding-x;
       border-radius: $radius-small;
+      white-space: nowrap;
 
       &::before {
         content: '';
@@ -372,11 +373,9 @@ html {
     align-items: center;
     gap: 1rem;
     padding-left: 1rem;
-    overflow: hidden;
+    flex-shrink: 0;
 
     .switch {
-      position: relative;
-      top: 3px;
       flex-shrink: 0;
     }
 
