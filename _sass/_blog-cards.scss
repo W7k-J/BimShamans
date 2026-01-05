@@ -364,12 +364,12 @@
 
   &:hover {
     background-color: var(--firstBlue-color);
-    color: white;
+    color: var(--raisinBlack);
   }
 
   &--active {
     background-color: var(--firstBlue-color);
-    color: var(--background-color);
+    color: var(--raisinBlack);
     font-weight: 600;
   }
 }
