@@ -1,5 +1,6 @@
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign cards = include.cards | default: page.feature_cards %}
+{% assign cards_height = include.cards_height | default: page.cards_height %}
 {% comment %} Determine which card should be active on page load {% endcomment %}
 {% assign initial_active_index = include.initial_active | default: page.initial_active %}
 {% if initial_active_index == blank %}
@@ -13,7 +14,7 @@
 {% endif %}
 
 <section class="feature-cards-section">
-  <div class="feature-cards" {% if page.cards_height %}style="height: {{ page.cards_height }}"{% endif %}>
+  <div class="feature-cards" {% if cards_height %}style="height: {{ cards_height }}"{% endif %}>
     {% for card in cards %}
     <div class="feature-card {% if forloop.index == initial_active_index %}active{% endif %}{% if card.image_front %} feature-card--image{% endif %}" data-feature="card-{{ forloop.index }}" {% if card.image_width_start or card.image_width %}style="{% if card.image_width_start %}flex-basis: {{ card.image_width_start }};{% endif %} {% if card.image_width %}min-width: {{ card.image_width }};{% endif %}"{% endif %}>
       <div class="feature-card__background"></div>
