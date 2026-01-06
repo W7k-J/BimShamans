@@ -205,8 +205,8 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     }
     
     svg {
-      width: 75%;
-      height: 75%;
+      width: 75% !important;
+      height: 75% !important;
       
       path, circle, rect, polygon {
         fill: currentColor;
