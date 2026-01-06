@@ -46,11 +46,6 @@
   }
 }
 
-// Force scrollbar display
-html {
-  overflow-y: scroll !important;
-}
-
 // Firefox-specific styles - moved to end to prevent override
 @-moz-document url-prefix() {
   html {
