@@ -92,6 +92,10 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
     </div>
 
   </div>
+
+  <!-- Filtry tagów (pełna szerokość poniżej) -->
+  <div class="blog__tags blog__tags--filter" id="tag-filters">
+    <!-- Generowane przez JavaScript -->
   </div>
 
   <!-- Siatka kart bloga -->
