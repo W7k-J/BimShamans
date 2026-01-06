@@ -9,7 +9,7 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
 
 <div class="blog__container">
   
-  <h1>Blog</h1>
+  <!-- <h1>Blog</h1> -->
   
   <!-- Panel kontrolny: Wyszukiwanie, kierunek & Sortowanie -->
   <div class="blog__controls">
@@ -104,6 +104,16 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
   </div>
 
 </div>
+
+<!-- Nawigacja w stopce -->
+<nav class="portfolio__nav">
+  <button type="button" class="portfolio__nav-link portfolio__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    Na górę
+    <svg class="portfolio__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+</nav>
 
 <!-- Osadzenie danych postów -->
 <script>

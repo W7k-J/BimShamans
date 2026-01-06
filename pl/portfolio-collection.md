@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Wszystkie projekty
+title: Kompletna Kolekcja Portfolio
 lang: pl
 ref: portfolio-collection
 permalink: /pl/portfolio-collection/
@@ -18,6 +18,7 @@ excerpt: "Pełna kolekcja projektów portfolio. Filtruj według kategorii lub te
   </a>
 
   <h1>{{ t.portfolio_collection }}</h1>
+  <p>{{ t.portfolio_collection_intro }}</p>
 
   <!-- Filtry tagów (generowane przez JavaScript) -->
   <div class="portfolio-collection__tags" id="portfolio-filters">
