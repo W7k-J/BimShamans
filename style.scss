@@ -183,7 +183,7 @@ html {
   .site-avatar {
     height: $nav-height;
     padding: 5px 0;
-    margin-right: auto;
+    margin-right: 2.5rem;
     display: flex;
     align-items: center;
     gap: 0.6rem;
@@ -372,7 +372,7 @@ html {
     display: flex;
     align-items: center;
     gap: 1rem;
-    padding-left: 1rem;
+    padding-left: 2rem;
     flex-shrink: 0;
 
     .switch {
