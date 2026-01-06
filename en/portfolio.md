@@ -12,11 +12,11 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 <div class="portfolio__container">
 
   <div class="portfolio__header">
-    #<h1>Portfolio</h1>
-    <p>A curated selection of our work spanning BIM implementation, architectural design, data analytics, and process automation. Each category represents years of hands-on experience across diverse projects.</p>
+    <!--<h1>Portfolio</h1>-->
+    <!--<p>A curated selection of our work spanning BIM implementation, architectural design, data analytics, and process automation. Each category represents years of hands-on experience across diverse projects.</p>-->
   </div>
 
-  <!-- ========================================== -->
+  <!-- ========================================= -->
   <!-- SECTION 1: Architecture -->
   <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
   <!-- ========================================== -->

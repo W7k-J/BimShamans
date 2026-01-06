@@ -9,7 +9,7 @@ excerpt: "Insights, methodologies, and best practices in BIM coordination"
 
 <div class="blog__container">
   
-  #<h1>Blog</h1>
+  <!-- <h1>Blog</h1> -->
   
   <!-- Control Panel: Search, Direction, & Sort (Full Width Horizontal) -->
   <div class="blog__controls">
