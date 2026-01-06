@@ -9,7 +9,7 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
 
 <div class="blog__container">
   
-  <h1>Blog</h1>
+  <!-- <h1>Blog</h1> -->
   
   <!-- Panel kontrolny: Wyszukiwanie, kierunek & Sortowanie -->
   <div class="blog__controls">

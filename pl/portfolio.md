@@ -12,8 +12,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
 <div class="portfolio__container">
 
   <div class="portfolio__header">
-    <h1>Portfolio</h1>
-    <p>Wyselekcjonowane przykłady naszej pracy obejmujące wdrożenia BIM, projektowanie architektoniczne, analitykę danych i automatyzację procesów. Każda kategoria reprezentuje wieloletnie doświadczenie zdobyte w różnorodnych projektach.</p>
+    <!--<h1>Portfolio</h1>-->
+    <!--<p>Wyselekcjonowane przykłady naszej pracy obejmujące wdrożenia BIM, projektowanie architektoniczne, analitykę danych i automatyzację procesów. Każda kategoria reprezentuje wieloletnie doświadczenie zdobyte w różnorodnych projektach.</p>-->
   </div>
 
   <!-- ========================================== -->
