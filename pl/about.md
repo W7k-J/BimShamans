@@ -277,7 +277,39 @@ authors:
           </g>
           </svg>
       - title: "Umiejętności i Software"
-        content: "**Skrypty Dynamo** | **Automatyzacja Revit** | **Programowanie C#** | **Tworzenie pluginów** | **Optymalizacja przepływów pracy** | **Zarządzanie danymi**\n\n- Opublikowane pluginy **Drafter** i **Leveler** na Autodesk App Store\n- Drafter zawiera ~180 automatyzacji do usprawnienia pracy\n- **Pilot drona** (VLOS i BVLOS, do 25 kg)\n- **Modelowanie 3D**, grafika 2D i 3D, identyfikacja wizualna\n- Skanowanie laserowe w budownictwie (przetwarzanie chmur punktów)"
+        content: 
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Revit</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">C# / Revit API</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Skaning laserowy</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Modelowanie 3D</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Creative Design</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -819,6 +851,29 @@ authors:
         }
     }
 }
+</style>
+
+<style>
+/* Shared author skillbar styles (moved from individual author cards) */
+.author-skillbar { --bar-height: 15px; margin: 0.6rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:12px; margin:0.45rem 0; }
+.author-skill__name { width: 180px; font-weight:600; }
+.author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
+.author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
+.author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }
+
+/* Theme-aware colors + alpha */
+.light-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
+.light-theme .author-skill__fill { background: var(--firstBlue-color); }
+.dark-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
+.dark-theme .author-skill__fill { background: var(--firstBlue-color); }
+
+/* Discrete 1..n levels (static widths) */
+.author-skill[data-level="1"] .author-skill__fill { width:20%; }
+.author-skill[data-level="2"] .author-skill__fill { width:40%; }
+.author-skill[data-level="3"] .author-skill__fill { width:60%; }
+.author-skill[data-level="4"] .author-skill__fill { width:80%; }
+.author-skill[data-level="5"] .author-skill__fill { width:100%; }
 </style>
 
 ## Projekt: BIM Shamans

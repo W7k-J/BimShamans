@@ -266,7 +266,7 @@ authors:
             </g>
           </svg>
       - title: "Independent Architect & Programmer"
-        content: "I am a licensed architect, C# developer, and BIM coordinator. I gained my professional experience in the UK (Manchester, London), USA (Chicago), and Poland (Kraków), and I have also participated in architectural projects in Australia and Norway. My work has included preparing masterplans, designing factories, healthcare facilities, educational buildings, high-end residences, high-rise buildings and dormitories, museum interiors, as well as extensions and renovations of heritage-listed buildings. I am also a certified drone pilot (VLOS and BVLOS up to 25kg) and an avid photographer. I am always open to taking part in interesting ventures."
+        content: "I am a licensed architect, C# developer, and BIM coordinator. I gained my professional experience in the UK (Manchester, London), USA (Chicago), and Poland (Kraków), and I have also participated in architectural projects in Australia and Norway. \n\n My work has included preparing masterplans, designing factories, healthcare facilities, educational buildings, high-end residences, high-rise buildings and dormitories, museum interiors, as well as extensions and renovations of heritage-listed buildings. I am also a certified drone pilot (VLOS and BVLOS up to 25kg) and an avid photographer. \n\n\ I am always open to taking part in interesting ventures."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -277,7 +277,39 @@ authors:
           </g>
           </svg>
       - title: "Expertise & Tools"
-        content: "**Dynamo scripts** | **Revit automation** | **C# development** | **Plugin creation** | **Workflow optimization** | **Data management**\n\n- Published **Drafter** and **Leveler** plugins on Autodesk App Store\n- Drafter contains ~180 automations for streamlined daily work\n- **UAV pilot** (VLOS and BVLOS, up to 25kg)\n- **3D modeling**, 2D & 3D graphic design, brand identities\n- Laser scanning for construction (point cloud processing)"
+        content: |
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Revit</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">C# / Revit API</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Laser Scanning</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">3D Modelling</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Creative Design</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -292,7 +324,7 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55428 21.5288C5.35132 22.75 8.49749 21.4915 14.7898 18.9746C16.132 18.4377 16.8031 18.1693 17.3295 17.7076C17.4637 17.59 17.59 17.4637 17.7076 17.3295C18.1693 16.8031 18.4377 16.132 18.9746 14.7898C21.4915 8.49749 22.75 5.35132 21.5288 3.55428C21.2393 3.1282 20.8718 2.7607 20.4457 2.47117C18.6487 1.25001 15.5025 2.50848 9.21017 5.02542C7.86802 5.56228 7.19695 5.8307 6.67048 6.29238C6.53633 6.41002 6.41002 6.53633 6.29238 6.67048C5.8307 7.19695 5.56228 7.86802 5.02542 9.21017C2.50848 15.5025 1.25001 18.6487 2.47117 20.4457C2.76071 20.8718 3.1282 21.2393 3.55428 21.5288ZM8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z" fill="currentColor"/>
           </g>
           </svg>
-
+          
   - name: "Natalia Gawlik"
     intro: "BIM Coordinator with expertise in large-scale infrastructure projects. Specialist in data management, information-driven modeling, and automation using Dynamo, Grasshopper, and Python. Passionate about converting \"I\" in BIM from modeling to Information."
     initial_active: 2
@@ -818,6 +850,29 @@ authors:
         }
     }
 }
+</style>
+
+<style>
+/* Shared author skillbar styles (moved from individual author cards) */
+.author-skillbar { --bar-height: 15px; margin: 0.6rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:12px; margin:0.45rem 0; }
+.author-skill__name { width: 180px; font-weight:600; }
+.author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
+.author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
+.author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }
+
+/* Theme-aware colors + alpha */
+.light-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
+.light-theme .author-skill__fill { background: var(--firstBlue-color); }
+.dark-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
+.dark-theme .author-skill__fill { background: var(--firstBlue-color); }
+
+/* Discrete 1..n levels (static widths) */
+.author-skill[data-level="1"] .author-skill__fill { width:20%; }
+.author-skill[data-level="2"] .author-skill__fill { width:40%; }
+.author-skill[data-level="3"] .author-skill__fill { width:60%; }
+.author-skill[data-level="4"] .author-skill__fill { width:80%; }
+.author-skill[data-level="5"] .author-skill__fill { width:100%; }
 </style>
 
 ## Project: BIM Shamans
