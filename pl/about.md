@@ -4,6 +4,9 @@ title: O BIM Shamans
 lang: pl
 ref: about
 permalink: /pl/about/
+
+## About the project - interactive cards
+
 cards_height: 400px
 initial_active: 1
 feature_cards:
@@ -45,6 +48,9 @@ feature_cards:
         <path d="M8.34466 12.7093L8.34905 12.7049L11.2949 15.6507L11.2905 15.6551L8.34466 12.7093Z" fill="currentColor"/>
         <path d="M19.6686 7.18261C19.9233 6.7073 19.9153 6.13264 19.6445 5.66359C19.5416 5.48547 19.3704 5.31425 19.028 4.97181C18.6855 4.62936 18.5143 4.45814 18.3362 4.3553C17.8671 4.0845 17.2925 4.07647 16.8172 4.33123L19.6686 7.18261Z" fill="currentColor"/>
       </svg>
+
+## About the authors - interactive cards
+
 authors:
   - name: "Julian Wandzilak"
     intro: "Niezależny architekt, projektant, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM z opublikowanymi pluginami Revit'a używanymi przez tysiące profesjonalistów na całym świecie."
@@ -56,7 +62,6 @@ authors:
         image_front: "/images/images-main/About_Authors_JulianWandzilak_Main.png"
         image_back: "/images/images-main/About_Authors_JulianWandzilak_Alter.webp"
         # icon dodany jako zawartosc SVG + <g transform> dla pogrubienia "jak bold czcionki", wycentrowany wzgledem viewBox
- # icon dodany jako zawartosc SVG + <g transform> dla pogrubienia "jak bold czcionki", wycentrowany wzgledem viewBox
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 225 300" style="enable-background:new 0 0 225 300;" xml:space="preserve">
@@ -287,6 +292,7 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55428 21.5288C5.35132 22.75 8.49749 21.4915 14.7898 18.9746C16.132 18.4377 16.8031 18.1693 17.3295 17.7076C17.4637 17.59 17.59 17.4637 17.7076 17.3295C18.1693 16.8031 18.4377 16.132 18.9746 14.7898C21.4915 8.49749 22.75 5.35132 21.5288 3.55428C21.2393 3.1282 20.8718 2.7607 20.4457 2.47117C18.6487 1.25001 15.5025 2.50848 9.21017 5.02542C7.86802 5.56228 7.19695 5.8307 6.67048 6.29238C6.53633 6.41002 6.41002 6.53633 6.29238 6.67048C5.8307 7.19695 5.56228 7.86802 5.02542 9.21017C2.50848 15.5025 1.25001 18.6487 2.47117 20.4457C2.76071 20.8718 3.1282 21.2393 3.55428 21.5288ZM8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z" fill="currentColor"/>
           </g>
           </svg>
+
   - name: "Natalia Gawlik"
     intro: "Koordynator BIM ze specjalizacją w dużych projektach infrastrukturalnych. Specjalistka w zarządzaniu danymi, modelowaniu sterowanym informacją i automatyzacji przy użyciu Dynamo, Grasshoppera i Pythona. Pasjonata zamiany \"I\" w BIM z modelowania na Information."
     initial_active: 2
@@ -816,7 +822,6 @@ authors:
 </style>
 
 ## Projekt: BIM Shamans
-
 > Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. Szaman to dosłownie **_'ten, który wie'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
@@ -826,15 +831,11 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 #### Wchodząc w szczegóły
 {% include sections/feature-cards.html %}
 
-
 #### Rada Plemienia
-
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
-
 {% for author in page.authors %}
 
 #### {{ author.name }}
-
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}

@@ -4,6 +4,9 @@ title: About BIM Shamans
 lang: en
 ref: about
 permalink: /en/about/
+
+## About the project - interactive cards
+
 cards_height: 400px
 initial_active: 1
 feature_cards:
@@ -45,6 +48,9 @@ feature_cards:
         <path d="M8.34466 12.7093L8.34905 12.7049L11.2949 15.6507L11.2905 15.6551L8.34466 12.7093Z" fill="currentColor"/>
         <path d="M19.6686 7.18261C19.9233 6.7073 19.9153 6.13264 19.6445 5.66359C19.5416 5.48547 19.3704 5.31425 19.028 4.97181C18.6855 4.62936 18.5143 4.45814 18.3362 4.3553C17.8671 4.0845 17.2925 4.07647 16.8172 4.33123L19.6686 7.18261Z" fill="currentColor"/>
       </svg>
+
+## About the authors - interactive cards
+
 authors:
   - name: "Julian Wandzilak"
     intro: "Independent architect, designer, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Pioneer in missing Revit's automation with published Revit plugins used by professionals worldwide."
@@ -261,7 +267,6 @@ authors:
           </svg>
       - title: "Independent Architect & Programmer"
         content: "I've gained my professional experience working in the UK (Manchester, London), USA (Chicago) and Poland (Kraków). I was also involved in architectural projects in Australia and Norway. **During my professional life I've participated in preparing masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings, interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses.** \n\n All of it showed me that everywhere in the world we have a similar problem - 'WE NEED MORE AUTOMATIONS'. Sadly no one is interested in doing it for us! So I decided to take matters into my own hands. I learned to program and started publishing. You can find my plugins for Revit on the Autodesk App Store – Drafter and Leveler. They automate the work of architects and engineers, allowing them to complete tasks faster and with predictable repeatability."
-        # icon dodany jako zawartosc SVG + <g transform> dla pogrubienia "jak bold czcionki", wycentrowany wzgledem viewBo
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -287,6 +292,7 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55428 21.5288C5.35132 22.75 8.49749 21.4915 14.7898 18.9746C16.132 18.4377 16.8031 18.1693 17.3295 17.7076C17.4637 17.59 17.59 17.4637 17.7076 17.3295C18.1693 16.8031 18.4377 16.132 18.9746 14.7898C21.4915 8.49749 22.75 5.35132 21.5288 3.55428C21.2393 3.1282 20.8718 2.7607 20.4457 2.47117C18.6487 1.25001 15.5025 2.50848 9.21017 5.02542C7.86802 5.56228 7.19695 5.8307 6.67048 6.29238C6.53633 6.41002 6.41002 6.53633 6.29238 6.67048C5.8307 7.19695 5.56228 7.86802 5.02542 9.21017C2.50848 15.5025 1.25001 18.6487 2.47117 20.4457C2.76071 20.8718 3.1282 21.2393 3.55428 21.5288ZM8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z" fill="currentColor"/>
           </g>
           </svg>
+
   - name: "Natalia Gawlik"
     intro: "BIM Coordinator with expertise in large-scale infrastructure projects. Specialist in data management, information-driven modeling, and automation using Dynamo, Grasshopper, and Python. Passionate about converting \"I\" in BIM from modeling to Information."
     initial_active: 2
@@ -575,6 +581,7 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M3.55428 21.5288C5.35132 22.75 8.49749 21.4915 14.7898 18.9746C16.132 18.4377 16.8031 18.1693 17.3295 17.7076C17.4637 17.59 17.59 17.4637 17.7076 17.3295C18.1693 16.8031 18.4377 16.132 18.9746 14.7898C21.4915 8.49749 22.75 5.35132 21.5288 3.55428C21.2393 3.1282 20.8718 2.7607 20.4457 2.47117C18.6487 1.25001 15.5025 2.50848 9.21017 5.02542C7.86802 5.56228 7.19695 5.8307 6.67048 6.29238C6.53633 6.41002 6.41002 6.53633 6.29238 6.67048C5.8307 7.19695 5.56228 7.86802 5.02542 9.21017C2.50848 15.5025 1.25001 18.6487 2.47117 20.4457C2.76071 20.8718 3.1282 21.2393 3.55428 21.5288ZM8.25 12C8.25 9.92893 9.92893 8.25 12 8.25C14.0711 8.25 15.75 9.92893 15.75 12C15.75 14.0711 14.0711 15.75 12 15.75C9.92893 15.75 8.25 14.0711 8.25 12ZM9.75 12C9.75 10.7574 10.7574 9.75 12 9.75C13.2426 9.75 14.25 10.7574 14.25 12C14.25 13.2426 13.2426 14.25 12 14.25C10.7574 14.25 9.75 13.2426 9.75 12Z" fill="currentColor"/>
           </g>
           </svg>
+
   - name: "Piotr Spyra"
     intro: "BIM Coordinator and BIM Manager with strong civil engineering background. Specialist in coordination, data analysis, material take-offs and value delivery between construction site and design team. "
     initial_active: 2
@@ -718,8 +725,6 @@ authors:
           </g>
           </g>
           </svg>
-
-
       - title: "BIM Coordinator, Data Analyst & Structural Designer"
         content: "I'm Civil Engineer with structural design expertise, on-site experience & unlimited building license. **I work as BIM Coordinator and BIM Manager with industrial projects across Advanced Technology and Life Science area and also in Real Estate market**. This wide experience allows me to think about BIM as a standarized way of enhancing digital design and delivery, construction process support and awarenes of data use. My responsibility is to assure both, a final product and the way to achieve it, as reliable as possible, filling the needs of all participant. \n\n I'm the kind of person who sees a repetitive task and thinks: 'I won't waste my colleagues' or my own potential on endless clicking...' **I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery**. Standardization, on the other hand, is the foundation of successful automation."
         icon: |
@@ -816,7 +821,6 @@ authors:
 </style>
 
 ## Project: BIM Shamans
-
 > The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to&nbsp;know_**. A shaman is literally the **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
@@ -827,13 +831,10 @@ We solve problems which satellites civil enginneering, BIM technology, automatio
 {% include sections/feature-cards.html %}
 
 #### The Tribal Council
-
 The team behind BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through **automation**, **standardization**, and **pragmatic engineering**.
-
 {% for author in page.authors %}
 
 #### {{ author.name }}
-
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}
