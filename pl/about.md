@@ -53,7 +53,7 @@ feature_cards:
 
 authors:
   - name: "Julian Wandzilak"
-    intro: "Niezależny architekt, projektant, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM z opublikowanymi pluginami Revit'a używanymi przez tysiące profesjonalistów na całym świecie."
+    intro: "Niezależny architekt, twórca, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM, twórca własnych pluignów Revit używanych przez profesjonalistów na całym świecie."
     initial_active: 2
     feature_cards:
       - title: ""
@@ -265,8 +265,8 @@ authors:
             C76.7,244.5,76.8,251.7,71.6,258.2z"/>
             </g>
           </svg>
-      - title: "Niezależny Architekt & Developer"
-        content: "Jestem niezależnym architektem, projektantem, programistą C# i koordynatorem BIM. Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii. Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską."
+      - title: "Niezależny Architekt i Developer"
+        content: "Jestem uprawnionym architektem, programistą C# i koordynatorem BIM. Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii. \n\n Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską. Pilotuję drona (VLOS and BVLOS do 25kg) i fotografuję. \n\n\ Zawsze chętnie wezmę udział w ciekawym czy nietypowym przedsięwzięciu. " 
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -276,7 +276,7 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2501 5C10.2501 4.58579 10.5859 4.25 11.0001 4.25H16.132C18.8832 4.25 19.9295 7.843 17.6084 9.32007L7.19713 15.9454C6.14207 16.6168 6.61766 18.25 7.86821 18.25H11.1894L10.9698 18.0303C10.6769 17.7374 10.6769 17.2626 10.9698 16.9697C11.2627 16.6768 11.7375 16.6768 12.0304 16.9697L13.5304 18.4697C13.8233 18.7626 13.8233 19.2374 13.5304 19.5303L12.0304 21.0303C11.7375 21.3232 11.2627 21.3232 10.9698 21.0303C10.6769 20.7374 10.6769 20.2626 10.9698 19.9697L11.1894 19.75H7.86821C5.11697 19.75 4.07071 16.157 6.39181 14.6799L16.8031 8.05458C17.8581 7.38318 17.3825 5.75 16.132 5.75H11.0001C10.5859 5.75 10.2501 5.41421 10.2501 5Z" fill="currentColor"/>
           </g>
           </svg>
-      - title: "Umiejętności & Narzędzia"
+      - title: "Umiejętności i Software"
         content: "**Skrypty Dynamo** | **Automatyzacja Revit** | **Programowanie C#** | **Tworzenie pluginów** | **Optymalizacja przepływów pracy** | **Zarządzanie danymi**\n\n- Opublikowane pluginy **Drafter** i **Leveler** na Autodesk App Store\n- Drafter zawiera ~180 automatyzacji do usprawnienia pracy\n- **Pilot drona** (VLOS i BVLOS, do 25 kg)\n- **Modelowanie 3D**, grafika 2D i 3D, identyfikacja wizualna\n- Skanowanie laserowe w budownictwie (przetwarzanie chmur punktów)"
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
@@ -285,7 +285,7 @@ authors:
             </g>
           </svg>
       - title: "Filozofia Specjalizacji"
-        content: "Wierzę, że **\"specjalizacja jest dla owadów\"** — najlepsze rozwiązania rodzą się z myślenia interdyscyplinarnego. Wszystkie moje doświadczenia wykazały ten sam uniwersalny problem wszędzie: **\"POTRZEBUJEMY WIĘCEJ AUTOMATYZACJI\".** Zamiast czekać, aż dostawcy oprogramowania to rozwiążą, wziąłem sprawy w swoje ręce, nauczyłem się programować i zacząłem publikować narzędzia, które naprawdę pomagają arquitectom i inżynierom na całym świecie."
+        content: "Najlepsze rozwiązania rodzą się z myślenia interdyscyplinarnego. Prawdopodobnie interesuję się zbyt wieloma rzeczami, ale wierzę, że „specjalizowanie się jest dla owadów”. \n\n Wszystkie moje doświadczenia pokazały jedno: POTRZEBUJEMY WIĘCEJ AUTOMATYZACJI. Zamiast czekać, aż dostawcy oprogramowania rozwiążą mój problem, wziąłem sprawy w swoje ręce — nauczyłem się programować i zacząłem publikować narzędzia, które pomagają architektom i inżynierom na całym świecie. Przy okazji wspierają też moją własną pracę architekta, zostawiając mi więcej czasu na kreatywną część zawodu."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">

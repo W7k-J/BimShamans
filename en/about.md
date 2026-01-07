@@ -53,7 +53,7 @@ feature_cards:
 
 authors:
   - name: "Julian Wandzilak"
-    intro: "Independent architect, designer, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Pioneer in missing Revit's automation with published Revit plugins used by professionals worldwide."
+    intro: "Independent architect, creator, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Pioneer in missing Revit's automation with published Revit plugins used by professionals worldwide."
     initial_active: 2
     feature_cards:
       - title: ""
@@ -266,7 +266,7 @@ authors:
             </g>
           </svg>
       - title: "Independent Architect & Programmer"
-        content: "I've gained my professional experience working in the UK (Manchester, London), USA (Chicago) and Poland (Kraków). I was also involved in architectural projects in Australia and Norway. **During my professional life I've participated in preparing masterplans, factories, healthcare projects, education, high-end residential projects, high-rise buildings, interiors for a museum, extensions and refurbishment of heritage-listed projects and small houses.** \n\n All of it showed me that everywhere in the world we have a similar problem - 'WE NEED MORE AUTOMATIONS'. Sadly no one is interested in doing it for us! So I decided to take matters into my own hands. I learned to program and started publishing. You can find my plugins for Revit on the Autodesk App Store – Drafter and Leveler. They automate the work of architects and engineers, allowing them to complete tasks faster and with predictable repeatability."
+        content: "I am a licensed architect, C# developer, and BIM coordinator. I gained my professional experience in the UK (Manchester, London), USA (Chicago), and Poland (Kraków), and I have also participated in architectural projects in Australia and Norway. My work has included preparing masterplans, designing factories, healthcare facilities, educational buildings, high-end residences, high-rise buildings and dormitories, museum interiors, as well as extensions and renovations of heritage-listed buildings. I am also a certified drone pilot (VLOS and BVLOS up to 25kg) and an avid photographer. I am always open to taking part in interesting ventures."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -285,7 +285,7 @@ authors:
             </g>
           </svg>
       - title: "Specialization Philosophy"
-        content: "I believe that **\"specialisation is for insects\"** — the best solutions come from interdisciplinary thinking. I am a UAV pilot and photographer (You can find me in some books). And I do 3d models, 2d & 3d graphic design, brand identities and laser scanning for construction (point clouds are so cool) And I am probably interested in too many things but as I said, 'specialisation is for insects…'."
+        content: "The best solutions are born from interdisciplinary thinking. I’m probably interested in too many things, but I truly believe that 'specialization is for insects.' \n\n All my experience has shown me one thing: WE NEED MORE AUTOMATION. Instead of waiting for software vendors to solve my problems, I took matters into my own hands — I learned how to program and started publishing tools that help architects and engineers around the world. They also support my own work as an architect, leaving me more time for the creative side of the profession."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">
