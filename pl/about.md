@@ -265,7 +265,7 @@ authors:
             C76.7,244.5,76.8,251.7,71.6,258.2z"/>
             </g>
           </svg>
-      - title: "Niezależny Architekt i Developer"
+      - title: "Niezależny Architekt i Deweloper"
         content: "Jestem uprawnionym architektem, programistą C# i koordynatorem BIM. Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii. \n\n Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską. Pilotuję drona (VLOS and BVLOS do 25kg) i fotografuję. \n\n\ Zawsze chętnie wezmę udział w ciekawym czy nietypowym przedsięwzięciu. " 
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
