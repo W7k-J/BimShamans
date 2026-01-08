@@ -7,8 +7,8 @@ permalink: /en/contact/
 ---
 
 <div class="contact-header">
-    <h1>Ready to Transform Your BIM Workflow?</h1>
-    <p>Let's discuss how we can help optimize your construction process</p>
+    <h1>Have the signs in the sky led you to us?</h1>
+    <p>If the article resonated. <br> If questions remain. <br> If you seek a shaman’s counsel. <br> Send a raven - and let the dialogue begin.</p>
 </div>
 
 <div class="form-container">
