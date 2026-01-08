@@ -1049,8 +1049,9 @@ figure {
 
       a {
         height: auto;
+        width: 100%;
         padding: 1rem 1.5rem;
-        justify-content: flex-start;
+        justify-content: center;
         border-radius: 0;
         border-bottom: 1px solid var(--forthGray-color);
 
@@ -1067,43 +1068,34 @@ figure {
         flex-direction: column;
         height: auto;
         width: 100%;
+        display: contents; // Makes wrapper transparent so child behaves like direct child
 
         > a {
           width: 100%;
+          height: auto;
+          padding: 1rem 1.5rem;
+          justify-content: center;
+          border-radius: 0;
+          border-bottom: 1px solid var(--forthGray-color);
           
           &::before {
             display: none;
           }
-        }
-
-        // Hide desktop dropdown menu on mobile
-        .dropdown-menu {
-          display: none;
-        }
-        
-        // Show mobile-only sub-link
-        .mobile-only {
-          display: flex !important;
-          align-items: center;
-          gap: 0.5rem;
-          padding-left: 2.5rem; // Indent to show hierarchy
-          font-size: 0.95rem;
-          color: var(--secondGray-color);
-          background-color: rgba(var(--firstBlue-color-rgb), 0.05);
-          
-          svg {
-            flex-shrink: 0;
-            opacity: 0.7;
-          }
           
           &:hover, &.active {
-            color: var(--firstBlue-color);
-            background-color: rgba(var(--firstBlue-color-rgb), 0.1);
-            
-            svg {
-              opacity: 1;
-            }
+            background-color: var(--forthGray-color);
           }
+        }
+
+        // Hide desktop dropdown menu on mobile - completely disable hover
+        .dropdown-menu {
+          display: none !important;
+        }
+        
+        // Disable hover/focus behavior in mobile
+        &:hover .dropdown-menu,
+        &:focus-within .dropdown-menu {
+          display: none !important;
         }
       }
     }
