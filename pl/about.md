@@ -603,7 +603,54 @@ authors:
           </g>
           </svg>
       - title: "Informacja & Automatyzacja"
-        content: "**Skupienie na literze 'I' w BIM** — Informacja to to, co daje modelom znaczenie. Automatyzuję procesy tworzenia i zarządzania Property Setami w modelach.\n\n**Narzędzia & Umiejętności:**\n- **Dynamo** | **Grasshopper** | **Quadri Automation Tool**\n- **Python** (IfcOpenShell) do przetwarzania IFC\n- **Zarządzanie Property Setami** & spójność danych\n- **Przepływy pracy Scan to BIM**\n- **Implementacja metodyki VDC**\n- **Optymalizacja & standaryzacja modeli 3D**"
+        content:
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Civil 3D</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo i Grasshopper</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Quadri</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">IFC OpenShell</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Python</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">OpenBIM</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Metodyka VDC</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Znajomość ISO 19650</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Zarządzanie Danymi</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -907,7 +954,7 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 12px; margin: 1.2rem 0 0; }
+.author-skillbar { --bar-height: 12px; margin: 1rem 0 0; }
 .author-skill { display:flex; align-items:center; gap:10px; margin:1rem 0; }
 .author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:12px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
