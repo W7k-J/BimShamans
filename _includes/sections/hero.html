@@ -10,7 +10,7 @@
     .section-hero .logo-placeholder img{display:block;width:100%;height:auto}
     .section-hero .hero-title{margin:.25rem 0 .5rem;font-size:clamp(1.5rem,4vw,3rem);line-height:1.05}
     .section-hero .hero-kicker{opacity:.85;max-width:60ch;margin:0 auto}
-    .section-hero .hero-cta{margin-top:1rem}
+    .section-hero .hero-cta{margin-top:1.5rem;display:flex;gap:1rem;justify-content:center;align-items:center;flex-wrap:wrap}
 
     .section-hero .hero-bg{position:absolute;inset:0;z-index:0;pointer-events:none}
     .section-hero .hero-content{position:relative;z-index:2}
@@ -44,9 +44,12 @@
 
       <h1 class="hero-title">{{ page.title | default: site.name }}</h1>
 
-      <p class="hero-kicker">{% if page.lang == 'pl' %}Krotkie wprowadzenie — placeholder dla misji i pozycji eksperckiej.{% else %}Short introductory placeholder — mission and expert positioning.{% endif %}</p>
+      <p class="hero-kicker">{{ t.hero_tagline }}</p>
 
-      <p class="hero-cta"><a class="button" href="#main">{% if page.lang == 'pl' %}Przejdź dalej{% else %}Explore{% endif %}</a></p>
+      <div class="hero-cta">
+        <a class="button button--primary" href="{{ site.baseurl }}/{{ page.lang }}/contact/">{{ t.hero_cta_primary }}</a>
+        <a class="button button--secondary" href="{{ site.baseurl }}/{{ page.lang }}/expertise/">{{ t.hero_cta_secondary }}</a>
+      </div>
     </div>
   </div>
 

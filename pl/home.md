@@ -35,8 +35,6 @@ permalink: /pl/home/
   </div>
 </div>
 
-  # !!!Usługi BIM – BIM Shamans - Szmanskie metody na bimowe niepogody
-
 <section class="feature-sections">
   <div class="feature-section">
     <div class="feature-section__content">
@@ -123,6 +121,14 @@ permalink: /pl/home/
     <div class="feature-section__media">
       <img src="xyz.jpg" alt="Ilustracja oprogramowania i ludzi">
     </div>
+  </div>
+</section>
+
+<section class="hero-cta-section">
+  <p class="hero-tagline">{{ site.t[page.lang].hero_tagline }}</p>
+  <div class="hero-cta">
+    <a class="button button--primary" href="{{ site.baseurl }}/{{ page.lang }}/contact/">{{ site.t[page.lang].hero_cta_primary }}</a>
+    <a class="button button--secondary" href="{{ site.baseurl }}/{{ page.lang }}/expertise/">{{ site.t[page.lang].hero_cta_secondary }}</a>
   </div>
 </section>
 
