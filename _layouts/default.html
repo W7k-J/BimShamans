@@ -57,6 +57,7 @@
     <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js"></script>
     <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
     <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/mobile-nav-toggle.js" defer></script>
     <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js" defer></script>
     <script src="{{ site.baseurl }}/assets/universal-search-bar.js" defer></script>
     <script src="{{ site.baseurl }}/assets/hero-glitch.js" defer></script>
@@ -92,18 +93,32 @@
                 </svg>
             </a>
 
+            <!-- Mobile Hamburger Menu Button -->
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
             <!-- Navigation Menu -->
             <nav class="site-nav">
                 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
                 <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="{% if page.url contains '/home' %}active{% endif %}">{{ t.home }}</a>
                 <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
                 
-                <!-- Portfolio with dropdown menu -->
+                <!-- Portfolio with dropdown menu (desktop) / flat links (mobile) -->
                 <div class="dropdown-wrapper">
                     <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="{% if page.url contains '/expertise' %}active{% endif %}">{{ t.portfolio }}</a>
                     <div class="dropdown-menu">
                         <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio-collection/">{{ t.portfolio_collection }}</a>
                     </div>
+                    <!-- Mobile-only: flat second link with icon -->
+                    <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio-collection/" class="mobile-only {% if page.url contains '/portfolio-collection' %}active{% endif %}">
+                        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                        {{ t.portfolio_collection }}
+                    </a>
                 </div>
                 
                 <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' or page.url contains '/project' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>

@@ -217,7 +217,7 @@ html {
       text-align: center;
       font-weight: 300;
       letter-spacing: 0.5px;
-      transition: color $transition-base ease, font-weight $transition-base ease;
+      transition: color 0.15s ease, font-weight $transition-base ease;
       height: 100%;
       display: flex;
       align-items: center;
@@ -281,7 +281,7 @@ html {
         justify-content: center;
         padding: 0 $nav-padding-x;
         border-radius: $radius-small;
-        transition: color $transition-base ease;
+        transition: color 0.15s ease;
 
         &::before {
           content: '';
@@ -332,8 +332,7 @@ html {
         min-width: 180px;
         border-radius: $radius-small;
         margin-top: 0;
-        animation: fadeIn $transition-base ease;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
         z-index: 999;
 
         a {
@@ -364,6 +363,11 @@ html {
       &:hover .dropdown-menu,
       &:focus-within .dropdown-menu {
         display: block;
+      }
+      
+      // Hide mobile-only link in dropdown-wrapper on desktop
+      .mobile-only {
+        display: none !important;
       }
     }
   }
@@ -458,6 +462,18 @@ html {
   }
   50% {
     filter: drop-shadow(0 0 20px var(--secondBlue-color)) brightness(1.2);
+  }
+}
+
+// Dropdown menu fade in animation
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -895,42 +911,206 @@ figure {
   margin-bottom: calc(#{$nav-height} + #{$nav-spacing});
 }
 
+// Hamburger menu button (hidden on desktop)
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 2px solid var(--firstBlue-color);
+  border-radius: $radius-small;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 8px;
+  transition: all 0.3s ease;
+  z-index: 1001;
+
+  &:hover {
+    background-color: var(--forthGray-color);
+    border-color: var(--secondBlue-color);
+  }
+
+  &:focus-visible {
+    outline: 3px solid var(--firstBlue-color);
+    outline-offset: 2px;
+  }
+
+  span {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background-color: var(--firstBlue-color);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &.active {
+    span:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
+    }
+
+    span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+
+    span:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
+    }
+  }
+}
+
+// Hide mobile-only elements on desktop
+.mobile-only {
+  display: none;
+}
+
 // Mobile styles
 @media screen and (max-width: 768px) {
   .nav-container {
-    height: auto;
+    height: $nav-height;
     
     .container {
-      flex-direction: column;
-      padding: 1rem;
+      flex-direction: row;
+      padding: 0 1rem;
+      position: relative;
     }
 
     .site-avatar {
-      height: 40px;
-      border-right: none;
-      border-bottom: 1px solid var(--firstBlue-color);
-      padding: 10px 0;
-      width: 100%;
+      height: $nav-height;
+      padding: 8px 0;
+      margin-right: 0;
+      flex: 1;
+      justify-content: flex-start;
+      
+      .nav-logo-text {
+        display: none; // Hide text logo on mobile to save space
+      }
+      
+      .nav-flame {
+        height: 70%;
+      }
+    }
+
+    // Show hamburger button on mobile
+    .nav-toggle {
       display: flex;
-      justify-content: center;
     }
 
-    nav.site-nav {
-      flex-direction: column;
-      gap: 1rem;
-      margin: 1rem 0;
-      height: auto;
-    }
-
+    // Controls stay visible but repositioned for mobile
     .controls {
-      border-left: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: var(--background-color);
       border-top: 1px solid var(--firstBlue-color);
-      padding: 1rem 0 0 0;
-      margin-top: 1rem;
-      width: 100%;
+      padding: 1rem 1.5rem;
+      gap: 1rem;
       justify-content: center;
-      height: auto;
+      z-index: 1000;
+      padding-left: 0;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s ease;
+
+      &.visible {
+        opacity: 1;
+        pointer-events: all;
+      }
     }
+
+    // Mobile menu overlay
+    nav.site-nav {
+      position: fixed;
+      top: $nav-height;
+      left: 0;
+      right: 0;
+      background-color: var(--background-color);
+      border-bottom: 1px solid var(--firstBlue-color);
+      flex-direction: column;
+      gap: 0;
+      padding: 1rem 0;
+      max-height: 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      z-index: 999;
+
+      &.mobile-menu-open {
+        max-height: calc(100vh - #{$nav-height});
+        opacity: 1;
+        overflow-y: auto;
+      }
+
+      a {
+        height: auto;
+        padding: 1rem 1.5rem;
+        justify-content: flex-start;
+        border-radius: 0;
+        border-bottom: 1px solid var(--forthGray-color);
+
+        &::before {
+          display: none; // Remove ::before animation on mobile
+        }
+
+        &:hover, &.active {
+          background-color: var(--forthGray-color);
+        }
+      }
+
+      .dropdown-wrapper {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+
+        > a {
+          width: 100%;
+          
+          &::before {
+            display: none;
+          }
+        }
+
+        // Hide desktop dropdown menu on mobile
+        .dropdown-menu {
+          display: none;
+        }
+        
+        // Show mobile-only sub-link
+        .mobile-only {
+          display: flex !important;
+          align-items: center;
+          gap: 0.5rem;
+          padding-left: 2.5rem; // Indent to show hierarchy
+          font-size: 0.95rem;
+          color: var(--secondGray-color);
+          background-color: rgba(var(--firstBlue-color-rgb), 0.05);
+          
+          svg {
+            flex-shrink: 0;
+            opacity: 0.7;
+          }
+          
+          &:hover, &.active {
+            color: var(--firstBlue-color);
+            background-color: rgba(var(--firstBlue-color-rgb), 0.1);
+            
+            svg {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #main.container {
+    margin-top: calc(#{$nav-height} + #{$nav-spacing});
   }
 }
 
