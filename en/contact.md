@@ -67,7 +67,7 @@ permalink: /en/contact/
                 id="subject" 
                 name="subject" 
                 class="form-input" 
-                placeholder="What would you like to discuss?"
+                placeholder="What can we do for you?"
                 required
                 aria-required="true"
                 aria-describedby="subject-error"
@@ -84,7 +84,7 @@ permalink: /en/contact/
                 id="message" 
                 name="message" 
                 class="form-textarea" 
-                placeholder="Briefly describe your project or question"
+                placeholder="Briefly describe your problem or question."
                 required
                 aria-required="true"
                 aria-describedby="message-error"
@@ -100,7 +100,7 @@ permalink: /en/contact/
 
         <div class="privacy-notice">
             <strong>Privacy Notice:</strong> We respect your privacy and will never share your personal information. 
-            Your data is used solely to respond to your inquiry and improve our services.
+            Your data is used solely to respond to your inquiry.
         </div>
     </form>
 </div>
