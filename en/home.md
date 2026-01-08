@@ -123,14 +123,6 @@ permalink: /en/home/
   </div>
 </section>
 
-<section class="hero-cta-section">
-  <p class="hero-tagline">{{ site.t[page.lang].hero_tagline }}</p>
-  <div class="hero-cta">
-    <a class="button button--primary" href="{{ site.baseurl }}/{{ page.lang }}/contact/">{{ site.t[page.lang].hero_cta_primary }}</a>
-    <a class="button button--secondary" href="{{ site.baseurl }}/{{ page.lang }}/expertise/">{{ site.t[page.lang].hero_cta_secondary }}</a>
-  </div>
-</section>
-
 ## Latest posts:
 
 <div class="posts">
