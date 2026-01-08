@@ -54,7 +54,7 @@ Wielokrotnie **widzieliśmy, jak 'jedyne słuszne' rozwiązania przegrywały w z
         <div class="author-image-section">
             <div class="author-image-container">
                 <img class="author-image front" src="/images/images-main/About_Authors_NataliaGawlik_Main.jpg" alt="Natalia Gawlik">
-                <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.webp" alt="Natalia Gawlik - alternatywne">
+                <img class="author-image back" src="/images/images-main/About_Authors_NataliaGawlik_Alter.png" alt="Natalia Gawlik - alternatywne">
             </div>
         </div>
         <div class="author-content-section">

@@ -12,7 +12,7 @@ permalink: /pl/contact/
 </div>
 
 <div class="form-container">
-    <div class="success-message" id="successMessage">
+    <div class="success-message" id="successMessage" role="alert" aria-live="polite">
         <strong>Dziękujemy!</strong> Twoja wiadomość została wysłana pomyślnie. Odpowiemy wkrótce.
     </div>
 
@@ -22,7 +22,7 @@ permalink: /pl/contact/
         <input type="hidden" name="_next" value="https://bimshamans.com/pl/thank-you/">
         <div class="form-group">
             <label for="name" class="form-label">
-                Imię i Nazwisko
+                Imię i Nazwisko <span class="required-indicator" aria-label="wymagane">*</span>
             </label>
             <input 
                 type="text" 
@@ -31,14 +31,17 @@ permalink: /pl/contact/
                 class="form-input" 
                 placeholder="Anna Nowak"
                 required
+                aria-required="true"
+                aria-describedby="name-error"
                 autocomplete="name"
                 maxlength="100"
             >
+            <div id="name-error" class="error-message" role="alert" aria-live="polite"></div>
         </div>
 
         <div class="form-group">
             <label for="email" class="form-label">
-                Adres Email
+                Adres Email <span class="required-indicator" aria-label="wymagane">*</span>
             </label>
             <input 
                 type="email" 
@@ -47,14 +50,17 @@ permalink: /pl/contact/
                 class="form-input" 
                 placeholder="anna.nowak@twojafirma.pl"
                 required
+                aria-required="true"
+                aria-describedby="email-error"
                 autocomplete="email"
                 maxlength="254"
             >
+            <div id="email-error" class="error-message" role="alert" aria-live="polite"></div>
         </div>
 
         <div class="form-group">
             <label for="subject" class="form-label">
-                Temat
+                Temat <span class="required-indicator" aria-label="wymagane">*</span>
             </label>
             <input 
                 type="text" 
@@ -63,13 +69,16 @@ permalink: /pl/contact/
                 class="form-input" 
                 placeholder="Czego dotyczy zapytanie?"
                 required
+                aria-required="true"
+                aria-describedby="subject-error"
                 maxlength="200"
             >
+            <div id="subject-error" class="error-message" role="alert" aria-live="polite"></div>
         </div>
 
         <div class="form-group">
             <label for="message" class="form-label">
-                Wiadomość (min. 10 znaków)
+                Wiadomość (min. 10 znaków) <span class="required-indicator" aria-label="wymagane">*</span>
             </label>
             <textarea 
                 id="message" 
@@ -77,7 +86,10 @@ permalink: /pl/contact/
                 class="form-textarea" 
                 placeholder="Opisz krótko swój projekt lub pytanie"
                 required
+                aria-required="true"
+                aria-describedby="message-error"
                 minlength="10"                maxlength="5000"            ></textarea>
+            <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
         </div>
 
         <button type="submit" class="button expand" data-success-text="Wysłano!">

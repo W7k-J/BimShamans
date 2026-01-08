@@ -46,6 +46,18 @@ function switchLanguage(lang) {
         // ignore storage errors
     }
 
+    // Save scroll position before switching
+    try {
+        const scrollPosition = window.scrollY || window.pageYOffset || document.documentElement.scrollTop;
+        if (window.SafeStorage) {
+            window.SafeStorage.setItem('scrollPosition', scrollPosition.toString());
+        } else {
+            sessionStorage.setItem('scrollPosition', scrollPosition.toString());
+        }
+    } catch (e) {
+        // ignore storage errors
+    }
+
     syncLanguageControls(lang);
     const currentPath = window.location.pathname;
 
@@ -67,4 +79,38 @@ function syncLanguageControls(activeLang) {
     });
 }
 
-document.addEventListener('DOMContentLoaded', handleLanguage);
+// Restore scroll position after language switch
+function restoreScrollPosition() {
+    try {
+        let savedScroll = null;
+        
+        if (window.SafeStorage) {
+            savedScroll = window.SafeStorage.getItem('scrollPosition');
+        } else {
+            savedScroll = sessionStorage.getItem('scrollPosition');
+        }
+        
+        if (savedScroll !== null) {
+            const scrollPos = parseInt(savedScroll, 10);
+            
+            // Instant scroll without smooth behavior for seamless effect
+            window.scrollTo(0, scrollPos);
+            
+            // Clear the saved position
+            if (window.SafeStorage) {
+                window.SafeStorage.removeItem('scrollPosition');
+            } else {
+                sessionStorage.removeItem('scrollPosition');
+            }
+        }
+    } catch (e) {
+        // ignore errors
+    }
+}
+
+// Call restore immediately, not waiting for full DOM
+restoreScrollPosition();
+
+document.addEventListener('DOMContentLoaded', function() {
+    handleLanguage();
+});

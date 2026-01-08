@@ -30,7 +30,7 @@ authors:
         image_width_start: "300px"
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_NataliaGawlik_Main.jpg"
-        image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.webp"
+        image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.png"
       - title: "Koordynator BIM & Specjalistka Danych"
         content: "Jestem Koordynatorem BIM ze specjalizacją w dużych projektach infrastrukturalnych. Z wykształcenia geodeta, z zamiłowania specjalistka BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego, nalotów dronowych, przez modelowanie 3D (Scan to BIM), aż po BIM i zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych."
       - title: "Informacja & Automatyzacja"

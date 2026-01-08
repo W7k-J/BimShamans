@@ -50,6 +50,84 @@
     padding: 10px 15px;
 }
 
+// Primary CTA button (hero section) - matching secondary style
+.button--primary {
+    background: transparent;
+    color: var(--firstBlue-color) !important;
+    border: 2px solid var(--firstBlue-color);
+    font-weight: 600;
+    padding: 14px 32px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    border-radius: $radius-small;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: visible;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        background-color: var(--firstBlue-color);
+        color: #f5f5fa !important;
+        border-color: var(--firstBlue-color);
+        transform: translateY(-2px);
+    }
+
+    &:focus {
+        background-color: var(--firstBlue-color);
+        color: #f5f5fa !important;
+        box-shadow: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.3);
+    }
+
+    &:active {
+        background-color: var(--secondBlue-color);
+        border-color: var(--secondBlue-color);
+        color: #f5f5fa !important;
+        transform: translateY(0);
+    }
+}
+
+// Secondary CTA button (hero section)
+.button--secondary {
+    background: transparent;
+    color: var(--firstBlue-color) !important;
+    border: 2px solid var(--firstBlue-color);
+    font-weight: 500;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.4;
+    border-radius: $radius-small;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: visible;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+
+    &:hover {
+        background-color: var(--firstBlue-color);
+        color: #f5f5fa !important;
+        border-color: var(--firstBlue-color);
+    }
+
+    &:focus {
+        background-color: var(--firstBlue-color);
+        color: #f5f5fa !important;
+        box-shadow: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.3);
+    }
+
+    &:active {
+        background-color: var(--secondBlue-color);
+        border-color: var(--secondBlue-color);
+        color: #f5f5fa !important;
+    }
+}
+
 .collapsible {
     @extend .button;
     text-align: left;

@@ -30,7 +30,7 @@ authors:
         image_width_start: "300px"
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_NataliaGawlik_Main.jpg"
-        image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.webp"
+        image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.png"
       - title: "Infrastructure BIM Coordinator & Workflow Specialist"
         content: "I'm a BIM Coordinator with a strong background in large-scale infrastructure projects. My background is in land surveying, but over time, my focus shifted toward BIM and it became the field where I could focus on everything I enjoy — technology, programming and problem-solving. Over the past decade, my career has taken me from photogrammetry and laser scanning, through drone mapping and 3D modeling (Scan to BIM), all the way to BIM coordination, automation and project management using VDC methodology on public projects in Norway."
       - title: "Expertise & Tools"
