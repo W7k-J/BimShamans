@@ -13,6 +13,17 @@ document.addEventListener('DOMContentLoaded', function() {
       
       featureCards.forEach(card => {
         card.addEventListener('click', function(e) {
+          // Check if click happened on an image element
+          const clickedOnImage = e.target.tagName === 'IMG' || 
+                                 e.target.closest('.author-image-container') ||
+                                 e.target.classList.contains('author-image') ||
+                                 e.target.classList.contains('author-image-container');
+          
+          // If clicked on image, don't toggle cards - just return
+          if (clickedOnImage) {
+            return;
+          }
+          
           e.preventDefault();
           
           // Remove active class only from cards in THIS section
