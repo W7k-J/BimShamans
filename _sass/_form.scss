@@ -184,6 +184,46 @@ textarea.form-textarea:-ms-input-autofill {
     color: var(--thirdGray-color);
 }
 
+// Required field indicator (asterisk)
+.required-indicator {
+    color: var(--firstBlue-color);
+    font-weight: 600;
+    margin-left: 0.25rem;
+    font-size: 1.1em;
+}
+
+// Error message styles
+.error-message {
+    display: none;
+    color: #dc2626;
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    background-color: rgba(220, 38, 38, 0.08);
+    border-left: 3px solid #dc2626;
+    border-radius: 4px;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    
+    &.show {
+        display: block;
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Invalid input styles
+.form-input.invalid,
+.form-textarea.invalid {
+    border-color: #dc2626;
+    
+    &:focus {
+        border-color: #dc2626;
+        box-shadow: 0 0 0 2px rgba(220, 38, 38, 0.15);
+    }
+}
+
 // Wyraźne podświetlenie zaznaczonego tekstu w polach formularza
 .form-input::selection,
 .form-textarea::selection,
