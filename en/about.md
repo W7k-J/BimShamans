@@ -294,6 +294,11 @@ authors:
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">4/5</div>
             </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Parametric Design</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
             <div class="author-skill" data-level="3">
               <div class="author-skill__name">Laser Scanning</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
@@ -326,7 +331,7 @@ authors:
           </svg>
           
   - name: "Natalia Gawlik"
-    intro: "BIM Coordinator with expertise in large-scale infrastructure projects. Specialist in data management, information-driven modeling, and automation using Dynamo, Grasshopper, and Python. Passionate about converting \"I\" in BIM from modeling to Information."
+    intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python.
     initial_active: 2
     feature_cards:
       - title: ""
@@ -587,7 +592,7 @@ authors:
           </g>
           </svg>
       - title: "Infrastructure BIM Coordinator & Workflow Specialist"
-        content: "I'm a BIM Coordinator with a strong background in large-scale infrastructure projects. My background is in land surveying, but over time, my focus shifted toward BIM and it became the field where I could focus on everything I enjoy — technology, programming and problem-solving. Over the past decade, my career has taken me from photogrammetry and laser scanning, through drone mapping and 3D modeling (Scan to BIM), all the way to BIM coordination, automation and project management using VDC methodology on public projects in Norway."
+        content: "I'm a BIM Coordinator and Digital Delivery Specialist with experience in large-scale infrastructure in Norway. My background is in land surveying, but over time, my focus shifted toward BIM and it became the field where I could focus on everything I enjoy — technology, programming and information exchange between disciplines. Over the past decade, my career has taken me from photogrammetry and laser scanning, through drone mapping and 3D modeling (Scan to BIM), all the way to BIM coordination, automation and project management using VDC methodology on public projects in Norway."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -802,6 +807,12 @@ authors:
             </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">ISO 19650 Knowledge</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">OpenBIM</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">3/5</div>
             </div>

@@ -279,37 +279,42 @@ authors:
       - title: "Umiejętności i Software"
         content: 
           <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
-            <div class="author-skill" data-level="5">
-              <div class="author-skill__name">Revit</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">5/5</div>
+              <div class="author-skill" data-level="5">
+                <div class="author-skill__name">Revit</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">5/5</div>
+              </div>
+              <div class="author-skill" data-level="4">
+                <div class="author-skill__name">C# / Revit API</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">4/5</div>
+              </div>
+              <div class="author-skill" data-level="4">
+                <div class="author-skill__name">Dynamo</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">4/5</div>
+              </div>
+              <div class="author-skill" data-level="4">
+                <div class="author-skill__name">Parametric Design</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">4/5</div>
+              </div>
+              <div class="author-skill" data-level="3">
+                <div class="author-skill__name">Laser Scanning</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">3/5</div>
+              </div>
+              <div class="author-skill" data-level="4">
+                <div class="author-skill__name">3D Modelling</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">4/5</div>
+              </div>
+              <div class="author-skill" data-level="4">
+                <div class="author-skill__name">Creative Design</div>
+                <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+                <div class="author-skill__level">4/5</div>
+              </div>
             </div>
-            <div class="author-skill" data-level="4">
-              <div class="author-skill__name">C# / Revit API</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">4/5</div>
-            </div>
-            <div class="author-skill" data-level="4">
-              <div class="author-skill__name">Dynamo</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">4/5</div>
-            </div>
-            <div class="author-skill" data-level="3">
-              <div class="author-skill__name">Skaning laserowy</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">3/5</div>
-            </div>
-            <div class="author-skill" data-level="4">
-              <div class="author-skill__name">Modelowanie 3D</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">4/5</div>
-            </div>
-            <div class="author-skill" data-level="4">
-              <div class="author-skill__name">Creative Design</div>
-              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
-              <div class="author-skill__level">4/5</div>
-            </div>
-          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -326,7 +331,7 @@ authors:
           </svg>
 
   - name: "Natalia Gawlik"
-    intro: "Koordynator BIM ze specjalizacją w dużych projektach infrastrukturalnych. Specjalistka w zarządzaniu danymi, modelowaniu sterowanym informacją i automatyzacji przy użyciu Dynamo, Grasshoppera i Pythona. Pasjonata zamiany \"I\" w BIM z modelowania na Information."
+    intro: "Koordynatorka BIM, geodeta i GISowiec z doświadczeniem zdobywanym na dużych projektach infrastrukturalnych dla sektora publicznego w Norwegii. Specjalistka w zarządzaniu danymi, automatyzacji i  modelowaniu parametrycznym przy użyciu Dynamo, Grasshoppera i Pythona. Pasjonatka \"I\" w BIM z modelowania na Information."
     initial_active: 2
     feature_cards:
       - title: ""
@@ -803,6 +808,12 @@ authors:
             </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">Znajomość ISO 19650</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">OpenBIM</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">3/5</div>
             </div>
