@@ -762,8 +762,8 @@ authors:
           </g>
           </g>
           </svg>
-      - title: "Koordynator BIM, Menedżer & Inżynier Lądowy"
-        content: "Jestem inżynierem budownictwa z uprawnieniami do projektowania konstrukcji i specjalistą BIM z doświadczeniem zdobywanym przy obiektach przemysłowych i budownictwie mieszkaniowym. Pełniłem rolę koordynatora BIM w projektach w Polsce, Niemczech i Szwecji, a także pracowałem jako BIM manager i konsultant dla sektora nieruchomości. \n\n\ Pomagam wykorzystać modele jako rzetelne źródło danych w procesie projektowania i budowy przez standaryzacji procesu na styku tych światów, pracę z przedmiarowaniem, wykrywaniem kolizji i umiejętnym raportowaniem danych (bo to o dane w końcu chodzi, prawda?). Wszystko po to, aby model były użyteczn przez kolejne fazy pracy z budynkiem i wypłenił jak najszersze potrzeby informacyjne jako 'jedno źródło prawdy'."
+      - title: "BIM Koordynator, Specjalista ds. danych, Konstruktor"
+        content: "Jestem inżynierem budownictwa z uprawnieniami do projektowania konstrukcji budowlanych i specjalistą BIM z doświadczeniem zdobywanym przy obiektach przemysłowych i budownictwie mieszkaniowym. Pełniłem rolę koordynatora BIM w projektach w Polsce, Niemczech i Szwecji, a także pracowałem jako BIM manager i konsultant dla sektora nieruchomości. \n\n\ Pomagam wykorzystać modele jako rzetelne źródło danych w procesie projektowania i budowy przez standaryzacji procesu na styku tych światów, pracę z przedmiarowaniem, wykrywaniem kolizji i umiejętnym raportowaniem danych (bo to o dane w końcu chodzi, prawda?). Wszystko po to, aby model były użyteczn przez kolejne fazy pracy z budynkiem i wypłenił jak najszersze potrzeby informacyjne jako 'jedno źródło prawdy'."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
