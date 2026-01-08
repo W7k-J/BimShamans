@@ -953,7 +953,7 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 12px; margin: 1.2rem 0 0; }
+.author-skillbar { --bar-height: 12px; margin: 1rem 0 0; }
 .author-skill { display:flex; align-items:center; gap:10px; margin:1rem 0; }
 .author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:12px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
