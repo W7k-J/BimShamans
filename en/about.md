@@ -615,7 +615,7 @@ authors:
           </svg>
 
   - name: "Piotr Spyra"
-    intro: "BIM Coordinator and BIM Manager with strong civil engineering background. Specialist in coordination, data analysis, material take-offs and value delivery between construction site and design team. "
+    intro: BIM Coordinator and BIM Manager, licensed structural designer. An engineer working at the intersection of design and construction, always advocating for data correctness and completeness. Experience gained on projects in Poland, Germany and Sweden."
     initial_active: 2
     feature_cards:
       - title: ""
@@ -758,7 +758,7 @@ authors:
           </g>
           </svg>
       - title: "BIM Coordinator, Data Analyst & Structural Designer"
-        content: "I'm Civil Engineer with structural design expertise, on-site experience & unlimited building license. **I work as BIM Coordinator and BIM Manager with industrial projects across Advanced Technology and Life Science area and also in Real Estate market**. This wide experience allows me to think about BIM as a standarized way of enhancing digital design and delivery, construction process support and awarenes of data use. My responsibility is to assure both, a final product and the way to achieve it, as reliable as possible, filling the needs of all participant. \n\n I'm the kind of person who sees a repetitive task and thinks: 'I won't waste my colleagues' or my own potential on endless clicking...' **I believe automation is the key to minimizing human errors, cutting out tedious, time-consuming work, and ensuring thorough checks before delivery**. Standardization, on the other hand, is the foundation of successful automation."
+        content: "I'm a civil engineer and licensed structural designer with on‑site experience and BIM roles on industrial and real‑estate projects. I gained BIM Coordinator experience on projects in Poland, Germany and Sweden, and I’ve worked as a BIM Manager and consultant for the real‑estate market. \n\n I help teams turn models into reliable construction deliverables by implementing standardized workflows, precise quantity take‑offs, clash detection, and smart reporting (it’s all about the data, isn't it?), all designed to make models usable on site. \n\n As a fan of automation as a human‑error‑preventing mechanism, I’ve implemented visual programming and simple scripting into my daily work. Standardization? It is the foundation that makes automation effective."
         icon: |
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.8) translate(-12, -12)">
@@ -768,7 +768,44 @@ authors:
           </g>
           </svg>
       - title: "Expertise & Tools"
-        content: "**Specializations:**\n- **Revit & Dynamo** scripting\n- **Material take-offs** (Excel & Power BI)\n- **Clash management** & resolution\n- **Data-driven insights** for decision-making\n- **Standards & libraries** development"
+        content: |
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Revit</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Navisworks</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Power BI & Power Query</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">3D Modelling</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Data Management</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">ISO 19650 Knowledge</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -776,7 +813,7 @@ authors:
             </g>
           </svg>
       - title: "Specialization Philosophy"
-        content: "I'm a **fan of the BIM concept itself** as a major leap forward in transparency, standardization, process organization, and reducing wasted effort in the construction industry.\n\nI focus on **eliminating inefficiencies and overproduction, developing data workflows and maximizing data reuse across the widest possible range of use cases**. I support teams with following the rules and reasons of 'BIM' on the project, proceed QA checks and (what I really like to be honest) participate in a design process as clash verifier and data analyst. As automation specialist, I'm looking for potential to significantly improve daily work with technology support.\n\nIn my free time: **Indoor and outdoor climbing, long hiking trips and discovering new things.**"
+        content: "I'm an enthusiast of the BIM concept itself - a major step forward for transparency and process discipline in the work of engineers and designers. I consider it the best starting point we currently have for digitalization in the civil industry. \n\n I focus on eliminating information overproduction, ensuring data reliability with clear presentation, and maximization of reuse produced data across the widest possible range of use cases. \n\n As an automation advocate, I see automation as a tool that prevents common human errors. I have permanently integrated visual programming, simple scripting, and regular QA checks into daily workflows. Standardization? It is the foundation that allows these solutions to work effectively, to be scalable, and to feed AI, opening new possibilities."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">
@@ -854,9 +891,9 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 15px; margin: 0.6rem 0 0; }
-.author-skill { display:flex; align-items:center; gap:12px; margin:0.45rem 0; }
-.author-skill__name { width: 180px; font-weight:600; }
+.author-skillbar { --bar-height: 15px; margin: 1rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:10px; margin:1.2rem 0; }
+.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:10px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
 .author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
 .author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }

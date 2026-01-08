@@ -265,7 +265,7 @@ authors:
             C76.7,244.5,76.8,251.7,71.6,258.2z"/>
             </g>
           </svg>
-      - title: "Niezależny Architekt i Developer"
+      - title: "Niezależny Architekt i Programista"
         content: "Jestem uprawnionym architektem, programistą C# i koordynatorem BIM. Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii. \n\n Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską. Pilotuję drona (VLOS and BVLOS do 25kg) i fotografuję. \n\n\ Zawsze chętnie wezmę udział w ciekawym czy nietypowym przedsięwzięciu. " 
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
@@ -615,7 +615,7 @@ authors:
           </svg>
 
   - name: "Piotr Spyra"
-    intro: "Koordynator i Menedżer BIM z wykształceniem inżyniera lądowego. Specjalista w standaryzacji, przepływach danych i automatyzacji. Zaangażowany w eliminację nieefektywności i maksymalizację zwrotu z inwestycji poprzez strategiczną implementację BIM."
+    intro: BIM Koordynator, BIM Manager, uprawniony projektant konstrukcji budowlanych. Inżynier pracujący na styku projektowania i wykonawstwa, zawsze po stronie poprawności i kompletności danych. Doświadczenie zdobywał na projektach zlokalizowanych w Polsce, Niemczech i Szwecji.
     initial_active: 2
     feature_cards:
       - title: ""
@@ -758,7 +758,7 @@ authors:
           </g>
           </svg>
       - title: "Koordynator BIM, Menedżer & Inżynier Lądowy"
-        content: "Jestem osobą, która widząc powtarzalne zadanie, myśli: **'Nie będę marnować potencjału mojego ani moich współpracowników na bezsensowne klikanie...'** 🤔\n\nWierzę, że **automatyzacja to klucz** do minimalizowania błędów ludzkich, eliminowania żmudnej, czasochłonnej pracy i zapewnienia dokładnej kontroli przed oddaniem projektu. **Standaryzacja** natomiast jest podwaliną do sukcesu automatyzacji."
+        content: "Jestem inżynierem budownictwa z uprawnieniami do projektowania konstrukcji i specjalistą BIM z doświadczeniem zdobywanym przy obiektach przemysłowych i budownictwie mieszkaniowym. Pełniłem rolę koordynatora BIM w projektach w Polsce, Niemczech i Szwecji, a także pracowałem jako BIM manager i konsultant dla sektora nieruchomości. \n\n\ Pomagam wykorzystać modele jako rzetelne źródło danych w procesie projektowania i budowy przez standaryzacji procesu na styku tych światów, pracę z przedmiarowaniem, wykrywaniem kolizji i umiejętnym raportowaniem danych (bo to o dane w końcu chodzi, prawda?). Wszystko po to, aby model były użyteczn przez kolejne fazy pracy z budynkiem i wypłenił jak najszersze potrzeby informacyjne jako 'jedno źródło prawdy'."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -768,16 +768,53 @@ authors:
             <path fill-rule="evenodd" clip-rule="evenodd" d="M10.2501 5C10.2501 4.58579 10.5859 4.25 11.0001 4.25H16.132C18.8832 4.25 19.9295 7.843 17.6084 9.32007L7.19713 15.9454C6.14207 16.6168 6.61766 18.25 7.86821 18.25H11.1894L10.9698 18.0303C10.6769 17.7374 10.6769 17.2626 10.9698 16.9697C11.2627 16.6768 11.7375 16.6768 12.0304 16.9697L13.5304 18.4697C13.8233 18.7626 13.8233 19.2374 13.5304 19.5303L12.0304 21.0303C11.7375 21.3232 11.2627 21.3232 10.9698 21.0303C10.6769 20.7374 10.6769 20.2626 10.9698 19.9697L11.1894 19.75H7.86821C5.11697 19.75 4.07071 16.157 6.39181 14.6799L16.8031 8.05458C17.8581 7.38318 17.3825 5.75 16.132 5.75H11.0001C10.5859 5.75 10.2501 5.41421 10.2501 5Z" fill="currentColor"/>
           </g>
           </svg>
-      - title: "BIM & Przepływy Danych"
-        content: "**Role & Doświadczenie:**\n- **Koordynator BIM** w branży Advanced Technology\n- **Menedżer BIM** w Nieruchomościach\n- **Inżynier Lądowy** ze specjalizacją w projektowaniu konstrukcji\n- **Doświadczenie na budowie** & prawo budowlane\n\n**Specjalizacje:**\n- **Scripting Revit & Dynamo**\n- **Przedmiary materiałowe** (Excel & Power BI)\n- **Zarządzanie kolizjami** & rozwiązywanie problemów\n- **Wnioski oparte na danych** do podejmowania decyzji\n- **Rozwijanie standardów & bibliotek**"
+      - title: "Umiejętności i Software"
+        content:
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Revit</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">Navisworks</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Power BI i Power Query</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Modelowanie 3D</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Zarządzanie danymi</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Znajomość ISO 19650</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
               <path d="M6,15H2c-0.6,0-1,0.4-1,1v6c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-6C7,15.4,6.6,15,6,15z M14,9h-4c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V10C15,9.4,14.6,9,14,9z M22,1h-4c-0.6,0-1,0.4-1,1v20c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V2C23,1.4,22.6,1,22,1z"/>
             </g>
           </svg>
-      - title: "Efektywność & Fokus na ROI"
-        content: "Jestem **fanem koncepcji BIM** jako ogromnego kroku naprzód w zakresie przejrzystości, standaryzacji i uporządkowania procesów oraz ograniczania marnotrawstwa w branży budowlanej.\n\nKoncentruję się na **eliminowaniu nieefektywności** i nadprodukcji, **rozwijaniu przepływów danych** i **maksymalnym ich wykorzystaniu** w najszerszym spektrum przypadków. Wspieramfirmy we wdrażaniu tych **\"przypadków użycia\" BIM z najwyższym ROI** i potencjałem do realnej poprawy pracy.\n\n**W wolnym czasie:** Wspinaczka i długie górskie wędrówki 🏔️"
+      - title: "Filozofia Specjalizacji"
+        content: "Jestem entuzjastą koncepcji BIMu jako ogromnego kroku naprzód w zakresie przejrzystości i porządkowania procesów w zawodzie inżyniera i projektanta. Uważam ją za bardzo dobry punkt wyjścia do dalszej digitalizacji branży budowlanej. \n\n Koncentruję się na eliminowaniu nadprodukcji informacji zbędnych, pracy nad ich rzetelnością i jasną prezentacją oraz wykorzystaniu raz wytworzonych danych w najszerszym spektrum przypadków. \n\n Jako zwolennik automatyzacji, uważam ją za narzędzie zapobiegające naszym typowo ludzkim błędom. Na stałe wprowadziłem ją do codziennej pracy w formie programowania wizualnego, prostych skryptów i regularnego QA check'u. Standaryzacja? To podstawa, dzięki której te rozwiązania mają ma szansę skutecznie zadziałać, skalować się, a także zasilić sztuczną inteligencję otwierając nowe możliwości."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">
@@ -855,9 +892,9 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 15px; margin: 0.6rem 0 0; }
-.author-skill { display:flex; align-items:center; gap:12px; margin:0.45rem 0; }
-.author-skill__name { width: 180px; font-weight:600; }
+.author-skillbar { --bar-height: 15px; margin: 1rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:10px; margin:1.2rem 0; }
+.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:10px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
 .author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
 .author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }
