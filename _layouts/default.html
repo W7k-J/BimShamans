@@ -100,13 +100,9 @@
                 
                 <!-- Portfolio with dropdown menu -->
                 <div class="dropdown-wrapper">
-                    <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio/" class="{% if page.url contains '/portfolio' %}active{% endif %}">{{ t.portfolio }}</a>
+                    <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="{% if page.url contains '/expertise' %}active{% endif %}">{{ t.portfolio }}</a>
                     <div class="dropdown-menu">
-                        {% if page.lang == 'pl' %}
-                            <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio-collection/">Wszystkie projekty</a>
-                        {% else %}
-                            <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio-collection/">All projects</a>
-                        {% endif %}
+                        <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio-collection/">{{ t.portfolio_collection }}</a>
                     </div>
                 </div>
                 

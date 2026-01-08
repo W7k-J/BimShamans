@@ -47,6 +47,7 @@ html {
   --link-color: #{$blue};
   --firstBlue-color: #{$biceBlue};
   --firstBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
+  --darkBiceBlue-color: #103847; // Bice Blue darker by 3 tones for gradients
   --secondBlue-color: #{$ryanCyan};
   --secondBlue-color-rgb: 50, 215, 230; // RGB dla rgba()  
   --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
@@ -811,12 +812,12 @@ figure {
 // Alternate heading gradients per section and theme
 .light-theme .feature-sections .feature-section:nth-of-type(odd) .feature-section__content h2 {
   background-color: transparent;
-  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--thirdGray-color) 100%);
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
 .light-theme .feature-sections .feature-section:nth-of-type(even) .feature-section__content h2 {
   background-color: transparent;
-  background-image: linear-gradient(135deg, var(--thirdGray-color) 0%, var(--firstBlue-color) 100%);
+  background-image: linear-gradient(135deg, var(--darkBiceBlue-color) 0%, var(--firstBlue-color) 100%);
 }
 
 .dark-theme .feature-sections .feature-section:nth-of-type(odd) .feature-section__content h2 {
@@ -1013,6 +1014,7 @@ h1 {
 // Page-specific h1 gradients (blog, portfolio, project, authors)
 .blog__container h1,
 .portfolio__header h1,
+.portfolio-collection__container h1,
 .page h1 {
   background-color: transparent;
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
@@ -1027,12 +1029,14 @@ h1 {
 
 .light-theme .blog__container h1,
 .light-theme .portfolio__header h1,
+.light-theme .portfolio-collection__container h1,
 .light-theme .page h1 {
-  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--thirdGray-color) 100%);
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
 .dark-theme .blog__container h1,
 .dark-theme .portfolio__header h1,
+.dark-theme .portfolio-collection__container h1,
 .dark-theme .page h1 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
 }
@@ -1051,7 +1055,7 @@ h1 {
 }
 
 .light-theme .page h2 {
-  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--thirdGray-color) 100%);
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
 .dark-theme .page h2 {

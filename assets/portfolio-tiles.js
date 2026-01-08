@@ -1,6 +1,6 @@
 /**
  * Portfolio Tiles Interactions
- * - Mobile swipe carousel with counter (portfolio.md)
+ * - Mobile swipe carousel with counter (expertise.md)
  * - Collection page filtering with animation
  * - Project tile slideshow with autoplay
  * - Synced text/image slides
@@ -10,7 +10,7 @@
   'use strict';
 
   // ============================================
-  // MOBILE SWIPE COUNTER (portfolio.md)
+  // MOBILE SWIPE COUNTER (expertise.md)
   // ============================================
 
   /**

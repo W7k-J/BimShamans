@@ -96,6 +96,11 @@
   }
 }
 
+// Light theme gradient override for portfolio section headings
+.light-theme .portfolio-section__content h2 {
+  background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
+}
+
 // Tags within section content
 .portfolio-section__tags {
   display: flex;
