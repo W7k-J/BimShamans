@@ -591,7 +591,7 @@ authors:
             c-1.6,1.8-3,4.2-5.4,7.7c18.4,14.5,35.6,28.1,53.7,42.4c-2-8.2-3.8-14.5-5.1-21.1C176.4,152.2,178.4,132.9,176.8,112.7z"/>
           </g>
           </svg>
-      - title: "Koordynator BIM i Worklfow - Infrastrutkura"
+      - title: "Koordynator BIM i Worklfow - Infrastruktura"
         content: "Jestem Koordynatorką BIM i specjalistką Digital Delivery z doświadczeniem przy dużych projektach infrastrukturalnych - głównie kolejowych, w Norwegii. Z wykształcenia geodeta, przeszłam do obszaru BIM, ponieważ łączy techniczne wyzwania, które mnie angażują — technologię, automatyzację i międzybranżową koordynację. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego i nalotów dronowych, przez modelowanie 3D (Scan to BIM), po zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych. \n\n\ Na co dzień koordynuję pracę projektową z wymaganiami zamawiającego publiczego stawiane wykorzystaniu BIMu, bazując głównie na otwartych formatach danych."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
