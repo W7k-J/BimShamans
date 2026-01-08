@@ -331,7 +331,7 @@ authors:
           </svg>
           
   - name: "Natalia Gawlik"
-    intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python.
+    intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python."
     initial_active: 2
     feature_cards:
       - title: ""
