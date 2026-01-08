@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Full Portfolio Collection
+title: Full expertise
 lang: en
 ref: portfolio-collection
 permalink: /en/portfolio-collection/
-excerpt: "Complete collection of our portfolio projects. Filter by category or technology to find relevant work."
+excerpt: "Complete collection of our expertise. Filter by discipline, technology, or technical challenge."
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
@@ -12,7 +12,7 @@ excerpt: "Complete collection of our portfolio projects. Filter by category or t
 <div class="portfolio-collection__container">
 
   <!-- Back to Portfolio link -->
-  <a href="{{ site.baseurl }}/{{ lang }}/portfolio/" class="portfolio__back-link">
+  <a href="{{ site.baseurl }}/{{ lang }}/expertise/" class="portfolio__back-link">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
     {{ t.back_to_portfolio }}
   </a>
@@ -403,11 +403,11 @@ excerpt: "Complete collection of our portfolio projects. Filter by category or t
 
 <!-- Navigation Footer -->
 <nav class="portfolio__nav">
-  <a href="{{ site.baseurl }}/{{ page.lang }}/portfolio/" class="portfolio__nav-link portfolio__nav-link--back">
+  <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="portfolio__nav-link portfolio__nav-link--back">
     <svg class="portfolio__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="15 18 9 12 15 6"></polyline>
     </svg>
-    Go to Portfolio
+    Go to expertise
   </a>
   
   <button type="button" class="portfolio__nav-link portfolio__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
