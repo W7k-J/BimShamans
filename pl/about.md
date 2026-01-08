@@ -816,7 +816,6 @@ authors:
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">3/5</div>
             </div>
-            </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">OpenBIM</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
