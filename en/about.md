@@ -331,7 +331,7 @@ authors:
           </svg>
           
   - name: "Natalia Gawlik"
-    intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python.
+    intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python."
     initial_active: 2
     feature_cards:
       - title: ""
@@ -592,7 +592,7 @@ authors:
           </g>
           </svg>
       - title: "Infrastructure BIM Coordinator & Workflow Specialist"
-        content: "I'm a BIM Coordinator and Digital Delivery Specialist with experience in large-scale infrastructure in Norway. My background is in land surveying, but over time, my focus shifted toward BIM and it became the field where I could focus on everything I enjoy — technology, programming and information exchange between disciplines. Over the past decade, my career has taken me from photogrammetry and laser scanning, through drone mapping and 3D modeling (Scan to BIM), all the way to BIM coordination, automation and project management using VDC methodology on public projects in Norway."
+        content: "I'm a BIM Coordinator and Digital Delivery Specialist with extensive experience on large‑scale railway infrastructure projects in Norway. Trained as a land surveyor, I moved into BIM because it unites the technical challenges I enjoy — technology, automation, and cross‑discipline information exchange. \n\n Over the past decade I've worked across photogrammetry, laser scanning, drone mapping, and 3D modelling (Scan‑to‑BIM). Now I lead BIM coordination, automation, and project delivery using VDC methods on public infrastructure projects. On a day‑to‑day basis I coordinate design work to meet public client BIM requirements, relying primarily on openBIM data formats."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -603,7 +603,54 @@ authors:
           </g>
           </svg>
       - title: "Expertise & Tools"
-        content: "**Focus on the 'I' in BIM** — Information is what gives models meaning. I automate the process of creating and managing property sets in models.\n\n**Tools & Skills:**\n- **Dynamo** | **Grasshopper** | **Quadri Automation Tool**\n- **Python** (IfcOpenShell) for IFC processing\n- **Property set management** & data consistency\n- **Scan to BIM** workflows\n- **VDC methodology** implementation\n- **3D model optimization** & standardization"
+        content:
+          <div class="author-skillbar" aria-hidden="false" style="--skill-color;">
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Civil 3D</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Dynamo & Grasshopper</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">Quadri</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">IFC OpenShell</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Python</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+            <div class="author-skill" data-level="5">
+              <div class="author-skill__name">OpenBIM</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">5/5</div>
+            </div>
+            <div class="author-skill" data-level="4">
+              <div class="author-skill__name">VDC Methodology</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="4">
+              <div class="author-skill__name">ISO 19650 Knowledge</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">4/5</div>
+            </div>
+              <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Data Management</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
+          </div>
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 24 24" fill="currentColor">
             <g transform="translate(12, 12) scale(0.7) translate(-12, -12)">
@@ -611,7 +658,7 @@ authors:
             </g>
           </svg>
       - title: "Specialization Philosophy"
-        content: "To be honest, I'm **too lazy for boring tasks**. I can't stand doing the same thing many times if I can automate it. Yes, I may have spent hours coding just to skip a 10-minute task. No regrets 😄\n\nFor me, automation isn't just a technical solution — it's what gives me the freedom to do more of what I love: **hiking**, **training**, and **relaxing on the terrace with my charming cat** 🐾"
+        content: "To be honest, I'm too lazy for boring and repetitive tasks. I can't stand doing the same thing many times if I can automate it. Yes, I may have spent hours coding just to skip a 10-minute task. No regrets, still more benefits, taking into account scale effect. \n\n For me, automation isn't just a technical solution — it's what gives me the freedom to focus on more important tasks. It also make me curtain the process works under control and has a great synergy with openBIM workflows."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">
@@ -805,11 +852,15 @@ authors:
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">4/5</div>
             </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">CDE Administration</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">ISO 19650 Knowledge</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">3/5</div>
-            </div>
             </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">OpenBIM</div>
@@ -902,12 +953,12 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 15px; margin: 1rem 0 0; }
-.author-skill { display:flex; align-items:center; gap:10px; margin:1.2rem 0; }
-.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:10px; }
+.author-skillbar { --bar-height: 12px; margin: 1.2rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:10px; margin:1rem 0; }
+.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:12px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
 .author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
-.author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }
+.author-skill__level { width:3rem; text-align:right; font-size:1rem; opacity:0.95; }
 
 /* Theme-aware colors + alpha */
 .light-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }

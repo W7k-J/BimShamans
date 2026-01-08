@@ -591,8 +591,8 @@ authors:
             c-1.6,1.8-3,4.2-5.4,7.7c18.4,14.5,35.6,28.1,53.7,42.4c-2-8.2-3.8-14.5-5.1-21.1C176.4,152.2,178.4,132.9,176.8,112.7z"/>
           </g>
           </svg>
-      - title: "Koordynator BIM & Specjalistka Danych"
-        content: "Jestem Koordynatorem BIM ze specjalizacją w dużych projektach infrastrukturalnych. Z wykształcenia geodeta, z zamiłowania specjalistka BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego, nalotów dronowych, przez modelowanie 3D (Scan to BIM), aż po BIM i zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych."
+      - title: "Koordynator BIM i Worklfow - Infrastrutkura"
+        content: "Jestem Koordynatorką BIM i specjalistką Digital Delivery z doświadczeniem przy dużych projektach infrastrukturalnych - głównie kolejowych, w Norwegii. Z wykształcenia geodeta, przeszłam do obszaru BIM, ponieważ łączy techniczne wyzwania, które mnie angażują — technologię, automatyzację i międzybranżową koordynację. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego i nalotów dronowych, przez modelowanie 3D (Scan to BIM), po zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych. \n\n\ Na co dzień koordynuję pracę projektową z wymaganiami zamawiającego publiczego stawiane wykorzystaniu BIMu, bazując głównie na otwartych formatach danych."
         icon: |
           <?xml version="1.0" encoding="utf-8"?>
           <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -610,8 +610,8 @@ authors:
               <path d="M6,15H2c-0.6,0-1,0.4-1,1v6c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1v-6C7,15.4,6.6,15,6,15z M14,9h-4c-0.6,0-1,0.4-1,1v12c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V10C15,9.4,14.6,9,14,9z M22,1h-4c-0.6,0-1,0.4-1,1v20c0,0.6,0.4,1,1,1h4c0.6,0,1-0.4,1-1V2C23,1.4,22.6,1,22,1z"/>
             </g>
           </svg>
-      - title: "Dlaczego Automatyzacja Się Liczy"
-        content: "Szczerze mówiąc, jestem **zbyt leniwa do nudnych zadań**. Nie znoszę robienia tego samego wiele razy, jeśli mogę to zautomatyzować. Tak, mogę spędzić godziny kodowania, żeby zaoszczędzić 10 minut pracy. Bez żalu 😄\n\nDla mnie automatyzacja to nie tylko rozwiązanie techniczne — to to, co daje mi wolność do robienia tego, co kocham: **wędrówek**, **treningów** i **relaksu na tarasie z moim uroczym kotem** 🐾"
+      - title: "Filozofia Specjalizacji"
+        content: "Szczerze mówiąc, jestem zbyt leniwa by pracować na nudnymi, powtarzalnymi zadaniami. Nie znoszę robienia tego samego wiele razy, jeśli mogę to zautomatyzować. Tak, zdarza mi się spędzać godziny na pisaniu kodu, żeby pominąć 10‑minutowe zadanie. Nie żałuję — to i tak się opłaca, uwzględniając efekt skali. \n\n Dla mnie automatyzacja to nie tylko rozwiązanie techniczne — to to, co daje mi przestrzeń do robienia by skupić się na ważniejszych zadaniach. Daje też pewność, że procesy są pod kontrolą, i świetnie współgra z konfiguracją workflow w OpenBIM."
         icon: |
           <svg  viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <g transform="translate(12, 12) scale(0.9) translate(-12, -12)">
@@ -806,6 +806,11 @@ authors:
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
               <div class="author-skill__level">4/5</div>
             </div>
+            <div class="author-skill" data-level="3">
+              <div class="author-skill__name">Administracja CDE</div>
+              <div class="author-skill__track"><div class="author-skill__fill"></div></div>
+              <div class="author-skill__level">3/5</div>
+            </div>
               <div class="author-skill" data-level="3">
               <div class="author-skill__name">Znajomość ISO 19650</div>
               <div class="author-skill__track"><div class="author-skill__fill"></div></div>
@@ -903,12 +908,12 @@ authors:
 
 <style>
 /* Shared author skillbar styles (moved from individual author cards) */
-.author-skillbar { --bar-height: 15px; margin: 1rem 0 0; }
-.author-skill { display:flex; align-items:center; gap:10px; margin:1.2rem 0; }
-.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:10px; }
+.author-skillbar { --bar-height: 12px; margin: 1.2rem 0 0; }
+.author-skill { display:flex; align-items:center; gap:10px; margin:1rem 0; }
+.author-skill__name { width: 250px; font-weight:600; text-align:right; flex:0 0 250px; padding-right:12px; }
 .author-skill__track { flex:1; background: rgba(var(--firstBlue-color-rgb), 0.20); height: var(--bar-height); border-radius:8px; overflow:hidden; }
 .author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
-.author-skill__level { width:3.2rem; text-align:right; font-size:0.92rem; opacity:0.95; }
+.author-skill__level { width:3rem; text-align:right; font-size:1rem; opacity:0.95; }
 
 /* Theme-aware colors + alpha */
 .light-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
