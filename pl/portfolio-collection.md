@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Pełne Doświadczenie Zestaw
+title: Pełne Doświadczenie
 lang: pl
 ref: portfolio-collection
 permalink: /pl/portfolio-collection/
