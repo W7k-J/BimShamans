@@ -28,10 +28,13 @@
   }
 }
 
-// ============================================
-// PORTFOLIO SECTION (Category row - 65/35 grid)
-// ============================================
-
+.portfolio-section {
+/*
+  Portfolio Section
+  Purpose: Layout container for a portfolio category row using a 65/35 grid.
+  Usage: used on portfolio listing pages (e.g., expertise/). Contains
+         `.portfolio-section__content` (text) and `.portfolio-section__media` (images/tiles).
+*/
 .portfolio-section {
   display: grid;
   grid-template-columns: 65fr 35fr;
@@ -61,7 +64,12 @@
   }
 }
 
-// Text content side
+.portfolio-section__content {
+/*
+  Portfolio Section Content
+  Purpose: Text column inside `.portfolio-section` holding headings, paragraphs and lists.
+  Usage: appears in portfolio category rows; overridden by responsive rules for mobile ordering.
+*/
 .portfolio-section__content {
   display: flex;
   flex-direction: column;
@@ -102,6 +110,12 @@
 }
 
 // Tags within section content
+.portfolio-section__tags {
+/*
+  Portfolio Section Tags
+  Purpose: Inline tag list used inside section content for quick topic labels.
+  Usage: shown beneath section descriptions within `.portfolio-section__content`.
+*/
 .portfolio-section__tags {
   display: flex;
   gap: 0.6rem;
@@ -159,6 +173,12 @@
 // ============================================
 
 .portfolio-section__media {
+/*
+  Portfolio Section Media
+  Purpose: Media column that centers image content or the `portfolio-tiles-stack`.
+  Usage: used as the visual side of `.portfolio-section` and receives responsive ordering.
+*/
+.portfolio-section__media {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -167,6 +187,13 @@
 }
 
 // Tiles stack container - fills 80% of column space
+.portfolio-tiles-stack {
+/*
+  Portfolio Tiles Stack
+  Purpose: Container for stacked/cascading project thumbnails. Provides sizing and perspective
+           for the overlapping tile effect used on the portfolio section media column.
+  Usage: placed inside `.portfolio-section__media`.
+*/
 .portfolio-tiles-stack {
   position: relative;
   width: 85%;
@@ -178,6 +205,13 @@
 }
 
 // Individual tile in stack - diagonal cascade pattern
+.portfolio-tile {
+/*
+  Portfolio Tile
+  Purpose: Individual card within the tiles stack (image + overlay). Positioned absolutely
+           to create the cascade; lifts on hover to reveal `.portfolio-tile__overlay`.
+  Usage: multiple `.portfolio-tile` elements are children of `.portfolio-tiles-stack`.
+*/
 .portfolio-tile {
   position: absolute;
   width: 82%;
@@ -257,6 +291,13 @@
 
 // Tile image container
 .portfolio-tile__image {
+/*
+  Portfolio Tile Image
+  Purpose: Image container for a single `.portfolio-tile`. Ensures full-bleed cover and
+           smooth opacity transitions used during hover states.
+  Usage: direct child of `.portfolio-tile`.
+*/
+.portfolio-tile__image {
   position: absolute;
   inset: 0;
   overflow: hidden;
@@ -271,6 +312,12 @@
 
 // Tile overlay (revealed on hover) - consistent with blog-card
 // +1px inset to prevent border-radius pixel bleeding
+.portfolio-tile__overlay {
+/*
+  Portfolio Tile Overlay
+  Purpose: Hover-revealed content layer (dark/bright overlay) with tools, description and CTA.
+  Usage: positioned over `.portfolio-tile__image` and becomes visible on `.portfolio-tile:hover`.
+*/
 .portfolio-tile__overlay {
   position: absolute;
   inset: -1px;
@@ -290,12 +337,24 @@
 
 // Software icons row (first line of overlay)
 .portfolio-tile__tools {
+/*
+  Portfolio Tile Tools
+  Purpose: Row that holds software/tool icons displayed at top of the overlay.
+  Usage: placed inside `.portfolio-tile__overlay`.
+*/
+.portfolio-tile__tools {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
   margin-bottom: 0.75rem;
 }
 
+.portfolio-tile__tool-icon {
+/*
+  Portfolio Tile Tool Icon
+  Purpose: Small square/icon holder for a single software/tool image.
+  Usage: multiple `.portfolio-tile__tool-icon` elements appear inside `.portfolio-tile__tools`.
+*/
 .portfolio-tile__tool-icon {
   width: 28px;
   height: 28px;
@@ -316,6 +375,13 @@
 }
 
 // Tile description text
+.portfolio-tile__description {
+/*
+  Portfolio Tile Description
+  Purpose: Short excerpt/summary shown in the overlay. Truncated to 3 lines using
+           line-clamp for consistent tile heights.
+  Usage: inside `.portfolio-tile__overlay` to describe the project briefly.
+*/
 .portfolio-tile__description {
   margin: 0;
   color: var(--lightGray);
@@ -523,7 +589,11 @@
   }
 }
 
-// List of full-width project tiles
+/*
+  Portfolio Collection List
+  Purpose: Vertical list container for full-width project tiles on the collection page.
+  Usage: used on the portfolio collection page to stack `.project-tile` elements.
+*/
 .portfolio-collection__list {
   display: flex;
   flex-direction: column;
@@ -534,6 +604,13 @@
 // FULL-WIDTH PROJECT TILE (60/40 split with slideshow)
 // ============================================
 
+.project-tile {
+/*
+  Project Tile (Full-width)
+  Purpose: Full-width project entry with a 60/40 split (slideshow + text). Supports
+           zig-zag ordering and slide-driven text content.
+  Usage: used on the portfolio collection page as each project row (`.portfolio-collection__list`).
+*/
 .project-tile {
   position: relative;
   display: grid;
@@ -601,6 +678,13 @@
 // ============================================
 
 .project-tile__slideshow {
+/*
+  Project Tile Slideshow
+  Purpose: Slideshow container for the visual (60%) side of `.project-tile`. Hosts slides,
+           navigation arrows and dots.
+  Usage: placed as `.project-tile__slideshow` inside `.project-tile`.
+*/
+.project-tile__slideshow {
   position: relative;
   width: 100%;
   height: 100%;
@@ -636,6 +720,12 @@
 }
 
 // Navigation arrows
+.project-tile__nav {
+/*
+  Project Tile Navigation
+  Purpose: Prev/Next arrow controls for the slideshow and visual affordance styling.
+  Usage: absolutely positioned inside `.project-tile__slideshow`; variants use `--prev`/`--next`.
+*/
 .project-tile__nav {
   position: absolute;
   top: 50%;
@@ -715,6 +805,12 @@
 // ============================================
 
 .project-tile__content {
+/*
+  Project Tile Content
+  Purpose: Textual side of `.project-tile` that contains title, description, tags and tools.
+  Usage: used together with `.project-tile__slideshow` to build a full project row.
+*/
+.project-tile__content {
   display: flex;
   flex-direction: column;
   padding: 2rem;
@@ -722,6 +818,12 @@
 }
 
 // Title - always at top
+.project-tile__title {
+/*
+  Project Tile Title
+  Purpose: Heading shown at the top of a `.project-tile` content column.
+  Usage: used inside `.project-tile__content` as the primary project label.
+*/
 .project-tile__title {
   margin: 0 0 1rem 0;
   color: var(--firstBlue-color);
@@ -949,6 +1051,12 @@
 // ============================================
 
 .portfolio__nav {
+/*
+  Portfolio Navigation
+  Purpose: Footer navigation for portfolio pages offering quick actions like Back/Collection/Top.
+  Usage: appears at the bottom of portfolio listing and collection pages as `.portfolio__nav`.
+*/
+.portfolio__nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -958,6 +1066,12 @@
   padding-top: 2rem;
 }
 
+.portfolio__nav-link {
+/*
+  Portfolio Navigation Link
+  Purpose: Button/link styling used inside `.portfolio__nav` for navigation actions.
+  Usage: `.portfolio__nav-link`, with modifiers like `--collection`, `--top`, `--back`.
+*/
 .portfolio__nav-link {
   display: inline-flex;
   align-items: center;
@@ -994,6 +1108,12 @@
 }
 
 .portfolio__nav-icon {
+/*
+  Portfolio Nav Icon
+  Purpose: Small icon used inside `.portfolio__nav-link` for visual affordance.
+  Usage: placed as a child of `.portfolio__nav-link`.
+*/
+.portfolio__nav-icon {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
@@ -1025,4 +1145,3 @@
     padding: 0.5rem 1rem;
   }
 }
-
