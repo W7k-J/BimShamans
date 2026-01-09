@@ -174,45 +174,65 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="portfolio-section__media">
       <div class="portfolio-tiles-stack">
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard analytics" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png" alt="Terraforming Mars - Dashboard" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerbi.svg" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_long.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_long.png" alt="PowerShell"></span>
             </div>
-            <p class="portfolio-tile__description">Real-time project dashboard tracking model quality, coordination issues, and team productivity.</p>
+            <p class="portfolio-tile__description">Interactive project dashboard visualising model health, issue trends and delivery KPIs.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Data visualization" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="HikeTracker - Analytics" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerbi.svg" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoft-powerautomate_short.png" alt="Power Automate"></span>
             </div>
-            <p class="portfolio-tile__description">Automated data extraction pipeline from Revit models to business intelligence platform.</p>
+            <p class="portfolio-tile__description">Lightweight telemetry and automation for field data capture and BI-driven insights.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80" alt="Report generation" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_01.png" alt="3D BI Flats - Data model" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_long.svg" alt="Speckle"></span>
             </div>
-            <p class="portfolio-tile__description">Automated weekly reporting system reducing manual effort by 80%.</p>
+            <p class="portfolio-tile__description">3D-driven BI for residential units integrating model geometry with performance indicators.</p>
           </div>
         </div>
-        
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_01.png" alt="IFC MMI Check - QA" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logos_ifc_short.jpg" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo-autodesk-constructioncloud-long.jpg" alt="Autodesk Construction Cloud"></span>
+            </div>
+            <p class="portfolio-tile__description">IFC-based model maturity checks and reporting, feeding compliance dashboards for delivery control.</p>
+          </div>
+        </div>
+
       </div>
     </div>
     
