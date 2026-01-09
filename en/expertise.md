@@ -182,7 +182,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.png" alt="PowerShell"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
             </div>
             <p class="portfolio-tile__description">Interactive project dashboard visualising model health, issue trends and delivery KPIs.</p>
           </div>
@@ -212,7 +212,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.svg" alt="Speckle"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.png" alt="Speckle"></span>
             </div>
             <p class="portfolio-tile__description">3D-driven BI for residential units integrating model geometry with performance indicators.</p>
           </div>
