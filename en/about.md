@@ -667,7 +667,7 @@ authors:
           </svg>
 
   - name: "Piotr Spyra"
-    intro: BIM Coordinator and BIM Manager, licensed structural designer. An engineer working at the intersection of design and construction, always advocating for data correctness and completeness. Experience gained on projects in Poland, Germany and Sweden."
+    intro: BIM Coordinator and BIM Manager, licensed structural designer. An engineer working at the intersection of design and construction, always advocating for data correctness and completeness. Experience gained on projects in Poland, Germany and Sweden.
     initial_active: 2
     feature_cards:
       - title: ""
