@@ -2,18 +2,18 @@
 layout: default
 title: Pełne Doświadczenie
 lang: pl
-ref: portfolio-collection
-permalink: /pl/portfolio-collection/
+ref: expertise-collection
+permalink: /pl/expertise-collection/
 excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny, technologii lub użytego oprogramowania."
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
 
-<div class="portfolio-collection__container">
+<div class="exp-collection__container">
 
   <!-- Powrót do Portfolio -->
-  <a href="{{ site.baseurl }}/{{ lang }}/expertise/" class="portfolio__back-link">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
+  <a href="{{ site.baseurl }}/{{ lang }}/expertise/" class="exp-collection__back-link">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
     {{ t.back_to_portfolio }}
   </a>
 
@@ -21,12 +21,12 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
   <p>{{ t.portfolio_collection_intro }}</p>
 
   <!-- Filtry tagów (generowane przez JavaScript) -->
-  <div class="portfolio-collection__tags" id="portfolio-filters">
+  <div class="exp-collection__tags" id="portfolio-filters">
     <!-- Przyciski filtrów generowane przez portfolio-tiles.js -->
   </div>
 
   <!-- Lista projektów (Full-width tiles) -->
-  <div class="portfolio-collection__list">
+  <div class="exp-collection__list">
 
     <!-- ========================================== -->
     <!-- PROJEKT 1: Dokumentacja dziedzictwa -->
@@ -380,22 +380,22 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       
     </article>
 
-  </div><!-- /.portfolio-collection__list -->
+  </div><!-- /.exp-collection__list -->
 
-</div><!-- /.portfolio-collection__container -->
+</div><!-- /.exp-collection__container -->
 
 <!-- Navigation Footer -->
-<nav class="portfolio__nav">
-  <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="portfolio__nav-link portfolio__nav-link--back">
-    <svg class="portfolio__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+<nav class="expertise__nav">
+  <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="expertise__nav-link expertise__nav-link--back">
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="15 18 9 12 15 6"></polyline>
     </svg>
     Przejdź do doświadczenia
   </a>
   
-  <button type="button" class="portfolio__nav-link portfolio__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+  <button type="button" class="expertise__nav-link expertise__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     Na górę
-    <svg class="portfolio__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>

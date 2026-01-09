@@ -78,7 +78,7 @@
   }
 
   // ============================================
-  // PROJECT TILE SLIDESHOW (portfolio-collection.md)
+  // PROJECT TILE SLIDESHOW (expertise-collection.md)
   // ============================================
 
   /**
@@ -326,12 +326,12 @@
    * Initialize portfolio collection filtering
    */
   function initCollectionFilter() {
-    var container = document.querySelector('.portfolio-collection__container');
+    var container = document.querySelector('.exp-collection__container');
     
     if (!container) return;
     
-    var tagsContainer = container.querySelector('.portfolio-collection__tags');
-    var tilesList = container.querySelector('.portfolio-collection__list');
+    var tagsContainer = container.querySelector('.exp-collection__tags');
+    var tilesList = container.querySelector('.exp-collection__list');
     var tiles = tilesList ? tilesList.querySelectorAll('.project-tile') : [];
     
     if (!tagsContainer || tiles.length === 0) return;
@@ -379,7 +379,7 @@
     
     // Add "All" button
     var allBtn = document.createElement('button');
-    allBtn.className = 'portfolio-collection__tag portfolio-collection__tag--active';
+    allBtn.className = 'exp-collection__tag exp-collection__tag--active';
     allBtn.setAttribute('data-filter', 'all');
     allBtn.textContent = 'all';
     allBtn.type = 'button';
@@ -388,7 +388,7 @@
     // Add tag buttons
     tags.forEach(function(tag) {
       var btn = document.createElement('button');
-      btn.className = 'portfolio-collection__tag';
+      btn.className = 'exp-collection__tag';
       btn.setAttribute('data-filter', tag);
       btn.textContent = '#' + tag;
       btn.type = 'button';
@@ -410,10 +410,10 @@
     if (targetBtn) {
       var allBtn = tagsContainer.querySelector('[data-filter="all"]');
       if (allBtn) {
-        allBtn.classList.remove('portfolio-collection__tag--active');
+        allBtn.classList.remove('exp-collection__tag--active');
       }
       
-      targetBtn.classList.add('portfolio-collection__tag--active');
+      targetBtn.classList.add('exp-collection__tag--active');
       targetBtn.click();
     }
   }
@@ -423,17 +423,17 @@
    */
   function bindFilterEvents(tagsContainer, tiles, tilesList) {
     tagsContainer.addEventListener('click', function(e) {
-      var btn = e.target.closest('.portfolio-collection__tag');
+      var btn = e.target.closest('.exp-collection__tag');
       
       if (!btn) return;
       
       var filterValue = btn.getAttribute('data-filter');
       
       // Update active state
-      tagsContainer.querySelectorAll('.portfolio-collection__tag').forEach(function(b) {
-        b.classList.remove('portfolio-collection__tag--active');
+      tagsContainer.querySelectorAll('.exp-collection__tag').forEach(function(b) {
+        b.classList.remove('exp-collection__tag--active');
       });
-      btn.classList.add('portfolio-collection__tag--active');
+      btn.classList.add('exp-collection__tag--active');
       
       // Filter tiles with animation
       filterTiles(tiles, tilesList, filterValue);
@@ -472,12 +472,12 @@
     });
     
     // Show empty state if no results
-    var emptyState = list.querySelector('.portfolio-collection__empty');
+    var emptyState = list.querySelector('.exp-collection__empty');
     
     if (visibleCount === 0) {
       if (!emptyState) {
         emptyState = document.createElement('div');
-        emptyState.className = 'portfolio-collection__empty';
+        emptyState.className = 'exp-collection__empty';
         emptyState.innerHTML = '<p>No projects found for this filter.</p>';
         list.appendChild(emptyState);
       }
@@ -532,7 +532,7 @@
   // Re-init filters on page navigation
   window.addEventListener('popstate', function() {
     setTimeout(function() {
-      var tagsContainer = document.querySelector('.portfolio-collection__tags');
+      var tagsContainer = document.querySelector('.exp-collection__tags');
       if (tagsContainer) {
         applyInitialFilter(tagsContainer);
       }

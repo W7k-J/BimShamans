@@ -106,10 +106,10 @@ excerpt: "Insights, methodologies, and best practices in BIM coordination"
 </div>
 
 <!-- Navigation Footer -->
-<nav class="portfolio__nav">
-  <button type="button" class="portfolio__nav-link portfolio__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+<nav class="blog__nav">
+  <button type="button" class="blog__nav-link blog__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     Go to top
-    <svg class="portfolio__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+    <svg class="blog__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>

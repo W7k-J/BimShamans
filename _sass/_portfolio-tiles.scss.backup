@@ -1,17 +1,17 @@
 //
-// Expertise & Collection Component Styles
+// Portfolio Tiles Component Styles
 // Main portfolio page sections and tile cards with overlap effect
 //
 
 // ============================================
-// EXPERTISE PAGE LAYOUT
+// PORTFOLIO PAGE LAYOUT
 // ============================================
 
-.expertise__container {
+.portfolio__container {
   margin: 3rem 0;
 }
 
-.expertise__header {
+.portfolio__header {
   text-align: center;
   margin-bottom: 4rem;
   
@@ -29,12 +29,12 @@
 }
 
 /*
-  Expertise Section
-  Purpose: Layout container for a expertise category row using a 65/35 grid.
-  Usage: used on expertise listing pages (e.g., expertise/). Contains
-         `.expertise-section__content` (text) and `.expertise-section__media` (images/tiles).
+  Portfolio Section
+  Purpose: Layout container for a portfolio category row using a 65/35 grid.
+  Usage: used on portfolio listing pages (e.g., expertise/). Contains
+         `.portfolio-section__content` (text) and `.portfolio-section__media` (images/tiles).
 */
-.expertise-section {
+.portfolio-section {
   display: grid;
   grid-template-columns: 65fr 35fr;
   align-items: center;
@@ -53,22 +53,22 @@
   &--reverse {
     grid-template-columns: 35fr 65fr;
     
-    .expertise-section__content {
+    .portfolio-section__content {
       order: 1;
     }
     
-    .expertise-section__media {
+    .portfolio-section__media {
       order: 2;
     }
   }
 }
 
 /*
-  Expertise Section Content
-  Purpose: Text column inside `.expertise-section` holding headings, paragraphs and lists.
-  Usage: appears in expertise category rows; overridden by responsive rules for mobile ordering.
+  Portfolio Section Content
+  Purpose: Text column inside `.portfolio-section` holding headings, paragraphs and lists.
+  Usage: appears in portfolio category rows; overridden by responsive rules for mobile ordering.
 */
-.expertise-section__content {
+.portfolio-section__content {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
@@ -103,24 +103,24 @@
 }
 
 // Light theme gradient override for portfolio section headings
-.light-theme .expertise-section__content h2 {
+.light-theme .portfolio-section__content h2 {
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
 // Tags within section content
 /*
-  Expertise Section Tags
+  Portfolio Section Tags
   Purpose: Inline tag list used inside section content for quick topic labels.
-  Usage: shown beneath section descriptions within `.expertise-section__content`.
+  Usage: shown beneath section descriptions within `.portfolio-section__content`.
 */
-.expertise-section__tags {
+.portfolio-section__tags {
   display: flex;
   gap: 0.6rem;
   flex-wrap: wrap;
   margin-top: 0.5rem;
 }
 
-.expertise-section__tag {
+.portfolio-section__tag {
   padding: 0.4rem 0.9rem;
   border: 1px solid var(--firstBlue-color);
   border-radius: 999px;
@@ -139,7 +139,7 @@
 }
 
 // CTA link
-.expertise-section__cta {
+.portfolio-section__cta {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -166,15 +166,15 @@
 }
 
 // ============================================
-// EXPERTISE TILES STACK (Cascade overlap effect)
+// PORTFOLIO TILES STACK (Cascade overlap effect)
 // ============================================
 
 /*
-  Expertise Section Media
+  Portfolio Section Media
   Purpose: Media column that centers image content or the `portfolio-tiles-stack`.
-  Usage: used as the visual side of `.expertise-section` and receives responsive ordering.
+  Usage: used as the visual side of `.portfolio-section` and receives responsive ordering.
 */
-.expertise-section__media {
+.portfolio-section__media {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -187,7 +187,7 @@
   Portfolio Tiles Stack
   Purpose: Container for stacked/cascading project thumbnails. Provides sizing and perspective
            for the overlapping tile effect used on the portfolio section media column.
-  Usage: placed inside `.expertise-section__media`.
+  Usage: placed inside `.portfolio-section__media`.
 */
 .portfolio-tiles-stack {
   position: relative;
@@ -208,7 +208,7 @@
 */
 .portfolio-tile {
   position: absolute;
-  width: 90%; // 90% of stack width
+  width: 82%;
   aspect-ratio: 16/9;
   border-radius: $radius-medium;
   overflow: hidden;
@@ -279,39 +279,6 @@
     .portfolio-tile__overlay {
       opacity: 1;
       visibility: visible;
-    }
-  }
-  
-  // Active state: clicked tile shows full screenshot with border
-  &.active {
-    z-index: 25;
-    transform: translateY(-8px) scale(1.02);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.25),
-                0 6px 16px rgba(0, 0, 0, 0.15),
-                0 0 0 2px var(--firstBlue-color),
-                0 0 20px rgba(var(--firstBlue-color-rgb), 0.4),
-                0 0 40px rgba(var(--firstBlue-color-rgb), 0.2);
-    border: 1px solid var(--firstBlue-color);
-    
-    .portfolio-tile__image img {
-      opacity: 1;
-    }
-    
-    .portfolio-tile__overlay {
-      opacity: 0;
-      visibility: hidden;
-    }
-    
-    // Active state takes precedence over hover
-    &:hover {
-      .portfolio-tile__image img {
-        opacity: 1;
-      }
-      
-      .portfolio-tile__overlay {
-        opacity: 0;
-        visibility: hidden;
-      }
     }
   }
 }
@@ -439,28 +406,28 @@
 // ============================================
 
 @media screen and (max-width: 992px) {
-  .expertise-section {
+  .portfolio-section {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
   
-  .expertise-section__media {
+  .portfolio-section__media {
     order: 1;
   }
   
-  .expertise-section__content {
+  .portfolio-section__content {
     order: 2;
   }
   
   // Reverse has no effect on mobile - always image first
-  .expertise-section--reverse {
+  .portfolio-section--reverse {
     grid-template-columns: 1fr;
     
-    .expertise-section__content {
+    .portfolio-section__content {
       order: 2;
     }
     
-    .expertise-section__media {
+    .portfolio-section__media {
       order: 1;
     }
   }
@@ -539,26 +506,26 @@
   }
   
   // Section spacing
-  .expertise-section {
+  .portfolio-section {
     margin-bottom: 3rem;
     padding-bottom: 3rem;
   }
   
-  .expertise-section__content h2 {
+  .portfolio-section__content h2 {
     font-size: 1.5rem;
   }
 }
 
 // ============================================
-// EXPERTISE COLLECTION PAGE (Full-width tiles with slideshow)
+// PORTFOLIO COLLECTION PAGE (Full-width tiles with slideshow)
 // ============================================
 
-.exp-collection__container {
+.portfolio-collection__container {
   margin: 3rem 0;
 }
 
 // Controls (reuse blog filter styling)
-.exp-collection__controls {
+.portfolio-collection__controls {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -574,7 +541,7 @@
 }
 
 // Tag filters (reuse blog__tags styling)
-.exp-collection__tags {
+.portfolio-collection__tags {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
@@ -587,7 +554,7 @@
   box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.exp-collection__tag {
+.portfolio-collection__tag {
   padding: 0.5rem 1rem;
   border-radius: 999px;
   background-color: var(--forthGray-color);
@@ -612,11 +579,11 @@
 }
 
 /*
-  Expertise Collection List
+  Portfolio Collection List
   Purpose: Vertical list container for full-width project tiles on the collection page.
-  Usage: used on the expertise collection page to stack `.project-tile` elements.
+  Usage: used on the portfolio collection page to stack `.project-tile` elements.
 */
-.exp-collection__list {
+.portfolio-collection__list {
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -630,7 +597,7 @@
   Project Tile (Full-width)
   Purpose: Full-width project entry with a 60/40 split (slideshow + text). Supports
            zig-zag ordering and slide-driven text content.
-  Usage: used on the expertise collection page as each project row (`.exp-collection__list`).
+  Usage: used on the portfolio collection page as each project row (`.portfolio-collection__list`).
 */
 .project-tile {
   position: relative;
@@ -975,7 +942,7 @@
 }
 
 @media screen and (max-width: 640px) {
-  .exp-collection__list {
+  .portfolio-collection__list {
     gap: 2rem;
   }
   
@@ -1024,7 +991,7 @@
 }
 
 // Empty state
-.exp-collection__empty {
+.portfolio-collection__empty {
   grid-column: 1 / -1;
   text-align: center;
   padding: 3rem 1rem;
@@ -1037,8 +1004,7 @@
 }
 
 // Back link (consistent with blog)
-.expertise__back-link,
-.exp-collection__back-link {
+.portfolio__back-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1065,15 +1031,15 @@
 }
 
 // ============================================
-// EXPERTISE & COLLECTION NAVIGATION (Go to top + Back/Collection)
+// PORTFOLIO NAVIGATION (Go to top + Back/Collection)
 // ============================================
 
 /*
-  Expertise & Collection Navigation
+  Portfolio Navigation
   Purpose: Footer navigation for portfolio pages offering quick actions like Back/Collection/Top.
-  Usage: appears at the bottom of portfolio listing and collection pages as `.expertise__nav`.
+  Usage: appears at the bottom of portfolio listing and collection pages as `.portfolio__nav`.
 */
-.expertise__nav {
+.portfolio__nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1084,11 +1050,11 @@
 }
 
 /*
-  Expertise & Collection Navigation Link
-  Purpose: Button/link styling used inside `.expertise__nav` for navigation actions.
-  Usage: `.expertise__nav-link`, with modifiers like `--collection`, `--top`, `--back`.
+  Portfolio Navigation Link
+  Purpose: Button/link styling used inside `.portfolio__nav` for navigation actions.
+  Usage: `.portfolio__nav-link`, with modifiers like `--collection`, `--top`, `--back`.
 */
-.expertise__nav-link {
+.portfolio__nav-link {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
@@ -1124,59 +1090,39 @@
 }
 
 /*
-  Navigation Icon
-  Purpose: Small icon used inside `.expertise__nav-link` for visual affordance.
-  Usage: placed as a child of `.expertise__nav-link`.
+  Portfolio Nav Icon
+  Purpose: Small icon used inside `.portfolio__nav-link` for visual affordance.
+  Usage: placed as a child of `.portfolio__nav-link`.
 */
-.expertise__nav-icon {
+.portfolio__nav-icon {
   width: 18px;
   height: 18px;
   flex-shrink: 0;
 }
 
 // Icon order variations
-.expertise__nav-link--collection .expertise__nav-icon {
+.portfolio__nav-link--collection .portfolio__nav-icon {
   order: -1;
 }
 
-.expertise__nav-link--top .expertise__nav-icon {
+.portfolio__nav-link--top .portfolio__nav-icon {
   order: 1;
 }
 
-.expertise__nav-link--back .expertise__nav-icon {
+.portfolio__nav-link--back .portfolio__nav-icon {
   order: -1;
 }
 
 @media screen and (max-width: 640px) {
-  .expertise__nav {
+  .portfolio__nav {
     flex-direction: column;
     gap: 0.8rem;
   }
 
-  .expertise__nav-link {
+  .portfolio__nav-link {
     width: 100%;
     justify-content: center;
     font-size: 0.85rem;
     padding: 0.5rem 1rem;
   }
-}
-
-// ============================================
-// BLOG NAVIGATION (reuse expertise nav styling)
-// ============================================
-
-.blog__nav {
-  @extend .expertise__nav;
-}
-
-.blog__nav-link {
-  @extend .expertise__nav-link;
-}
-
-.blog__nav-icon {
-  @extend .expertise__nav-icon;
-}
-
-.blog__nav-link--top .blog__nav-icon {
-  order: 1;
 }
