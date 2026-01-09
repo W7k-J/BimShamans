@@ -4,61 +4,27 @@
  * - Click tile: toggle .active class (shows full screenshot with border)
  * - Click outside: remove .active from all tiles
  * - Mobile-friendly: touch events work naturally
- * - Auto-generates ALT text from logo filenames
+ * - Copies ALT text to TITLE for hover tooltips
  */
 
 document.addEventListener('DOMContentLoaded', function() {
   console.log('[Portfolio Tile Click] Script loaded');
   
   // ========================================
-  // AUTO-GENERATE ALT TEXT FROM FILENAMES
+  // COPY ALT TO TITLE FOR TOOLTIPS
   // ========================================
-  // Extract software name from filename: logo_Name-here_short.png → "Name-here"
-  function generateAltTextFromFilename(src) {
-    if (!src) return '';
-    
-    // Get filename from path
-    var filename = src.split('/').pop().split('\\').pop();
-    
-    // Remove file extension
-    var nameWithoutExt = filename.replace(/\.(png|jpg|jpeg|svg|gif|webp)$/i, '');
-    
-    // Extract part between 'logo_' or 'logos_' and '_short' or '_long'
-    var match = nameWithoutExt.match(/logos?_(.+?)_(?:short|long)$/i);
-    
-    if (match && match[1]) {
-      // Convert hyphens to spaces and capitalize each word
-      var softwareName = match[1]
-        .split('-')
-        .map(function(word) {
-          return word.charAt(0).toUpperCase() + word.slice(1);
-        })
-        .join(' ');
-      return softwareName;
-    }
-    
-    // Fallback: return original alt or empty string
-    return '';
-  }
   
-  // Apply auto-generated ALT and TITLE text to all tool icons
+  // Apply title attribute to all tool icons based on existing alt text
   var toolIcons = document.querySelectorAll('.portfolio-tile__tool-icon img');
   console.log('[Portfolio Tile Click] Found tool icons:', toolIcons.length);
   
   toolIcons.forEach(function(img) {
-    var src = img.getAttribute('src');
-    var currentAlt = img.getAttribute('alt');
+    var altText = img.getAttribute('alt');
     
-    // Only generate if src matches our logo pattern
-    if (src && src.includes('/images/logos/software/')) {
-      var generatedText = generateAltTextFromFilename(src);
-      
-      if (generatedText) {
-        // Set both alt (accessibility) and title (hover tooltip)
-        img.setAttribute('alt', generatedText);
-        img.setAttribute('title', generatedText);
-        console.log('[Portfolio Tile Click] Updated ALT & TITLE:', src, '→', generatedText);
-      }
+    if (altText && altText.trim() !== '') {
+      // Set title attribute for hover tooltip
+      img.setAttribute('title', altText);
+      console.log('[Portfolio Tile Click] Set TITLE from ALT:', altText);
     }
   });
   
