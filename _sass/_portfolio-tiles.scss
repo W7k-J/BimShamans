@@ -379,11 +379,11 @@
   Usage: multiple `.portfolio-tile__tool-icon` elements appear inside `.portfolio-tile__tools`.
 */
 .portfolio-tile__tool-icon {
-  width: 28px;
-  height: 28px;
+  width: 42px;
+  height: 42px;
   border-radius: $radius-small;
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 4px;
+  padding: 6px;
   transition: background-color 0.2s ease;
   
   img {
