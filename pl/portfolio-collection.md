@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Pełne Doświadczenie
+title: Pełne Doświadczenie Zestaw
 lang: pl
 ref: portfolio-collection
 permalink: /pl/portfolio-collection/
-excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny, technologii lub wyzwania technicznego."
+excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny, technologii lub użytego oprogramowania."
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}

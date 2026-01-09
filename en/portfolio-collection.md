@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Full expertise
+title: Full Expertise Collection
 lang: en
 ref: portfolio-collection
 permalink: /en/portfolio-collection/
-excerpt: "Complete collection of our expertise. Filter by discipline, technology, or technical challenge."
+excerpt: "Complete collection of our expertise. Filter by discipline, technology or software used."
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
