@@ -28,7 +28,6 @@
   }
 }
 
-.portfolio-section {
 /*
   Portfolio Section
   Purpose: Layout container for a portfolio category row using a 65/35 grid.
@@ -64,7 +63,6 @@
   }
 }
 
-.portfolio-section__content {
 /*
   Portfolio Section Content
   Purpose: Text column inside `.portfolio-section` holding headings, paragraphs and lists.
@@ -110,7 +108,6 @@
 }
 
 // Tags within section content
-.portfolio-section__tags {
 /*
   Portfolio Section Tags
   Purpose: Inline tag list used inside section content for quick topic labels.
@@ -172,7 +169,6 @@
 // PORTFOLIO TILES STACK (Cascade overlap effect)
 // ============================================
 
-.portfolio-section__media {
 /*
   Portfolio Section Media
   Purpose: Media column that centers image content or the `portfolio-tiles-stack`.
@@ -187,7 +183,6 @@
 }
 
 // Tiles stack container - fills 80% of column space
-.portfolio-tiles-stack {
 /*
   Portfolio Tiles Stack
   Purpose: Container for stacked/cascading project thumbnails. Provides sizing and perspective
@@ -205,7 +200,6 @@
 }
 
 // Individual tile in stack - diagonal cascade pattern
-.portfolio-tile {
 /*
   Portfolio Tile
   Purpose: Individual card within the tiles stack (image + overlay). Positioned absolutely
@@ -290,7 +284,6 @@
 }
 
 // Tile image container
-.portfolio-tile__image {
 /*
   Portfolio Tile Image
   Purpose: Image container for a single `.portfolio-tile`. Ensures full-bleed cover and
@@ -312,7 +305,6 @@
 
 // Tile overlay (revealed on hover) - consistent with blog-card
 // +1px inset to prevent border-radius pixel bleeding
-.portfolio-tile__overlay {
 /*
   Portfolio Tile Overlay
   Purpose: Hover-revealed content layer (dark/bright overlay) with tools, description and CTA.
@@ -336,7 +328,6 @@
 }
 
 // Software icons row (first line of overlay)
-.portfolio-tile__tools {
 /*
   Portfolio Tile Tools
   Purpose: Row that holds software/tool icons displayed at top of the overlay.
@@ -349,7 +340,6 @@
   margin-bottom: 0.75rem;
 }
 
-.portfolio-tile__tool-icon {
 /*
   Portfolio Tile Tool Icon
   Purpose: Small square/icon holder for a single software/tool image.
@@ -375,7 +365,6 @@
 }
 
 // Tile description text
-.portfolio-tile__description {
 /*
   Portfolio Tile Description
   Purpose: Short excerpt/summary shown in the overlay. Truncated to 3 lines using
@@ -604,7 +593,6 @@
 // FULL-WIDTH PROJECT TILE (60/40 split with slideshow)
 // ============================================
 
-.project-tile {
 /*
   Project Tile (Full-width)
   Purpose: Full-width project entry with a 60/40 split (slideshow + text). Supports
@@ -677,7 +665,6 @@
 // SLIDESHOW COMPONENT (60% side)
 // ============================================
 
-.project-tile__slideshow {
 /*
   Project Tile Slideshow
   Purpose: Slideshow container for the visual (60%) side of `.project-tile`. Hosts slides,
@@ -720,7 +707,6 @@
 }
 
 // Navigation arrows
-.project-tile__nav {
 /*
   Project Tile Navigation
   Purpose: Prev/Next arrow controls for the slideshow and visual affordance styling.
@@ -804,7 +790,6 @@
 // TEXT CONTENT (40% side)
 // ============================================
 
-.project-tile__content {
 /*
   Project Tile Content
   Purpose: Textual side of `.project-tile` that contains title, description, tags and tools.
@@ -818,7 +803,6 @@
 }
 
 // Title - always at top
-.project-tile__title {
 /*
   Project Tile Title
   Purpose: Heading shown at the top of a `.project-tile` content column.
@@ -1050,7 +1034,6 @@
 // PORTFOLIO NAVIGATION (Go to top + Back/Collection)
 // ============================================
 
-.portfolio__nav {
 /*
   Portfolio Navigation
   Purpose: Footer navigation for portfolio pages offering quick actions like Back/Collection/Top.
@@ -1066,7 +1049,6 @@
   padding-top: 2rem;
 }
 
-.portfolio__nav-link {
 /*
   Portfolio Navigation Link
   Purpose: Button/link styling used inside `.portfolio__nav` for navigation actions.
@@ -1107,7 +1089,6 @@
   }
 }
 
-.portfolio__nav-icon {
 /*
   Portfolio Nav Icon
   Purpose: Small icon used inside `.portfolio__nav-link` for visual affordance.
