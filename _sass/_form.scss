@@ -289,8 +289,9 @@ textarea.form-textarea:-ms-input-autofill {
     border-radius: $radius-medium;
     font-size: 14px;
     color: var(--secondGray-color);
-    border-left: 4px solid var(--firstBlue-color);
-    box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+    // Grubość lewej kolorowej obwódki Privacy Notice
+    border-left: 2px solid var(--firstBlue-color);
+    box-shadow: -1px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .required {
