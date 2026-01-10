@@ -175,19 +175,20 @@ html {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 $nav-padding-x;
+    padding: 0 15px; // Zmieniony na stałą wartość dla pełnego rozciągnięcia
   }
 
   // Logo section - using existing .site-avatar class
   .site-avatar {
     height: $nav-height;
     padding: 5px 0;
-    margin-right: 2.5rem;
+    margin-right: 0; // Usunięty margin - logo przylega do lewej
     display: flex;
     align-items: center;
     gap: 0.6rem;
+    flex-shrink: 0; // Logo nie kurczy się
     
     .nav-flame {
       height: 80%;
@@ -208,8 +209,8 @@ html {
     align-items: center;
     gap: $nav-gap;
     height: 100%;
-    flex: 1;
-    justify-content: center;
+    flex: 1; // Zajmuje dostępne miejsce
+    justify-content: center; // Wycentrowane linki
 
     a {
       position: relative;
@@ -376,9 +377,9 @@ html {
   .controls {
     display: flex;
     align-items: center;
-    gap: 1rem;
-    padding-left: 2rem;
-    flex-shrink: 0;
+    gap: 1.25rem;
+    padding-left: 0; // Usunięty padding - controls przylegają do prawej
+    flex-shrink: 0; // Controls nie kurczą się
 
     .switch {
       flex-shrink: 0;
