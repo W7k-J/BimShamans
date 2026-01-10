@@ -170,14 +170,14 @@ html {
   border-top: 1px solid var(--firstBlue-color);
   border-bottom: 1px solid var(--firstBlue-color);
   
-  .container {
+  .nav-wrapper {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
     margin: 0 auto;
-    padding: 0 15px; // Zmieniony na stałą wartość dla pełnego rozciągnięcia
+    padding: 0 15px;
   }
 
   // Logo section - using existing .site-avatar class
