@@ -44,7 +44,8 @@ textarea.form-textarea:-ms-input-autofill {
     margin-top: 0;
     // Dolny margines nagłówka (odstęp przed formularzem)
     margin-bottom: 1.35rem;
-    animation: slideDown 0.6s ease-out;
+    // Animacja tekstu - czas trwania i efekt)
+    animation: slideDown 0.8s ease-out;
 }
 
 .contact-header h1 {
