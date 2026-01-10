@@ -294,6 +294,14 @@ textarea.form-textarea:-ms-input-autofill {
     box-shadow: -1px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
+// Specjalna szerokość kontenera tylko dla strony Contact
+[lang="en"] a[href*="contact"] ~ #main .container,
+[lang="pl"] a[href*="kontakt"] ~ #main .container,
+body:has(a.active[href*="contact"]) .container,
+body:has(a.active[href*="kontakt"]) .container {
+    max-width: 950px;
+}
+
 .required {
     color: var(--secondBlue-color);
 }
