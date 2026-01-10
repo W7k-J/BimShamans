@@ -5,8 +5,10 @@ document.querySelectorAll('.form-input, .form-select, .form-textarea').forEach(i
         if (label) {
             const root = document.documentElement;
             if (root.classList.contains('dark-theme')) {
-                label.style.color = 'var(--secondBlue-color)';
+                // Kolor etykiety po klikni臋ciu w pole - dark theme
+                label.style.color = 'var(--firstBlue-color)';
             } else {
+                // Kolor etykiety po kliknięciu w pole - light theme (#1E6991)
                 label.style.color = 'var(--firstBlue-color)';
             }
         }

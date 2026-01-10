@@ -45,7 +45,7 @@ textarea.form-textarea:-ms-input-autofill {
     // Dolny margines nagłówka (odstęp przed formularzem)
     margin-bottom: 1.35rem;
     // Animacja tekstu - czas trwania i efekt)
-    animation: slideDown 0.8s ease-out;
+    animation: slideDown 0.9s ease-out;
 }
 
 .contact-header h1 {
@@ -175,10 +175,11 @@ textarea.form-textarea:-ms-input-autofill {
     border-color: var(--firstBlue-color);
 }
 
+// Minimalna wysokość pola tekstowego "Message" 
+
 .form-textarea {
     resize: vertical;
-    // Minimalna wysokość pola tekstowego "Message" 
-    min-height: 90px;
+    min-height: 125px;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -286,7 +287,7 @@ textarea.form-textarea:-ms-input-autofill {
     padding: 0.1em 1em;
     background: var(--forthGray-color);
     border-radius: $radius-medium;
-    font-size: 16px;
+    font-size: 14px;
     color: var(--secondGray-color);
     border-left: 4px solid var(--firstBlue-color);
     box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);

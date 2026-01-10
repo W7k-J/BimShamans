@@ -8,7 +8,7 @@ permalink: /en/contact/
 
 <div class="contact-header">
     <h1>Have the signs in the sky led you to us?</h1>
-    <p>If the article resonated. <br> If questions remain. <br> If you seek a shaman’s counsel. <br> Send a raven - and let the dialogue begin.</p>
+    <p>If the article resonated. If questions remain. <br> If you seek a shaman’s counsel. <br> Send a raven - and let the dialogue begin.</p>
 </div>
 
 <div class="form-container">
@@ -95,12 +95,12 @@ permalink: /en/contact/
         </div>
 
         <button type="submit" class="button expand" data-success-text="Message Sent!">
-            Send Message
+            Send Raven
         </button>
 
         <div class="privacy-notice">
             <strong>Privacy Notice:</strong> We respect your privacy and will never share your personal information. 
-            Your data is used solely to respond to your inquiry.
+            Your data is used solely to respon  d to your inquiry.
         </div>
     </form>
 </div>

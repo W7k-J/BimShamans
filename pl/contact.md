@@ -8,8 +8,8 @@ permalink: /pl/contact/
 
 <div class="contact-header">
     <h1>Znaki na niebie przywiodły Cię do nas?</h1>
-    <p>Artykuł dał do myślenia?<br>Masz pytania?<br>Szukasz porady szamana?<br>Wyślij kruka - niech rozpocznie się dyskusja. </p>
-</div>
+    <p>Artykuł dał do myślenia? Masz pytania?<br>Szukasz porady szamana?<br>Wyślij kruka - niech rozpocznie się dyskusja. </p>
+</div>  
 
 <div class="form-container">
     <div class="success-message" id="successMessage" role="alert" aria-live="polite">
@@ -93,7 +93,7 @@ permalink: /pl/contact/
         </div>
 
         <button type="submit" class="button expand" data-success-text="Wysłano!">
-            Wyślij Wiadomość
+            Wyślij kruka
         </button>
 
         <div class="privacy-notice">
