@@ -1082,6 +1082,7 @@ figure {
       flex-direction: column;
       gap: 0;
       padding: 1rem 0;
+      padding-bottom: 120px; // Space for fixed controls at bottom (approx 80-100px)
       max-height: 0;
       overflow: hidden;
       opacity: 0;
