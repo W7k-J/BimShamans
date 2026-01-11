@@ -543,6 +543,14 @@
     width: 100%;
     aspect-ratio: auto; // Auto height to accommodate image + overlay
     
+    // Disable tap highlights and selection on mobile
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    
     // Reset all cascade positions
     &:nth-child(1),
     &:nth-child(2),
@@ -555,11 +563,12 @@
       transform: none;
     }
     
-    // Remove hover transform on mobile
-    &:hover {
+    // Remove hover effects on mobile (prevents sticky hover on touch devices)
+    &:hover,
+    &:active,
+    &:focus {
       transform: none;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12),
-                  0 1px 3px rgba(0, 0, 0, 0.08);
+      box-shadow: none;
     }
     
     // Remove margins
