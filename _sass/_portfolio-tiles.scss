@@ -464,13 +464,34 @@
       order: 1;
     }
   }
+  
+  .portfolio-tiles-stack {
+    width: 90%;
+    max-width: 600px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .expertise-section {
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .expertise-section__media {
+    min-height: 280px;
+    padding: 0;
+  }
+  
+  .expertise-section__content h2 {
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+  }
+  
   // Transform stack into swipe carousel
   .portfolio-tiles-stack {
     max-width: 100%;
     overflow: hidden;
+    height: 280px;
     
     // Switch to horizontal scroll
     display: flex;
@@ -485,6 +506,7 @@
     aspect-ratio: auto;
     min-height: auto;
     perspective: none;
+    padding: 0 5%;
     
     &::-webkit-scrollbar {
       display: none;
@@ -495,12 +517,14 @@
     position: relative;
     flex: 0 0 85%;
     width: 85%;
+    height: 100%;
     scroll-snap-align: center;
     transform: none !important;
     
     &:nth-child(1),
     &:nth-child(2),
-    &:nth-child(3) {
+    &:nth-child(3),
+    &:nth-child(4) {
       position: relative;
       top: auto;
       left: auto;
@@ -537,15 +561,36 @@
     pointer-events: none;
     z-index: 20;
   }
-  
-  // Section spacing
+}
+
+// Small mobile phones - further optimization
+@media screen and (max-width: 480px) {
   .expertise-section {
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+    padding-bottom: 2.5rem;
   }
   
-  .expertise-section__content h2 {
-    font-size: 1.5rem;
+  .expertise-section__media {
+    min-height: 240px;
+  }
+  
+  .portfolio-tiles-stack {
+    height: 240px;
+  }
+  
+  .portfolio-tile {
+    flex: 0 0 90%;
+    width: 90%;
+  }
+  
+  .expertise-section__tags {
+    gap: 0.5rem;
+  }
+  
+  .expertise-section__tag {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.7rem;
   }
 }
 
@@ -555,6 +600,10 @@
 
 .exp-collection__container {
   margin: 3rem 0;
+  
+  @media screen and (max-width: 640px) {
+    margin: 2rem 0;
+  }
 }
 
 // Controls (reuse blog filter styling)
@@ -585,6 +634,12 @@
   border-radius: $radius-medium;
   border: none;
   box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+  
+  @media screen and (max-width: 640px) {
+    gap: 0.6rem;
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .exp-collection__tag {
@@ -608,6 +663,11 @@
     background-color: var(--firstBlue-color);
     color: var(--raisinBlack);
     font-weight: 600;
+  }
+  
+  @media screen and (max-width: 640px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
   }
 }
 

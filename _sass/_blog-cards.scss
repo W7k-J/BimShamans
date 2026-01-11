@@ -21,6 +21,12 @@
     align-items: center; // Center all items vertically
     width: 100%;
   }
+  
+  // Mobile optimization
+  @media screen and (max-width: 640px) {
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+  }
 }
 
 // Search bar container - grows to fill available space
@@ -62,6 +68,13 @@
     outline: none;
     border-color: var(--firstBlue-color);
     box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.1);
+  }
+  
+  // Mobile optimization
+  @media screen and (max-width: 640px) {
+    font-size: 16px; // Prevent iOS zoom
+    padding: 0.7rem 1rem;
+    height: 42px;
   }
 }
 

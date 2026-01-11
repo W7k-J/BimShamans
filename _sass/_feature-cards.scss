@@ -29,6 +29,12 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   @media screen and (max-width: 768px) {
     height: 250px;
   }
+  
+  // Small mobile - stack vertically or smaller height
+  @media screen and (max-width: 480px) {
+    height: 200px;
+    gap: 8px;
+  }
 }
 
 .feature-card {

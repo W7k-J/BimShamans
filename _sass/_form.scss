@@ -105,6 +105,27 @@ textarea.form-textarea:-ms-input-autofill {
     background: linear-gradient(90deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
 }
 
+// Mobile optimization for form container
+@media screen and (max-width: 640px) {
+  .contact-header {
+    margin-bottom: 1rem;
+    
+    h1 {
+      font-size: 1.75rem;
+    }
+    
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  .form-container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 18px;
+  }
+}
+
  //FORMULARZ - zmiana odleglosci miedzy polami
 
 .form-grid {
@@ -120,6 +141,17 @@ textarea.form-textarea:-ms-input-autofill {
 @media (min-width: 640px) {
     .form-row.two-cols {
         grid-template-columns: 1fr 1fr;
+    }
+}
+
+// Mobile: ensure single column and comfortable spacing
+@media screen and (max-width: 639px) {
+    .form-row {
+        gap: 0.75rem;
+    }
+    
+    .form-grid {
+        gap: 0.5rem;
     }
 }
 
@@ -140,6 +172,13 @@ textarea.form-textarea:-ms-input-autofill {
     transition: color 0.2s ease;
 }
 
+@media screen and (max-width: 640px) {
+  .form-label {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+}
+
 .form-input, .form-select, .form-textarea {
     width: 100%;
     // Wewnętrzny padding pól formularza (góra/dół lewo/prawo)
@@ -152,6 +191,19 @@ textarea.form-textarea:-ms-input-autofill {
     background: var(--background-color);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     outline: none;
+}
+
+// Mobile optimization: larger touch targets, prevent iOS zoom
+@media screen and (max-width: 640px) {
+  .form-input, .form-select, .form-textarea {
+    padding: 0.75rem 0.85rem;
+    font-size: 16px; // Minimum 16px prevents iOS auto-zoom
+    border-radius: 10px;
+  }
+  
+  .form-textarea {
+    min-height: 120px;
+  }
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {

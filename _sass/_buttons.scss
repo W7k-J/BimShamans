@@ -174,3 +174,24 @@
     border: 1px solid var(--firstBlue-color);
     border-radius: 4px;
 }
+
+// Mobile optimization for buttons
+@media screen and (max-width: 640px) {
+  .button--primary,
+  .button--secondary {
+    padding: 12px 24px;
+    font-size: 16px;
+    width: 100%; // Full width on mobile
+    text-align: center;
+  }
+  
+  .button {
+    font-size: 16px;
+    padding: 9px;
+  }
+  
+  .collapsible {
+    padding: 9px 12px;
+    font-size: 16px;
+  }
+}
