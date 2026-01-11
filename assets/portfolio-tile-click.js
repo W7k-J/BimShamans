@@ -1,8 +1,9 @@
 /**
  * Portfolio Tile Click Interaction
  * Handles click-to-activate functionality for expertise.md tiles
- * - Click tile: toggle .active class (shows full screenshot with border)
- * - Click outside: remove .active from all tiles
+ * - Desktop: hover shows overlay
+ * - Mobile: click toggles .expanded class (bottom overlay expands to full)
+ * - Click outside: collapse all expanded tiles
  * - Mobile-friendly: touch events work naturally
  * - Copies ALT text to TITLE for hover tooltips
  */
@@ -29,8 +30,14 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   // ========================================
-  // CLICK INTERACTION LOGIC
+  // MOBILE: NO INTERACTION (static overlay below image)
+  // DESKTOP: CLICK INTERACTION (toggle active for full screenshot)
   // ========================================
+  
+  // Detect if device is mobile (viewport width)
+  function isMobile() {
+    return window.innerWidth <= 768;
+  }
   
   // Only apply to expertise sections (not exp-collection or blog)
   var expertiseSections = document.querySelectorAll('.portfolio-tiles-stack');
@@ -51,15 +58,21 @@ document.addEventListener('DOMContentLoaded', function() {
       return;
     }
     
-    // Handle tile clicks
+    // Handle tile clicks - ONLY on desktop (mobile has static overlay)
     tiles.forEach(function(tile, index) {
       tile.addEventListener('click', function(event) {
-        console.log('[Portfolio Tile Click] Tile clicked:', index);
+        // Skip interaction on mobile - overlay is static
+        if (isMobile()) {
+          console.log('[Portfolio Tile Click] Mobile - no interaction, static overlay');
+          return;
+        }
+        
+        console.log('[Portfolio Tile Click] Desktop - Tile clicked:', index);
         event.stopPropagation();
         
-        // Toggle active state on current tile
+        // Desktop behavior: toggle active class for full screenshot view
         var wasActive = this.classList.contains('active');
-        console.log('[Portfolio Tile Click] Was active:', wasActive);
+        console.log('[Portfolio Tile Click] Desktop - Was active:', wasActive);
         
         // Remove active from all tiles
         tiles.forEach(function(t) {
@@ -69,14 +82,19 @@ document.addEventListener('DOMContentLoaded', function() {
         // If this tile wasn't active, make it active
         if (!wasActive) {
           this.classList.add('active');
-          console.log('[Portfolio Tile Click] Tile activated:', index);
+          console.log('[Portfolio Tile Click] Desktop - Tile activated:', index);
         }
       });
     });
   });
   
-  // Click anywhere outside tiles to deactivate all
+  // Click anywhere outside tiles to deactivate all (desktop only)
   document.addEventListener('click', function(event) {
+    // Skip on mobile
+    if (isMobile()) {
+      return;
+    }
+    
     // Check if click is outside all tile containers
     var clickedInside = false;
     expertiseSections.forEach(function(section) {
@@ -88,7 +106,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!clickedInside) {
       var allTiles = document.querySelectorAll('.portfolio-tile.active');
       if (allTiles.length > 0) {
-        console.log('[Portfolio Tile Click] Clicked outside, deactivating all tiles');
+        console.log('[Portfolio Tile Click] Desktop - Clicked outside, deactivating all tiles');
         allTiles.forEach(function(tile) {
           tile.classList.remove('active');
         });

@@ -442,26 +442,52 @@
   .expertise-section {
     grid-template-columns: 1fr;
     gap: 2rem;
+    display: flex;
+    flex-direction: column;
   }
   
-  .expertise-section__media {
+  // Mobile ordering: Text → Images → Tags/Link
+  // Use display: contents to "unpack" content children
+  .expertise-section__content {
+    display: contents; // Makes children direct flex children
+  }
+  
+  // Individual content elements get explicit order
+  .expertise-section__content h2 {
     order: 1;
   }
   
-  .expertise-section__content {
+  .expertise-section__content p {
     order: 2;
   }
   
-  // Reverse has no effect on mobile - always image first
+  .expertise-section__content ul {
+    order: 3;
+  }
+  
+  .expertise-section__media {
+    order: 4; // Images after text content
+  }
+  
+  // Move tags and CTA to the end (after images)
+  .expertise-section__tags {
+    order: 5;
+  }
+  
+  .expertise-section__cta {
+    order: 6;
+  }
+  
+  // Reverse has no effect on mobile - always same order
   .expertise-section--reverse {
     grid-template-columns: 1fr;
     
     .expertise-section__content {
-      order: 2;
+      display: contents;
     }
     
     .expertise-section__media {
-      order: 1;
+      order: 4;
     }
   }
   
@@ -479,7 +505,7 @@
   }
   
   .expertise-section__media {
-    min-height: 280px;
+    min-height: auto;
     padding: 0;
   }
   
@@ -487,79 +513,93 @@
     font-size: clamp(1.5rem, 5vw, 1.75rem);
   }
   
-  // Transform stack into swipe carousel
+  // Transform stack into vertical stack
   .portfolio-tiles-stack {
+    width: 100%;
     max-width: 100%;
-    overflow: hidden;
-    height: 280px;
-    
-    // Switch to horizontal scroll
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-    
-    // Maintain aspect ratio
+    height: auto;
     aspect-ratio: auto;
-    min-height: auto;
     perspective: none;
-    padding: 0 5%;
     
-    &::-webkit-scrollbar {
-      display: none;
-    }
+    // Vertical stack layout
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0;
   }
   
   .portfolio-tile {
+    // Reset absolute positioning to relative
     position: relative;
-    flex: 0 0 85%;
-    width: 85%;
-    height: 100%;
-    scroll-snap-align: center;
-    transform: none !important;
+    width: 100%;
+    aspect-ratio: auto; // Auto height to accommodate image + overlay
     
+    // Reset all cascade positions
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3),
-    &:nth-child(4) {
+    &:nth-child(4),
+    &:nth-child(5) {
       position: relative;
       top: auto;
       left: auto;
-      z-index: 1;
       transform: none;
     }
     
+    // Remove hover transform on mobile
     &:hover {
       transform: none;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12),
+                  0 1px 3px rgba(0, 0, 0, 0.08);
     }
     
-    // First tile margin for centering
-    &:first-child {
-      margin-left: 7.5%;
-    }
-    
+    // Remove margins
+    &:first-child,
     &:last-child {
-      margin-right: 7.5%;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   
-  // Swipe counter indicator
-  .portfolio-tiles-stack::after {
-    content: attr(data-counter);
-    position: absolute;
-    bottom: 0.75rem;
-    right: 0.75rem;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 0.3rem 0.6rem;
-    border-radius: $radius-small;
-    font-size: 0.75rem;
-    font-weight: 500;
-    pointer-events: none;
-    z-index: 20;
+  // Image container - maintains 16:9 aspect ratio
+  .portfolio-tile__image {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    border-radius: $radius-medium $radius-medium 0 0; // Rounded top only
+  }
+  
+  // Static overlay - positioned BELOW image (no interactions)
+  .portfolio-tile__overlay {
+    position: relative; // NOT absolute - sits below image
+    bottom: auto;
+    left: 0;
+    right: 0;
+    min-height: auto;
+    opacity: 1;
+    visibility: visible;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.88) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    padding: 1rem 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0.75rem;
+    border-radius: 0 0 $radius-medium $radius-medium; // Rounded bottom only
+  }
+  
+  .light-theme .portfolio-tile__overlay {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.88) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  
+  // Image stays visible (full opacity)
+  .portfolio-tile__image img {
+    opacity: 1;
   }
 }
 
@@ -572,16 +612,28 @@
   }
   
   .expertise-section__media {
-    min-height: 240px;
+    min-height: auto;
   }
   
   .portfolio-tiles-stack {
-    height: 240px;
+    gap: 1.25rem;
   }
   
-  .portfolio-tile {
-    flex: 0 0 90%;
-    width: 90%;
+  .portfolio-tile__overlay {
+    padding: 0.875rem 1rem;
+  }
+  
+  .portfolio-tile__tools {
+    gap: 0.4rem;
+  }
+  
+  .portfolio-tile__tool-icon {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .portfolio-tile__description {
+    font-size: 0.8rem;
   }
   
   .expertise-section__tags {
