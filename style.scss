@@ -1003,19 +1003,28 @@ figure {
 // Mobile styles
 @media screen and (max-width: 768px) {
   .nav-container {
+    width: 100%; // Ensure full viewport width
     height: $nav-height;
+    left: 0; // Explicit left alignment
+    right: 0; // Explicit right alignment
     
-    .container {
+    .nav-wrapper {
+      display: flex;
       flex-direction: row;
-      padding: 0 1rem;
+      justify-content: space-between; // Logo left, hamburger right
+      align-items: center;
+      padding: 0 15px;
       position: relative;
+      width: 100%;
+      max-width: none; // Override desktop max-width: 1400px
+      margin: 0; // Remove auto margin from desktop
     }
 
     .site-avatar {
       height: $nav-height;
       padding: 8px 0;
       margin-right: 0;
-      flex: 1;
+      flex: 0 0 auto; // Don't grow, don't shrink
       justify-content: flex-start;
       
       .nav-logo-text {
@@ -1030,6 +1039,7 @@ figure {
     // Show hamburger button on mobile
     .nav-toggle {
       display: flex;
+      flex: 0 0 auto; // Don't grow, don't shrink
     }
 
     // Controls stay visible but repositioned for mobile
