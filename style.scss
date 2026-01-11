@@ -176,8 +176,11 @@ html {
     align-items: center;
     justify-content: space-between;
     max-width: 1400px;
+    width: 100%;
+    min-width: 0; // Allow flexbox shrink
     margin: 0 auto;
     padding: 0 15px;
+    box-sizing: border-box;
   }
 
   // Logo section - using existing .site-avatar class
@@ -1018,6 +1021,7 @@ figure {
       width: 100%;
       max-width: none; // Override desktop max-width: 1400px
       margin: 0; // Remove auto margin from desktop
+      box-sizing: border-box;
     }
 
     .site-avatar {
@@ -1156,6 +1160,7 @@ body {
   color: var(--firstGray-color);
   position: relative;
   overflow-x: hidden;
+  overflow-y: scroll; // Force scrollbar always visible
 }
 
 body::before {

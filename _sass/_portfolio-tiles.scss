@@ -513,6 +513,15 @@
     font-size: clamp(1.5rem, 5vw, 1.75rem);
   }
   
+  .expertise-section__content ul {
+    margin-left: 0 !important; // Reset any auto-margin
+    padding-left: 0 !important; // Remove bullet indent on mobile
+    list-style-position: inside !important; // Bullets inside text block
+    text-align: left !important; // Force left alignment
+    align-self: flex-start !important; // Only ul to left, rest stays centered
+    width: 100%; // Take full width for proper left alignment
+  }
+  
   // Transform stack into vertical stack
   .portfolio-tiles-stack {
     width: 100%;
