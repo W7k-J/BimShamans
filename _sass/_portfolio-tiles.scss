@@ -50,6 +50,39 @@
   }
   
   // Reverse layout (text left, images right)
+.portfolio-slide-in {
+  .expertise-section__media,
+  .expertise-section__content {
+    will-change: transform, opacity;
+    transition: transform 480ms cubic-bezier(0.2,0.8,0.2,1), opacity 380ms ease;
+    opacity: 0;
+  }
+
+  .expertise-section__content {
+    transform: translateX(-18px);
+  }
+
+  .expertise-section__media {
+    transform: translateX(18px);
+  }
+}
+
+.portfolio-slide-in.is-animated {
+  .expertise-section__media,
+  .portfolio-slide-in .expertise-section__content {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-slide-in .expertise-section__media,
+  .portfolio-slide-in .expertise-section__content {
+    transition: none;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
   &--reverse {
     grid-template-columns: 35fr 65fr;
     
@@ -1229,6 +1262,22 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// Apply same fade-in + stagger used for collection tiles to expertise listing sections
+.expertise-section {
+  animation: portfolioTileFadeIn 0.4s ease-out both;
+
+  // Stagger up to 12 sections — adjusts per number of sections on the page
+  @for $i from 1 through 12 {
+    &:nth-child(#{$i}) {
+      animation-delay: #{($i - 1) * 0.06}s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
   }
 }
 
