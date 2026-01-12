@@ -225,9 +225,9 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logos_ifc_short.jpg" alt="IFC"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logos_ifc_short.png" alt="IFC Format"></span>
+              <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
+              <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
             </div>
             <p class="portfolio-tile__description">IFC-based model maturity checks and reporting, feeding compliance dashboards for delivery control.</p>
           </div>

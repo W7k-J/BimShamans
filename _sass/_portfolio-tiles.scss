@@ -397,6 +397,26 @@
   }
 }
 
+// Themed tool icons: opt-in class for icons that should invert or adapt per theme
+// Usage: add `tool-icon--themed` to the `.portfolio-tile__tool-icon` element.
+.portfolio-tile__tool-icon.tool-icon--themed {
+  // ensure smooth transition when theme changes
+  img {
+    transition: filter 220ms ease, opacity 220ms ease;
+    filter: none; // default - no change in light theme
+  }
+}
+
+// Dark theme: invert selected (typically black) logos for visibility on dark backgrounds
+.dark-theme .portfolio-tile__tool-icon.tool-icon--themed img {
+  filter: invert(1) brightness(1.05) saturate(1.05);
+}
+
+// Light theme: keep original appearance
+.light-theme .portfolio-tile__tool-icon.tool-icon--themed img {
+  filter: none;
+}
+
 // Tile description text
 /*
   Portfolio Tile Description
