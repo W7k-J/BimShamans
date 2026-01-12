@@ -316,3 +316,186 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
 .feature-card.feature-card--image:hover .feature-card__image-container {
   animation: image-glow 2s ease-in-out infinite;
 }
+
+// ===========================================
+// MOBILE ACCORDION LAYOUT (multi-open support)
+// ===========================================
+@media screen and (max-width: 768px) {
+  .feature-cards-section {
+    margin: 1rem 0;
+    padding: 0.5rem 0;
+  }
+  
+  .feature-cards {
+    flex-direction: column;
+    height: auto !important; // Override inline height
+    gap: 8px;
+  }
+  
+  .feature-card {
+    // Reset flex behavior for vertical accordion
+    flex-grow: 0 !important;
+    flex-shrink: 0 !important;
+    flex-basis: auto !important;
+    min-width: 100% !important;
+    width: 100%;
+    border-radius: $card-border-radius;
+    
+    // Collapsed state (default)
+    min-height: 56px;
+    max-height: 56px;
+    overflow: hidden;
+    transition: max-height 0.4s ease, background-color 0.3s ease;
+    
+    // Header/label always visible at top - CONSISTENT WIDTH
+    .feature-card__label {
+      position: relative;
+      bottom: auto;
+      left: auto;
+      width: 100%;
+      min-height: 56px;
+      padding: 10px 16px;
+      padding-right: 44px; // Space for chevron
+      box-sizing: border-box;
+      background-color: rgba(var(--firstBlue-color-rgb), 0.1);
+      border-radius: $card-border-radius;
+      transition: background-color 0.3s ease, border-radius 0.3s ease;
+      display: flex;
+      align-items: center;
+    }
+    
+    .feature-card__icon {
+      min-width: 36px;
+      max-width: 36px;
+      height: 36px;
+    }
+    
+    .feature-card__info {
+      opacity: 1;
+      width: auto;
+      margin-left: 12px;
+      flex: 1;
+    }
+    
+    .feature-card__main {
+      font-size: 1rem;
+      white-space: normal;
+      color: var(--firstBlue-color);
+    }
+    
+    // Content below header
+    .feature-card__content {
+      position: relative;
+      top: auto;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      padding: 0 1rem;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.3s ease, max-height 0.4s ease, padding 0.3s ease;
+    }
+    
+    // Expand/collapse indicator (chevron)
+    .feature-card__label::after {
+      content: '';
+      position: absolute;
+      right: 16px;
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid var(--firstBlue-color);
+      border-bottom: 2px solid var(--firstBlue-color);
+      transition: transform 0.3s ease;
+    }
+    
+    // Expanded state (active)
+    &.active {
+      max-height: 800px; // Generous max for content
+      
+      .feature-card__label {
+        background-color: rgba(var(--firstBlue-color-rgb), 0.15);
+        border-radius: $card-border-radius $card-border-radius 0 0;
+      }
+      
+      .feature-card__label::after {
+        transform: translateY(-25%) rotate(-135deg);
+      }
+      
+      .feature-card__content {
+        opacity: 1;
+        max-height: 700px;
+        padding: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
+    
+    // Hover state for touch feedback
+    &:hover .feature-card__label,
+    &:focus .feature-card__label {
+      background-color: rgba(var(--firstBlue-color-rgb), 0.18);
+    }
+  }
+  
+  // =========================================
+  // IMAGE CARDS (author) - ALWAYS OPEN, FULL IMAGE
+  // =========================================
+  .feature-card.feature-card--image {
+    min-height: auto !important;
+    max-height: none !important; // Always expanded
+    overflow: visible;
+    background-color: transparent;
+    cursor: default; // Not clickable to collapse
+    
+    .feature-card__image-container {
+      position: relative;
+      width: 100%;
+      height: auto; // Auto height to show full image
+      aspect-ratio: 3 / 4; // Portrait aspect for author photos
+      border-radius: $card-border-radius;
+      overflow: hidden;
+    }
+    
+    .feature-card__image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center; // Show face/top of image
+    }
+    
+    // Label overlay at bottom of image
+    .feature-card__label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      min-height: auto;
+      padding: 16px;
+      padding-right: 16px; // No chevron space needed
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+      border-radius: 0 0 $card-border-radius $card-border-radius;
+    }
+    
+    // No chevron for image cards
+    .feature-card__label::after {
+      display: none;
+    }
+    
+    .feature-card__main {
+      color: white;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+    }
+    
+    .feature-card__icon {
+      background-color: rgba(255,255,255,0.2);
+      backdrop-filter: blur(4px);
+    }
+    
+    // No hover state changes
+    &:hover .feature-card__label {
+      background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    }
+  }
+}
