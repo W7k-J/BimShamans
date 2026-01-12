@@ -40,6 +40,11 @@
     gap: 0.85rem;
     margin-bottom: 1.25rem;
   }
+  
+  @media screen and (max-width: 360px) {
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+  }
 }
 
 // Search bar container - grows to fill available space
@@ -190,7 +195,7 @@
     align-items: center;
     justify-content: center;
     border-radius: $radius-small;
-    min-width: 220px;
+    min-width: 180px; /* Reduced from 220px to prevent overflow */
     white-space: nowrap;
 
     #sort-label {
@@ -228,11 +233,16 @@
     
     // Mobile optimization
     @media screen and (max-width: 640px) {
-      font-size: 0.95rem;
-      min-width: auto;
-      width: 100%;
-      padding: 0 1rem;
-      justify-content: flex-start;
+      font-size: 0.9rem;
+      min-width: 0; /* Remove min-width constraint */
+      width: auto;
+      padding: 0 0.75rem;
+      justify-content: center;
+    }
+    
+    @media screen and (max-width: 360px) {
+      font-size: 0.85rem;
+      padding: 0 0.5rem;
     }
   }
 

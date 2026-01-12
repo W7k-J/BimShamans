@@ -65,7 +65,7 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal; /* Allow wrapping on small screens */
     overflow: visible;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
 
@@ -105,7 +105,7 @@
     text-decoration: none;
     display: inline-block;
     cursor: pointer;
-    white-space: nowrap;
+    white-space: normal; /* Allow wrapping on small screens */
     overflow: visible;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 
@@ -179,19 +179,30 @@
 @media screen and (max-width: 640px) {
   .button--primary,
   .button--secondary {
-    padding: 12px 24px;
-    font-size: 16px;
+    padding: 12px 20px;
+    font-size: 15px;
     width: 100%; // Full width on mobile
     text-align: center;
+    min-height: 44px; // Ensure touch target size
   }
   
   .button {
     font-size: 16px;
     padding: 9px;
+    min-height: 44px;
   }
   
   .collapsible {
     padding: 9px 12px;
     font-size: 16px;
+    min-height: 44px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .button--primary,
+  .button--secondary {
+    padding: 10px 16px;
+    font-size: 14px;
   }
 }

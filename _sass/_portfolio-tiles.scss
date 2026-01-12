@@ -648,10 +648,13 @@
   .portfolio-tile__tool-icon {
     width: 28px;
     height: 28px;
+    padding: 4px;
   }
   
   .portfolio-tile__description {
     font-size: 0.8rem;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
   }
   
   .expertise-section__tags {
@@ -661,6 +664,29 @@
   .expertise-section__tag {
     font-size: 0.75rem;
     padding: 0.3rem 0.7rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .expertise-section {
+    gap: 1.25rem;
+    margin-bottom: 2rem;
+    padding-bottom: 2rem;
+  }
+  
+  .portfolio-tile__tool-icon {
+    width: 24px;
+    height: 24px;
+    padding: 3px;
+  }
+  
+  .portfolio-tile__overlay {
+    padding: 0.75rem 0.875rem;
+  }
+  
+  .expertise-section__tag {
+    font-size: 0.7rem;
+    padding: 0.25rem 0.6rem;
   }
 }
 
@@ -1138,6 +1164,39 @@
   
   .project-tile__title {
     font-size: 1.15rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .exp-collection__list {
+    gap: 1.5rem;
+  }
+  
+  .project-tile__slideshow {
+    min-height: 180px;
+  }
+  
+  .project-tile__content {
+    padding: 1rem;
+  }
+  
+  .project-tile__title {
+    font-size: 1.05rem;
+  }
+  
+  .project-tile__description {
+    font-size: 0.85rem;
+  }
+  
+  .project-tile__tag {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.6rem;
+  }
+  
+  .project-tile__tool-icon {
+    width: 28px;
+    height: 28px;
+    padding: 4px;
   }
 }
 

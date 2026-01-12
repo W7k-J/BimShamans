@@ -18,22 +18,27 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   align-items: stretch;
   overflow: hidden;
   
-  height: 300px;
+  height: clamp(200px, 35vh, 300px); /* Fluid height based on viewport */
   width: 100%;
   gap: $card-gap;
   
   @media screen and (max-width: 1200px) {
-    height: 280px;
+    height: clamp(180px, 32vh, 280px);
   }
   
   @media screen and (max-width: 768px) {
-    height: 250px;
+    height: clamp(160px, 30vh, 250px);
   }
   
   // Small mobile - stack vertically or smaller height
   @media screen and (max-width: 480px) {
-    height: 200px;
-    gap: 8px;
+    height: clamp(140px, 28vh, 200px);
+    gap: 6px;
+  }
+  
+  @media screen and (max-width: 360px) {
+    height: clamp(120px, 25vh, 180px);
+    gap: 4px;
   }
 }
 

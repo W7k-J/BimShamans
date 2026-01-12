@@ -530,6 +530,13 @@ html {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  
+  @media screen and (max-width: 480px) {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
 }
 
 // SVG Glitch Filter Wrapper
@@ -549,19 +556,24 @@ figure {
 
 .hero-banner__content {
   position: absolute;
-  left: calc(50% + 65px);
+  left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   display: inline-flex;
   align-items: center;
   justify-content: center;
   /* Equal gap between BIM, flame, and Shamans */
-  gap: clamp(0.5rem, 2vw, 1.5rem);
+  gap: clamp(0.35rem, 2vw, 1.5rem);
   /* Auto width so the group is centered as a unit */
   width: auto;
+  max-width: 95vw; /* Prevent overflow on small screens */
   height: auto;
   z-index: 2;
   white-space: nowrap;
+  
+  @media screen and (max-width: 480px) {
+    gap: clamp(0.25rem, 1.5vw, 0.5rem);
+  }
 }
 
 .glitch-filter-example {
@@ -570,15 +582,21 @@ figure {
   position: relative;
   margin: 0;
   padding: 0;
-  /* Auto width - let SVG determine size */
+  /* Fluid width - scales down on mobile */
   width: auto;
-  height: clamp(35px, 4vw, 55px);
-  flex-shrink: 0;
+  max-width: 40vw; /* Limit each word to 40% of viewport */
+  height: clamp(28px, 4vw, 55px);
+  flex-shrink: 1; /* Allow shrinking on small screens */
   border: none;
   outline: none;
   background: transparent;
   z-index: 2;
   overflow: visible;
+  
+  @media screen and (max-width: 480px) {
+    max-width: 35vw;
+    height: clamp(24px, 6vw, 35px);
+  }
 }
 
 /* BIM aligned to the right (closer to flame) */
@@ -620,13 +638,18 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(2.1rem, 5.6vw, 4.2rem);
-  height: clamp(56px, 10.5vw, 140px);
+  width: clamp(1.5rem, 5.6vw, 4.2rem);
+  height: clamp(40px, 10.5vw, 140px);
   flex-shrink: 0;
   pointer-events: none;
   z-index: 3;
   /* No margin - gap on parent handles equal spacing */
   margin: 0;
+  
+  @media screen and (max-width: 480px) {
+    width: clamp(1.25rem, 8vw, 2rem);
+    height: clamp(32px, 12vw, 56px);
+  }
 }
 
 .hero-flame__icon {
@@ -927,17 +950,37 @@ figure {
 
 @media screen and (max-width: 600px) {
   .feature-sections {
-    gap: 3rem;
-    margin: 3rem 0;
+    gap: 2.5rem;
+    margin: 2.5rem 0;
   }
 
   .feature-section__content h2 {
-    font-size: 1.75rem;
+    font-size: clamp(1.35rem, 5vw, 1.75rem);
   }
 
   .feature-section__media img {
     max-width: 100%;
     border-radius: $radius-medium;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .feature-sections {
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+  
+  .feature-section {
+    gap: 1.5rem;
+  }
+
+  .feature-section__content h2 {
+    font-size: clamp(1.25rem, 5.5vw, 1.5rem);
+  }
+  
+  .feature-section__content p {
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 }
 
@@ -1006,7 +1049,7 @@ figure {
 }
 
 // Mobile styles
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .nav-container {
     width: 100%; // Ensure full viewport width
     height: $nav-height;
@@ -1079,18 +1122,21 @@ figure {
       top: $nav-height;
       left: 0;
       right: 0;
+      bottom: 0; // Extend to bottom of viewport
       background-color: var(--background-color);
-      border-bottom: 1px solid var(--firstBlue-color);
+      border-bottom: none;
       flex-direction: column;
-      gap: 0;
-      padding: 0.75rem 0;
-      padding-bottom: 1.5rem; // Consistent spacing to controls
+      gap: 0.35rem;
+      padding-top: 0;
+      padding-bottom: calc(6rem + 1.5rem); // Space for controls at bottom (controls height + padding)
+      justify-content: center; // Center nav items vertically
+      align-items: center; // Center nav items horizontally
       max-height: 0;
       overflow: hidden;
       opacity: 0;
       pointer-events: none;
       transition: max-height 0.4s ease, opacity 0.3s ease;
-      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+      box-shadow: none;
       z-index: 999;
 
       &.mobile-menu-open {
@@ -1248,6 +1294,14 @@ body::before {
   max-width: 1400px;
   padding: 0 15px;
   width: 100%;
+  box-sizing: border-box; /* Prevent padding from causing overflow */
+}
+
+// Very small screens - reduce container padding
+@media screen and (max-width: 360px) {
+  .container {
+    padding: 0 10px;
+  }
 }
 
 .visually-hidden {

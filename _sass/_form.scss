@@ -126,6 +126,23 @@ textarea.form-textarea:-ms-input-autofill {
   }
 }
 
+@media screen and (max-width: 360px) {
+  .contact-header {
+    h1 {
+      font-size: 1.5rem;
+    }
+    
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  
+  .form-container {
+    padding: 0.875rem;
+    border-radius: 14px;
+  }
+}
+
  //FORMULARZ - zmiana odleglosci miedzy polami
 
 .form-grid {

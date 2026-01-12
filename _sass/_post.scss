@@ -392,15 +392,15 @@
     
     // Better image handling on mobile
     img {
-      margin: 1.25rem -15px; // Bleed to edges on mobile
+      margin: 1.25rem -10px; // Reduced bleed to prevent overflow on very small screens
       border-radius: $radius-small;
-      width: calc(100% + 30px);
-      max-width: calc(100% + 30px);
+      width: calc(100% + 20px);
+      max-width: calc(100% + 20px);
     }
     
     // Code blocks with horizontal scroll
     pre {
-      margin: 1.25rem -15px;
+      margin: 1.25rem -10px;
       border-radius: $radius-small;
       padding: 1rem;
       overflow-x: auto;
