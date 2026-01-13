@@ -18,19 +18,25 @@ permalink: /pl/home/
       <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
     </div>
     <div class="hero-banner__content">
-      <figure class="glitch-filter-example glitch-filter-example--bim">
-        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 80" preserveAspectRatio="xMaxYMid meet">
-          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="135" dy="0.35em">BIM</text>
-        </svg>
-      </figure>
-      <div class="hero-flame" aria-hidden="true">
-        <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
+      <div class="hero-banner__logo">
+        <figure class="glitch-filter-example glitch-filter-example--bim">
+          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 140 80" preserveAspectRatio="xMaxYMid meet">
+            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="135" dy="0.35em">BIM</text>
+          </svg>
+        </figure>
+        <div class="hero-flame" aria-hidden="true">
+          <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
+        </div>
+        <figure class="glitch-filter-example glitch-filter-example--shamans">
+          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 340 80" preserveAspectRatio="xMinYMid meet">
+            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em">Shamans</text>
+          </svg>
+        </figure>
       </div>
-      <figure class="glitch-filter-example glitch-filter-example--shamans">
-        <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 340 80" preserveAspectRatio="xMinYMid meet">
-          <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em">Shamans</text>
-        </svg>
-      </figure>
+      <div class="hero-slogan">
+        <span class="hero-slogan__static">invoke to</span>
+        <span id="hero-slogan" class="hero-slogan__dynamic" data-strings="share,serve,solve" data-text="share">share</span>
+      </div>
     </div>
   </div>
 </div>

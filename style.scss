@@ -559,18 +559,29 @@ figure {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.75rem, 2vw, 1.25rem);
+  width: auto;
+  max-width: 95vw;
+  height: auto;
+  z-index: 2;
+
+  @media screen and (max-width: 480px) {
+    gap: clamp(0.5rem, 1.5vw, 0.75rem);
+  }
+}
+
+.hero-banner__logo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  /* Equal gap between BIM, flame, and Shamans */
   gap: clamp(0.35rem, 2vw, 1.5rem);
-  /* Auto width so the group is centered as a unit */
   width: auto;
-  max-width: 95vw; /* Prevent overflow on small screens */
-  height: auto;
-  z-index: 2;
   white-space: nowrap;
-  
+
   @media screen and (max-width: 480px) {
     gap: clamp(0.25rem, 1.5vw, 0.5rem);
   }
@@ -670,11 +681,123 @@ figure {
 }
 
 .light-theme .hero-flame__icon {
-  filter: 
+  filter:
     drop-shadow(0 0 1px rgba(0, 0, 0, 0.9))
     drop-shadow(0 1px 3px rgba(0, 0, 0, 0.5))
     drop-shadow(0 0 8px rgba(30, 105, 145, 0.4))
     drop-shadow(0 2px 6px rgba(0, 0, 0, 0.3));
+}
+
+// Hero Slogan Styles
+.hero-slogan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  font-family: 'Syncopate', sans-serif;
+  font-size: clamp(0.9rem, 2.2vw, 1.35rem);
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: lowercase;
+  color: var(--firstGray-color);
+  opacity: 0.85;
+
+  @media screen and (max-width: 640px) {
+    font-size: clamp(0.75rem, 3.5vw, 1rem);
+    gap: 0.75rem;
+  }
+
+  @media screen and (max-width: 480px) {
+    font-size: clamp(0.65rem, 4vw, 0.85rem);
+    gap: 0.5rem;
+  }
+}
+
+.hero-slogan__static {
+  color: var(--secondGray-color);
+  opacity: 0.75;
+  text-align: right;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.hero-slogan__dynamic {
+  position: relative;
+  color: var(--firstBlue-color);
+  font-weight: 700;
+  opacity: 1;
+  transition: opacity 0.15s ease;
+  text-align: left;
+  white-space: nowrap;
+  display: inline-block;
+  min-width: 0;
+
+  &.glitch-active {
+    position: relative;
+  }
+}
+
+// Glitch effect for dynamic text
+.glitch-active {
+  &::after {
+    content: attr(data-text);
+    position: absolute;
+    left: 2px;
+    text-shadow: -1px 0 var(--secondBlue-color);
+    top: 0;
+    color: var(--firstBlue-color);
+    background: var(--background-color);
+    overflow: hidden;
+    animation: glitch-anim 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+  }
+
+  &::before {
+    content: attr(data-text);
+    position: absolute;
+    left: -2px;
+    text-shadow: 1px 0 var(--firstBlue-color);
+    top: 0;
+    color: var(--secondBlue-color);
+    background: var(--background-color);
+    overflow: hidden;
+    animation: glitch-anim-2 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+  }
+}
+
+@keyframes glitch-anim {
+  0% {
+    clip: rect(15px, 9999px, 8px, 0);
+  }
+  25% {
+    clip: rect(3px, 9999px, 18px, 0);
+  }
+  50% {
+    clip: rect(12px, 9999px, 5px, 0);
+  }
+  75% {
+    clip: rect(7px, 9999px, 14px, 0);
+  }
+  100% {
+    clip: rect(10px, 9999px, 2px, 0);
+  }
+}
+
+@keyframes glitch-anim-2 {
+  0% {
+    clip: rect(10px, 9999px, 16px, 0);
+  }
+  25% {
+    clip: rect(5px, 9999px, 3px, 0);
+  }
+  50% {
+    clip: rect(13px, 9999px, 9px, 0);
+  }
+  75% {
+    clip: rect(2px, 9999px, 11px, 0);
+  }
+  100% {
+    clip: rect(8px, 9999px, 6px, 0);
+  }
 }
 
 .glitch-filter-example__demo {
@@ -841,12 +964,21 @@ figure {
   .glitch-filter-example__filtered-text {
     filter: none;
   }
-  
+
   .top-r, .bot-r, .top-g, .bot-g {
     animation: none;
   }
-  
+
   .hero-banner__circuit-glow {
+    transition: none;
+  }
+
+  .glitch-active::after,
+  .glitch-active::before {
+    animation: none;
+  }
+
+  .hero-slogan__dynamic {
     transition: none;
   }
 }
