@@ -1,0 +1,18 @@
+/* Custom scrollbar for portfolio tiles text area */
+
+// This file contains scrollbar styling specifically for .project-tile__text-area
+// For global scrollbar styles, see _scrollbar.scss
+
+// IMPORTANT: Modern Chrome (121+) and Firefox support scrollbar-color and scrollbar-width
+// Webkit pseudo-elements (::-webkit-scrollbar) may not work in all contexts
+// Using standard CSS properties for maximum compatibility
+
+// Portfolio tile text area scrollbar - using standard CSS properties
+.project-tile__content .project-tile__text-area {
+  // Standard scrollbar properties (works in Chrome 121+, Firefox, Safari)
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(var(--firstBlue-color-rgb), 0.7) rgba(var(--background-color-rgb), 1.0) !important; // track (background)
+
+  // Reserve space for scrollbar (prevents content shift)
+  scrollbar-gutter: stable !important;
+}

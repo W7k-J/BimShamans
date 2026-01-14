@@ -1079,66 +1079,15 @@
 }
 
 // Dynamic text area (can change with slides)
+// Custom scrollbar styling defined in _scrollbar-portfolio.scss
 .project-tile__text-area {
   flex: 1;
   display: flex;
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-right: -8px; // Pull scrollbar towards tile axis
+  margin-right: -10px; // Pull scrollbar towards tile axis
   padding-right: 18px; // Compensate margin + add spacing for text
-
-  // Custom scrollbar styling for text area
-  &::-webkit-scrollbar {
-    width: calc($radius-small * 2); // Width to accommodate circular thumb
-  }
-
-  &::-webkit-scrollbar-track {
-    background: linear-gradient(
-      to right,
-      transparent calc(50% - 0.5px),
-      var(--scrollbar-track) calc(50% - 0.5px),
-      var(--scrollbar-track) calc(50% + 0.5px),
-      transparent calc(50% + 0.5px)
-    );
-  }
-
-  &::-webkit-scrollbar-thumb {
-    background: var(--scrollbar-thumb);
-    border-radius: 50%; // Perfect circle
-    width: calc($radius-small * 2);
-    height: calc($radius-small * 2);
-
-    &:hover {
-      background: var(--scrollbar-thumb-hover);
-    }
-
-    &:active {
-      background: var(--scrollbar-thumb-active);
-    }
-  }
-
-  // Scrollbar buttons (arrows)
-  &::-webkit-scrollbar-button {
-    height: 20px;
-    background-color: var(--scrollbar-track);
-    background-repeat: no-repeat;
-    background-position: center;
-  }
-
-  // Up arrow
-  &::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="%23666" stroke-width="2"><polyline points="18 15 12 9 6 15"></polyline></svg>');
-  }
-
-  // Down arrow
-  &::-webkit-scrollbar-button:vertical:increment {
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="%23666" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>');
-  }
-
-  // Firefox scrollbar
-  scrollbar-width: thin;
-  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
 }
 
 // Text slides container
