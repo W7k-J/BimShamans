@@ -918,6 +918,7 @@
   width: 100%;
   height: 100%;
   min-height: 320px;
+  aspect-ratio: 16/9; // Force 16:9 aspect ratio for slideshow container
   overflow: hidden;
   background-color: var(--forthGray-color);
 }
@@ -935,17 +936,26 @@
   inset: 0;
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  
+
   &--active {
     opacity: 1;
     z-index: 1;
   }
-  
+
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
+    object-fit: contain;
+    object-position: center;
+    transform: scale(1.0);
+    //Zoomsafeguardtransform-origin: center;
+    image-rendering: crisp-edges;
+    //Sharpedgesforscreenshots:;
+    -webkit-transform: scale(1.0);
+    -moz-transform: scale(1.0);
+    -ms-transform: scale(1.0);
+    -o-transform: scale(1.0);
+}
 }
 
 // Navigation arrows

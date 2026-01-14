@@ -183,6 +183,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
             <p class="portfolio-tile__description">Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". </p>
           </div>

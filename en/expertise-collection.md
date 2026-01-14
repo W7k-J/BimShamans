@@ -202,13 +202,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           </div>
           <!-- Slide 3 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_03.png" alt="Dashboard overview" loading="lazy">
-          </div>
-          <!-- Slide 4 -->
-          <div class="project-tile__slide">
             <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_04.png" alt="Dashboard overview" loading="lazy">
           </div>
-          <!-- Slide 5 -->
+          <!-- Slide 4 -->
           <div class="project-tile__slide">
             <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_05.png" alt="Dashboard overview" loading="lazy">
           </div>
@@ -225,15 +221,13 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       
       <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Project Quality Dashboard</h2>
+        <h2 class="project-tile__title">Board Game Strategy Analysis</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Real-time Power BI dashboard tracking model quality metrics, coordination issues, 
-                and team productivity across multiple BIM projects. Automated data pipeline extracts 
-                information directly from Revit models and ACC platform.
+                Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". <br><br> Cool thing about corporations' color pick for dashboard it is a fact they are not random or manually selected. With Python and GPT's help, script for brand RGB color recognition was created. It analyze main part of .png logo file, extract's pixels RGB, define dominant chroma and calculate the most fitting one, getting rid of noise and irrelevant background. <br><br> Final touch - application-like interface with menu bar, search bar and buttons to navigate across dashboards.
               </p>
             </div>
           </div>
@@ -246,9 +240,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         </div>
         
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerbi.svg" alt="Power BI"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
       
