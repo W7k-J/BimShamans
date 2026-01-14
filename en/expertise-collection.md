@@ -182,29 +182,37 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 2: Power BI Dashboard -->
+    <!-- PROJECT TILE: Power BI Dashboard: Terraforming Mars -->
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Piotr -->
     <!-- Offset: 10% left margin, 0% right -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data-reporting, powerbi, dashboards, analytics" data-date="2025/04/09">
+    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/12/15">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=80" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png" alt="Dashboard overview" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=80" alt="Data visualization" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_02.png" alt="Dashboard overview" loading="lazy">
           </div>
           <!-- Slide 3 -->
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=900&q=80" alt="Analytics screen" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_03.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_04.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 5 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_05.png" alt="Dashboard overview" loading="lazy">
           </div>
         </div>
-        
         <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>

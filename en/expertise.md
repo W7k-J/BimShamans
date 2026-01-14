@@ -184,7 +184,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
             </div>
-            <p class="portfolio-tile__description">Interactive project dashboard visualising model health, issue trends and delivery KPIs.</p>
+            <p class="portfolio-tile__description">Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". </p>
           </div>
         </div>
 
@@ -200,7 +200,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoft-powerautomate_short.png" alt="Power Automate"></span>
             </div>
-            <p class="portfolio-tile__description">Lightweight telemetry and automation for field data capture and BI-driven insights.</p>
+            <p class="portfolio-tile__description">GPX tracks, multiple data sources and the strong need to find out how journeys looked liked. Who doesn't like tracking their own activities across time and...area? Connecting interaction for maps and data with over 90% gpx files optimization was quite a challenge. </p>
           </div>
         </div>
 
@@ -214,7 +214,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.png" alt="Speckle"></span>
             </div>
-            <p class="portfolio-tile__description">3D-driven BI for residential units integrating model geometry with performance indicators.</p>
+            <p class="portfolio-tile__description">3D-driven BI for residential units on concept design stage brings fresh perspective to requirements analysis. No more pivot tables on one half of screen and drawings on the other. It can be one, it can interact, it can mean more use from the data is already produced.</p>
           </div>
         </div>
 
@@ -228,8 +228,9 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logos_ifc_short.png" alt="IFC Format"></span>
               <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
               <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftsharepoint_short.svg" alt="SharePoint"></span>
             </div>
-            <p class="portfolio-tile__description">IFC-based model maturity checks and reporting, feeding compliance dashboards for delivery control.</p>
+            <p class="portfolio-tile__description">IFC-based objects maturity check and reporting is an example of diving into data to catch that one, specified insight and bring it to the main page of CDE or Sharepoint. No overcoplication, newest Data Exchange for IFC files potencial and Open format. </p>
           </div>
         </div>
 
@@ -238,11 +239,12 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.data_reporting }}</h2>
-      <p>Transforming BIM data into actionable insights. We build dashboards, automate reporting, and create data pipelines that connect design tools with business intelligence platforms.</p>
+      <p>Conclusion is the point of diving into data. Presentation is the way. Nowadays we collect data all the time - financial budgets, running reports, hike tracks notes, game logs, PV metrics and more! <br><br> Of course, our main goal is to bring value through data for AEC industry, but if the playground offers you infinite source of sand and gives you pretty useful tools, shape of the castles depends only on your imagination.</p>
       <ul>
-        <li>Power BI dashboards</li>
-        <li>Automated reporting</li>
-        <li>Data extraction & ETL</li>
+        <li>Diagnostic dashboards (not decorative ones)</li>
+        <li>Data extraction & transformation pipelines</li>
+        <li>Intuitive interface</li>
+        <li>Insights connected with questions</li>
       </ul>
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#powerbi" class="expertise-section__tag">#powerbi</a>
