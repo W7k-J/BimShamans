@@ -79,7 +79,7 @@ t:
     toc: "Table of Contents"
     prev_post: "Prev"
     next_post: "Next"
-    view_all_projects: "View all from this category"
+    view_all_projects: "Details for the category"
     hero_cta_primary: "Let's Talk About Your Project"
     hero_cta_secondary: "Explore Our Expertise"
     portfolio_categories:
@@ -119,7 +119,7 @@ t:
     toc: "Spis treści"
     prev_post: "Poprz"
     next_post: "Nast"
-    view_all_projects: "Zobacz wszystkie z tej kategorii"
+    view_all_projects: "Szczegóły dla tej kategorii"
     hero_cta_primary: "Porozmawiajmy o Twoim Projekcie"
     hero_cta_secondary: "Zobacz Nasze Doświadczenie"
     portfolio_categories:
