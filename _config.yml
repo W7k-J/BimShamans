@@ -79,10 +79,9 @@ t:
     toc: "Table of Contents"
     prev_post: "Prev"
     next_post: "Next"
-    view_all_projects: "View all projects"
+    view_all_projects: "View all from this category"
     hero_cta_primary: "Let's Talk About Your Project"
     hero_cta_secondary: "Explore Our Expertise"
-    hero_tagline: "Transforming construction chaos into structured BIM delivery. Expert coordination, automation, and OpenBIM solutions for complex projects."
     portfolio_categories:
       architecture: "Architecture"
       bim_standards: "BIM Standards"
@@ -120,10 +119,9 @@ t:
     toc: "Spis treści"
     prev_post: "Poprz"
     next_post: "Nast"
-    view_all_projects: "Zobacz wszystkie projekty"
+    view_all_projects: "Zobacz wszystkie z tej kategorii"
     hero_cta_primary: "Porozmawiajmy o Twoim Projekcie"
     hero_cta_secondary: "Zobacz Nasze Doświadczenie"
-    hero_tagline: "Przekształcamy chaos budowlany w uporządkowane dostawy BIM. Ekspercka koordynacja, automatyzacja i rozwiązania OpenBIM dla złożonych projektów."
     portfolio_categories:
       architecture: "Architektura"
       bim_standards: "Standaryzacja BIM"

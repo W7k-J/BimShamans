@@ -20,7 +20,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
   <h1>{{ t.portfolio_collection }}</h1>
   <p>{{ t.portfolio_collection_intro }}</p>
 
-  <!-- Control Panel: Search, Direction & Sort (copied from blog) -->
+  <!-- Control Panel: Search, Direction & Sort -->
   <div class="blog__controls exp-collection__controls">
     <div class="searchbar searchbar--portfolio" data-searchbar="portfolio">
       <form class="searchbar__form" role="search" aria-label="Search projects">
@@ -167,9 +167,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         </div>
         
         <div class="project-tile__tags">
-          <a href="#heritage" class="project-tile__tag">#heritage</a>
-          <a href="#scans" class="project-tile__tag">#scans</a>
-          <a href="#revit" class="project-tile__tag">#revit</a>
+          <a href="#heritage" class="project-tile__tag">heritage</a>
+          <a href="#scans" class="project-tile__tag">scans</a>
+          <a href="#revit" class="project-tile__tag">revit</a>
         </div>
         
         <div class="project-tile__tools">
@@ -489,7 +489,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </svg>
     Go to expertise
   </a>
-  
+
   <button type="button" class="expertise__nav-link expertise__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     Go to top
     <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
