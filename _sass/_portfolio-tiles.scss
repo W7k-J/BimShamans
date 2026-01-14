@@ -159,12 +159,12 @@
   border-radius: 999px;
   background-color: var(--forthGray-color);
   color: var(--firstGray-color);
-  font-size: clamp(0.75rem, calc(0.7rem + 0.2vw), 0.85rem);
-  font-weight: 500;
+  font-size: clamp(0.6rem, calc(0.6rem + 0.15vw), 0.85rem);
+  font-weight: 400;
   text-transform: lowercase;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  
+
   &:hover {
     background-color: var(--firstBlue-color);
     color: var(--background-color);
@@ -713,9 +713,9 @@
   .expertise-section__tags {
     gap: 0.5rem;
   }
-  
+
   .expertise-section__tag {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     padding: 0.3rem 0.7rem;
   }
 }
@@ -736,9 +736,9 @@
   .portfolio-tile__overlay {
     padding: 0.75rem 0.875rem;
   }
-  
+
   .expertise-section__tag {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     padding: 0.25rem 0.6rem;
   }
 }
@@ -1133,12 +1133,12 @@
   border-radius: 999px;
   background-color: var(--forthGray-color);
   color: var(--firstGray-color);
-  font-size: clamp(0.75rem, calc(0.7rem + 0.15vw), 0.85rem);
-  font-weight: 500;
+  font-size: clamp(0.6rem, calc(0.6rem + 0.15vw), 0.85rem);
+  font-weight: 400;
   text-transform: lowercase;
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
-  
+
   &:hover {
     background-color: var(--firstBlue-color);
     color: var(--background-color);
@@ -1272,9 +1272,9 @@
   .project-tile__description {
     font-size: 0.85rem;
   }
-  
+
   .project-tile__tag {
-    font-size: 0.7rem;
+    font-size: 0.6rem;
     padding: 0.3rem 0.6rem;
   }
   
