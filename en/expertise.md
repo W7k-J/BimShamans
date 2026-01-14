@@ -191,7 +191,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="HikeTracker - Analytics" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02_mini.webp" alt="HikeTracker - Analytics" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">

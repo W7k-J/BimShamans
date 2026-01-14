@@ -36,7 +36,7 @@
 */
 .expertise-section {
   display: grid;
-  grid-template-columns: 65fr 35fr;
+  grid-template-columns: 60fr 40fr;
   align-items: center;
   gap: 3rem;
   margin-bottom: 5rem;
@@ -84,7 +84,7 @@
   }
 }
   &--reverse {
-    grid-template-columns: 35fr 65fr;
+    grid-template-columns: 40fr 60fr;
     
     .expertise-section__content {
       order: 1;
@@ -104,7 +104,7 @@
 .expertise-section__content {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 1rem;
   
   h2 {
     margin: 0;
@@ -180,7 +180,7 @@
   color: var(--firstBlue-color);
   font-weight: 500;
   text-decoration: none;
-  transition: gap 0.3s ease;
+  transition: gap 0.35s ease;
   
   &:hover {
     gap: 0.8rem;
@@ -190,7 +190,7 @@
     width: 18px;
     height: 18px;
     stroke: currentColor;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
   }
   
   &:hover svg {
@@ -248,8 +248,8 @@
   cursor: pointer;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12),
               0 1px 3px rgba(0, 0, 0, 0.08);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1),
-              box-shadow 0.4s ease,
+  transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.35s ease,
               z-index 0s;
   will-change: transform;
   
@@ -360,11 +360,15 @@
   position: absolute;
   inset: 0;
   overflow: hidden;
-  
+
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+
+    // Sharp rendering for screenshots with text
+    image-rendering: crisp-edges;
+
     transition: opacity 0.35s ease-out;
   }
 }
@@ -379,8 +383,8 @@
 .portfolio-tile__overlay {
   position: absolute;
   inset: -1px;
-  background: rgba(0, 0, 0, 0.88);
-  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(2px);
   border-radius: calc($radius-medium + 1px);
   display: flex;
   flex-direction: column;
@@ -417,7 +421,7 @@
   border-radius: $radius-small;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 4px;
-  transition: background-color 0.2s ease;
+  transition: background-color 0.25s ease;
   
   img {
     width: 95%;
@@ -435,7 +439,7 @@
 .portfolio-tile__tool-icon.tool-icon--themed {
   // ensure smooth transition when theme changes
   img {
-    transition: filter 220ms ease, opacity 220ms ease;
+    transition: filter 0.25s ease, opacity 0.25s ease;
     filter: none; // default - no change in light theme
   }
 }
@@ -459,20 +463,19 @@
 */
 .portfolio-tile__description {
   margin: 0;
-  color: var(--lightGray);
-  font-size: clamp(0.8rem, calc(0.75rem + 0.2vw), 0.9rem);
+  font-size: clamp(1rem, calc(0.9rem + 0.2vw), 1rem);
   line-height: 1.5;
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  line-clamp: 3;
+  -webkit-line-clamp: 7;
+  line-clamp: 7;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 // Light theme adjustments
 .light-theme .portfolio-tile__overlay {
-  background: rgba(255, 255, 255, 0.92);
+  background: rgba(255, 255, 255, 0.6);
 }
 
 .light-theme .portfolio-tile__description {
@@ -799,7 +802,7 @@
   font-size: 0.9rem;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.35s ease;
   border: none;
   text-transform: lowercase;
   
@@ -979,7 +982,7 @@
   color: white;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.3s ease, background-color 0.3s ease;
+  transition: opacity 0.35s ease, background-color 0.35s ease;
   z-index: 10;
   
   svg {
@@ -1026,7 +1029,7 @@
   border: none;
   padding: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.35s ease, transform 0.35s ease;
   
   &:hover {
     background-color: rgba(255, 255, 255, 0.7);
@@ -1161,7 +1164,7 @@
   border-radius: $radius-small;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 4px;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease;
   
   img {
     width: 95%;
@@ -1336,13 +1339,13 @@
   color: var(--firstBlue-color);
   font-weight: 500;
   text-decoration: none;
-  transition: gap 0.3s ease;
+  transition: gap 0.35s ease;
   
   svg {
     width: 18px;
     height: 18px;
     stroke: currentColor;
-    transition: transform 0.3s ease;
+    transition: transform 0.35s ease;
   }
   
   &:hover {
