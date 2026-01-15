@@ -1272,7 +1272,8 @@
   }
 
   .project-tile__slideshow {
-    min-height: 280px;
+    aspect-ratio: 16/9;
+    min-height: auto;
     order: 1 !important;
   }
 
@@ -1322,9 +1323,10 @@
   .exp-collection__list {
     gap: 2rem;
   }
-  
+
   .project-tile__slideshow {
-    min-height: 220px;
+    aspect-ratio: 16/9;
+    min-height: auto;
   }
   
   .project-tile__nav {
@@ -1372,9 +1374,10 @@
   .exp-collection__list {
     gap: 1.5rem;
   }
-  
+
   .project-tile__slideshow {
-    min-height: 180px;
+    aspect-ratio: 16/9;
+    min-height: auto;
   }
   
   .project-tile__content {
