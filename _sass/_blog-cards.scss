@@ -447,12 +447,12 @@
 
   &:hover {
     background-color: var(--firstBlue-color);
-    color: var(--raisinBlack);
+    color: var(--background-color);
   }
 
   &--active {
     background-color: var(--firstBlue-color);
-    color: var(--raisinBlack);
+    color: var(--background-color);
     font-weight: 600;
   }
   
