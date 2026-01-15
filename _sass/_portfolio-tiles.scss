@@ -1398,6 +1398,7 @@
   }
 
   &.is-closing {
+    display: flex; // Keep visible during close animation
     opacity: 0;
   }
 }

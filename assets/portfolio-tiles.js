@@ -536,12 +536,23 @@
     var counterElement = null;
     var prevBtn = null;
     var nextBtn = null;
+    var keyboardListenerAttached = false;
 
     /**
      * Create lightbox HTML structure
      */
     function createLightbox() {
-      if (lightbox) return;
+      // Check if lightbox already exists in DOM (not just variable)
+      var existingLightbox = document.querySelector('.lightbox');
+      if (existingLightbox) {
+        lightbox = existingLightbox;
+        // Re-cache elements in case they were lost
+        imageElement = lightbox.querySelector('.lightbox__image');
+        counterElement = lightbox.querySelector('.lightbox__counter');
+        prevBtn = lightbox.querySelector('.lightbox__nav--prev');
+        nextBtn = lightbox.querySelector('.lightbox__nav--next');
+        return;
+      }
 
       lightbox = document.createElement('div');
       lightbox.className = 'lightbox';
@@ -598,8 +609,11 @@
         }
       });
 
-      // Keyboard navigation
-      document.addEventListener('keydown', handleKeyboard);
+      // Keyboard navigation - only attach once
+      if (!keyboardListenerAttached) {
+        document.addEventListener('keydown', handleKeyboard);
+        keyboardListenerAttached = true;
+      }
     }
 
     /**
@@ -629,6 +643,9 @@
     function close() {
       if (!lightbox) return;
 
+      // Prevent multiple close calls
+      if (lightbox.classList.contains('is-closing')) return;
+
       lightbox.classList.add('is-closing');
 
       setTimeout(function() {
@@ -636,6 +653,9 @@
         document.body.style.overflow = '';
         currentSlides = [];
         currentIndex = 0;
+        // Clean up keyboard listener
+        document.removeEventListener('keydown', handleKeyboard);
+        keyboardListenerAttached = false;
       }, 350); // Match CSS transition duration
     }
 
@@ -713,6 +733,10 @@
     var zoomButtons = document.querySelectorAll('.project-tile__zoom');
 
     zoomButtons.forEach(function(btn) {
+      // Check if already initialized to prevent duplicate listeners
+      if (btn.hasAttribute('data-zoom-initialized')) return;
+      btn.setAttribute('data-zoom-initialized', 'true');
+
       btn.addEventListener('click', function(e) {
         e.preventDefault();
         e.stopPropagation();
