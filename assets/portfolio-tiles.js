@@ -578,9 +578,18 @@
       var closeBtn = lightbox.querySelector('.lightbox__close');
 
       // Event listeners
-      closeBtn.addEventListener('click', close);
-      prevBtn.addEventListener('click', showPrevious);
-      nextBtn.addEventListener('click', showNext);
+      closeBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        close();
+      });
+      prevBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showPrevious();
+      });
+      nextBtn.addEventListener('click', function(e) {
+        e.stopPropagation();
+        showNext();
+      });
 
       // Click outside to close
       lightbox.addEventListener('click', function(e) {

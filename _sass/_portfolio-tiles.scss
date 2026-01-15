@@ -982,9 +982,9 @@
   color: white;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.35s ease, background-color 0.35s ease;
+  transition: opacity 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
   z-index: 10;
-  
+
   svg {
     width: 20px;
     height: 20px;
@@ -995,6 +995,7 @@
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
+    transform: translateY(-50%) scale(1.1);
 
     svg {
       stroke: var(--firstBlue-color);
@@ -1031,7 +1032,7 @@
   color: white;
   cursor: pointer;
   opacity: 0;
-  transition: opacity 0.35s ease, background-color 0.35s ease;
+  transition: opacity 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
   z-index: 10;
 
   svg {
@@ -1044,6 +1045,7 @@
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.1);
 
     svg {
       stroke: var(--firstBlue-color);
@@ -1135,8 +1137,24 @@
   flex-direction: column;
   overflow-y: auto;
   overflow-x: hidden;
-  margin-right: -10px; // Pull scrollbar towards tile axis
-  padding-right: 18px; // Compensate margin + add spacing for text
+}
+
+// Odd tiles (text on right): scrollbar on left side (closer to center)
+.project-tile:nth-child(odd) .project-tile__text-area {
+  margin-left: -28px; // Pull scrollbar towards tile center
+  padding-left: 20px; // Minimal padding for scrollbar space only
+  direction: rtl; // Flip scrollbar to left side
+
+  // Reset text direction to normal
+  * {
+    direction: ltr;
+  }
+}
+
+// Even tiles (text on left): scrollbar on right side (closer to center)
+.project-tile:nth-child(even) .project-tile__text-area {
+  margin-right: -28px; // Pull scrollbar towards tile center
+  padding-right: 20px; // Minimal padding for scrollbar space only
 }
 
 // Text slides container
@@ -1411,7 +1429,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 50%;
   color: white;
@@ -1428,7 +1446,7 @@
   }
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
     transform: scale(1.1);
 
     svg {
@@ -1459,7 +1477,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.5);
   border: none;
   border-radius: 50%;
   color: white;
@@ -1476,7 +1494,7 @@
   }
 
   &:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(0, 0, 0, 0.7);
     transform: translateY(-50%) scale(1.1);
 
     svg {
