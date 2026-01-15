@@ -1064,6 +1064,9 @@
   transform: translateX(-50%);
   display: flex;
   gap: 0.8rem;
+  padding: 0.5rem 0.8rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 999px; // Pill shape matching dot roundness
   z-index: 10;
 }
 
@@ -1076,11 +1079,11 @@
   padding: 5px;
   cursor: pointer;
   transition: background-color 0.35s ease, transform 0.35s ease;
-  
+
   &:hover {
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(var(--firstBlue-color-rgb), 0.7);
   }
-  
+
   &--active {
     background-color: var(--firstBlue-color);
     transform: scale(1.25);
@@ -1252,27 +1255,50 @@
 }
 
 .project-tile__tool-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 36px;
   height: 36px;
   border-radius: $radius-small;
   background-color: rgba(255, 255, 255, 0.15);
   padding: 4px;
   transition: background-color 0.25s ease, transform 0.25s ease;
-  
+
   img {
     width: 95%;
     height: 95%;
     object-fit: contain;
   }
-  
+
   &:hover {
     background-color: rgba(255, 255, 255, 0.25);
   }
 }
 
+// Themed tool icons: opt-in class for icons that should invert or adapt per theme
+// Usage: add `tool-icon--themed` to the `.project-tile__tool-icon` element.
+.project-tile__tool-icon.tool-icon--themed {
+  // ensure smooth transition when theme changes
+  img {
+    transition: filter 0.25s ease, opacity 0.25s ease;
+    filter: none; // default - no change in light theme
+  }
+}
+
+// Dark theme: invert selected (typically black) logos for visibility on dark backgrounds
+.dark-theme .project-tile__tool-icon.tool-icon--themed img {
+  filter: invert(1) brightness(1.05) saturate(1.05);
+}
+
+// Light theme: keep original appearance
+.light-theme .project-tile__tool-icon.tool-icon--themed img {
+  filter: none;
+}
+
 .light-theme .project-tile__tool-icon {
   background-color: rgba(0, 0, 0, 0.05);
-  
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.10);
   }

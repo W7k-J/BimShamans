@@ -331,7 +331,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
                 GPX tracks, multiple data sources and the strong need to find out how journeys looked like. Who doesn't like tracking their own activities across time and area? Almost 100 hiking tracks across the Tatra Mountains come together in tables, bar charts, gauges, and even interactive terrain maps or a heat map view. <br><br> Key challenges along the way:
-                <ul><li>Python: ~25 MB of raw GPS data simplified and reduced by 93% without losing context (hundreds of thousands of points hurt performance).</li>
+                <ul><li>Python: ~25 MB of raw GPS data simplified and reduced by 93% without losing context and crucial points (hundreds of thousands of points hurt performance).</li>
                 <li>Power BI: data model with dynamic color coding across visuals and maps (complex measures and functions).</li>
                 <li>QGIS: extracted and converted national park and country boundaries into lightweight shapes.</li>
                 <li>Power Automate: automated GPX download and coded naming based on URL + hike ID (no manual UI interaction required).</li></ul><br>
@@ -360,21 +360,36 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 3: Dynamo Automation -->
-    <!-- Odd tile = Photo LEFT, Text RIGHT -->
+    <!-- PROJECT TILE: Data: IFC MMI Check -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="automation, dynamo, python, revit" data-date="2025/05/21">
+    <article class="project-tile" data-tags="data, powerbi, dashboards, IFC, BIM" data-date="2025/12/28">
       
+      <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
+          <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=80" alt="Automation workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_00.png" alt="IFC MMI Data dashboard overview" loading="lazy">
           </div>
+          <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80" alt="Code interface" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_02.png" alt="IFC MMI Data dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_03.png" alt="IFC MMI Data dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_04.png" alt="IFC MMI Data dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 5 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_05.png" alt="IFC MMI Data dashboard overview" loading="lazy">
           </div>
         </div>
-        
         <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
@@ -395,16 +410,20 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__dots"></div>
       </div>
       
+      <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Dynamo Automation Suite</h2>
+        <h2 class="project-tile__title">IFC MMI Check across ACC stored files</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Custom Dynamo scripts and Python-powered workflows automating repetitive BIM tasks. 
-                Includes automated sheet generation, parameter management, and quality checking tools 
-                that reduced manual work by 60%.
+                IFC-based objects maturity check and interactive reporting is an example of diving into data to catch that one, specified insight and bring it to the table as a main page of CDE, Sharepoint or a part of dashboard series to progress monitoring. No overcoplications, newest Data Exchange for IFC files (add-in released by Autodesk on November '25), and a potential of Open format.
+                <br><br>
+                There are three conditions, which have to be fulfilled to speak about reliable conclusions: <ul>
+                <li>verification of blanks, nulls, incorrect input has to be included, not ommited during data cleaning,</li>
+                <li>validation rate has to be defined,</li>
+                <li>at least one method of fast improper data has to be established - it can be a list of GUIDs or IDs for specified soft, anything allowing manager react precisely: what and where need to be correct with next model revision.</li></ul><br>
               </p>
             </div>
           </div>
@@ -413,39 +432,41 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#dynamo" class="project-tile__tag">#dynamo</a>
-          <a href="#python" class="project-tile__tag">#python</a>
-          <a href="#automation" class="project-tile__tag">#automation</a>
+          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
+          <a href="#dashboards" class="project-tile__tag">#IFC</a>
+          <a href="#analytics" class="project-tile__tag">#data</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC format"></span>
+          <span class="project-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
+          <span class="project-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftsharepoint_short.svg" alt="SharePoint"></span>
         </div>
       </div>
 
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 4: BIM Coordination -->
-    <!-- Even tile = Text LEFT, Photo RIGHT -->
+    <!-- PROJECT TILE: Data: 3D Flats reporting -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="coordination, navisworks, openbim, ifc" data-date="2025/06/02">
+    <article class="project-tile" data-tags="data, powerbi, BIM" data-date="2025/10/30">
       
+      <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
+          <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Coordination meeting" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_01.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
+          <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80" alt="Clash detection" loading="lazy">
-          </div>
-          <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=900&q=80" alt="Building model" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_02.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
         </div>
-        
         <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
         </button>
@@ -465,17 +486,18 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
 
         <div class="project-tile__dots"></div>
       </div>
-      
+
+      <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Multi-discipline BIM Coordination</h2>
-        
+        <h2 class="project-tile__title">3D Flats BI Reporting</h2>
+
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Full coordination workflow for a 50,000m² mixed-use development involving 8 design disciplines. 
-                OpenBIM approach using IFC for interoperability, with automated clash detection and 
-                issue tracking through BIM 360 and Navisworks.
+                3D-driven BI for residential units on concept design stage brings fresh perspective to requirements analysis. No more pivot tables on one half of screen and drawings on the other half. It can be one, it can interact, it can bring more use from already produced data.
+                <br>
+                <br>Example shows rooms' bounding boxes, so before data export, quick QA check is required, especially when third party software comes in. Revit users know, sometimes non-geometrical, but still existing room representation can be found! Can affect database and bring a little mess into the dashboard.
               </p>
             </div>
           </div>
@@ -484,15 +506,16 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#coordination" class="project-tile__tag">#coordination</a>
-          <a href="#openbim" class="project-tile__tag">#openbim</a>
-          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
+          <a href="#dashboards" class="project-tile__tag">#BIM</a>
+          <a href="#analytics" class="project-tile__tag">#data</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-acc.svg" alt="ACC"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Autodesk Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.png" alt="Speckle"></span>
+
         </div>
       </div>
 

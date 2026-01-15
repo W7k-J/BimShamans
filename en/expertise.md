@@ -215,18 +215,19 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.png" alt="Speckle"></span>
             </div>
-            <p class="portfolio-tile__description">3D-driven BI for residential units on concept design stage brings fresh perspective to requirements analysis. No more pivot tables on one half of screen and drawings on the other. It can be one, it can interact, it can mean more use from the data is already produced.</p>
+            <p class="portfolio-tile__description">3D-driven BI for residential units on concept design stage brings fresh perspective to requirements analysis. No more pivot tables on one half of screen and drawings on the other half. It can be one, it can interact, it can bring more use from already produced data.
+            </p>
           </div>
         </div>
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_01.png" alt="IFC MMI Check - QA" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_00.png" alt="IFC MMI Check - QA" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logos_ifc_short.png" alt="IFC Format"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC Format"></span>
               <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
               <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftsharepoint_short.svg" alt="SharePoint"></span>
