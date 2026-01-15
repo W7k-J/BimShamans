@@ -257,9 +257,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
-          <a href="#dashboards" class="project-tile__tag">#dashboards</a>
-          <a href="#analytics" class="project-tile__tag">#analytics</a>
+          <a href="#powerbi" class="project-tile__tag">#data</a>
+          <a href="#dashboards" class="project-tile__tag">#powerbi</a>
+          <a href="#analytics" class="project-tile__tag">#dashboards</a>
         </div>
 
         <div class="project-tile__tools">
@@ -343,9 +343,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
-          <a href="#dashboards" class="project-tile__tag">#dashboards</a>
-          <a href="#analytics" class="project-tile__tag">#analytics</a>
+          <a href="#powerbi" class="project-tile__tag">#data</a>
+          <a href="#dashboards" class="project-tile__tag">#powerbi</a>
+          <a href="#analytics" class="project-tile__tag">#dashboards</a>
         </div>
 
         <div class="project-tile__tools">
@@ -432,9 +432,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
-          <a href="#dashboards" class="project-tile__tag">#IFC</a>
-          <a href="#analytics" class="project-tile__tag">#data</a>
+          <a href="#powerbi" class="project-tile__tag">#data</a>
+          <a href="#dashboards" class="project-tile__tag">#powerbi</a>
+          <a href="#analytics" class="project-tile__tag">#IFC</a>
         </div>
 
         <div class="project-tile__tools">
@@ -506,9 +506,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
-          <a href="#dashboards" class="project-tile__tag">#BIM</a>
-          <a href="#analytics" class="project-tile__tag">#data</a>
+          <a href="#powerbi" class="project-tile__tag">#data</a>
+          <a href="#dashboards" class="project-tile__tag">#powerbi</a>
+          <a href="#analytics" class="project-tile__tag">#bim</a>
         </div>
 
         <div class="project-tile__tools">

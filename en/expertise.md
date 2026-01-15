@@ -249,9 +249,10 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         <li>Insights connected with questions</li>
       </ul>
       <div class="expertise-section__tags">
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#data" class="expertise-section__tag">#data</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#powerbi" class="expertise-section__tag">#powerbi</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#dashboards" class="expertise-section__tag">#dashboards</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#analytics" class="expertise-section__tag">#analytics</a>
+
       </div>
       <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#data-reporting" class="expertise-section__cta">
         {{ t.view_all_projects }}
