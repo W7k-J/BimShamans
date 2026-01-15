@@ -4,6 +4,7 @@ title: Kontakt
 lang: pl
 ref: contact
 permalink: /pl/contact/
+excerpt: "Znaki na niebie przywiodły Cię do nas? Artykuł dał do myślenia? Masz pytania? Szukasz porady szamana?. Wyślij kruka - niech rozpocznie się dyskusja"
 ---
 
 <div class="contact-header">
