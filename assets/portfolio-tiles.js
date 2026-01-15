@@ -511,24 +511,6 @@
     });
   }
 
-  // ============================================
-  // INITIALIZATION
-  // ============================================
-
-  function init() {
-    initSwipeCounters();
-    initSlideshows();
-    initCollectionFilter();
-    initTouchSupport();
-  }
-
-  // Run on DOM ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
-  } else {
-    init();
-  }
-
   // Re-init filters on page navigation
   window.addEventListener('popstate', function() {
     setTimeout(function() {
@@ -538,5 +520,231 @@
       }
     }, 100);
   });
+
+  // ============================================
+  // LIGHTBOX / IMAGE MODAL
+  // ============================================
+
+  /**
+   * Lightbox manager for full-screen image viewing
+   */
+  var Lightbox = (function() {
+    var lightbox = null;
+    var currentSlides = [];
+    var currentIndex = 0;
+    var imageElement = null;
+    var counterElement = null;
+    var prevBtn = null;
+    var nextBtn = null;
+
+    /**
+     * Create lightbox HTML structure
+     */
+    function createLightbox() {
+      if (lightbox) return;
+
+      lightbox = document.createElement('div');
+      lightbox.className = 'lightbox';
+      lightbox.innerHTML = [
+        '<div class="lightbox__content">',
+        '  <img class="lightbox__image" src="" alt="Full size image">',
+        '  <button class="lightbox__close" aria-label="Close lightbox">',
+        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">',
+        '      <line x1="18" y1="6" x2="6" y2="18"></line>',
+        '      <line x1="6" y1="6" x2="18" y2="18"></line>',
+        '    </svg>',
+        '  </button>',
+        '  <button class="lightbox__nav lightbox__nav--prev" aria-label="Previous image">',
+        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">',
+        '      <polyline points="15 18 9 12 15 6"></polyline>',
+        '    </svg>',
+        '  </button>',
+        '  <button class="lightbox__nav lightbox__nav--next" aria-label="Next image">',
+        '    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">',
+        '      <polyline points="9 6 15 12 9 18"></polyline>',
+        '    </svg>',
+        '  </button>',
+        '  <div class="lightbox__counter">1 / 1</div>',
+        '</div>'
+      ].join('');
+
+      document.body.appendChild(lightbox);
+
+      // Cache elements
+      imageElement = lightbox.querySelector('.lightbox__image');
+      counterElement = lightbox.querySelector('.lightbox__counter');
+      prevBtn = lightbox.querySelector('.lightbox__nav--prev');
+      nextBtn = lightbox.querySelector('.lightbox__nav--next');
+      var closeBtn = lightbox.querySelector('.lightbox__close');
+
+      // Event listeners
+      closeBtn.addEventListener('click', close);
+      prevBtn.addEventListener('click', showPrevious);
+      nextBtn.addEventListener('click', showNext);
+
+      // Click outside to close
+      lightbox.addEventListener('click', function(e) {
+        if (e.target === lightbox || e.target.classList.contains('lightbox__content')) {
+          close();
+        }
+      });
+
+      // Keyboard navigation
+      document.addEventListener('keydown', handleKeyboard);
+    }
+
+    /**
+     * Open lightbox with slides from a specific project tile
+     */
+    function open(projectTile, startIndex) {
+      createLightbox();
+
+      // Get all slide images from the project tile
+      var slides = projectTile.querySelectorAll('.project-tile__slide img');
+      currentSlides = Array.from(slides);
+      currentIndex = startIndex || 0;
+
+      if (currentSlides.length === 0) return;
+
+      // Show lightbox
+      lightbox.classList.add('is-open');
+      document.body.style.overflow = 'hidden'; // Prevent background scroll
+
+      // Display current image
+      showImage(currentIndex);
+    }
+
+    /**
+     * Close lightbox
+     */
+    function close() {
+      if (!lightbox) return;
+
+      lightbox.classList.add('is-closing');
+
+      setTimeout(function() {
+        lightbox.classList.remove('is-open', 'is-closing');
+        document.body.style.overflow = '';
+        currentSlides = [];
+        currentIndex = 0;
+      }, 350); // Match CSS transition duration
+    }
+
+    /**
+     * Show image at specific index
+     */
+    function showImage(index) {
+      if (!currentSlides[index]) return;
+
+      currentIndex = index;
+      var imgSrc = currentSlides[index].src;
+      var imgAlt = currentSlides[index].alt || 'Full size image';
+
+      imageElement.src = imgSrc;
+      imageElement.alt = imgAlt;
+
+      // Update counter
+      counterElement.textContent = (currentIndex + 1) + ' / ' + currentSlides.length;
+
+      // Show/hide navigation arrows
+      if (currentSlides.length <= 1) {
+        prevBtn.style.display = 'none';
+        nextBtn.style.display = 'none';
+      } else {
+        prevBtn.style.display = '';
+        nextBtn.style.display = '';
+      }
+    }
+
+    /**
+     * Show previous image
+     */
+    function showPrevious() {
+      var newIndex = (currentIndex - 1 + currentSlides.length) % currentSlides.length;
+      showImage(newIndex);
+    }
+
+    /**
+     * Show next image
+     */
+    function showNext() {
+      var newIndex = (currentIndex + 1) % currentSlides.length;
+      showImage(newIndex);
+    }
+
+    /**
+     * Handle keyboard navigation
+     */
+    function handleKeyboard(e) {
+      if (!lightbox || !lightbox.classList.contains('is-open')) return;
+
+      switch(e.key) {
+        case 'Escape':
+          close();
+          break;
+        case 'ArrowLeft':
+          showPrevious();
+          break;
+        case 'ArrowRight':
+          showNext();
+          break;
+      }
+    }
+
+    return {
+      open: open,
+      close: close
+    };
+  })();
+
+  /**
+   * Initialize lightbox zoom buttons
+   */
+  function initLightboxZoom() {
+    var zoomButtons = document.querySelectorAll('.project-tile__zoom');
+
+    zoomButtons.forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        // Find parent project tile
+        var projectTile = btn.closest('.project-tile');
+        if (!projectTile) return;
+
+        // Get current slide index from the slideshow state
+        var slides = projectTile.querySelectorAll('.project-tile__slide');
+        var currentIndex = 0;
+
+        slides.forEach(function(slide, index) {
+          if (slide.classList.contains('project-tile__slide--active')) {
+            currentIndex = index;
+          }
+        });
+
+        // Open lightbox with current slide
+        Lightbox.open(projectTile, currentIndex);
+      });
+    });
+  }
+
+  // ============================================
+  // INITIALIZATION (Updated to include lightbox)
+  // ============================================
+
+  function init() {
+    initSwipeCounters();
+    initSlideshows();
+    initCollectionFilter();
+    initTouchSupport();
+    initLightboxZoom();
+  }
+
+  // Run on DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
 
 })();

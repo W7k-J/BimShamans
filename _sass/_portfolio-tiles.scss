@@ -990,16 +990,21 @@
     height: 20px;
     stroke: currentColor;
     stroke-width: 2;
+    transition: stroke 0.35s ease;
   }
-  
+
   &:hover {
     background-color: rgba(0, 0, 0, 0.7);
+
+    svg {
+      stroke: var(--firstBlue-color);
+    }
   }
-  
+
   &--prev {
     left: 1rem;
   }
-  
+
   &--next {
     right: 1rem;
   }
@@ -1007,6 +1012,47 @@
 
 // Show arrows on hover
 .project-tile__slideshow:hover .project-tile__nav {
+  opacity: 1;
+}
+
+// Zoom/Enlarge button (bottom-right corner)
+.project-tile__zoom {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.35s ease, background-color 0.35s ease;
+  z-index: 10;
+
+  svg {
+    width: 20px;
+    height: 20px;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: stroke 0.35s ease;
+  }
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+
+    svg {
+      stroke: var(--firstBlue-color);
+    }
+  }
+}
+
+// Show zoom button on hover
+.project-tile__slideshow:hover .project-tile__zoom {
   opacity: 1;
 }
 
@@ -1231,18 +1277,31 @@
     width: 32px;
     height: 32px;
     opacity: 1; // Always visible on mobile
-    
+
     svg {
       width: 16px;
       height: 16px;
     }
-    
+
     &--prev {
       left: 0.5rem;
     }
-    
+
     &--next {
       right: 0.5rem;
+    }
+  }
+
+  .project-tile__zoom {
+    width: 32px;
+    height: 32px;
+    opacity: 1; // Always visible on mobile
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    svg {
+      width: 16px;
+      height: 16px;
     }
   }
   
@@ -1297,6 +1356,178 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+// ============================================
+// LIGHTBOX / IMAGE MODAL
+// ============================================
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+
+  &.is-open {
+    display: flex;
+    opacity: 1;
+  }
+
+  &.is-closing {
+    opacity: 0;
+  }
+}
+
+.lightbox__content {
+  position: relative;
+  max-width: 95vw;
+  max-height: 95vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox__image {
+  max-width: 100%;
+  max-height: 95vh;
+  object-fit: contain;
+  user-select: none;
+  image-rendering: crisp-edges;
+}
+
+// Close button (top-right)
+.lightbox__close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.35s ease, transform 0.35s ease;
+  z-index: 10001;
+
+  svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: stroke 0.35s ease;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+
+    svg {
+      stroke: var(--firstBlue-color);
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    top: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+// Navigation arrows in lightbox
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.35s ease, transform 0.35s ease;
+  z-index: 10001;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    stroke: currentColor;
+    stroke-width: 2;
+    transition: stroke 0.35s ease;
+  }
+
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-50%) scale(1.1);
+
+    svg {
+      stroke: var(--firstBlue-color);
+    }
+  }
+
+  &--prev {
+    left: 2rem;
+  }
+
+  &--next {
+    right: 2rem;
+  }
+
+  @media screen and (max-width: 640px) {
+    width: 44px;
+    height: 44px;
+
+    svg {
+      width: 22px;
+      height: 22px;
+    }
+
+    &--prev {
+      left: 1rem;
+    }
+
+    &--next {
+      right: 1rem;
+    }
+  }
+}
+
+// Counter (bottom center)
+.lightbox__counter {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 0.5rem 1rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+  font-size: 0.9rem;
+  border-radius: $radius-small;
+  pointer-events: none;
+
+  @media screen and (max-width: 640px) {
+    bottom: 1rem;
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
   }
 }
 

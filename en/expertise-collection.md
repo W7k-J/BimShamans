@@ -136,7 +136,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <!-- Dots indicator -->
         <div class="project-tile__dots"></div>
       </div>
@@ -182,7 +192,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE: Power BI Dashboard: Terraforming Mars -->
+    <!-- PROJECT TILE: Data: Terraforming Mars -->
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
     <!-- Offset: 10% left margin, 0% right -->
@@ -215,7 +225,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <div class="project-tile__dots"></div>
       </div>
       
@@ -249,6 +269,89 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
+    <!-- PROJECT TILE: Data: Hike Tracker -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Piotr -->
+    <!-- Offset: 10% left margin, 0% right -->
+    <!-- ========================================== -->
+    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/11/15">
+      
+      <!-- Slideshow (60%) -->
+      <div class="project-tile__slideshow">
+        <div class="project-tile__slides">
+          <!-- Slide 1 -->
+          <div class="project-tile__slide project-tile__slide--active">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_01.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_03.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_04.png" alt="Dashboard overview" loading="lazy">
+          </div>
+          <!-- Slide 5 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_05.png" alt="Dashboard overview" loading="lazy">
+          </div>
+        </div>
+        <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
+        <div class="project-tile__dots"></div>
+      </div>
+      
+      <!-- Text Content (40%) -->
+      <div class="project-tile__content">
+        <h2 class="project-tile__title">Board Game Strategy Analysis</h2>
+        
+        <div class="project-tile__text-area">
+          <div class="project-tile__text-slides">
+            <div class="project-tile__text-slide project-tile__text-slide--active">
+              <p class="project-tile__description">
+                Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". <br><br> Cool thing about corporations' color pick for dashboard it is a fact they are not random or manually selected. With Python and GPT's help, script for brand RGB color recognition was created. It analyze main part of .png logo file, extract's pixels RGB, define dominant chroma and calculate the most fitting one, getting rid of noise and irrelevant background. <br><br> Final touch - application-like interface with menu bar, search bar and buttons to navigate across dashboards.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="project-tile__tags">
+          <a href="#powerbi" class="project-tile__tag">#powerbi</a>
+          <a href="#dashboards" class="project-tile__tag">#dashboards</a>
+          <a href="#analytics" class="project-tile__tag">#analytics</a>
+        </div>
+        
+        <div class="project-tile__tools">
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Power BI"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
+        </div>
+      </div>
+      
+    </article>
+
+    <!-- ========================================== -->
     <!-- PROJECT TILE 3: Dynamo Automation -->
     <!-- Odd tile = Photo LEFT, Text RIGHT -->
     <!-- ========================================== -->
@@ -270,7 +373,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <div class="project-tile__dots"></div>
       </div>
       
@@ -329,7 +442,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <div class="project-tile__dots"></div>
       </div>
       
@@ -385,7 +508,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <div class="project-tile__dots"></div>
       </div>
       
@@ -443,7 +576,17 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
         </button>
-        
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
         <div class="project-tile__dots"></div>
       </div>
       

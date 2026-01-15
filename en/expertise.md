@@ -191,7 +191,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02_mini.webp" alt="HikeTracker - Analytics" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="HikeTracker - Analytics" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
@@ -199,7 +199,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoft-powerautomate_short.png" alt="Power Automate"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
             </div>
             <p class="portfolio-tile__description">GPX tracks, multiple data sources and the strong need to find out how journeys looked liked. Who doesn't like tracking their own activities across time and...area? Connecting interaction for maps and data with over 90% gpx files optimization was quite a challenge. </p>
           </div>
