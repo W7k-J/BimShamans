@@ -1257,28 +1257,64 @@
   .project-tile {
     grid-template-columns: 1fr !important;
     min-height: auto;
-    
+
     // Reset zig-zag offset on mobile
     &:nth-child(odd),
     &:nth-child(even) {
       margin-left: 0;
       margin-right: 0;
     }
-    
+
     .project-tile__slideshow,
     .project-tile__content {
       order: unset !important;
     }
   }
-  
+
   .project-tile__slideshow {
     min-height: 280px;
     order: 1 !important;
   }
-  
+
   .project-tile__content {
     order: 2 !important;
     padding: 1.5rem;
+  }
+
+  // Fix text area on mobile - reset scrollbar adjustments
+  .project-tile__text-area {
+    overflow-y: visible;
+    overflow-x: visible;
+  }
+
+  .project-tile:nth-child(odd) .project-tile__text-area {
+    margin-left: 0;
+    padding-left: 0;
+    direction: ltr;
+  }
+
+  .project-tile:nth-child(even) .project-tile__text-area {
+    margin-right: 0;
+    padding-right: 0;
+  }
+
+  // Fix text slides positioning on mobile
+  .project-tile__text-slides {
+    position: relative;
+  }
+
+  .project-tile__text-slide {
+    position: relative;
+    inset: auto;
+
+    &:not(&--active) {
+      display: none;
+    }
+
+    &--active {
+      display: block;
+      opacity: 1;
+    }
   }
 }
 
