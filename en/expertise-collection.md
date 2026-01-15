@@ -175,7 +175,9 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#heritage" class="project-tile__tag">heritage</a>
           <a href="#scans" class="project-tile__tag">scans</a>
@@ -195,7 +197,6 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- PROJECT TILE: Data: Terraforming Mars -->
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
-    <!-- Offset: 10% left margin, 0% right -->
     <!-- ========================================== -->
     <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/12/15">
       
@@ -204,19 +205,19 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__slides">
           <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png" alt="Terraforming Mars dashboard overview" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_02.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_02.png" alt="Terraforming Mars dashboard overview" loading="lazy">
           </div>
           <!-- Slide 3 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_04.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_04.png" alt="Terraforming Mars dashboard overview" loading="lazy">
           </div>
           <!-- Slide 4 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_05.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_05.png" alt="Terraforming Mars dashboard overview" loading="lazy">
           </div>
         </div>
         <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
@@ -247,32 +248,33 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". <br><br> Cool thing about corporations' color pick for dashboard it is a fact they are not random or manually selected. With Python and GPT's help, script for brand RGB color recognition was created. It analyze main part of .png logo file, extract's pixels RGB, define dominant chroma and calculate the most fitting one, getting rid of noise and irrelevant background. <br><br> Final touch - application-like interface with menu bar, search bar and buttons to navigate across dashboards.
+                Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". <br><br> Cool thing about corporations' color pick for dashboard it is a fact they are not random or manually selected. With Python and GPT's help, script for brand RGB color recognition was created. It analyze main part of .png logo file, extract's pixels RGB, define dominant chroma and calculate the most fitting one, getting rid of noise and irrelevant background. <br><br> Final touch - application-like interface with menu bar, search bar and buttons to navigate across dashboards.<br><br>
               </p>
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#powerbi" class="project-tile__tag">#powerbi</a>
           <a href="#dashboards" class="project-tile__tag">#dashboards</a>
           <a href="#analytics" class="project-tile__tag">#analytics</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
-      
+
     </article>
 
     <!-- ========================================== -->
     <!-- PROJECT TILE: Data: Hike Tracker -->
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
-    <!-- Offset: 10% left margin, 0% right -->
     <!-- ========================================== -->
     <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/11/15">
       
@@ -281,23 +283,23 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__slides">
           <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_01.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_01.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
           <!-- Slide 3 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_03.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_03.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
           <!-- Slide 4 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_04.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_04.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
           <!-- Slide 5 -->
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_05.png" alt="Dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_05.png" alt="Hike Tracker dashboard overview" loading="lazy">
           </div>
         </div>
         <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
@@ -319,27 +321,33 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
 
         <div class="project-tile__dots"></div>
       </div>
-      
+
       <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Board Game Strategy Analysis</h2>
-        
+        <h2 class="project-tile__title">Hike Tracker Dashboard</h2>
+
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Terraforming Mars is definitely my favorite board game. When I discovered there is a .json game log I couldn't resist to find out which strategy brought me to the best results. One file, repetitive data structure and a question: "how can I beat my last record". <br><br> Cool thing about corporations' color pick for dashboard it is a fact they are not random or manually selected. With Python and GPT's help, script for brand RGB color recognition was created. It analyze main part of .png logo file, extract's pixels RGB, define dominant chroma and calculate the most fitting one, getting rid of noise and irrelevant background. <br><br> Final touch - application-like interface with menu bar, search bar and buttons to navigate across dashboards.
+                GPX tracks, multiple data sources and the strong need to find out how journeys looked like. Who doesn't like tracking their own activities across time and area? Almost 100 hiking tracks across the Tatra Mountains come together in tables, bar charts, gauges, and even interactive terrain maps or a heat map view. <br><br> Key challenges along the way:
+                <ul><li>Python: ~25 MB of raw GPS data simplified and reduced by 93% without losing context (hundreds of thousands of points hurt performance).</li>
+                <li>Power BI: data model with dynamic color coding across visuals and maps (complex measures and functions).</li>
+                <li>QGIS: extracted and converted national park and country boundaries into lightweight shapes.</li>
+                <li>Power Automate: automated GPX download and coded naming based on URL + hike ID (no manual UI interaction required).</li></ul><br>
               </p>
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#powerbi" class="project-tile__tag">#powerbi</a>
           <a href="#dashboards" class="project-tile__tag">#dashboards</a>
           <a href="#analytics" class="project-tile__tag">#analytics</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Power BI"></span>
@@ -348,7 +356,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
         </div>
       </div>
-      
+
     </article>
 
     <!-- ========================================== -->
@@ -401,20 +409,22 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#dynamo" class="project-tile__tag">#dynamo</a>
           <a href="#python" class="project-tile__tag">#python</a>
           <a href="#automation" class="project-tile__tag">#automation</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
         </div>
       </div>
-      
+
     </article>
 
     <!-- ========================================== -->
@@ -470,20 +480,22 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#coordination" class="project-tile__tag">#coordination</a>
           <a href="#openbim" class="project-tile__tag">#openbim</a>
           <a href="#ifc" class="project-tile__tag">#ifc</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-acc.svg" alt="ACC"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
         </div>
       </div>
-      
+
     </article>
 
     <!-- ========================================== -->
@@ -536,19 +548,21 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#iso19650" class="project-tile__tag">#iso19650</a>
           <a href="#bep" class="project-tile__tag">#bep</a>
           <a href="#digitaldelivery" class="project-tile__tag">#digitaldelivery</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
         </div>
       </div>
-      
+
     </article>
 
     <!-- ========================================== -->
@@ -604,20 +618,22 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             </div>
           </div>
         </div>
-        
+
+        <div class="project-tile__fade"></div>
+
         <div class="project-tile__tags">
           <a href="#visualization" class="project-tile__tag">#visualization</a>
           <a href="#enscape" class="project-tile__tag">#enscape</a>
           <a href="#twinmotion" class="project-tile__tag">#twinmotion</a>
         </div>
-        
+
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
         </div>
       </div>
-      
+
     </article>
 
   </div><!-- /.exp-collection__list -->

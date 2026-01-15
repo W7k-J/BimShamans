@@ -1130,6 +1130,7 @@
 // Dynamic text area (can change with slides)
 // Custom scrollbar styling defined in _scrollbar-portfolio.scss
 .project-tile__text-area {
+  position: relative;
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -1167,20 +1168,50 @@
   inset: 0;
   opacity: 0;
   transition: opacity 0.5s ease-out;
-  
+
   &--active {
     opacity: 1;
     z-index: 1;
   }
 }
 
-// Description text
-.project-tile__description {
+// Description text and lists — unified typography for project tile text area
+.project-tile__description,
+.project-tile__text-area ul,
+.project-tile__text-area li {
   margin: 0;
-  color: var(--secondGray-color);
+  color: var(--firstGray-color);
   font-size: clamp(0.9rem, calc(0.85rem + 0.15vw), 1rem);
-  line-height: 1.7;
+  line-height: 1.5;
   text-align: justify;
+}
+
+// Fade spacer - placeholder for gradient overlay
+.project-tile__fade {
+  position: relative;
+  width: 100%;
+  height: 0.7rem; // Spacer height (replaces gap)
+  flex-shrink: 0;
+  pointer-events: none;
+
+  // Gradient overlay - extends up into text-area and down into spacer
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0; // Anchor to bottom of spacer
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2.5rem; // Extended gradient reach
+    background-image: linear-gradient(
+      to top,
+      var(--background-color) 0%,
+      rgba(var(--background-color-rgb), 0.6) 60%,
+      transparent 100%
+    );
+    pointer-events: none;
+    z-index: 10;
+  }
 }
 
 // Tags - above software icons
@@ -1188,8 +1219,8 @@
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
-  margin-top: auto;
-  padding-top: 1rem;
+  margin-top: 0; // Remove margin since fade spacer provides spacing
+  padding-top: 0; // Remove padding since fade spacer provides spacing
 }
 
 .project-tile__tag {
