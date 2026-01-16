@@ -4,6 +4,7 @@ title: Contact
 lang: en
 ref: contact
 permalink: /en/contact/
+excerpt: "Have the signs in the sky led you to us? If the article resonated. If questions remain. If you seek a shaman’s counsel. Send a raven - and let the dialogue begin"
 ---
 
 <div class="contact-header">

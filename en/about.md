@@ -4,6 +4,7 @@ title: About BIM Shamans
 lang: en
 ref: about
 permalink: /en/about/
+excerpt: "We tackle topics that orbit around civil enginneering, BIM technology, automation and data analysis. What unites us is a results-oriented approach - a straightforward engineering path to the goal, always with a healthy skepticism toward any “one true solution.”"
 
 ## About the project - interactive cards
 

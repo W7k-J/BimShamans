@@ -4,6 +4,7 @@ title: O BIM Shamans
 lang: pl
 ref: about
 permalink: /pl/about/
+excerpt: "Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądowej, automatyzacji, analizy i przetwarzania danych. Łączy nas podejście stawiające efekt na pierwszym miejscu, inżyniersko do celu, ocenijąc przez pryzmat zdrowego sceptycyzmu “jedyne słyszne rozwiązania”"
 
 ## About the project - interactive cards
 
