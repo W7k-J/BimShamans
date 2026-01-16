@@ -12,17 +12,29 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         const themeSwitcher = document.getElementById('theme-switcher');
-        if (!themeSwitcher) {
+        const themeSwitcherDesktop = document.getElementById('theme-switcher-desktop');
+        
+        // If neither switcher exists, bail out
+        if (!themeSwitcher && !themeSwitcherDesktop) {
             return;
         }
 
         const root = document.documentElement;
         const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-        const switchWrapper = themeSwitcher.closest('.switch');
         const timerSettings = { timeoutId: null };
 
-        if (switchWrapper) {
-            switchWrapper.classList.add('switch--syncing');
+        // Add syncing class to both switchers
+        if (themeSwitcher) {
+            const switchWrapper = themeSwitcher.closest('.switch');
+            if (switchWrapper) {
+                switchWrapper.classList.add('switch--syncing');
+            }
+        }
+        if (themeSwitcherDesktop) {
+            const switchWrapperDesktop = themeSwitcherDesktop.closest('.switch');
+            if (switchWrapperDesktop) {
+                switchWrapperDesktop.classList.add('switch--syncing');
+            }
         }
 
         function applyTheme(theme) {
@@ -44,42 +56,68 @@ document.addEventListener('DOMContentLoaded', function() {
         }
 
         applyTheme(currentTheme);
-        themeSwitcher.checked = currentTheme === 'dark';
-
-        if (switchWrapper) {
-            timerSettings.timeoutId = setTimeout(function() {
-                switchWrapper.classList.remove('switch--syncing');
-            }, 250);
+        
+        // Sync both switchers
+        if (themeSwitcher) {
+            themeSwitcher.checked = currentTheme === 'dark';
+        }
+        if (themeSwitcherDesktop) {
+            themeSwitcherDesktop.checked = currentTheme === 'dark';
         }
 
-        themeSwitcher.addEventListener('change', function() {
-            if (themeSwitcher.checked) {
-                applyTheme('dark');
-                if (isLocalStorageAvailable() && window.SafeStorage) {
-                    window.SafeStorage.setItem('theme', 'dark');
-                } else if (isLocalStorageAvailable()) {
-                    localStorage.setItem('theme', 'dark');
-                }
-            } else {
-                applyTheme('light');
-                if (isLocalStorageAvailable() && window.SafeStorage) {
-                    window.SafeStorage.setItem('theme', 'light');
-                } else if (isLocalStorageAvailable()) {
-                    localStorage.setItem('theme', 'light');
+        // Remove syncing class after animation
+        timerSettings.timeoutId = setTimeout(function() {
+            if (themeSwitcher) {
+                const switchWrapper = themeSwitcher.closest('.switch');
+                if (switchWrapper) {
+                    switchWrapper.classList.remove('switch--syncing');
                 }
             }
-        });
+            if (themeSwitcherDesktop) {
+                const switchWrapperDesktop = themeSwitcherDesktop.closest('.switch');
+                if (switchWrapperDesktop) {
+                    switchWrapperDesktop.classList.remove('switch--syncing');
+                }
+            }
+        }, 250);
+
+        // Function to handle theme change from either switcher
+        function handleThemeChange(isDark) {
+            const newTheme = isDark ? 'dark' : 'light';
+            applyTheme(newTheme);
+            
+            // Sync both switchers
+            if (themeSwitcher) {
+                themeSwitcher.checked = isDark;
+            }
+            if (themeSwitcherDesktop) {
+                themeSwitcherDesktop.checked = isDark;
+            }
+            
+            // Save to storage
+            if (isLocalStorageAvailable() && window.SafeStorage) {
+                window.SafeStorage.setItem('theme', newTheme);
+            } else if (isLocalStorageAvailable()) {
+                localStorage.setItem('theme', newTheme);
+            }
+        }
+
+        // Add listeners to both switchers
+        if (themeSwitcher) {
+            themeSwitcher.addEventListener('change', function() {
+                handleThemeChange(themeSwitcher.checked);
+            });
+        }
+        
+        if (themeSwitcherDesktop) {
+            themeSwitcherDesktop.addEventListener('change', function() {
+                handleThemeChange(themeSwitcherDesktop.checked);
+            });
+        }
 
         if (prefersDark && typeof prefersDark.addEventListener === 'function') {
             prefersDark.addEventListener('change', function(event) {
-                const nextTheme = event.matches ? 'dark' : 'light';
-                applyTheme(nextTheme);
-                themeSwitcher.checked = nextTheme === 'dark';
-                if (isLocalStorageAvailable() && window.SafeStorage) {
-                    window.SafeStorage.setItem('theme', nextTheme);
-                } else if (isLocalStorageAvailable()) {
-                    localStorage.setItem('theme', nextTheme);
-                }
+                handleThemeChange(event.matches);
             });
         }
     } catch (e) {
