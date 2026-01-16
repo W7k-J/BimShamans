@@ -302,7 +302,7 @@ html {
 
         &.active {
           color: var(--firstBlue-color);
-          font-weight: 600;
+          text-shadow: 0px 0px 1px var(--firstBlue-color);
 
           &::before {
             transform: scaleY(1);
@@ -360,6 +360,11 @@ html {
 
           &:last-child {
             border-radius: 0 0 $radius-small $radius-small;
+          }
+
+          // Single child - fully rounded corners
+          &:only-child {
+            border-radius: $radius-small;
           }
         }
       }
