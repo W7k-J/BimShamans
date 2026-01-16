@@ -1176,7 +1176,7 @@ figure {
 .nav-toggle {
   display: none;
   background: transparent;
-  border: 2px solid var(--firstBlue-color);
+  border: 1px solid var(--firstBlue-color);
   border-radius: $radius-small;
   width: 44px;
   height: 44px;
@@ -1190,8 +1190,8 @@ figure {
   z-index: 1001;
 
   &:hover {
-    background-color: var(--forthGray-color);
     border-color: var(--secondBlue-color);
+    box-shadow: 0 0 12px rgba(var(--secondBlue-color-rgb), 0.3);
   }
 
   &:focus-visible {
@@ -1224,13 +1224,93 @@ figure {
   }
 }
 
+// Theme-specific hover colors (swapped between light and dark)
+.light-theme .nav-toggle {
+  &:hover {
+    border-color: var(--firstBlue-color);
+    box-shadow: 0 0 12px rgba(var(--firstBlue-color-rgb), 0.3);
+  }
+}
+
+.dark-theme .nav-toggle {
+  &:hover {
+    border-color: var(--secondBlue-color);
+    box-shadow: 0 0 12px rgba(var(--secondBlue-color-rgb), 0.3);
+  }
+}
+
 // Hide mobile-only elements on desktop
 .mobile-only {
   display: none;
 }
 
-// Mobile styles
-@media screen and (max-width: 1024px) {
+// Intermediate responsive steps - gradually reduce spacing
+@media screen and (max-width: 1400px) {
+  .nav-container {
+    nav.site-nav {
+      gap: 2rem; // Reduce from 2.5rem to 2rem
+      
+      a {
+        padding: 0 16px; // Reduce from 18px to 16px
+      }
+      
+      .dropdown-wrapper > a {
+        padding: 0 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1340px) {
+  .nav-container {
+    nav.site-nav {
+      gap: 1.75rem; // Further reduce to 1.75rem
+      
+      a {
+        padding: 0 15px; // Further reduce to 15px
+      }
+      
+      .dropdown-wrapper > a {
+        padding: 0 15px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .nav-container {
+    nav.site-nav {
+      gap: 1.5rem; // Further reduce to 1.5rem
+      
+      a {
+        padding: 0 14px; // Further reduce to 14px
+      }
+      
+      .dropdown-wrapper > a {
+        padding: 0 14px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1220px) {
+  .nav-container {
+    nav.site-nav {
+      gap: 1.25rem; // Further reduce to 1.25rem
+      
+      a {
+        padding: 0 12px; // Further reduce to 12px
+      }
+      
+      .dropdown-wrapper > a {
+        padding: 0 12px;
+      }
+    }
+  }
+}
+
+// Mobile styles - hamburger menu appears here
+@media screen and (max-width: 1180px) {
   .nav-container {
     width: 100%; // Ensure full viewport width
     height: $nav-height;
@@ -1299,6 +1379,7 @@ figure {
 
     // Mobile menu overlay
     nav.site-nav {
+      display: none; // Hide desktop flex layout completely
       position: fixed;
       top: $nav-height;
       left: 0;
@@ -1312,19 +1393,23 @@ figure {
       padding-bottom: calc(6rem + 1.5rem); // Space for controls at bottom (controls height + padding)
       justify-content: center; // Center nav items vertically
       align-items: center; // Center nav items horizontally
-      max-height: 0;
+      max-height: 0 !important; // Force hidden by default
       overflow: hidden;
       opacity: 0;
+      visibility: hidden;
       pointer-events: none;
-      transition: max-height 0.4s ease, opacity 0.3s ease;
+      transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0s 0.5s;
       box-shadow: none;
       z-index: 999;
 
       &.mobile-menu-open {
-        max-height: calc(100vh - #{$nav-height});
+        display: flex; // Show as flex when opened
+        max-height: calc(100vh - #{$nav-height}) !important;
         opacity: 1;
+        visibility: visible;
         overflow-y: auto;
         pointer-events: auto;
+        transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0s 0s;
       }
 
       a {

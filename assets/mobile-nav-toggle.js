@@ -48,21 +48,24 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = siteNav.querySelectorAll('a');
   navLinks.forEach(function(link) {
     link.addEventListener('click', function() {
-      if (window.innerWidth <= 768 && navToggle.classList.contains('active')) {
+      if (window.innerWidth <= 1180 && navToggle.classList.contains('active')) {
         toggleMobileMenu();
       }
     });
   });
   
-  // Close menu on window resize to desktop size
-  let resizeTimer;
+  // Force close menu immediately on window resize to prevent flashing
   window.addEventListener('resize', function() {
-    clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(function() {
-      if (window.innerWidth > 768 && navToggle.classList.contains('active')) {
-        toggleMobileMenu();
+    // Close immediately if above mobile breakpoint
+    if (window.innerWidth > 1180 && navToggle.classList.contains('active')) {
+      navToggle.classList.remove('active');
+      siteNav.classList.remove('mobile-menu-open');
+      if (controls) {
+        controls.classList.remove('visible');
       }
-    }, 250);
+      navToggle.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+    }
   });
   
   // Close menu on escape key
