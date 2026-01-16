@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Full Expertise
+title: all projects
 lang: en
 ref: expertise-collection
 permalink: /en/expertise-collection/
