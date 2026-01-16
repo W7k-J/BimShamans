@@ -323,28 +323,46 @@
   // ============================================
 
   /**
+   * Category-to-tags mapping for multi-tag filtering
+   * Maps category names (from expertise.md section links) to arrays of tags
+   */
+  var categoryTagsMap = {
+    'architecture': ['design', 'heritage', 'scans'],
+    'bim-standards': ['iso19650', 'bep', 'digitaldelivery'],
+    'data-reporting': ['data', 'powerbi', 'dashboards'],
+    'automation': ['dynamo', 'revitapi', 'python'],
+    'coordination': ['clashmanagement', 'ifc', 'openbim'],
+    'software': ['revit', 'archicad', 'rhino']
+  };
+
+  /**
+   * Track active filter tags (multi-selection)
+   */
+  var activeTags = [];
+
+  /**
    * Initialize portfolio collection filtering
    */
   function initCollectionFilter() {
     var container = document.querySelector('.exp-collection__container');
-    
+
     if (!container) return;
-    
+
     var tagsContainer = container.querySelector('.exp-collection__tags');
     var tilesList = container.querySelector('.exp-collection__list');
     var tiles = tilesList ? tilesList.querySelectorAll('.project-tile') : [];
-    
+
     if (!tagsContainer || tiles.length === 0) return;
-    
+
     // Collect all unique tags from tiles
     var allTags = collectTags(tiles);
-    
+
     // Render filter buttons
     renderFilterButtons(tagsContainer, allTags);
-    
+
     // Check URL for initial filter
-    applyInitialFilter(tagsContainer);
-    
+    applyInitialFilter(tagsContainer, tiles, tilesList);
+
     // Bind filter events
     bindFilterEvents(tagsContainer, tiles, tilesList);
   }
@@ -398,66 +416,130 @@
 
   /**
    * Apply initial filter from URL hash
+   * Supports multi-tag selection and category shortcuts
    */
-  function applyInitialFilter(tagsContainer) {
+  function applyInitialFilter(tagsContainer, tiles, tilesList) {
     var hash = window.location.hash;
-    
+
     if (!hash || hash.length <= 1) return;
-    
-    var filterValue = hash.substring(1).toLowerCase();
-    var targetBtn = tagsContainer.querySelector('[data-filter="' + filterValue + '"]');
-    
-    if (targetBtn) {
-      var allBtn = tagsContainer.querySelector('[data-filter="all"]');
-      if (allBtn) {
-        allBtn.classList.remove('exp-collection__tag--active');
-      }
-      
-      targetBtn.classList.add('exp-collection__tag--active');
-      targetBtn.click();
+
+    var hashValue = hash.substring(1).toLowerCase();
+    var tagsToSelect = [];
+
+    // Check if it's a category filter (e.g., #data-reporting)
+    if (categoryTagsMap[hashValue]) {
+      // Expand category to its constituent tags
+      tagsToSelect = categoryTagsMap[hashValue].slice(); // Clone array
+    } else {
+      // Parse individual tags (supports #data or #data+powerbi+dashboards)
+      tagsToSelect = hashValue.split('+').map(function(tag) {
+        return tag.trim();
+      }).filter(function(tag) {
+        return tag.length > 0;
+      });
     }
+
+    if (tagsToSelect.length === 0) return;
+
+    // Set active tags
+    activeTags = tagsToSelect;
+
+    // Remove "all" button active state
+    var allBtn = tagsContainer.querySelector('[data-filter="all"]');
+    if (allBtn) {
+      allBtn.classList.remove('exp-collection__tag--active');
+    }
+
+    // Activate matching tag buttons
+    tagsToSelect.forEach(function(tag) {
+      var tagBtn = tagsContainer.querySelector('[data-filter="' + tag + '"]');
+      if (tagBtn) {
+        tagBtn.classList.add('exp-collection__tag--active');
+      }
+    });
+
+    // Apply filter
+    filterTiles(tiles, tilesList, activeTags);
   }
 
   /**
-   * Bind filter button events
+   * Bind filter button events with toggle behavior
    */
   function bindFilterEvents(tagsContainer, tiles, tilesList) {
     tagsContainer.addEventListener('click', function(e) {
       var btn = e.target.closest('.exp-collection__tag');
-      
+
       if (!btn) return;
-      
+
       var filterValue = btn.getAttribute('data-filter');
-      
-      // Update active state
-      tagsContainer.querySelectorAll('.exp-collection__tag').forEach(function(b) {
-        b.classList.remove('exp-collection__tag--active');
-      });
-      btn.classList.add('exp-collection__tag--active');
-      
-      // Filter tiles with animation
-      filterTiles(tiles, tilesList, filterValue);
-      
-      // Update URL hash
-      if (filterValue !== 'all') {
-        history.replaceState(null, null, '#' + filterValue);
-      } else {
+
+      // Handle "all" button - clear all selections
+      if (filterValue === 'all') {
+        activeTags = [];
+        // Remove active class from all buttons
+        tagsContainer.querySelectorAll('.exp-collection__tag').forEach(function(b) {
+          b.classList.remove('exp-collection__tag--active');
+        });
+        // Set "all" as active
+        btn.classList.add('exp-collection__tag--active');
+        // Show all tiles
+        filterTiles(tiles, tilesList, []);
+        // Clear URL hash
         history.replaceState(null, null, window.location.pathname);
+        return;
       }
+
+      // Toggle tag selection
+      var tagIndex = activeTags.indexOf(filterValue);
+      if (tagIndex > -1) {
+        // Tag is active - deactivate it
+        activeTags.splice(tagIndex, 1);
+        btn.classList.remove('exp-collection__tag--active');
+      } else {
+        // Tag is inactive - activate it
+        activeTags.push(filterValue);
+        btn.classList.add('exp-collection__tag--active');
+      }
+
+      // Remove "all" button active state if any tags are selected
+      var allBtn = tagsContainer.querySelector('[data-filter="all"]');
+      if (activeTags.length > 0) {
+        if (allBtn) allBtn.classList.remove('exp-collection__tag--active');
+      } else {
+        // No tags selected - activate "all"
+        if (allBtn) allBtn.classList.add('exp-collection__tag--active');
+      }
+
+      // Filter tiles with active tags
+      filterTiles(tiles, tilesList, activeTags);
+
+      // Update URL hash
+      updateUrlHash(activeTags);
     });
   }
 
   /**
    * Filter tiles with fade animation
+   * Supports multi-tag filtering with OR logic
    */
-  function filterTiles(tiles, list, filterValue) {
+  function filterTiles(tiles, list, filterTags) {
     var visibleCount = 0;
     var animationDelay = 0;
-    
+
     tiles.forEach(function(tile) {
       var tileTags = (tile.getAttribute('data-tags') || '').toLowerCase();
-      var shouldShow = filterValue === 'all' || tileTags.indexOf(filterValue) !== -1;
-      
+      var shouldShow;
+
+      if (filterTags.length === 0) {
+        // No tags selected - show all
+        shouldShow = true;
+      } else {
+        // Show if tile has ANY of the active tags (OR logic)
+        shouldShow = filterTags.some(function(tag) {
+          return tileTags.indexOf(tag.toLowerCase()) !== -1;
+        });
+      }
+
       if (shouldShow) {
         tile.style.animation = 'none';
         tile.offsetHeight; // Force reflow
@@ -473,7 +555,7 @@
     
     // Show empty state if no results
     var emptyState = list.querySelector('.exp-collection__empty');
-    
+
     if (visibleCount === 0) {
       if (!emptyState) {
         emptyState = document.createElement('div');
@@ -484,6 +566,20 @@
       emptyState.style.display = '';
     } else if (emptyState) {
       emptyState.style.display = 'none';
+    }
+  }
+
+  /**
+   * Update URL hash with active tags
+   */
+  function updateUrlHash(tags) {
+    if (tags.length === 0) {
+      // No tags - clear hash
+      history.replaceState(null, null, window.location.pathname);
+    } else {
+      // Join tags with + separator
+      var hash = '#' + tags.join('+');
+      history.replaceState(null, null, hash);
     }
   }
 
