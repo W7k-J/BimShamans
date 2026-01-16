@@ -12,20 +12,19 @@
     font-size: 1.0rem;
     padding: 0.3rem 0.5rem;
     border-radius: 3px;
-    transition: color 0.3s ease, background-color 0.3s ease;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
     cursor: pointer;
     user-select: none;
 
     &.active {
       color: var(--firstBlue-color);
-      font-weight: 600;
+      text-shadow: 0px 0px 1px var(--firstBlue-color);
       pointer-events: none;
     }
 
     &:not(.active) {
       &:hover {
         color: var(--firstBlue-color);
-        // background-color: rgba(var(--firstBlue-color-rgb), 0.1);
       }
     }
   }

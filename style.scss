@@ -220,9 +220,9 @@ html {
       position: relative;
       color: var(--firstGray-color);
       text-align: center;
-      font-weight: 300;
+      font-weight: 400;
       letter-spacing: 0.5px;
-      transition: color 0.15s ease, font-weight $transition-base ease;
+      transition: color 0.15s ease, text-shadow $transition-base ease;
       height: 100%;
       display: flex;
       align-items: center;
@@ -254,11 +254,11 @@ html {
 
       &.active {
         color: var(--firstBlue-color);
-        
+
         &::before {
           transform: scaleY(1);
         }
-        font-weight: 600;
+        text-shadow: 0px 0px 1px var(--firstBlue-color);
       }
 
       &:focus-visible {
@@ -347,7 +347,7 @@ html {
           transition: color $transition-base ease, background-color $transition-base ease;
           border-radius: 0;
           height: auto;
-          font-weight: 300;
+          font-weight: 400;
 
           &:hover {
             background-color: var(--firstBlue-color);
