@@ -82,7 +82,7 @@ excerpt: "Insights, methodologies, and best practices in BIM coordination"
         onclick="return false"
         aria-label="Sort by options"
       >
-        sort by: <span id="sort-label">date</span>
+        sort by:<span id="sort-label">date</span>
       </button>
       <div class="blog__sort-menu">
         <button class="blog__sort-option" data-sort="date">date</button>

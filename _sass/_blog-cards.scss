@@ -198,7 +198,8 @@
     min-width: 180px; /* Reduced from 220px to prevent overflow */
     white-space: nowrap;
 
-    #sort-label {
+    #sort-label,
+    #portfolio-sort-label {
       margin-left: 0.5em;
     }
 

@@ -1,6 +1,6 @@
 ---
 layout: default
-title: all projects
+title: All projects
 lang: en
 ref: expertise-collection
 permalink: /en/expertise-collection/
@@ -87,7 +87,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         onclick="return false"
         aria-label="Sort by options"
       >
-        sort by: <span id="portfolio-sort-label">title</span>
+        sort by:<span id="portfolio-sort-label">title</span>
       </button>
       <div class="blog__sort-menu">
         <button class="blog__sort-option" data-sort="date">date</button>
