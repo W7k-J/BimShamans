@@ -834,6 +834,20 @@
   gap: 3rem;
 }
 
+// Local notice styling for expertise collection (smaller text)
+.exp-collection__notice {
+  margin-top: 4rem;
+}
+
+.exp-collection__notice .notice-logos {
+  font-size: 0.8rem;
+  line-height: 1.5;
+
+  p {
+    margin: 0.4em 0;
+  }
+}
+
 // ============================================
 // FULL-WIDTH PROJECT TILE (60/40 split with slideshow)
 // ============================================

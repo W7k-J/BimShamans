@@ -800,5 +800,15 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 </script>
 
+  <!-- Notice about logos -->
+  <div class="exp-collection__notice">
+    <blockquote class="notice-logos">
+      <p>
+        <b>Notice:</b>
+        All software logos, trade names, trademarks, and data exchange format marks displayed on this website are the property of their respective owners. They are used solely for informational and referential purposes, to indicate the tools utilized in the presented professional activities. Their use does not constitute official use of the manufacturers’ materials, nor does it imply any affiliation, sponsorship, partnership, or endorsement by the respective trademark owners.
+      </p>
+    </blockquote>
+  </div>
+
 <!-- Embed slideshow script -->
 <script src="{{ site.baseurl }}/assets/portfolio-tiles.js" defer></script>
