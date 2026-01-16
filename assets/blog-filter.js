@@ -7,7 +7,7 @@ class BlogManager {
   constructor(posts) {
     this.allPosts = posts || [];
     this.filteredPosts = [...this.allPosts];
-    this.currentFilter = 'All';
+    this.activeTags = [];
     this.currentSortBy = 'date';
     this.currentDirection = 'desc';
     this.searchQuery = '';
@@ -65,16 +65,18 @@ class BlogManager {
   }
 
   /**
-   * Filter posts by tag
+   * Filter posts by tags (multi-tag with OR logic)
    */
-  filter(tag) {
-    this.currentFilter = tag;
-    
-    if (tag === 'All') {
+  filter(tags) {
+    this.activeTags = tags || [];
+
+    if (this.activeTags.length === 0) {
+      // No tags selected - show all
       this.filteredPosts = [...this.allPosts];
     } else {
-      this.filteredPosts = this.allPosts.filter(post => 
-        post.tags && post.tags.includes(tag)
+      // Show posts that have ANY of the active tags (OR logic)
+      this.filteredPosts = this.allPosts.filter(post =>
+        post.tags && this.activeTags.some(tag => post.tags.includes(tag))
       );
     }
 
@@ -89,34 +91,34 @@ class BlogManager {
    */
   search(query) {
     this.searchQuery = query.toLowerCase().trim();
-    
+
     // Reset to current filter if search is empty
     if (!this.searchQuery) {
-      this.filter(this.currentFilter);
+      this.filter(this.activeTags);
       return;
     }
-    
-    // Start with filtered posts (by tag)
-    if (this.currentFilter === 'All') {
+
+    // Start with filtered posts (by tags)
+    if (this.activeTags.length === 0) {
       this.filteredPosts = [...this.allPosts];
     } else {
-      this.filteredPosts = this.allPosts.filter(post => 
-        post.tags && post.tags.includes(this.currentFilter)
+      this.filteredPosts = this.allPosts.filter(post =>
+        post.tags && this.activeTags.some(tag => post.tags.includes(tag))
       );
     }
-    
+
     // Apply search
     this.applySearch();
     this.sort(this.currentSortBy, this.currentDirection);
     this.render();
   }
-  
+
   /**
    * Reset search (called when clear button is clicked)
    */
   resetSearch() {
     this.searchQuery = '';
-    this.filter(this.currentFilter); // Re-apply current filter
+    this.filter(this.activeTags); // Re-apply current filter
   }
 
   /**
@@ -184,13 +186,26 @@ class BlogManager {
   }
 
   /**
-   * Update tag button UI
+   * Update tag button UI (supports multi-selection)
    */
   updateTagUI() {
     document.querySelectorAll('#tag-filters .blog__tag').forEach(btn => {
-      btn.classList.remove('blog__tag--active');
-      if (btn.dataset.tag === this.currentFilter) {
-        btn.classList.add('blog__tag--active');
+      const tag = btn.dataset.tag;
+
+      if (tag === 'All') {
+        // "All" button is active only when no tags are selected
+        if (this.activeTags.length === 0) {
+          btn.classList.add('blog__tag--active');
+        } else {
+          btn.classList.remove('blog__tag--active');
+        }
+      } else {
+        // Individual tag buttons
+        if (this.activeTags.includes(tag)) {
+          btn.classList.add('blog__tag--active');
+        } else {
+          btn.classList.remove('blog__tag--active');
+        }
       }
     });
   }
@@ -278,7 +293,26 @@ class BlogManager {
       const tagBtn = e.target.closest('#tag-filters .blog__tag');
       if (tagBtn) {
         const tag = tagBtn.dataset.tag;
-        if (tag) this.filter(tag);
+
+        // Handle "All" button - clear all selections
+        if (tag === 'All') {
+          this.activeTags = [];
+          this.filter([]);
+          return;
+        }
+
+        // Toggle tag selection
+        const tagIndex = this.activeTags.indexOf(tag);
+        if (tagIndex > -1) {
+          // Tag is active - deactivate it
+          this.activeTags.splice(tagIndex, 1);
+        } else {
+          // Tag is inactive - activate it
+          this.activeTags.push(tag);
+        }
+
+        // Apply filter with current active tags
+        this.filter(this.activeTags);
         return;
       }
 

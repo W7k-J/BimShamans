@@ -26,9 +26,14 @@
   right: 0;
   bottom: 0;
   // Light theme background color
-  background-color: var(--firstBlue-color);  // Controls background in light mode
-  transition: .25s ease;
+  background-color: var(--firstBlue-color);
+  // Controls background in light mode
+  transition: .35s ease;
   border-radius: 34px;
+  -webkit-transition: .35s ease;
+  -moz-transition: .35s ease;
+  -ms-transition: .35s ease;
+  -o-transition: .35s ease;
 }
 
 // Slider button/circle
@@ -40,9 +45,14 @@
   left: 4px;
   bottom: 4px;
   // Light theme circle color
-  background-color: var(--forthGray-color);  // Controls circle color in light mode
-  transition: .25s ease;
+  background-color: var(--forthGray-color);
+  // Controls circle color in light mode
+  transition: .35s ease;
   border-radius: 50%;
+  -webkit-transition: .35s ease;
+  -moz-transition: .35s ease;
+  -ms-transition: .35s ease;
+  -o-transition: .35s ease;
 }
 
 /* DARK THEME (checked state) */

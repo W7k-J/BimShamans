@@ -198,7 +198,8 @@
     min-width: 180px; /* Reduced from 220px to prevent overflow */
     white-space: nowrap;
 
-    #sort-label {
+    #sort-label,
+    #portfolio-sort-label {
       margin-left: 0.5em;
     }
 
@@ -439,11 +440,12 @@
   background-color: var(--forthGray-color);
   color: var(--firstGray-color);
   font-size: 0.9rem;
-  font-weight: 500;
+  font-weight: 400;
   cursor: pointer;
   transition: all 0.3s ease;
   border: none;
   text-transform: lowercase;
+  text-align: center;
 
   &:hover {
     background-color: var(--firstBlue-color);
@@ -453,7 +455,7 @@
   &--active {
     background-color: var(--firstBlue-color);
     color: var(--background-color);
-    font-weight: 600;
+    text-shadow: 0px 0px 1px var(--background-color);
   }
   
   // Mobile optimization
