@@ -29,7 +29,29 @@
     width: 100%;
   }
   
-  // Mobile optimization
+  // Mobile optimization - use grid for last row with direction-toggle + sort-wrapper
+  @media screen and (max-width: 1023px) {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 1rem;
+    
+    .searchbar {
+      grid-column: 1 / -1;
+      width: 100%;
+    }
+    
+    .blog__direction-toggle {
+      grid-column: 1;
+      justify-self: start;
+    }
+    
+    .blog__sort-wrapper {
+      grid-column: 2;
+      justify-self: end;
+    }
+  }
+  
   @media screen and (max-width: 768px) {
     gap: 1rem;
     margin-bottom: 1.5rem;
@@ -339,11 +361,9 @@
     user-select: none;
   }
   
-  // Mobile optimization
+  // Mobile optimization - keep left aligned
   @media screen and (max-width: 640px) {
-    width: 100%;
-    justify-content: center;
-    gap: 1.5rem;
+    gap: 0.75rem;
   }
 }
 
@@ -862,10 +882,19 @@
   flex: 0; // Nie rozszerzaj się domyślnie
   flex-shrink: 0;
   min-width: 44px;
-  margin-left: auto;
   z-index: 1020;
   transition: flex 0.35s cubic-bezier(0.4, 0, 0.2, 1), 
               width 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  
+  // Desktop only - push to right
+  @media screen and (min-width: 1024px) {
+    margin-left: auto;
+  }
+  
+  // Mobile - disable transitions to prevent shifting
+  @media screen and (max-width: 1023px) {
+    transition: none;
+  }
 
   &__form {
     position: relative;
@@ -1045,7 +1074,11 @@
   &--open {
     flex: 1;
     width: auto;
-    margin-left: auto;
+    
+    // Desktop only - push to right when open
+    @media screen and (min-width: 1024px) {
+      margin-left: auto;
+    }
     
     .searchbar__input {
       opacity: 1;

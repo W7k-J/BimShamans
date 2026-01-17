@@ -122,10 +122,51 @@
                 <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="{% if page.url contains '/about' or page.url contains '/project' or page.url contains '/authors' %}active{% endif %}">{{ t.about }}</a>
                 
                 <a href="{{ site.baseurl }}/{{ page.lang }}/contact/" class="{% if page.url contains '/contact' %}active{% endif %}">{{ t.contact }}</a>
+                
+                <!-- Controls inside mobile menu -->
+                <div class="controls">
+                    <!-- Language Switcher -->
+                    <div class="language-switcher" role="group" aria-label="Language switcher">
+                        <button type="button"
+                                data-lang="en"
+                                class="language-option {% if page.lang == 'en' %}active{% endif %}"
+                                aria-pressed="{% if page.lang == 'en' %}true{% else %}false{% endif %}"
+                                onclick="switchLanguage('en')">
+                            EN
+                        </button>
+                        <span aria-hidden="true">|</span>
+                        <button type="button"
+                                data-lang="pl"
+                                class="language-option {% if page.lang == 'pl' %}active{% endif %}"
+                                aria-pressed="{% if page.lang == 'pl' %}true{% else %}false{% endif %}"
+                                onclick="switchLanguage('pl')">
+                            PL
+                        </button>
+                    </div>
+
+                    <!-- Theme Switcher -->
+                    <label class="switch">
+                        <input type="checkbox" id="theme-switcher">
+                        <span class="slider"></span>
+                    </label>
+                    <script>
+                        (function() {
+                            try {
+                                var toggle = document.getElementById('theme-switcher');
+                                if (!toggle) {
+                                    return;
+                                }
+                                toggle.checked = document.documentElement.classList.contains('dark-theme');
+                            } catch (e) {
+                                // Toggle initialization fails gracefully
+                            }
+                        })();
+                    </script>
+                </div>
             </nav>
 
-            <!-- Controls (Language and Theme Switchers) -->
-            <div class="controls">
+            <!-- Controls (Language and Theme Switchers) - Desktop only -->
+            <div class="controls controls--desktop">
                 <!-- Language Switcher -->
                 <div class="language-switcher" role="group" aria-label="Language switcher">
                     <button type="button"
@@ -147,13 +188,13 @@
 
                 <!-- Theme Switcher -->
                 <label class="switch">
-                    <input type="checkbox" id="theme-switcher">
+                    <input type="checkbox" id="theme-switcher-desktop">
                     <span class="slider"></span>
                 </label>
                 <script>
                     (function() {
                         try {
-                            var toggle = document.getElementById('theme-switcher');
+                            var toggle = document.getElementById('theme-switcher-desktop');
                             if (!toggle) {
                                 return;
                             }
