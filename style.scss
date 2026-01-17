@@ -1636,11 +1636,15 @@ body::before {
       height: 100%;
   }
 
+/**************/
+/* TYPOGRAPHY */
+/**************/
+
+// === BASE HEADING STYLES ===
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', $helveticaNeue;
   color: var(--firstBlue-color);
   font-weight: normal;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -1650,15 +1654,45 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// === HEADING SIZES ===
 h1 {
   font-size: 30px;
   font-weight: bold;
+  
   a {
     color: inherit;
   }
 }
 
-// Page-specific h1 gradients (blog, portfolio, project, authors)
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--firstGray-color);
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--firstGray-color);
+}
+
+// === PAGE-SPECIFIC GRADIENT OVERRIDES ===
+// Blog, Portfolio, Authors pages - h1 with gradient
 .blog__container h1,
 .expertise__header h1,
 .exp-collection__container h1,
@@ -1674,6 +1708,7 @@ h1 {
   width: 100%;
 }
 
+// Light theme - h1 gradient variation
 .light-theme .blog__container h1,
 .light-theme .expertise__header h1,
 .light-theme .exp-collection__container h1,
@@ -1681,6 +1716,7 @@ h1 {
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
+// Dark theme - h1 gradient variation
 .dark-theme .blog__container h1,
 .dark-theme .expertise__header h1,
 .dark-theme .exp-collection__container h1,
@@ -1688,7 +1724,7 @@ h1 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
 }
 
-// Page-specific h2 gradients (for About/Project sections)
+// About/Project pages - h2 with gradient
 .page h2 {
   background-color: transparent;
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
@@ -1701,37 +1737,14 @@ h1 {
   width: 100%;
 }
 
+// Light theme - h2 gradient variation
 .light-theme .page h2 {
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
+// Dark theme - h2 gradient variation
 .dark-theme .page h2 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-  color: var(--firstGray-color);
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 18px;
-  color: var(--firstGray-color);
 }
 
 p {
