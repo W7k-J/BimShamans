@@ -975,7 +975,7 @@ authors:
 .author-skill[data-level="5"] .author-skill__fill { width:100%; }
 </style>
 
-## Project: BIM Shamans
+<h1> Project: BIM Shamans </h1>
 > The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to&nbsp;know_**. A shaman is literally the **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 

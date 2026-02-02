@@ -5,6 +5,7 @@ ref: home
 lang: pl
 permalink: /pl/home/
 excerpt: "Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez automatyzację, standaryzację i pragmatyczne podejście inżynierskie."
+latest_posts_count: 3
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
@@ -138,29 +139,56 @@ excerpt: "Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną p
 
 ## Najnowsze posty:
 
-<div class="posts">
-  {% assign posts=site.posts | where:"lang", "pl" %}
-  {% for post in posts %}
-    <article class="post">
-      <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
-
-      <div class="entry">
-        {% if post.excerpt %}
-          {{ post.excerpt }}
-        {% else %}
-          {{ post.content | strip_html | truncatewords: 50 }}
-        {% endif %}
+<div class="blog__cards">
+  {% assign posts = site.posts | where: "lang", "pl" | sort: "date" | reverse %}
+  {% for post in posts limit: page.latest_posts_count %}
+    <article class="blog-card" data-tags="{{ post.filter_hash_list | join: ',' }}">
+      <div class="blog-card__image">
+        <img src="{{ post.image | default: site.baseurl | append: '/images/placeholder-post.jpg' }}" alt="{{ post.title }}" loading="lazy">
+        <span class="blog-card__category">{{ post.category | default: 'Blog' }}</span>
       </div>
 
-      <div class="post-meta">
-        <span class="date">{{ post.date | date: "%d-%m-%Y" }}</span>
+      <div class="blog-card__content">
+        <h3 class="blog-card__title">{{ post.title }}</h3>
+        <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+      </div>
+
+      <div class="blog-card__overlay">
+        <p class="blog-card__description">{{ post.description | default: 'Odkryj więcej szczegółów i informacji w tym artykule.' }}</p>
+        <div class="blog-card__tags">
+          {% for tag in post.filter_hash_list %}
+            <span class="blog-card__tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
         {% if post.author %}
-          <span class="author">{{ post.author }}</span>
+          <p class="blog-card__author">{{ post.author }}</p>
         {% endif %}
+        <a href="{{ site.baseurl }}{{ post.url }}" class="blog-card__label">
+          <div class="blog-card__icon"><img src="{{ site.baseurl }}/images/icons/icons_alt-arrow-right.svg" alt="strzałka"></div>
+          <div class="blog-card__info">
+            <div class="blog-card__main">Czytaj więcej</div>
+          </div>
+        </a>
       </div>
-
-      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">{{ t.read_more }}</a>
     </article>
   {% endfor %}
 </div>
+
+<nav class="expertise__nav">
+  <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="expertise__nav-link expertise__nav-link--collection">
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M10 5H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
+      <path d="M16 5h4v4"></path>
+      <path d="M14 7l6-6"></path>
+    </svg>
+    Blog
+  </a>
+
+  <button type="button" class="expertise__nav-link expertise__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    Do góry
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+</nav>
 

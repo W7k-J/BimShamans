@@ -17,7 +17,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   </div>
 
   <!-- ========================================= -->
-  <!-- SECTION 1: Architecture -->
+  <!-- SECTION 1: Architecture and Structure -->
   <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
   <!-- ========================================== -->
   <section class="expertise-section" id="architecture">
