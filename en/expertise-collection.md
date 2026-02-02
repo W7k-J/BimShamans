@@ -672,6 +672,14 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     home
   </a>
 
+  <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="expertise__nav-link">
+    <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="20 10 14 10 14 4"></polyline>
+      <polyline points="4 14 10 14 10 20"></polyline>
+    </svg>
+    expertise summary
+  </a>
+
   <button type="button" class="expertise__nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     go to top
     <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">

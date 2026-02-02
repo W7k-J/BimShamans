@@ -462,7 +462,10 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
   </a>
 
   <a href="{{ site.baseurl }}/{{ page.lang }}/expertise-collection/" class="expertise__nav-link">
-    <img class="expertise__nav-icon expertise__nav-icon--before" src="{{ site.baseurl }}/images/icons/icons_gallery.svg" alt="" width="18" height="18">
+    <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="14 4 20 4 20 10"></polyline>
+      <polyline points="4 14 4 20 10 20"></polyline>
+    </svg>
     pełne doświadczenie
   </a>
 

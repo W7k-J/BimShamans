@@ -487,7 +487,10 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   </a>
 
   <a href="{{ site.baseurl }}/{{ page.lang }}/expertise-collection/" class="expertise__nav-link">
-    <img class="expertise__nav-icon expertise__nav-icon--before" src="{{ site.baseurl }}/images/icons/icons_gallery.svg" alt="" width="18" height="18">
+    <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="12 4 20 4 20 12"></polyline>
+      <polyline points="4 12 4 20 12 20"></polyline>
+    </svg>
     full expertise
   </a>
 
