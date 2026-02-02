@@ -4,7 +4,6 @@
 // IMPORTS - Core
 @import "variables";
 @import "reset";
-@import "themes";
 
 // IMPORTS - Components
 @import "theme-switcher";
@@ -38,36 +37,47 @@ html {
 
 // Light theme setup
 .light-theme {
-  // Main Colors
+  // === CORE COLORS ===
   --background-color: #{$ghostWhite};
-  --background-color-rgb: 245, 245, 250; // RGB dla rgba()
+  --background-color-rgb: 245, 245, 250;
   --firstGray-color: #{$raisinBlack};
+  --firstBlue-color: #{$biceBlue};
+  --secondBlue-color: #{$ryanCyan};
+  
+  // === EXTENDED GRAYS ===
   --secondGray-color: #{$darkGray};
   --thirdGray-color: #{$gray};
   --forthGray-color: #{$lightGray};
+  
+  // === FUNCTIONAL COLORS ===
   --link-color: #{$blue};
-  --firstBlue-color: #{$biceBlue};
-  --firstBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
-  --darkBiceBlue-color: #103847; // Bice Blue darker by 3 tones for gradients
-  --secondBlue-color: #{$ryanCyan};
-  --secondBlue-color-rgb: 50, 215, 230; // RGB dla rgba()  
+  --icon-color: var(--forthGray-color);
+  --icon-background: var(--firstBlue-color);
+  
+  // === SPECIAL PURPOSE ===
+  --darkBiceBlue-color: #103847; // Bice Blue -3 tones for gradients
+  --firstBlue-color-rgb: 30, 105, 145;
+  --secondBlue-color-rgb: 50, 215, 230;
+  
+  // === COMPONENT-SPECIFIC ===
+  --blockquote-background: rgba(227, 227, 234, 0.8);
+  --footer-border-color: rgba(30, 105, 145, 0.28);
+  
+  // === DECORATIVE (page gradients & hero animations) ===
   --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
   --page-gradient-base-start: rgba(255, 255, 255, 0.98);
   --page-gradient-base-end: rgba(247, 247, 252, 0.98);
-  --footer-border-color: rgba(30, 105, 145, 0.28);
-  --blockquote-background: rgba(227, 227, 234, 0.8);
+  
   --circuit-glow-strong: rgba(30, 105, 145, 0.97);
   --circuit-glow-base: rgba(30, 105, 145, 0.60);
   --circuit-glow-soft: rgba(30, 105, 145, 0.25);
   --circuit-line-strong: rgba(19, 74, 115, 0.92);
   --circuit-line-soft: rgba(19, 74, 115, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.18);
-  --icon-color: var(--forthGray-color);
-  --icon-background: var(--firstBlue-color);
 
-  // Logo visibility
+  // === LOGO VISIBILITY ===
   .logo-light {
     display: block;
   }
@@ -78,35 +88,46 @@ html {
 
 // Dark theme setup
 .dark-theme {
-  // Colors
+  // === CORE COLORS ===
   --background-color: #{$raisinBlack};
-  --background-color-rgb: 30, 30, 40; // RGB dla rgba()
+  --background-color-rgb: 30, 30, 40;
   --firstGray-color: #{$ghostWhite};
+  --firstBlue-color: #{$ryanCyan};
+  --secondBlue-color: #{$biceBlue};
+  
+  // === EXTENDED GRAYS (inverted) ===
   --secondGray-color: #{$lightGray};
   --thirdGray-color: #{$gray};
   --forthGray-color: #{$darkGray};
+  
+  // === FUNCTIONAL COLORS ===
   --link-color: #{$blue};
-  --firstBlue-color: #{$ryanCyan};
-  --firstBlue-color-rgb: 50, 215, 230; // RGB dla rgba()
-  --secondBlue-color: #{$biceBlue};
-  --secondBlue-color-rgb: 30, 105, 145; // RGB dla rgba()
+  --icon-color: var(--forthGray-color);
+  --icon-background: var(--firstBlue-color);
+  
+  // === SPECIAL PURPOSE ===
+  --firstBlue-color-rgb: 50, 215, 230;
+  --secondBlue-color-rgb: 30, 105, 145;
+  
+  // === COMPONENT-SPECIFIC ===
+  --blockquote-background: rgba(64, 64, 80, 0.8);
+  --footer-border-color: rgba(227, 227, 234, 0.22);
+  
+  // === DECORATIVE (page gradients & hero animations) ===
   --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
   --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
   --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
   --page-gradient-base-start: rgba(12, 15, 25, 0.95);
   --page-gradient-base-end: rgba(6, 8, 15, 0.96);
-  --footer-border-color: rgba(227, 227, 234, 0.22);
-  --blockquote-background: rgba(64, 64, 80, 0.8);
+  
   --circuit-glow-strong: rgba(159, 255, 255, 0.97);
   --circuit-glow-soft: rgba(30, 105, 145, 0.25);
   --circuit-glow-base: rgba(50, 215, 230, 0.60);
   --circuit-line-strong: rgba(109, 245, 255, 0.95);
   --circuit-line-soft: rgba(26, 199, 216, 0.55);
   --circuit-node-fill: rgba(97, 229, 255, 0.22);
-  --icon-color: var(--forthGray-color);
-  --icon-background: var(--firstBlue-color);
 
-  // Logo visibility
+  // === LOGO VISIBILITY ===
   .logo-light {
     display: none;
   }
@@ -1265,8 +1286,8 @@ figure {
 
 .dark-theme .nav-toggle {
   &:hover {
-    border-color: var(--secondBlue-color);
-    box-shadow: 0 0 12px rgba(var(--secondBlue-color-rgb), 0.3);
+    border-color: var(--firstBlue-color);
+    box-shadow: 0 0 12px rgba(var(--firstBlue-color-rgb), 0.3);
   }
 }
 
@@ -1615,11 +1636,15 @@ body::before {
       height: 100%;
   }
 
+/**************/
+/* TYPOGRAPHY */
+/**************/
+
+// === BASE HEADING STYLES ===
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', $helveticaNeue;
   color: var(--firstBlue-color);
   font-weight: normal;
-
   line-height: 1.7;
   margin: 1em 0 15px;
   padding: 0;
@@ -1629,15 +1654,45 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+// === HEADING SIZES ===
 h1 {
   font-size: 30px;
   font-weight: bold;
+  
   a {
     color: inherit;
   }
 }
 
-// Page-specific h1 gradients (blog, portfolio, project, authors)
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--firstGray-color);
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--firstGray-color);
+}
+
+// === PAGE-SPECIFIC GRADIENT OVERRIDES ===
+// Blog, Portfolio, Authors pages - h1 with gradient
 .blog__container h1,
 .expertise__header h1,
 .exp-collection__container h1,
@@ -1653,6 +1708,7 @@ h1 {
   width: 100%;
 }
 
+// Light theme - h1 gradient variation
 .light-theme .blog__container h1,
 .light-theme .expertise__header h1,
 .light-theme .exp-collection__container h1,
@@ -1660,6 +1716,7 @@ h1 {
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
+// Dark theme - h1 gradient variation
 .dark-theme .blog__container h1,
 .dark-theme .expertise__header h1,
 .dark-theme .exp-collection__container h1,
@@ -1667,7 +1724,7 @@ h1 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
 }
 
-// Page-specific h2 gradients (for About/Project sections)
+// About/Project pages - h2 with gradient
 .page h2 {
   background-color: transparent;
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--secondBlue-color) 100%);
@@ -1680,37 +1737,14 @@ h1 {
   width: 100%;
 }
 
+// Light theme - h2 gradient variation
 .light-theme .page h2 {
   background-image: linear-gradient(135deg, var(--firstBlue-color) 0%, var(--darkBiceBlue-color) 100%);
 }
 
+// Dark theme - h2 gradient variation
 .dark-theme .page h2 {
   background-image: linear-gradient(135deg, var(--secondBlue-color) 0%, var(--firstBlue-color) 100%);
-}
-
-h2 {
-  font-size: 24px;
-  font-weight: bold;
-}
-
-h3 {
-  font-size: 20px;
-  font-weight: bold;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 18px;
-  color: var(--firstGray-color);
-  font-weight: bold;
-}
-
-h6 {
-  font-size: 18px;
-  color: var(--firstGray-color);
 }
 
 p {
