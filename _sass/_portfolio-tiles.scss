@@ -1785,17 +1785,15 @@
   flex-shrink: 0;
 }
 
-// Icon order variations
-.expertise__nav-link--collection .expertise__nav-icon {
-  order: -1;
+// Icon position utilities - apply directly to icon element
+// Usage: <svg class="expertise__nav-icon expertise__nav-icon--before">
+//        <svg class="expertise__nav-icon expertise__nav-icon--after">
+.expertise__nav-icon--before {
+  order: -1;  // icon BEFORE text
 }
 
-.expertise__nav-link--top .expertise__nav-icon {
-  order: 1;
-}
-
-.expertise__nav-link--back .expertise__nav-icon {
-  order: -1;
+.expertise__nav-icon--after {
+  order: 1;   // icon AFTER text
 }
 
 @media screen and (max-width: 640px) {

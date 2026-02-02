@@ -175,20 +175,18 @@ latest_posts_count: 3
 </div>
 
 <nav class="expertise__nav">
-  <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="expertise__nav-link expertise__nav-link--collection">
-    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-      <path d="M10 5H8a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"></path>
-      <path d="M16 5h4v4"></path>
-      <path d="M14 7l6-6"></path>
-    </svg>
-    Blog
-  </a>
-
-  <button type="button" class="expertise__nav-link expertise__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    Do góry
-    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+  <button type="button" class="expertise__nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    do góry
+    <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="expertise__nav-link">
+    blog
+    <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </a>
 </nav>
 

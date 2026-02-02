@@ -106,13 +106,27 @@ excerpt: "Wgląd w metodologie i najlepsze praktyki koordynacji BIM"
 </div>
 
 <!-- Nawigacja w stopce -->
-<nav class="blog__nav">
-  <button type="button" class="blog__nav-link blog__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    Na górę
-    <svg class="blog__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+<nav class="expertise__nav">
+  <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="expertise__nav-link">
+    <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    home
+  </a>
+
+  <button type="button" class="expertise__nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    do góry
+    <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
+
+  <a href="{{ site.baseurl }}/{{ page.lang }}/expertise/" class="expertise__nav-link">
+    doświadczenie
+    <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </a>
 </nav>
 
 <!-- Osadzenie danych postów -->

@@ -996,3 +996,27 @@ Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do r
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}
 
 {% endfor %}
+
+<!-- Navigation Footer -->
+<nav class="expertise__nav">
+  <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="expertise__nav-link expertise__nav-link--back">
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+    home
+  </a>
+
+  <button type="button" class="expertise__nav-link expertise__nav-link--top" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+    do góry
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="18 15 12 9 6 15"></polyline>
+    </svg>
+  </button>
+
+  <a href="{{ site.baseurl }}/{{ page.lang }}/contact/" class="expertise__nav-link expertise__nav-link--collection">
+    <svg class="expertise__nav-icon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+    kontakt
+  </a>
+</nav>
