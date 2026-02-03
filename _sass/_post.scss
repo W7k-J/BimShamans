@@ -281,27 +281,28 @@
     border-left: 2px solid transparent;
     transition: all 0.2s ease;
 
-    // Active section highlight
+    // Link styles (nested for proper specificity)
+    .post__toc-link {
+      display: block;
+      line-height: 1.4;
+      color: var(--secondGray-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--firstBlue-color);
+      }
+    }
+
+    // Active section highlight (higher specificity)
     &.active {
-      background-color: rgba(65, 131, 196, 0.12);
+      background-color: rgba(65, 131, 196, 0.15);
       border-left-color: var(--firstBlue-color);
-      box-shadow: 0 1px 4px rgba(65, 131, 196, 0.3);
-    }
+      box-shadow: 0 1px 4px rgba(65, 131, 196, 0.35);
 
-    &.active .post__toc-link {
-      color: var(--firstBlue-color);
-      font-weight: 600;
-    }
-  }
-
-  .post__toc-link {
-    display: block;
-    line-height: 1.4;
-    color: var(--secondGray-color);
-    text-decoration: none;
-
-    &:hover {
-      color: var(--firstBlue-color);
+      .post__toc-link {
+        color: var(--firstBlue-color);
+        font-weight: 600;
+      }
     }
   }
 }

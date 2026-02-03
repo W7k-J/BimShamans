@@ -50,14 +50,20 @@ document.addEventListener('DOMContentLoaded', function() {
             link.href = '#' + heading.id;
             link.textContent = heading.textContent;
 
-            // Smooth scroll on click
+            // Smooth scroll on click - aligns header with ToC top position
             link.addEventListener('click', function(e) {
                 e.preventDefault();
                 var target = document.getElementById(heading.id);
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
+                    // Calculate position: align header with ToC sidebar top
+                    // Account for fixed nav + ToC offset from top (~80px nav + ~24px padding)
+                    var navOffset = 104;
+                    var headerTop = target.getBoundingClientRect().top + window.pageYOffset;
+                    var scrollPosition = headerTop - navOffset;
+
+                    window.scrollTo({
+                        top: scrollPosition,
+                        behavior: 'smooth'
                     });
                     // Update URL hash without jumping
                     history.pushState(null, null, '#' + heading.id);
@@ -76,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
     generateTocItems(inlineTocList, false);
 
     // ============================================
-    // ACTIVE SECTION HIGHLIGHTING (sidebar only)
+    // ACTIVE SECTION HIGHLIGHTING (IntersectionObserver)
     // ============================================
 
     if (!sidebarTocList) return;
@@ -84,27 +90,18 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebarTocItems = sidebarTocList.querySelectorAll('.post__toc-item');
     if (sidebarTocItems.length === 0) return;
 
-    function getElementTop(el) {
-        // Get absolute position from document top
-        var rect = el.getBoundingClientRect();
-        return rect.top + window.scrollY;
-    }
+    // Track Y position for each heading to determine scroll direction
+    var headingIntersectionData = {};
+    headings.forEach(function(heading) {
+        headingIntersectionData[heading.id] = { y: 0 };
+    });
 
-    function updateActiveSection() {
-        var scrollPos = window.scrollY + 150; // Offset for header
-        var activeIndex = 0;
+    // Convert headings NodeList to array of IDs for index lookup
+    var headingIds = Array.from(headings).map(function(h) { return h.id; });
 
-        // Find which section we're in (use getBoundingClientRect for accuracy)
-        headings.forEach(function(heading, index) {
-            var headingTop = getElementTop(heading);
-            if (headingTop <= scrollPos) {
-                activeIndex = index;
-            }
-        });
-
-        // Update active class
-        sidebarTocItems.forEach(function(item, index) {
-            if (index === activeIndex) {
+    function setActiveItem(index) {
+        sidebarTocItems.forEach(function(item, i) {
+            if (i === index) {
                 item.classList.add('active');
             } else {
                 item.classList.remove('active');
@@ -112,20 +109,48 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Throttle scroll updates for performance
-    var throttleTimeout = null;
-    var throttleDelay = 100;
+    function handleIntersection(entries) {
+        entries.forEach(function(entry) {
+            var previousY = headingIntersectionData[entry.target.id].y;
+            var currentY = entry.boundingClientRect.y;
+            var index = headingIds.indexOf(entry.target.id);
 
-    function throttledUpdate() {
-        if (throttleTimeout) return;
-        throttleTimeout = setTimeout(function() {
-            updateActiveSection();
-            throttleTimeout = null;
-        }, throttleDelay);
+            if (entry.isIntersecting) {
+                // Heading entered viewport - make it active
+                setActiveItem(index);
+            } else {
+                // Heading left viewport
+                if (currentY > previousY && index > 0) {
+                    // Left going down (user scrolling up) - activate previous
+                    setActiveItem(index - 1);
+                }
+                // Left going up (user scrolling down) - keep current active
+            }
+
+            // Store current Y for next comparison
+            headingIntersectionData[entry.target.id].y = currentY;
+        });
     }
 
-    window.addEventListener('scroll', throttledUpdate, { passive: true });
+    // Check if IntersectionObserver is supported
+    if ('IntersectionObserver' in window) {
+        // Create observer - trigger when heading is in top 30% of viewport
+        var observer = new IntersectionObserver(handleIntersection, {
+            rootMargin: '-80px 0px -70% 0px',
+            threshold: 0
+        });
 
-    // Initial call
-    updateActiveSection();
+        // Observe all headings
+        headings.forEach(function(heading) {
+            observer.observe(heading);
+        });
+
+        // Cleanup on page unload
+        window.addEventListener('beforeunload', function() {
+            observer.disconnect();
+        });
+    }
+
+    // Set first item as active initially
+    setActiveItem(0);
 });
