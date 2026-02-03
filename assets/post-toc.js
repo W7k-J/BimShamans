@@ -84,13 +84,20 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebarTocItems = sidebarTocList.querySelectorAll('.post__toc-item');
     if (sidebarTocItems.length === 0) return;
 
+    function getElementTop(el) {
+        // Get absolute position from document top
+        var rect = el.getBoundingClientRect();
+        return rect.top + window.scrollY;
+    }
+
     function updateActiveSection() {
-        var scrollPos = window.scrollY + 120; // Offset for header
+        var scrollPos = window.scrollY + 150; // Offset for header
         var activeIndex = 0;
 
-        // Find which section we're in
+        // Find which section we're in (use getBoundingClientRect for accuracy)
         headings.forEach(function(heading, index) {
-            if (heading.offsetTop <= scrollPos) {
+            var headingTop = getElementTop(heading);
+            if (headingTop <= scrollPos) {
                 activeIndex = index;
             }
         });
