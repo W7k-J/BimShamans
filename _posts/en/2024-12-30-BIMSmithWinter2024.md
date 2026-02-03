@@ -1,11 +1,11 @@
 ---
-layout: post  
+layout: post
 title: BIMsmith Winter Wonderland Holiday Revit Family Competition 2024
 lang: en
 ref: 2024-12-30-BIMSmithWinter2024
 date: 2024-12-30 12:00:00
 author: Julian
-excerpt: "An intensive year full of architectural projects, coding challenges, and community involvement in the BIM ecosystem."
+excerpt: "How I built a custom particle system in Revit to simulate falling snow - complete with wind physics, 2,500 animation frames, and the code to make it happen."
 filter_hash_list:
   - "Revit"
   - "Community"
@@ -17,25 +17,54 @@ popularity: 8
 
 <!--excerpt-->
 
-## A Busy Year in Review
+## What I Built: A Particle System in Revit
 
-It was an intensive year full of several architectural projects, including two castles in Poland and two large offices in London, along with some smaller things. On my programming front, I’ve started coding another five plugins, two of which are already on the Autodesk App Store - Extra and Viewer. Additionally, I had to upgrade all my previous plugins from .NET Framework 4.8 to .NET Core 8, and I had plenty of fun learning more about the Revit API. On top of that, I took part in one architectural competition, I did some cool aerial photos for new developments in Cracow and got involved in various other projects. It was a busy year!
+**The challenge:** Create a realistic falling snow animation using only Revit families and parameters.
 
-## BIMsmith Winter Wonderland Challenge
+**The result:** A custom snowflake family with wind physics, animated across 2,500 frames on the Snowdon Towers sample project.
 
-But in December, I always reserve some time for the BIMsmith Winter Wonderland challenge. Each year, I try to push myself and expand my understanding of what is possible in Revit. While writing my plugins, I spent a lot of time testing my solutions on Revit sample project (BTW Paul Aubin, big thanks for making it!). So I decided to add some “snow” to Snowdon Towers. And it made me wonder if I’m able to create my own “particle system” allowing to simulate “the first snow” falling on it.
+---
 
-## Creating the Snowflake Family
+## Why Take on This Challenge?
 
-To achieve that, I made a "snowflake" family. It is a relatively simple family, and it includes basic parametric formulas to control its shape. But on top of that, it has a mathematical formula that allows it to swing in the wind as it falls. I did it this way so later while animating I was able to control its fall with just a single parameter, element’s altitude (KISS rule). Also, to make the whole thing possible, I had to use a clever trick to enable parametric length with both positive and negative values – yeap, you can do it in Revit.
+Every December, I reserve time for the BIMsmith Winter Wonderland competition. It's my annual excuse to push Revit's boundaries and discover what's actually possible.
 
-As some of you may know, I had previously created a cool & fully parametric snowflake for the BIMsmith Winter Wonderland challenge, but replicating it and/or making it better was not the aim this time. Instead, I was trying to make something small and extremely well optimized so editing thousands of them wouldn't be an issue. Performance was rather important to me, as I had to export almost 2,500 frames to create this short animation.
+This year's question: *Can I build a working particle system in Revit?*
 
-## Wrapping Up
+While testing my plugins on Paul Aubin's Revit sample project (thanks Paul!), I decided to make it snow on Snowdon Towers. Not just static snow - animated snowflakes falling and swirling in the wind.
 
-I hope you will like it, and Happy New Year!
+---
 
-*Pro tip: The way the family is built allows swapping my snowflake for something else - feel free to test it and use frogs instead!*
+## How the Snowflake Family Works
+
+The snowflake family looks simple, but it packs some clever engineering:
+
+- **Parametric shape control** - Basic formulas adjust the snowflake geometry
+- **Wind physics** - A mathematical formula creates realistic swaying as it falls
+- **Single-parameter animation** - The entire fall is controlled by one value: altitude
+- **Positive AND negative lengths** - Yes, you can do this in Revit (it's a neat trick)
+
+> **Design principle:** Following the KISS rule, I wanted to animate thousands of snowflakes by changing just one parameter per element.
+
+---
+
+## Performance: Why Optimization Mattered
+
+I've built [fancy parametric snowflakes before](https://bimsmith.com/), but this time the goal was different.
+
+**Previous approach:** Complex, detailed, visually impressive
+
+**This year's approach:** Minimal, optimized, animation-ready
+
+The reason? **I needed to export nearly 2,500 frames.** With thousands of snowflake instances updating per frame, every bit of optimization counted.
+
+---
+
+## Try It Yourself
+
+Happy New Year! I hope you enjoy the animation.
+
+> **Pro tip:** The family structure supports swapping geometries. Replace the snowflake with frogs, leaves, or confetti - the physics still work!
 
 ## Snowflake Animation Demo
 

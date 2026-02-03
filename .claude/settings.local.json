@@ -2,7 +2,8 @@
   "permissions": {
     "allow": [
       "Bash(bundle exec jekyll build:*)",
-      "Bash(echo:*)"
+      "Bash(echo:*)",
+      "WebFetch(domain:inblog.ai)"
     ]
   }
 }

@@ -1155,15 +1155,12 @@
 
 .progression-bar {
   width: 50px;
-  position: fixed;
-  left: calc(50vw - 715px); // center of container minus 100px gap (50vw - 600px - 15px - 100px)
-  top: calc(#{$nav-height} + #{$progression-bar-gap} + 50px); // navbar + (gap + indicator height) + extra spacing
-  bottom: calc(86px + #{$progression-bar-gap} + 15px); // footer + (gap + indicator height) + extra spacing
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   pointer-events: none;
-  z-index: 100;
+  position: relative; // Now relative within sticky sidebar
 
   // Vertical line with tick marks
   &__line {
@@ -1239,9 +1236,10 @@
   }
 }
 
-// Hide on mobile and tablet
+// Hide on mobile and tablet (now handled by sidebar visibility in _post.scss)
+// Kept for backward compatibility if progression-bar used outside sidebar
 @media screen and (max-width: 1024px) {
-  .progression-bar {
+  .progression-bar:not(.post__sidebar--right .progression-bar) {
     display: none;
   }
 }

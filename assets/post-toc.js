@@ -1,13 +1,17 @@
 /**
  * Post Table of Contents Generator
- * Auto-generates ToC from H2 headings in post content
+ * - Auto-generates ToC from H2 headings in post content
+ * - Populates both sidebar TOC and inline TOC
+ * - Highlights active section in sidebar TOC while scrolling
  */
 document.addEventListener('DOMContentLoaded', function() {
-    var tocContainer = document.querySelector('.post__toc');
-    var tocList = document.querySelector('.post__toc-list');
+    var sidebarTocList = document.querySelector('.post__toc--sidebar .post__toc-list');
+    var inlineTocList = document.querySelector('.post__toc--inline .post__toc-list');
+    var sidebarTocAside = document.querySelector('.post__sidebar--toc'); // Fixed aside container
+    var inlineToc = document.querySelector('.post__toc--inline');
     var postContent = document.querySelector('.post__content');
 
-    if (!tocContainer || !tocList || !postContent) {
+    if (!postContent) {
         return;
     }
 
@@ -16,46 +20,105 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Hide ToC if less than 2 headings
     if (headings.length < 2) {
-        tocContainer.style.display = 'none';
+        if (sidebarTocAside) sidebarTocAside.style.display = 'none';
+        if (inlineToc) inlineToc.style.display = 'none';
         return;
     }
 
-    // Generate ToC items
-    var fragment = document.createDocumentFragment();
+    // Generate ToC items for a given list
+    function generateTocItems(tocList, isSidebar) {
+        if (!tocList) return;
 
-    headings.forEach(function(heading, index) {
-        // Generate ID if heading doesn't have one
-        if (!heading.id) {
-            heading.id = 'section-' + (index + 1);
-        }
+        var fragment = document.createDocumentFragment();
 
-        // Create list item
-        var li = document.createElement('li');
-        li.className = 'post__toc-item';
+        headings.forEach(function(heading, index) {
+            // Generate ID if heading doesn't have one
+            if (!heading.id) {
+                heading.id = 'section-' + (index + 1);
+            }
 
-        // Create link
-        var link = document.createElement('a');
-        link.className = 'post__toc-link';
-        link.href = '#' + heading.id;
-        link.textContent = heading.textContent;
+            // Create list item
+            var li = document.createElement('li');
+            li.className = 'post__toc-item';
+            if (isSidebar) {
+                li.setAttribute('data-section-index', index);
+            }
 
-        // Smooth scroll on click
-        link.addEventListener('click', function(e) {
-            e.preventDefault();
-            var target = document.getElementById(heading.id);
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-                // Update URL hash without jumping
-                history.pushState(null, null, '#' + heading.id);
+            // Create link
+            var link = document.createElement('a');
+            link.className = 'post__toc-link';
+            link.href = '#' + heading.id;
+            link.textContent = heading.textContent;
+
+            // Smooth scroll on click
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                var target = document.getElementById(heading.id);
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    // Update URL hash without jumping
+                    history.pushState(null, null, '#' + heading.id);
+                }
+            });
+
+            li.appendChild(link);
+            fragment.appendChild(li);
+        });
+
+        tocList.appendChild(fragment);
+    }
+
+    // Populate both TOC lists
+    generateTocItems(sidebarTocList, true);
+    generateTocItems(inlineTocList, false);
+
+    // ============================================
+    // ACTIVE SECTION HIGHLIGHTING (sidebar only)
+    // ============================================
+
+    if (!sidebarTocList) return;
+
+    var sidebarTocItems = sidebarTocList.querySelectorAll('.post__toc-item');
+    if (sidebarTocItems.length === 0) return;
+
+    function updateActiveSection() {
+        var scrollPos = window.scrollY + 120; // Offset for header
+        var activeIndex = 0;
+
+        // Find which section we're in
+        headings.forEach(function(heading, index) {
+            if (heading.offsetTop <= scrollPos) {
+                activeIndex = index;
             }
         });
 
-        li.appendChild(link);
-        fragment.appendChild(li);
-    });
+        // Update active class
+        sidebarTocItems.forEach(function(item, index) {
+            if (index === activeIndex) {
+                item.classList.add('active');
+            } else {
+                item.classList.remove('active');
+            }
+        });
+    }
 
-    tocList.appendChild(fragment);
+    // Throttle scroll updates for performance
+    var throttleTimeout = null;
+    var throttleDelay = 100;
+
+    function throttledUpdate() {
+        if (throttleTimeout) return;
+        throttleTimeout = setTimeout(function() {
+            updateActiveSection();
+            throttleTimeout = null;
+        }, throttleDelay);
+    }
+
+    window.addEventListener('scroll', throttledUpdate, { passive: true });
+
+    // Initial call
+    updateActiveSection();
 });

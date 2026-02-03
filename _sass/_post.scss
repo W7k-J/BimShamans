@@ -2,6 +2,11 @@
 // Post Single Page Styles
 //
 
+// Post Article Container
+.post {
+  width: 100%;
+}
+
 // Breadcrumbs
 .post__breadcrumbs {
   display: flex;
@@ -184,6 +189,271 @@
 
   &:hover {
     color: var(--firstBlue-color);
+  }
+}
+
+// ============================================
+// 3-COLUMN LAYOUT
+// ============================================
+// TOC (FIXED) | Content (centered) | Actions (15%)
+// TOC is fixed position (always visible), Actions scroll with content
+
+// Main Layout Container (3-column grid)
+.post__layout {
+  display: grid;
+  grid-template-columns: 225px 1fr 225px;
+  gap: 2rem;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+// Left placeholder (holds space for fixed TOC)
+.post__sidebar-placeholder {
+  // Empty element to maintain grid space
+}
+
+// Main content column (width controlled by grid)
+.post__main {
+  width: 100%;
+}
+
+// ============================================
+// LEFT SIDEBAR: Fixed TOC (always visible)
+// ============================================
+
+.post__sidebar--toc {
+  position: fixed;
+  left: max(15px, calc((100vw - 1400px) / 2 + 15px));
+  top: calc(#{$nav-height} + 1.5rem);
+  width: 210px;
+  max-height: calc(100vh - #{$nav-height} - 3rem);
+  overflow-y: auto;
+  z-index: 50;
+
+  // Custom scrollbar
+  scrollbar-width: thin;
+  scrollbar-color: var(--thirdGray-color) transparent;
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--thirdGray-color);
+    border-radius: 4px;
+  }
+}
+
+.post__toc--sidebar {
+  padding: 0.75rem;
+  background-color: rgba(150, 150, 170, 0.1);
+  border-radius: $radius-small;
+  border-left: 2px solid var(--firstBlue-color);
+
+  .post__toc-header {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--firstGray-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 1px solid var(--forthGray-color);
+  }
+
+  .post__toc-list {
+    margin: 0;
+    padding-left: 1rem;
+    list-style: decimal;
+    font-size: 0.75rem;
+  }
+
+  .post__toc-item {
+    margin: 0.3rem 0;
+    padding-left: 0.2rem;
+    transition: color 0.2s ease;
+
+    &.active .post__toc-link {
+      color: var(--firstBlue-color);
+      font-weight: 600;
+    }
+  }
+
+  .post__toc-link {
+    display: block;
+    line-height: 1.35;
+    color: var(--secondGray-color);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--firstBlue-color);
+    }
+  }
+}
+
+// ============================================
+// RIGHT SIDEBAR: Actions (15% width, NOT sticky)
+// ============================================
+
+.post__sidebar--actions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  font-size: 0.85rem;
+}
+
+.post__actions-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.post__actions-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--secondGray-color);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.post__share-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.post__share-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--thirdGray-color);
+  border-radius: $radius-small;
+  background: var(--background-color);
+  color: var(--secondGray-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  &:hover {
+    border-color: var(--firstBlue-color);
+    color: var(--firstBlue-color);
+  }
+
+  &.copied {
+    border-color: var(--firstBlue-color);
+    background: var(--firstBlue-color);
+    color: white;
+
+    .icon-copy { display: none; }
+    .icon-check { display: block !important; }
+  }
+}
+
+.post__author-card {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.post__author-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--firstBlue-color);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.post__author-name {
+  font-weight: 500;
+  color: var(--firstGray-color);
+}
+
+.post__action-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  color: var(--firstBlue-color);
+  text-decoration: none;
+  font-size: 0.8rem;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--secondBlue-color);
+    text-decoration: underline;
+  }
+
+  &--nav {
+    color: var(--secondGray-color);
+
+    &:hover {
+      color: var(--firstBlue-color);
+    }
+  }
+}
+
+// Prev/Next on one line
+.post__nav-inline {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+// ============================================
+// INLINE TOC (tablet/mobile only)
+// ============================================
+
+.post__toc--inline {
+  display: none; // Hidden on desktop by default
+}
+
+// ============================================
+// RESPONSIVE BREAKPOINTS
+// ============================================
+
+// Large screens (>1280px): Full 3-column layout
+// Medium screens (1024-1280px): Hide TOC, 2-column
+// Small screens (<1024px): Single column
+
+@media screen and (max-width: 1280px) {
+  .post__layout {
+    grid-template-columns: 1fr 225px;
+    gap: 1.5rem;
+  }
+
+  .post__sidebar-placeholder {
+    display: none;
+  }
+
+  .post__sidebar--toc {
+    display: none;
+  }
+
+  .post__toc--inline {
+    display: block;
+    margin-bottom: 2rem;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  // Stack to single column
+  .post__layout {
+    display: block;
+  }
+
+  // Hide right sidebar on mobile
+  .post__sidebar--actions {
+    display: none;
   }
 }
 

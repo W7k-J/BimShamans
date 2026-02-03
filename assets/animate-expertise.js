@@ -20,6 +20,17 @@ document.addEventListener('DOMContentLoaded', function () {
       setTimeout(function () {
         container.classList.add('is-animated');
       }, 20);
+
+      // Clear transitionDelay after animation completes to prevent theme switch delays
+      var maxDelay = sections.length * 80 + 80 + 480; // max stagger + animation duration
+      setTimeout(function () {
+        sections.forEach(function (section) {
+          var media = section.querySelector('.expertise-section__media');
+          var content = section.querySelector('.expertise-section__content');
+          if (content) content.style.transitionDelay = '';
+          if (media) media.style.transitionDelay = '';
+        });
+      }, maxDelay);
     });
   } catch (e) {
     // fail gracefully
