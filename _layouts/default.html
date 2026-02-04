@@ -225,9 +225,16 @@
         <div class="container">
             <footer class="footer">
                 {% include svg-icons.html %}
+                <div class="footer__legal">
+                    <a href="{{ site.baseurl }}/{{ page.lang }}/privacy/">{{ t.footer_privacy }}</a>
+                </div>
             </footer>
         </div>
     </div>
+
+    <!-- Cookie Notice -->
+    {% include cookie-notice.html %}
+    <script src="{{ site.baseurl }}/assets/cookie-notice.js" defer></script>
 
     {% include analytics.html %}
 </body>

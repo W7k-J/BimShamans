@@ -392,6 +392,11 @@
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
+
+  &-label {
+    color: var(--secondGray-color);
+    font-size: 0.9rem;
+  }
 }
 
 .post__author-card {

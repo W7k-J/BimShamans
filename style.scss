@@ -16,6 +16,7 @@
 @import "scrollbar-portfolio"; // Custom scrollbar for portfolio tiles (must load after portfolio-tiles)
 @import "authors";
 @import "post";
+@import "cookie-notice";
 
 // IMPORTS - Fonts (combined Google Fonts request for better performance)
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Michroma:wght@400;700;900&family=Syncopate:wght@400;700&family=Source+Code+Pro&display=swap');
@@ -1975,5 +1976,39 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
   text-align: center;
+}
+
+// Footer legal/privacy link
+.footer__legal {
+  display: flex;
+  align-items: center;
+
+  a {
+    color: var(--secondGray-color);
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+
+    &:hover {
+      color: var(--firstBlue-color);
+    }
+  }
+}
+
+// Mobile footer adjustments
+@media screen and (max-width: 480px) {
+  footer {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+    gap: 0.75rem;
+  }
+
+  .footer__legal {
+    a {
+      font-size: 0.8rem;
+    }
+  }
 }

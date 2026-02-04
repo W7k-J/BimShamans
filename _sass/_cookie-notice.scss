@@ -1,0 +1,133 @@
+// Cookie Notice Banner
+// Fixed bottom notification for informing users about localStorage usage
+
+.cookie-notice {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--background-color);
+  border-top: 1px solid var(--firstBlue-color);
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  z-index: 1000;
+  display: none; // Hidden by default, shown via JS
+
+  &__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--secondGray-color);
+    line-height: 1.5;
+
+    a {
+      color: var(--firstBlue-color);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+      transition: color 0.2s ease;
+
+      &:hover {
+        color: var(--secondBlue-color);
+      }
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+    background-color: var(--firstBlue-color);
+    color: var(--background-color);
+    border: none;
+    border-radius: $radius-small;
+    padding: 0.5rem 1.25rem;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.15s ease;
+
+    &:hover {
+      background-color: var(--secondBlue-color);
+    }
+
+    &:active {
+      transform: scale(0.97);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--secondBlue-color);
+      outline-offset: 2px;
+    }
+  }
+
+  // Hiding animation
+  &--hiding {
+    animation: cookie-notice-hide 0.3s ease forwards;
+  }
+}
+
+// Dark theme adjustments
+.dark-theme .cookie-notice {
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+
+  &__button {
+    color: #{$raisinBlack};
+  }
+}
+
+// Light theme adjustments
+.light-theme .cookie-notice {
+  &__button {
+    color: #{$ghostWhite};
+  }
+}
+
+// Hide animation
+@keyframes cookie-notice-hide {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+}
+
+// Mobile responsive
+@media screen and (max-width: 640px) {
+  .cookie-notice {
+    &__content {
+      flex-direction: column;
+      gap: 1rem;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    &__text {
+      font-size: 0.85rem;
+    }
+
+    &__button {
+      width: 100%;
+      padding: 0.65rem 1.5rem;
+    }
+  }
+}
+
+// Reduced motion preference
+@media (prefers-reduced-motion: reduce) {
+  .cookie-notice {
+    &--hiding {
+      animation: none;
+      opacity: 0;
+    }
+  }
+}

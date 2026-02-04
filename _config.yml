@@ -102,6 +102,13 @@ t:
       10: "October"
       11: "November"
       12: "December"
+    # Privacy & Cookie Notice
+    privacy: "privacy policy"
+    privacy_title: "Privacy Policy"
+    cookie_notice_text: "This website uses localStorage to remember your preferences. No tracking cookies are used."
+    cookie_notice_link: "Learn more"
+    cookie_notice_accept: "Got it"
+    footer_privacy: "Privacy Policy"
   pl:
     home: "strona główna"
     blog: "blog"
@@ -142,6 +149,13 @@ t:
       10: "Października"
       11: "Listopada"
       12: "Grudnia"
+    # Privacy & Cookie Notice
+    privacy: "polityka prywatności"
+    privacy_title: "Polityka Prywatności"
+    cookie_notice_text: "Ta strona używa localStorage do zapamiętania preferencji. Nie używamy cookies śledzących."
+    cookie_notice_link: "Dowiedz się więcej"
+    cookie_notice_accept: "Rozumiem"
+    footer_privacy: "Polityka Prywatności"
 
 #
 # Flags below are optional

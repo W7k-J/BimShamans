@@ -1,0 +1,12 @@
+{% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
+<div id="cookie-notice" class="cookie-notice" role="alert" aria-live="polite">
+    <div class="cookie-notice__content">
+        <p class="cookie-notice__text">
+            {{ t.cookie_notice_text }}
+            <a href="{{ site.baseurl }}/{{ page.lang }}/privacy/">{{ t.cookie_notice_link }}</a>
+        </p>
+        <button type="button" class="cookie-notice__button" id="cookie-accept" aria-label="{{ t.cookie_notice_accept }}">
+            {{ t.cookie_notice_accept }}
+        </button>
+    </div>
+</div>
