@@ -109,7 +109,7 @@
             <nav class="site-nav">
                 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
                 <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="{% if page.url contains '/home' %}active{% endif %}">{{ t.home }}</a>
-                <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' %}active{% endif %}">{{ t.blog }}</a>
+                <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' or page.id %}active{% endif %}">{{ t.blog }}</a>
                 
                 <!-- Portfolio with dropdown menu (desktop only) -->
                 <div class="dropdown-wrapper">

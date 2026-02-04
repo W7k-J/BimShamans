@@ -90,16 +90,13 @@ document.addEventListener('DOMContentLoaded', function() {
     var sidebarTocItems = sidebarTocList.querySelectorAll('.post__toc-item');
     if (sidebarTocItems.length === 0) return;
 
-    // Track Y position for each heading to determine scroll direction
-    var headingIntersectionData = {};
-    headings.forEach(function(heading) {
-        headingIntersectionData[heading.id] = { y: 0 };
-    });
-
-    // Convert headings NodeList to array of IDs for index lookup
-    var headingIds = Array.from(headings).map(function(h) { return h.id; });
+    // Convert headings NodeList to array for easier manipulation
+    var headingsArray = Array.from(headings);
+    var currentActiveIndex = -1; // Initialize to -1 so first setActiveItem call applies
 
     function setActiveItem(index) {
+        if (index === currentActiveIndex) return; // Avoid unnecessary DOM updates
+        currentActiveIndex = index;
         sidebarTocItems.forEach(function(item, i) {
             if (i === index) {
                 item.classList.add('active');
@@ -109,48 +106,46 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    function handleIntersection(entries) {
-        entries.forEach(function(entry) {
-            var previousY = headingIntersectionData[entry.target.id].y;
-            var currentY = entry.boundingClientRect.y;
-            var index = headingIds.indexOf(entry.target.id);
+    // Calculate which heading should be active based on scroll position
+    function getActiveHeadingIndex() {
+        var navOffset = 104; // Fixed nav height + padding
+        var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+        var activeIndex = 0;
 
-            if (entry.isIntersecting) {
-                // Heading entered viewport - make it active
-                setActiveItem(index);
+        for (var i = 0; i < headingsArray.length; i++) {
+            var heading = headingsArray[i];
+            var headingTop = heading.getBoundingClientRect().top + scrollTop;
+
+            // If heading is above the trigger line, it's the current section
+            if (headingTop <= scrollTop + navOffset + 20) {
+                activeIndex = i;
             } else {
-                // Heading left viewport
-                if (currentY > previousY && index > 0) {
-                    // Left going down (user scrolling up) - activate previous
-                    setActiveItem(index - 1);
-                }
-                // Left going up (user scrolling down) - keep current active
+                break;
             }
+        }
 
-            // Store current Y for next comparison
-            headingIntersectionData[entry.target.id].y = currentY;
+        return activeIndex;
+    }
+
+    // Update active item on scroll
+    var scrollTimeout;
+    function handleScroll() {
+        if (scrollTimeout) {
+            cancelAnimationFrame(scrollTimeout);
+        }
+        scrollTimeout = requestAnimationFrame(function() {
+            setActiveItem(getActiveHeadingIndex());
         });
     }
 
-    // Check if IntersectionObserver is supported
-    if ('IntersectionObserver' in window) {
-        // Create observer - trigger when heading is in top 30% of viewport
-        var observer = new IntersectionObserver(handleIntersection, {
-            rootMargin: '-80px 0px -70% 0px',
-            threshold: 0
-        });
+    // Listen for scroll events
+    window.addEventListener('scroll', handleScroll, { passive: true });
 
-        // Observe all headings
-        headings.forEach(function(heading) {
-            observer.observe(heading);
-        });
+    // Cleanup on page unload
+    window.addEventListener('beforeunload', function() {
+        window.removeEventListener('scroll', handleScroll);
+    });
 
-        // Cleanup on page unload
-        window.addEventListener('beforeunload', function() {
-            observer.disconnect();
-        });
-    }
-
-    // Set first item as active initially
-    setActiveItem(0);
+    // Set initial active item based on current scroll position
+    setActiveItem(getActiveHeadingIndex());
 });
