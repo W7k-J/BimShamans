@@ -1976,39 +1976,103 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  position: relative;
   text-align: center;
-}
 
-// Footer legal/privacy link
-.footer__legal {
-  display: flex;
-  align-items: center;
+  // Icons wrapper
+  .footer__icons {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
 
+  // Fix icon link alignment
   a {
-    color: var(--secondGray-color);
-    font-size: 0.85rem;
-    text-decoration: none;
-    transition: color 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 0;
+  }
+
+  // Hover effect for svg-icons (LinkedIn, etc.)
+  .svg-icon {
+    border-radius: 50%;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 
     &:hover {
-      color: var(--firstBlue-color);
+      transform: scale(1.05);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
     }
+  }
+
+  // Copyright text
+  .footer__copyright {
+    position: absolute;
+    right: 0;
+    font-size: 0.9rem;
+    color: var(--firstBlue-color);
+    white-space: nowrap;
   }
 }
 
 // Mobile footer adjustments
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 640px) {
   footer {
     flex-direction: column;
     height: auto;
     padding: 1rem 0;
     gap: 0.75rem;
-  }
 
-  .footer__legal {
-    a {
+    .footer__icons {
+      gap: 1.5rem;
+    }
+
+    .footer__copyright {
+      position: static;
       font-size: 0.8rem;
+      text-align: center;
+      white-space: normal;
     }
   }
+}
+
+// Privacy policy icon in footer
+.svg-icon-link.privacy-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.privacy-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  object-fit: contain;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+}
+
+// Theme-based visibility for privacy icon
+// Light theme: show dark icon (better contrast)
+.light-theme .privacy-icon--light {
+  display: inline-block;
+}
+
+.light-theme .privacy-icon--dark {
+  display: none;
+}
+
+// Dark theme: show light icon (better contrast)
+.dark-theme .privacy-icon--light {
+  display: none;
+}
+
+.dark-theme .privacy-icon--dark {
+  display: inline-block;
 }
