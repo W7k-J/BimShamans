@@ -989,7 +989,7 @@ We tackle topics that orbit around civil enginneering, BIM technology, automatio
 The team behind BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through **automation**, **standardization**, and **pragmatic engineering**.
 {% for author in page.authors %}
 
-#### {{ author.name }}
+#### {{ author.name }} {#{{ author.name | slugify }}}
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}

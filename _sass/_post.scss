@@ -19,22 +19,23 @@
   a {
     color: var(--firstBlue-color);
     text-decoration: none;
-    transition: color $transition-base ease;
     text-transform: capitalize;
+    text-shadow: 0px 0px 0px transparent;
+    transition: text-shadow 0.3s ease;
 
     &:hover {
-      color: var(--secondBlue-color);
+      text-shadow: 0px 0px 1px var(--firstBlue-color);
     }
   }
 
   &-separator {
     color: var(--thirdGray-color);
-    font-weight: 300;
+    font-weight: 400;
   }
 
   &-current {
     color: var(--firstGray-color);
-    font-weight: 500;
+    font-weight: 400;
   }
 }
 
@@ -122,7 +123,6 @@
   background-color: rgba(150, 150, 170, 0.2);
   border-radius: $radius-medium;
   border: none;
-  box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .post__toc-details {
@@ -193,19 +193,18 @@
 }
 
 // ============================================
-// 3-COLUMN LAYOUT
+// 2-COLUMN LAYOUT
 // ============================================
-// TOC (FIXED) | Content (centered) | Actions (15%)
-// TOC is fixed position (always visible), Actions scroll with content
+// TOC (FIXED) | Content (centered)
+// TOC is fixed position (always visible)
 
-// Main Layout Container (3-column grid)
+// Main Layout Container (2-column grid)
 .post__layout {
   display: grid;
-  grid-template-columns: 225px 1fr 225px;
+  grid-template-columns: 250px 780px;
   gap: 2rem;
   align-items: start;
-  max-width: 1400px;
-  margin: 0 auto;
+  max-width: 1062px; // 250 + 780 + 32 (gap)
 }
 
 // Left placeholder (holds space for fixed TOC)
@@ -213,9 +212,10 @@
   // Empty element to maintain grid space
 }
 
-// Main content column (width controlled by grid)
+// Main content column
 .post__main {
-  width: 100%;
+  width: 780px;
+  max-width: 100%;
 }
 
 // ============================================
@@ -224,9 +224,12 @@
 
 .post__sidebar--toc {
   position: fixed;
-  left: max(15px, calc((100vw - 1400px) / 2 + 15px));
+  // Align with .container left edge (max-width: 1400px, margin: 0 auto, padding: 0 15px)
+  // When viewport <= 1400px: left = 15px
+  // When viewport > 1400px: left = (100vw - 1400px) / 2 + 15px
+  left: max(15px, calc(50vw - 685px));
   top: calc(#{$nav-height} + 1.5rem);
-  width: 210px;
+  width: 250px;
   max-height: calc(100vh - #{$nav-height} - 3rem);
   overflow-y: auto;
   z-index: 50;
@@ -252,7 +255,7 @@
 .post__toc--sidebar {
   padding: 0.75rem;
   background-color: rgba(150, 150, 170, 0.1);
-  border-radius: $radius-small;
+  border-radius: $radius-medium;
   border-left: 2px solid var(--firstBlue-color);
 
   .post__toc-header {
@@ -264,14 +267,14 @@
     color: var(--firstGray-color);
     padding-bottom: 0.5rem;
     margin-bottom: 0.5rem;
-    border-bottom: 1px solid var(--forthGray-color);
+    // border-bottom: 1px solid var(--forthGray-color);
   }
 
   .post__toc-list {
     margin: 0;
     padding-left: 0;
     list-style: none;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
 
   .post__toc-item {
@@ -363,6 +366,32 @@
     .icon-copy { display: none; }
     .icon-check { display: block !important; }
   }
+
+  // Inline variant for header meta row
+  &--inline {
+    width: 24px;
+    height: 24px;
+    border: none;
+    background: transparent;
+    color: var(--secondGray-color);
+    padding: 0;
+
+    &:hover {
+      color: var(--firstBlue-color);
+    }
+
+    &.copied {
+      background: transparent;
+      color: var(--firstBlue-color);
+    }
+  }
+}
+
+// Share buttons in meta row
+.post__meta-share {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .post__author-card {
@@ -389,6 +418,61 @@
   color: var(--firstGray-color);
 }
 
+// Author Bio Section (bottom of article)
+.post__author-bio {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.5rem;
+  margin: 2rem 0;
+  margin-left: calc(250px + 2rem); // Align with content column (ToC width + gap)
+  width: 780px;
+  max-width: calc(100vw - 250px - 4rem);
+  background: rgba(150, 150, 170, 0.1);
+  border-radius: $radius-medium;
+  box-shadow: -2px 0 0 0 var(--firstBlue-color);
+
+  .post__author-avatar {
+    width: 48px;
+    height: 48px;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+
+    &--image {
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+
+  .post__author-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .post__author-name {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .post__author-role {
+    font-size: 0.9rem;
+    color: var(--secondGray-color);
+  }
+
+  .post__author-description {
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--secondGray-color);
+    margin: 0.5rem 0;
+  }
+
+  .post__author-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+
 .post__action-link {
   display: inline-flex;
   align-items: center;
@@ -396,11 +480,11 @@
   color: var(--firstBlue-color);
   text-decoration: none;
   font-size: 0.8rem;
-  transition: color 0.2s ease;
+  text-shadow: 0px 0px 0px transparent;
+  transition: text-shadow 0.3s ease;
 
   &:hover {
-    color: var(--secondBlue-color);
-    text-decoration: underline;
+    text-shadow: 0px 0px 1px var(--firstBlue-color);
   }
 
   &--nav {
@@ -408,6 +492,7 @@
 
     &:hover {
       color: var(--firstBlue-color);
+      text-shadow: 0px 0px 1px var(--firstBlue-color);
     }
   }
 }
@@ -432,12 +517,12 @@
 // ============================================
 
 // Large screens (>1280px): Full 3-column layout
-// Medium screens (1024-1280px): Hide TOC, 2-column
+// Medium screens (1024-1280px): Hide TOC, single column content
 // Small screens (<1024px): Single column
 
 @media screen and (max-width: 1280px) {
   .post__layout {
-    grid-template-columns: 1fr 225px;
+    grid-template-columns: 1fr;
     gap: 1.5rem;
   }
 
@@ -453,17 +538,19 @@
     display: block;
     margin-bottom: 2rem;
   }
+
+  .post__author-bio {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    max-width: 780px;
+  }
 }
 
 @media screen and (max-width: 1024px) {
   // Stack to single column
   .post__layout {
     display: block;
-  }
-
-  // Hide right sidebar on mobile
-  .post__sidebar--actions {
-    display: none;
   }
 }
 
@@ -633,6 +720,30 @@
 
   .post__meta-separator {
     display: none;
+  }
+
+  .post__meta-share {
+    margin-top: 0.5rem;
+  }
+
+  .post__author-bio {
+    padding: 1rem;
+    gap: 0.75rem;
+
+    .post__author-avatar {
+      width: 40px;
+      height: 40px;
+      font-size: 1rem;
+    }
+
+    .post__author-description {
+      font-size: 0.85rem;
+    }
+
+    .post__author-links {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
   }
   
   .post__lead {

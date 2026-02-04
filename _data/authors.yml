@@ -1,0 +1,63 @@
+# Authors data for blog posts
+# Usage in post frontmatter: author: piotr (lowercase key)
+# Access in templates: site.data.authors[page.author]
+
+piotr:
+  name: Piotr
+  slug: piotr-spyra
+  bio:
+    en: "BIM Coordinator and BIM Manager, licensed structural designer. An engineer working at the intersection of design and construction, always advocating for data correctness and completeness."
+    pl: "BIM Koordynator, BIM Manager, uprawniony projektant konstrukcji budowlanych. Inżynier pracujący na styku projektowania i wykonawstwa, zawsze po stronie poprawności i kompletności danych."
+  avatar:
+  role:
+    en: "BIM Coordinator, Data Analyst & Structural Designer"
+    pl: "BIM Koordynator, Specjalista ds. danych, Konstruktor"
+  social:
+    linkedin: https://www.linkedin.com/in/spyrapiotr
+    twitter:
+    github:
+
+julian:
+  name: Julian
+  slug: julian-wandzilak
+  bio:
+    en: "Independent architect, creator, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Pioneer in Revit automation with published plugins used by professionals worldwide."
+    pl: "Niezależny architekt, twórca, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM, twórca własnych pluginów Revit używanych przez profesjonalistów na całym świecie."
+  avatar:
+  role:
+    en: "Independent Architect & Programmer"
+    pl: "Niezależny Architekt i Programista"
+  social:
+    linkedin: https://www.linkedin.com/in/wandzilak/
+    twitter:
+    github:
+
+natalia:
+  name: Natalia
+  slug: natalia-gawlik
+  bio:
+    en: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python."
+    pl: "Koordynatorka BIM, geodeta i GISowiec z doświadczeniem zdobywanym na dużych projektach infrastrukturalnych dla sektora publicznego w Norwegii. Specjalistka w zarządzaniu danymi, automatyzacji i modelowaniu parametrycznym przy użyciu Dynamo, Grasshoppera i Pythona."
+  avatar:
+  role:
+    en: "Koordynator BIM i Worklfow - Infrastruktura"
+    pl: "Infrastructure BIM Coordinator & Workflow Specialist"
+  social:
+    linkedin: https://www.linkedin.com/in/natgaw/
+    twitter:
+    github:
+
+# Add more authors as needed:
+# author_key:
+#   name: Display Name
+#   bio:
+#     en: "English bio..."
+#     pl: "Polish bio..."
+#   avatar: /images/authors/name.jpg
+#   role:
+#     en: "Job Title"
+#     pl: "Tytuł stanowiska"
+#   social:
+#     linkedin: https://linkedin.com/in/username
+#     twitter: https://twitter.com/username
+#     github: https://github.com/username

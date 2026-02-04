@@ -990,7 +990,7 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
 {% for author in page.authors %}
 
-#### {{ author.name }}
+#### {{ author.name }} {#{{ author.name | slugify }}}
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}

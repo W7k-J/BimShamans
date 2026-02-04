@@ -96,6 +96,34 @@ layout: default
             </svg>
             {{ reading_time }} min {{ t.read | default: "read" }}
           </span>
+
+          <span class="post__meta-separator" aria-hidden="true">•</span>
+          <span class="post__meta-item post__meta-share">
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}"
+               class="post__share-btn post__share-btn--inline" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}"
+               class="post__share-btn post__share-btn--inline" target="_blank" rel="noopener noreferrer" title="X/Twitter">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
+                <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
+              </svg>
+            </a>
+            <button type="button" class="post__share-btn post__share-btn--inline post__share-btn--copy" data-url="{{ page.url | absolute_url }}" title="Copy link">
+              <svg class="icon-copy" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              <svg class="icon-check" viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+            </button>
+          </span>
         </div>
 
         {% if page.excerpt %}
@@ -142,100 +170,50 @@ layout: default
     </div>
     <!-- End Main -->
 
-    <!-- RIGHT SIDEBAR: Share, Author, Navigation (NOT sticky) -->
-    <aside class="post__sidebar post__sidebar--actions">
-
-      <!-- Share Buttons -->
-      <div class="post__actions-group">
-        <div class="post__actions-label">{{ t.share | default: "Share" }}</div>
-        <div class="post__share-buttons">
-          <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ page.url | absolute_url | url_encode }}"
-             class="post__share-btn" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-              <rect x="2" y="9" width="4" height="12"></rect>
-              <circle cx="4" cy="4" r="2"></circle>
-            </svg>
-          </a>
-          <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url | url_encode }}&text={{ page.title | url_encode }}"
-             class="post__share-btn" target="_blank" rel="noopener noreferrer" title="X/Twitter">
-            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4l11.733 16h4.267l-11.733 -16z"></path>
-              <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772"></path>
-            </svg>
-          </a>
-          <button type="button" class="post__share-btn post__share-btn--copy" data-url="{{ page.url | absolute_url }}" title="Copy link">
-            <svg class="icon-copy" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-              <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-            </svg>
-            <svg class="icon-check" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" style="display:none">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-          </button>
-        </div>
-      </div>
-
-      <!-- Author Info -->
-      {% if page.author %}
-      <div class="post__actions-group">
-        <div class="post__author-card">
-          <div class="post__author-avatar">{{ page.author | slice: 0 }}</div>
-          <div class="post__author-name">{{ page.author }}</div>
-        </div>
-        <a href="{{ site.baseurl }}/{{ page.lang }}/about/" class="post__action-link">
-          {{ t.about_author | default: "About author" }}
-        </a>
-      </div>
-      {% endif %}
-
-      <!-- Article Navigation -->
-      <div class="post__actions-group">
-        <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="post__action-link">
-          {{ t.all_articles | default: "All articles" }}
-        </a>
-
-        {% assign posts_in_lang = site.posts | where: "lang", page.lang | sort: "date" %}
-        {% assign post_index = nil %}
-        {% for p in posts_in_lang %}
-          {% if p.url == page.url %}
-            {% assign post_index = forloop.index0 %}
-          {% endif %}
-        {% endfor %}
-
-        {% if post_index != nil %}
-          {% assign prev_index = post_index | plus: 1 %}
-          {% assign next_index = post_index | minus: 1 %}
-          {% assign prev_post = posts_in_lang[prev_index] %}
-          {% assign next_post = posts_in_lang[next_index] %}
-        {% endif %}
-
-        <!-- Prev/Next on one line -->
-        <div class="post__nav-inline">
-          {% if prev_post %}
-          <a href="{{ prev_post.url | relative_url }}" class="post__action-link post__action-link--nav" title="{{ prev_post.title }}">
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="15 18 9 12 15 6"></polyline>
-            </svg>
-            {{ t.prev_post | default: "Prev" }}
-          </a>
-          {% endif %}
-
-          {% if next_post %}
-          <a href="{{ next_post.url | relative_url }}" class="post__action-link post__action-link--nav" title="{{ next_post.title }}">
-            {{ t.next_post | default: "Next" }}
-            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="9 18 15 12 9 6"></polyline>
-            </svg>
-          </a>
-          {% endif %}
-        </div>
-      </div>
-
-    </aside>
-
   </div>
   <!-- End Layout Grid -->
+
+  <!-- Post index for prev/next navigation -->
+  {% assign posts_in_lang = site.posts | where: "lang", page.lang | sort: "date" %}
+  {% assign post_index = nil %}
+  {% for p in posts_in_lang %}
+    {% if p.url == page.url %}
+      {% assign post_index = forloop.index0 %}
+    {% endif %}
+  {% endfor %}
+
+  {% if post_index != nil %}
+    {% assign prev_index = post_index | plus: 1 %}
+    {% assign next_index = post_index | minus: 1 %}
+    {% assign prev_post = posts_in_lang[prev_index] %}
+    {% assign next_post = posts_in_lang[next_index] %}
+  {% endif %}
+
+  <!-- Author Bio Section -->
+  {% if page.author %}
+    {% assign author_key = page.author | downcase %}
+    {% assign author = site.data.authors[author_key] %}
+  <div class="post__author-bio">
+    {% if author.avatar %}
+      <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" class="post__author-avatar post__author-avatar--image">
+    {% else %}
+      <div class="post__author-avatar">{{ author.name | default: page.author | slice: 0 }}</div>
+    {% endif %}
+    <div class="post__author-info">
+      <div class="post__author-name">{{ author.name | default: page.author }}</div>
+      {% if author.role[page.lang] %}
+        <div class="post__author-role">{{ author.role[page.lang] }}</div>
+      {% endif %}
+      {% if author.bio[page.lang] %}
+        <p class="post__author-description">{{ author.bio[page.lang] }}</p>
+      {% endif %}
+      <div class="post__author-links">
+        <a href="{{ site.baseurl }}/{{ page.lang }}/about/#{{ author.slug }}" class="post__action-link">
+          {{ t.about_author | default: "about author" }}</a>{% if author.social.linkedin %}<span class="post__meta-separator" aria-hidden="true">•</span><a href="{{ author.social.linkedin }}" class="post__action-link" target="_blank" rel="noopener noreferrer">{{ t.linkedin_profile | default: "linkedin profile" }}</a>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endif %}
 
   <!-- Bibliography state script -->
   <script>
