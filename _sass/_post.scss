@@ -123,6 +123,7 @@
   background-color: rgba(150, 150, 170, 0.2);
   border-radius: $radius-medium;
   border: none;
+  box-shadow: -2px 0 0 0 var(--firstBlue-color);
 }
 
 .post__toc-details {
@@ -532,6 +533,11 @@
   .post__layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
+    justify-items: center;
+  }
+
+  .post__main {
+    margin: 0 auto;
   }
 
   .post__sidebar-placeholder {
@@ -878,7 +884,7 @@
   background-color: rgba(150, 150, 170, 0.2);
   border-radius: $radius-medium;
   border: none;
-  box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+  box-shadow: -2px 0 0 0 var(--firstBlue-color);
 }
 
 .post__bibliography-details {
