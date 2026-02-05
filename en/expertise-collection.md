@@ -488,7 +488,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
               <p class="project-tile__description">
                 3D-driven BI for residential units on concept design stage brings fresh perspective to requirements analysis. No more pivot tables on one half of screen and drawings on the other half. It can be one, it can interact, it can bring more use from already produced data.
                 <br>
-                <br>Example shows rooms' bounding boxes, so before data export, quick QA check is required, especially when third party software comes in. Revit users know, sometimes non-geometrical, but still existing room representation can be found! Can affect database and bring a little mess into the dashboard.
+                <br>Example shows rooms' bounding boxes, so before data export, quick QA check is required, especially when third party software comes in. Revit users know, sometimes non-geometrical, but still existing room representation can be found! Can affect database and bring a little mess into the dashboard.<br><br>
               </p>
             </div>
           </div>
