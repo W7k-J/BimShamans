@@ -105,9 +105,9 @@ t:
     # Privacy & Cookie Notice
     privacy: "privacy policy"
     privacy_title: "Privacy Policy"
-    cookie_notice_text: "This website uses localStorage to remember your preferences. No tracking cookies are used."
-    cookie_notice_link: "Learn more"
-    cookie_notice_accept: "Got it"
+    cookie_notice_text: "This website uses local storage to remember your preferences. No tracking cookies are used."
+    cookie_notice_link: "Learn more."
+    cookie_notice_accept: "got it"
     footer_privacy: "Privacy Policy"
   pl:
     home: "strona główna"
@@ -124,8 +124,8 @@ t:
     back_to_portfolio: "Powrót do doświadczenia"
     go_to_top: "Na górę"
     toc: "Spis treści"
-    prev_post: "Poprz"
-    next_post: "Nast"
+    prev_post: "Poprz."
+    next_post: "Nast."
     view_all_projects: "Szczegóły dla tej kategorii"
     hero_cta_primary: "Porozmawiajmy o Twoim Projekcie"
     hero_cta_secondary: "Zobacz Nasze Doświadczenie"
@@ -153,8 +153,8 @@ t:
     privacy: "polityka prywatności"
     privacy_title: "Polityka Prywatności"
     cookie_notice_text: "Ta strona używa localStorage do zapamiętania preferencji. Nie używamy cookies śledzących."
-    cookie_notice_link: "Dowiedz się więcej"
-    cookie_notice_accept: "Rozumiem"
+    cookie_notice_link: "Dowiedz się więcej."
+    cookie_notice_accept: "rozumiem"
     footer_privacy: "Polityka Prywatności"
 
 #
