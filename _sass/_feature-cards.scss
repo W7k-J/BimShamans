@@ -435,7 +435,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     // Hover state for touch feedback
     &:hover .feature-card__label,
     &:focus .feature-card__label {
-      background-color: rgba(var(--firstBlue-color-rgb), 0.18);
+      background-color: rgba(var(--firstBlue-color-rgb), 0.20);
     }
   }
   

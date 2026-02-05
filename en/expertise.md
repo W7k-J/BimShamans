@@ -241,7 +241,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.data_reporting }}</h2>
-      <p>Conclusion is the point of diving into data. Presentation is the way. Nowadays we collect data all the time - financial budgets, running reports, hike tracks notes, game logs, PV metrics and more! <br><br> Of course, our main goal is to bring value through data for AEC industry, but if the playground offers you infinite source of sand and gives you pretty useful tools, shape of the castles depends only on your imagination.</p>
+      <p>Conclusion is the point of diving into data. Presentation is the way. Nowadays we collect data all the time - financial budgets, activities reports, hike tracks notes, game logs, PV metrics and more! <br><br> Of course, our main goal is to bring decision-making input through data for AEC industry, but if the playground offers you infinite source of sand and gives you pretty useful tools, shape of the castles depends only on our imagination.</p>
       <ul>
         <li>Diagnostic dashboards (not decorative ones)</li>
         <li>Data extraction & transformation pipelines</li>

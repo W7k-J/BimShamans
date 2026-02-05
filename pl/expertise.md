@@ -171,70 +171,95 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
   <!-- Układ: Obrazy LEWO (65%), Tekst PRAWO (35%) -->
   <!-- ========================================== -->
   <section class="expertise-section" id="data-reporting">
-    
+
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&q=80" alt="Dashboard analityczny" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png" alt="Terraforming Mars - Dashboard" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerbi.svg" alt="Power BI"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
-            <p class="portfolio-tile__description">Dashboard projektowy w czasie rzeczywistym śledzący jakość modelu, problemy koordynacyjne i produktywność zespołu.</p>
+            <p class="portfolio-tile__description">Terraforming Mars to zdecydowanie moja ulubiona planszówka. Kiedy odkryłem, że istnieje plik .json z logiem rozgrywki, nie mogłem się oprzeć, aby sprawdzić, która strategia przyniosła najlepsze wyniki. Jeden plik, powtarzalna struktura danych i pytanie: "jak pobić swój własny rekord".</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Wizualizacja danych" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_HikeTracker_02.png" alt="HikeTracker - Analityka" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerbi.svg" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
             </div>
-            <p class="portfolio-tile__description">Zautomatyzowany pipeline ekstrakcji danych z modeli Revit do platformy BI.</p>
+            <p class="portfolio-tile__description">Ślady GPX, wiele źródeł danych i potrzeba zwizualuziwania, jak wyglądały górskie wypady. Kto nie lubi śledzić własnych aktywności w czasie i... przestrzeni? Połączenie interakcji map i danych z ponad 90% optymalizacją plików GPX było sporym wyzwaniem.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?w=800&q=80" alt="Generowanie raportów" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_01.png" alt="3D BI Flats - Model danych" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_speckle_short.png" alt="Speckle"></span>
             </div>
-            <p class="portfolio-tile__description">Automatyczny system raportowania tygodniowego redukujący pracę manualną o 80%.</p>
+            <p class="portfolio-tile__description">BI napędzane modelem 3D dla lokali mieszkalnych na etapie koncepcji przykuwa wzrok i ułatwia analizę wymagań. Koniec z tabelami przestawnymi na jednej połowie ekranu i rysunkami na drugiej. Jeden dashboard, interakcja i wykorzystanie już i tak wyprodukowanych danych.
+            </p>
           </div>
         </div>
-        
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2025_PS_IFCMMICheck_00.png" alt="IFC MMI Check - QA" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC Format"></span>
+              <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dataexchange_short.png" alt="Autodesk Data Exchange"></span>
+              <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftsharepoint_short.svg" alt="SharePoint"></span>
+            </div>
+            <p class="portfolio-tile__description">Weryfikacja i raportowanie dojrzałości (MMI) obiektów IFC to przykład skoku w dane, by wyłowić tę jedną, konkretną informację i zaprezentować na stronie głównej CDE lub SharePointa. Bez komplikowania, wykorzystując potencjał Data Exchange dla plików IFC i otwarty format.</p>
+          </div>
+        </div>
+
       </div>
     </div>
-    
+
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.data_reporting }}</h2>
-      <p>Przekształcanie danych BIM w użyteczne informacje. Tworzymy dashboardy, automatyzujemy raportowanie i budujemy pipeline'y danych łączące narzędzia projektowe z platformami BI.</p>
+      <p>Wnioski są podstawowym celem zagłębiania się w dane. Prezentacja jest drogą do nich. Dziś zbieramy dane cały czas - budżety finansowe, raporty z aktywności sportowych, notatki z wędrówek, logi gier, metryki PV i wiele więcej! <br><br> Oczywiście, głównym celem naszej pracy jest dostarczanie decyzyjnego wkładu poprzez dane dla branży AEC, ale jeśli plac zabaw oferuje nieskończone pokłady piasku i daje całkiem użyteczne narzędzia, kształt budowanych zamków zależy tylko od naszej wyobraźni.</p>
       <ul>
-        <li>Dashboardy Power BI</li>
-        <li>Automatyczne raportowanie</li>
-        <li>Ekstrakcja danych i ETL</li>
+        <li>Diagnostyczne dashboardy (nie dekoracyjne)</li>
+        <li>Pipeline'y ekstrakcji i transformacji danych</li>
+        <li>Intuicyjny interfejs</li>
+        <li>Wnioski połączone z pytaniami</li>
       </ul>
       <div class="expertise-section__tags">
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#data" class="expertise-section__tag">#data</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#powerbi" class="expertise-section__tag">#powerbi</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#dashboards" class="expertise-section__tag">#dashboards</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#analytics" class="expertise-section__tag">#analytics</a>
+
       </div>
       <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#data-reporting" class="expertise-section__cta">
         {{ t.view_all_projects }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </div>
-    
+
   </section>
 
   <!-- ========================================== -->
@@ -458,13 +483,13 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
     <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="15 18 9 12 15 6"></polyline>
     </svg>
-    home
+    strona główna
   </a>
 
   <a href="{{ site.baseurl }}/{{ page.lang }}/expertise-collection/" class="expertise__nav-link">
     <svg class="expertise__nav-icon expertise__nav-icon--before" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="14 4 20 4 20 10"></polyline>
-      <polyline points="4 14 4 20 10 20"></polyline>
+      <polyline points="12 4 20 4 20 12"></polyline>
+      <polyline points="4 12 4 20 12 20"></polyline>
     </svg>
     pełne doświadczenie
   </a>
@@ -483,3 +508,13 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
     </svg>
   </a>
 </nav>
+
+  <!-- Notice about logos -->
+  <div class="exp-collection__notice">
+    <blockquote class="notice-logos">
+      <p>
+        <b>Informacja:</b>
+        Wszystkie logo oprogramowania, nazwy handlowe, znaki towarowe i oznaczenia formatów wymiany danych prezentowane na tej stronie są własnością ich odpowiednich właścicieli. Są używane wyłącznie w celach informacyjnych i referencyjnych, aby wskazać narzędzia wykorzystywane w prezentowanych działaniach zawodowych. Ich użycie nie stanowi oficjalnego wykorzystania materiałów producentów ani nie sugeruje żadnej afiliacji, sponsoringu, partnerstwa czy poparcia ze strony odpowiednich właścicieli znaków towarowych.
+      </p>
+    </blockquote>
+  </div>
