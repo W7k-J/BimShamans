@@ -533,11 +533,12 @@
   .post__layout {
     grid-template-columns: 1fr;
     gap: 1.5rem;
-    justify-items: center;
+    max-width: 780px;
+    margin: 0 auto;
   }
 
   .post__main {
-    margin: 0 auto;
+    width: 100%;
   }
 
   .post__sidebar-placeholder {
