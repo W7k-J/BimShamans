@@ -1202,6 +1202,7 @@ figure {
   margin-bottom: calc(#{$nav-height} + #{$nav-spacing});
   position: relative;
   z-index: 1;
+  flex: 1 0 auto; // Sticky footer: grow to fill available space
 }
 
 // Mobile menu backdrop
@@ -1580,6 +1581,10 @@ body {
   position: relative;
   overflow-x: hidden;
   overflow-y: scroll; // Force scrollbar always visible
+  // Sticky footer layout
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 body::before {
@@ -1969,6 +1974,7 @@ blockquote {
   border-top: 1px solid var(--footer-border-color);
   border-bottom: none;
   background-color: transparent;
+  flex-shrink: 0; // Sticky footer: don't shrink
 }
 
 footer {

@@ -11,15 +11,6 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
 
 <div class="exp-collection__container">
 
-  <!-- Back to Portfolio link -->
-  <a href="{{ site.baseurl }}/{{ lang }}/expertise/" class="exp-collection__back-link">
-    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-    {{ t.back_to_portfolio }}
-  </a>
-
-  <h1>{{ t.portfolio_collection }}</h1>
-  <p>{{ t.portfolio_collection_intro }}</p>
-
   <!-- Control Panel: Search, Direction & Sort -->
   <div class="blog__controls exp-collection__controls">
     <div class="searchbar searchbar--portfolio" data-searchbar="portfolio">
