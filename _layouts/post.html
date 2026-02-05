@@ -193,7 +193,7 @@ layout: default
   <!-- Author Bio Section -->
   {% if page.author %}
     {% assign author_key = page.author | downcase %}
-    {% assign author = site.data.authors[author_key] %}
+    {% assign author = site.data.posts.authors[author_key] %}
   <div class="post__author-bio">
     {% if author.avatar %}
       <img src="{{ author.avatar | relative_url }}" alt="{{ author.name }}" class="post__author-avatar post__author-avatar--image">
@@ -236,25 +236,25 @@ layout: default
        <polyline points="11 17 6 12 11 7"></polyline>
         <polyline points="18 17 13 12 18 7"></polyline>
     </svg>
-    blog
+    {{ t.blog }}
   </a>
 
   <a href="{{ prev_post.url | relative_url }}" class="expertise__nav-link" title="{{ prev_post.title }}">
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
-            prev
+            {{ t.prev_post }}
   </a>
 
   <button type="button" class="expertise__nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
-    go to top
+    {{ t.go_to_top }}
     <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="18 15 12 9 6 15"></polyline>
     </svg>
   </button>
 
   <a href="{{ next_post.url | relative_url }}" class="expertise__nav-link" title="{{ next_post.title }}">
-            next
+            {{ t.next_post }}
             <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
               <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
@@ -265,3 +265,4 @@ layout: default
 
 <script src="{{ site.baseurl }}/assets/post-share.js" defer></script>
 <script src="{{ site.baseurl }}/assets/post-toc.js" defer></script>
+<script src="{{ site.baseurl }}/assets/code-zoom.js" defer></script>

@@ -26,6 +26,7 @@
 // Webkit scrollbar styles (Chrome, Edge, Safari)
 *::-webkit-scrollbar {
   width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
 }
 
 *::-webkit-scrollbar-track {

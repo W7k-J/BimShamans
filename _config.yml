@@ -109,6 +109,8 @@ t:
     cookie_notice_link: "Learn more."
     cookie_notice_accept: "got it"
     footer_privacy: "Privacy Policy"
+    about_author: "about author"
+    linkedin_profile: "linkedin profile"
   pl:
     home: "strona główna"
     blog: "blog"
@@ -122,10 +124,10 @@ t:
     post: "Artykuł"
     back_to_blog: "Powrót do Bloga"
     back_to_portfolio: "Powrót do doświadczenia"
-    go_to_top: "Na górę"
+    go_to_top: "na górę"
     toc: "Spis treści"
-    prev_post: "Poprz."
-    next_post: "Nast."
+    prev_post: "poprz."
+    next_post: "nast."
     view_all_projects: "Szczegóły dla tej kategorii"
     hero_cta_primary: "Porozmawiajmy o Twoim Projekcie"
     hero_cta_secondary: "Zobacz Nasze Doświadczenie"
@@ -156,6 +158,8 @@ t:
     cookie_notice_link: "Dowiedz się więcej."
     cookie_notice_accept: "rozumiem"
     footer_privacy: "Polityka Prywatności"
+    about_author: "o autorze"
+    linkedin_profile: "profil linkedin"
 
 #
 # Flags below are optional

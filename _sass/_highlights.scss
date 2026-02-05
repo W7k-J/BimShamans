@@ -3,11 +3,12 @@
   background-color: #1e1e1e;
   padding: 2px 2px 2px 2px;
   border: 5px solid #1e1e1e;
-  -moz-box-shadow: 5px 5px rgba(0,0,0,0.1);
-  -webkit-box-shadow: 5px 5px rgba(0,0,0,0.1);
-  box-shadow: 5px 5px rgba(0,0,0,0.1);
+  border-radius: $radius-medium;
+  // -moz-box-shadow: 5px 5px rgba(0,0,0,0.1);
+  // -webkit-box-shadow: 5px 5px rgba(0,0,0,0.1);
+  // box-shadow: 5px 5px rgba(0,0,0,0.1);
   margin: 0px 0px 0px 0px;
-  overflow: scroll;
+  overflow-x: auto;
 }
 
 
@@ -80,3 +81,50 @@ code {
 .highlight .gd { color: #f92672; } /* Generic.Deleted & Diff Deleted */
 .highlight .gi { color: #a6e22e; } /* Generic.Inserted & Diff Inserted */
 
+// Code Zoom Controls
+.code-zoom {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+  z-index: 10;
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+
+  .highlight:hover & {
+    opacity: 1;
+  }
+}
+
+.code-zoom__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border: none;
+  border-radius: $radius-small;
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #f8f8f2;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+
+  &:hover:not(:disabled) {
+    background-color: rgba(255, 255, 255, 0.25);
+  }
+
+  &:active:not(:disabled) {
+    transform: scale(0.95);
+  }
+
+  &:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  svg {
+    pointer-events: none;
+  }
+}

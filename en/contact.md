@@ -96,7 +96,7 @@ excerpt: "Have the signs in the sky led you to us? If the article resonated. If 
         </div>
 
         <button type="submit" class="button expand" data-success-text="Message Sent!">
-            Send Raven
+            Send a raven
         </button>
 
         <div class="privacy-notice">

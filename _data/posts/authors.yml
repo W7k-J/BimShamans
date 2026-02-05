@@ -1,6 +1,6 @@
 # Authors data for blog posts
 # Usage in post frontmatter: author: piotr (lowercase key)
-# Access in templates: site.data.authors[page.author]
+# Access in templates: site.data.posts.authors[page.author]
 
 piotr:
   name: Piotr

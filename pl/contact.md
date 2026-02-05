@@ -89,7 +89,9 @@ excerpt: "Znaki na niebie przywiodły Cię do nas? Artykuł dał do myślenia? M
                 required
                 aria-required="true"
                 aria-describedby="message-error"
-                minlength="10"                maxlength="5000"            ></textarea>
+                minlength="10"
+                maxlength="5000"
+            ></textarea>
             <div id="message-error" class="error-message" role="alert" aria-live="polite"></div>
         </div>
 
