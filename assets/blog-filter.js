@@ -50,8 +50,8 @@ class BlogManager {
     const sortedTags = Array.from(tagMap.entries())
       .sort((a, b) => a[0].localeCompare(b[0]));
     
-    sortedTags.forEach(([tag, count]) => {
-      html += `<button class="blog__tag" data-tag="${tag}">${tag} (${count})</button>`;
+    sortedTags.forEach(([tag]) => {
+      html += `<button class="blog__tag" data-tag="${tag}">${tag}</button>`;
     });
 
     tagFiltersContainer.innerHTML = html;
