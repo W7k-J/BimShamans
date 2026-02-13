@@ -4,8 +4,8 @@ title: Strona główna
 ref: home
 lang: pl
 permalink: /pl/home/
-excerpt: "Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez automatyzację, standaryzację i pragmatyczne podejście inżynierskie."
-latest_posts_count: 3
+excerpt: "BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez automatyzację, standaryzację i pragmatyczne podejście inżynierskie."
+latest_posts_count: 6
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}
@@ -47,6 +47,8 @@ latest_posts_count: 3
     </div>
   </div>
 </div>
+
+<!--
 
 <section class="feature-sections">
   <div class="feature-section">
@@ -136,6 +138,8 @@ latest_posts_count: 3
     </div>
   </div>
 </section>
+
+-->
 
 ## Najnowsze posty:
 
