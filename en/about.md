@@ -54,7 +54,7 @@ feature_cards:
 
 authors:
   - name: "Julian Wandzilak"
-    intro: "Independent architect, creator, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Pioneer in missing Revit's automation with published Revit plugins used by professionals worldwide."
+    intro: "Independent architect, creator, C# developer, and BIM coordinator with international experience across the UK, USA, and Poland. Creator of missing Revit's features with published Revit plugins used by professionals worldwide."
     initial_active: 2
     feature_cards:
       - title: ""

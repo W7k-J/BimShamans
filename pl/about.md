@@ -54,7 +54,7 @@ feature_cards:
 
 authors:
   - name: "Julian Wandzilak"
-    intro: "Niezależny architekt, twórca, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM, twórca własnych pluignów Revit używanych przez profesjonalistów na całym świecie."
+    intro: "Niezależny architekt, twórca, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Twórca własnych pluignów Revit uzupełniających brakujące rozwiązania programu dla profesjonalistów na całym świecie."
     initial_active: 2
     feature_cards:
       - title: ""
