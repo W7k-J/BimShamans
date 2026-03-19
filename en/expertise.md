@@ -16,76 +16,142 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     <!--<p>A curated selection of our work spanning BIM implementation, architectural design, data analytics, and process automation. Each category represents years of hands-on experience across diverse projects.</p>-->
   </div>
 
-  <!-- ========================================= -->
-  <!-- SECTION 1: Architecture and Structure -->
-  <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
+
   <!-- ========================================== -->
-  <section class="expertise-section" id="architecture">
+  <!-- SECTION 1: Automation & Programming -->
+  <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
+  <!-- ========================================== -->
+  <section class="expertise-section expertise-section--reverse" id="automation">
     
-    <!-- Tiles Stack (3 overlapping images) -->
+    <div class="expertise-section__content">
+      <h2>{{ t.portfolio_categories.automation }}</h2>
+      <p>We like simple out-of-the-box solutions and complex task-by-task workflows. Missing Revit functionality, repetitive documentation production or parameters management are challenges we meet all the time. No matter if the project is complex or there is a series of similar projects one after another, automating task in the design and construction process can't be absent in today's reality.</p>
+      <ul>
+        <li>Dynamo single and series of scripts</li>
+        <li>Revit C# add-ins</li>
+        <li>PowerShell automation</li>
+      </ul>
+      <div class="expertise-section__tags">
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#dynamo" class="expertise-section__tag">#dynamo</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#revitapi" class="expertise-section__tag">#revitAPI</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#python" class="expertise-section__tag">#python</a>
+      </div>
+      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#automation" class="expertise-section__cta">
+        {{ t.view_all_projects }}
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </a>
+    </div>
+    
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
         
-        <!-- Tile 1 -->
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=800&q=80" alt="Architectural visualization" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Code development" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-autocad.svg" alt="AutoCAD"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-vscode.svg" alt="VS Code"></span>
             </div>
-            <p class="portfolio-tile__description">Heritage building documentation using point cloud data and parametric modeling for conservation planning.</p>
+            <p class="portfolio-tile__description">Custom Revit add-in for automated model auditing and quality control.</p>
           </div>
         </div>
         
-        <!-- Tile 2 -->
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80" alt="Building facade design" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?w=800&q=80" alt="Dynamo scripts" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-rhino.svg" alt="Rhino"></span>
             </div>
-            <p class="portfolio-tile__description">Facade optimization study combining computational design with BIM coordination workflows.</p>
+            <p class="portfolio-tile__description">Dynamo package for batch parameter management and family updates.</p>
           </div>
         </div>
         
-        <!-- Tile 3 -->
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=800&q=80" alt="Modern architecture" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80" alt="Automation workflow" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-csharp.svg" alt="C#"></span>
             </div>
-            <p class="portfolio-tile__description">Mixed-use development with integrated sustainability analysis and real-time visualization.</p>
+            <p class="portfolio-tile__description">Schedule export automation reducing documentation time by 60%.</p>
           </div>
         </div>
         
       </div>
     </div>
     
-    <!-- Text Content -->
+  </section>
+
+  <!-- ========================================== -->
+  <!-- SECTION 2: BIM Coordination & OpenBIM -->
+  <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
+  <!-- ========================================== -->
+  <section class="expertise-section" id="coordination">
+    
+    <div class="expertise-section__media">
+      <div class="portfolio-tiles-stack">
+        
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction coordination" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-bim360.svg" alt="BIM 360"></span>
+            </div>
+            <p class="portfolio-tile__description">Multi-discipline coordination for 50,000 sqm mixed-use development.</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="IFC workflow" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+            </div>
+            <p class="portfolio-tile__description">OpenBIM workflow implementation with IFC-based model checking.</p>
+          </div>
+        </div>
+        
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=800&q=80" alt="Clash detection" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
+            </div>
+            <p class="portfolio-tile__description">Automated clash detection workflow reducing coordination meetings by 40%.</p>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+    
     <div class="expertise-section__content">
-      <h2>{{ t.portfolio_categories.architecture }}</h2>
-      <p>From concept sketches to construction documentation, our architectural work bridges creative vision with technical precision. We specialize in heritage conservation, facade engineering, and design optimization.</p>
+      <h2>{{ t.portfolio_categories.coordination }}</h2>
+      <p>Effective BIM coordination goes beyond clash detection. Issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports with keeping in mind software performance and platforms capability. There is more aspects covered by simple "BIM coordination" than is commonly discussed. </p>
       <ul>
-        <li>Heritage documentation & conservation</li>
-        <li>Facade design & analysis</li>
-        <li>3D scanning integration</li>
+        <li>Clash and issues management workflows</li>
+        <li>IFC optimization and structure QA</li>
+        <li>OpenBIM implementation</li>
       </ul>
       <div class="expertise-section__tags">
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#design" class="expertise-section__tag">#design</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#heritage" class="expertise-section__tag">#heritage</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#scans" class="expertise-section__tag">#scans</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#clashmanagement" class="expertise-section__tag">#clashmanagement</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ifc" class="expertise-section__tag">#IFC</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#openbim" class="expertise-section__tag">#OpenBIM</a>
       </div>
-      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#architecture" class="expertise-section__cta">
+      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#coordination" class="expertise-section__cta">
         {{ t.view_all_projects }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
@@ -94,7 +160,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 2: BIM Standards -->
+  <!-- SECTION 3: BIM Standards -->
   <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
   <!-- ========================================== -->
   <section class="expertise-section expertise-section--reverse" id="bim-standards">
@@ -167,7 +233,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   </section>
 
   <!-- ========================================== -->
-  <!-- SECTION 3: Data & BI Reporting -->
+  <!-- SECTION 4: Data & BI Reporting -->
   <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
   <!-- ========================================== -->
   <section class="expertise-section" id="data-reporting">
@@ -258,219 +324,6 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         {{ t.view_all_projects }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
-    </div>
-    
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 4: Automation & Programming -->
-  <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
-  <!-- ========================================== -->
-  <section class="expertise-section expertise-section--reverse" id="automation">
-    
-    <div class="expertise-section__content">
-      <h2>{{ t.portfolio_categories.automation }}</h2>
-      <p>Custom tools, scripts, and add-ins that eliminate repetitive tasks and enforce quality standards. From Dynamo graphs to full Revit plugins, we build solutions that fit your workflow.</p>
-      <ul>
-        <li>Dynamo scripts & packages</li>
-        <li>Revit API add-ins</li>
-        <li>Python automation</li>
-      </ul>
-      <div class="expertise-section__tags">
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#dynamo" class="expertise-section__tag">#dynamo</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#revitapi" class="expertise-section__tag">#revitAPI</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#python" class="expertise-section__tag">#python</a>
-      </div>
-      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#automation" class="expertise-section__cta">
-        {{ t.view_all_projects }}
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
-    
-    <div class="expertise-section__media">
-      <div class="portfolio-tiles-stack">
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Code development" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-vscode.svg" alt="VS Code"></span>
-            </div>
-            <p class="portfolio-tile__description">Custom Revit add-in for automated model auditing and quality control.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?w=800&q=80" alt="Dynamo scripts" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-            </div>
-            <p class="portfolio-tile__description">Dynamo package for batch parameter management and family updates.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80" alt="Automation workflow" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-csharp.svg" alt="C#"></span>
-            </div>
-            <p class="portfolio-tile__description">Schedule export automation reducing documentation time by 60%.</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 5: BIM Coordination & OpenBIM -->
-  <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
-  <!-- ========================================== -->
-  <section class="expertise-section" id="coordination">
-    
-    <div class="expertise-section__media">
-      <div class="portfolio-tiles-stack">
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction coordination" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-bim360.svg" alt="BIM 360"></span>
-            </div>
-            <p class="portfolio-tile__description">Multi-discipline coordination for 50,000 sqm mixed-use development.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="IFC workflow" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
-            </div>
-            <p class="portfolio-tile__description">OpenBIM workflow implementation with IFC-based model checking.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=800&q=80" alt="Clash detection" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
-            </div>
-            <p class="portfolio-tile__description">Automated clash detection workflow reducing coordination meetings by 40%.</p>
-          </div>
-        </div>
-        
-      </div>
-    </div>
-    
-    <div class="expertise-section__content">
-      <h2>{{ t.portfolio_categories.coordination }}</h2>
-      <p>Effective coordination goes beyond clash detection. We implement workflows that prevent issues before they occur and ensure seamless collaboration across disciplines using OpenBIM standards.</p>
-      <ul>
-        <li>Clash management workflows</li>
-        <li>IFC optimization</li>
-        <li>OpenBIM implementation</li>
-      </ul>
-      <div class="expertise-section__tags">
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#clashmanagement" class="expertise-section__tag">#clashmanagement</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ifc" class="expertise-section__tag">#IFC</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#openbim" class="expertise-section__tag">#OpenBIM</a>
-      </div>
-      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#coordination" class="expertise-section__cta">
-        {{ t.view_all_projects }}
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
-    
-  </section>
-
-  <!-- ========================================== -->
-  <!-- SECTION 6: Software & 3D Modelling -->
-  <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
-  <!-- ========================================== -->
-  <section class="expertise-section expertise-section--reverse" id="software">
-    
-    <div class="expertise-section__content">
-      <h2>{{ t.portfolio_categories.software }}</h2>
-      <p>Expertise across the full spectrum of BIM and 3D modeling tools. We help teams select, implement, and optimize software workflows for maximum productivity and interoperability.</p>
-      <ul>
-        <li>Software implementation</li>
-        <li>Template development</li>
-        <li>Workflow optimization</li>
-      </ul>
-      <div class="expertise-section__tags">
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#revit" class="expertise-section__tag">#revit</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#archicad" class="expertise-section__tag">#archicad</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#rhino" class="expertise-section__tag">#rhino</a>
-      </div>
-      <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#software" class="expertise-section__cta">
-        {{ t.view_all_projects }}
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-      </a>
-    </div>
-    
-    <div class="expertise-section__media">
-      <div class="portfolio-tiles-stack">
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="3D modeling" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-rhino.svg" alt="Rhino"></span>
-            </div>
-            <p class="portfolio-tile__description">Complex geometry modeling combining Rhino's flexibility with Revit's documentation power.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1563089145-599997674d42?w=800&q=80" alt="Software training" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-            </div>
-            <p class="portfolio-tile__description">Company-wide Revit rollout with custom templates and training program.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=800&q=80" alt="Visualization" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
-            </div>
-            <p class="portfolio-tile__description">Real-time visualization pipeline for client presentations and design reviews.</p>
-          </div>
-        </div>
-        
-      </div>
     </div>
     
   </section>
