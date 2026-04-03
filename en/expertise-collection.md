@@ -513,18 +513,18 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 5: ISO 19650 Framework -->
+    <!-- PROJECT TILE 5: IFC Validation — IDS and Python Scripting -->
     <!-- Odd tile = Photo LEFT, Text RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, iso19650, bep, digitaldelivery" data-date="2025/07/18">
+    <article class="project-tile" data-tags="bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Documentation" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=900&q=80" alt="Standards framework" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Data validation workflow" loading="lazy">
           </div>
         </div>
         
@@ -549,15 +549,15 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       </div>
       
       <div class="project-tile__content">
-        <h2 class="project-tile__title">ISO 19650 BEP Framework</h2>
+        <h2 class="project-tile__title">IFC Validation — IDS and Python Scripting</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Complete BIM Execution Plan framework aligned with ISO 19650 requirements. 
-                Includes template documents, role definitions, information delivery milestones, 
-                and quality assurance procedures for organization-wide adoption.
+                IDS defines the requirements. Solibri or usBIM runs the check. Open the tool, see which elements don't comply and what went wrong. Shareable, standardized, ready to use.
+                Need more control over the output? Custom Python scripting with ifcopenshell lets you define exactly what gets checked, what the report looks like, and where it goes. Your rules, your format, your workflow. And it doesn't stop at checking. Wrong data types, missing property sets, empty values where data should be, the script writes fixes directly to the IFC file. No re-export needed, no waiting for the design team.
+                Two approaches, two levels of detail. The right one depends on what the project actually needs.
               </p>
             </div>
           </div>
@@ -566,35 +566,36 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#iso19650" class="project-tile__tag">#iso19650</a>
-          <a href="#bep" class="project-tile__tag">#bep</a>
-          <a href="#digitaldelivery" class="project-tile__tag">#digitaldelivery</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#ids" class="project-tile__tag">#ids</a>
+          <a href="#python" class="project-tile__tag">#python</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 6: 3D Visualization -->
+    <!-- PROJECT TILE 6: IFC 4x3 in Infrastructure -->
     <!-- Even tile = Text LEFT, Photo RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="software, visualization, enscape, twinmotion" data-date="2025/11/05">
+    <article class="project-tile" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Architectural render" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Infrastructure BIM model" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Interior visualization" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Civil engineering coordination" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Exterior view" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80" alt="IFC data exchange" loading="lazy">
           </div>
         </div>
         
@@ -619,15 +620,15 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       </div>
       
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Real-time Visualization Pipeline</h2>
+        <h2 class="project-tile__title">IFC 4x3 in Infrastructure</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Streamlined visualization workflow connecting Revit models directly to real-time 
-                rendering engines. Enables design teams to produce high-quality renders and 
-                virtual walkthroughs without exporting to separate 3D software.
+                IFC 4x3 finally speaks infrastructure. Alignments, railways, roads, proper entities, not creative workarounds. The spec is solid. Live projects are a different story.
+                Geometry that exports correctly but won't render in your viewer. Conversion rule files or JSON files that need manual configuration nobody warned you about. The gap between what the standard defines and what tools actually deliver is where the real coordination work happens.
+                Knowing which entities to use, which export settings actually matter, and catching issues before they reach the client. That's the part the spec doesn't cover.
               </p>
             </div>
           </div>
@@ -636,15 +637,14 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#visualization" class="project-tile__tag">#visualization</a>
-          <a href="#enscape" class="project-tile__tag">#enscape</a>
-          <a href="#twinmotion" class="project-tile__tag">#twinmotion</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#infrastructure" class="project-tile__tag">#infrastructure</a>
+          <a href="#openbim" class="project-tile__tag">#openbim</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 
