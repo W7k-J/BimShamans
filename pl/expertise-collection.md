@@ -555,10 +555,8 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Automatyczna walidacja modeli IFC z wykorzystaniem specyfikacji Information Delivery 
-                Specification (IDS) w połączeniu z dedykowanymi skryptami Python. Workflow parsuje 
-                pliki IFC, sprawdza je pod kątem wymagań IDS i generuje ustrukturyzowane raporty 
-                wskazujące niezgodne elementy — pozwalając zespołom wychwycić braki danych przed przekazaniem.
+                Pliki IDS służą do weryfikacji wymagań klienta. W programach takich jak Solibri lub usBIM można sprawdzać pliki IFC na podstawie plików IDS. W raporcie możemy sprawdzić, które wartości są nieprawidłowe i jakie dane faktycznie znajdują się w modelu. To szybki i ustandaryzowany sposób, łatwy do udostępnienia w projekcie projektantom, którzy mogą szybko sprawdzić, czy wszystkie property sety są uzupełnione poprawnie w pliku IFC.<br><br>
+                Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Napisany skrypt może odczytywać nazwę pliku, odnajdywać wartości name i longname dla np. IfcProject czy IfcSite i sprawdzać, czy są one poprawnie wypełnione. Można spersonalizować kod tak, aby sprawdzał poprawność wartości MMI na każdej encji, wymagane property sety, spójność rewizji w całym pliku czy łatwo sprawdzić, czy name i long name dla każdej encji zostały prawidłowo opisane zgodnie z tym, czy to maszt kablowy czy fundament. Dodatkowo poprzez skrypt możemy nie tylko sprawdzać property sety, ale też bezpośrednio zmieniać je na poprawne bez angażowania projektanta. Naprawiony plik IFC, gotowy do przekazania.<br><br>
               </p>
             </div>
           </div>
@@ -627,10 +625,8 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Eksploracja rozszerzenia schematu IFC 4x3 dla obiektów infrastruktury i inżynierii 
-                lądowej — drogi, mosty, koleje i tunele. Projekt obejmuje mapowanie encji, obsługę 
-                geometrii trasowania oraz testy interoperacyjności pomiędzy narzędziami autorskimi, 
-                zapewniając niezawodną wymianę danych OpenBIM wykraczającą poza domenę budynków.
+                IFC 4x3 pozwala mapować właściwe encje powiązane z infrastrukturą, takie jak IfcRailway, IfcRailwayPart, IfcSign, IfcRoad i inne. Prawidłowe przeniesienie ich do eksportu IFC w programie to osobna kwestia.<br><br>
+                Civil 3D, Revit i Novapoint pozwalają na ustawienie ustawień eksportu, tak aby dostosować się do wymagań klienta oraz standardów buildingSMART. Mapowanie obiektów, reguły konwersji, hierarchia przestrzenna. Dobrze skonfigurowane dają plik IFC, który faktycznie jest tym, czym powinien być według standardu buildingSMART lub wymagań klienta.<br><br>
               </p>
             </div>
           </div>
