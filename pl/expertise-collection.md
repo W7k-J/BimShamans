@@ -555,9 +555,24 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Pliki IDS służą do weryfikacji wymagań klienta. W programach takich jak Solibri lub usBIM można sprawdzać pliki IFC na podstawie plików IDS. W raporcie możemy sprawdzić, które wartości są nieprawidłowe i jakie dane faktycznie znajdują się w modelu. To szybki i ustandaryzowany sposób, łatwy do udostępnienia w projekcie projektantom, którzy mogą szybko sprawdzić, czy wszystkie property sety są uzupełnione poprawnie w pliku IFC.<br><br>
-                Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Napisany skrypt może odczytywać nazwę pliku, odnajdywać wartości name i longname dla np. IfcProject czy IfcSite i sprawdzać, czy są one poprawnie wypełnione. Można spersonalizować kod tak, aby sprawdzał poprawność wartości MMI na każdej encji, wymagane property sety, spójność rewizji w całym pliku czy łatwo sprawdzić, czy name i long name dla każdej encji zostały prawidłowo opisane zgodnie z tym, czy to maszt kablowy czy fundament. Dodatkowo poprzez skrypt możemy nie tylko sprawdzać property sety, ale też bezpośrednio zmieniać je na poprawne bez angażowania projektanta. Naprawiony plik IFC, gotowy do przekazania.<br><br>
+                Pliki IDS służą do weryfikacji wymagań klienta. W programach takich jak Solibri lub usBIM można sprawdzać pliki IFC na podstawie plików IDS. W raporcie możemy sprawdzić, które wartości są nieprawidłowe i jakie dane faktycznie znajdują się w modelu. To szybki i ustandaryzowany format weryfikacji, gotowy do udostępnienia całemu zespołowi projektowemu. Każdy projektant może samodzielnie sprawdzić, czy property sety w jego pliku IFC są uzupełnione poprawnie.
               </p>
+              <br>
+              <p class="project-tile__description">
+                Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Kod można dostosować do konkretnych potrzeb — na przykład:
+              </p>
+              <ul class="project-tile__description">
+                <li>weryfikacja wartości name i longname dla każdej encji,</li>
+                <li>sprawdzanie wartości MMI,</li>
+                <li>kontrola wymaganych property setów,</li>
+                <li>spójność rewizji w całym pliku,</li>
+                <li>poprawność opisów obiektów względem ich typu (maszt kablowy, fundament itp.).</li>
+              </ul>
+              <br>
+              <p class="project-tile__description">
+                Dodatkowo poprzez skrypt możemy nie tylko sprawdzać property sety, ale też bezpośrednio zmieniać je na poprawne bez angażowania projektanta. W rezultacie dostajemy poprawiony plik IFC, gotowy do dostarczenia.
+              </p>
+              <br>
             </div>
           </div>
         </div>

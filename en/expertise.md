@@ -125,13 +125,28 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?w=800&q=80" alt="Clash detection" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
-            <p class="portfolio-tile__description">Automated clash detection workflow reducing coordination meetings by 40%.</p>
+            <p class="portfolio-tile__description">IFC validation with IDS files and Python scripting — from checking property sets to auto-fixing them before delivery.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80" alt="Infrastructure BIM model" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+            </div>
+            <p class="portfolio-tile__description">IFC 4x3 entity mapping for infrastructure — IfcRailway, IfcRoad and more. Civil 3D vs Novapoint export configuration.</p>
           </div>
         </div>
         
@@ -143,13 +158,15 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
       <p>Effective BIM coordination goes beyond clash detection. Issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports with keeping in mind software performance and platforms capability. There is more aspects covered by simple "BIM coordination" than is commonly discussed. </p>
       <ul>
         <li>Clash and issues management workflows</li>
-        <li>IFC optimization and structure QA</li>
-        <li>OpenBIM implementation</li>
+        <li>IFC validation with IDS and Python</li>
+        <li>IFC 4x3 infrastructure exports</li>
       </ul>
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#clashmanagement" class="expertise-section__tag">#clashmanagement</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ifc" class="expertise-section__tag">#IFC</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#openbim" class="expertise-section__tag">#OpenBIM</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ids" class="expertise-section__tag">#IDS</a>
+        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#infrastructure" class="expertise-section__tag">#infrastructure</a>
       </div>
       <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#coordination" class="expertise-section__cta">
         {{ t.view_all_projects }}

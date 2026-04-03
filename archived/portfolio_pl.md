@@ -363,8 +363,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
       <p>Skuteczna koordynacja wykracza poza detekcję kolizji. Wdrażamy workflow zapobiegające problemom, zanim one wystąpią, i zapewniające płynną współpracę międzybranżową z wykorzystaniem standardów OpenBIM.</p>
       <ul>
         <li>Workflow zarządzania kolizjami</li>
-        <li>Optymalizacja IFC</li>
-        <li>Wdrożenia OpenBIM</li>
+        <li>OpenBIM</li>
       </ul>
       <div class="portfolio-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/portfolio-collection/#clashmanagement" class="portfolio-section__tag">#clashmanagement</a>

@@ -555,9 +555,24 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IDS files are used to check client requirements. Solibri or usBIM can be used to validate the IFC file, flags what's wrong, and shows what value is actually there, using IDS files. It is a fast and standardized way, easy to share across the project with designers who can use it for a quick check if all psets are filled in the file.<br><br>
-                The script goes further and can be more tailored. It reads the file name, finds the project, and knows what to expect. IfcProject name, LongName, MMI on every entity, required property sets, revision consistency across the whole file, all verified against client delivery requirements. What shouldn't be there gets removed. What's missing gets written in. Fixed file, ready to deliver.<br><br>
+                IDS files are used to check client requirements. In tools like Solibri or usBIM, IFC files can be checked with IDS files. The report reveals which values are incorrect and what data the model actually contains. It is a fast and standardized validation format, ready to share with the entire project team. Each designer can independently check whether the property sets in their IFC file are filled in correctly.
               </p>
+              <br>
+              <p class="project-tile__description">
+                The script gives us more freedom in tailoring how we want to create reports and check IFC files. The code can be adapted to specific needs. For example:
+              </p>
+              <ul class="project-tile__description">
+                <li>checking name and longname values for each entity,</li>
+                <li>verifying MMI values,</li>
+                <li>checking required property sets,</li>
+                <li>revision consistency across the whole file,</li>
+                <li>correctness of object descriptions relative to their type (cable mast, foundation, etc.).</li>
+              </ul>
+              <br>
+              <p class="project-tile__description">
+                Additionally, through the script we can not only check property sets but also directly fix them without involving the designer. As a result, we get a corrected IFC file, ready for delivery.
+              </p>
+              <br>
             </div>
           </div>
         </div>
@@ -625,9 +640,13 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRailway, IfcRailwayPart, IfcSign, IfcRoad, and more. Getting them into the export correctly is another matter.<br><br>
-                Civil 3D and Novapoint handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard.<br><br>
+                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRailway, IfcRailwayPart, IfcSign, IfcRoad, and more. Getting them into the export correctly is another matter.
               </p>
+              <br>
+              <p class="project-tile__description">
+                Civil 3D and Novapoint handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard.
+              </p>
+              <br>
             </div>
           </div>
         </div>
