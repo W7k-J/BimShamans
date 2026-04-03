@@ -555,9 +555,8 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IDS defines the requirements. Solibri or usBIM runs the check. Open the tool, see which elements don't comply and what went wrong. Shareable, standardized, ready to use.
-                Need more control over the output? Custom Python scripting with ifcopenshell lets you define exactly what gets checked, what the report looks like, and where it goes. Your rules, your format, your workflow. And it doesn't stop at checking. Wrong data types, missing property sets, empty values where data should be, the script writes fixes directly to the IFC file. No re-export needed, no waiting for the design team.
-                Two approaches, two levels of detail. The right one depends on what the project actually needs.
+                IDS files are used to check client requirements. Solibri or usBIM can be used to validate the IFC file, flags what's wrong, and shows what value is actually there, using IDS files. It is a fast and standardized way, easy to share across the project with designers who can use it for a quick check if all psets are filled in the file.<br><br>
+                The script goes further and can be more tailored. It reads the file name, finds the project, and knows what to expect. IfcProject name, LongName, MMI on every entity, required property sets, revision consistency across the whole file, all verified against client delivery requirements. What shouldn't be there gets removed. What's missing gets written in. Fixed file, ready to deliver.<br><br>
               </p>
             </div>
           </div>
@@ -626,9 +625,8 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IFC 4x3 finally speaks infrastructure. Alignments, railways, roads, proper entities, not creative workarounds. The spec is solid. Live projects are a different story.
-                Geometry that exports correctly but won't render in your viewer. Conversion rule files or JSON files that need manual configuration nobody warned you about. The gap between what the standard defines and what tools actually deliver is where the real coordination work happens.
-                Knowing which entities to use, which export settings actually matter, and catching issues before they reach the client. That's the part the spec doesn't cover.
+                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRailway, IfcRailwayPart, IfcSign, IfcRoad, and more. Getting them into the export correctly is another matter.<br><br>
+                Civil 3D and Novapoint handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard.<br><br>
               </p>
             </div>
           </div>
