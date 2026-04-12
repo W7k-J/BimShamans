@@ -521,10 +521,13 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=900&q=80" alt="Skrypty walidacji IFC" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="Skrypty walidacji IFC" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=900&q=80" alt="Workflow walidacji danych" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Workflow walidacji danych" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03..jpg" alt="Raport walidacji IFC" loading="lazy">
           </div>
         </div>
 
