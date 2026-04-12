@@ -527,7 +527,10 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
             <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Workflow walidacji danych" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03..jpg" alt="Raport walidacji IFC" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="Raport walidacji IFC" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="Walidacja IFC w Solibri" loading="lazy">
           </div>
         </div>
 

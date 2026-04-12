@@ -99,19 +99,6 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=800&q=80" alt="Construction coordination" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-navisworks.svg" alt="Navisworks"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-bim360.svg" alt="BIM 360"></span>
-            </div>
-            <p class="portfolio-tile__description">Multi-discipline coordination for 50,000 sqm mixed-use development.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
             <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="IFC workflow" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
@@ -125,7 +112,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="IFC validation scripting" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="IFC validation in Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">

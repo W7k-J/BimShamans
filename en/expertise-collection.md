@@ -527,7 +527,10 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Data validation workflow" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03..jpg" alt="IFC validation report" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="IFC validation report" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="IFC validation in Solibri" loading="lazy">
           </div>
         </div>
         
