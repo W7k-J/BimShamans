@@ -112,7 +112,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=800&q=80" alt="IFC workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="IFC workflow" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
@@ -125,7 +125,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=800&q=80" alt="IFC validation scripting" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
