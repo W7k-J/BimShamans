@@ -25,11 +25,11 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.automation }}</h2>
-      <p>We like simple out-of-the-box solutions and complex task-by-task workflows. Missing Revit functionality, repetitive documentation production or parameters management are challenges we meet all the time. No matter if the project is complex or there is a series of similar projects one after another, automating task in the design and construction process can't be absent in today's reality.</p>
+      <p>We like simple out-of-the-box solutions and complex task-by-task workflows. Missing Revit functionality, repetitive documentation production or parameters management are challenges we meet all the time. No matter if the project is complex or there is a series of similar projects one after another, automating tasks in the design and construction process can't be absent in today's reality.</p>
       <ul>
         <li>Dynamo single and series of scripts</li>
         <li>Revit C# add-ins</li>
-        <li>PowerShell automation</li>
+        <li>PowerShell and Power Automate scripts</li>
       </ul>
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#dynamo" class="expertise-section__tag">#dynamo</a>
@@ -44,42 +44,45 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800&q=80" alt="Code development" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_PS_AutomateExcelAction_01.png" alt="Power Automate for multiple downloads" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-vscode.svg" alt="VS Code"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
             </div>
-            <p class="portfolio-tile__description">Custom Revit add-in for automated model auditing and quality control.</p>
+            <p class="portfolio-tile__description">Sometimes there is a moment, when we feel like a monkey and repetitive task seems to be endless. Nothing really "codeable" comes to our mind but we can't accept the fate of a clicker. Power Automate can save a day, when you need to open file, read specified data and URLs and download them with human-like set of actions.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_PS_Dynamo_01.png" alt="Dynamo - fill parameters - flats area" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dynamo-short.png" alt="Dynamo"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+            </div>
+            <p class="portfolio-tile__description">Natural first step into automation and data management in Revit - Dynamo. Starting with simple room area summarizing to fulfill information about apartment area across the model, through parametric geometry creation and advanced coordination and checks, that's the power of Dynamo.</p>
           </div>
         </div>
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1518932945647-7a1c969f8be2?w=800&q=80" alt="Dynamo scripts" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png" alt="C# Revit addins: Drafter, Leveler, Boxer, Extra" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_csharp_short.png" alt="C Sharp"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudio_short.png" alt="Visual Studio"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudiocode_short.png" alt="Visual Studio Code"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
             </div>
-            <p class="portfolio-tile__description">Dynamo package for batch parameter management and family updates.</p>
-          </div>
-        </div>
-        
-        <div class="portfolio-tile">
-          <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1516116216624-53e697fedbea?w=800&q=80" alt="Automation workflow" loading="lazy">
-          </div>
-          <div class="portfolio-tile__overlay">
-            <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-csharp.svg" alt="C#"></span>
-            </div>
-            <p class="portfolio-tile__description">Schedule export automation reducing documentation time by 60%.</p>
+            <p class="portfolio-tile__description">For fast and handy access to simple yet powerful options makes C# perfect solution. To make drawing consistent and perfectly readable or rearrange elements constraints without Dynamo Player, you can check already developed Julian's set of tools: Drafter, Leveler, Boxer and Extra.</p>
           </div>
         </div>
         
@@ -140,7 +143,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.coordination }}</h2>
-      <p>Effective BIM coordination goes beyond clash detection. Issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports with keeping in mind software performance and platforms capability. There is more aspects covered by simple "BIM coordination" than is commonly discussed. </p>
+      <p>Effective BIM coordination goes beyond clash detection. Issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports with keeping in mind software performance and platforms capability. There are more aspects covered by simple "BIM coordination" than is commonly discussed. </p>
       <ul>
         <li>Clash and issues management workflows</li>
         <li>IFC optimization and structure QA</li>
@@ -170,9 +173,9 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
       <h2>{{ t.portfolio_categories.bim_standards }}</h2>
       <p>Developing and implementing BIM standards that actually work. Our approach focuses on practical adoption, clear documentation, and measurable outcomes rather than theoretical frameworks.</p>
       <ul>
-        <li>ISO 19650 implementation</li>
         <li>BIM Execution Plans</li>
-        <li>Digital delivery standards</li>
+        <li>BIM Manuals and Best Practices Guidelines</li>
+        <li>Templates for modelling and data exchange</li>
       </ul>
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#iso19650" class="expertise-section__tag">#ISO19650</a>
@@ -267,7 +270,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_qgis_short.png" alt="QGIS"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftpowerautomate_short.png" alt="Power Automate"></span>
             </div>
-            <p class="portfolio-tile__description">GPX tracks, multiple data sources and the strong need to find out how journeys looked liked. Who doesn't like tracking their own activities across time and...area? Connecting interaction for maps and data with over 90% gpx files optimization was quite a challenge. </p>
+            <p class="portfolio-tile__description">GPX tracks, multiple data sources and the strong need to find out what journeys looked like. Who doesn't like tracking their own activities across time and...area? Connecting interaction for maps and data with over 90% gpx files optimization was quite a challenge. </p>
           </div>
         </div>
 
@@ -298,7 +301,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_microsoftsharepoint_short.svg" alt="SharePoint"></span>
             </div>
-            <p class="portfolio-tile__description">IFC-based objects maturity check and reporting is an example of diving into data to catch that one, specified insight and bring it to the main page of CDE or Sharepoint. No overcoplication, newest Data Exchange for IFC files potencial and Open format. </p>
+            <p class="portfolio-tile__description">IFC-based objects maturity check and reporting is an example of diving into data to catch that one, specified insight and bring it to the main page of CDE or Sharepoint. No overcomplication, newest Data Exchange for IFC files potential and Open format. </p>
           </div>
         </div>
 
