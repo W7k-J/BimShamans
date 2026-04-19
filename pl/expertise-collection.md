@@ -513,18 +513,24 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJEKT 5: Framework ISO 19650 -->
+    <!-- PROJEKT 5: Walidacja IFC — IDS i skrypty Python -->
     <!-- Nieparzysty = Zdjęcie LEWO, Tekst PRAWO -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, iso19650, bep, digitaldelivery" data-date="2025/07/18">
+    <article class="project-tile" data-tags="bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
 
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Dokumentacja" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="Skrypty walidacji IFC" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=900&q=80" alt="Framework standardów" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Workflow walidacji danych" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="Raport walidacji IFC" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="Walidacja IFC w Solibri" loading="lazy">
           </div>
         </div>
 
@@ -549,16 +555,30 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       </div>
 
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Framework BEP zgodny z ISO 19650</h2>
+        <h2 class="project-tile__title">Walidacja IFC — IDS i skrypty Python</h2>
 
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Kompletny framework Planu Realizacji BIM zgodny z wymaganiami ISO 19650.
-                Zawiera szablony dokumentów, definicje ról, kamienie milowe dostarczania informacji
-                i procedury zapewnienia jakości do wdrożenia w całej organizacji.
+                Pliki IDS służą do weryfikacji wymagań klienta. W programach takich jak Solibri lub usBIM można sprawdzać pliki IFC na podstawie plików IDS. W raporcie możemy sprawdzić, które wartości są nieprawidłowe i jakie dane faktycznie znajdują się w modelu. To szybki i ustandaryzowany format weryfikacji, gotowy do udostępnienia całemu zespołowi projektowemu. Każdy projektant może samodzielnie sprawdzić, czy property sety w jego pliku IFC są uzupełnione poprawnie.
               </p>
+              <br>
+              <p class="project-tile__description">
+                Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Kod można dostosować do konkretnych potrzeb — na przykład:
+              </p>
+              <ul class="project-tile__description">
+                <li>weryfikacja wartości name i longname dla każdej encji,</li>
+                <li>sprawdzanie wartości MMI,</li>
+                <li>kontrola wymaganych property setów,</li>
+                <li>spójność rewizji w całym pliku,</li>
+                <li>poprawność opisów obiektów względem ich typu (maszt kablowy, fundament itp.).</li>
+              </ul>
+              <br>
+              <p class="project-tile__description">
+                Dodatkowo poprzez skrypt możemy nie tylko sprawdzać property sety, ale też bezpośrednio zmieniać je na poprawne bez angażowania projektanta. W rezultacie dostajemy poprawiony plik IFC, gotowy do dostarczenia.
+              </p>
+              <br>
             </div>
           </div>
         </div>
@@ -566,35 +586,36 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#iso19650" class="project-tile__tag">#iso19650</a>
-          <a href="#bep" class="project-tile__tag">#bep</a>
-          <a href="#digitaldelivery" class="project-tile__tag">#digitaldelivery</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#ids" class="project-tile__tag">#ids</a>
+          <a href="#python" class="project-tile__tag">#python</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJEKT 6: Wizualizacja 3D -->
+    <!-- PROJEKT 6: IFC 4x3 w infrastrukturze -->
     <!-- Parzysty = Tekst LEWO, Zdjęcie PRAWO -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="software, visualization, enscape, twinmotion" data-date="2025/11/05">
+    <article class="project-tile" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
 
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Render architektoniczny" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Model BIM infrastruktury" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Wizualizacja wnętrza" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Koordynacja inżynierii lądowej" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Widok zewnętrzny" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80" alt="Wymiana danych IFC" loading="lazy">
           </div>
         </div>
 
@@ -619,15 +640,14 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       </div>
 
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Pipeline wizualizacji w czasie rzeczywistym</h2>
+        <h2 class="project-tile__title">IFC 4x3 w infrastrukturze</h2>
 
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Usprawniony workflow wizualizacji łączący modele Revit bezpośrednio z silnikami
-                renderowania w czasie rzeczywistym. Umożliwia zespołom projektowym tworzenie
-                wysokiej jakości renderów i wirtualnych spacerów bez eksportowania do osobnego oprogramowania 3D.
+                IFC 4x3 pozwala mapować właściwe encje powiązane z infrastrukturą, takie jak IfcRailway, IfcRailwayPart, IfcSign, IfcRoad i inne. Prawidłowe przeniesienie ich do eksportu IFC w programie to osobna kwestia.<br><br>
+                Civil 3D, Revit i Novapoint pozwalają na ustawienie ustawień eksportu, tak aby dostosować się do wymagań klienta oraz standardów buildingSMART. Mapowanie obiektów, reguły konwersji, hierarchia przestrzenna. Dobrze skonfigurowane dają plik IFC, który faktycznie jest tym, czym powinien być według standardu buildingSMART lub wymagań klienta.<br><br>
               </p>
             </div>
           </div>
@@ -636,15 +656,14 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#visualization" class="project-tile__tag">#visualization</a>
-          <a href="#enscape" class="project-tile__tag">#enscape</a>
-          <a href="#twinmotion" class="project-tile__tag">#twinmotion</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#infrastructure" class="project-tile__tag">#infrastructure</a>
+          <a href="#openbim" class="project-tile__tag">#openbim</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 

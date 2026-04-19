@@ -513,18 +513,24 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 5: ISO 19650 Framework -->
+    <!-- PROJECT TILE 5: IFC Validation — IDS and Python Scripting -->
     <!-- Odd tile = Photo LEFT, Text RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, iso19650, bep, digitaldelivery" data-date="2025/07/18">
+    <article class="project-tile" data-tags="bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=900&q=80" alt="Documentation" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=900&q=80" alt="Standards framework" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Data validation workflow" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="IFC validation report" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="IFC validation in Solibri" loading="lazy">
           </div>
         </div>
         
@@ -549,16 +555,30 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       </div>
       
       <div class="project-tile__content">
-        <h2 class="project-tile__title">ISO 19650 BEP Framework</h2>
+        <h2 class="project-tile__title">IFC Validation — IDS and Python Scripting</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Complete BIM Execution Plan framework aligned with ISO 19650 requirements. 
-                Includes template documents, role definitions, information delivery milestones, 
-                and quality assurance procedures for organization-wide adoption.
+                IDS files are used to check client requirements. In tools like Solibri or usBIM, IFC files can be checked with IDS files. The report reveals which values are incorrect and what data the model actually contains. It is a fast and standardized validation format, ready to share with the entire project team. Each designer can independently check whether the property sets in their IFC file are filled in correctly.
               </p>
+              <br>
+              <p class="project-tile__description">
+                The script gives us more freedom in tailoring how we want to create reports and check IFC files. The code can be adapted to specific needs. For example:
+              </p>
+              <ul class="project-tile__description">
+                <li>checking name and longname values for each entity,</li>
+                <li>verifying MMI values,</li>
+                <li>checking required property sets,</li>
+                <li>revision consistency across the whole file,</li>
+                <li>correctness of object descriptions relative to their type (cable mast, foundation, etc.).</li>
+              </ul>
+              <br>
+              <p class="project-tile__description">
+                Additionally, through the script we can not only check property sets but also directly fix them without involving the designer. As a result, we get a corrected IFC file, ready for delivery.
+              </p>
+              <br>
             </div>
           </div>
         </div>
@@ -566,35 +586,36 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#iso19650" class="project-tile__tag">#iso19650</a>
-          <a href="#bep" class="project-tile__tag">#bep</a>
-          <a href="#digitaldelivery" class="project-tile__tag">#digitaldelivery</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#ids" class="project-tile__tag">#ids</a>
+          <a href="#python" class="project-tile__tag">#python</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 
     </article>
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 6: 3D Visualization -->
+    <!-- PROJECT TILE 6: IFC 4x3 in Infrastructure -->
     <!-- Even tile = Text LEFT, Photo RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="software, visualization, enscape, twinmotion" data-date="2025/11/05">
+    <article class="project-tile" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Architectural render" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Infrastructure BIM model" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?w=900&q=80" alt="Interior visualization" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Civil engineering coordination" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=900&q=80" alt="Exterior view" loading="lazy">
+            <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?w=900&q=80" alt="IFC data exchange" loading="lazy">
           </div>
         </div>
         
@@ -619,16 +640,19 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       </div>
       
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Real-time Visualization Pipeline</h2>
+        <h2 class="project-tile__title">IFC 4x3 in Infrastructure</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Streamlined visualization workflow connecting Revit models directly to real-time 
-                rendering engines. Enables design teams to produce high-quality renders and 
-                virtual walkthroughs without exporting to separate 3D software.
+                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRailway, IfcRailwayPart, IfcSign, IfcRoad, and more. Getting them into the export correctly is another matter.
               </p>
+              <br>
+              <p class="project-tile__description">
+                Civil 3D and Novapoint handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard.
+              </p>
+              <br>
             </div>
           </div>
         </div>
@@ -636,15 +660,14 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#visualization" class="project-tile__tag">#visualization</a>
-          <a href="#enscape" class="project-tile__tag">#enscape</a>
-          <a href="#twinmotion" class="project-tile__tag">#twinmotion</a>
+          <a href="#ifc" class="project-tile__tag">#ifc</a>
+          <a href="#infrastructure" class="project-tile__tag">#infrastructure</a>
+          <a href="#openbim" class="project-tile__tag">#openbim</a>
         </div>
 
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
         </div>
       </div>
 
