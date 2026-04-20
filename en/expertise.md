@@ -60,6 +60,20 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2024_PS_Rename_01.png" alt="PowerShell with Rename" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powershell_short.webp" alt="PowerShell"></span>
+            </div>
+            <p class="portfolio-tile__description">When the standard and naming convention is not followed and there is nothing to do about it, there is actually something we can do about it. Mix of PowerShell code and set of proper naming in Excel allows us to workaround and finalize delivery aligned with guidelines.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
             <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_PS_Dynamo_01.png" alt="Dynamo - fill parameters - flats area" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
