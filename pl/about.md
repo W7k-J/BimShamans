@@ -54,6 +54,7 @@ feature_cards:
 
 authors:
   - name: "Julian Wandzilak"
+    personal_link: "https://www.linkedin.com/in/wandzilak/"
     intro: "Niezależny architekt, twórca, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Twórca własnych pluignów Revit uzupełniających brakujące rozwiązania programu dla profesjonalistów na całym świecie."
     initial_active: 2
     feature_cards:
@@ -62,6 +63,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_JulianWandzilak_Main.png"
         image_back: "/images/images-main/About_Authors_JulianWandzilak_Alter.webp"
+        image_click: "https://www.linkedin.com/in/wandzilak/"
         # icon dodany jako zawartosc SVG + <g transform> dla pogrubienia "jak bold czcionki", wycentrowany wzgledem viewBox
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -332,6 +334,7 @@ authors:
           </svg>
 
   - name: "Natalia Gawlik"
+    personal_link: "https://www.linkedin.com/in/natgaw/"
     intro: "Koordynatorka BIM, geodeta i GISowiec z doświadczeniem zdobywanym na dużych projektach infrastrukturalnych dla sektora publicznego w Norwegii. Specjalistka w zarządzaniu danymi, automatyzacji i  modelowaniu parametrycznym przy użyciu Dynamo, Grasshoppera i Pythona. Pasjonatka \"I\" w BIM z modelowania na Information."
     initial_active: 2
     feature_cards:
@@ -340,6 +343,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_NataliaGawlik_Main.jpg"
         image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.png"
+        image_click: "https://www.linkedin.com/in/natgaw/"
         icon: |
           <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 225 300" style="enable-background:new 0 0 225 300;" xml:space="preserve">
@@ -668,6 +672,7 @@ authors:
           </svg>
 
   - name: "Piotr Spyra"
+    personal_link: "https://www.linkedin.com/in/spyrapiotr"
     intro: BIM Koordynator, BIM Manager, uprawniony projektant konstrukcji budowlanych. Inżynier pracujący na styku projektowania i wykonawstwa, zawsze po stronie poprawności i kompletności danych. Doświadczenie zdobywał na projektach zlokalizowanych w Polsce, Niemczech i Szwecji.
     initial_active: 2
     feature_cards:
@@ -676,6 +681,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_PiotrSpyra_Main.png"
         image_back: "/images/images-main/About_Authors_PiotrSpyra_Alter.webp"
+        image_click: "https://www.linkedin.com/in/spyrapiotr"
         icon: |
           <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
             viewBox="0 0 225 300" style="enable-background:new 0 0 225 300;" xml:space="preserve">
@@ -990,7 +996,7 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
 {% for author in page.authors %}
 
-#### {{ author.name }} {#{{ author.name | slugify }}}
+#### {% if author.personal_link %}<a href="{{ author.personal_link }}" target="_blank">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %} {#{{ author.name | slugify }}}
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}

@@ -22,12 +22,18 @@
       <!-- Image overlay (for author cards without content) -->
       {% if card.image_front %}
       {% unless card.content %}
+      {% if card.image_click %}
+      <a href="{{ card.image_click }}" target="_blank" class="feature-card__image-link">
+      {% endif %}
       <div class="feature-card__image-container">
         <img src="{{ site.baseurl }}{{ card.image_front }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--front">
         {% if card.image_back %}
         <img src="{{ site.baseurl }}{{ card.image_back }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--back">
         {% endif %}
       </div>
+      {% if card.image_click %}
+      </a>
+      {% endif %}
       {% endunless %}
       {% endif %}
       
