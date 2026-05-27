@@ -339,7 +339,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
             </div>
-            <p class="portfolio-tile__description">Wdrożenie workflow OpenBIM z walidacją modeli opartą o IFC.</p>
+            <p class="portfolio-tile__description">Automatyczna walidacja IFC i korekta Property Sets przy użyciu skryptu w Pythonie</p>
           </div>
         </div>
         

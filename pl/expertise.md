@@ -103,10 +103,10 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
-            <p class="portfolio-tile__description">Wdrożenie workflow OpenBIM z walidacją modeli opartą o IFC.</p>
+            <p class="portfolio-tile__description">Walidacja IFC oraz korekta Property Sets przy użyciu skryptu w Pythonie.</p>
           </div>
         </div>
         
@@ -116,11 +116,11 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
-            <p class="portfolio-tile__description">Walidacja IFC z plikami IDS i skryptami Python — od sprawdzania property setów po ich automatyczną naprawę przed dostawą.</p>
+            <p class="portfolio-tile__description">Walidacja plików IFC z wykorzystaniem IDS.</p>
           </div>
         </div>
 
