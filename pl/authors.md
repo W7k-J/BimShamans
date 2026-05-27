@@ -7,6 +7,7 @@ permalink: /pl/authors/
 cards_height: 500px
 authors:
   - name: "Julian Wandzilak"
+    personal_link: "https://www.linkedin.com/in/wandzilak/"
     intro: "Niezależny architekt, projektant, programista C# i koordynator BIM z doświadczeniem międzynarodowym w Wielkiej Brytanii, USA i Polsce. Pionier automatyzacji BIM z opublikowanymi pluginami Revit'a używanymi przez tysiące profesjonalistów na całym świecie."
     initial_active: 2
     feature_cards:
@@ -15,6 +16,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_JulianWandzilak_Main.png"
         image_back: "/images/images-main/About_Authors_JulianWandzilak_Alter.webp"
+        image_click: "https://www.linkedin.com/in/wandzilak/"
       - title: "Niezależny Architekt & Developer"
         content: "Jestem niezależnym architektem, projektantem, programistą C# i koordynatorem BIM. Doświadczenie zawodowe zdobywałem w Wielkiej Brytanii (Manchester, Londyn), USA (Chicago) oraz w Polsce (Kraków). Brałem również udział w projektach architektonicznych w Australii i Norwegii. Zajmowałem się przygotowywaniem masterplanów, projektowaniem fabryk, obiektów służby zdrowia, budynków edukacyjnych, luksusowych rezydencji, wieżowców mieszkalnych i akademików, wnętrz muzeów, rozbudową i renowacją budynków objętych ochroną konserwatorską."
       - title: "Umiejętności & Narzędzia"
@@ -23,6 +25,7 @@ authors:
         content: "Wierzę, że **\"specjalizacja jest dla owadów\"** — najlepsze rozwiązania rodzą się z myślenia interdyscyplinarnego. Wszystkie moje doświadczenia wykazały ten sam uniwersalny problem wszędzie: **\"POTRZEBUJEMY WIĘCEJ AUTOMATYZACJI\".** Zamiast czekać, aż dostawcy oprogramowania to rozwiążą, wziąłem sprawy w swoje ręce, nauczyłem się programować i zacząłem publikować narzędzia, które naprawdę pomagają arquitectom i inżynierom na całym świecie."
 
   - name: "Natalia Gawlik"
+    personal_link: "https://www.linkedin.com/in/natgaw/"
     intro: "Koordynator BIM ze specjalizacją w dużych projektach infrastrukturalnych. Specjalistka w zarządzaniu danymi, modelowaniu sterowanym informacją i automatyzacji przy użyciu Dynamo, Grasshoppera i Pythona. Pasjonata zamiany \"I\" w BIM z modelowania na Information."
     initial_active: 2
     feature_cards:
@@ -31,6 +34,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_NataliaGawlik_Main.jpg"
         image_back: "/images/images-main/About_Authors_NataliaGawlik_Alter.png"
+        image_click: "https://www.linkedin.com/in/natgaw/"
       - title: "Koordynator BIM & Specjalistka Danych"
         content: "Jestem Koordynatorem BIM ze specjalizacją w dużych projektach infrastrukturalnych. Z wykształcenia geodeta, z zamiłowania specjalistka BIM. Dekada mojego życia zawodowego obejmuje doświadczenia od fotogrametrii, skaningu laserowego, nalotów dronowych, przez modelowanie 3D (Scan to BIM), aż po BIM i zarządzanie projektami w metodyce VDC w norweskich inwestycjach publicznych."
       - title: "Informacja & Automatyzacja"
@@ -39,6 +43,7 @@ authors:
         content: "Szczerze mówiąc, jestem **zbyt leniwa do nudnych zadań**. Nie znoszę robienia tego samego wiele razy, jeśli mogę to zautomatyzować. Tak, mogę spędzić godziny kodowania, żeby zaoszczędzić 10 minut pracy. Bez żalu 😄\n\nDla mnie automatyzacja to nie tylko rozwiązanie techniczne — to to, co daje mi wolność do robienia tego, co kocham: **wędrówek**, **treningów** i **relaksu na tarasie z moim uroczym kotem** 🐾"
 
   - name: "Piotr Spyra"
+    personal_link: "https://www.linkedin.com/in/spyrapiotr"
     intro: "Koordynator i Menedżer BIM z wykształceniem inżyniera lądowego. Specjalista w standaryzacji, przepływach danych i automatyzacji. Zaangażowany w eliminację nieefektywności i maksymalizację zwrotu z inwestycji poprzez strategiczną implementację BIM."
     initial_active: 2
     feature_cards:
@@ -47,6 +52,7 @@ authors:
         image_width: "300px"
         image_front: "/images/images-main/About_Authors_PiotrSpyra_Main.png"
         image_back: "/images/images-main/About_Authors_PiotrSpyra_Alter.webp"
+        image_click: "https://www.linkedin.com/in/spyrapiotr"
       - title: "Koordynator BIM, Menedżer & Inżynier Lądowy"
         content: "Jestem osobą, która widząc powtarzalne zadanie, myśli: **'Nie będę marnować potencjału mojego ani moich współpracowników na bezsensowne klikanie...'** 🤔\n\nWierzę, że **automatyzacja to klucz** do minimalizowania błędów ludzkich, eliminowania żmudnej, czasochłonnej pracy i zapewnienia dokładnej kontroli przed oddaniem projektu. **Standaryzacja** natomiast jest podwaliną do sukcesu automatyzacji."
       - title: "BIM & Przepływy Danych"
@@ -66,7 +72,7 @@ Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do r
 
 {% for author in page.authors %}
 
-#### {{ author.name }}
+#### {% if author.personal_link %}<a href="{{ author.personal_link }}" target="_blank">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %}
 
 {{ author.intro }}
 
