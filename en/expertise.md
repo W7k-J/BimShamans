@@ -103,10 +103,10 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
-            <p class="portfolio-tile__description">OpenBIM workflow implementation with IFC-based model checking.</p>
+            <p class="portfolio-tile__description">IFC validation and property set correction using a Python script.</p>
           </div>
         </div>
         
@@ -116,11 +116,11 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
-            <p class="portfolio-tile__description">IFC validation with IDS files and Python scripting — from checking property sets to auto-fixing them before delivery.</p>
+            <p class="portfolio-tile__description">IFC validation using IDS files.</p>
           </div>
         </div>
 

@@ -339,7 +339,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-ifc.svg" alt="IFC"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
             </div>
-            <p class="portfolio-tile__description">OpenBIM workflow implementation with IFC-based model checking.</p>
+            <p class="portfolio-tile__description">IFC validation and property set correction using a Python script</p>
           </div>
         </div>
         
