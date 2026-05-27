@@ -669,6 +669,94 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
 
     </article>
 
+    <!-- ========================================== -->
+    <!-- PROJECT TILE: Automatyzacja: Dodatki C# do Revit -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Autor kafelka: Julian -->
+    <!-- ========================================== -->
+    <article class="project-tile" data-tags="automation, revit, csharp, plugins" data-date="2025/06/01">
+
+      <!-- Slideshow (60%) -->
+      <div class="project-tile__slideshow">
+        <div class="project-tile__slides">
+          <!-- Slide 1 -->
+          <div class="project-tile__slide project-tile__slide--active">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png" alt="Dodatki C# do Revit: Drafter, Leveler, Boxer, Extra" loading="lazy">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_02.jpg" alt="Wstążka i narzędzia dodatku Drafter" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_03.png" alt="Przykłady automatyzacji Leveler i Boxer" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_04.png" alt="Automatyzacja rysunków w Revit w działaniu" loading="lazy">
+          </div>
+        </div>
+        <button class="project-tile__nav project-tile__nav--prev" aria-label="Poprzedni slajd">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="project-tile__nav project-tile__nav--next" aria-label="Następny slajd">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="Zobacz w pełnym rozmiarze">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
+        <div class="project-tile__dots"></div>
+      </div>
+
+      <!-- Text Content (40%) -->
+      <div class="project-tile__content">
+        <h2 class="project-tile__title">Revit & C# — moja przygoda: Drafter, Leveler, Boxer & Extra</h2>
+
+        <div class="project-tile__text-area">
+          <div class="project-tile__text-slides">
+            <div class="project-tile__text-slide project-tile__text-slide--active">
+              <p class="project-tile__description">
+                Przełom w mojej codziennej pracy jako architekta. Dla szybkiego i wygodnego dostępu do prostych, ale skutecznych opcji dostępnych przez Revit API, C# jest właściwym wyborem. Tam, gdzie Dynamo Player wymaga skryptu krok po kroku, programowanie obiektowe z bezpośrednim dostępem w wstążce Revit jest rewelacyjne. Jeden klik, natychmiastowy i powtarzalny wynik, bez żadnych pośrednich kroków — a funkcjonalność Revita wykracza poza plany jego twórców. Dlatego zdecydowanie polecam dać mu szansę.<br><br>
+                Cztery opublikowane przeze mnie narzędzia, każde celuje w konkretny problem codziennej pracy w Revit.
+              </p>
+                  <ul class="project-tile__description">
+                  <li>Drafter obejmuje spójność rysunków i adnotacji — około 180 automatyzacji.</li>
+                  <li>Leveler obsługuje operacje związane z poziomami i rzędnymi.</li>
+                  <li>Boxer skupia się na obrysie i grupowaniu elementów.</li>
+                  <li>Extra koncentruje się na operacjach matematycznych i pomoże przy pomiarach elementów.</li>
+                  </ul>
+              <p class="project-tile__description">
+                <br>Wszystkie cztery są dostępne na Autodesk App Store i używane przez architektów i inżynierów na całym świecie. Doświadczenie zebrane w tym procesie pozwala mi dzielić się wskazówkami zarówno dla doświadczonych, jak i początkujących koderów, a także wskazywać trudniejsze rozwiązania i zastosowania Revit poza klasycznym projektowaniem. Sprawdź je na moim blogu!<br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-tile__fade"></div>
+
+        <div class="project-tile__tags">
+          <a href="#automation" class="project-tile__tag">#automation</a>
+          <a href="#revit" class="project-tile__tag">#revit</a>
+          <a href="#csharp" class="project-tile__tag">#csharp</a>
+        </div>
+
+        <div class="project-tile__tools">
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Autodesk Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_csharp_short.png" alt="C#"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudio_short.png" alt="Visual Studio"></span>
+        </div>
+      </div>
+
+    </article>
+
   </div><!-- /.exp-collection__list -->
 
 </div><!-- /.exp-collection__container -->

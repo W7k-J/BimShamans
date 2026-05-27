@@ -233,7 +233,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       
       <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Board Game Strategy Analysis</h2>
+        <h2 class="project-tile__title">Power BI Board Game Strategy Analysis</h2>
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
@@ -668,6 +668,95 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__tools">
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
           <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ========================================== -->
+    <!-- PROJECT TILE: Automation: Revit C# Add-ins -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Julian -->
+    <!-- ========================================== -->
+    <article class="project-tile" data-tags="automation, revit, csharp, plugins" data-date="2025/06/01">
+
+      <!-- Slideshow (60%) -->
+      <div class="project-tile__slideshow">
+        <div class="project-tile__slides">
+          <!-- Slide 1 -->
+          <div class="project-tile__slide project-tile__slide--active">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png" alt="Revit C# add-ins: Drafter, Leveler, Boxer, Extra" loading="lazy">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_02.jpg" alt="Drafter add-in ribbon and tools" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_03.png" alt="Leveler and Boxer automation examples" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_04.png" alt="Revit drawing automation in action" loading="lazy">
+          </div>
+        </div>
+        <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
+        <div class="project-tile__dots"></div>
+      </div>
+
+      <!-- Text Content (40%) -->
+      <div class="project-tile__content">
+        <h2 class="project-tile__title">Revit & C# journey: Drafter, Leveler, Boxer & Extra</h2>
+
+        <div class="project-tile__text-area">
+          <div class="project-tile__text-slides">
+            <div class="project-tile__text-slide project-tile__text-slide--active">
+              <p class="project-tile__description">
+                The game-changer for my daily work as an architect. For fast and handy access to simple yet powerful options available with the Revit API, C# is the right solution. Where Dynamo Player requires a step-by-step script, object-oriented programming with direct access in the Revit ribbon is marvellous. One click, immediate and repeatable result, no intermediate steps required — and Revit's functionality expands beyond the software developer's roadmap. This is why I definitely recommend you give it a shot.<br><br>
+                Across the four tools I published, each targets a specific friction point in daily Revit work.
+              </p>
+                  <ul class="project-tile__description">
+                  <li>Drafter covers drawing consistency and annotation with around 180 automations.</li>
+                  <li>Leveler handles level and elevation-based operations.</li>
+                  <li>Boxer focuses on element bounding and grouping.</li>
+                  <li>Extra concentrates on maths operations and will help with measuring elements.</li>
+                  </ul>
+              <p class="project-tile__description">
+                <br>All four are live on the Autodesk App Store and used by architects and engineers worldwide. Experience gathered through the process allows me to share tips for both experienced and beginner coders, and also to point out tricky solutions and Revit usage beyond classic design. Check them on my blog!<br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-tile__fade"></div>
+
+        <div class="project-tile__tags">
+          <a href="#automation" class="project-tile__tag">#automation</a>
+          <a href="#revit" class="project-tile__tag">#revit</a>
+          <a href="#csharp" class="project-tile__tag">#csharp</a>
+        </div>
+
+        <div class="project-tile__tools">
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Autodesk Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_csharp_short.png" alt="C#"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudio_short.png" alt="Visual Studio"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudiocode_short.png" alt="Visual Studio Code"></span>
         </div>
       </div>
 

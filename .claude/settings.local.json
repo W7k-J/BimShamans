@@ -3,7 +3,8 @@
     "allow": [
       "Bash(bundle exec jekyll build:*)",
       "Bash(echo:*)",
-      "WebFetch(domain:inblog.ai)"
+      "WebFetch(domain:inblog.ai)",
+      "WebFetch(domain:marketplace.autodesk.com)"
     ]
   }
 }
