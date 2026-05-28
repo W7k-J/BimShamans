@@ -521,16 +521,16 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="IFC validation scripting" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Data validation workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_02.png" alt="Data validation workflow" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="IFC validation report" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_03.png" alt="IFC validation report" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="IFC validation in Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01.png" alt="IFC validation in Solibri" loading="lazy">
           </div>
         </div>
         
