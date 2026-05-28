@@ -567,7 +567,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
               <p class="project-tile__description">
                 The script gives us more freedom in tailoring how we want to create reports and check IFC files. The code can be adapted to specific needs. For example:
               </p>
-              <ul class="project-tile__description">
+              <ul class="project-tile__description checklist">
                 <li>checking name and longname values for each entity,</li>
                 <li>verifying MMI values,</li>
                 <li>checking required property sets,</li>

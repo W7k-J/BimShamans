@@ -567,7 +567,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
               <p class="project-tile__description">
                 Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Kod można dostosować do konkretnych potrzeb — na przykład:
               </p>
-              <ul class="project-tile__description">
+              <ul class="project-tile__description checklist">
                 <li>weryfikacja wartości name i longname dla każdej encji,</li>
                 <li>sprawdzanie wartości MMI,</li>
                 <li>kontrola wymaganych property setów,</li>
