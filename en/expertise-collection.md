@@ -530,7 +530,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
             <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_03.png" alt="IFC validation report" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01.png" alt="IFC validation in Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_ENG.png" alt="IFC validation in Solibri" loading="lazy">
           </div>
         </div>
         

@@ -530,7 +530,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
             <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_03.png" alt="Raport walidacji IFC" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01.png" alt="Walidacja IFC w Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_PL.png" alt="Walidacja IFC w Solibri" loading="lazy">
           </div>
         </div>
 

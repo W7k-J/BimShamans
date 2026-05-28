@@ -112,7 +112,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01.png" alt="Walidacja IFC w Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_PL.png" alt="Walidacja IFC w Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
