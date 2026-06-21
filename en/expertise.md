@@ -116,7 +116,11 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
+<<<<<<< HEAD
             <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_01.jpg" alt="IFC QA check in Solibri" loading="lazy">
+=======
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="IFC workflow" loading="lazy">
+>>>>>>> c77773594eaaaf670ea33f9944c524f78fb67fb1
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
@@ -129,7 +133,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="IFC validation in Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_ENG.png" alt="IFC validation in Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">

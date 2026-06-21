@@ -521,16 +521,16 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="Skrypty walidacji IFC" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="Skrypty walidacji IFC" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-02.jpg" alt="Workflow walidacji danych" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_02.png" alt="Workflow walidacji danych" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-03.jpg" alt="Raport walidacji IFC" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_03.png" alt="Raport walidacji IFC" loading="lazy">
           </div>
           <div class="project-tile__slide">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-Solibri-report.jpg" alt="Walidacja IFC w Solibri" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_PL.png" alt="Walidacja IFC w Solibri" loading="lazy">
           </div>
         </div>
 
@@ -567,7 +567,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
               <p class="project-tile__description">
                 Skrypt daje nam więcej wolności w dopasowaniu, w jaki sposób chcemy tworzyć raporty i sprawdzać pliki IFC. Kod można dostosować do konkretnych potrzeb — na przykład:
               </p>
-              <ul class="project-tile__description">
+              <ul class="project-tile__description checklist">
                 <li>weryfikacja wartości name i longname dla każdej encji,</li>
                 <li>sprawdzanie wartości MMI,</li>
                 <li>kontrola wymaganych property setów,</li>

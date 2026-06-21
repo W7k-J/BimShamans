@@ -521,6 +521,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
+<<<<<<< HEAD
             <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_02.jpg" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="project-tile__slide">
@@ -531,6 +532,18 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           </div>
           <div class="project-tile__slide">
             <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_01.jpg" alt="IFC validation in Solibri" loading="lazy">
+=======
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="IFC validation scripting" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_02.png" alt="Data validation workflow" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_03.png" alt="IFC validation report" loading="lazy">
+          </div>
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_ENG.png" alt="IFC validation in Solibri" loading="lazy">
+>>>>>>> c77773594eaaaf670ea33f9944c524f78fb67fb1
           </div>
         </div>
         
@@ -567,7 +580,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
               <p class="project-tile__description">
                 The script gives us more freedom in tailoring how we want to create reports and check IFC files. The code can be adapted to specific needs. For example:
               </p>
-              <ul class="project-tile__description">
+              <ul class="project-tile__description checklist">
                 <li>checking name and longname values for each entity,</li>
                 <li>verifying MMI values,</li>
                 <li>checking required property sets,</li>

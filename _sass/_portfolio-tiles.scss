@@ -1198,6 +1198,25 @@
   text-align: justify;
 }
 
+// Checklist — bullet points replaced with checkmarks
+.project-tile__text-area ul.checklist {
+  list-style: none;
+  padding-left: 0;
+
+  li {
+    padding-left: 1.5em;
+    position: relative;
+
+    &::before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: var(--firstBlue-color);
+      font-weight: 700;
+    }
+  }
+}
+
 // Fade spacer - placeholder for gradient overlay
 .project-tile__fade {
   position: relative;
