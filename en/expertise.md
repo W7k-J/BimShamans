@@ -116,7 +116,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/IFCQA-report-01.jpg" alt="IFC workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_01.jpg" alt="IFC QA check in Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
