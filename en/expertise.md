@@ -22,7 +22,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
   <!-- ========================================== -->
   <section class="expertise-section expertise-section--reverse" id="automation">
-    
+
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.automation }}</h2>
       <p>We like simple out-of-the-box solutions and complex task-by-task workflows. Missing Revit functionality, repetitive documentation production or parameters management are challenges we meet all the time. No matter if the project is complex or there is a series of similar projects one after another, automating tasks in the design and construction process can't be absent in today's reality.</p>
@@ -41,7 +41,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </div>
-    
+
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
 
@@ -84,7 +84,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <p class="portfolio-tile__description">Natural first step into automation and data management in Revit - Dynamo. Starting with simple room area summarizing to fulfill information about apartment area across the model, through parametric geometry creation and advanced coordination and checks, that's the power of Dynamo.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
             <img src="{{ site.baseurl }}/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png" alt="C# Revit addins: Drafter, Leveler, Boxer, Extra" loading="lazy">
@@ -99,10 +99,10 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <p class="portfolio-tile__description">For fast and handy access to simple yet powerful options makes C# perfect solution. To make drawing consistent and perfectly readable or rearrange elements constraints without Dynamo Player, you can check already developed Julian's set of tools: Drafter, Leveler, Boxer and Extra.</p>
           </div>
         </div>
-        
+
       </div>
     </div>
-    
+
   </section>
 
   <!-- ========================================== -->
@@ -110,65 +110,95 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
   <!-- ========================================== -->
   <section class="expertise-section" id="coordination">
-    
+
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-<<<<<<< HEAD
-            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_01.jpg" alt="IFC QA check in Solibri" loading="lazy">
-=======
-            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="IFC workflow" loading="lazy">
->>>>>>> c77773594eaaaf670ea33f9944c524f78fb67fb1
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_report_01.png" alt="IFC QA check in Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
             </div>
-            <p class="portfolio-tile__description">IFC validation and property set correction using a Python script.</p>
+            <p class="portfolio-tile__description">IFC validation and property set correction using a Python script supported by AI capabilities provides a bespoke solution during the verification process. Whenever you need to customize the standardized IDS way of quality checks, Python comes into play.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
             <img src="{{ site.baseurl }}/images/images-expertise/IFC_2026_NG_QAreports_Solibri_01_ENG.png" alt="IFC validation in Solibri" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_solibri_short.webp" alt="Solibri"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
-            <p class="portfolio-tile__description">IFC validation using IDS files.</p>
+            <p class="portfolio-tile__description">IFC validation using Information Delivery Specification (IDS) files — a buildingSMART standard for defining information requirements — perfectly fulfils the OpenBIM approach to data-rich model delivery. Solibri is prepared to handle the task with its Rule Templates - check SOL/244/1 and read more!</p>
           </div>
         </div>
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&q=80" alt="Infrastructure BIM model" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Federated_01.png" alt="Clash detection with Navisworks Manage" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dynamo-short.png" alt="Dynamo"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="ACC"></span>
             </div>
-            <p class="portfolio-tile__description">IFC 4x3 entity mapping for infrastructure — IfcRailway, IfcRoad and more. Civil 3D vs Novapoint export configuration.</p>
+            <p class="portfolio-tile__description">Federated model management starts even before the first discipline model is produced in the design software. The strategy for the federation process contains discipline division, Model View Definition export setup, proper coordinates establishment, data export and more. A well-structured, well-positioned 3D federated file is a starting point for unlocking BIM use-case potential.</p>
           </div>
         </div>
-        
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2022_PS_FedBOQ_01.jpg" alt="BOQ and material schedules for design, construction and FM phase" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="PowerBI"></span>
+            </div>
+            <p class="portfolio-tile__description">Automated BOQ and real-time updates in structured, ready-to-analyze form is an unquestioned challenge. Our experience with models, material libraries and schedules capabilities led us to the conclusion that success starts where unified, coded parameters and material naming meet level-structured scheduling standard. All together, they build working 5D BIM.</p>
+          </div>
+        </div>
+
+        <div class="portfolio-tile">
+          <div class="portfolio-tile__image">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Clashes_01.png" alt="Federated model in Navisworks Manage" loading="lazy">
+          </div>
+          <div class="portfolio-tile__overlay">
+            <div class="portfolio-tile__tools">
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="ACC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+            </div>
+            <p class="portfolio-tile__description">Easily achievable nowadays, good old 3D clash detection. Probably one of the first use cases for BIM models in your company. Here the fun starts, but then...? Collision hierarchy, tolerances, clash to issues grouping, cloud-based reporting system. Clash itself is not 3D coordination — solved issues are, and it requires more attention than just one click.</p>
+          </div>
+        </div>
+
       </div>
     </div>
-    
+
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.coordination }}</h2>
-      <p>Effective BIM coordination goes beyond clash detection. Issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports with keeping in mind software performance and platforms capability. There are more aspects covered by simple "BIM coordination" than is commonly discussed. </p>
+      <p>Effective BIM coordination goes beyond clash detection. It means issues reporting instead of thousands of conflicts, format control and missing elements prevention, proper IFC exports keeping software performance and platform capabilities in mind. There are more aspects covered by simple "BIM coordination" than is commonly discussed.</p>
       <ul>
         <li>Clash and issues management workflows</li>
         <li>IFC validation with IDS and Python</li>
-        <li>IFC 4x3 infrastructure exports</li>
+        <li>IFC 4x3 model exports and MVD setup for various disciplines and purposes</li>
+        <li>Federated model management</li>
+        <li>Bill of Quantities and material schedules for construction phase</li>
       </ul>
+
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#clashmanagement" class="expertise-section__tag">#clashmanagement</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ifc" class="expertise-section__tag">#IFC</a>
@@ -176,12 +206,13 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#ids" class="expertise-section__tag">#IDS</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#infrastructure" class="expertise-section__tag">#infrastructure</a>
       </div>
+
       <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#coordination" class="expertise-section__cta">
         {{ t.view_all_projects }}
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </div>
-    
+
   </section>
 
   <!-- ========================================== -->
@@ -189,7 +220,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   <!-- Layout: Text LEFT (35%), Images RIGHT (65%) - REVERSE -->
   <!-- ========================================== -->
   <section class="expertise-section expertise-section--reverse" id="bim-standards">
-    
+
     <!-- Text Content -->
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.bim_standards }}</h2>
@@ -209,11 +240,11 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </div>
-    
+
     <!-- Tiles Stack -->
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
             <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Documentation workflow" loading="lazy">
@@ -226,7 +257,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <p class="portfolio-tile__description">Complete BIM Execution Plan framework aligned with ISO 19650 requirements.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
             <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80" alt="Standard templates" loading="lazy">
@@ -239,7 +270,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <p class="portfolio-tile__description">Company-wide Revit template with standardized families, schedules, and view templates.</p>
           </div>
         </div>
-        
+
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
             <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=800&q=80" alt="Training session" loading="lazy">
@@ -251,10 +282,10 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
             <p class="portfolio-tile__description">Training materials and adoption strategy for 200+ person organization.</p>
           </div>
         </div>
-        
+
       </div>
     </div>
-    
+
   </section>
 
   <!-- ========================================== -->
@@ -262,7 +293,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
   <!-- Layout: Images LEFT (65%), Text RIGHT (35%) -->
   <!-- ========================================== -->
   <section class="expertise-section" id="data-reporting">
-    
+
     <div class="expertise-section__media">
       <div class="portfolio-tiles-stack">
 
@@ -329,14 +360,14 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
       </div>
     </div>
-    
+
     <div class="expertise-section__content">
       <h2>{{ t.portfolio_categories.data_reporting }}</h2>
       <p>Conclusion is the point of diving into data. Presentation is the way. Nowadays we collect data all the time - financial budgets, activities reports, hike tracks notes, game logs, PV metrics and more! <br><br> Of course, our main goal is to bring decision-making input through data for AEC industry, but if the playground offers you infinite source of sand and gives you pretty useful tools, shape of the castles depends only on our imagination.</p>
       <ul>
         <li>Diagnostic dashboards (not decorative ones)</li>
         <li>Data extraction & transformation pipelines</li>
-        <li>Intuitive interface</li>
+        <li>Intuitive interface with 3 second rule based data presentation</li>
         <li>Insights connected with questions</li>
       </ul>
       <div class="expertise-section__tags">
@@ -350,7 +381,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
       </a>
     </div>
-    
+
   </section>
 
 </div>
