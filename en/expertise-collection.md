@@ -521,7 +521,6 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-<<<<<<< HEAD
             <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_02.jpg" alt="IFC validation scripting" loading="lazy">
           </div>
           <div class="project-tile__slide">
