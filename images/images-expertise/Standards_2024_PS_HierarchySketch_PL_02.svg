@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="440" viewBox="0 0 680 440" role="img">
+<title>Hierarchia wdrożenia BIM — odręczny przekrój budynku</title>
+<desc>Fundament to analiza i OIR, kondygnacje to geometria, standard modelowania, obieg dokumentacji i zespół, dach to efekt: sprzedawalne metry (PUM).</desc>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&amp;display=swap');
+svg { --ink:#2C2C2A; --muted:#5F5E5A; --floor:#1D9E75; --roof:#D85A30; --foundation:#888780; }
+.sk { stroke:var(--ink); stroke-opacity:.72; fill:none; stroke-linecap:round; stroke-width:1.3; }
+.skl { stroke:var(--ink); stroke-opacity:.45; fill:none; stroke-linecap:round; stroke-width:.7; }
+text { font-family:'Architects Daughter', 'Segoe Print', cursive; }
+.title { font-size:15px; fill:var(--ink); }
+.sub { font-size:13px; fill:var(--muted); }
+</style>
+<g>
+<rect x="164" y="44" width="392" height="37" fill="var(--roof)" opacity=".13"/>
+<path class="sk" d="M154 42 Q360 39 566 41"/><path class="sk" d="M560 36 Q562 62 561 87"/><path class="sk" d="M155 84 Q360 86 566 83"/><path class="sk" d="M161 35 Q159 61 160 88"/>
+<text class="title" x="360" y="60" text-anchor="middle" font-size="13">Efekt: atrakcyjne metry oparte na rzetelnych danych,</text>
+<text class="title" x="360" y="77" text-anchor="middle" font-size="13">a nie same efektowne modele</text>
+</g>
+<text class="sub" x="148" y="66" text-anchor="end">Dach jako efekt</text>
+<g>
+<rect x="164" y="93" width="392" height="50" fill="var(--floor)" opacity=".11"/>
+<path class="sk" d="M155 91 Q360 89 565 91"/><path class="sk" d="M559 86 Q561 117 560 151"/><path class="sk" d="M154 147 Q360 149 566 146"/><path class="sk" d="M161 85 Q159 118 160 150"/>
+<text class="title" x="360" y="112" text-anchor="middle"><tspan font-weight="bold">05.</tspan> Zespół i świadomość</text>
+<text class="sub" x="360" y="132" text-anchor="middle">projektant i koordynator procesu przed softem</text>
+</g>
+<text class="sub" x="148" y="122" text-anchor="end">III piętro</text>
+<g>
+<rect x="164" y="155" width="392" height="50" fill="var(--floor)" opacity=".11"/>
+<path class="sk" d="M154 153 Q360 151 566 153"/><path class="sk" d="M560 148 Q561 180 559 213"/><path class="sk" d="M155 209 Q360 211 565 208"/><path class="sk" d="M160 147 Q160 180 161 212"/>
+<text class="title" x="360" y="172" text-anchor="middle"><tspan font-weight="bold">04.</tspan> Obieg dokumentacji</text>
+<text class="sub" x="360" y="189" text-anchor="middle" font-size="12">ISO 19650 jako ewolucja współpracy,</text>
+<text class="sub" x="360" y="205" text-anchor="middle" font-size="12">nie rewolucja w procesie</text>
+</g>
+<text class="sub" x="148" y="184" text-anchor="end">II piętro</text>
+<g>
+<rect x="164" y="217" width="392" height="50" fill="var(--floor)" opacity=".11"/>
+<path class="sk" d="M155 215 Q360 213 565 215"/><path class="sk" d="M559 210 Q561 242 560 275"/><path class="sk" d="M154 271 Q360 273 566 270"/><path class="sk" d="M161 209 Q159 242 160 274"/>
+<text class="title" x="360" y="234" text-anchor="middle"><tspan font-weight="bold">03.</tspan> Standard pracy z modelem</text>
+<text class="sub" x="360" y="251" text-anchor="middle" font-size="12">powtarzalne i przewidywalne wyniki</text>
+<text class="sub" x="360" y="267" text-anchor="middle" font-size="12">z oszczędnością czasu podaną na tacy</text>
+</g>
+<text class="sub" x="148" y="246" text-anchor="end">I piętro</text>
+<g>
+<rect x="164" y="279" width="392" height="50" fill="var(--floor)" opacity=".11"/>
+<path class="sk" d="M154 277 Q360 275 566 277"/><path class="sk" d="M560 272 Q561 304 559 337"/><path class="sk" d="M155 333 Q360 335 565 332"/><path class="sk" d="M160 271 Q160 304 161 336"/>
+<text class="title" x="360" y="296" text-anchor="middle"><tspan font-weight="bold">02.</tspan> Geometria i informacja</text>
+<text class="sub" x="360" y="313" text-anchor="middle" font-size="12">PUM, materiały i wykończenia, kontrola przedmiarów,</text>
+<text class="sub" x="360" y="329" text-anchor="middle" font-size="12">wymagania techniczne i rezerwacje przestrzeni</text>
+</g>
+<text class="sub" x="148" y="308" text-anchor="end">Parter</text>
+<g>
+<rect x="144" y="342" width="432" height="54" fill="var(--foundation)" opacity=".14"/>
+<path class="sk" d="M134 340 Q360 337 586 339"/><path class="sk" d="M579 334 Q581 368 580 403"/><path class="sk" d="M135 399 Q360 401 585 398"/><path class="sk" d="M141 333 Q139 368 140 402"/>
+<text class="title" x="360" y="364" text-anchor="middle"><tspan font-weight="bold">01.</tspan> Analiza potrzeb i uzgodnione zastosowania</text>
+<text class="sub" x="360" y="384" text-anchor="middle">OIR + pre-BEP</text>
+</g>
+<text class="sub" x="126" y="372" text-anchor="end">Fundament</text>
+<path class="sk" d="M45 406 Q340 403 635 407" stroke-width="1.6"/>
+<path class="skl" d="M60 408 L48 420"/><path class="skl" d="M86 408 L74 420"/><path class="skl" d="M112 408 L100 420"/><path class="skl" d="M138 408 L126 420"/><path class="skl" d="M164 408 L152 420"/><path class="skl" d="M190 408 L178 420"/><path class="skl" d="M216 408 L204 420"/><path class="skl" d="M242 408 L230 420"/><path class="skl" d="M268 408 L256 420"/><path class="skl" d="M294 408 L282 420"/><path class="skl" d="M320 408 L308 420"/><path class="skl" d="M346 408 L334 420"/><path class="skl" d="M372 408 L360 420"/><path class="skl" d="M398 408 L386 420"/><path class="skl" d="M424 408 L412 420"/><path class="skl" d="M450 408 L438 420"/><path class="skl" d="M476 408 L464 420"/><path class="skl" d="M502 408 L490 420"/><path class="skl" d="M528 408 L516 420"/><path class="skl" d="M554 408 L542 420"/><path class="skl" d="M580 408 L568 420"/><path class="skl" d="M606 408 L594 420"/><path class="skl" d="M630 408 L618 420"/>
+<text class="sub" x="360" y="436" text-anchor="middle">im niżej, tym większa waga — bez fundamentu nie ma wyższych pięter</text>
+</svg>

@@ -97,26 +97,30 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
   <div class="exp-collection__list">
 
     <!-- ========================================== -->
-    <!-- PROJECT TILE 1: Heritage Documentation -->
+    <!-- PROJECT TILE: Standards: BIM Implementation in residential -->
     <!-- Odd tile = Photo LEFT (60%), Text RIGHT (40%) -->
-    <!-- Offset: 0% left, 10% right margin -->
+    <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="architecture, heritage, scans, revit" data-date="2025/03/14">
+    <article class="project-tile" data-tags="bim-standards, iso19650, residential, revit, implementation" data-date="2024/09/20">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1486718448742-163732cd1544?w=900&q=80" alt="Heritage building exterior" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2026_PS_BIMImplementation_01.png" alt="BIM documentation map according to ISO 19650" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="project-tile__slide">
-            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=900&q=80" alt="Point cloud scan" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_HierarchySketch_EN_02.svg" alt="BIM standard hierarchy sketch — from organization goals to the model" loading="lazy">
           </div>
           <!-- Slide 3 -->
-          <div class="project-tile__slide" data-text-sync="1">
-            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=900&q=80" alt="3D model view" loading="lazy">
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_BIMImplementation_03.png" alt="Modeling standard — typology and style library" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_BIMImplementation_04.png" alt="Model geometry and object data control" loading="lazy">
           </div>
         </div>
         
@@ -144,24 +148,20 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       
       <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">Heritage Building Documentation</h2>
+        <h2 class="project-tile__title">BIM in residential construction — fitting the technology to the industry, not the other way around</h2>
         <!-- date stored in data-date attribute on the article element -->
         
         <div class="project-tile__text-area">
           <div class="project-tile__text-slides">
-            <!-- Text Slide 1 (default - shows for slides 1 & 2) -->
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                Comprehensive documentation of a 19th-century heritage building using terrestrial laser scanning 
-                and drone photogrammetry. The point cloud data was processed and converted into a detailed 
-                Revit model for conservation planning and structural analysis.
-              </p>
-            </div>
-            <!-- Text Slide 2 (shows for slide 3 via data-text-sync) -->
-            <div class="project-tile__text-slide">
-              <p class="project-tile__description">
-                The final BIM model includes accurate geometry, material specifications, and condition assessment 
-                data. This enables the conservation team to plan interventions while preserving historical authenticity.
+                <strong>Introduction.</strong> The residential construction market sets clear, specific goals for BIM technology. From concept stage through detailed and construction design, it focuses on maximizing sellable living area against the plot geometry, the surroundings, sunlight exposure, and zoning conditions. At the same time, it demands clear design variant studies and quantity tracking that translates directly into construction cost per sellable square meter (PUM — usable apartment area) — from the earliest design work onward. This specificity means BIM has its place in the process, but its use cases must be strictly tailored to the industry's rules of the game.<br><br>
+                <strong>1. Analysis and foundation.</strong> Implementation starts with an analysis of the organization's existing standard and fitting BIM in as an improvement that affects every department — not as a standalone technology initiative. The OIR defines the decision-making needs, and a pre-BEP serves as a draft of the model-based solution for three to four concrete use cases.<br><br>
+                <strong>2. Geometry and information.</strong> The key is establishing a level of geometry and information that delivers documentation of high repeatability and visual quality, with a solid base for later detailing and quantity take-offs. Awareness of the goal applies from the very first modeled element: maximizing sellable area, creating an attractive impression through facades and finishes, and maximizing the code-compliance control (Technical Conditions) that the model is capable of providing.<br><br>
+                <strong>3. The modeling standard.</strong> A detailed modeling manual secures every risk that could derail the BIM use cases and guarantees repeatable results — from naming conventions and parameters, through a typology library, to tagging and schedules that drive documentation automation and downstream BI analytics. It is a prompter who knows the entire play from the first act to the last — and a real saver of time.<br><br>
+                <strong>4. Information flow.</strong> A model-based documentation workflow aligned with ISO 19650, developed as a working methodology — statuses, revision tracking, auditability — not as an excuse to buy yet another piece of software. Knowing what the standard proposes, and what you actually expect, before tying yourself to a vendor protects you from disappointment and from a process reduced to empty slogans.<br><br>
+                <strong>5. A team of technology specialists — or designers?</strong> Building the awareness and skills of a team that understands the change and guarantees commitment. Coordination and design competence outweigh software fluency — it is far easier to sharpen the tools of a great designer than to make a designer out of a software operator. A committed designer who knows the design goal will master the tool in short order and squeeze the maximum out of its potential.<br><br>
+                <strong>Conclusion.</strong> A standard tailored this way sells attractive square meters, not models for their own sake — and that is the measure of its return.<br><br>
               </p>
             </div>
           </div>
@@ -170,15 +170,16 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
         <div class="project-tile__fade"></div>
 
         <div class="project-tile__tags">
-          <a href="#heritage" class="project-tile__tag">heritage</a>
-          <a href="#scans" class="project-tile__tag">scans</a>
-          <a href="#revit" class="project-tile__tag">revit</a>
+          <a href="#bim-standards" class="project-tile__tag">#bim-standards</a>
+          <a href="#iso19650" class="project-tile__tag">#iso19650</a>
+          <a href="#residential" class="project-tile__tag">#residential</a>
         </div>
         
         <div class="project-tile__tools">
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-recap.svg" alt="ReCap"></span>
-          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-autocad.svg" alt="AutoCAD"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_iso_short.webp" alt="ISO"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Autodesk Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_bimstandardpl_short.jpg" alt="BIM Standard PL"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
         </div>
       </div>
       
