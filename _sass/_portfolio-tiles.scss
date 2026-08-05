@@ -1537,6 +1537,13 @@
   user-select: none;
 }
 
+// SVG slides have a small intrinsic size, so unlike large raster files they
+// don't fill the viewport on their own — stretch them; vectors stay crisp.
+.lightbox__image[src$=".svg"] {
+  width: 95vw;
+  height: 95vh;
+}
+
 // Close button (top-right)
 .lightbox__close {
   position: absolute;

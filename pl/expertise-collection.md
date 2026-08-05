@@ -163,6 +163,10 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
                 <strong>5. Zespół specjalistów od technologii czy projektantów?</strong> Budowa świadomości i umiejętności zespołu, który rozumie zmianę i gwarantuje zaangażowanie. Kompetencje koordynacyjne i projektowe są ważniejsze niż znajomość softu — łatwiej rozwinąć narzędziowo świetnego projektanta, niż uczynić projektantem użytkownika oprogramowania. Zaangażowany projektant świadom projektowego celu w krótkim czasie przyswoi narzędzie i wydobędzie z niego maksimum potencjału.<br><br>
                 <strong>Podsumowanie.</strong> Tak dopasowany standard sprzedaje atrakcyjne metry kwadratowe, a nie modele same w sobie — i to jest miara jego zwrotu.<br><br>
               </p>
+              <p class="project-tile__description">
+                <strong>Redukcja kosztów w liczbach.</strong> Publikowane badania i wdrożenia raportują 30–80% redukcji czasu przedmiarowania (mediana cytowanych wartości ~65%) przy dokładności wyceny do ±3%. Pomiar korzyści BIM Level 2 w UK wykazał ok. £1 mln oszczędności na pojedynczym projekcie publicznym, a wykonawcy — ponad 30% mniej czasu estymacji.<br><br>
+              </p>
+              <p class="project-tile__description"><small>Źródła danych o zwrocie z modelowego przedmiarowania (BOQ): <a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — do 80% redukcji czasu wyceny, dokładność ±3%; <a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — pomiar korzyści BIM Level 2 na projektach publicznych UK; <a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — ponad 30% oszczędności czasu przedmiarowania; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — przegląd metod BIM QTO.</small></p>
             </div>
           </div>
         </div>

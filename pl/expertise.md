@@ -195,27 +195,28 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Dokumentacja workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2026_PS_BIMImplementation_01.png" alt="Mapa obiegu informacji BIM według ISO 19650 — strony procesu, BEP, MIDP, LOIN, model federowany i CDE" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_iso_short.webp" alt="ISO"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_bimstandardpl_short.jpg" alt="BIM Standard PL"></span>
             </div>
-            <p class="portfolio-tile__description">Kompletny framework BEP zgodny z wymaganiami ISO 19650.</p>
+            <p class="portfolio-tile__description">Jedna mapa zamiast półki segregatorów: OIR i EIR definiują wymagania, BEP odpowiada strategią, a MIDP i LOIN mówią, kto, kiedy i jak szczegółowo dostarcza informacje. Ta mapa działa tylko oparta na wdrożonym standardzie BIM — bez niego pozostaje diagramem na ścianie. Jak wdrożyliśmy go w praktyce — case study <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bim-standards">„BIM w budownictwie mieszkaniowym"</a>.</p>
           </div>
         </div>
         
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80" alt="Szablony standardów" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_BIMImplementation_04.png" alt="Standaryzacja BOQ — ilości bazowe i property sety elementu w modelu IFC" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-acc.svg" alt="ACC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
-            <p class="portfolio-tile__description">Firmowy szablon Revit ze standaryzowanymi rodzinami, zestawieniami i szablonami widoków.</p>
+            <p class="portfolio-tile__description">A gdyby przedmiar liczył się sam przy każdej rewizji? Modelowy BOQ (Revit → Navisworks/IFC) to według badań 30–80% redukcji czasu przedmiarowania i dokładność wyceny do ±3% — ale tylko na bazie wdrożonego standardu BIM: nie ma standardu, nie ma efektów. Liczby i źródła w case study <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bim-standards">„BIM w budownictwie mieszkaniowym"</a>.</p>
           </div>
         </div>
         

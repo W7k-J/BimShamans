@@ -247,27 +247,28 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=800&q=80" alt="Documentation workflow" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2026_PS_BIMImplementation_01.png" alt="BIM information flow map according to ISO 19650 — process parties, BEP, MIDP, LOIN, federated model and CDE" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-word.svg" alt="Word"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-excel.svg" alt="Excel"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_iso_short.webp" alt="ISO"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_bimstandardpl_short.jpg" alt="BIM Standard PL"></span>
             </div>
-            <p class="portfolio-tile__description">Complete BIM Execution Plan framework aligned with ISO 19650 requirements.</p>
+            <p class="portfolio-tile__description">One map instead of a shelf of binders: OIR and EIR define the requirements, the BEP answers with a strategy, and MIDP and LOIN say who delivers what, when, and in which detail. The map only works on top of an implemented BIM standard — without one, it stays a diagram on the wall. How we put it into practice — the case study <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bim-standards">"BIM in residential construction"</a>.</p>
           </div>
         </div>
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="https://images.unsplash.com/photo-1507925921958-8a62f3d1a50d?w=800&q=80" alt="Standard templates" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_BIMImplementation_04.png" alt="BOQ standardization — base quantities and element property sets in an IFC model" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-acc.svg" alt="ACC"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
-            <p class="portfolio-tile__description">Company-wide Revit template with standardized families, schedules, and view templates.</p>
+            <p class="portfolio-tile__description">What if the quantities counted themselves at every revision? Model-based BOQ (Revit → Navisworks/IFC) delivers, per published studies, a 30–80% reduction in take-off time and estimate accuracy within ±3% — but only on top of an implemented BIM standard: no standard, no results. Numbers and sources in the case study <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bim-standards">"BIM in residential construction"</a>.</p>
           </div>
         </div>
 

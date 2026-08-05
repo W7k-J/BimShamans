@@ -163,6 +163,10 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
                 <strong>5. A team of technology specialists — or designers?</strong> Building the awareness and skills of a team that understands the change and guarantees commitment. Coordination and design competence outweigh software fluency — it is far easier to sharpen the tools of a great designer than to make a designer out of a software operator. A committed designer who knows the design goal will master the tool in short order and squeeze the maximum out of its potential.<br><br>
                 <strong>Conclusion.</strong> A standard tailored this way sells attractive square meters, not models for their own sake — and that is the measure of its return.<br><br>
               </p>
+              <p class="project-tile__description">
+                <strong>Cost reduction in numbers.</strong> Published studies and implementations report a 30–80% reduction in take-off time (median of cited values ~65%) with estimate accuracy within ±3%. The UK BIM Level 2 benefits measurement showed circa £1m saved on a single public project, and contractors report over 30% less estimating time.<br><br>
+              </p>
+              <p class="project-tile__description"><small>Sources on the return from model-based quantity take-off (BOQ): <a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — up to 80% estimating time reduction, accuracy within ±3%; <a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — BIM Level 2 benefits measurement on UK public projects; <a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — over 30% estimating time saved; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — review of BIM QTO methods.</small></p>
             </div>
           </div>
         </div>
