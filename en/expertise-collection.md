@@ -101,7 +101,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Odd tile = Photo LEFT (60%), Text RIGHT (40%) -->
     <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, iso19650, residential, revit, implementation" data-date="2024/09/20">
+    <article class="project-tile" id="bim-residential-implementation" data-tags="bim-standards, iso19650, bep, residential, revit, implementation" data-date="2024/09/20">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -148,7 +148,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       
       <!-- Text Content (40%) -->
       <div class="project-tile__content">
-        <h2 class="project-tile__title">BIM in residential construction — fitting the technology to the industry, not the other way around</h2>
+        <h2 class="project-tile__title">Residential market: fitting BIM to the industry, not the other way around</h2>
         <!-- date stored in data-date attribute on the article element -->
         
         <div class="project-tile__text-area">
@@ -166,7 +166,14 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
               <p class="project-tile__description">
                 <strong>Cost reduction in numbers.</strong> Published studies and implementations report a 30–80% reduction in take-off time (median of cited values ~65%) with estimate accuracy within ±3%. The UK BIM Level 2 benefits measurement showed circa £1m saved on a single public project, and contractors report over 30% less estimating time.<br><br>
               </p>
-              <p class="project-tile__description"><small>Sources on the return from model-based quantity take-off (BOQ): <a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — up to 80% estimating time reduction, accuracy within ±3%; <a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — BIM Level 2 benefits measurement on UK public projects; <a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — over 30% estimating time saved; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — review of BIM QTO methods.</small></p>
+              <p class="project-tile__description"><small>Sources on the return from model-based quantity take-off (BOQ):</small></p>
+              <ul class="project-tile__description">
+                <li><small><a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — up to 80% estimating time reduction, accuracy within ±3%</small></li>
+                <li><small><a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — BIM Level 2 benefits measurement on UK public projects</small></li>
+                <li><small><a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — over 30% estimating time saved</small></li>
+                <li><small><a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — review of BIM QTO methods</small></li>
+                <br>
+              </ul>
             </div>
           </div>
         </div>
@@ -194,7 +201,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/12/15">
+    <article class="project-tile" id="powerbi-board-game-analysis" data-tags="data-reporting, data, powerbi, dashboards, analytics" data-date="2025/12/15">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -272,7 +279,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/11/15">
+    <article class="project-tile" id="hike-tracker-dashboard" data-tags="data-reporting, data, powerbi, dashboards, analytics" data-date="2025/11/15">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -360,7 +367,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, IFC, BIM" data-date="2025/12/28">
+    <article class="project-tile" id="ifc-mmi-check-acc" data-tags="data-reporting, data, powerbi, dashboards, IFC, BIM" data-date="2025/12/28">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -449,14 +456,14 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, BIM" data-date="2025/10/30">
+    <article class="project-tile" id="3d-flats-bi-reporting" data-tags="data-reporting, data, powerbi, BIM" data-date="2025/10/30">
       
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <!-- Slide 1 -->
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_01.png" alt="Hike Tracker dashboard overview" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Data_2024_PS_3DBIFlats_01.png" alt="3D Flats BI dashboard overview" loading="lazy">
           </div>
           <!-- Slide 2 -->
           <div class="project-tile__slide">
@@ -521,7 +528,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- PROJECT TILE 5: IFC Validation — IDS and Python Scripting -->
     <!-- Odd tile = Photo LEFT, Text RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
+    <article class="project-tile" id="ifc-validation-ids-python" data-tags="coordination, bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
@@ -621,7 +628,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- PROJECT TILE 6: IFC 4x3 in Infrastructure -->
     <!-- Even tile = Text LEFT, Photo RIGHT -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
+    <article class="project-tile" id="ifc-4x3-infrastructure" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
       
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
@@ -695,7 +702,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Author of a tile: Julian -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="automation, revit, csharp, plugins" data-date="2025/06/01">
+    <article class="project-tile" id="revit-csharp-addins" data-tags="automation, revitapi, revit, csharp, plugins" data-date="2025/06/01">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -779,9 +786,330 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
 
     </article>
 
+    <!-- ========================================== -->
+    <!-- PROJECT TILE: Coordination: Federated model & clash detection -->
+    <!-- Odd tile = Photo LEFT (60%), Text RIGHT (40%) -->
+    <!-- Author of a tile: Piotr -->
+    <!-- ========================================== -->
+    <article class="project-tile" id="federated-model-clash-detection" data-tags="coordination, clashmanagement, navisworks, federated, ifc" data-date="2024/06/15">
+
+      <!-- Slideshow (60%) -->
+      <div class="project-tile__slideshow">
+        <div class="project-tile__slides">
+          <!-- Slide 1 -->
+          <div class="project-tile__slide project-tile__slide--active">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Federated_01.png" alt="Federated model in Navisworks Manage with element properties carried over from the source Revit file" loading="lazy">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Federated_02.jpg" alt="Federated MEP model next to a 2D coordination drawing with elevation annotations" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Clashes_01.png" alt="3D clash detection — conflicting pipe and duct runs highlighted in the federated model" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Clashes_03.png" alt="Clash Detective in Navisworks Manage — clash tests, clash grouping and issue statuses" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
+        <!-- Dots indicator -->
+        <div class="project-tile__dots"></div>
+      </div>
+
+      <!-- Text Content (40%) -->
+      <div class="project-tile__content">
+        <h2 class="project-tile__title">Federated model strategy and 3D clash detection</h2>
+
+        <div class="project-tile__text-area">
+          <div class="project-tile__text-slides">
+            <div class="project-tile__text-slide project-tile__text-slide--active">
+              <p class="project-tile__description">
+                Federated model management starts even before the first discipline model is produced in the design software. The strategy for the federation process contains discipline division, Model View Definition export setup, proper coordinates establishment, data export and more. A well-structured, well-positioned 3D federated file is a starting point for unlocking BIM use-case potential.<br><br>
+                Easily achievable nowadays, good old 3D clash detection functions smoothly when the conditions mentioned above are fulfilled. Clash detection is probably one of the first use cases for BIM models in your company. Here the fun starts, but then...? Collision hierarchy, tolerances, clash to issues grouping, cloud-based reporting system. Clash itself is not 3D coordination — solved issues are, and it requires more attention than just one click.<br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-tile__fade"></div>
+
+        <div class="project-tile__tags">
+          <a href="#coordination" class="project-tile__tag">#coordination</a>
+          <a href="#clashmanagement" class="project-tile__tag">#clashmanagement</a>
+          <a href="#federated" class="project-tile__tag">#federated</a>
+        </div>
+
+        <div class="project-tile__tools">
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+          <span class="project-tile__tool-icon tool-icon--themed"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-constructioncloud_short.png" alt="Autodesk Construction Cloud"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
+        </div>
+      </div>
+
+    </article>
+
+    <!-- ========================================== -->
+    <!-- PROJECT TILE: Coordination: Automated BOQ and 5D BIM -->
+    <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
+    <!-- Author of a tile: Piotr -->
+    <!-- ========================================== -->
+    <article class="project-tile" id="automated-boq-5d-bim" data-tags="coordination, boq, 5d, revit, navisworks, quantities" data-date="2022/05/10">
+
+      <!-- Slideshow (60%) -->
+      <div class="project-tile__slideshow">
+        <div class="project-tile__slides">
+          <!-- Slide 1 -->
+          <div class="project-tile__slide project-tile__slide--active">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2022_PS_FedBOQ_01.jpg" alt="BOQ and material schedules for design, construction and FM phase" loading="lazy">
+          </div>
+          <!-- Slide 2 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2022_PS_FedBOQ_02.jpg" alt="Residential building model split into element groups isolated for quantity take-off" loading="lazy">
+          </div>
+          <!-- Slide 3 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2022_PS_FedBOQ_03.png" alt="IFC entity tree with coded slab type naming feeding the quantity take-off" loading="lazy">
+          </div>
+          <!-- Slide 4 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2022_PS_FedBOQ_04.png" alt="Selection tree with structural element types and concrete classes selected for take-off" loading="lazy">
+          </div>
+          <!-- Slide 5 -->
+          <div class="project-tile__slide">
+            <img src="{{ site.baseurl }}/images/images-expertise/Standards_2024_PS_BIMImplementation_04.png" alt="Base quantities and quantity take-off property sets on an IFC slab element" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Navigation arrows -->
+        <button class="project-tile__nav project-tile__nav--prev" aria-label="Previous slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="15 18 9 12 15 6"></polyline></svg>
+        </button>
+        <button class="project-tile__nav project-tile__nav--next" aria-label="Next slide">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><polyline points="9 6 15 12 9 18"></polyline></svg>
+        </button>
+
+        <!-- Zoom/Enlarge button -->
+        <button class="project-tile__zoom" aria-label="View full size image">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <polyline points="9 21 3 21 3 15"></polyline>
+            <line x1="21" y1="3" x2="14" y2="10"></line>
+            <line x1="3" y1="21" x2="10" y2="14"></line>
+          </svg>
+        </button>
+
+        <!-- Dots indicator -->
+        <div class="project-tile__dots"></div>
+      </div>
+
+      <!-- Text Content (40%) -->
+      <div class="project-tile__content">
+        <h2 class="project-tile__title">Automated BOQ and the road to working 5D BIM</h2>
+
+        <div class="project-tile__text-area">
+          <div class="project-tile__text-slides">
+            <div class="project-tile__text-slide project-tile__text-slide--active">
+              <p class="project-tile__description">
+                Automated BOQ and real-time updates in a structured, ready-to-analyze form are an unquestioned challenge. Our experience with models, material libraries and schedule capabilities led us to the conclusion that success starts where unified, coded parameters and material naming meet a level-structured scheduling standard. All together, they build a working 5D BIM.<br><br>
+                A deeper level of awareness comes when a comparison to the construction site is brought to the table. Details matter. Higher accuracy requires definition of the geometry join order, material solutions and systems, and even an understanding of construction details before they appear in the field. It leads to a self-improvement cycle — the more detailed the model is, the better the outcome BOQ provides. It's also a well-known trap: an overly detailed approach in the early stage of design and modelling leads to overcomplicated work when changing the design itself, so the workflow has to cover LOD and LOI development during the project and execution lifecycle.<br><br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-tile__fade"></div>
+
+        <div class="project-tile__tags">
+          <a href="#coordination" class="project-tile__tag">#coordination</a>
+          <a href="#boq" class="project-tile__tag">#boq</a>
+          <a href="#5d" class="project-tile__tag">#5d</a>
+        </div>
+
+        <div class="project-tile__tools">
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Autodesk Revit"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-navisworks_short.png" alt="Navisworks Manage"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_excel_short.png" alt="Excel"></span>
+          <span class="project-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerbi-yellow_short.png" alt="Power BI"></span>
+        </div>
+      </div>
+
+    </article>
+
   </div><!-- /.exp-collection__list -->
 
 </div><!-- /.exp-collection__container -->
+
+<!-- ==========================================================
+     Structured data (schema.org / JSON-LD)
+     Describes each case study tile as a separate entity, since all tiles
+     share one URL. Invisible to users — no effect on layout.
+     ⚠ Keep in sync with the tiles above (names, anchors, images).
+     ========================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "BIM case studies — coordination, standards, automation and data",
+  "description": "Case studies in BIM coordination, ISO 19650 standards, IFC and OpenBIM validation, Revit automation and Power BI reporting.",
+  "url": "{{ page.url | absolute_url }}",
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 10,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Residential market: fitting BIM to the industry, not the other way around",
+          "description": "BIM implementation in residential construction: OIR and pre-BEP, level of geometry and information, modelling standard, ISO 19650 information flow and model-based BOQ with measured return.",
+          "url": "{{ page.url | absolute_url }}#bim-residential-implementation",
+          "image": "{{ '/images/images-expertise/Standards_2026_PS_BIMImplementation_01.png' | absolute_url }}",
+          "keywords": "BIM implementation, ISO 19650, BEP, LOIN, BOQ, residential construction, Revit",
+          "dateCreated": "2024-09-20"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Power BI Board Game Strategy Analysis",
+          "description": "Power BI dashboard built from Terraforming Mars game logs: JSON data model, Python script extracting dominant RGB colours from corporation logos, app-style navigation interface.",
+          "url": "{{ page.url | absolute_url }}#powerbi-board-game-analysis",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png' | absolute_url }}",
+          "keywords": "Power BI, dashboard, data analytics, Python, JSON, data modelling",
+          "dateCreated": "2025-12-15"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Hike Tracker Dashboard",
+          "description": "GPX track analytics in Power BI: 25 MB of raw GPS data reduced by 93% with Python, national park boundaries converted in QGIS, automated GPX download with Power Automate, heatmaps and terrain maps.",
+          "url": "{{ page.url | absolute_url }}#hike-tracker-dashboard",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_HikeTracker_01.png' | absolute_url }}",
+          "keywords": "Power BI, GPX, GPS data, QGIS, Power Automate, Python, geospatial analytics",
+          "dateCreated": "2025-11-15"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "IFC MMI Check across ACC stored files",
+          "description": "IFC object maturity (MMI) verification and interactive reporting from files stored in Autodesk Construction Cloud, using the Autodesk Data Exchange IFC add-in and Power BI.",
+          "url": "{{ page.url | absolute_url }}#ifc-mmi-check-acc",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_IFCMMICheck_00.png' | absolute_url }}",
+          "keywords": "IFC, MMI, Autodesk Construction Cloud, Data Exchange, Power BI, model quality assurance",
+          "dateCreated": "2025-12-28"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "3D Flats BI Reporting",
+          "description": "Model-driven business intelligence for residential units at concept stage: Revit room bounding boxes delivered through Speckle into Power BI, with quality assurance before data export.",
+          "url": "{{ page.url | absolute_url }}#3d-flats-bi-reporting",
+          "image": "{{ '/images/images-expertise/Data_2024_PS_3DBIFlats_01.png' | absolute_url }}",
+          "keywords": "Revit, Speckle, Power BI, room bounding box, residential design, 3D reporting",
+          "dateCreated": "2025-10-30"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "IFC Validation — IDS and Python Scripting",
+          "description": "IFC model validation with buildingSMART IDS files in Solibri and usBIM, plus Python scripts for custom property set checks, MMI values, revision consistency and automated correction of delivered files.",
+          "url": "{{ page.url | absolute_url }}#ifc-validation-ids-python",
+          "image": "{{ '/images/images-expertise/Coordination_2025_NG_SolibriIFCQA_02.jpg' | absolute_url }}",
+          "keywords": "IFC validation, IDS, buildingSMART, Solibri, Python, property set, OpenBIM",
+          "dateCreated": "2025-07-18"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "IFC 4x3 in Infrastructure",
+          "description": "Mapping infrastructure entities such as IfcRailway, IfcRailwayPart, IfcRoad and IfcSign in IFC 4x3: export configuration, Model View Definition setup, object mapping and spatial hierarchy in Civil 3D, Revit and Novapoint.",
+          "url": "{{ page.url | absolute_url }}#ifc-4x3-infrastructure",
+          "keywords": "IFC 4x3, IfcRailway, IfcRoad, infrastructure BIM, Civil 3D, Novapoint, MVD, OpenBIM",
+          "dateCreated": "2025-11-05"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Revit and C# journey: Drafter, Leveler, Boxer & Extra",
+          "description": "Four Revit add-ins published on the Autodesk App Store — Drafter, Leveler, Boxer and Extra — including around 180 drawing and annotation automations built with the Revit API in C#.",
+          "url": "{{ page.url | absolute_url }}#revit-csharp-addins",
+          "image": "{{ '/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png' | absolute_url }}",
+          "keywords": "Revit API, C#, Autodesk App Store, Revit add-in, drawing automation, Visual Studio",
+          "dateCreated": "2025-06-01"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 9,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Federated model strategy and 3D clash detection",
+          "description": "Federated model management from discipline division, Model View Definition export setup and shared coordinates through to clash detection: collision hierarchy, tolerances, clash to issue grouping and cloud-based reporting in Navisworks Manage.",
+          "url": "{{ page.url | absolute_url }}#federated-model-clash-detection",
+          "image": "{{ '/images/images-expertise/Coordination_2024_PS_Federated_01.png' | absolute_url }}",
+          "keywords": "federated model, clash detection, Navisworks Manage, Model View Definition, BIM coordination, IFC, Autodesk Construction Cloud",
+          "dateCreated": "2024-06-15"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 10,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Automated BOQ and the road to working 5D BIM",
+          "description": "Automated bill of quantities with real-time updates: unified coded parameters and material naming meeting a level-structured scheduling standard, geometry join order and LOD/LOI development across the project lifecycle.",
+          "url": "{{ page.url | absolute_url }}#automated-boq-5d-bim",
+          "image": "{{ '/images/images-expertise/Coordination_2022_PS_FedBOQ_01.jpg' | absolute_url }}",
+          "keywords": "BOQ, bill of quantities, 5D BIM, quantity take-off, Revit, Navisworks Manage, material schedules, LOD, LOI",
+          "dateCreated": "2022-05-10"
+        }
+      }
+    ]
+  }
+}
+</script>
 
 <!-- Navigation Footer -->
 <nav class="expertise__nav">
@@ -945,5 +1273,5 @@ document.addEventListener('DOMContentLoaded', function () {
     </blockquote>
   </div>
 
-<!-- Embed slideshow script -->
-<script src="{{ site.baseurl }}/assets/portfolio-tiles.js" defer></script>
+<!-- Slideshow script is already loaded by the default layout — do not load it twice,
+     a second copy re-runs every initializer and double-binds the filter events. -->

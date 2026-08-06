@@ -143,7 +143,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Federated_01.png" alt="Clash detection with Navisworks Manage" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Federated_01.png" alt="Federated model in Navisworks Manage" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
@@ -173,7 +173,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
 
         <div class="portfolio-tile">
           <div class="portfolio-tile__image">
-            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Clashes_01.png" alt="Federated model in Navisworks Manage" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/Coordination_2024_PS_Clashes_01.png" alt="Clash detection with Navisworks Manage" loading="lazy">
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
@@ -233,7 +233,6 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
       <div class="expertise-section__tags">
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#iso19650" class="expertise-section__tag">#ISO19650</a>
         <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bep" class="expertise-section__tag">#BEP</a>
-        <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#digitaldelivery" class="expertise-section__tag">#digitaldelivery</a>
       </div>
       <a href="{{ site.baseurl }}/{{ lang }}/expertise-collection/#bim-standards" class="expertise-section__cta">
         {{ t.view_all_projects }}

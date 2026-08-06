@@ -327,12 +327,12 @@
    * Maps category names (from expertise.md section links) to arrays of tags
    */
   var categoryTagsMap = {
-    'architecture': ['design', 'heritage', 'scans'],
-    'bim-standards': ['iso19650', 'bep', 'digitaldelivery'],
-    'data-reporting': ['data', 'powerbi', 'dashboards'],
-    'automation': ['dynamo', 'revitapi', 'python'],
-    'coordination': ['clashmanagement', 'ifc', 'openbim'],
-    'software': ['revit', 'archicad', 'rhino']
+    'architecture': ['architecture', 'design', 'heritage', 'scans'],
+    'bim-standards': ['bim-standards', 'iso19650', 'bep', 'digitaldelivery'],
+    'data-reporting': ['data-reporting', 'data', 'powerbi', 'dashboards'],
+    'automation': ['automation', 'dynamo', 'revitapi', 'python'],
+    'coordination': ['coordination', 'clashmanagement', 'ifc', 'openbim', 'boq', '5d'],
+    'software': ['software', 'revit', 'archicad', 'rhino']
   };
 
   /**

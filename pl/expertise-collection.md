@@ -101,7 +101,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Nieparzysty = Zdjęcie LEWO (60%), Tekst PRAWO (40%) -->
     <!-- Autor kafelka: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, iso19650, residential, revit, implementation" data-date="2024/09/20">
+    <article class="project-tile" id="bim-residential-implementation" data-tags="bim-standards, iso19650, bep, residential, revit, implementation" data-date="2024/09/20">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -166,7 +166,13 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
               <p class="project-tile__description">
                 <strong>Redukcja kosztów w liczbach.</strong> Publikowane badania i wdrożenia raportują 30–80% redukcji czasu przedmiarowania (mediana cytowanych wartości ~65%) przy dokładności wyceny do ±3%. Pomiar korzyści BIM Level 2 w UK wykazał ok. £1 mln oszczędności na pojedynczym projekcie publicznym, a wykonawcy — ponad 30% mniej czasu estymacji.<br><br>
               </p>
-              <p class="project-tile__description"><small>Źródła danych o zwrocie z modelowego przedmiarowania (BOQ): <a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — do 80% redukcji czasu wyceny, dokładność ±3%; <a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — pomiar korzyści BIM Level 2 na projektach publicznych UK; <a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — ponad 30% oszczędności czasu przedmiarowania; <a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — przegląd metod BIM QTO.</small></p>
+              <p class="project-tile__description"><small>Źródła danych o zwrocie z modelowego przedmiarowania (BOQ):</small></p>
+              <ul class="project-tile__description">
+                <li><small><a href="https://cife.stanford.edu" target="_blank" rel="noopener">Stanford CIFE, TR171 (2007)</a> — do 80% redukcji czasu wyceny, dokładność ±3%</small></li>
+                <li><small><a href="https://www.cdbb.cam.ac.uk/files/pwc_bmm_application_report_180607_final.pdf" target="_blank" rel="noopener">PwC / CDBB (2018)</a> — pomiar korzyści BIM Level 2 na projektach publicznych UK</small></li>
+                <li><small><a href="https://construction.autodesk.com/resources/customers/windover-construction-autodesk-takeoff/" target="_blank" rel="noopener">Autodesk — Windover Construction</a> — ponad 30% oszczędności czasu przedmiarowania</small></li>
+                <li><small><a href="https://www.sciencedirect.com/science/article/abs/pii/S0926580524002851" target="_blank" rel="noopener">Automation in Construction (2024)</a> — przegląd metod BIM QTO</small></li>
+              </ul>
             </div>
           </div>
         </div>
@@ -194,7 +200,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Parzysty = Tekst LEWO (40%), Zdjęcie PRAWO (60%) -->
     <!-- Autor kafelka: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/12/15">
+    <article class="project-tile" id="powerbi-board-game-analysis" data-tags="data-reporting, data, powerbi, dashboards, analytics" data-date="2025/12/15">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -272,7 +278,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Parzysty = Tekst LEWO (40%), Zdjęcie PRAWO (60%) -->
     <!-- Autor kafelka: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, analytics" data-date="2025/11/15">
+    <article class="project-tile" id="hike-tracker-dashboard" data-tags="data-reporting, data, powerbi, dashboards, analytics" data-date="2025/11/15">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -360,7 +366,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Parzysty = Tekst LEWO (40%), Zdjęcie PRAWO (60%) -->
     <!-- Autor kafelka: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, dashboards, IFC, BIM" data-date="2025/12/28">
+    <article class="project-tile" id="ifc-mmi-check-acc" data-tags="data-reporting, data, powerbi, dashboards, IFC, BIM" data-date="2025/12/28">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -449,7 +455,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Parzysty = Tekst LEWO (40%), Zdjęcie PRAWO (60%) -->
     <!-- Autor kafelka: Piotr -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="data, powerbi, BIM" data-date="2025/10/30">
+    <article class="project-tile" id="3d-flats-bi-reporting" data-tags="data-reporting, data, powerbi, BIM" data-date="2025/10/30">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -521,7 +527,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- PROJEKT 5: Walidacja IFC — IDS i skrypty Python -->
     <!-- Nieparzysty = Zdjęcie LEWO, Tekst PRAWO -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
+    <article class="project-tile" id="ifc-validation-ids-python" data-tags="coordination, bim-standards, ifc, ids, python, openbim" data-date="2025/07/18">
 
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
@@ -609,7 +615,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- PROJEKT 6: IFC 4x3 w infrastrukturze -->
     <!-- Parzysty = Tekst LEWO, Zdjęcie PRAWO -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
+    <article class="project-tile" id="ifc-4x3-infrastructure" data-tags="ifc, infrastructure, openbim, coordination" data-date="2025/11/05">
 
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
@@ -679,7 +685,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
     <!-- Even tile = Text LEFT (40%), Photo RIGHT (60%) -->
     <!-- Autor kafelka: Julian -->
     <!-- ========================================== -->
-    <article class="project-tile" data-tags="automation, revit, csharp, plugins" data-date="2025/06/01">
+    <article class="project-tile" id="revit-csharp-addins" data-tags="automation, revitapi, revit, csharp, plugins" data-date="2025/06/01">
 
       <!-- Slideshow (60%) -->
       <div class="project-tile__slideshow">
@@ -765,6 +771,132 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
   </div><!-- /.exp-collection__list -->
 
 </div><!-- /.exp-collection__container -->
+
+<!-- ==========================================================
+     Dane strukturalne (schema.org / JSON-LD)
+     Opisują każdy kafel case study jako osobny byt, mimo że wszystkie
+     dzielą jeden URL. Niewidoczne dla użytkownika — zero wpływu na układ.
+     ⚠ Utrzymywać w zgodzie z kafelkami powyżej (nazwy, kotwice, obrazy).
+     ========================================================== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Case studies BIM — koordynacja, standardy, automatyzacja i dane",
+  "description": "Case studies z koordynacji BIM, standardów ISO 19650, walidacji IFC i OpenBIM, automatyzacji Revit oraz raportowania w Power BI.",
+  "url": "{{ page.url | absolute_url }}",
+  "inLanguage": "pl",
+  "mainEntity": {
+    "@type": "ItemList",
+    "numberOfItems": 8,
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "BIM w budownictwie mieszkaniowym — dopasowanie technologii do specyfiki branży",
+          "description": "Wdrożenie BIM w budownictwie mieszkaniowym: OIR i pre-BEP, poziom geometrii i informacji, standard modelowania, obieg dokumentacji według ISO 19650 oraz modelowy przedmiar BOQ wraz z danymi o zwrocie.",
+          "url": "{{ page.url | absolute_url }}#bim-residential-implementation",
+          "image": "{{ '/images/images-expertise/Standards_2026_PS_BIMImplementation_01.png' | absolute_url }}",
+          "keywords": "wdrożenie BIM, ISO 19650, BEP, LOIN, BOQ, budownictwo mieszkaniowe, Revit, standard BIM",
+          "dateCreated": "2024-09-20"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Analiza strategii gry planszowej",
+          "description": "Dashboard Power BI zbudowany z logów rozgrywki Terraforming Mars: model danych z pliku JSON, skrypt Python rozpoznający dominujące kolory RGB z logotypów, interfejs w stylu aplikacji.",
+          "url": "{{ page.url | absolute_url }}#powerbi-board-game-analysis",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_TerraformingMarsDashboard_01.png' | absolute_url }}",
+          "keywords": "Power BI, dashboard, analiza danych, Python, JSON, modelowanie danych",
+          "dateCreated": "2025-12-15"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Dashboard śledzenia wędrówek",
+          "description": "Analityka śladów GPX w Power BI: 25 MB surowych danych GPS zredukowane o 93% w Pythonie, granice parków narodowych przekonwertowane w QGIS, automatyczne pobieranie GPX przez Power Automate, mapy cieplne i mapy terenu.",
+          "url": "{{ page.url | absolute_url }}#hike-tracker-dashboard",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_HikeTracker_01.png' | absolute_url }}",
+          "keywords": "Power BI, GPX, dane GPS, QGIS, Power Automate, Python, analityka geoprzestrzenna",
+          "dateCreated": "2025-11-15"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Weryfikacja MMI IFC w plikach ACC",
+          "description": "Weryfikacja dojrzałości obiektów IFC (MMI) i interaktywne raportowanie z plików przechowywanych w Autodesk Construction Cloud, z wykorzystaniem dodatku Autodesk Data Exchange dla IFC oraz Power BI.",
+          "url": "{{ page.url | absolute_url }}#ifc-mmi-check-acc",
+          "image": "{{ '/images/images-expertise/Data_2025_PS_IFCMMICheck_00.png' | absolute_url }}",
+          "keywords": "IFC, MMI, Autodesk Construction Cloud, Data Exchange, Power BI, kontrola jakości modelu",
+          "dateCreated": "2025-12-28"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Raportowanie BI mieszkań 3D",
+          "description": "Raportowanie BI napędzane modelem 3D dla lokali mieszkalnych na etapie koncepcji: bounding boxy pomieszczeń z Revita przekazane przez Speckle do Power BI, z kontrolą QA przed eksportem danych.",
+          "url": "{{ page.url | absolute_url }}#3d-flats-bi-reporting",
+          "image": "{{ '/images/images-expertise/Data_2024_PS_3DBIFlats_01.png' | absolute_url }}",
+          "keywords": "Revit, Speckle, Power BI, bounding box pomieszczeń, projektowanie mieszkań, raportowanie 3D",
+          "dateCreated": "2025-10-30"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 6,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Walidacja IFC — IDS i skrypty Python",
+          "description": "Walidacja modeli IFC plikami IDS buildingSMART w Solibri i usBIM oraz skrypty Python do własnych kontroli property setów, wartości MMI, spójności rewizji i automatycznej korekty dostarczanych plików.",
+          "url": "{{ page.url | absolute_url }}#ifc-validation-ids-python",
+          "image": "{{ '/images/images-expertise/IFC_2026_NG_QAreports_report_01.png' | absolute_url }}",
+          "keywords": "walidacja IFC, IDS, buildingSMART, Solibri, Python, property set, OpenBIM",
+          "dateCreated": "2025-07-18"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 7,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "IFC 4x3 w infrastrukturze",
+          "description": "Mapowanie encji infrastrukturalnych takich jak IfcRailway, IfcRailwayPart, IfcRoad i IfcSign w IFC 4x3: konfiguracja eksportu, ustawienia Model View Definition, mapowanie obiektów i hierarchia przestrzenna w Civil 3D, Revit i Novapoint.",
+          "url": "{{ page.url | absolute_url }}#ifc-4x3-infrastructure",
+          "keywords": "IFC 4x3, IfcRailway, IfcRoad, BIM w infrastrukturze, Civil 3D, Novapoint, MVD, OpenBIM",
+          "dateCreated": "2025-11-05"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 8,
+        "item": {
+          "@type": "CreativeWork",
+          "name": "Revit i C# — moja przygoda: Drafter, Leveler, Boxer & Extra",
+          "description": "Cztery dodatki do Revita opublikowane na Autodesk App Store — Drafter, Leveler, Boxer i Extra — obejmujące około 180 automatyzacji rysunków i adnotacji zbudowanych na Revit API w C#.",
+          "url": "{{ page.url | absolute_url }}#revit-csharp-addins",
+          "image": "{{ '/images/images-expertise/Automation_2025_JW_RevitDrafter_01.png' | absolute_url }}",
+          "keywords": "Revit API, C#, Autodesk App Store, dodatek do Revita, automatyzacja rysunków, Visual Studio",
+          "dateCreated": "2025-06-01"
+        }
+      }
+    ]
+  }
+}
+</script>
 
 <!-- Nawigacja w stopce -->
 <nav class="expertise__nav">
@@ -928,5 +1060,5 @@ document.addEventListener('DOMContentLoaded', function () {
     </blockquote>
   </div>
 
-<!-- Osadzenie skryptu slideshow -->
-<script src="{{ site.baseurl }}/assets/portfolio-tiles.js" defer></script>
+<!-- Skrypt slideshow jest już ładowany przez layout default — nie ładować drugi raz,
+     druga kopia ponownie uruchamia inicjalizatory i podwójnie podpina zdarzenia filtrów. -->
