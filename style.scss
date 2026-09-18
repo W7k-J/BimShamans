@@ -595,19 +595,15 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
   }
 }
 
-// Stop the hero's continuous repainting in the two cases where nobody is
-// getting anything out of it.
+// Hero gone: stop the work it was doing for nobody. These masks drive
+// `filter: url(#filter)` through feImage, so while they move every frame
+// re-runs the whole filter graph over both wordmarks.
 //
-// `hero-idle`      - the hero is gone; this was work done for no one.
-// `hero-scrolling` - the page is moving. These masks drive `filter: url(#filter)`
-//                    through feImage, so every frame re-runs the whole filter
-//                    graph over both wordmarks. That repaint pressure sits at
-//                    the very top of the document, right where the fixed nav
-//                    is, and it is what drags the bar out of its own compositor
-//                    layer so it lags behind the scroll. Nobody studies a glitch
-//                    mid-scroll, so this costs nothing to look at.
-body.hero-idle,
-body.hero-scrolling {
+// Deliberately not scoped to `body` - the class is set on #main, so that
+// restyling it cannot reach the fixed nav that sits outside it. Written
+// scope-agnostically because it is also set on body on pointer devices, for
+// the nav wordmark.
+.hero-idle {
   .top-r,
   .bot-r,
   .top-g,
@@ -618,9 +614,7 @@ body.hero-scrolling {
   .hero-banner__circuit-glow {
     animation-play-state: paused;
   }
-}
 
-body.hero-idle {
   .hero-section--banner .hero-banner {
     pointer-events: none;
   }
@@ -665,6 +659,15 @@ body.hero-idle {
 // SVG Glitch Filter Wrapper
 .filterwrapper {
   position: absolute;
+  // Pinned to the container's edge. Without `left: 0` this sat at its static
+  // position - 15px in, past #main's padding - while `width: 100%` resolved
+  // against the full padding box, so it poked 15px out the right side of the
+  // page. body's overflow-x: hidden hid the scrollbar, but the layout viewport
+  // was still wider than the screen, and on iOS that leaves the fixed nav
+  // stranded after a rubber-band overscroll. Measured: the only element on the
+  // home page extending past the viewport.
+  left: 0;
+  top: 0;
   z-index: -1;
   pointer-events: none;
   opacity: 0;

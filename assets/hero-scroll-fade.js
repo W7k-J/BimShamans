@@ -32,6 +32,10 @@
     return !!(window.CSS && window.CSS.supports && window.CSS.supports('animation-timeline', 'scroll()'));
   }
 
+  function hasHoverPointer() {
+    return !!(window.matchMedia && window.matchMedia('(hover: hover)').matches);
+  }
+
   function maxScroll() {
     var doc = document.documentElement;
     return Math.max(0, doc.scrollHeight - window.innerHeight);
@@ -44,11 +48,19 @@
     }
 
     var reduced = prefersReducedMotion();
-    var jsFade = !reduced && !supportsScrollTimeline();
+
+    var hover = hasHoverPointer();
+    var fades = !reduced;
+    var jsFade = fades && !supportsScrollTimeline();
 
     if (jsFade) {
       hero.classList.add('hero-banner--js-fade');
     }
+
+    // Toggle inside #main rather than on <body>: #main holds both the glitch
+    // masks (.filterwrapper) and the hero, and the fixed nav is its sibling,
+    // so restyling here never touches the bar.
+    var animScope = document.getElementById('main') || hero;
 
     var ticking = false;
     var lastFade = -1;
@@ -63,12 +75,13 @@
     // scroll the hero off screen the answer was never yes at all, so the nav
     // wordmark never appeared and the hero kept animating behind nothing.
     function measure() {
-      if (reduced) {
-        // Nothing fades here, so the hero really is visible until it scrolls off.
+      if (fades) {
+        threshold = window.innerHeight * FADE_VIEWPORT_RATIO;
+      } else {
+        // Nothing fades here, so the hero really is visible until it scrolls
+        // off - and only then has it stopped saying the name.
         var rect = hero.getBoundingClientRect();
         threshold = window.pageYOffset + rect.bottom;
-      } else {
-        threshold = window.innerHeight * FADE_VIEWPORT_RATIO;
       }
 
       // Whatever the page's shape, reaching the bottom must count as gone.
@@ -101,7 +114,14 @@
       var idle = offset >= threshold;
       if (idle !== lastIdle) {
         lastIdle = idle;
-        document.body.classList.toggle('hero-idle', idle);
+        animScope.classList.toggle('hero-idle', idle);
+
+        // The nav wordmark is the one target outside #main, and it is
+        // display: none below 1180px - so this only needs to run where there
+        // is a hovering pointer.
+        if (hover) {
+          document.body.classList.toggle('hero-idle', idle);
+        }
       }
     }
 
@@ -113,37 +133,13 @@
       requestAnimationFrame(update);
     }
 
-    // While the page is moving, park the hero's infinite animations (see
-    // `hero-scrolling` in style.scss). Two class changes per scroll gesture
-    // instead of a filter graph re-run every frame.
-    var scrollingTimer = null;
-
-    function markScrolling() {
-      if (scrollingTimer === null) {
-        document.body.classList.add('hero-scrolling');
-      } else {
-        clearTimeout(scrollingTimer);
-      }
-
-      scrollingTimer = setTimeout(function () {
-        scrollingTimer = null;
-        document.body.classList.remove('hero-scrolling');
-      }, 180);
-    }
-
-    function onScroll() {
-      if (!reduced) {
-        markScrolling();
-      }
-      requestUpdate();
-    }
 
     function remeasure() {
       measure();
       requestUpdate();
     }
 
-    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('scroll', requestUpdate, { passive: true });
     window.addEventListener('resize', remeasure, { passive: true });
 
     // Images and webfonts landing later change the page height, and with it
