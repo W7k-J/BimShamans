@@ -1489,7 +1489,10 @@ figure {
     }
 
     .site-avatar {
-      height: $nav-height;
+      // $nav-height is the container's BORDER box; with box-sizing: border-box
+      // and 1px borders top and bottom the wrapper is only 58px, so a 60px
+      // logo block overflowed it by 1px at each end, across the blue rule.
+      height: 100%;
       padding: 8px 0;
       margin-right: 0;
       flex: 0 0 auto; // Don't grow, don't shrink
