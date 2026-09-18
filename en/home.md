@@ -6,6 +6,7 @@ lang: en
 permalink: /en/home/
 excerpt: "BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through automation, standardization, and pragmatic engineering."
 latest_posts_count: 6
+hero: true
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}

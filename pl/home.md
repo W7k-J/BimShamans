@@ -6,6 +6,7 @@ lang: pl
 permalink: /pl/home/
 excerpt: "BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez automatyzację, standaryzację i pragmatyczne podejście inżynierskie."
 latest_posts_count: 6
+hero: true
 ---
 {% assign lang = page.lang | default: site.default_lang %}
 {% assign t = site.t[lang] %}

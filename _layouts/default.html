@@ -76,7 +76,7 @@
     <script src="{{ site.baseurl }}/assets/animate-expertise.js?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 
-<body>
+<body{% if page.hero %} class="has-hero"{% endif %}>
     <!-- Navigation Bar -->
     <div class="nav-container">
         <div class="nav-wrapper">

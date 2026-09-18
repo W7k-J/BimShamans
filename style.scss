@@ -157,7 +157,7 @@ html {
     height: 55%;
     width: auto;
     object-fit: contain;
-    transition: opacity 0.4s ease, filter 0.4s ease;
+    transition: opacity 0.4s ease, transform 0.4s ease, filter 0.4s ease;
   }
   
   // Theme-based visibility for logo text
@@ -178,6 +178,29 @@ html {
 
 .dark-theme .site-avatar .nav-logo-text.logo-dark {
   display: block;
+}
+
+// ---------------------------------------------------------------------------
+// Nav wordmark on pages that carry the hero
+//
+// The hero already states the name at full size, so repeating it in the bar at
+// the same moment says nothing new. The flame stays put - it is the mark, and
+// it is enough to carry the link home - and the name fades in only once the
+// hero has left the screen, which body.hero-idle already tells us.
+//
+// Opacity only, never display or width: the wordmark keeps its box so the rest
+// of the bar does not shift when it appears. Below 1180px it is display: none
+// anyway, so this applies on desktop only.
+// ---------------------------------------------------------------------------
+
+body.has-hero .site-avatar .nav-logo-text {
+  opacity: 0;
+  transform: translateX(-8px);
+}
+
+body.has-hero.hero-idle .site-avatar .nav-logo-text {
+  opacity: 1;
+  transform: none;
 }
 
 // Navigation container
@@ -1134,6 +1157,10 @@ figure {
   .hero-section--banner .hero-banner {
     animation: none;
     opacity: 1;
+    transform: none;
+  }
+
+  body.has-hero .site-avatar .nav-logo-text {
     transform: none;
   }
 }

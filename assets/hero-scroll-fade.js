@@ -73,7 +73,13 @@
   }
 
   function attachIdleObserver(hero) {
+    // The nav wordmark is hidden until this class appears, so without an
+    // observer it would stay hidden for good. Fall back to the idle state and
+    // the bar behaves like every other page. Such a browser predates
+    // @property and scroll timelines anyway, so the resting drift this also
+    // pauses was never running there.
     if (!('IntersectionObserver' in window)) {
+      document.body.classList.add('hero-idle');
       return;
     }
 
