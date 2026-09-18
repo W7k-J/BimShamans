@@ -40,7 +40,7 @@
             }
         })();
     </script>
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css?v={{ site.time | date: '%s' }}" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
     <link rel="shortcut icon" href="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_32x32.png" type="image/png">
@@ -54,25 +54,25 @@
     {% endif %}
     
     <!-- JavaScript -->
-    <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js"></script>
-    <script src="{{ site.baseurl }}/assets/theme-switcher.js"></script>
-    <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/mobile-nav-toggle.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ site.baseurl }}/assets/theme-switcher.js?v={{ site.time | date: '%s' }}"></script>
+    <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/mobile-nav-toggle.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js?v={{ site.time | date: '%s' }}" defer></script>
     {% if page.url contains '/blog/' or page.url contains '/expertise-collection/' %}
-    <script src="{{ site.baseurl }}/assets/universal-search-bar.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/universal-search-bar.js?v={{ site.time | date: '%s' }}" defer></script>
     {% endif %}
-    <script src="{{ site.baseurl }}/assets/hero-glitch.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/hero-slogan.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/hero-circuit.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/feature-cards.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/portfolio-tiles.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/portfolio-tile-click.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/will-change-optimizer.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/form-validator.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/progression-bar.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/fade-overlay.js" defer></script>
-    <script src="{{ site.baseurl }}/assets/animate-expertise.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/hero-glitch.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/hero-slogan.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/hero-circuit.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/feature-cards.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/portfolio-tiles.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/portfolio-tile-click.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/will-change-optimizer.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/form-validator.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/progression-bar.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/fade-overlay.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/animate-expertise.js?v={{ site.time | date: '%s' }}" defer></script>
 </head>
 
 <body>
@@ -234,7 +234,7 @@
 
     <!-- Cookie Notice -->
     {% include cookie-notice.html %}
-    <script src="{{ site.baseurl }}/assets/cookie-notice.js" defer></script>
+    <script src="{{ site.baseurl }}/assets/cookie-notice.js?v={{ site.time | date: '%s' }}" defer></script>
 
     {% include analytics.html %}
 </body>

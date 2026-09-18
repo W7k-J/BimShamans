@@ -948,6 +948,22 @@
 }
 }
 
+// Line-art SVG slides drawn with dark ink on a transparent background:
+// brighten on dark backgrounds so the sketch stays readable.
+// Matches by file extension, so it also covers the lightbox (always dark) without JS changes.
+.project-tile__slide img[src$=".svg"] {
+  transition: filter 0.25s ease;
+}
+
+.dark-theme .project-tile__slide img[src$=".svg"],
+.lightbox__image[src$=".svg"] {
+  filter: invert(1) hue-rotate(180deg) brightness(1.1);
+}
+
+.light-theme .project-tile__slide img[src$=".svg"] {
+  filter: none;
+}
+
 // Navigation arrows
 /*
   Project Tile Navigation
@@ -1519,6 +1535,13 @@
   max-height: 95vh;
   object-fit: contain;
   user-select: none;
+}
+
+// SVG slides have a small intrinsic size, so unlike large raster files they
+// don't fill the viewport on their own — stretch them; vectors stay crisp.
+.lightbox__image[src$=".svg"] {
+  width: 95vw;
+  height: 95vh;
 }
 
 // Close button (top-right)
