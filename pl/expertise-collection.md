@@ -609,7 +609,7 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Model BIM infrastruktury" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC4x3_2026_NG_hierarki-dark_PL.png" alt="Hierarchia przestrzenna IFC4x3 ADD2" loading="lazy">
           </div>
           <div class="project-tile__slide">
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Koordynacja inżynierii lądowej" loading="lazy">
@@ -646,8 +646,8 @@ excerpt: "Kompletna kolekcja naszego doświadczenia. Filtruj według dyscypliny,
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IFC 4x3 pozwala mapować właściwe encje powiązane z infrastrukturą, takie jak IfcRailway, IfcRailwayPart, IfcSign, IfcRoad i inne. Prawidłowe przeniesienie ich do eksportu IFC w programie to osobna kwestia.<br><br>
-                Civil 3D, Revit i Novapoint pozwalają na ustawienie ustawień eksportu, tak aby dostosować się do wymagań klienta oraz standardów buildingSMART. Mapowanie obiektów, reguły konwersji, hierarchia przestrzenna. Dobrze skonfigurowane dają plik IFC, który faktycznie jest tym, czym powinien być według standardu buildingSMART lub wymagań klienta.<br><br>
+                IFC 4x3 pozwala mapować właściwe encje powiązane z infrastrukturą, takie jak IfcRail, IfcTrackElement, IfcMechanicalFastener, IfcSign, IfcElementAssembly i inne. Prawidłowe przeniesienie ich do eksportu IFC w programie to osobna kwestia.<br><br>
+                Programy pozwalają na ustawienie ustawień eksportu, tak aby dostosować się do wymagań klienta oraz standardów buildingSMART. Mapowanie obiektów, reguły konwersji, hierarchia przestrzenna. Dobrze skonfigurowane dają plik IFC, który faktycznie jest tym, czym powinien być według standardu buildingSMART lub wymagań klienta. W niektórych przypadkach konieczne jest użycie skryptów, aby zapewnić zgodność dostawy IFC ze standardem IFC 4x3 ADD2. <br><br>
               </p>
             </div>
           </div>

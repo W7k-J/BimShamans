@@ -621,7 +621,7 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
       <div class="project-tile__slideshow">
         <div class="project-tile__slides">
           <div class="project-tile__slide project-tile__slide--active">
-            <img src="https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=900&q=80" alt="Infrastructure BIM model" loading="lazy">
+            <img src="{{ site.baseurl }}/images/images-expertise/IFC4x3_2026_NG_hierarki-dark_ENG.png" alt="IFC4x3 ADD2 spatial hierarchy" loading="lazy">
           </div>
           <div class="project-tile__slide">
             <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=900&q=80" alt="Civil engineering coordination" loading="lazy">
@@ -658,11 +658,11 @@ excerpt: "Complete collection of our expertise. Filter by discipline, technology
           <div class="project-tile__text-slides">
             <div class="project-tile__text-slide project-tile__text-slide--active">
               <p class="project-tile__description">
-                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRailway, IfcRailwayPart, IfcSign, IfcRoad, and more. Getting them into the export correctly is another matter.
+                IFC 4x3 lets us map proper entities connected to infrastructure such as IfcRail, IfcTrackElement, IfcMechanicalFastener, IfcSign, IfcElementAssembly and more. Getting them into the export correctly is another matter.
               </p>
               <br>
               <p class="project-tile__description">
-                Civil 3D and Novapoint handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard.
+                Different softwares handle the same standard differently. Object mapping, conversion rule files, spatial hierarchy that actually lands as a correct representation of buildingSMART or the client's standard. In some cases, scripting is required to ensure that the IFC delivery aligns with the IFC 4x3 ADD2 standard.
               </p>
               <br>
             </div>
