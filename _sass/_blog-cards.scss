@@ -520,6 +520,22 @@
   }
 }
 
+// The card's only link lives in the overlay, so anything that must reach that
+// link has to put the card in this state.
+@mixin blog-card-open {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+
+  .blog-card__image img {
+    opacity: 0.25;
+  }
+
+  .blog-card__overlay {
+    opacity: 1;
+    pointer-events: auto;
+  }
+}
+
 // Single blog card
 .blog-card {
   position: relative;
@@ -548,18 +564,19 @@
     animation: none;
   }
 
-  &:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
-
-    .blog-card__image img {
-      opacity: 0.25;
+  // Scoped to a real hovering pointer: a tap on a touch device fires emulated
+  // :hover, which would flash the overlay open on the way to the post.
+  @media (hover: hover) {
+    &:hover {
+      @include blog-card-open;
     }
+  }
 
-    .blog-card__overlay {
-      opacity: 1;
-      visibility: visible;
-    }
+  // Keyboard. The overlay holds the card's only link, so it has to open when
+  // that link takes focus - and the link can only take focus now that the
+  // overlay no longer sets visibility: hidden.
+  &:focus-within {
+    @include blog-card-open;
   }
 
   // Image section
@@ -674,18 +691,14 @@
     justify-content: flex-end;
     padding: 1.5rem;
     opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.35s ease-out, 
-                visibility 0.35s ease-out;
+    // Was visibility: hidden, which took the card's only link out of the tab
+    // order - tabbing through the page skipped every post.
+    pointer-events: none;
+    transition: opacity 0.35s ease-out;
     transform: translateZ(0); // Hardware acceleration for smooth rendering
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden; // Eliminate subpixel artifacts
     z-index: 10;
-    
-    // Mobile optimization - disable hover overlay
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
   }
 
   // Description text area (aligned to top)
@@ -811,6 +824,32 @@
   align-items: center;
   gap: 0.8rem;
   margin-top: 0.5rem;
+
+  // Visible ring when reached by keyboard - :focus-within has just opened the
+  // overlay at this point, so the link is on screen.
+  &:focus-visible {
+    outline: 2px solid var(--secondBlue-color);
+    outline-offset: 3px;
+    border-radius: $radius-small;
+  }
+
+  // The link stretches across the whole card, so a click or tap anywhere on it
+  // opens the post. It is gated by the overlay's own pointer-events: inert
+  // while the card is closed, live once hover or focus opens it - so on desktop
+  // the whole card becomes clickable exactly when the reader means to click.
+  &::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  // No hover means the overlay never opens, so the link has to be live from
+  // the start. The card stays visually unchanged - image, title and excerpt
+  // exactly as before, just tappable.
+  @media (hover: none) {
+    pointer-events: auto;
+  }
 }
 
 // Blog card icon (like feature-card__icon)
@@ -1249,11 +1288,6 @@
   .progression-bar__indicator {
     transition: none;
   }
-}
-
-// Blog card label hover state
-.blog-card__label:hover .blog-card__main {
-  font-weight: bold;
 }
 
 //
