@@ -58,11 +58,6 @@
       var clientX = event.clientX;
       var clientY = event.clientY;
 
-      if ((event.touches || event.changedTouches) && event.changedTouches.length) {
-        clientX = event.changedTouches[0].clientX;
-        clientY = event.changedTouches[0].clientY;
-      }
-
       if (typeof clientX !== 'number' || typeof clientY !== 'number') {
         return;
       }
@@ -73,12 +68,25 @@
       });
     }
 
-    hero.addEventListener(enterEvent, function() {
+    // A hybrid device (laptop with a touchscreen) reports a fine pointer, but a
+    // finger on it must still fall through to the resting drift.
+    function isTouch(event) {
+      return event && event.pointerType === 'touch';
+    }
+
+    hero.addEventListener(enterEvent, function(event) {
+      if (isTouch(event)) {
+        return;
+      }
       glow.classList.add('active');
     }, { passive: true });
 
-    hero.addEventListener(moveEvent, handleEvent, { passive: true });
-    hero.addEventListener('touchmove', handleEvent, { passive: true });
+    hero.addEventListener(moveEvent, function(event) {
+      if (isTouch(event)) {
+        return;
+      }
+      handleEvent(event);
+    }, { passive: true });
 
     hero.addEventListener(leaveEvent, function () {
       if (rafId) {
@@ -98,6 +106,14 @@
   }
 
   function init() {
+    // Without a hovering pointer there is nothing to follow, and binding this
+    // to touch turned the glow into an undiscoverable press-and-hold. Those
+    // devices get the resting drift from style.scss instead.
+    var finePointer = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!finePointer) {
+      return;
+    }
+
     var heroes = document.querySelectorAll('.hero-banner');
     if (!heroes.length) {
       return;

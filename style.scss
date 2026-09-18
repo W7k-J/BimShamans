@@ -566,11 +566,6 @@ html {
     opacity: calc(1 - var(--hero-fade, 0));
     transform: translate3d(0, calc(var(--hero-fade, 0) * -2vh), 0) scale(calc(1 - var(--hero-fade, 0) * 0.03));
   }
-
-  // Only hint the compositor while the hero can actually animate.
-  body:not(.hero-idle) .hero-section--banner .hero-banner {
-    will-change: opacity, transform;
-  }
 }
 
 // Hero fully off-screen: stop the work it was doing for nobody.
@@ -584,7 +579,7 @@ body.hero-idle {
   }
 
   .hero-banner__circuit-glow {
-    opacity: 0;
+    animation-play-state: paused;
   }
 
   .hero-section--banner .hero-banner {
@@ -1052,17 +1047,56 @@ figure {
   filter: brightness(1.2) saturate(1.3);
 }
 
+// Registering these makes them interpolable, so the resting drift below can
+// animate the glow position. Without @property a custom property is a plain
+// token and CSS cannot tween it.
+@property --glow-x {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+@property --glow-y {
+  syntax: '<percentage>';
+  inherits: true;
+  initial-value: 50%;
+}
+
+// Resting state: the glow drifts on its own, so the effect is not gated behind
+// a pointer the device may not have. On touch this is the only state there is.
+@keyframes hero-circuit-drift {
+  0%   { --glow-x: 24%; --glow-y: 34%; }
+  25%  { --glow-x: 72%; --glow-y: 26%; }
+  50%  { --glow-x: 82%; --glow-y: 68%; }
+  75%  { --glow-x: 31%; --glow-y: 74%; }
+  100% { --glow-x: 24%; --glow-y: 34%; }
+}
+
+// Kept separate from the drift so the drift can restart at any keyframe while
+// the glow is still at zero opacity - that is what hides the hand-off when the
+// pointer gives control back.
+@keyframes hero-circuit-settle {
+  from { opacity: 0; }
+  to   { opacity: 0.55; }
+}
+
 .hero-banner__circuit-glow {
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle 140px at var(--glow-x, 50%) var(--glow-y, 50%), var(--circuit-glow-strong) 0%, var(--circuit-glow-base) 25%, var(--circuit-glow-soft) 50%, transparent 100%);
+  // Was a fixed 140px, which on a 320px-tall mobile banner is proportionally
+  // about twice what it is on desktop.
+  background: radial-gradient(circle clamp(90px, 22vw, 140px) at var(--glow-x, 50%) var(--glow-y, 50%), var(--circuit-glow-strong) 0%, var(--circuit-glow-base) 25%, var(--circuit-glow-soft) 50%, transparent 100%);
   opacity: 0;
-  transition: background 80ms ease-out, opacity 250ms ease;
+  animation: hero-circuit-settle 900ms ease-out both, hero-circuit-drift 18s linear infinite;
+  transition: --glow-x 90ms linear, --glow-y 90ms linear, opacity 250ms ease;
   position: absolute;
   inset: 0;
   pointer-events: none;
 
+  // Pointer takes over: drop the drift so the inline --glow-x/--glow-y set by
+  // hero-circuit.js wins (an animation outranks inline styles).
   &.active {
+    animation: none;
     opacity: 1;
   }
   filter: drop-shadow(0 10px 26px rgba(0, 0, 0, 0.24));
@@ -1107,6 +1141,8 @@ figure {
   }
 
   .hero-banner__circuit-glow {
+    animation: none;
+    opacity: 0.45;
     transition: none;
   }
 
