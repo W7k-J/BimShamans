@@ -703,13 +703,14 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(0.35rem, 2vw, 1.5rem);
+  // Single source of scale for BIM + flame + Shamans. Everything inside is
+  // sized in em, so the three pieces cannot drift apart at any viewport.
+  // The lockup is ~12.7em wide, so 6.5vw keeps it at ~82vw on any screen -
+  // which is why none of the pieces needs a max-width cap any more.
+  font-size: clamp(18px, 6.5vw, 55px);
+  gap: 0.4em;
   width: auto;
   white-space: nowrap;
-
-  @media screen and (max-width: 480px) {
-    gap: clamp(0.25rem, 1.5vw, 0.5rem);
-  }
 }
 
 .glitch-filter-example {
@@ -718,21 +719,18 @@ figure {
   position: relative;
   margin: 0;
   padding: 0;
-  /* Fluid width - scales down on mobile */
   width: auto;
-  max-width: 40vw; /* Limit each word to 40% of viewport */
-  height: clamp(28px, 4vw, 55px);
-  flex-shrink: 1; /* Allow shrinking on small screens */
+  height: 1em;
+  // Both words used to share one max-width, but they need widths in a ~2.6:1
+  // ratio - so the cap squeezed "Shamans" far harder than "BIM" and the two
+  // rendered at different scales. No cap, no shrink, no mismatch.
+  flex-shrink: 0;
   border: none;
   outline: none;
   background: transparent;
   z-index: 2;
   overflow: visible;
   
-  @media screen and (max-width: 480px) {
-    max-width: 35vw;
-    height: clamp(24px, 6vw, 35px);
-  }
 }
 
 /* BIM aligned to the right (closer to flame) */
@@ -774,18 +772,15 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(2.1rem, 5.3vw, 4.3rem);
-  height: clamp(2.1rem, 5.3vw, 4.3rem);
+  // Same ratio to the wordmark as the old desktop values, now expressed
+  // against the shared scale so it holds everywhere.
+  width: 1.25em;
+  height: 1.25em;
   flex-shrink: 0;
   pointer-events: none;
   z-index: 3;
   /* No margin - gap on parent handles equal spacing */
   margin: 0;
-
-  @media screen and (max-width: 480px) {
-    width: clamp(1.4rem, 6.4vw, 2.9rem);
-    height: clamp(1.4rem, 6.4vw, 2.9rem);
-  }
 }
 
 .hero-flame__icon {
@@ -932,16 +927,6 @@ figure {
   }
 }
 
-.glitch-filter-example__demo {
-  display: block;
-  position: relative;
-  width: 100%;
-  height: 200px;
-  border: none;
-  outline: none;
-  overflow: visible;
-  background: transparent;
-}
 
 .top-r,
 .bot-r,
@@ -1122,13 +1107,6 @@ figure {
     padding: clamp(2.5rem, 10vw, 4rem);
   }
 
-  .glitch-filter-example__demo {
-    height: 120px;
-  }
-
-  .glitch-filter-example__filtered-text {
-    font-size: clamp(48px, 14vw, 80px);
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

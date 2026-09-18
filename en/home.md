@@ -27,16 +27,16 @@ latest_posts_count: 6
     <div class="hero-banner__content">
       <div class="hero-banner__logo">
         <figure class="glitch-filter-example glitch-filter-example--bim">
-          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 200 80" preserveAspectRatio="xMaxYMid meet">
-            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="195" dy="0.35em">BIM</text>
+          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 233 80" preserveAspectRatio="xMaxYMid meet">
+            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="228" dy="0.35em" textLength="223" lengthAdjust="spacingAndGlyphs">BIM</text>
           </svg>
         </figure>
         <div class="hero-flame" aria-hidden="true">
           <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
         </div>
         <figure class="glitch-filter-example glitch-filter-example--shamans">
-          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 500 80" preserveAspectRatio="xMinYMid meet">
-            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em">Shamans</text>
+          <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 618 80" preserveAspectRatio="xMinYMid meet">
+            <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em" textLength="608" lengthAdjust="spacingAndGlyphs">Shamans</text>
           </svg>
         </figure>
       </div>
