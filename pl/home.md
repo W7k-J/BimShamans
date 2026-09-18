@@ -14,8 +14,7 @@ hero: true
 {% include svg-glitch-filter.html %}
 
 <div class="hero-section hero-section--banner">
-  <div class="hero-banner" role="img" aria-label="BIM Shamans">
-    <span class="visually-hidden">BIM Shamans</span>
+  <div class="hero-banner">
     <div class="hero-banner__circuit" aria-hidden="true">
       <div class="hero-banner__circuit-glow"></div>
       <img class="hero-banner__circuit-art" src="{{ site.baseurl }}/images/Hero/vecteezy_abstract-digital-background-with-technology-circuit-board_6826899.svg" alt="" aria-hidden="true">
@@ -26,8 +25,9 @@ hero: true
          Przykład: <div class="hero-banner__content hero-banner__content--slogan-shamans">
     -->
     <div class="hero-banner__content">
-      <div class="hero-banner__logo">
-        <figure class="glitch-filter-example glitch-filter-example--bim">
+      <h1 class="hero-banner__logo">
+        <span class="visually-hidden">BIM Shamans</span>
+        <figure class="glitch-filter-example glitch-filter-example--bim" aria-hidden="true">
           <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 233 80" preserveAspectRatio="xMaxYMid meet">
             <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="end" x="228" dy="0.35em" textLength="223" lengthAdjust="spacingAndGlyphs">BIM</text>
           </svg>
@@ -35,16 +35,17 @@ hero: true
         <div class="hero-flame" aria-hidden="true">
           <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" alt="" class="hero-flame__icon">
         </div>
-        <figure class="glitch-filter-example glitch-filter-example--shamans">
+        <figure class="glitch-filter-example glitch-filter-example--shamans" aria-hidden="true">
           <svg class="glitch-filter-example__demo" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 618 80" preserveAspectRatio="xMinYMid meet">
             <text class="glitch-filter-example__filtered-text" y="50%" text-anchor="start" x="5" dy="0.35em" textLength="608" lengthAdjust="spacingAndGlyphs">Shamans</text>
           </svg>
         </figure>
-      </div>
-      <div class="hero-slogan">
-        <span class="hero-slogan__static">invoke to</span>
-        <span id="hero-slogan" class="hero-slogan__dynamic" data-strings="share,serve,solve" data-text="share">share</span>
-      </div>
+      </h1>
+      <p class="hero-slogan">
+        <span class="visually-hidden">invoke to share, serve, solve</span>
+        <span class="hero-slogan__static" aria-hidden="true">invoke to</span>
+        <span id="hero-slogan" class="hero-slogan__dynamic" aria-hidden="true" data-strings="share,serve,solve" data-text="share">share</span>
+      </p>
     </div>
   </div>
 </div>
@@ -142,7 +143,7 @@ hero: true
 
 -->
 
-## Najnowsze posty:
+## Najnowsze posty
 
 <div class="blog__cards">
   {% assign posts = site.posts | where: "lang", "pl" | sort: "date" | reverse %}

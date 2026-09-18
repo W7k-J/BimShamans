@@ -733,6 +733,10 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  // It is an <h1> now: drop the global heading margin and leading, which would
+  // otherwise shift the lockup inside the hero.
+  margin: 0;
+  line-height: 1;
   // Everything inside is sized in em against --hero-scale, so BIM, the flame
   // and Shamans cannot drift apart at any viewport. The lockup is ~12.7em
   // wide, so 6.5vw keeps it at ~82vw on any screen - which is why none of the
@@ -843,6 +847,8 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
+  // It is a <p> now; the hero lays its children out with gap, not margins.
+  margin: 0;
   gap: 0.5em;
   font-family: 'Syncopate', sans-serif;
   // 0.436 is the desktop proportion you already had (24px under a 55px
@@ -1758,12 +1764,19 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', $helveticaNeue;
   color: var(--firstBlue-color);
   font-weight: normal;
-  line-height: 1.7;
-  margin: 1em 0 15px;
+  // 1.7 is body-copy leading; every hand-tuned heading in this codebase
+  // (.post__title, .blog-card__title, .project-tile__title) already sits at
+  // 1.2-1.4, so the global default was the outlier.
+  line-height: 1.25;
+  // Was 1em / 15px - near enough to symmetric that a heading floated between
+  // two blocks instead of belonging to the one it introduces. Proximity: much
+  // more air above than below. Both in em, so they track the heading's size.
+  margin: 2em 0 0.5em;
   padding: 0;
 
   @include mobile {
-    line-height: 1.4;
+    // Headings wrap more often here, so give the extra lines a little room.
+    line-height: 1.3;
   }
 }
 

@@ -533,6 +533,8 @@
   .blog-card__overlay {
     opacity: 1;
     pointer-events: auto;
+    // Only worth paying for while the overlay is actually on screen.
+    backdrop-filter: blur(2px);
   }
 }
 
@@ -684,7 +686,6 @@
     position: absolute;
     inset: -2px; // More overflow to fully prevent 1px bleeding
     background: rgba(0, 0, 0, 0.9); // Balanced opacity for coverage
-    backdrop-filter: blur(2px);
     border-radius: $radius-large; // Match parent border-radius
     display: flex;
     flex-direction: column;
