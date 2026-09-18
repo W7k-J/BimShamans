@@ -536,6 +536,62 @@ html {
   --glow-y: 50%;
 }
 
+// ---------------------------------------------------------------------------
+// Hero scroll fade
+// The hero scrolls away normally; it just fades + settles slightly on the way
+// out, so "Latest posts" takes over cleanly. The fixed nav keeps the logo on
+// screen, so nothing about the brand is lost.
+// ---------------------------------------------------------------------------
+
+@keyframes hero-scroll-fade {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2vh, 0) scale(0.97);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  // Native scroll-driven animation (Chrome/Edge 115+, Safari 26+).
+  @supports (animation-timeline: scroll()) {
+    .hero-section--banner .hero-banner {
+      animation: hero-scroll-fade linear both;
+      animation-timeline: scroll(root block);
+      animation-range: 0 40vh; // keep in sync with hero-scroll-fade.js
+    }
+  }
+
+  // Fallback for browsers without `animation-timeline`; --hero-fade (0..1) is
+  // driven by hero-scroll-fade.js.
+  .hero-banner--js-fade {
+    opacity: calc(1 - var(--hero-fade, 0));
+    transform: translate3d(0, calc(var(--hero-fade, 0) * -2vh), 0) scale(calc(1 - var(--hero-fade, 0) * 0.03));
+  }
+
+  // Only hint the compositor while the hero can actually animate.
+  body:not(.hero-idle) .hero-section--banner .hero-banner {
+    will-change: opacity, transform;
+  }
+}
+
+// Hero fully off-screen: stop the work it was doing for nobody.
+// The SVG glitch filter re-renders its whole graph whenever these masks move.
+body.hero-idle {
+  .top-r,
+  .bot-r,
+  .top-g,
+  .bot-g {
+    animation-play-state: paused;
+  }
+
+  .hero-banner__circuit-glow {
+    opacity: 0;
+  }
+
+  .hero-section--banner .hero-banner {
+    pointer-events: none;
+  }
+}
+
 .hero-cta-section {
   display: flex;
   flex-direction: column;
@@ -1061,6 +1117,12 @@ figure {
 
   .hero-slogan__dynamic {
     transition: none;
+  }
+
+  .hero-section--banner .hero-banner {
+    animation: none;
+    opacity: 1;
+    transform: none;
   }
 }
 
