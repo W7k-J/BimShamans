@@ -550,7 +550,10 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
   justify-content: center;
   gap: 2rem;
   width: 100%;
-  min-height: clamp(320px, 60vh, 560px);
+  // 60vh was ~440px of empty padding around a ~100px lockup on desktop, and
+  // that dead space is scroll the reader pays for and gets nothing back from.
+  // The 320px floor is unchanged, so mobile is untouched.
+  min-height: clamp(320px, 42vh, 420px);
   padding: clamp(3rem, calc(8vw - 1rem), 6rem);
   border-radius: 0;
   overflow: hidden;
