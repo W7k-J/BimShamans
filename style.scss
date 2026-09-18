@@ -639,6 +639,10 @@ figure {
 }
 
 .hero-banner__content {
+  // One scale for the whole hero lockup: the logo uses it directly, the slogan
+  // is pinned to a fixed ratio of it. Previously the two were independent,
+  // which is why their proportions only agreed at one viewport width.
+  --hero-scale: clamp(18px, 6.5vw, 55px);
   position: absolute;
   left: 50%;
   top: 50%;
@@ -703,11 +707,11 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  // Single source of scale for BIM + flame + Shamans. Everything inside is
-  // sized in em, so the three pieces cannot drift apart at any viewport.
-  // The lockup is ~12.7em wide, so 6.5vw keeps it at ~82vw on any screen -
-  // which is why none of the pieces needs a max-width cap any more.
-  font-size: clamp(18px, 6.5vw, 55px);
+  // Everything inside is sized in em against --hero-scale, so BIM, the flame
+  // and Shamans cannot drift apart at any viewport. The lockup is ~12.7em
+  // wide, so 6.5vw keeps it at ~82vw on any screen - which is why none of the
+  // pieces needs a max-width cap any more.
+  font-size: var(--hero-scale);
   gap: 0.4em;
   width: auto;
   white-space: nowrap;
@@ -813,24 +817,18 @@ figure {
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  gap: 0.75rem;
+  gap: 0.5em;
   font-family: 'Syncopate', sans-serif;
-  font-size: 1.5rem;
+  // 0.436 is the desktop proportion you already had (24px under a 55px
+  // lockup). The floor keeps the tagline legible where strict proportion
+  // would drop it under 11px.
+  font-size: max(13px, var(--hero-scale) * 0.436);
   font-weight: 400;
   letter-spacing: 0.1em;
   text-transform: lowercase;
   color: var(--firstGray-color);
   opacity: 0.9;
 
-  @media screen and (max-width: 640px) {
-    font-size: 1.6rem;
-    gap: 0.56rem;
-  }
-
-  @media screen and (max-width: 480px) {
-    font-size: 1.3rem;
-    gap: 0.46rem;
-  }
 }
 
 .hero-slogan__static {
