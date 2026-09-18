@@ -113,12 +113,37 @@
       requestAnimationFrame(update);
     }
 
+    // While the page is moving, park the hero's infinite animations (see
+    // `hero-scrolling` in style.scss). Two class changes per scroll gesture
+    // instead of a filter graph re-run every frame.
+    var scrollingTimer = null;
+
+    function markScrolling() {
+      if (scrollingTimer === null) {
+        document.body.classList.add('hero-scrolling');
+      } else {
+        clearTimeout(scrollingTimer);
+      }
+
+      scrollingTimer = setTimeout(function () {
+        scrollingTimer = null;
+        document.body.classList.remove('hero-scrolling');
+      }, 180);
+    }
+
+    function onScroll() {
+      if (!reduced) {
+        markScrolling();
+      }
+      requestUpdate();
+    }
+
     function remeasure() {
       measure();
       requestUpdate();
     }
 
-    window.addEventListener('scroll', requestUpdate, { passive: true });
+    window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', remeasure, { passive: true });
 
     // Images and webfonts landing later change the page height, and with it

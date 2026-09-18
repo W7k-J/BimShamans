@@ -195,12 +195,10 @@ html {
 
 body.has-hero .site-avatar .nav-logo-text {
   opacity: 0;
-  transform: translateX(-8px);
 }
 
 body.has-hero.hero-idle .site-avatar .nav-logo-text {
   opacity: 1;
-  transform: none;
 }
 
 // Navigation container
@@ -231,7 +229,10 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
 
   // Logo section - using existing .site-avatar class
   .site-avatar {
-    height: $nav-height;
+    // $nav-height is the container's BORDER box; with box-sizing: border-box
+    // and 1px borders the wrapper is 58px, so 60px here overflowed it by 1px
+    // at each end, across the blue rule.
+    height: 100%;
     padding: 5px 0;
     margin-right: 0; // Usunięty margin - logo przylega do lewej
     display: flex;
@@ -594,9 +595,19 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
   }
 }
 
-// Hero fully off-screen: stop the work it was doing for nobody.
-// The SVG glitch filter re-renders its whole graph whenever these masks move.
-body.hero-idle {
+// Stop the hero's continuous repainting in the two cases where nobody is
+// getting anything out of it.
+//
+// `hero-idle`      - the hero is gone; this was work done for no one.
+// `hero-scrolling` - the page is moving. These masks drive `filter: url(#filter)`
+//                    through feImage, so every frame re-runs the whole filter
+//                    graph over both wordmarks. That repaint pressure sits at
+//                    the very top of the document, right where the fixed nav
+//                    is, and it is what drags the bar out of its own compositor
+//                    layer so it lags behind the scroll. Nobody studies a glitch
+//                    mid-scroll, so this costs nothing to look at.
+body.hero-idle,
+body.hero-scrolling {
   .top-r,
   .bot-r,
   .top-g,
@@ -607,7 +618,9 @@ body.hero-idle {
   .hero-banner__circuit-glow {
     animation-play-state: paused;
   }
+}
 
+body.hero-idle {
   .hero-section--banner .hero-banner {
     pointer-events: none;
   }
