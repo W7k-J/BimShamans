@@ -52,6 +52,10 @@
 
     // Show notice
     notice.style.display = 'block';
+    // Lets style.scss reserve space at the bottom of the page while the
+    // notice is on screen, so it doesn't sit on top of the last few page
+    // elements on a short mobile viewport.
+    document.body.classList.add('has-cookie-notice');
 
     // Handle accept button click
     acceptBtn.addEventListener('click', function() {
@@ -61,6 +65,7 @@
         // Remove from DOM after animation
         setTimeout(function() {
             notice.style.display = 'none';
+            document.body.classList.remove('has-cookie-notice');
         }, 300);
     });
 })();

@@ -143,10 +143,10 @@ hero: true
 
 ## Latest posts
 
-<div class="blog__cards">
+<div class="blog__cards" role="list">
   {% assign posts = site.posts | where: "lang", "en" | sort: "date" | reverse %}
   {% for post in posts limit: page.latest_posts_count %}
-    <article class="blog-card" data-tags="{{ post.filter_hash_list | join: ',' }}">
+    <article class="blog-card" role="listitem" data-tags="{{ post.filter_hash_list | join: ',' }}">
       <div class="blog-card__image">
         <img src="{{ post.image | default: site.baseurl | append: '/images/placeholder-post.jpg' }}" alt="{{ post.title }}" loading="lazy">
         <span class="blog-card__category">{{ post.category | default: 'Blog' }}</span>
@@ -158,7 +158,9 @@ hero: true
       </div>
 
       <div class="blog-card__overlay">
-        <p class="blog-card__description">{{ post.description | default: 'Discover more insights and details about this article.' }}</p>
+        {% if post.description %}
+          <p class="blog-card__description">{{ post.description }}</p>
+        {% endif %}
         <div class="blog-card__tags">
           {% for tag in post.filter_hash_list %}
             <span class="blog-card__tag">{{ tag }}</span>
@@ -178,7 +180,7 @@ hero: true
   {% endfor %}
 </div>
 
-<nav class="expertise__nav">
+<nav class="expertise__nav" aria-label="{{ t.page_nav }}">
   <button type="button" class="expertise__nav-link" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
     go to top
     <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
@@ -187,7 +189,7 @@ hero: true
   </button>
 
   <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="expertise__nav-link">
-    blog
+    {{ t.all_posts }}
     <svg class="expertise__nav-icon expertise__nav-icon--after" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="9 18 15 12 9 6"></polyline>
     </svg>

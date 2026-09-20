@@ -63,6 +63,12 @@ baseurl: ""
 # Translations
 t:
   en:
+    # Accessibility labels: not shown visually, only announced or shown on focus.
+    skip_to_content: "Skip to main content"
+    nav_primary: "Primary navigation"
+    page_nav: "Page navigation"
+    cookie_notice_region: "Cookie notice"
+    all_posts: "all posts"
     home: "home"
     blog: "blog"
     about: "about"
@@ -112,6 +118,12 @@ t:
     about_author: "about author"
     linkedin_profile: "linkedin profile"
   pl:
+    # Accessibility labels: not shown visually, only announced or shown on focus.
+    skip_to_content: "Przejdź do treści głównej"
+    nav_primary: "Nawigacja główna"
+    page_nav: "Nawigacja strony"
+    cookie_notice_region: "Informacja o plikach cookie"
+    all_posts: "wszystkie posty"
     home: "strona główna"
     blog: "blog"
     about: "o nas"

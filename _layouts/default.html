@@ -94,8 +94,9 @@
 </head>
 
 <body{% if page.hero %} class="has-hero"{% endif %}>
+    <a class="skip-link" href="#main">{{ site.t[page.lang].skip_to_content | default: site.t[site.default_lang].skip_to_content }}</a>
     <!-- Navigation Bar -->
-    <div class="nav-container">
+    <header class="nav-container">
         <div class="nav-wrapper">
             <!-- Logo Navigation Bar -->
             <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="site-avatar" aria-label="BIM Shamans, home">
@@ -127,7 +128,7 @@
             </button>
 
             <!-- Navigation Menu -->
-            <nav class="site-nav">
+            <nav class="site-nav" aria-label="{{ site.t[page.lang].nav_primary | default: site.t[site.default_lang].nav_primary }}">
                 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
                 <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="{% if page.url contains '/home' %}active{% endif %}">{{ t.home }}</a>
                 <a href="{{ site.baseurl }}/{{ page.lang }}/blog/" class="{% if page.url contains '/blog' or page.id %}active{% endif %}">{{ t.blog }}</a>
@@ -227,10 +228,10 @@
                 </script>
             </div>
         </div>
-    </div>
+    </header>
 
     <!-- Main Content -->
-    <div id="main" role="main" class="container">
+    <main id="main" class="container">
         {{ content }}
 
         {% comment %}
@@ -239,7 +240,7 @@
                 <div class="fade-overlay"></div>
             {% endif %}
         {% endcomment %}
-    </div>
+    </main>
 
     <!-- Footer -->
     <div class="wrapper-footer">

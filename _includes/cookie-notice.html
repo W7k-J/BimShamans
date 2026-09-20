@@ -1,11 +1,18 @@
 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
-<div id="cookie-notice" class="cookie-notice" role="alert" aria-live="polite">
+<!--
+  role="region", not "alert": an alert interrupts a screen reader mid-sentence
+  the instant the page loads, before anyone has heard the page's own heading.
+  A cookie notice about local storage isn't urgent enough to justify that; a
+  named region the user can find in their own time is enough.
+-->
+<div id="cookie-notice" class="cookie-notice" role="region" aria-label="{{ t.cookie_notice_region }}">
     <div class="cookie-notice__content">
         <p class="cookie-notice__text">
             {{ t.cookie_notice_text }}
             <a href="{{ site.baseurl }}/{{ page.lang }}/privacy/">{{ t.cookie_notice_link }}</a>
         </p>
-        <button type="button" class="cookie-notice__button" id="cookie-accept" aria-label="{{ t.cookie_notice_accept }}">
+        <!-- No aria-label here: it would just repeat the button's own visible text. -->
+        <button type="button" class="cookie-notice__button" id="cookie-accept">
             {{ t.cookie_notice_accept }}
         </button>
     </div>

@@ -42,6 +42,12 @@
 
   &__button {
     flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    // 44px: a comfortable tap target on a phone, not just the ~36px the
+    // padding alone would give.
+    min-height: 44px;
     background: var(--forthGray-color);
     color: var(--firstBlue-color);
     border: 2px solid var(--firstBlue-color);
@@ -51,7 +57,7 @@
     font-size: 0.9rem;
     font-weight: 500;
     cursor: pointer;
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 
     &:hover {
       background-color: var(--firstBlue-color);
@@ -59,10 +65,16 @@
       border-color: var(--firstBlue-color);
     }
 
+    // Was var(--secondBlue-color): in light theme that's a light cyan behind
+    // near-white text, 1.6:1 - the label all but disappears for the instant
+    // the button is pressed. Keeps :hover's colours (already checked at
+    // 5.55:1+ in both themes) and signals "pressed" with a small shift
+    // instead of a colour that fails contrast.
     &:active {
-      background-color: var(--secondBlue-color);
-      border-color: var(--secondBlue-color);
+      background-color: var(--firstBlue-color);
+      border-color: var(--firstBlue-color);
       color: var(--background-color);
+      transform: translateY(1px);
     }
   }
 
@@ -70,6 +82,13 @@
   &--hiding {
     animation: cookie-notice-hide 0.3s ease forwards;
   }
+}
+
+// Reserves space at the end of the page while the notice is on screen, so it
+// doesn't sit on top of the page's own last links (e.g. home's bottom nav)
+// on a short viewport. Toggled by cookie-notice.js, removed once dismissed.
+body.has-cookie-notice {
+  padding-bottom: 90px;
 }
 
 // Hide animation
@@ -102,6 +121,13 @@
       width: 100%;
       padding: 0.65rem 1.5rem;
     }
+  }
+
+  // Stacked layout is taller, so the reserved space needs to grow with it.
+  // Sibling of .cookie-notice above, not nested in it - body is never its
+  // descendant.
+  body.has-cookie-notice {
+    padding-bottom: 170px;
   }
 }
 

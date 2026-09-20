@@ -36,6 +36,13 @@ function handleLanguage() {
 }
 
 function switchLanguage(lang) {
+    // Already on this language: CSS disables the pointer click on that button,
+    // but a keyboard Enter/Space still fires this handler, so the check
+    // belongs here too, or the page would reload itself for no reason.
+    if ((document.documentElement.lang || 'en') === lang) {
+        return;
+    }
+
     try {
         if (window.SafeStorage) {
             window.SafeStorage.setItem('preferredLanguage', lang);

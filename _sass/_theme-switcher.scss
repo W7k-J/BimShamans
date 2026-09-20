@@ -1,12 +1,18 @@
 /* iOS-style toggle switch styles */
 
 // Main switch container
+//
+// This <label> is the actual tap target - clicking anywhere in its box
+// toggles the checkbox inside, native <label> behaviour. It's 44px tall so
+// that tap target meets a comfortable mobile size, while .slider below stays
+// a fixed 34px and is centred inside it, so the pill you see is unchanged;
+// the extra 10px is invisible padding around it, not a bigger switch.
 .switch {
   position: relative;
   display: inline-flex;
   align-items: center;
   width: 60px;
-  height: 34px;
+  height: 44px;
 }
 
 // Hide default HTML checkbox
@@ -21,10 +27,14 @@
 .slider {
   position: absolute;
   cursor: pointer;
-  top: 0;
+  // Fixed 34px height, vertically centred in the taller .switch label above,
+  // instead of stretching to fill it (inset: 0 would have made the visible
+  // pill 44px tall too).
+  top: 50%;
   left: 0;
   right: 0;
-  bottom: 0;
+  height: 34px;
+  transform: translateY(-50%);
   // Light theme background color
   background-color: var(--firstBlue-color);
   // Controls background in light mode

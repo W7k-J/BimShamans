@@ -1,6 +1,7 @@
 .svg-icon {
-  width: 42px;
-  height: 42px;
+  // 44px: was 42, just under a comfortable tap size for the footer row.
+  width: 44px;
+  height: 44px;
   display: inline-block;
   background-size: contain;
   background-repeat: no-repeat;

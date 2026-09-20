@@ -1755,7 +1755,10 @@
 .expertise__nav-link {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
+  // 44px: the padding alone gave ~36px.
+  min-height: 44px;
   padding: 0.6rem 1.2rem;
   background-color: var(--forthGray-color);
   color: var(--firstGray-color);

@@ -537,6 +537,9 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
         font: inherit;
         letter-spacing: 0.5px;
         min-width: 3rem;
+        // 44px: the padding alone gave ~32px, tight for a fingertip next to
+        // its sibling button.
+        min-height: 44px;
         padding: 0.35rem 0.9rem;
         text-transform: uppercase;
         transition: color 0.4s ease, background-color 0.4s ease, border-color 0.4s ease, font-weight 0.4s ease;
@@ -556,6 +559,9 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
           color: var(--firstBlue-color);
           background-color: var(--forthGray-color);
           font-weight: 600;
+          // The button for the language already showing has nothing to do:
+          // clicking it used to still fire switchLanguage() and reload.
+          pointer-events: none;
         }
       }
     }
@@ -1821,6 +1827,33 @@ body::before {
   border: 0;
 }
 
+// ---------------------------------------------------------------------------
+// Skip link
+//
+// Sits off-screen the same way .visually-hidden does, but only until it
+// receives keyboard focus - then it has to become visible, or the person who
+// pressed Tab to find it never sees where their focus went. Placed above the
+// fixed nav bar (z-index) so it isn't hidden behind it once shown.
+// ---------------------------------------------------------------------------
+.skip-link {
+  position: absolute;
+  top: -100%;
+  left: 1rem;
+  z-index: 2000;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--background-color);
+  color: var(--firstBlue-color);
+  border: 2px solid var(--firstBlue-color);
+  border-radius: $radius-small;
+  font-weight: 600;
+  text-decoration: none;
+  transition: top 0.2s ease;
+
+  &:focus {
+    top: 1rem;
+  }
+}
+
 .video {
       position: absolute;
       top: 0;
@@ -2245,8 +2278,9 @@ footer {
 }
 
 .privacy-icon {
-  width: 42px;
-  height: 42px;
+  // 44px: was 42, matches .svg-icon's tap size in the same footer row.
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
