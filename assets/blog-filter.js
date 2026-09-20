@@ -246,16 +246,30 @@ class BlogManager {
    * Render single card HTML
    */
   renderCard(post) {
-    const tagsHtml = (post.tags && Array.isArray(post.tags))
-      ? post.tags.map(tag => `<span class="blog-card__tag">${tag}</span>`).join('')
-      : '';
+    const tags = (post.tags && Array.isArray(post.tags)) ? post.tags : [];
+    const tagsHtml = tags.map(tag => `<span class="blog-card__tag">${tag}</span>`).join('');
 
     const category = post.category || (post.tags && post.tags[0]) || 'Blog';
     const author = post.author ? `by ${post.author}` : '';
     const excerpt = post.excerpt || 'Read more to discover...';
-    
+
+    // The posts carry an `excerpt`, never a `description` - so the overlay used
+    // to show the same English placeholder sentence on every card, on both
+    // language versions. The excerpt is the description these posts actually
+    // have, and it is what the phone layout shows inline.
+    const description = post.description || excerpt;
+
     // Right arrow icon SVG file
     const arrowIcon = `<img src="/images/icons/icons_alt-arrow-right.svg" alt="arrow" />`;
+
+    // Phone-only: the overlay holding the tags and the "read more" cue never
+    // opens without a hovering pointer, so the card carries its own copy. Both
+    // are hidden again above the phone breakpoint, where the overlay is back.
+    const inlineTagsHtml = tags.length
+      ? `<div class="blog-card__tags blog-card__tags--inline">${tagsHtml}</div>`
+      : '';
+
+    const readMore = (typeof blogLabels !== 'undefined' && blogLabels.readMore) || 'read more';
 
     return `
       <article class="blog-card" data-tags="${(post.tags || []).join(',')}">
@@ -269,14 +283,23 @@ class BlogManager {
         <div class="blog-card__content">
           <h3 class="blog-card__title">${post.title}</h3>
           <p class="blog-card__excerpt">${excerpt}</p>
-          <p class="blog-card__meta">
-            <time datetime="${post.date}">${(post.date || '').replace(/-/g, '/')}</time>
-            ${post.author ? `<span aria-hidden="true">·</span><span>${post.author}</span>` : ''}
-          </p>
+          ${inlineTagsHtml}
+          <div class="blog-card__footer">
+            <p class="blog-card__meta">
+              <time datetime="${post.date}">${(post.date || '').replace(/-/g, '/')}</time>
+              ${post.author ? `<span aria-hidden="true">·</span><span>${post.author}</span>` : ''}
+            </p>
+            <span class="blog-card__more" aria-hidden="true">
+              ${readMore}
+              <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                <polyline points="9 18 15 12 9 6"></polyline>
+              </svg>
+            </span>
+          </div>
         </div>
         
         <div class="blog-card__overlay">
-          <p class="blog-card__description">${post.description || 'Discover more insights and details about this article.'}</p>
+          <p class="blog-card__description">${description}</p>
           <div class="blog-card__tags">${tagsHtml}</div>
           ${author ? `<p class="blog-card__author">${author}</p>` : ''}
           <a href="${post.url}" class="blog-card__label">

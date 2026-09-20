@@ -691,7 +691,7 @@
   }
 
   // Date and author. Hidden until the phone layout below asks for it, where it
-  // is what is left of the card's text once the excerpt goes.
+  // shares a line with the "read more" cue.
   &__meta {
     display: none;
     align-items: center;
@@ -701,6 +701,50 @@
     font-size: 0.8rem;
     line-height: 1.3;
     opacity: 0.85;
+  }
+
+  // -------------------------------------------------------------------------
+  // Phone-only parts of the card. A touch device never opens the overlay, so
+  // everything it holds - the description, the tags, the cue that the card is
+  // a link - is invisible on a phone, which is where most of the reading
+  // happens. These carry that content in the card itself. The tags' copy is
+  // further down, next to &__tags, for the specificity reason noted there.
+  //
+  // All of it is hidden by default, and turned on by the phone block at the
+  // end of this file, so the desktop card is unchanged.
+  // -------------------------------------------------------------------------
+
+  // Date - author on the left, the "read more" cue on the right.
+  &__footer {
+    display: none;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.75rem;
+    margin-top: 0.15rem;
+  }
+
+  // Not a control: the whole card is one link (see .blog-card__label). This is
+  // only the affordance for it, which hover used to provide and touch cannot -
+  // hence aria-hidden on it in the markup, so it is not announced as a second
+  // link.
+  &__more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-shrink: 0;
+    color: var(--firstBlue-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-transform: lowercase;
+    white-space: nowrap;
+
+    svg {
+      stroke: currentColor;
+      // Sits on the text's baseline rather than on its box, which on a
+      // lowercase word leaves the arrow looking a pixel too high.
+      transform: translateY(0.5px);
+    }
   }
 
   // Overlay (hover state)
@@ -758,6 +802,35 @@
     font-weight: 500;
     cursor: default;
     transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  // The card's own copy of the tags, for the phone layout at the end of this
+  // component - the overlay above never opens without a hovering pointer.
+  //
+  // Same pill shape and lowercase wording as the filter chips above the list,
+  // so the two read as one vocabulary, but drawn as a hairline outline rather
+  // than filled. The filter chips are controls; these are labels, and a tap on
+  // one opens the post like a tap anywhere else on the card. A filled pill
+  // inside a card-sized link promises a button that is not there.
+  //
+  // Must stay after &__tags, which it shares its specificity with: source
+  // order is what decides whose `display` wins.
+  &__tags--inline {
+    display: none;
+    gap: 0.35rem;
+    margin: 0;
+
+    .blog-card__tag {
+      padding: 0.2rem 0.6rem;
+      border: 1px solid var(--forthGray-color);
+      background-color: transparent;
+      color: var(--secondGray-color);
+      font-size: 0.7rem;
+      font-weight: 500;
+      line-height: 1.5;
+      text-transform: lowercase;
+      opacity: 0.9;
+    }
   }
 
   &__author {
@@ -826,6 +899,57 @@
     &__meta {
       display: flex;
     }
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Phone, blog listing only: the card says what the post is about.
+//
+// The description, the tags and the "read more" cue all live in the overlay,
+// which is scoped to `(hover: hover)` - so on a phone the list was thumbnail +
+// title + date, and nothing on the page told the reader what any post held or
+// that a card was even tappable. On the listing that is the whole job of the
+// page, so the card carries its own copy of all three.
+//
+// Scoped to .blog__container, which is the blog page only: the home page's
+// "Latest posts" strip is a teaser under everything else and stays compact.
+//
+// The thumbnail flattens to 2:1 to pay for the text. These thumbnails repeat
+// across posts and carry almost nothing on a 390px screen, so they are the
+// cheapest height on the card.
+// ---------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .blog__container .blog-card__image {
+    aspect-ratio: 2 / 1;
+  }
+
+  .blog__container .blog-card__content {
+    padding: 1rem 1rem 1.1rem;
+    gap: 0.55rem;
+  }
+
+  .blog__container .blog-card__excerpt {
+    // Three lines is one full sentence of these excerpts at phone width, and a
+    // fixed ceiling keeps every card in the list the same shape.
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    // Without this the excerpt's own `flex: 1` stretches the shortest card in
+    // a filtered list to match its neighbours' whitespace.
+    flex: 0 0 auto;
+    font-size: 0.875rem;
+    line-height: 1.55;
+    text-wrap: pretty;
+  }
+
+  .blog__container .blog-card__tags--inline {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .blog__container .blog-card__footer {
+    display: flex;
   }
 }
 

@@ -131,6 +131,12 @@ excerpt: "Insights, methodologies, and best practices in BIM coordination"
 
 <!-- Embed blog posts data -->
 <script>
+// Label for the phone-only "read more" cue on each card; blog-filter.js is
+// shared by both language versions, so the string has to come from the page.
+const blogLabels = {
+  readMore: "{{ site.t[page.lang].read_more | escape }}"
+};
+
 const blogPosts = [
   {% assign posts = site.posts | where: "lang", "en" | sort: "date" | reverse %}
   {% for post in posts %}
@@ -151,4 +157,4 @@ const blogPosts = [
 ];
 </script>
 
-<script src="{{ site.baseurl }}/assets/blog-filter.js" defer></script>
+<script src="{{ site.baseurl }}/assets/blog-filter.js?v={{ site.time | date: '%s' }}" defer></script>
