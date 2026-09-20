@@ -11,6 +11,9 @@
  * CSS (see `hero-scroll-fade` in style.scss); this file supplies the fallback
  * for browsers without `animation-timeline`.
  *
+ * On a phone the lede paragraph below the hero is a beat of its own, and gets
+ * the same treatment - pure CSS on a view() timeline, with the same fallback.
+ *
  * It also marks the body with `hero-idle` once the hero is no longer visible,
  * which style.scss uses to pause the hero's infinite animations and to bring
  * the wordmark into the nav bar.
@@ -40,6 +43,10 @@
     return !!(window.CSS && window.CSS.supports && window.CSS.supports('animation-timeline', 'scroll()'));
   }
 
+  function supportsViewTimeline() {
+    return !!(window.CSS && window.CSS.supports && window.CSS.supports('animation-timeline', 'view()'));
+  }
+
   function maxScroll() {
     var doc = document.documentElement;
     return Math.max(0, doc.scrollHeight - window.innerHeight);
@@ -58,6 +65,16 @@
 
     if (jsFade) {
       hero.classList.add('hero-banner--js-fade');
+    }
+
+    // The lede paragraph - the phone-only second beat - gets the same send-off
+    // as the lockup. In CSS it rides a view() timeline; this is its fallback.
+    var lede = document.querySelector('.hero-lede__text');
+    var ledeJsFade = !!lede && fades && !supportsViewTimeline();
+    var lastLedeFade = -1;
+
+    if (ledeJsFade) {
+      lede.classList.add('hero-lede__text--js-fade');
     }
 
     // Toggle inside #main rather than on <body>: #main holds both the glitch
@@ -119,6 +136,10 @@
         }
       }
 
+      if (ledeJsFade) {
+        updateLede();
+      }
+
       var idle = offset >= threshold;
       if (idle !== lastIdle) {
         lastIdle = idle;
@@ -135,6 +156,45 @@
         // stayed at opacity: 0 for the life of the page. One class toggle per
         // threshold crossing is cheap enough not to need a gate at all.
         document.body.classList.toggle('hero-idle', idle);
+      }
+    }
+
+    // Mirrors `animation-range: contain 50% exit 50%` in style.scss: the fade
+    // starts with the paragraph centred and is spent half a screen later.
+    //
+    // Measured off the paragraph's own box rather than the page offset, because
+    // the beat above it is a viewport tall and that height is not a constant -
+    // svh, the nav and the wordmark's wrapping all move where this beat begins.
+    function updateLede() {
+      var rect = lede.getBoundingClientRect();
+
+      // Above the phone breakpoint the lede is display: none - nothing to fade.
+      if (rect.height <= 0) {
+        if (lastLedeFade !== 0) {
+          lastLedeFade = 0;
+          lede.style.setProperty('--hero-lede-fade', '0');
+        }
+        return;
+      }
+
+      var viewport = window.innerHeight;
+      var start = (viewport - rect.height) / 2;
+      // `exit 50%` is the paragraph half off the top, which from `start` is
+      // always half a viewport of scrolling away.
+      var span = viewport / 2;
+      var progress = span > 0 ? (start - rect.top) / span : 1;
+
+      if (progress < 0) {
+        progress = 0;
+      }
+      if (progress > 1) {
+        progress = 1;
+      }
+
+      var rounded = Math.round(progress * 100) / 100;
+      if (rounded !== lastLedeFade) {
+        lastLedeFade = rounded;
+        lede.style.setProperty('--hero-lede-fade', String(rounded));
       }
     }
 

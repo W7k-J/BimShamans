@@ -737,6 +737,24 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
   }
 }
 
+// ---------------------------------------------------------------------------
+// Lede scroll fade
+// The phone-only second beat gets the same send-off as the lockup: it fades
+// and settles on its way out, so "Latest posts" takes over a clean screen.
+//
+// Timed off the paragraph's own trip through the viewport rather than off the
+// document, because this beat starts a screen down - a scroll() range would
+// have to hard-code the height of the beat above it, which is exactly the
+// number that changes with the URL bar, the nav and the wordmark's wrapping.
+// ---------------------------------------------------------------------------
+
+@keyframes hero-lede-scroll-fade {
+  to {
+    opacity: 0;
+    transform: translate3d(0, -2vh, 0) scale(0.97);
+  }
+}
+
 // Hero gone: stop the work it was doing for nobody. These masks drive
 // `filter: url(#filter)` through feImage, so while they move every frame
 // re-runs the whole filter graph over both wordmarks.
@@ -1367,6 +1385,28 @@ figure {
     min-height: calc(100svh - #{$nav-height});
     padding: 0 1.5rem;
   }
+
+  @media (prefers-reduced-motion: no-preference) {
+    // Native scroll-driven animation (Chrome/Edge 115+, Safari 26+).
+    @supports (animation-timeline: view()) {
+      .hero-lede__text {
+        animation: hero-lede-scroll-fade linear both;
+        animation-timeline: view(block);
+        // `contain 50%` is the paragraph sitting centred - exactly where it is
+        // while its own beat fills the screen - so the fade starts on the
+        // first pixel of scrolling away from it and is spent half a screen
+        // later, before it can reach the top and leave a ghost behind the nav.
+        animation-range: contain 50% exit 50%;
+      }
+    }
+
+    // Fallback for browsers without `animation-timeline`; --hero-lede-fade
+    // (0..1) is driven by hero-scroll-fade.js.
+    .hero-lede__text.hero-lede__text--js-fade {
+      opacity: calc(1 - var(--hero-lede-fade, 0));
+      transform: translate3d(0, calc(var(--hero-lede-fade, 0) * -2vh), 0) scale(calc(1 - var(--hero-lede-fade, 0) * 0.03));
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1394,6 +1434,12 @@ figure {
   }
 
   .hero-section--banner .hero-banner {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-lede__text {
     animation: none;
     opacity: 1;
     transform: none;
