@@ -1512,7 +1512,11 @@ body.mobile-menu-lock {
 .nav-toggle {
   display: none;
   background: transparent;
-  border: 1px solid var(--firstBlue-color);
+  // Was a bordered 44px square in accent colour, which made the menu button the
+  // heaviest thing in the bar - three times the weight of the flame it sits
+  // opposite, and the first thing the eye lands on. The hit area is unchanged,
+  // it just is not drawn any more; the bars alone say "menu".
+  border: 0;
   border-radius: $radius-small;
   width: 44px;
   height: 44px;
@@ -1525,14 +1529,15 @@ body.mobile-menu-lock {
   transition: all 0.3s ease;
   z-index: 1001;
 
-  &:hover {
-    border-color: var(--firstBlue-color);
+  // With no box to light up, the feedback moves onto the bars themselves.
+  &:hover span {
     box-shadow: var(--glow-accent);
   }
 
   &:focus-visible {
     outline: 3px solid var(--firstBlue-color);
     outline-offset: 2px;
+    border-radius: $radius-small;
   }
 
   span {
@@ -1666,7 +1671,10 @@ body.mobile-menu-lock {
       }
       
       .nav-flame {
-        height: 70%;
+        // The only brand mark on a phone - the wordmark above is display: none -
+        // so it has to hold the left side of the bar on its own. At 70% it read
+        // as an afterthought next to the menu button.
+        height: 90%;
       }
     }
 
