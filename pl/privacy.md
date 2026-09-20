@@ -53,30 +53,23 @@ Nasze formularze kontaktowe są obsługiwane przez Formspree, Inc.
 - **Przekazywane dane:** Imię, email, temat, treść wiadomości
 - **Polityka prywatności:** [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy)
 
-### 3.2 Google Fonts
-
-Używamy Google Fonts do wyświetlania typografii na tej stronie.
-- **Cel:** Ładowanie czcionek (Montserrat, Michroma, Syncopate, Source Code Pro)
-- **Ekspozycja danych:** Twój adres IP i informacje o przeglądarce mogą być przesyłane do serwerów Google podczas ładowania czcionek
-- **Polityka prywatności:** [policies.google.com/privacy](https://policies.google.com/privacy)
-
-### 3.3 cdnfonts.com
-
-Ładujemy dodatkowe czcionki z cdnfonts.com.
-- **Cel:** Ładowanie czcionki Cascadia Code
-- **Ekspozycja danych:** Twój adres IP może być przesyłany do ich serwerów
-
-### 3.4 Przyciski Udostępniania w Mediach Społecznościowych
+### 3.2 Przyciski Udostępniania w Mediach Społecznościowych
 
 Gdy klikniesz przyciski udostępniania (LinkedIn, Twitter/X), zostaniesz przekierowany na te platformy. W tym momencie obowiązują polityki prywatności tych platform.
 
-## 4. Bezpieczeństwo Danych
+## 4. Czcionki
+
+Wszystkie czcionki na tej stronie są udostępniane z naszej własnej domeny. Żaden
+dostawca czcionek, w tym Google Fonts, nie otrzymuje Twojego adresu IP ani
+żadnych innych informacji o Twojej wizycie.
+
+## 5. Bezpieczeństwo Danych
 
 - Dane z formularza kontaktowego są przesyłane bezpiecznie przez HTTPS
 - Nie przechowujemy danych osobowych na własnych serwerach
 - Dane localStorage pozostają tylko na Twoim urządzeniu
 
-## 5. Twoje Prawa na Mocy RODO
+## 6. Twoje Prawa na Mocy RODO
 
 Jeśli przebywasz w Europejskim Obszarze Gospodarczym, przysługują Ci następujące prawa:
 
@@ -98,15 +91,15 @@ Masz prawo złożyć skargę do organu nadzorczego. W Polsce jest to:
 ul. Stawki 2, 00-193 Warszawa
 [uodo.gov.pl](https://uodo.gov.pl)
 
-## 6. Okres Przechowywania Danych
+## 7. Okres Przechowywania Danych
 
 - **Dane z formularza kontaktowego:** Przechowywane przez Formspree zgodnie z ich polityką
 - **localStorage:** Przechowywane do momentu wyczyszczenia danych przeglądarki
 
-## 7. Zmiany w Polityce
+## 8. Zmiany w Polityce
 
 Możemy aktualizować niniejszą Politykę Prywatności od czasu do czasu. Data "Ostatnia aktualizacja" na górze wskazuje, kiedy wprowadzono zmiany. Dalsze korzystanie ze strony po wprowadzeniu zmian oznacza akceptację zaktualizowanej polityki.
 
-## 8. Kontakt
+## 9. Kontakt
 
 W sprawach związanych z prywatnością prosimy o skorzystanie z naszego [formularza kontaktowego](/pl/contact/).

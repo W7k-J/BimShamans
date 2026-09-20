@@ -53,30 +53,23 @@ Our contact form submissions are processed by Formspree, Inc.
 - **Data shared:** Name, email, subject, message content
 - **Privacy Policy:** [formspree.io/legal/privacy-policy](https://formspree.io/legal/privacy-policy)
 
-### 3.2 Google Fonts
-
-We use Google Fonts to display typography on this website.
-- **Purpose:** Loading web fonts (Montserrat, Michroma, Syncopate, Source Code Pro)
-- **Data exposure:** Your IP address and browser information may be transmitted to Google servers when fonts are loaded
-- **Privacy Policy:** [policies.google.com/privacy](https://policies.google.com/privacy)
-
-### 3.3 cdnfonts.com
-
-We load additional fonts from cdnfonts.com.
-- **Purpose:** Loading the Cascadia Code font
-- **Data exposure:** Your IP address may be transmitted to their servers
-
-### 3.4 Social Media Share Buttons
+### 3.2 Social Media Share Buttons
 
 When you click share buttons (LinkedIn, Twitter/X), you will be redirected to those platforms. At that point, those platforms' privacy policies apply.
 
-## 4. Data Security
+## 4. Fonts
+
+All fonts on this website are served from our own domain. No font provider,
+including Google Fonts, receives your IP address or any other information about
+your visit.
+
+## 5. Data Security
 
 - Contact form data is transmitted securely via HTTPS
 - We do not store personal data on our own servers
 - localStorage data remains on your device only
 
-## 5. Your Rights Under GDPR
+## 6. Your Rights Under GDPR
 
 If you are in the European Economic Area, you have the following rights:
 
@@ -98,15 +91,15 @@ You have the right to lodge a complaint with a supervisory authority. In Poland,
 ul. Stawki 2, 00-193 Warszawa
 [uodo.gov.pl](https://uodo.gov.pl)
 
-## 6. Data Retention
+## 7. Data Retention
 
 - **Contact form data:** Retained by Formspree according to their retention policy
 - **localStorage:** Retained until you clear your browser data
 
-## 7. Changes to This Policy
+## 8. Changes to This Policy
 
 We may update this Privacy Policy from time to time. The "Last updated" date at the top indicates when changes were made. Continued use of the website after changes constitutes acceptance of the updated policy.
 
-## 8. Contact Us
+## 9. Contact Us
 
 For privacy-related inquiries, please use our [contact form](/en/contact/).

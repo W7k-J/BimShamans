@@ -13,7 +13,10 @@
 
 
 code {
-  font-family: 'Cascadia Code', 'Source Code Pro', sans-serif monospace;
+  // Was `sans-serif monospace`, which CSS reads as one family name of that
+  // literal text - a font nobody has - so if both webfonts failed, code fell
+  // back to the browser's default proportional font rather than a monospace.
+  font-family: 'Cascadia Code', 'Source Code Pro', $systemMono;
 }
 
 //.highlight pre { background-color: #272822; }

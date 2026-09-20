@@ -26,9 +26,17 @@ $lightGray: #e3e3ea;    // Jasny szary, HSL: (240, 0%, 70%)
 $ghostWhite: #f5f5fa;   // Bardzo jasny szary, HSL: (240, 5%, 97%)
 
 // Font stacks
-$helvetica: 'Montserrat', Helvetica, Arial, sans-serif;
-$helveticaNeue: 'Montserrat', "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+// Font stacks. Montserrat is self-hosted (see _fonts.scss), so it should always
+// arrive - but the fallbacks now name the fonts actually present on Windows,
+// macOS, iOS, Android and Linux before the generic, so if a face ever fails to
+// load the page degrades to a close geometric sans instead of whatever the
+// browser picks by default.
+$systemSans: "Segoe UI", -apple-system, BlinkMacSystemFont, Roboto, "Helvetica Neue", Helvetica, Arial, sans-serif;
+$systemMono: ui-monospace, "Cascadia Mono", Consolas, "SF Mono", Menlo, "DejaVu Sans Mono", monospace;
+
+$helvetica: 'Montserrat', $systemSans;
+$helveticaNeue: 'Montserrat', $systemSans;
+$georgia: Georgia, "Times New Roman", serif;
 
 // Timing variables
 $transition-base: 0.4s;
