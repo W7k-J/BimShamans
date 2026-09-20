@@ -739,6 +739,27 @@
     text-overflow: ellipsis;
   }
 
+  // Tags section (lower 60%)
+  &__tags {
+    display: flex;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+  }
+
+  &__tag {
+    padding: 0.4rem 0.9rem;
+    border: 1px solid var(--firstBlue-color);
+    border-radius: 999px;
+    background-color: var(--card-media-bg);
+    color: var(--firstGray-color);
+    font-size: clamp(0.75rem, #{"calc(0.7rem + 0.2vw)"}, 0.8rem);
+    font-weight: 500;
+    cursor: default;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
   &__author {
     color: var(--firstBlue-color);
     font-size: 0.9rem;
