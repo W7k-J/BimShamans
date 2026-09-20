@@ -602,6 +602,12 @@
       height: 100%;
       object-fit: cover;
       transition: opacity 0.35s ease-out;
+
+      // Safety net for a thumbnail that fails to load: alt text used to be laid
+      // out inside this box and ran straight under the category badge. Nothing
+      // text-like renders here - the title right below carries the meaning.
+      font-size: 0;
+      color: transparent;
     }
   }
 

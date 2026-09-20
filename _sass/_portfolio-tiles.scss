@@ -521,41 +521,23 @@
     }
   }
   
-  .portfolio-tiles-stack {
-    width: 90%;
-    max-width: 600px;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .expertise-section {
-    gap: 2rem;
-    margin-bottom: 3rem;
-    padding-bottom: 3rem;
-  }
+  // ============================================
+  // TOUCH / NARROW LAYOUT: tiles become a vertical card list
+  // Applied from 992px (not 768px): the section is already single-column
+  // here, and keeping the absolute cascade collapsed the stack to 0px wide.
+  // ============================================
   
   .expertise-section__media {
     min-height: auto;
     padding: 0;
+    width: 100%; // percentage widths below need a definite basis
   }
   
-  .expertise-section__content h2 {
-    font-size: clamp(1.5rem, 5vw, 1.75rem);
-  }
-  
-  .expertise-section__content ul {
-    margin-left: 0 !important; // Reset any auto-margin
-    padding-left: 0 !important; // Remove bullet indent on mobile
-    list-style-position: inside !important; // Bullets inside text block
-    text-align: left !important; // Force left alignment
-    align-self: flex-start !important; // Only ul to left, rest stays centered
-    width: 100%; // Take full width for proper left alignment
-  }
-  
-  // Transform stack into vertical stack
+  // Transform stack into vertical card list
   .portfolio-tiles-stack {
     width: 100%;
-    max-width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
     height: auto;
     aspect-ratio: auto;
     perspective: none;
@@ -649,6 +631,40 @@
   .portfolio-tile__image img {
     opacity: 1;
   }
+  
+  // Description is the only place this text exists on touch devices -
+  // show all of it instead of clamping to a teaser.
+  .portfolio-tile__description {
+    display: block;
+    -webkit-line-clamp: none;
+    line-clamp: none;
+    overflow: visible;
+    text-overflow: clip;
+    font-size: 0.9375rem;
+    line-height: 1.55;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expertise-section {
+    gap: 2rem;
+    margin-bottom: 3rem;
+    padding-bottom: 3rem;
+  }
+  
+  .expertise-section__content h2 {
+    font-size: clamp(1.5rem, 5vw, 1.75rem);
+  }
+  
+  .expertise-section__content ul {
+    margin-left: 0 !important; // Reset any auto-margin
+    padding-left: 0 !important; // Remove bullet indent on mobile
+    list-style-position: inside !important; // Bullets inside text block
+    text-align: left !important; // Force left alignment
+    align-self: flex-start !important; // Only ul to left, rest stays centered
+    width: 100%; // Take full width for proper left alignment
+  }
+  
 }
 
 // Small mobile phones - further optimization
@@ -682,9 +698,7 @@
   }
   
   .portfolio-tile__description {
-    font-size: 0.8rem;
-    -webkit-line-clamp: 2;
-    line-clamp: 2;
+    font-size: 0.875rem;
   }
   
   .expertise-section__tags {

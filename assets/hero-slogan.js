@@ -37,7 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
       counter = 0;
     }
 
-    var possible = "-+*/|}{[]~\\\":;?/.><=+-_)(*&^%$#@!)}";
+    // Letters only. The old charset was punctuation (~ { | \ etc.), so every
+    // in-between frame read as corrupted markup rather than as a word being
+    // typed - the hero looked broken to anyone glancing mid-cycle.
+    var possible = "abcdefghijklmnopqrstuvwxyz";
 
     function generateRandomFrame(i, randomWord) {
       frameTimers.push(setTimeout(function() {
@@ -69,7 +72,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     running = true;
     animateWord();
-    cycleTimer = setInterval(animateWord, 2500);
+    // Longer dwell: the finished word is the point, the scramble is only the
+    // transition. 3500ms keeps a readable word on screen ~85% of the time.
+    cycleTimer = setInterval(animateWord, 3500);
   }
 
   function stop() {

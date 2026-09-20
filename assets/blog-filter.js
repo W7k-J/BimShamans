@@ -260,7 +260,9 @@ class BlogManager {
     return `
       <article class="blog-card" data-tags="${(post.tags || []).join(',')}">
         <div class="blog-card__image">
-          <img src="${post.image}" alt="${post.title}" loading="lazy">
+          <!-- Decorative: the title sits right below in the h3, and an alt copy of it
+               spilled over the category badge whenever the image failed to load. -->
+          <img src="${post.image}" alt="" loading="lazy">
           <span class="blog-card__category">${category}</span>
         </div>
         
