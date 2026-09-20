@@ -1296,9 +1296,15 @@ figure {
     margin: 0;
   }
 
+  // svh, not dvh. dvh tracks the browser's own chrome: on Android the URL bar
+  // collapses as you scroll and expands when you stop, and every toggle
+  // re-resolved both beats and shoved the page under the reader's finger -
+  // which read as the page jumping at the end of each section. svh is the
+  // height with the bar showing, so it never changes mid-scroll; when the bar
+  // does collapse the beat just gets some air under it.
   .hero-section--banner .hero-banner {
     min-height: calc(100vh - #{$nav-height} - #{$nav-spacing});
-    min-height: calc(100dvh - #{$nav-height} - #{$nav-spacing});
+    min-height: calc(100svh - #{$nav-height} - #{$nav-spacing});
     // A screen-tall hero has to fade over a screen of scrolling, otherwise the
     // lockup is gone while its own beat is still filling the viewport.
     --hero-fade-ratio: 1;
@@ -1309,7 +1315,7 @@ figure {
     align-items: center;
     justify-content: center;
     min-height: calc(100vh - #{$nav-height});
-    min-height: calc(100dvh - #{$nav-height});
+    min-height: calc(100svh - #{$nav-height});
     padding: 0 1.5rem;
   }
 }
