@@ -5,6 +5,13 @@ document.addEventListener('DOMContentLoaded', function() {
     return;
   }
 
+  // Same question already asked correctly in hero-scroll-fade.js: is the
+  // "no wiggly stuff" setting on? If so, this whole file should never start
+  // its timer, leaving the word exactly as the page already shows it.
+  function prefersReducedMotion() {
+    return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+  }
+
   var strings = sloganElement.dataset.strings ? sloganElement.dataset.strings.split(',') : ['share', 'serve', 'solve'];
   var counter = 0;
 
@@ -85,6 +92,11 @@ document.addEventListener('DOMContentLoaded', function() {
   // Only run the cycle while the hero is actually on screen and the tab is
   // in front - it used to loop forever, including far below the fold.
   function sync() {
+    if (prefersReducedMotion()) {
+      // Never start: the element keeps whatever word is already in the
+      // markup ("share"), and stays that way for as long as the page is open.
+      return;
+    }
     if (heroVisible && !document.hidden) {
       start();
     } else {

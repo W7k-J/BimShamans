@@ -7,6 +7,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     var root = document.documentElement;
 
+    // Same question already asked correctly in hero-scroll-fade.js: is the
+    // "no wiggly stuff" setting on? If so, the free-running flicker below
+    // should never start at all.
+    function prefersReducedMotion() {
+        return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
+    }
+
     function readPalette() {
         var computed = getComputedStyle(root);
         function pick(name, fallback) {
@@ -63,7 +70,9 @@ document.addEventListener('DOMContentLoaded', function() {
         lastRatios.active = false;
     });
 
-    var flickerTimer = setInterval(function() {
+    // null when reduced motion is on: clearInterval(null) further down is a
+    // harmless no-op, so nothing else needs to change to skip this safely.
+    var flickerTimer = prefersReducedMotion() ? null : setInterval(function() {
         if (document.hidden) {
             return;
         }

@@ -32,10 +32,6 @@
     return !!(window.CSS && window.CSS.supports && window.CSS.supports('animation-timeline', 'scroll()'));
   }
 
-  function hasHoverPointer() {
-    return !!(window.matchMedia && window.matchMedia('(hover: hover)').matches);
-  }
-
   function maxScroll() {
     var doc = document.documentElement;
     return Math.max(0, doc.scrollHeight - window.innerHeight);
@@ -49,7 +45,6 @@
 
     var reduced = prefersReducedMotion();
 
-    var hover = hasHoverPointer();
     var fades = !reduced;
     var jsFade = fades && !supportsScrollTimeline();
 
@@ -116,12 +111,17 @@
         lastIdle = idle;
         animScope.classList.toggle('hero-idle', idle);
 
-        // The nav wordmark is the one target outside #main, and it is
-        // display: none below 1180px - so this only needs to run where there
-        // is a hovering pointer.
-        if (hover) {
-          document.body.classList.toggle('hero-idle', idle);
-        }
+        // The nav wordmark lives outside #main, and `body.has-hero.hero-idle`
+        // is what fades it in, so the class has to reach body too.
+        //
+        // This used to be gated behind `(hover: hover)`, reasoning that the
+        // wordmark is display: none below 1180px. But hover capability is not
+        // viewport width: a wide screen whose browser reports no hovering
+        // pointer (a touchscreen laptop, and Chrome and Edge do not always
+        // agree on that) shows the wordmark and never got the class, so it
+        // stayed at opacity: 0 for the life of the page. One class toggle per
+        // threshold crossing is cheap enough not to need a gate at all.
+        document.body.classList.toggle('hero-idle', idle);
       }
     }
 
