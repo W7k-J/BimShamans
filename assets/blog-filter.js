@@ -269,6 +269,10 @@ class BlogManager {
         <div class="blog-card__content">
           <h3 class="blog-card__title">${post.title}</h3>
           <p class="blog-card__excerpt">${excerpt}</p>
+          <p class="blog-card__meta">
+            <time datetime="${post.date}">${(post.date || '').replace(/-/g, '/')}</time>
+            ${post.author ? `<span aria-hidden="true">·</span><span>${post.author}</span>` : ''}
+          </p>
         </div>
         
         <div class="blog-card__overlay">

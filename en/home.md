@@ -166,6 +166,10 @@ hero: true
       <div class="blog-card__content">
         <h3 class="blog-card__title">{{ post.title }}</h3>
         <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
+        <p class="blog-card__meta">
+          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y/%m/%d' }}</time>
+          {% if post.author %}<span aria-hidden="true">·</span><span>{{ post.author }}</span>{% endif %}
+        </p>
       </div>
 
       <div class="blog-card__overlay">

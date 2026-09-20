@@ -111,6 +111,13 @@ html {
   --blockquote-background: rgba(227, 227, 234, 0.8);
   --footer-border-color: rgba(30, 105, 145, 0.28);
 
+  // Card surfaces. The generic grays sit at hue 240 (violet); the page reads
+  // navy-teal, so a card built out of them looked borrowed from another design
+  // system. These are the same lightness steps, pulled onto the page's hue.
+  --card-surface: #ffffff;
+  --card-surface-hover: #eef4fa;
+  --card-media-bg: #dde7f1;
+
   // === ELEVATION (theme-dependent) ===
   // A menu floats on the page background, so it needs more separation on a
   // dark ground than a light one; same for the cookie notice.
@@ -166,6 +173,11 @@ html {
   // === COMPONENT-SPECIFIC ===
   --blockquote-background: rgba(64, 64, 80, 0.8);
   --footer-border-color: rgba(227, 227, 234, 0.22);
+
+  // See the light theme for why these exist rather than --forthGray-color.
+  --card-surface: #18222c;
+  --card-surface-hover: #1e2b38;
+  --card-media-bg: #22323f;
 
   // === ELEVATION (theme-dependent) ===
   --shadow-menu: 0 4px 12px rgba(0, 0, 0, 0.4);
