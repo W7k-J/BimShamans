@@ -126,9 +126,36 @@ html {
   --focus-ring-input: 0 0 0 2px rgba(var(--firstBlue-color-rgb), 0.18);
   
   // === DECORATIVE (page gradients & hero animations) ===
-  --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.08);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.06);
+  // Each glow is a whole colour-stop list, not a single colour, so the fade can
+  // be eased. A two-stop `colour -> transparent` ramp is linear in alpha, and
+  // the eye reads the point where it lands on zero as a hard circular edge -
+  // which is what made the three layers look like stacked discs. The extra
+  // stops below trace an ease-out curve instead, and every stop keeps the same
+  // RGB (only alpha drops) so the fade never drifts through transparent black.
+  --page-glow-a:
+    rgba(0, 51, 102, 0.12) 0%,
+    rgba(0, 51, 102, 0.102) 18%,
+    rgba(0, 51, 102, 0.072) 36%,
+    rgba(0, 51, 102, 0.043) 54%,
+    rgba(0, 51, 102, 0.020) 72%,
+    rgba(0, 51, 102, 0.007) 87%,
+    rgba(0, 51, 102, 0) 100%;
+  --page-glow-b:
+    rgba(50, 215, 230, 0.08) 0%,
+    rgba(50, 215, 230, 0.068) 18%,
+    rgba(50, 215, 230, 0.048) 36%,
+    rgba(50, 215, 230, 0.029) 54%,
+    rgba(50, 215, 230, 0.013) 72%,
+    rgba(50, 215, 230, 0.005) 87%,
+    rgba(50, 215, 230, 0) 100%;
+  --page-glow-c:
+    rgba(30, 105, 145, 0.06) 0%,
+    rgba(30, 105, 145, 0.051) 18%,
+    rgba(30, 105, 145, 0.036) 36%,
+    rgba(30, 105, 145, 0.022) 54%,
+    rgba(30, 105, 145, 0.010) 72%,
+    rgba(30, 105, 145, 0.004) 87%,
+    rgba(30, 105, 145, 0) 100%;
   --page-gradient-base-start: rgba(255, 255, 255, 0.98);
   --page-gradient-base-end: rgba(247, 247, 252, 0.98);
   
@@ -185,9 +212,31 @@ html {
   --focus-ring-input: 0 0 0 2px rgba(var(--firstBlue-color-rgb), 0.22);
   
   // === DECORATIVE (page gradients & hero animations) ===
-  --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
-  --page-gradient-layer-one: rgba(50, 215, 230, 0.12);
-  --page-gradient-layer-two: rgba(30, 105, 145, 0.10);
+  // See the light-theme block for why these are stop lists rather than colours.
+  --page-glow-a:
+    rgba(50, 215, 230, 0.18) 0%,
+    rgba(50, 215, 230, 0.153) 18%,
+    rgba(50, 215, 230, 0.108) 36%,
+    rgba(50, 215, 230, 0.065) 54%,
+    rgba(50, 215, 230, 0.029) 72%,
+    rgba(50, 215, 230, 0.011) 87%,
+    rgba(50, 215, 230, 0) 100%;
+  --page-glow-b:
+    rgba(50, 215, 230, 0.12) 0%,
+    rgba(50, 215, 230, 0.102) 18%,
+    rgba(50, 215, 230, 0.072) 36%,
+    rgba(50, 215, 230, 0.043) 54%,
+    rgba(50, 215, 230, 0.019) 72%,
+    rgba(50, 215, 230, 0.007) 87%,
+    rgba(50, 215, 230, 0) 100%;
+  --page-glow-c:
+    rgba(30, 105, 145, 0.10) 0%,
+    rgba(30, 105, 145, 0.085) 18%,
+    rgba(30, 105, 145, 0.060) 36%,
+    rgba(30, 105, 145, 0.036) 54%,
+    rgba(30, 105, 145, 0.016) 72%,
+    rgba(30, 105, 145, 0.006) 87%,
+    rgba(30, 105, 145, 0) 100%;
   --page-gradient-base-start: rgba(12, 15, 25, 0.95);
   --page-gradient-base-end: rgba(6, 8, 15, 0.96);
   
@@ -1905,19 +1954,51 @@ body {
   min-height: 100vh;
 }
 
+// ---------------------------------------------------------------------------
+// Page background wash
+//
+// `absolute`, not `fixed`: pinned to the viewport the glows hang motionless
+// behind moving content, and anything that doesn't move while you scroll reads
+// as a smudge on the screen rather than as part of the page. Anchored to the
+// document instead, they scroll away with the hero they belong to. body is
+// `position: relative` and grows with its content, so inset: 0 still covers the
+// full scroll height.
+//
+// The glows are sized in viewport units rather than percentages so they stay
+// the same physical size whether the page is one screen or ten, and they're
+// deliberately larger than the viewport is wide - an ellipse whose centre and
+// edge are both off-screen reads as an even wash, while one that fits on screen
+// reads as a disc. Colour stops come from --page-glow-* (see :root).
+// ---------------------------------------------------------------------------
 body::before {
   content: "";
-  position: fixed;
+  position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 20% 50%, var(--page-gradient-layer-zero), transparent 60%),
-    radial-gradient(circle at 85% 50%, var(--page-gradient-layer-one), transparent 65%),
-    radial-gradient(ellipse at 50% 30%, var(--page-gradient-layer-two), transparent 60%),
+    radial-gradient(ellipse 170vw 78vh at 50% -8vh, var(--page-glow-a)),
+    radial-gradient(ellipse 130vw 70vh at 6% 62vh, var(--page-glow-b)),
+    radial-gradient(ellipse 130vw 66vh at 96% 120vh, var(--page-glow-c)),
+    radial-gradient(ellipse 170vw 60vh at 50% 100%, var(--page-glow-b)),
     linear-gradient(180deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   pointer-events: none;
   z-index: -1;
+}
+
+// On a phone the viewport is narrow enough that several separate glows land on
+// top of each other in the same column and their overlaps show up as banding.
+// Fewer and wider reads as one continuous wash at that width.
+@media screen and (max-width: 768px) {
+  body::before {
+    background:
+      radial-gradient(ellipse 210vw 62vh at 50% -6vh, var(--page-glow-a)),
+      radial-gradient(ellipse 200vw 60vh at 50% 78vh, var(--page-glow-c)),
+      radial-gradient(ellipse 210vw 55vh at 50% 100%, var(--page-glow-b)),
+      linear-gradient(180deg, var(--page-gradient-base-start), var(--page-gradient-base-end));
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
 }
 
 .just {
