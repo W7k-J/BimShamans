@@ -98,17 +98,20 @@
     <div class="nav-container">
         <div class="nav-wrapper">
             <!-- Logo Navigation Bar -->
-            <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="site-avatar">
-                <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" class="nav-flame logo-animated" alt="BIM Shamans Flame" />
+            <a href="{{ site.baseurl }}/{{ page.lang }}/home/" class="site-avatar" aria-label="BIM Shamans, home">
+                <!-- Decorative: the link's aria-label above is the accessible name.
+                     width/height carry the 1:1 ratio so the bar reserves the flame's
+                     box before the file loads instead of shifting when it arrives. -->
+                <img src="{{ site.baseurl }}/images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg" class="nav-flame logo-animated" alt="" width="1080" height="1080" />
                 <!-- Inline SVG for Syncopate font support - Light theme version -->
-                <svg class="nav-logo-text logo-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 70" aria-label="BIM Shamans">
+                <svg class="nav-logo-text logo-light" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 70" aria-hidden="true" focusable="false">
                     <text x="-2" y="57" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#32D7E6" opacity="0.75" text-rendering="optimizeLegibility">BIM Shamans</text>
                     <text x="2" y="63" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#4183C4" opacity="0.75" text-rendering="optimizeLegibility">BIM Shamans</text>
                     <text x="3.4" y="60" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#0f2740" opacity="0.9" text-rendering="optimizeLegibility">BIM Shamans</text>
                     <text x="0" y="60" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#1e1e28" text-rendering="optimizeLegibility">BIM Shamans</text>
                 </svg>
                 <!-- Inline SVG for Syncopate font support - Dark theme version -->
-                <svg class="nav-logo-text logo-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 70" aria-label="BIM Shamans">
+                <svg class="nav-logo-text logo-dark" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 750 70" aria-hidden="true" focusable="false">
                     <text x="-2" y="57" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#32D7E6" opacity="0.75" text-rendering="optimizeLegibility">BIM Shamans</text>
                     <text x="2" y="63" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#4183C4" opacity="0.75" text-rendering="optimizeLegibility">BIM Shamans</text>
                     <text x="3.4" y="60" font-family="'Syncopate', sans-serif" font-size="68" font-weight="700" letter-spacing="0.05em" fill="#1e1e28" opacity="0.9" text-rendering="optimizeLegibility">BIM Shamans</text>
