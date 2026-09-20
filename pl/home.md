@@ -50,6 +50,15 @@ hero: true
   </div>
 </div>
 
+<div class="hero-lede">
+  <p class="hero-lede__text">
+    Termin <i>szamanizm</i> pochodzi od mandżursko-tunguskiego słowa
+    <i lang="mnc">šaman</i>. Rzeczownik ten wywodzi się od czasownika
+    <i lang="mnc">ša-</i>, oznaczającego <em>wiedzieć</em>. Szaman to dosłownie
+    <strong class="hero-lede__accent">„ten, który wie”</strong>.
+  </p>
+</div>
+
 <!--
 
 <section class="feature-sections">

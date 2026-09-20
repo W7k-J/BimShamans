@@ -20,9 +20,17 @@
     return;
   }
 
-  // Fade spread over this fraction of the viewport height.
-  // Keep in sync with `animation-range` in style.scss.
-  var FADE_VIEWPORT_RATIO = 0.4;
+  // Fade spread over this fraction of the viewport height. The real value comes
+  // from --hero-fade-ratio on the hero, so CSS stays the single source of truth
+  // for it - on a phone the hero is a full screen tall and fades over a full
+  // screen of scrolling. This is only the fallback if the property is missing.
+  var DEFAULT_FADE_RATIO = 0.4;
+
+  function readFadeRatio(hero) {
+    var raw = window.getComputedStyle(hero).getPropertyValue('--hero-fade-ratio');
+    var value = parseFloat(raw);
+    return (isFinite(value) && value > 0) ? value : DEFAULT_FADE_RATIO;
+  }
 
   function prefersReducedMotion() {
     return !!(window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches);
@@ -61,6 +69,9 @@
     var lastFade = -1;
     var lastIdle = null;
     var threshold = 0;
+    // Cached in measure(): update() runs on every scroll frame and must not
+    // pay for a style resolution there.
+    var fadeRatio = DEFAULT_FADE_RATIO;
 
     // The point past which the hero counts as gone.
     //
@@ -70,8 +81,10 @@
     // scroll the hero off screen the answer was never yes at all, so the nav
     // wordmark never appeared and the hero kept animating behind nothing.
     function measure() {
+      fadeRatio = readFadeRatio(hero);
+
       if (fades) {
-        threshold = window.innerHeight * FADE_VIEWPORT_RATIO;
+        threshold = window.innerHeight * fadeRatio;
       } else {
         // Nothing fades here, so the hero really is visible until it scrolls
         // off - and only then has it stopped saying the name.
@@ -89,7 +102,7 @@
       var offset = window.pageYOffset;
 
       if (jsFade) {
-        var distance = window.innerHeight * FADE_VIEWPORT_RATIO;
+        var distance = window.innerHeight * fadeRatio;
         var progress = distance > 0 ? offset / distance : 1;
         if (progress < 0) {
           progress = 0;

@@ -50,6 +50,15 @@ hero: true
   </div>
 </div>
 
+<div class="hero-lede">
+  <p class="hero-lede__text">
+    The term <i>shamanism</i> comes from the Manchu-Tungus word
+    <i lang="mnc">šaman</i>. The noun derives from the verb
+    <i lang="mnc">ša-</i>, meaning <em>to know</em>. A shaman is, literally,
+    <strong class="hero-lede__accent">“the one who knows”</strong>.
+  </p>
+</div>
+
 <!--
 
 <section class="feature-sections">

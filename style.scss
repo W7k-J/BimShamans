@@ -639,6 +639,9 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
   background: transparent;
   --glow-x: 50%;
   --glow-y: 50%;
+  // Fraction of the viewport the scroll fade is spread over. Read by
+  // hero-scroll-fade.js too, so the JS fallback matches the CSS animation.
+  --hero-fade-ratio: 0.4;
 }
 
 // ---------------------------------------------------------------------------
@@ -661,7 +664,7 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
     .hero-section--banner .hero-banner {
       animation: hero-scroll-fade linear both;
       animation-timeline: scroll(root block);
-      animation-range: 0 40vh; // keep in sync with hero-scroll-fade.js
+      animation-range: 0 calc(var(--hero-fade-ratio, 0.4) * 100vh);
     }
   }
 
@@ -988,6 +991,40 @@ figure {
   }
 }
 
+// The brand story. A phone-only beat: see the three-beat block near the bottom
+// of this file for the layout. On desktop the hero already has room to breathe,
+// so this is not rendered at all - hence display: none as the default.
+//
+// The wrapper is what centres the text in the beat, and the paragraph inside is
+// a single flex item. Flexing the <p> itself put every <i> and <strong> in a
+// column of its own - inline children each become their own anonymous item.
+.hero-lede {
+  display: none;
+}
+
+.hero-lede__text {
+  max-width: 38ch;
+  margin: 0 auto;
+  font-size: clamp(0.95rem, calc(0.9rem + 0.35vw), 1.15rem);
+  line-height: 1.7;
+  text-align: center;
+  text-wrap: pretty;
+  color: var(--secondGray-color);
+
+  i,
+  em {
+    font-style: italic;
+    color: var(--firstGray-color);
+  }
+}
+
+.hero-lede__accent {
+  color: var(--firstBlue-color);
+  font-weight: 600;
+  // The payoff of the whole sentence - it reads as one unit or not at all.
+  white-space: nowrap;
+}
+
 // Glitch effect for dynamic text
 .glitch-active {
   &::after {
@@ -1231,6 +1268,38 @@ figure {
     padding: clamp(2.5rem, 10vw, 4rem);
   }
 
+}
+
+// ---------------------------------------------------------------------------
+// Phone: the home page opens as three beats, one screenful each - the lockup,
+// then where the name comes from, then the posts. It replaces a first screen
+// that was mostly empty space around a logo.
+//
+// After the 640px block above, so the full-height hero wins there too.
+// ---------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  .hero-section--banner {
+    // The beats are measured off the viewport; a margin here would push each
+    // one off by its own height.
+    margin: 0;
+  }
+
+  .hero-section--banner .hero-banner {
+    min-height: calc(100vh - #{$nav-height} - #{$nav-spacing});
+    min-height: calc(100dvh - #{$nav-height} - #{$nav-spacing});
+    // A screen-tall hero has to fade over a screen of scrolling, otherwise the
+    // lockup is gone while its own beat is still filling the viewport.
+    --hero-fade-ratio: 1;
+  }
+
+  .hero-lede {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: calc(100vh - #{$nav-height});
+    min-height: calc(100dvh - #{$nav-height});
+    padding: 0 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
