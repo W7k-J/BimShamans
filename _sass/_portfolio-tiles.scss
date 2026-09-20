@@ -277,19 +277,27 @@
   &:nth-child(5) { top: calc(4 * var(--tile-v, 20%)); left: calc(4 * var(--tile-h, 10%)); z-index: 5; }
   &:nth-child(6) { top: calc(5 * var(--tile-v, 20%)); left: calc(5 * var(--tile-h, 10%)); z-index: 6; }
   
-  // Hover: bring to front with subtle lift
-  &:hover {
-    z-index: 20;
-    transform: translateY(-6px) scale(1.01);
-    box-shadow: var(--shadow-stack-hover);
-    
-    .portfolio-tile__image img {
-      opacity: 0.15;
-    }
-    
-    .portfolio-tile__overlay {
-      opacity: 1;
-      visibility: visible;
+  // Hover: bring to front with subtle lift.
+  //
+  // Scoped to a real hovering pointer, the same way .blog-card is. A tap on a
+  // touch device fires an emulated :hover that sticks until you tap elsewhere,
+  // and on the phone layout below the image rule here outspecifies the flat
+  // .portfolio-tile__image img reset - so tapping a tile wiped the screenshot
+  // to 15% opacity and left it that way.
+  @media (hover: hover) {
+    &:hover {
+      z-index: 20;
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: var(--shadow-stack-hover);
+
+      .portfolio-tile__image img {
+        opacity: 0.15;
+      }
+
+      .portfolio-tile__overlay {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
   
@@ -403,8 +411,12 @@
     object-fit: contain;
   }
   
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
   }
 }
 
@@ -459,8 +471,12 @@
 .light-theme .portfolio-tile__tool-icon {
   background-color: rgba(0, 0, 0, 0.05);
   
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.10);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.10);
+    }
   }
 }
 
@@ -575,12 +591,21 @@
       transform: none;
     }
     
-    // Remove hover effects on mobile (prevents sticky hover on touch devices)
+    // Remove hover effects on mobile (prevents sticky hover on touch devices).
+    // Covers a narrow window on a mouse device, where (hover: hover) still
+    // matches but the tiles are already the vertical card list - the overlay
+    // sits below the image there, so dimming the image reveals nothing.
     &:hover,
     &:active,
     &:focus {
       transform: none;
       box-shadow: none;
+
+      // Has to be nested: the flat .portfolio-tile__image img rule further
+      // down loses to .portfolio-tile:hover .portfolio-tile__image img.
+      .portfolio-tile__image img {
+        opacity: 1;
+      }
     }
     
     // Remove margins
@@ -872,8 +897,12 @@
     animation: none;
   }
   
-  &:hover {
-    box-shadow: var(--shadow-tile-hover);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: var(--shadow-tile-hover);
+    }
   }
   
   // Zig-zag offset layout
@@ -999,6 +1028,13 @@
   transition: opacity 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
   z-index: 10;
 
+  // No hover means the reveal above never fires, so the control has to be
+  // there from the start - otherwise it is unreachable on a touch screen
+  // between 641px and 992px, where the 640px rule below does not apply yet.
+  @media (hover: none) {
+    opacity: 1;
+  }
+
   svg {
     width: 20px;
     height: 20px;
@@ -1007,12 +1043,16 @@
     transition: stroke 0.35s ease;
   }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    transform: translateY(-50%) scale(1.1);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: translateY(-50%) scale(1.1);
 
-    svg {
-      stroke: var(--firstBlue-color);
+      svg {
+        stroke: var(--firstBlue-color);
+      }
     }
   }
 
@@ -1025,9 +1065,13 @@
   }
 }
 
-// Show arrows on hover
-.project-tile__slideshow:hover .project-tile__nav {
-  opacity: 1;
+// Show arrows on hover - a mouse only. A tap used to reveal them through
+// emulated :hover and leave them stuck; touch gets them permanently instead,
+// via the (hover: none) rule on .project-tile__nav itself.
+@media (hover: hover) {
+  .project-tile__slideshow:hover .project-tile__nav {
+    opacity: 1;
+  }
 }
 
 // Zoom/Enlarge button (bottom-right corner)
@@ -1049,6 +1093,13 @@
   transition: opacity 0.35s ease, background-color 0.35s ease, transform 0.35s ease;
   z-index: 10;
 
+  // No hover means the reveal above never fires, so the control has to be
+  // there from the start - otherwise it is unreachable on a touch screen
+  // between 641px and 992px, where the 640px rule below does not apply yet.
+  @media (hover: none) {
+    opacity: 1;
+  }
+
   svg {
     width: 20px;
     height: 20px;
@@ -1057,19 +1108,25 @@
     transition: stroke 0.35s ease;
   }
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    transform: scale(1.1);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: scale(1.1);
 
-    svg {
-      stroke: var(--firstBlue-color);
+      svg {
+        stroke: var(--firstBlue-color);
+      }
     }
   }
 }
 
-// Show zoom button on hover
-.project-tile__slideshow:hover .project-tile__zoom {
-  opacity: 1;
+// Show zoom button on hover - a mouse only, same as the arrows above.
+@media (hover: hover) {
+  .project-tile__slideshow:hover .project-tile__zoom {
+    opacity: 1;
+  }
 }
 
 // Dots indicator
@@ -1096,8 +1153,12 @@
   cursor: pointer;
   transition: background-color 0.35s ease, transform 0.35s ease;
 
-  &:hover {
-    background-color: rgba(var(--firstBlue-color-rgb), 0.7);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(var(--firstBlue-color-rgb), 0.7);
+    }
   }
 
   &--active {
@@ -1273,9 +1334,13 @@
   transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   text-decoration: none;
 
-  &:hover {
-    background-color: var(--firstBlue-color);
-    color: var(--background-color);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: var(--firstBlue-color);
+      color: var(--background-color);
+    }
   }
 }
 
@@ -1306,8 +1371,12 @@
     object-fit: contain;
   }
 
-  &:hover {
-    background-color: rgba(255, 255, 255, 0.25);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.25);
+    }
   }
 }
 
@@ -1334,8 +1403,12 @@
 .light-theme .project-tile__tool-icon {
   background-color: rgba(0, 0, 0, 0.05);
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.10);
+  // Tylko prawdziwy kursor: tap na dotyku odpala emulowany :hover,
+  // ktory zostaje przyklejony az do dotkniecia gdzie indziej.
+  @media (hover: hover) {
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.10);
+    }
   }
 }
 

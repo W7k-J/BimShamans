@@ -34,9 +34,14 @@ document.addEventListener('DOMContentLoaded', function() {
   // DESKTOP: CLICK INTERACTION (toggle active for full screenshot)
   // ========================================
   
-  // Detect if device is mobile (viewport width)
+  // Detect if device is mobile (viewport width).
+  // Must match the CSS breakpoint in _portfolio-tiles.scss, which switches the
+  // stack to the vertical card list at max-width: 992px. At 768 the 769-992
+  // band got the card layout but was treated as desktop here, so a tap added
+  // .active - and .active hides the overlay, which on that layout is the only
+  // place the tools and description are shown.
   function isMobile() {
-    return window.innerWidth <= 768;
+    return window.innerWidth <= 992;
   }
   
   // Only apply to expertise sections (not exp-collection or blog)
