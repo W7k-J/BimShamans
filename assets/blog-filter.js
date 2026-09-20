@@ -246,10 +246,6 @@ class BlogManager {
    * Render single card HTML
    */
   renderCard(post) {
-    const tagsHtml = (post.tags && Array.isArray(post.tags))
-      ? post.tags.map(tag => `<span class="blog-card__tag">${tag}</span>`).join('')
-      : '';
-
     const category = post.category || (post.tags && post.tags[0]) || 'Blog';
     const author = post.author ? `by ${post.author}` : '';
     const excerpt = post.excerpt || 'Read more to discover...';
@@ -277,7 +273,6 @@ class BlogManager {
         
         <div class="blog-card__overlay">
           <p class="blog-card__description">${post.description || 'Discover more insights and details about this article.'}</p>
-          <div class="blog-card__tags">${tagsHtml}</div>
           ${author ? `<p class="blog-card__author">${author}</p>` : ''}
           <a href="${post.url}" class="blog-card__label">
             <div class="blog-card__icon">${arrowIcon}</div>

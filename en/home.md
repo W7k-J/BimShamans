@@ -176,11 +176,6 @@ hero: true
         {% if post.description %}
           <p class="blog-card__description">{{ post.description }}</p>
         {% endif %}
-        <div class="blog-card__tags">
-          {% for tag in post.filter_hash_list %}
-            <span class="blog-card__tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
         {% if post.author %}
           <p class="blog-card__author">by {{ post.author }}</p>
         {% endif %}
