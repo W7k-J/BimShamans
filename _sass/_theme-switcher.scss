@@ -78,3 +78,15 @@ input:checked + .slider:before {
   // Dark theme circle color
   background-color: var(--forthGray-color);  // Controls circle color in dark mode
 }
+
+// Keyboard focus ring
+//
+// The checkbox itself is invisible (opacity: 0, 0x0), so a browser's default
+// focus outline would draw around nothing a sighted user could see. Drawing
+// it on the visible pill instead, only for keyboard focus (not a mouse
+// click), keeps a Tab-reached toggle visible without adding a ring on every
+// click.
+.switch input:focus-visible + .slider {
+  outline: 2px solid var(--firstBlue-color);
+  outline-offset: 2px;
+}
