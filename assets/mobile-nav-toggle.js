@@ -21,22 +21,36 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(backdrop);
   }
   
+  // Freeze the page behind the open menu. Without this a swipe over the menu
+  // scrolled the page and carried the menu's own scroll with it, so it reopened
+  // (or stayed) scrolled down with the first link clipped under the nav bar.
+  function setPageLock(locked) {
+    document.documentElement.classList.toggle('mobile-menu-lock', locked);
+    body.classList.toggle('mobile-menu-lock', locked);
+  }
+
+  function closeMobileMenu() {
+    navToggle.classList.remove('active');
+    siteNav.classList.remove('mobile-menu-open');
+    backdrop.classList.remove('active');
+    navToggle.setAttribute('aria-expanded', 'false');
+    setPageLock(false);
+  }
+
   // Toggle mobile menu
   function toggleMobileMenu() {
     const isOpen = navToggle.classList.contains('active');
     
     if (isOpen) {
-      // Close menu
-      navToggle.classList.remove('active');
-      siteNav.classList.remove('mobile-menu-open');
-      backdrop.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
+      closeMobileMenu();
     } else {
-      // Open menu
+      // Open menu - always from the top, never mid-scroll
       navToggle.classList.add('active');
       siteNav.classList.add('mobile-menu-open');
       backdrop.classList.add('active');
       navToggle.setAttribute('aria-expanded', 'true');
+      siteNav.scrollTop = 0;
+      setPageLock(true);
     }
   }
   
@@ -64,10 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function() {
     // Close immediately if above mobile breakpoint
     if (window.innerWidth > 1180 && navToggle.classList.contains('active')) {
-      navToggle.classList.remove('active');
-      siteNav.classList.remove('mobile-menu-open');
-      backdrop.classList.remove('active');
-      navToggle.setAttribute('aria-expanded', 'false');
+      closeMobileMenu();
     }
   });
   

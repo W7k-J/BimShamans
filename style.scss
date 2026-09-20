@@ -1409,6 +1409,15 @@ figure {
   flex: 1 0 auto; // Sticky footer: grow to fill available space
 }
 
+// While the mobile menu is open the page behind it must not scroll: on Android
+// a swipe anywhere over the open menu used to move the page and take the menu's
+// own scroll container with it, leaving the first link clipped under the nav bar.
+html.mobile-menu-lock,
+body.mobile-menu-lock {
+  overflow: hidden;
+  touch-action: none;
+}
+
 // Mobile menu backdrop
 .mobile-menu-backdrop {
   display: none;
@@ -1615,12 +1624,26 @@ figure {
       background-color: var(--background-color);
       border-radius: 0;
       box-shadow: var(--shadow-lg-strong);
+      // Desktop sets height: 100%, which on a fixed element resolves to the
+      // viewport and made the panel always fill its max-height instead of
+      // hugging the links. The menu sizes itself to its content now.
+      height: auto;
       flex-direction: column;
+      // Desktop centres the links along the flex axis. In a column that
+      // overflows, centring pushes the content out of BOTH ends of the scroll
+      // box and the overflow above the top is unreachable - that is what cut
+      // "home" in half under the nav bar. Stack from the top instead.
+      justify-content: flex-start;
       gap: 0.35rem;
-      padding: 1.5rem 1rem;
+      // Bottom padding clears the gesture bar / home indicator on phones that
+      // report a safe area, so the theme toggle is never half-covered.
+      padding: 1.25rem 1rem calc(1.25rem + env(safe-area-inset-bottom, 0px));
       align-items: center;
       max-height: 0;
       overflow: hidden;
+      // A swipe over the open panel must not chain into the page behind it -
+      // that is what used to drag the panel's own scroll and clip "home".
+      overscroll-behavior: contain;
       opacity: 0;
       visibility: hidden;
       pointer-events: none;
@@ -1629,10 +1652,18 @@ figure {
 
       &.mobile-menu-open {
         display: flex;
-        max-height: calc(70vh - #{$nav-height});
+        // 70vh measured against the LARGE viewport: with the URL bar and the
+        // browser's bottom bar on screen the panel was capped well below the
+        // ~530px the links plus controls actually need, so it turned into a
+        // scroller and cut the first item off the top. dvh is the viewport
+        // that is really visible, so the menu now gets every pixel under the
+        // nav bar and fits without scrolling on a normal phone.
+        max-height: calc(100vh - #{$nav-height}); // fallback for no dvh support
+        max-height: calc(100dvh - #{$nav-height});
         opacity: 1;
         visibility: visible;
         overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
         pointer-events: auto;
         transition: max-height 0.4s ease, opacity 0.3s ease, visibility 0s 0s, transform 0.3s ease;
       }
@@ -1752,10 +1783,10 @@ figure {
         gap: 1rem;
         justify-content: center;
         align-items: center;
-        padding: 1.5rem 1rem;
+        padding: 1rem;
         border-top: 1px solid var(--firstBlue-color);
         width: 100%;
-        margin-top: 1rem;
+        margin-top: 0.75rem;
         background-color: transparent;
       }
     }

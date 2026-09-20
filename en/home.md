@@ -148,7 +148,7 @@ hero: true
   {% for post in posts limit: page.latest_posts_count %}
     <article class="blog-card" role="listitem" data-tags="{{ post.filter_hash_list | join: ',' }}">
       <div class="blog-card__image">
-        <img src="{{ post.image | default: site.baseurl | append: '/images/placeholder-post.jpg' }}" alt="{{ post.title }}" loading="lazy">
+        <img src="{{ post.image | default: '/images/placeholder-post.svg' | prepend: site.baseurl }}" alt="{{ post.title }}" loading="lazy">
         <span class="blog-card__category">{{ post.category | default: 'Blog' }}</span>
       </div>
 
