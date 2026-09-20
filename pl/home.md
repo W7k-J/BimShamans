@@ -63,7 +63,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja modeli BIM">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja modeli BIM">
     </div>
   </div>
 
@@ -78,7 +78,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja wielokrotnego użycia danych">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja wielokrotnego użycia danych">
     </div>
   </div>
 
@@ -93,7 +93,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja automatyzacji">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja automatyzacji">
     </div>
   </div>
 
@@ -107,7 +107,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja standardów">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja standardów">
     </div>
   </div>
 
@@ -121,7 +121,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja dostępności danych">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja dostępności danych">
     </div>
   </div>
 
@@ -136,7 +136,7 @@ hero: true
       </p>
     </div>
     <div class="feature-section__media">
-      <img src="xyz.jpg" alt="Ilustracja oprogramowania i ludzi">
+      <img src="{{ site.baseurl }}/images/placeholder.svg" alt="Ilustracja oprogramowania i ludzi">
     </div>
   </div>
 </section>
@@ -150,7 +150,7 @@ hero: true
   {% for post in posts limit: page.latest_posts_count %}
     <article class="blog-card" role="listitem" data-tags="{{ post.filter_hash_list | join: ',' }}">
       <div class="blog-card__image">
-        <img src="{{ post.image | default: '/images/placeholder-post.svg' | prepend: site.baseurl }}" alt="{{ post.title }}" loading="lazy">
+        <img src="{{ post.image | default: '/images/placeholder.svg' | prepend: site.baseurl }}" alt="{{ post.title }}" loading="lazy">
         <span class="blog-card__category">{{ post.category | default: 'Blog' }}</span>
       </div>
 

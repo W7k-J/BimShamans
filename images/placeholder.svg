@@ -1,6 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="presentation">
   <!--
-    Fallback card image for posts that have no image key in their front matter.
+    Shared fallback artwork. Used by post cards whose front matter has no
+    image key, and by the feature sections on the home page until real
+    photography replaces them.
 
     Deliberately transparent. The blog card image wrapper already paints the
     forthGray custom property, which is #e3e3ea in the light theme and #404050

@@ -51,8 +51,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-python.svg" alt="Python"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-vscode.svg" alt="VS Code"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_python_short.png" alt="Python"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_visualstudiocode_short.png" alt="VS Code"></span>
             </div>
             <p class="portfolio-tile__description">Dedykowany dodatek Revit do automatycznego audytu modeli i kontroli jakości.</p>
           </div>
@@ -64,8 +64,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-dynamo.svg" alt="Dynamo"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-dynamo-short.png" alt="Dynamo"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
             </div>
             <p class="portfolio-tile__description">Pakiet Dynamo do wsadowego zarządzania parametrami i aktualizacji rodzin.</p>
           </div>
@@ -77,7 +77,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-csharp.svg" alt="C#"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_csharp_short.png" alt="C#"></span>
             </div>
             <p class="portfolio-tile__description">Automatyzacja eksportu zestawień redukująca czas dokumentacji o 60%.</p>
           </div>
@@ -116,7 +116,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-solibri.svg" alt="Solibri"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_solibri_short.webp" alt="Solibri"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ids_short.png" alt="IDS"></span>
               <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_ifc_short.png" alt="IFC"></span>
             </div>
@@ -225,7 +225,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerpoint.svg" alt="PowerPoint"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerpoint_short.svg" alt="PowerPoint"></span>
             </div>
             <p class="portfolio-tile__description">Materiały szkoleniowe i strategia wdrożenia dla organizacji 200+ osób.</p>
           </div>
@@ -368,8 +368,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-autocad.svg" alt="AutoCAD"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autocad_short.svg" alt="AutoCAD"></span>
             </div>
             <p class="portfolio-tile__description">Dokumentacja budynku zabytkowego z wykorzystaniem chmury punktów i modelowania parametrycznego.</p>
           </div>
@@ -381,8 +381,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-rhino.svg" alt="Rhino"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_rhino3d_short.png" alt="Rhino"></span>
             </div>
             <p class="portfolio-tile__description">Optymalizacja fasady łącząca projektowanie obliczeniowe z koordynacją BIM.</p>
           </div>
@@ -394,8 +394,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_enscape_short.svg" alt="Enscape"></span>
             </div>
             <p class="portfolio-tile__description">Inwestycja wielofunkcyjna z analizą zrównoważonego rozwoju i wizualizacją w czasie rzeczywistym.</p>
           </div>
@@ -421,8 +421,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-rhino.svg" alt="Rhino"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_rhino3d_short.png" alt="Rhino"></span>
             </div>
             <p class="portfolio-tile__description">Modelowanie złożonej geometrii łączące elastyczność Rhino z mocą dokumentacyjną Revit.</p>
           </div>
@@ -434,7 +434,7 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-revit.svg" alt="Revit"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_autodesk-revit_short.png" alt="Revit"></span>
             </div>
             <p class="portfolio-tile__description">Firmowe wdrożenie Revit z dedykowanymi szablonami i programem szkoleniowym.</p>
           </div>
@@ -446,8 +446,8 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-enscape.svg" alt="Enscape"></span>
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-twinmotion.svg" alt="Twinmotion"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_enscape_short.svg" alt="Enscape"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_twinmotion_short.png" alt="Twinmotion"></span>
             </div>
             <p class="portfolio-tile__description">Pipeline wizualizacji w czasie rzeczywistym dla prezentacji klienckich i przeglądów projektowych.</p>
           </div>

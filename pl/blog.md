@@ -140,7 +140,7 @@ const blogPosts = [
       excerpt: "{{ post.excerpt | strip_html | escape }}",
       tags: {{ post.filter_hash_list | jsonify }},
       category: "{{ post.category | default: 'Blog' }}",
-      image: "{{ post.image | default: '/images/placeholder-post.svg' | prepend: site.baseurl }}",
+      image: "{{ post.image | default: '/images/placeholder.svg' | prepend: site.baseurl }}",
       url: "{{ post.url }}",
       date: "{{ post.date | date: '%Y-%m-%d' }}",
       dateObj: new Date("{{ post.date | date: '%Y-%m-%d' }}"),

@@ -277,7 +277,7 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
           </div>
           <div class="portfolio-tile__overlay">
             <div class="portfolio-tile__tools">
-              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/icons/icon-powerpoint.svg" alt="PowerPoint"></span>
+              <span class="portfolio-tile__tool-icon"><img src="{{ site.baseurl }}/images/logos/software/logo_powerpoint_short.svg" alt="PowerPoint"></span>
             </div>
             <p class="portfolio-tile__description">Training materials and adoption strategy for 200+ person organization.</p>
           </div>
