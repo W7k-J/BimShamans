@@ -7,7 +7,6 @@
 
 // IMPORTS - Components
 @import "theme-switcher";
-@import "language-EN-PL-switcher";
 @import "scrollbar";
 @import "buttons";
 @import "feature-cards";
@@ -36,6 +35,56 @@ html {
   font-size: 100%;
 }
 
+// ---------------------------------------------------------------------------
+// ELEVATION, BLUR & FOCUS TOKENS
+//
+// One scale for every shadow, blur and focus ring on the site. Components
+// reference these instead of writing their own rgba(), so depth changes in one
+// place and two components can no longer disagree about what "a menu shadow"
+// means - which they did: the nav dropdown and the blog sort menu were drawn
+// at different geometries while a comment claimed they matched.
+//
+// Ambient shadows are theme-neutral and live here. The ones that have to read
+// differently on a dark ground - menus, the cookie notice, the input focus
+// ring - are redefined in each theme block below. Anything built on
+// --firstBlue-color-rgb follows the theme accent on its own, because the theme
+// class sits on the same element as :root.
+// ---------------------------------------------------------------------------
+:root {
+  // === AMBIENT ELEVATION (smallest to largest) ===
+  --shadow-xs: 0 2px 6px rgba(0, 0, 0, 0.1);
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.12);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+  // Pairs with the accent bar on blockquotes, callouts and tag panels, where
+  // the bar carries the emphasis and the shadow only lifts the panel.
+  --shadow-md-soft: 0 4px 12px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.12);
+  --shadow-lg-strong: 0 8px 24px rgba(0, 0, 0, 0.25);
+  --shadow-xl: 0 12px 32px rgba(0, 0, 0, 0.18);
+
+  // === CARDS ===
+  --shadow-card: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --shadow-tile: 0 8px 32px rgba(0, 0, 0, 0.12);
+  --shadow-tile-hover: 0 12px 48px rgba(0, 0, 0, 0.18);
+
+  // === PORTFOLIO TILE STACK (rest, hover, open) ===
+  --shadow-stack: 0 4px 16px rgba(0, 0, 0, 0.12), 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-stack-hover: 0 16px 40px rgba(0, 0, 0, 0.2), 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-stack-active: 0 20px 48px rgba(0, 0, 0, 0.25), 0 6px 16px rgba(0, 0, 0, 0.15);
+
+  // === FOCUS & GLOW (follow the theme accent) ===
+  --focus-ring: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.3);
+  // Faint tint behind a border-colour change, where the border does the work.
+  --focus-ring-subtle: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.15);
+  --glow-accent: 0 0 12px rgba(var(--firstBlue-color-rgb), 0.3);
+
+  // === BACKDROP BLUR ===
+  --blur-sm: 2px;
+  --blur-md: 4px;
+  --blur-lg: 8px;
+  --blur-xl: 10px;
+}
+
 // Light theme setup
 .light-theme {
   // === CORE COLORS ===
@@ -51,7 +100,6 @@ html {
   --forthGray-color: #{$lightGray};
   
   // === FUNCTIONAL COLORS ===
-  --link-color: #{$blue};
   --icon-color: var(--forthGray-color);
   --icon-background: var(--firstBlue-color);
   
@@ -63,6 +111,13 @@ html {
   // === COMPONENT-SPECIFIC ===
   --blockquote-background: rgba(227, 227, 234, 0.8);
   --footer-border-color: rgba(30, 105, 145, 0.28);
+
+  // === ELEVATION (theme-dependent) ===
+  // A menu floats on the page background, so it needs more separation on a
+  // dark ground than a light one; same for the cookie notice.
+  --shadow-menu: 0 4px 12px rgba(0, 0, 0, 0.15);
+  --shadow-notice: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  --focus-ring-input: 0 0 0 2px rgba(var(--firstBlue-color-rgb), 0.18);
   
   // === DECORATIVE (page gradients & hero animations) ===
   --page-gradient-layer-zero: rgba(0, 51, 102, 0.12);
@@ -102,7 +157,6 @@ html {
   --forthGray-color: #{$darkGray};
   
   // === FUNCTIONAL COLORS ===
-  --link-color: #{$blue};
   --icon-color: var(--forthGray-color);
   --icon-background: var(--firstBlue-color);
   
@@ -113,6 +167,11 @@ html {
   // === COMPONENT-SPECIFIC ===
   --blockquote-background: rgba(64, 64, 80, 0.8);
   --footer-border-color: rgba(227, 227, 234, 0.22);
+
+  // === ELEVATION (theme-dependent) ===
+  --shadow-menu: 0 4px 12px rgba(0, 0, 0, 0.4);
+  --shadow-notice: 0 -4px 20px rgba(0, 0, 0, 0.4);
+  --focus-ring-input: 0 0 0 2px rgba(var(--firstBlue-color-rgb), 0.22);
   
   // === DECORATIVE (page gradients & hero animations) ===
   --page-gradient-layer-zero: rgba(50, 215, 230, 0.18);
@@ -383,7 +442,7 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
         min-width: 180px;
         border-radius: $radius-small;
         margin-top: 0;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        box-shadow: var(--shadow-menu);
         z-index: 999;
 
         a {
@@ -440,11 +499,25 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
       flex-shrink: 0;
     }
 
+    // The whole switcher lives here. It used to be split with
+    // _language-EN-PL-switcher.scss, which still styled `a` elements from an
+    // older markup - the controls have been <button> for a while - so half the
+    // partial was dead and the other half competed with these rules.
     .language-switcher {
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      padding: 0.5rem;
+      font-family: 'Montserrat', $helveticaNeue;
+      font-weight: 400;
       font-size: 0.95rem;
+
+      // Inside the mobile menu the switcher gets its own centred row.
+      @media screen and (max-width: 768px) {
+        justify-content: center;
+        width: 100%;
+        padding: 0.5rem 0;
+      }
 
       span {
         color: var(--secondGray-color);
@@ -504,9 +577,9 @@ body.has-hero.hero-idle .site-avatar .nav-logo-text {
 }
 
 // Dark theme override for dropdown menu
+// The shadow itself comes from --shadow-menu, which this theme already deepens.
 .dark-theme .nav-container nav.site-nav .dropdown-menu {
   background-color: var(--forthGray-color);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 
   a {
     &:hover {
@@ -1257,7 +1330,7 @@ figure {
   width: 100%;
   max-width: 480px;
   border-radius: $radius-large;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-xl);
 }
 
 .feature-section--reverse .feature-section__content {
@@ -1370,8 +1443,8 @@ figure {
   z-index: 1001;
 
   &:hover {
-    border-color: var(--secondBlue-color);
-    box-shadow: 0 0 12px rgba(var(--secondBlue-color-rgb), 0.3);
+    border-color: var(--firstBlue-color);
+    box-shadow: var(--glow-accent);
   }
 
   &:focus-visible {
@@ -1401,21 +1474,6 @@ figure {
     span:nth-child(3) {
       transform: translateY(-8px) rotate(-45deg);
     }
-  }
-}
-
-// Theme-specific hover colors (swapped between light and dark)
-.light-theme .nav-toggle {
-  &:hover {
-    border-color: var(--firstBlue-color);
-    box-shadow: 0 0 12px rgba(var(--firstBlue-color-rgb), 0.3);
-  }
-}
-
-.dark-theme .nav-toggle {
-  &:hover {
-    border-color: var(--firstBlue-color);
-    box-shadow: 0 0 12px rgba(var(--firstBlue-color-rgb), 0.3);
   }
 }
 
@@ -1551,7 +1609,7 @@ figure {
       max-width: none;
       background-color: var(--background-color);
       border-radius: 0;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+      box-shadow: var(--shadow-lg-strong);
       flex-direction: column;
       gap: 0.35rem;
       padding: 1.5rem 1rem;
@@ -2064,7 +2122,7 @@ blockquote {
     background-color: rgba(150, 150, 170, 0.2);
     border-radius: $radius-medium;
     border: none;
-    box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: -2px 0 0 0 var(--firstBlue-color), var(--shadow-md-soft);
   }
 
   .comments {
@@ -2140,11 +2198,11 @@ footer {
   .svg-icon {
     border-radius: 50%;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-xs);
 
     &:hover {
       transform: scale(1.05);
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      box-shadow: var(--shadow-md);
     }
   }
 
@@ -2192,11 +2250,11 @@ footer {
   border-radius: 50%;
   object-fit: contain;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-xs);
 
   &:hover {
     transform: scale(1.05);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
   }
 }
 

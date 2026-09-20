@@ -8,7 +8,7 @@
   right: 0;
   background-color: var(--background-color);
   border-top: 1px solid var(--firstBlue-color);
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow-notice);
   z-index: 1000;
   display: none; // Hidden by default, shown via JS
 
@@ -70,11 +70,6 @@
   &--hiding {
     animation: cookie-notice-hide 0.3s ease forwards;
   }
-}
-
-// Dark theme adjustments
-.dark-theme .cookie-notice {
-  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
 }
 
 // Hide animation

@@ -79,7 +79,7 @@
     &:focus {
         background-color: var(--firstBlue-color);
         color: #f5f5fa !important;
-        box-shadow: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.3);
+        box-shadow: var(--focus-ring);
     }
 
     &:active {
@@ -118,7 +118,7 @@
     &:focus {
         background-color: var(--firstBlue-color);
         color: #f5f5fa !important;
-        box-shadow: 0 0 0 3px rgba(var(--firstBlue-color-rgb), 0.3);
+        box-shadow: var(--focus-ring);
     }
 
     &:active {

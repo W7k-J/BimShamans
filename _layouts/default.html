@@ -2,9 +2,7 @@
 <html lang="{{ page.lang | default: site.default_lang }}">
 <head>
     <title>
-        {% if page.title %}{{ page.title }}{% if site.name %} | {% endif %}{% endif %}
-        {{ site.name }}
-        {% if site.description %} | {{ site.description }}{% endif %}
+        {% if page.title %}{{ page.title }} | {{ site.name }}{% else %}{{ site.name }}{% if site.description %} | {{ site.description }}{% endif %}{% endif %}
     </title>
 
     {% include meta.html %}
@@ -54,26 +52,45 @@
     {% endif %}
     
     <!-- JavaScript -->
-    <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js?v={{ site.time | date: '%s' }}"></script>
-    <script src="{{ site.baseurl }}/assets/theme-switcher.js?v={{ site.time | date: '%s' }}"></script>
+    <!-- Loaded on every page: cross-page chrome (theme, language, mobile nav, generic
+         collapsible content that any post or page body can opt into). -->
+    <script src="{{ site.baseurl }}/assets/storage-rate-limiter.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/theme-switcher.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/language-EN-PL-switcher.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/mobile-nav-toggle.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/buttons-collapsible-content.js?v={{ site.time | date: '%s' }}" defer></script>
+
+    <!-- Everything below only loads on the page(s) that actually contain its target
+         markup - each script already no-ops elsewhere, but there is no reason to make
+         every visitor fetch and run code their page never uses. -->
     {% if page.url contains '/blog/' or page.url contains '/expertise-collection/' %}
     <script src="{{ site.baseurl }}/assets/universal-search-bar.js?v={{ site.time | date: '%s' }}" defer></script>
     {% endif %}
+    {% if page.hero %}
     <script src="{{ site.baseurl }}/assets/hero-glitch.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/hero-slogan.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/hero-circuit.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/hero-scroll-fade.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/will-change-optimizer.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% endif %}
+    {% if page.url contains '/about/' or page.url contains '/authors/' %}
     <script src="{{ site.baseurl }}/assets/feature-cards.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% endif %}
+    {% if page.url contains '/expertise' %}
     <script src="{{ site.baseurl }}/assets/portfolio-tiles.js?v={{ site.time | date: '%s' }}" defer></script>
     <script src="{{ site.baseurl }}/assets/portfolio-tile-click.js?v={{ site.time | date: '%s' }}" defer></script>
-    <script src="{{ site.baseurl }}/assets/will-change-optimizer.js?v={{ site.time | date: '%s' }}" defer></script>
-    <script src="{{ site.baseurl }}/assets/form-validator.js?v={{ site.time | date: '%s' }}" defer></script>
-    <script src="{{ site.baseurl }}/assets/progression-bar.js?v={{ site.time | date: '%s' }}" defer></script>
-    <script src="{{ site.baseurl }}/assets/fade-overlay.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% endif %}
+    {% if page.url contains '/expertise/' %}
     <script src="{{ site.baseurl }}/assets/animate-expertise.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% endif %}
+    {% if page.url contains '/contact/' %}
+    <script src="{{ site.baseurl }}/assets/form-validator.js?v={{ site.time | date: '%s' }}" defer></script>
+    {% endif %}
+
+    <!-- progression-bar.js and fade-overlay.js are disabled site-wide: no page currently
+         renders the markup they target (.progression-bar anywhere, .fade-overlay is the
+         commented-out div further down this file), so both scripts have been finding
+         nothing on every single page. Re-enable them next to that markup once it ships. -->
 </head>
 
 <body{% if page.hero %} class="has-hero"{% endif %}>

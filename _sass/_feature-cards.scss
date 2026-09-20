@@ -206,7 +206,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     flex-shrink: 0;
     overflow: hidden;
     
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: var(--shadow-sm);
     filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
     
     img {
@@ -490,7 +490,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     
     .feature-card__icon {
       background-color: rgba(255,255,255,0.2);
-      backdrop-filter: blur(4px);
+      backdrop-filter: blur(var(--blur-md));
     }
     
     // No hover state changes

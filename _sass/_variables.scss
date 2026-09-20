@@ -4,9 +4,19 @@
 //
 
 // Colors
-$biceBlue: #1E6991;
+$biceBlue: #1E6991;   // Light-theme accent. 5.55:1 on $ghostWhite - AA for text.
+$ryanCyan: #32D7E6;   // Dark-theme accent. 9.44:1 on $raisinBlack - AA for text.
+
+// Decorative brand blue. This is the chroma layer of the wordmark: it is the
+// literal used by the logo SVGs (images/logos/Logo_BIMShamans_*.svg and the
+// inline nav wordmark) and, at low alpha, by the reading-progress highlight.
+//
+// NOT a text colour. It measures 3.67:1 on $ghostWhite and 4.14:1 on
+// $raisinBlack, so it fails WCAG AA (4.5:1) for body copy in both themes. Text
+// and links use --firstBlue-color, which passes in both. A --link-color token
+// pointing here existed but was never applied to anything; it has been removed
+// rather than shipped as a trap.
 $blue: #4183C4;
-$ryanCyan: #32D7E6;
 
 // Grays
 $raisinBlack: #1e1e28;  // Bardzo ciemny szary, HSL: (240, 0%, 11%)

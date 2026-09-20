@@ -107,7 +107,7 @@
   &:focus {
     outline: none;
     border-color: var(--firstBlue-color);
-    box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.1);
+    box-shadow: var(--focus-ring-subtle);
   }
   
   // Mobile optimization
@@ -162,7 +162,7 @@
   background-position: right 0.7rem center;
   background-size: 1.2em 1.2em;
   padding-right: 2.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); // Matches .dropdown-menu shadow
+  box-shadow: var(--shadow-menu);
 
   &:hover {
     background-color: var(--firstBlue-color); // Matches .dropdown-menu a:hover
@@ -173,7 +173,7 @@
   &:focus {
     outline: none;
     border-color: var(--firstBlue-color);
-    box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.1);
+    box-shadow: var(--focus-ring-subtle);
   }
 }
 
@@ -279,7 +279,7 @@
     min-width: 160px;
     border-radius: $radius-small;
     animation: fadeIn $transition-base ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-menu);
     z-index: 999;
     
     // Mobile optimization
@@ -438,7 +438,7 @@
     border-radius: $radius-medium;
     width: 100%;
     border: none;
-    box-shadow: -2px 0 0 0 var(--firstBlue-color), 0 4px 12px rgba(0, 0, 0, 0.08);
+    box-shadow: -2px 0 0 0 var(--firstBlue-color), var(--shadow-md-soft);
   }
   
   // Mobile optimization
@@ -524,7 +524,7 @@
 // link has to put the card in this state.
 @mixin blog-card-open {
   transform: translateY(-4px);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.18);
+  box-shadow: var(--shadow-xl);
 
   .blog-card__image img {
     opacity: 0.25;
@@ -534,7 +534,7 @@
     opacity: 1;
     pointer-events: auto;
     // Only worth paying for while the overlay is actually on screen.
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(var(--blur-sm));
   }
 }
 
@@ -546,7 +546,7 @@
   height: 100%;
   border-radius: $radius-large;
   overflow: hidden;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  box-shadow: var(--shadow-lg);
   transition: transform 0.35s ease-out, 
               box-shadow 0.35s ease-out;
   background-color: var(--background-color);
@@ -626,8 +626,8 @@
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.1);
     
     // Subtle backdrop enhancement
-    backdrop-filter: blur(4px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    backdrop-filter: blur(var(--blur-md));
+    box-shadow: var(--shadow-sm);
     
     // Mobile optimization
     @media screen and (max-width: 640px) {
@@ -870,7 +870,7 @@
   flex-shrink: 0;
   overflow: hidden;
   
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--shadow-sm);
   filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.05));
   
   svg {
@@ -999,7 +999,7 @@
     &:focus {
       outline: none;
       border: 1px solid var(--firstBlue-color);
-      box-shadow: 0 0 0 3px rgba(50, 215, 230, 0.1);
+      box-shadow: var(--focus-ring-subtle);
     }
   }
 
@@ -1325,7 +1325,7 @@
     background-color: var(--firstBlue-color);
     color: var(--background-color);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-shadow: var(--shadow-md);
   }
   
   &:focus-visible {
