@@ -17,9 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     // Author photos: the desktop swaps them on hover (CSS). The mobile layout
-    // has no hover, so a tap flips the photo and each one flips once on its
-    // own the first time it scrolls into view, to show the effect exists.
-    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    // has no hover, so tapping the photo or the author logo flips it - an
+    // unannounced easter egg, deliberately without a hint or auto demo.
     const flipCards = Array.from(document.querySelectorAll('.feature-card--image'))
       .filter(card => card.querySelector('.feature-card__image--back'));
 
@@ -33,11 +32,6 @@ document.addEventListener('DOMContentLoaded', function() {
       card.classList.remove('is-glowing');
       void card.offsetWidth;
       card.classList.add('is-glowing');
-    }
-
-    function cancelReveal(card) {
-      (card._revealTimers || []).forEach(clearTimeout);
-      card._revealTimers = [];
     }
 
     // On mobile the photo is a toggle, not the LinkedIn link (the name is)
@@ -73,21 +67,6 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    if (!reducedMotion && 'IntersectionObserver' in window) {
-      const revealObserver = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-          if (!entry.isIntersecting || !isMobileView()) return;
-          const card = entry.target;
-          revealObserver.unobserve(card);
-          card._revealTimers = [
-            setTimeout(() => flipPhoto(card, true), 400),
-            setTimeout(() => flipPhoto(card, false), 1900)
-          ];
-        });
-      }, { threshold: 0.8 });
-      flipCards.forEach(card => revealObserver.observe(card));
-    }
-
     // Handle each feature-cards section independently
     featureCardsSections.forEach(section => {
       const featureCards = section.querySelectorAll('.feature-card');
@@ -112,7 +91,6 @@ document.addEventListener('DOMContentLoaded', function() {
           if (clickedOnImage || clickedOnLogo) {
             if (isMobileView() && flipCards.includes(this)) {
               e.preventDefault();
-              cancelReveal(this);
               flipPhoto(this, !this.classList.contains('is-flipped'));
             }
             return;

@@ -634,7 +634,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
 }
 
 // ===========================================
-// MOBILE AUTHOR PHOTO SWAP (tap + one-time auto reveal)
+// MOBILE AUTHOR PHOTO SWAP (tap on photo or logo)
 // ===========================================
 @media screen and (max-width: 768px) {
   .feature-card--image {
