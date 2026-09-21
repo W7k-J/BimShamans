@@ -324,6 +324,11 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
   }
 }
 
+// Collapsed-card teaser - only the mobile accordion shows it
+.feature-card__teaser {
+  display: none;
+}
+
 // Role line under the author's name - only shown in the compact phone header
 .author-block__role {
   display: none;
@@ -411,6 +416,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     
     // Header/label always visible at top - CONSISTENT WIDTH
     .feature-card__label {
+      order: -1; // Above the content (it comes after it in the markup)
       position: relative;
       bottom: auto;
       left: auto;
@@ -471,11 +477,6 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
       border-right: 2px solid var(--firstBlue-color);
       border-bottom: 2px solid var(--firstBlue-color);
       transition: transform 0.3s ease;
-    }
-    
-    // Expanded state (active)
-    &.active {
-      @include accordion-open;
     }
     
     // Hover state for touch feedback
@@ -637,15 +638,41 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     }
   }
 
-  .feature-cards--authors .feature-card:not(.feature-card--image) {
-    // Also overrides the server-rendered .active (desktop default card)
+  // Mobile open state is .is-open (toggled in feature-cards.js), so every
+  // card starts collapsed and the server-rendered .active stays reserved for
+  // the desktop layout
+  .feature-card:not(.feature-card--image) {
     &:not(.is-open) {
       @include accordion-closed;
     }
 
     &.is-open {
       @include accordion-open;
+
+      .feature-card__teaser {
+        display: none;
+      }
     }
+  }
+
+  // Instant collapse (set briefly by feature-cards.js)
+  .feature-card.no-anim,
+  .feature-card.no-anim * {
+    transition: none !important;
+  }
+
+  // One-sentence teaser under the title of a collapsed story card
+  .feature-card__teaser {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-top: 2px;
+    font-size: 0.85rem;
+    font-weight: normal;
+    line-height: 1.35;
+    color: var(--firstGray-color);
+    opacity: 0.8;
   }
 }
 

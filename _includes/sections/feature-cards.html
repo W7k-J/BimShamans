@@ -52,6 +52,16 @@
         </div>
         <div class="feature-card__info">
           <div class="feature-card__main">{{ card.title }}</div>
+          {% unless cards[0].image_front or card.content == blank %}
+          {% comment %} Mobile teaser for collapsed cards: text up to the end of the first bold phrase, else the first line {% endcomment %}
+          {% assign teaser_parts = card.content | split: '**' %}
+          {% if teaser_parts.size > 1 %}
+            {% assign teaser = teaser_parts[0] | append: teaser_parts[1] %}
+          {% else %}
+            {% assign teaser = card.content | newline_to_br | split: '<br' | first %}
+          {% endif %}
+          <div class="feature-card__teaser">{{ teaser | strip_html | strip }}</div>
+          {% endunless %}
         </div>
       </div>
     </div>

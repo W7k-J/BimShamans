@@ -16,6 +16,16 @@ document.addEventListener('DOMContentLoaded', function() {
       return window.innerWidth <= MOBILE_BREAKPOINT;
     }
     
+    const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Bring an opened card's header to the top of the screen, below the fixed nav
+    function scrollCardToTop(card) {
+      const nav = document.querySelector('.nav-container');
+      const offset = (nav ? nav.offsetHeight : 0) + 12;
+      const top = card.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: Math.max(0, top), behavior: reducedMotion ? 'auto' : 'smooth' });
+    }
+
     // Author photos: the desktop swaps them on hover (CSS). The mobile layout
     // has no hover, so tapping the photo or the author logo flips it - an
     // unannounced easter egg, deliberately without a hint or auto demo.
@@ -96,22 +106,42 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
           }
           
-          e.preventDefault();
-          
           if (isMobileView()) {
-            // MOBILE: Image cards are always open, don't toggle them
-            if (isImageCard) {
+            // MOBILE: Image cards are always open, don't toggle them.
+            // Only the header toggles, so taps (and links) in the text work.
+            if (isImageCard || !e.target.closest('.feature-card__label')) {
               return;
             }
-            // MOBILE: Toggle this card independently (multi-open accordion).
-            // Author sections start collapsed on mobile, so they use their own
-            // class and leave the desktop 'active' card untouched.
+            e.preventDefault();
+
+            // Mobile uses .is-open; .active stays the desktop state
             if (section.classList.contains('feature-cards--authors')) {
+              // Author cards: multi-open accordion
               this.classList.toggle('is-open');
-            } else {
-              this.classList.toggle('active');
+              return;
             }
+
+            // Story cards: one open at a time, header scrolled into view
+            if (this.classList.contains('is-open')) {
+              this.classList.remove('is-open');
+              return;
+            }
+            // A card closing above this one collapses instantly: it is usually
+            // off screen, and an animated collapse would move the target
+            // (and fight scroll anchoring) while we scroll to it
+            featureCards.forEach(c => {
+              if (c === this || !c.classList.contains('is-open')) return;
+              const above = c.compareDocumentPosition(this) & Node.DOCUMENT_POSITION_FOLLOWING;
+              if (above) c.classList.add('no-anim');
+              c.classList.remove('is-open');
+            });
+            this.classList.add('is-open');
+            scrollCardToTop(this); // reads layout, so the collapse above has applied
+            requestAnimationFrame(() => {
+              featureCards.forEach(c => c.classList.remove('no-anim'));
+            });
           } else {
+            e.preventDefault();
             // DESKTOP: Single active card behavior (original)
             featureCards.forEach(c => c.classList.remove('active'));
             this.classList.add('active');
