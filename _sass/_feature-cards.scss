@@ -154,6 +154,30 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
       width: auto;
       object-fit: contain;
     }
+
+    // Two images side by side (the "Reality" card); stacked on the phone below
+    .feature-card__image-pair {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        height: 220px;
+        width: auto;
+        min-width: 0;
+      }
+
+      @media screen and (max-width: 768px) {
+        flex-direction: column;
+
+        img {
+          width: 100%;
+          height: auto;
+          max-height: none;
+        }
+      }
+    }
     
     strong, b {
       font-weight: bold;
@@ -342,9 +366,10 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
 // ===========================================
 // MOBILE ACCORDION LAYOUT (multi-open support)
 // ===========================================
+// Card height follows its label + content; only the content's max-height
+// animates. feature-cards.js sets it inline to the measured height while it
+// opens, then lifts it to `none` - so no fixed cap can ever clip a card.
 @mixin accordion-open {
-  max-height: 800px; // Generous max for content
-
   .feature-card__label {
     // Undo the desktop .active offset (left/bottom: 10px)
     left: auto;
@@ -359,16 +384,13 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
 
   .feature-card__content {
     opacity: 1;
-    max-height: 700px;
+    max-height: none;
     padding: 1rem;
     padding-top: 0.5rem;
   }
 }
 
 @mixin accordion-closed {
-  // Card height comes from the label; the cap only has to fit a 3-line title
-  max-height: 120px;
-
   .feature-card__label {
     left: auto;
     bottom: auto;
@@ -410,9 +432,8 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     
     // Collapsed state (default)
     min-height: 56px;
-    max-height: 56px;
     overflow: hidden;
-    transition: max-height 0.4s ease, background-color 0.3s ease;
+    transition: background-color 0.3s ease;
     
     // Header/label always visible at top - CONSISTENT WIDTH
     .feature-card__label {

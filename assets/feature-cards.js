@@ -18,6 +18,34 @@ document.addEventListener('DOMContentLoaded', function() {
     
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Mobile accordion: open/close a card by animating its content's
+    // max-height to the measured height, then lifting the cap once open, so
+    // long text and images that load later are never clipped.
+    function setOpen(card, open) {
+      const content = card.querySelector('.feature-card__content');
+      if (open) {
+        card.classList.add('is-open');
+        content.style.maxHeight = content.scrollHeight + 40 + 'px'; // + open padding
+      } else {
+        // From 'none' back to a number first, so the collapse can animate
+        content.style.maxHeight = content.scrollHeight + 'px';
+        void content.offsetHeight;
+        card.classList.remove('is-open');
+        content.style.maxHeight = '';
+      }
+    }
+
+    featureCardsSections.forEach(section => {
+      section.querySelectorAll('.feature-card__content').forEach(content => {
+        content.addEventListener('transitionend', e => {
+          if (e.target === content && e.propertyName === 'max-height' &&
+              content.parentElement.classList.contains('is-open')) {
+            content.style.maxHeight = 'none';
+          }
+        });
+      });
+    });
+
     // Bring an opened card's header to the top of the screen, below the fixed nav
     function scrollCardToTop(card) {
       const nav = document.querySelector('.nav-container');
@@ -117,13 +145,13 @@ document.addEventListener('DOMContentLoaded', function() {
             // Mobile uses .is-open; .active stays the desktop state
             if (section.classList.contains('feature-cards--authors')) {
               // Author cards: multi-open accordion
-              this.classList.toggle('is-open');
+              setOpen(this, !this.classList.contains('is-open'));
               return;
             }
 
             // Story cards: one open at a time, header scrolled into view
             if (this.classList.contains('is-open')) {
-              this.classList.remove('is-open');
+              setOpen(this, false);
               return;
             }
             // A card closing above this one collapses instantly: it is usually
@@ -133,9 +161,9 @@ document.addEventListener('DOMContentLoaded', function() {
               if (c === this || !c.classList.contains('is-open')) return;
               const above = c.compareDocumentPosition(this) & Node.DOCUMENT_POSITION_FOLLOWING;
               if (above) c.classList.add('no-anim');
-              c.classList.remove('is-open');
+              setOpen(c, false);
             });
-            this.classList.add('is-open');
+            setOpen(this, true);
             scrollCardToTop(this); // reads layout, so the collapse above has applied
             requestAnimationFrame(() => {
               featureCards.forEach(c => c.classList.remove('no-anim'));
@@ -156,6 +184,10 @@ document.addEventListener('DOMContentLoaded', function() {
       clearTimeout(resizeTimeout);
       resizeTimeout = setTimeout(function() {
         syncPhotoRoles();
+        // Inline heights belong to the mobile accordion only
+        if (!isMobileView()) {
+          document.querySelectorAll('.feature-card__content').forEach(c => { c.style.maxHeight = ''; });
+        }
         // On resize to desktop, ensure at least one card is active per section
         if (!isMobileView()) {
           featureCardsSections.forEach(section => {
