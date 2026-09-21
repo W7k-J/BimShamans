@@ -10,71 +10,173 @@
   'use strict';
 
   // ============================================
-  // MOBILE SWIPE COUNTER (expertise.md)
+  // MOBILE SWIPE CAROUSEL (expertise.md)
   // ============================================
 
   /**
-   * Initialize swipe counter for portfolio tile stacks
+   * Below 992px each .portfolio-tiles-stack is a horizontal scroll-snap
+   * carousel (see _portfolio-tiles.scss). Adds a row of dots under it that
+   * follows the swipe and jumps to a card on tap. CSS hides the dots above
+   * 992px, where the stack is the desktop cascade.
    */
-  function initSwipeCounters() {
+  function initSwipeCarousels() {
     var stacks = document.querySelectorAll('.portfolio-tiles-stack');
-    
+
     stacks.forEach(function(stack) {
       var tiles = stack.querySelectorAll('.portfolio-tile');
-      var totalTiles = tiles.length;
-      
-      if (totalTiles === 0) {
+
+      if (tiles.length < 2) {
         return;
       }
-      
-      // Set initial counter
-      updateCounter(stack, 1, totalTiles);
-      
-      // Track scroll position
+
+      var dots = createCarouselDots(stack, tiles);
+      setActiveDot(dots, 0);
+
       var scrollTimeout = null;
-      
+
       stack.addEventListener('scroll', function() {
-        // Debounce scroll updates
         if (scrollTimeout) {
           clearTimeout(scrollTimeout);
         }
-        
+
         scrollTimeout = setTimeout(function() {
-          var currentIndex = getCurrentTileIndex(stack, tiles);
-          updateCounter(stack, currentIndex + 1, totalTiles);
+          setActiveDot(dots, getCurrentTileIndex(stack, tiles));
         }, 50);
       }, { passive: true });
     });
   }
 
   /**
+   * Build one dot per tile right after the stack
+   */
+  function createCarouselDots(stack, tiles) {
+    var container = document.createElement('div');
+    container.className = 'portfolio-tiles-dots';
+
+    var dots = Array.prototype.map.call(tiles, function(tile, index) {
+      var dot = document.createElement('button');
+      dot.type = 'button';
+      dot.className = 'portfolio-tiles-dot';
+      dot.setAttribute('aria-label', (index + 1) + ' / ' + tiles.length);
+
+      dot.addEventListener('click', function() {
+        stack.scrollTo({
+          left: tile.offsetLeft - tiles[0].offsetLeft,
+          behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+        });
+      });
+
+      container.appendChild(dot);
+      return dot;
+    });
+
+    stack.parentNode.insertBefore(container, stack.nextSibling);
+    return dots;
+  }
+
+  /**
    * Get current visible tile index based on scroll position
    */
   function getCurrentTileIndex(stack, tiles) {
-    var stackRect = stack.getBoundingClientRect();
-    var stackCenter = stackRect.left + stackRect.width / 2;
+    // Scrolled to the end: the last card may never reach the snap start
+    if (stack.scrollLeft + stack.clientWidth >= stack.scrollWidth - 2) {
+      return tiles.length - 1;
+    }
+
+    var stackLeft = stack.getBoundingClientRect().left;
     var closestIndex = 0;
     var closestDistance = Infinity;
-    
+
     tiles.forEach(function(tile, index) {
-      var tileRect = tile.getBoundingClientRect();
-      var tileCenter = tileRect.left + tileRect.width / 2;
-      var distance = Math.abs(stackCenter - tileCenter);
-      
+      var distance = Math.abs(tile.getBoundingClientRect().left - stackLeft);
+
       if (distance < closestDistance) {
         closestDistance = distance;
         closestIndex = index;
       }
     });
-    
+
     return closestIndex;
   }
 
+  function setActiveDot(dots, index) {
+    dots.forEach(function(dot, i) {
+      var active = i === index;
+      dot.classList.toggle('portfolio-tiles-dot--active', active);
+      if (active) {
+        dot.setAttribute('aria-current', 'true');
+      } else {
+        dot.removeAttribute('aria-current');
+      }
+    });
+  }
+
+  function prefersReducedMotion() {
+    return window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  }
+
+  // ============================================
+  // CATEGORY JUMP CHIPS (expertise.md, below 992px)
+  // ============================================
+
   /**
-   * Update counter data attribute
+   * Highlights the chip of the category currently on screen and keeps it
+   * visible inside the sideways-scrolling chip row.
    */
-  function updateCounter(stack, current, total) {
-    stack.setAttribute('data-counter', current + '/' + total);
+  function initJumpChips() {
+    var nav = document.querySelector('.expertise-jump');
+    if (!nav || !('IntersectionObserver' in window)) {
+      return;
+    }
+
+    var chips = {};
+    nav.querySelectorAll('.expertise-jump__chip').forEach(function(chip) {
+      chips[chip.getAttribute('href').slice(1)] = chip;
+    });
+
+    var current = null;
+
+    function setActive(id) {
+      if (id === current) {
+        return;
+      }
+      current = id;
+
+      Object.keys(chips).forEach(function(key) {
+        var chip = chips[key];
+        var active = key === id;
+        chip.classList.toggle('expertise-jump__chip--active', active);
+        if (active) {
+          chip.setAttribute('aria-current', 'true');
+          // Centre the chip in the row so its neighbours stay visible
+          var navRect = nav.getBoundingClientRect();
+          var chipRect = chip.getBoundingClientRect();
+          nav.scrollTo({
+            left: nav.scrollLeft + (chipRect.left - navRect.left) - (navRect.width - chipRect.width) / 2,
+            behavior: prefersReducedMotion() ? 'auto' : 'smooth'
+          });
+        } else {
+          chip.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    // A thin band across the middle of the screen: whichever section
+    // crosses it is the one being read.
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          setActive(entry.target.id);
+        }
+      });
+    }, { rootMargin: '-45% 0px -50% 0px' });
+
+    Object.keys(chips).forEach(function(id) {
+      var section = document.getElementById(id);
+      if (section) {
+        observer.observe(section);
+      }
+    });
   }
 
   // ============================================
@@ -862,7 +964,8 @@
   // ============================================
 
   function init() {
-    initSwipeCounters();
+    initSwipeCarousels();
+    initJumpChips();
     initSlideshows();
     initCollectionFilter();
     initTouchSupport();

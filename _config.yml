@@ -96,6 +96,14 @@ t:
       automation: "Automation & Programming"
       coordination: "BIM Coordination & OpenBIM"
       software: "Software & 3D Modelling"
+    portfolio_categories_short:
+      architecture: "Architecture"
+      bim_standards: "Standards"
+      data_reporting: "Data & BI"
+      automation: "Automation"
+      coordination: "Coordination"
+      software: "Software & 3D"
+    expertise_jump_label: "Expertise categories"
     months:
       1: "January"
       2: "February"
@@ -152,6 +160,14 @@ t:
       automation: "Automatyzacja i programowanie"
       coordination: "Koordynacja BIM i OpenBIM"
       software: "Oprogramowanie i modelowanie 3D"
+    portfolio_categories_short:
+      architecture: "Architektura"
+      bim_standards: "Standardy"
+      data_reporting: "Dane i BI"
+      automation: "Automatyzacja"
+      coordination: "Koordynacja"
+      software: "Modelowanie 3D"
+    expertise_jump_label: "Kategorie doświadczenia"
     months:
       1: "Stycznia"
       2: "Lutego"

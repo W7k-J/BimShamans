@@ -16,6 +16,14 @@ excerpt: "Selected projects and expertise across BIM, architecture, automation, 
     <!--<p>A curated selection of our work spanning BIM implementation, architectural design, data analytics, and process automation. Each category represents years of hands-on experience across diverse projects.</p>-->
   </div>
 
+  <!-- Mobile only: jump chips to each category (hidden above 992px) -->
+  <nav class="expertise-jump" aria-label="{{ t.expertise_jump_label }}">
+    <a href="#automation" class="expertise-jump__chip">{{ t.portfolio_categories_short.automation }}</a>
+    <a href="#coordination" class="expertise-jump__chip">{{ t.portfolio_categories_short.coordination }}</a>
+    <a href="#bim-standards" class="expertise-jump__chip">{{ t.portfolio_categories_short.bim_standards }}</a>
+    <a href="#data-reporting" class="expertise-jump__chip">{{ t.portfolio_categories_short.data_reporting }}</a>
+  </nav>
+
 
   <!-- ========================================== -->
   <!-- SECTION 1: Automation & Programming -->

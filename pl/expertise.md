@@ -16,6 +16,16 @@ excerpt: "Wybrane projekty i kompetencje z zakresu BIM, architektury, automatyza
     <!--<p>Wyselekcjonowane przykłady naszej pracy obejmujące wdrożenia BIM, projektowanie architektoniczne, analitykę danych i automatyzację procesów. Każda kategoria reprezentuje wieloletnie doświadczenie zdobyte w różnorodnych projektach.</p>-->
   </div>
 
+  <!-- Mobile only: jump chips to each category (hidden above 992px) -->
+  <nav class="expertise-jump" aria-label="{{ t.expertise_jump_label }}">
+    <a href="#automation" class="expertise-jump__chip">{{ t.portfolio_categories_short.automation }}</a>
+    <a href="#coordination" class="expertise-jump__chip">{{ t.portfolio_categories_short.coordination }}</a>
+    <a href="#bim-standards" class="expertise-jump__chip">{{ t.portfolio_categories_short.bim_standards }}</a>
+    <a href="#data-reporting" class="expertise-jump__chip">{{ t.portfolio_categories_short.data_reporting }}</a>
+    <a href="#architecture" class="expertise-jump__chip">{{ t.portfolio_categories_short.architecture }}</a>
+    <a href="#software" class="expertise-jump__chip">{{ t.portfolio_categories_short.software }}</a>
+  </nav>
+
 
   <!-- ========================================== -->
   <!-- SEKCJA 1: Automatyzacja i programowanie -->
