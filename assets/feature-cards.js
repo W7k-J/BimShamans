@@ -104,9 +104,12 @@ document.addEventListener('DOMContentLoaded', function() {
                                  e.target.classList.contains('author-image-container') ||
                                  e.target.closest('.feature-card__image-container');
           
+          // The author logo badge on a photo card flips the photo too
+          const clickedOnLogo = isImageCard && e.target.closest('.feature-card__label');
+
           // If clicked on image, don't toggle cards. On mobile a photo with
           // an alternate version flips instead of opening its link.
-          if (clickedOnImage) {
+          if (clickedOnImage || clickedOnLogo) {
             if (isMobileView() && flipCards.includes(this)) {
               e.preventDefault();
               cancelReveal(this);
