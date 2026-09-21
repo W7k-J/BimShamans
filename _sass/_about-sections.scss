@@ -1,33 +1,111 @@
 // ---------------------------------------------------------------------------
-// About page intro sections (phone)
+// About page intro sections
 // The intro - the name, the campfire origins, the story cards, the tribal
-// council - reads as chapters: a small flame divider between them, and each
-// one eases in the first time it comes into view. Nothing fades on the way
-// out, so text being read is never dimmed. The author profiles below follow
-// in plain flow, without a divider.
+// council - reads as chapters: a small flame divider between them, and on
+// the phone each one eases in the first time it comes into view. Nothing
+// fades on the way out, so text being read is never dimmed. The author
+// profiles below follow in plain flow, without a divider.
 // ---------------------------------------------------------------------------
-@media screen and (max-width: 768px) {
-  // Chapter divider: hairline - flame from the logo - hairline
-  .about-section + .about-section::before {
-    content: '';
-    display: block;
-    height: 22px;
-    margin: 2.25rem 0 1.5rem;
-    background:
-      url('images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg') center / 22px 22px no-repeat,
-      linear-gradient(
-        to right,
-        transparent,
-        rgba(var(--firstBlue-color-rgb), 0.35) 25%,
-        rgba(var(--firstBlue-color-rgb), 0.35) calc(50% - 22px),
-        transparent calc(50% - 22px),
-        transparent calc(50% + 22px),
-        rgba(var(--firstBlue-color-rgb), 0.35) calc(50% + 22px),
-        rgba(var(--firstBlue-color-rgb), 0.35) 75%,
-        transparent
-      ) center / 100% 1px no-repeat;
+
+// Chapter divider: hairline - flame from the logo - hairline (phone)
+.about-divider {
+  position: relative;
+  height: 22px;
+  margin: 2.25rem 0 1.5rem;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(var(--firstBlue-color-rgb), 0.35) 25%,
+    rgba(var(--firstBlue-color-rgb), 0.35) calc(50% - 22px),
+    transparent calc(50% - 22px),
+    transparent calc(50% + 22px),
+    rgba(var(--firstBlue-color-rgb), 0.35) calc(50% + 22px),
+    rgba(var(--firstBlue-color-rgb), 0.35) 75%,
+    transparent
+  ) center / 100% 1px no-repeat;
+}
+
+.about-divider__flame {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  width: 22px;
+  height: 22px;
+  margin-left: -11px;
+  background: url('images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg') center / contain no-repeat;
+}
+
+// Desktop: a plain hairline, no flame - on a wide screen the flame read as
+// too much. The flame and its gap are for the phone only.
+@media screen and (min-width: 769px) {
+  .about-divider {
+    background: linear-gradient(
+      to right,
+      transparent,
+      rgba(var(--firstBlue-color-rgb), 0.35) 25%,
+      rgba(var(--firstBlue-color-rgb), 0.35) 75%,
+      transparent
+    ) center / 100% 1px no-repeat;
   }
 
+  .about-divider__flame {
+    display: none;
+  }
+}
+
+// The flame lights up as it scrolls in, burns brightest at the middle of the
+// screen, then dies down and goes out on its way to the top. Glow colours as
+// the author photo glow (`image-glow`).
+@keyframes about-flame-burn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6);
+    filter: drop-shadow(0 0 0 transparent) brightness(1);
+  }
+  35% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px var(--firstBlue-color)) brightness(1);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.15);
+    filter: drop-shadow(0 0 16px var(--secondBlue-color)) brightness(1.25);
+  }
+  65% {
+    opacity: 1;
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px var(--firstBlue-color)) brightness(1);
+  }
+  90%,
+  100% {
+    opacity: 0;
+    transform: scale(0.6);
+    filter: drop-shadow(0 0 0 transparent) brightness(1);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  // Native scroll-driven animation (Chrome/Edge 115+, Safari 26+): the whole
+  // trip from the bottom edge of the screen to the top.
+  @supports (animation-timeline: view()) {
+    .about-divider__flame {
+      animation: about-flame-burn linear both;
+      animation-timeline: view(block);
+      animation-range: cover 0% cover 100%;
+    }
+  }
+
+  // Fallback for browsers without `animation-timeline`: the same keyframes,
+  // paused and scrubbed by --flame-progress (0..1) from about-sections.js.
+  .about-divider__flame.about-divider__flame--js {
+    animation: about-flame-burn 1s linear both paused;
+    animation-delay: calc(var(--flame-progress, 0) * -1s);
+  }
+}
+
+// Phone only from here
+@media screen and (max-width: 768px) {
   // Reveal on first view. The hidden state is only ever set by
   // about-sections.js, so without JS (or with reduced motion) nothing hides.
   .about-section {

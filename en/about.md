@@ -996,6 +996,8 @@ authors:
 
 </div>
 
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
+
 <div class="about-section" markdown="1">
 
 #### The campfire origins
@@ -1003,12 +1005,16 @@ We tackle topics that orbit around civil enginneering, BIM technology, automatio
 
 </div>
 
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
+
 <div class="about-section" markdown="1">
 
 #### Diving into the flame
 {% include sections/feature-cards.html %}
 
 </div>
+
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
 
 <div class="about-section" markdown="1">
 

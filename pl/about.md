@@ -997,6 +997,8 @@ authors:
 
 </div>
 
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
+
 <div class="about-section" markdown="1">
 
 #### Początek podróży
@@ -1004,12 +1006,16 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 
 </div>
 
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
+
 <div class="about-section" markdown="1">
 
 #### Wchodząc w szczegóły
 {% include sections/feature-cards.html %}
 
 </div>
+
+<div class="about-divider" aria-hidden="true"><span class="about-divider__flame"></span></div>
 
 <div class="about-section" markdown="1">
 
