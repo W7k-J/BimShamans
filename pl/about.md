@@ -1001,6 +1001,7 @@ Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądo
 
 #### Rada Plemienia
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
+{% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
 {% for author in page.authors %}
 <div class="author-block" markdown="1">
 
@@ -1008,6 +1009,8 @@ Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do r
 <p class="author-block__role">{{ author.role | default: author.feature_cards[1].title }}</p>
 
 {{ author.intro }}
+
+{% if author.personal_link %}<p class="author-block__links"><a href="{{ author.personal_link }}" class="post__action-link" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>{{ t.linkedin_profile | default: "linkedin profile" }}</a></p>{% endif %}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}
 
