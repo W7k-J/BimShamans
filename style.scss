@@ -2503,7 +2503,9 @@ footer {
 }
 
 // Mobile footer adjustments
-@media screen and (max-width: 640px) {
+// Stacked up to 992px, not 640px: the copyright is pinned to the right edge
+// and ~370px wide, so it runs into the centred icons below ~920px.
+@media screen and (max-width: 992px) {
   footer {
     flex-direction: column;
     height: auto;
