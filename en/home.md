@@ -166,10 +166,25 @@ hero: true
       <div class="blog-card__content">
         <h3 class="blog-card__title">{{ post.title }}</h3>
         <p class="blog-card__excerpt">{{ post.excerpt | strip_html | truncatewords: 25 }}</p>
-        <p class="blog-card__meta">
-          <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y/%m/%d' }}</time>
-          {% if post.author %}<span aria-hidden="true">·</span><span>{{ post.author }}</span>{% endif %}
-        </p>
+        {% if post.filter_hash_list.size > 0 %}
+          <div class="blog-card__tags blog-card__tags--inline">
+            {% for tag in post.filter_hash_list %}
+              <span class="blog-card__tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+        <div class="blog-card__footer">
+          <p class="blog-card__meta">
+            <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y/%m/%d' }}</time>
+            {% if post.author %}<span aria-hidden="true">·</span><span>{{ post.author }}</span>{% endif %}
+          </p>
+          <span class="blog-card__more" aria-hidden="true">
+            {{ t.read_more }}
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </span>
+        </div>
       </div>
 
       <div class="blog-card__overlay">

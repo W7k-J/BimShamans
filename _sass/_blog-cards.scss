@@ -903,32 +903,31 @@
 }
 
 // ---------------------------------------------------------------------------
-// Phone, blog listing only: the card says what the post is about.
+// Phone: the card says what the post is about.
 //
 // The description, the tags and the "read more" cue all live in the overlay,
 // which is scoped to `(hover: hover)` - so on a phone the list was thumbnail +
 // title + date, and nothing on the page told the reader what any post held or
-// that a card was even tappable. On the listing that is the whole job of the
-// page, so the card carries its own copy of all three.
+// that a card was even tappable. So the card carries its own copy of all three.
 //
-// Scoped to .blog__container, which is the blog page only: the home page's
-// "Latest posts" strip is a teaser under everything else and stays compact.
+// Applies to both the blog listing and the home page's "Latest posts" strip,
+// so a post looks the same wherever it is shown.
 //
 // The thumbnail flattens to 2:1 to pay for the text. These thumbnails repeat
 // across posts and carry almost nothing on a 390px screen, so they are the
 // cheapest height on the card.
 // ---------------------------------------------------------------------------
 @media screen and (max-width: 768px) {
-  .blog__container .blog-card__image {
+  .blog-card__image {
     aspect-ratio: 2 / 1;
   }
 
-  .blog__container .blog-card__content {
+  .blog-card__content {
     padding: 1rem 1rem 1.1rem;
     gap: 0.55rem;
   }
 
-  .blog__container .blog-card__excerpt {
+  .blog-card__excerpt {
     // Three lines is one full sentence of these excerpts at phone width, and a
     // fixed ceiling keeps every card in the list the same shape.
     display: -webkit-box;
@@ -943,12 +942,12 @@
     text-wrap: pretty;
   }
 
-  .blog__container .blog-card__tags--inline {
+  .blog-card__tags--inline {
     display: flex;
     flex-wrap: wrap;
   }
 
-  .blog__container .blog-card__footer {
+  .blog-card__footer {
     display: flex;
   }
 }
