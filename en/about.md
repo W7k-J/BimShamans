@@ -335,6 +335,7 @@ authors:
           
   - name: "Natalia Gawlik"
     personal_link: "https://www.linkedin.com/in/natgaw/"
+    role: "BIM Manager Infrastructure & VDC Specialist"
     intro: "BIM Coordinator and Surveyor with GIS background and expertise in large-scale infrastructure projects for public sector in Norway. Specialist in data management, information-driven modelling, automation and parametric design using Dynamo, Grasshopper, and Python."
     initial_active: 2
     feature_cards:
@@ -967,6 +968,12 @@ authors:
 .author-skill__fill { height:100%; width:0%; background: var(--skill-color, var(--firstBlue-color)); border-radius:8px; }
 .author-skill__level { width:3rem; text-align:right; font-size:1rem; opacity:0.95; }
 
+/* Phone: name on its own row, bar + level below at full width */
+@media screen and (max-width: 768px) {
+  .author-skill { flex-wrap: wrap; row-gap: 4px; margin: 0.75rem 0; }
+  .author-skill__name { flex: 0 0 100%; width: auto; text-align: left; padding-right: 0; }
+}
+
 /* Theme-aware colors + alpha */
 .light-theme .author-skill__track { background: rgba(var(--firstBlue-color-rgb), 0.20); }
 .light-theme .author-skill__fill { background: var(--firstBlue-color); }
@@ -994,12 +1001,16 @@ We tackle topics that orbit around civil enginneering, BIM technology, automatio
 #### The Tribal Council
 The team behind BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through **automation**, **standardization**, and **pragmatic engineering**.
 {% for author in page.authors %}
+<div class="author-block" markdown="1">
 
 #### {% if author.personal_link %}<a href="{{ author.personal_link }}" target="_blank">{{ author.name }}</a>{% else %}{{ author.name }}{% endif %} {#{{ author.name | slugify }}}
+<p class="author-block__role">{{ author.role | default: author.feature_cards[1].title }}</p>
+
 {{ author.intro }}
 
 {% include sections/feature-cards.html cards=author.feature_cards initial_active=author.initial_active cards_height="500px" %}
 
+</div>
 {% endfor %}
 
 <!-- Navigation Footer -->

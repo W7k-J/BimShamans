@@ -14,7 +14,7 @@
 {% endif %}
 
 <section class="feature-cards-section">
-  <div class="feature-cards" {% if cards_height %}style="height: {{ cards_height }}"{% endif %}>
+  <div class="feature-cards{% if cards[0].image_front %} feature-cards--authors{% endif %}" {% if cards_height %}style="height: {{ cards_height }}"{% endif %}>
     {% for card in cards %}
     <div class="feature-card {% if forloop.index == initial_active_index %}active{% endif %}{% if card.image_front %} feature-card--image{% endif %}" data-feature="card-{{ forloop.index }}" {% if card.image_width_start or card.image_width %}style="{% if card.image_width_start %}flex-basis: {{ card.image_width_start }};{% endif %} {% if card.image_width %}min-width: {{ card.image_width }};{% endif %}"{% endif %}>
       <div class="feature-card__background"></div>
@@ -23,12 +23,20 @@
       {% if card.image_front %}
       {% unless card.content %}
       {% if card.image_click %}
-      <a href="{{ card.image_click }}" target="_blank" class="feature-card__image-link">
+      <a href="{{ card.image_click }}" target="_blank" class="feature-card__image-link"{% if card.image_back %} data-flip-label="{% if lang == 'pl' %}Pokaż drugie zdjęcie{% else %}Show the other photo{% endif %}"{% endif %}>
       {% endif %}
       <div class="feature-card__image-container">
         <img src="{{ site.baseurl }}{{ card.image_front }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--front">
         {% if card.image_back %}
         <img src="{{ site.baseurl }}{{ card.image_back }}" alt="{{ card.title }}" class="feature-card__image feature-card__image--back">
+        <!-- Tap hint, shown only in the mobile layout where the photos swap on tap -->
+        <span class="feature-card__flip-hint" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+        </span>
         {% endif %}
       </div>
       {% if card.image_click %}

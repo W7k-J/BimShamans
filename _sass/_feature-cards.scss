@@ -107,12 +107,17 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     }
   }
   
-  &:hover &__image--front {
-    opacity: 0;
-  }
-  
-  &:hover &__image--back {
-    opacity: 1;
+  // Hover swap only with a real pointer on the desktop layout. On touch a tap
+  // fires an emulated :hover that sticks; the mobile layout swaps on tap
+  // instead (.is-flipped, toggled in feature-cards.js).
+  @media (hover: hover) and (min-width: 769px) {
+    &:hover &__image--front {
+      opacity: 0;
+    }
+
+    &:hover &__image--back {
+      opacity: 1;
+    }
   }
   
   &__content {
@@ -313,13 +318,70 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
 }
 
 // Apply glow effect to author images on hover
-.feature-card.feature-card--image:hover .feature-card__image-container {
-  animation: image-glow 2s ease-in-out infinite;
+@media (hover: hover) and (min-width: 769px) {
+  .feature-card.feature-card--image:hover .feature-card__image-container {
+    animation: image-glow 2s ease-in-out infinite;
+  }
+}
+
+// Tap hint badge - only the mobile layout shows it (see author profile below)
+.feature-card__flip-hint {
+  display: none;
+}
+
+// Role line under the author's name - only shown in the compact phone header
+.author-block__role {
+  display: none;
 }
 
 // ===========================================
 // MOBILE ACCORDION LAYOUT (multi-open support)
 // ===========================================
+@mixin accordion-open {
+  max-height: 800px; // Generous max for content
+
+  .feature-card__label {
+    // Undo the desktop .active offset (left/bottom: 10px)
+    left: auto;
+    bottom: auto;
+    background-color: rgba(var(--firstBlue-color-rgb), 0.15);
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+
+  .feature-card__label::after {
+    transform: translateY(-25%) rotate(-135deg);
+  }
+
+  .feature-card__content {
+    opacity: 1;
+    max-height: 700px;
+    padding: 1rem;
+    padding-top: 0.5rem;
+  }
+}
+
+@mixin accordion-closed {
+  // Card height comes from the label; the cap only has to fit a 3-line title
+  max-height: 120px;
+
+  .feature-card__label {
+    left: auto;
+    bottom: auto;
+    background-color: rgba(var(--firstBlue-color-rgb), 0.1);
+    border-radius: $card-border-radius;
+  }
+
+  .feature-card__label::after {
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .feature-card__content {
+    opacity: 0;
+    max-height: 0;
+    padding: 0 1rem;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .feature-cards-section {
     margin: 1rem 0;
@@ -413,23 +475,7 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     
     // Expanded state (active)
     &.active {
-      max-height: 800px; // Generous max for content
-      
-      .feature-card__label {
-        background-color: rgba(var(--firstBlue-color-rgb), 0.15);
-        border-radius: $card-border-radius $card-border-radius 0 0;
-      }
-      
-      .feature-card__label::after {
-        transform: translateY(-25%) rotate(-135deg);
-      }
-      
-      .feature-card__content {
-        opacity: 1;
-        max-height: 700px;
-        padding: 1rem;
-        padding-top: 0.5rem;
-      }
+      @include accordion-open;
     }
     
     // Hover state for touch feedback
@@ -496,6 +542,141 @@ $card-inactive-width: calc(#{$card-icon-size} + 20px);
     // No hover state changes
     &:hover .feature-card__label {
       background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 60%, transparent 100%);
+    }
+  }
+}
+
+// ===========================================
+// MOBILE AUTHOR PROFILE (compact header + collapsed cards)
+// ===========================================
+// Small photo beside name + role, intro below, all author cards collapsed
+// until tapped. Mobile uses .is-open (toggled in feature-cards.js) so the
+// server-rendered .active stays reserved for the desktop layout.
+@media screen and (max-width: 768px) {
+  .author-block {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    column-gap: 16px;
+    row-gap: 8px;
+    margin: 2.5rem 0 1rem;
+
+    > h4 {
+      grid-column: 2;
+      grid-row: 1;
+      align-self: end;
+      margin: 0;
+    }
+
+    > .author-block__role {
+      display: block;
+      grid-column: 2;
+      grid-row: 2;
+      align-self: start;
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.35;
+      color: var(--firstGray-color);
+      opacity: 0.8;
+    }
+
+    > p:not(.author-block__role) {
+      grid-column: 1 / -1;
+      grid-row: 3;
+      margin: 0.5rem 0;
+    }
+
+    // Lift the cards into the author grid
+    .feature-cards-section,
+    .feature-cards {
+      display: contents;
+    }
+
+    .feature-card {
+      grid-column: 1 / -1;
+    }
+
+    .feature-card.feature-card--image {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+      align-self: center;
+
+      // Author logo badge is noise at thumbnail size
+      .feature-card__label {
+        display: none;
+      }
+    }
+  }
+
+  .feature-cards--authors .feature-card:not(.feature-card--image) {
+    // Also overrides the server-rendered .active (desktop default card)
+    &:not(.is-open) {
+      @include accordion-closed;
+    }
+
+    &.is-open {
+      @include accordion-open;
+    }
+  }
+}
+
+// ===========================================
+// MOBILE AUTHOR PHOTO SWAP (tap + one-time auto reveal)
+// ===========================================
+@media screen and (max-width: 768px) {
+  .feature-card--image {
+    &.is-flipped {
+      .feature-card__image--front { opacity: 0; }
+      .feature-card__image--back { opacity: 1; }
+    }
+
+    // One pulse of the desktop hover glow when the photo swaps
+    &.is-glowing .feature-card__image-container {
+      animation: image-glow 1.2s ease-in-out 1;
+    }
+
+    .feature-card__image-link {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .feature-card__flip-hint {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      right: 6px;
+      bottom: 6px;
+      z-index: 2;
+
+      width: 26px;
+      height: 26px;
+      border-radius: 100%;
+      background-color: rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(var(--blur-md));
+      color: white;
+      pointer-events: none;
+      transition: transform 0.4s ease;
+
+      svg {
+        width: 14px;
+        height: 14px;
+      }
+    }
+
+    &.is-flipped .feature-card__flip-hint {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) and (prefers-reduced-motion: reduce) {
+  .feature-card--image {
+    .feature-card__image,
+    .feature-card__flip-hint {
+      transition: none;
+    }
+
+    &.is-glowing .feature-card__image-container {
+      animation: none;
     }
   }
 }
