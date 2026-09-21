@@ -989,18 +989,35 @@ authors:
 .author-skill[data-level="5"] .author-skill__fill { width:100%; }
 </style>
 
+<div class="about-section" markdown="1">
+
 ## Projekt: BIM Shamans
 > Termin **_szamanizm_** pochodzi od mandżursko-tunguskiego słowa **_šaman_**. Rzeczownik ten wywodzi się od czasownika **_ša-_**, oznaczającego **_wiedzieć_**. Szaman to dosłownie **_'ten, który wie'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
+</div>
+
+<div class="about-section" markdown="1">
+
 #### Początek podróży
 Zajmujemy się tematami orbitującymi wokół technologii BIM, inżynierii lądowej, automatyzacji, analizy i przetwarzania danych. Łączy nas podejście stawiające efekt na pierwszym miejscu, inżyniersko do celu, ocenijąc przez pryzmat zdrowego sceptycyzmu "jedyne słyszne rozwiązania".  **Projekt: BIM Shamans** to nasza przestrzeń do dzielenia się przemyśleniami zawodowymi i rozwiązaniami, które uznamy za warte pokazania.
+
+</div>
+
+<div class="about-section" markdown="1">
 
 #### Wchodząc w szczegóły
 {% include sections/feature-cards.html %}
 
+</div>
+
+<div class="about-section" markdown="1">
+
 #### Rada Plemienia
 Zespół BIM Shamans łączy różnorodne doświadczenie i wspólną pasję do rozwiązywania rzeczywistych wyzwań BIM poprzez **automatyzację**, **standaryzację** i **pragmatyczne podejście inżynierskie**.
+
+</div>
+
 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
 {% for author in page.authors %}
 <div class="author-block" markdown="1">

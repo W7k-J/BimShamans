@@ -988,18 +988,35 @@ authors:
 .author-skill[data-level="5"] .author-skill__fill { width:100%; }
 </style>
 
+<div class="about-section" markdown="1">
+
 <h1> Project: BIM Shamans </h1>
 > The term **_shamanism_** comes from the Manchu-Tungus word **_šaman_**. The noun is formed from the verb **_ša-_**, which means **_to&nbsp;know_**. A shaman is literally the **_'one who knows'_**.
 <p style="text-align: right;"><a href="https://www.britannica.com/topic/shamanism">~ Britannica.com</a></p>
 
+</div>
+
+<div class="about-section" markdown="1">
+
 #### The campfire origins
 We tackle topics that orbit around civil enginneering, BIM technology, automation and data analysis. What unites us is a results-oriented approach - a straightforward engineering path to the goal, always with a healthy skepticism toward any “one true solution.”. **Project: BIM Shamans** is the space to share thoughts and solutions worth mentioned outside our everyday talks.
+
+</div>
+
+<div class="about-section" markdown="1">
 
 #### Diving into the flame
 {% include sections/feature-cards.html %}
 
+</div>
+
+<div class="about-section" markdown="1">
+
 #### The Tribal Council
 The team behind BIM Shamans brings diverse expertise and a shared passion for solving real-world BIM challenges through **automation**, **standardization**, and **pragmatic engineering**.
+
+</div>
+
 {% assign t = site.t[page.lang] | default: site.t[site.default_lang] %}
 {% for author in page.authors %}
 <div class="author-block" markdown="1">

@@ -82,6 +82,7 @@
     {% endif %}
     {% if page.url contains '/about/' or page.url contains '/authors/' %}
     <script src="{{ site.baseurl }}/assets/feature-cards.js?v={{ site.time | date: '%s' }}" defer></script>
+    <script src="{{ site.baseurl }}/assets/about-sections.js?v={{ site.time | date: '%s' }}" defer></script>
     {% endif %}
     {% if page.url contains '/expertise' %}
     <script src="{{ site.baseurl }}/assets/portfolio-tiles.js?v={{ site.time | date: '%s' }}" defer></script>

@@ -1,0 +1,41 @@
+// ---------------------------------------------------------------------------
+// About page intro sections (phone)
+// The intro - the name, the campfire origins, the story cards, the tribal
+// council - reads as chapters: a small flame divider between them, and each
+// one eases in the first time it comes into view. Nothing fades on the way
+// out, so text being read is never dimmed. The author profiles below follow
+// in plain flow, without a divider.
+// ---------------------------------------------------------------------------
+@media screen and (max-width: 768px) {
+  // Chapter divider: hairline - flame from the logo - hairline
+  .about-section + .about-section::before {
+    content: '';
+    display: block;
+    height: 22px;
+    margin: 2.25rem 0 1.5rem;
+    background:
+      url('images/logos/Logo_Fire_Favicon_Alpha_1024x1024.svg') center / 22px 22px no-repeat,
+      linear-gradient(
+        to right,
+        transparent,
+        rgba(var(--firstBlue-color-rgb), 0.35) 25%,
+        rgba(var(--firstBlue-color-rgb), 0.35) calc(50% - 22px),
+        transparent calc(50% - 22px),
+        transparent calc(50% + 22px),
+        rgba(var(--firstBlue-color-rgb), 0.35) calc(50% + 22px),
+        rgba(var(--firstBlue-color-rgb), 0.35) 75%,
+        transparent
+      ) center / 100% 1px no-repeat;
+  }
+
+  // Reveal on first view. The hidden state is only ever set by
+  // about-sections.js, so without JS (or with reduced motion) nothing hides.
+  .about-section {
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  }
+
+  .about-section--pending {
+    opacity: 0;
+    transform: translate3d(0, 12px, 0);
+  }
+}
